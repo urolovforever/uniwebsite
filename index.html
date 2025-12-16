@@ -1,362 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Education Website Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tashkent International University - Leading university in Uzbekistan offering world-class education">
+    <meta name="keywords" content="TIU, Tashkent International University, University in Uzbekistan, Higher Education">
+    <title>Tashkent International University (TIU) - Your Future Starts Here</title>
 
-	<!-- font Awesome CDN link -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-	<!-- External CSS -->
-	<link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-	<!-- JQuery CDN link -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/tiu-main.css">
+    <link rel="stylesheet" href="assets/css/homepage-enhanced.css">
 </head>
 <body>
-	<!-- Navigation start -->
-	<nav>
-		<img src="img/logo.svg" class="logo" alt="">
 
-		<div class="navigation">
-			<ul>
-				<i id="menu-close" class="fas fa-times"></i>
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="courses.html">Courses</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
+    <!-- ================================================
+         Utility Bar (Top Bar)
+         ================================================ -->
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-links">
+                <a href="current-students/lms.html"><i class="fas fa-graduation-cap"></i> Student Portal</a>
+                <a href="current-students/library.html"><i class="fas fa-book"></i> E-Library</a>
+                <a href="current-students/timetable.html"><i class="fas fa-calendar"></i> Timetable</a>
+                <a href="https://mail.tiu.uz" target="_blank"><i class="fas fa-envelope"></i> University Email</a>
+            </div>
+            <div class="language-switcher">
+                <span>Language:</span>
+                <a href="#" class="lang-btn active" data-lang="en">EN</a>
+                <a href="#" class="lang-btn" data-lang="ru">RU</a>
+                <a href="#" class="lang-btn" data-lang="uz">UZ</a>
+            </div>
+        </div>
+    </div>
 
-			<img src="img/menu.png" id="menu-btn" alt="">
-		</div>
-	</nav>
-	<!-- Navigation ends -->
+    <!-- ================================================
+         Main Header & Navigation
+         ================================================ -->
+    <header class="main-header transparent" id="mainHeader">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html">
+                    <div class="logo-text">
+                        <h1>TIU</h1>
+                        <p>Tashkent International University</p>
+                    </div>
+                </a>
+            </div>
 
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-	<!-- Hero section starts from here -->
-	<section id="home">
-		<h2>
-			Enhance Your Future With TechEduca
-		</h2>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ipsum laboriosam architecto tempora explicabo ratione pariatur accusantium consequatur sed odit?
-		</p>
-		<div class="btn">
-			<a href="#" class="blue">Learn More</a>
-			<a href="#" class="yellow">Visit Courses</a>
-		</div>
-	</section>
-	<!-- Hero section ends from here -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <!-- 1. About TIU -->
+                    <li>
+                        <a href="about/index.html">About TIU <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="about/overview.html">Overview</a></li>
+                            <li><a href="about/mission-vision.html">Mission & Vision</a></li>
+                            <li><a href="about/leadership.html">Leadership & Administration</a></li>
+                            <li><a href="about/why-tiu.html">Why TIU</a></li>
+                            <li><a href="about/sustainability.html">Sustainability & Impact</a></li>
+                            <li><a href="about/campus-map.html">Campus Map</a></li>
+                        </ul>
+                    </li>
 
+                    <!-- 2. Admissions -->
+                    <li>
+                        <a href="admissions/index.html">Admissions <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="admissions/how-to-apply.html">How to Apply <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="admissions/apply-bachelor.html">Bachelor</a></li>
+                                    <li><a href="admissions/apply-master.html">Master</a></li>
+                                    <li><a href="admissions/apply-international.html">International Applicants</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="admissions/requirements.html">Admission Requirements</a></li>
+                            <li><a href="admissions/tuition-fees.html">Tuition & Fees</a></li>
+                            <li><a href="admissions/scholarships.html">Scholarships & Financial Aid</a></li>
+                            <li><a href="admissions/faqs.html">FAQs</a></li>
+                            <li><a href="admissions/apply-now.html" class="highlight">Apply Now</a></li>
+                        </ul>
+                    </li>
 
-	<!-- Features section starts from here -->
-	<section id="features">
-		<h1>Awesome Features</h1>
-		<p>Replenish man have thing gathering lights yielding shall you</p>
+                    <!-- 3. Programs -->
+                    <li>
+                        <a href="programs/index.html">Programs <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="programs/by-level.html">By Level <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="programs/bachelor.html">Bachelor</a></li>
+                                    <li><a href="programs/master.html">Master</a></li>
+                                    <li><a href="programs/certificates.html">Certificates & Short Programs</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="programs/by-faculty.html">By Faculty <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="programs/business-economics.html">Business & Economics</a></li>
+                                    <li><a href="programs/it-engineering.html">IT & Engineering</a></li>
+                                    <li><a href="programs/law.html">Law</a></li>
+                                    <li><a href="programs/humanities.html">Humanities & Social Sciences</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="programs/international-programs.html">International Programs <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="programs/joint-degrees.html">Joint Degrees</a></li>
+                                    <li><a href="programs/exchange-programs.html">Exchange Programs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
 
-		<div class="fea-base">
-			<div class="fea-box">
-				<i class="fas fa-graduation-cap"></i>
-				<h3>Scholorship Facility</h3>
-				<p>
-					One make creepeth, man bearing theira firmament won't great heaven
-				</p>
-			</div>
+                    <!-- 4. International -->
+                    <li>
+                        <a href="international/index.html">International <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="international/why-study-tiu.html">Why Study at TIU</a></li>
+                            <li><a href="international/admission-process.html">Admission Process</a></li>
+                            <li><a href="international/visa-immigration.html">Visa & Immigration</a></li>
+                            <li><a href="international/accommodation.html">Accommodation</a></li>
+                            <li><a href="international/partner-universities.html">Partner Universities</a></li>
+                            <li><a href="international/exchange-opportunities.html">Exchange Opportunities</a></li>
+                        </ul>
+                    </li>
 
-			<div class="fea-box">
-				<i class="fa-solid fa-book-bookmark"></i>
-				<h3>Dell Online Course</h3>
-				<p>
-					One make creepeth, man bearing theira firmament won't great heaven
-				</p>
-			</div>
+                    <!-- 5. Current Students -->
+                    <li>
+                        <a href="current-students/index.html">Current Students <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="current-students/academic-life.html">Academic Life <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="current-students/calendar.html">Academic Calendar</a></li>
+                                    <li><a href="current-students/lms.html">LMS / Moodle</a></li>
+                                    <li><a href="current-students/exams-results.html">Exams & Results</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="current-students/campus-services.html">Campus Services <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="current-students/housing.html">Housing</a></li>
+                                    <li><a href="current-students/library.html">Library</a></li>
+                                    <li><a href="current-students/it-services.html">IT Services</a></li>
+                                    <li><a href="current-students/cafeteria.html">Cafeteria</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="current-students/student-life.html">Student Life <i class="fas fa-chevron-right"></i></a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="current-students/student-union.html">Student Union</a></li>
+                                    <li><a href="current-students/clubs.html">Clubs</a></li>
+                                    <li><a href="current-students/sports.html">Sports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
 
-			<div class="fea-box">
-				<i class="fas fa-award"></i>
-				<h3>Global Certification</h3>
-				<p>
-					One make creepeth, man bearing theira firmament won't great heaven
-				</p>
-			</div>
-		</div>
-	</section>
-	<!-- Features section ends from here -->
+                    <!-- 6. Research -->
+                    <li>
+                        <a href="research/index.html">Research <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="research/centers.html">Research Centers</a></li>
+                            <li><a href="research/publications.html">Publications & Journals</a></li>
+                            <li><a href="research/conferences.html">Conferences & Events</a></li>
+                            <li><a href="research/innovation.html">Innovation & Projects</a></li>
+                        </ul>
+                    </li>
 
+                    <!-- 7. Faculty -->
+                    <li>
+                        <a href="faculty/index.html">Faculty <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="faculty/directory.html">Faculty Directory</a></li>
+                            <li><a href="faculty/departments.html">Departments</a></li>
+                            <li><a href="faculty/profiles.html">Academic Staff Profiles</a></li>
+                        </ul>
+                    </li>
 
-	<!-- Courses section starts from here -->
-	<section id="course">
-		<h1>Our Popular Courses</h1>
-		<p>Replenish man have thing gathering lights yielding shall you</p>
+                    <!-- 8. Careers & Alumni -->
+                    <li>
+                        <a href="careers/index.html">Careers & Alumni <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="careers/career-center.html">Career Center</a></li>
+                            <li><a href="careers/internships.html">Internships & Employment</a></li>
+                            <li><a href="careers/employer-partnerships.html">Employer Partnerships</a></li>
+                            <li><a href="careers/alumni-network.html">Alumni Network</a></li>
+                        </ul>
+                    </li>
 
-		<div class="course-box">
-			<div class="courses">
-				<img src="img/c1.jpg" alt="">
-				<div class="details">
-					<span>Updated 21/8/22</span>
-					<h6>JavaScript Beginners Course</h6>
+                    <!-- 9. News & Media -->
+                    <li>
+                        <a href="news/index.html">News & Media <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="news/news.html">News</a></li>
+                            <li><a href="news/events.html">Events</a></li>
+                            <li><a href="news/press-releases.html">Press Releases</a></li>
+                            <li><a href="news/gallery.html">Photo & Video Gallery</a></li>
+                        </ul>
+                    </li>
 
-					<div class="star">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
+                    <!-- 10. Contact -->
+                    <li>
+                        <a href="contact/index.html">Contact <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="contact/contact-info.html">Contact Information</a></li>
+                            <li><a href="contact/rector-reception.html">Rector's Virtual Reception</a></li>
+                            <li><a href="contact/support.html">Ask a Question / Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-						<span>(239)</span>
-					</div>
-				</div>
-				<div class="cost">$49.99</div>
-			</div>
+    <!-- ================================================
+         Video Hero Section
+         ================================================ -->
+    <section class="video-hero">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-students-walking-on-campus-6252/1080p.mp4" type="video/mp4">
+            <!-- Fallback: Replace with your own university video -->
+            Your browser does not support the video tag.
+        </video>
 
-			<div class="courses">
-				<img src="img/c2.jpg" alt="">
-				<div class="details">
-					<span>Updated 21/8/22</span>
-					<h6>JavaScript Beginners Course</h6>
+        <!-- Hero Content -->
+        <div class="video-hero-content">
+            <h1>Your Future Starts at TIU</h1>
+            <p>Building Tomorrow's Leaders Through Excellence in Education, Research, and Innovation</p>
+            <div class="video-hero-buttons">
+                <a href="admissions/apply-now.html" class="cta-primary">Apply Now</a>
+                <a href="contact/support.html" class="cta-secondary">Request Info</a>
+            </div>
+        </div>
 
-					<div class="star">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" onclick="document.querySelector('.intro-section').scrollIntoView({behavior: 'smooth'});">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-						<span>(239)</span>
-					</div>
-				</div>
-				<div class="cost">$49.99</div>
-			</div>
+    <!-- ================================================
+         Quick Intro / Why TIU
+         ================================================ -->
+    <section class="intro-section reveal">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Welcome to Tashkent International University</h2>
+                <p>
+                    Tashkent International University is a premier institution of higher education committed to providing world-class
+                    education and fostering innovation, research, and leadership. We combine academic excellence with practical experience
+                    to prepare students for successful careers in a globalized world. With over 10,000 students, 500+ expert faculty members,
+                    and partnerships with 100+ universities worldwide, TIU is your gateway to international opportunities.
+                </p>
+            </div>
 
-			<div class="courses">
-				<img src="img/c3.jpg" alt="">
-				<div class="details">
-					<span>Updated 21/8/22</span>
-					<h6>JavaScript Beginners Course</h6>
+            <!-- Icon Cards for Key Features -->
+            <div class="card-grid" style="margin-top: 3rem;">
+                <div class="icon-card reveal">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>World-Class Education</h4>
+                    <p>Internationally accredited programs taught by expert faculty with global experience.</p>
+                </div>
 
-					<div class="star">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
+                <div class="icon-card reveal">
+                    <i class="fas fa-globe"></i>
+                    <h4>Global Network</h4>
+                    <p>Exchange programs and partnerships with leading universities across the world.</p>
+                </div>
 
-						<span>(239)</span>
-					</div>
-				</div>
-				<div class="cost">$49.99</div>
-			</div>
+                <div class="icon-card reveal">
+                    <i class="fas fa-flask"></i>
+                    <h4>Research Excellence</h4>
+                    <p>State-of-the-art research facilities and innovative projects shaping the future.</p>
+                </div>
 
-			<div class="courses">
-				<img src="img/c4.jpg" alt="">
-				<div class="details">
-					<span>Updated 21/8/22</span>
-					<h6>JavaScript Beginners Course</h6>
+                <div class="icon-card reveal">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Career Success</h4>
+                    <p>Strong industry partnerships and comprehensive career support for all students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<div class="star">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
+    <!-- ================================================
+         Stats Section
+         ================================================ -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <div class="stat-number">10,000+</div>
+                <div class="stat-label">Students Enrolled</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Expert Faculty</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Programs Offered</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Partner Universities</div>
+            </div>
+        </div>
+    </section>
 
-						<span>(239)</span>
-					</div>
-				</div>
-				<div class="cost">$49.99</div>
-			</div>
+    <!-- ================================================
+         Programs Overview
+         ================================================ -->
+    <section class="programs-section reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Programs</h2>
+                <p>Choose from a wide range of undergraduate, graduate, and professional programs</p>
+            </div>
 
-			<div class="courses">
-				<img src="img/c5.jpg" alt="">
-				<div class="details">
-					<span>Updated 21/8/22</span>
-					<h6>JavaScript Beginners Course</h6>
+            <div class="card-grid">
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span class="badge">Bachelor & Master</span>
+                    <h3>Business & Economics</h3>
+                    <p>Develop leadership and business skills with our internationally recognized programs in business administration, finance, and economics.</p>
+                    <a href="programs/business-economics.html" class="cta-primary">Learn More</a>
+                </div>
 
-					<div class="star">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <span class="badge">Bachelor & Master</span>
+                    <h3>IT & Engineering</h3>
+                    <p>Master cutting-edge technologies in software development, computer science, artificial intelligence, and engineering disciplines.</p>
+                    <a href="programs/it-engineering.html" class="cta-primary">Learn More</a>
+                </div>
 
-						<span>(239)</span>
-					</div>
-				</div>
-				<div class="cost">$49.99</div>
-			</div>
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <span class="badge">Bachelor & Master</span>
+                    <h3>Law</h3>
+                    <p>Study international and domestic law with experienced legal professionals and gain practical courtroom experience.</p>
+                    <a href="programs/law.html" class="cta-primary">Learn More</a>
+                </div>
 
-			<div class="courses">
-				<img src="img/c6.jpg" alt="">
-				<div class="details">
-					<span>Updated 21/8/22</span>
-					<h6>JavaScript Beginners Course</h6>
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span class="badge">Bachelor & Master</span>
+                    <h3>Humanities & Social Sciences</h3>
+                    <p>Explore human culture, society, and behavior through psychology, sociology, languages, and cultural studies.</p>
+                    <a href="programs/humanities.html" class="cta-primary">Learn More</a>
+                </div>
 
-					<div class="star">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span class="badge">Joint Degrees</span>
+                    <h3>International Programs</h3>
+                    <p>Earn dual degrees through our partnerships with prestigious universities in Europe, Asia, and America.</p>
+                    <a href="programs/international-programs.html" class="cta-primary">Learn More</a>
+                </div>
 
-						<span>(239)</span>
-					</div>
-				</div>
-				<div class="cost">$49.99</div>
-			</div>
-		</div>
-	</section>
-	<!-- Courses section ends from here -->
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <span class="badge">Professional Development</span>
+                    <h3>Certificates & Short Programs</h3>
+                    <p>Enhance your skills with professional certificates and short courses designed for working professionals.</p>
+                    <a href="programs/certificates.html" class="cta-primary">Learn More</a>
+                </div>
+            </div>
 
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="programs/index.html" class="cta-secondary" style="font-size: 1.1rem;">View All Programs</a>
+            </div>
+        </div>
+    </section>
 
-	<!-- Registration section starts from here -->
-	<section id="registration">
-		<div class="reminder">
-			<p>Get 100 Online Courses for Free</p>
-			<h1>Registration To Get It</h1>
+    <!-- ================================================
+         Admissions Highlights
+         ================================================ -->
+    <section class="section-spacing bg-white reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Start Your Journey</h2>
+                <p>Everything you need to know about applying to TIU</p>
+            </div>
 
-			<div class="time">
-				<div class="date">18 <br> Days</div>
-				<div class="date">23 <br> Hours</div>
-				<div class="date">06 <br> Minutes</div>
-				<div class="date">58 <br> Seconds</div>
-			</div>
-		</div>
+            <div class="card-grid">
+                <div class="card reveal">
+                    <img src="img/c1.jpg" alt="How to Apply" onerror="this.src='https://via.placeholder.com/400x200/004080/ffffff?text=How+to+Apply'">
+                    <div class="card-content">
+                        <h3><i class="fas fa-file-alt"></i> How to Apply</h3>
+                        <p>Step-by-step guidance through our streamlined application process for bachelor's and master's programs.</p>
+                        <a href="admissions/how-to-apply.html" class="cta-primary">Apply Now</a>
+                    </div>
+                </div>
 
-		<div class="form">
-			<h3>Create Free Account NOW!</h3>
+                <div class="card reveal">
+                    <img src="img/c2.jpg" alt="Tuition & Fees" onerror="this.src='https://via.placeholder.com/400x200/004080/ffffff?text=Tuition+Fees'">
+                    <div class="card-content">
+                        <h3><i class="fas fa-dollar-sign"></i> Tuition & Fees</h3>
+                        <p>Transparent pricing and flexible payment options to make quality education accessible to everyone.</p>
+                        <a href="admissions/tuition-fees.html" class="cta-primary">View Details</a>
+                    </div>
+                </div>
 
-			<input type="text" placeholder="Name" name="" id="">
-			<input type="email" placeholder="Email ID" name="" id="">
-			<input type="text" placeholder="Contact Number" name="" id="">
+                <div class="card reveal">
+                    <img src="img/c3.jpg" alt="Scholarships" onerror="this.src='https://via.placeholder.com/400x200/004080/ffffff?text=Scholarships'">
+                    <div class="card-content">
+                        <h3><i class="fas fa-hand-holding-usd"></i> Scholarships & Aid</h3>
+                        <p>Merit-based and need-based scholarships available to help talented students achieve their dreams.</p>
+                        <a href="admissions/scholarships.html" class="cta-primary">Explore Options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="btn">
-				<a href="#" class="yellow">Submit Form</a>
-			</div>
-		</div>
-	</section>
-	<!-- Registration section ends from here -->
+    <!-- ================================================
+         News & Events Preview
+         ================================================ -->
+    <section class="section-spacing bg-light reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News & Events</h2>
+                <p>Stay updated with what's happening at TIU</p>
+            </div>
 
+            <div class="card-grid">
+                <div class="news-card reveal">
+                    <img src="img/b1.jpg" alt="University Rankings" onerror="this.src='https://via.placeholder.com/400x200/004080/ffffff?text=University+Rankings'">
+                    <div class="news-card-content">
+                        <div class="news-date">December 15, 2025</div>
+                        <h4>TIU Ranks Among Top Universities in Central Asia</h4>
+                        <p>Our university has been recognized for excellence in teaching, research, and international collaboration in the latest QS Rankings...</p>
+                        <a href="news/news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
 
-	<!-- Experts section starts from here -->
-	<section id="experts">
-		<h1>Community Experts</h1>
-		<p>Replenish man have thing gathering lights yielding shall you</p>
-		<div class="expert-box">
-			<div class="profile">
-				<img src="img/pro1.webp" alt="">
-				<h6>Ema Ernik</h6>
-				<p>Python & Algorithms Expert</p>
-				<div class="pro-links">
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-linkedin-in"></i>
-				</div>
-			</div>
+                <div class="news-card reveal">
+                    <img src="img/b2.jpg" alt="International Partnership" onerror="this.src='https://via.placeholder.com/400x200/004080/ffffff?text=International+Partnership'">
+                    <div class="news-card-content">
+                        <div class="news-date">December 10, 2025</div>
+                        <h4>New Partnership with European Universities</h4>
+                        <p>TIU signs groundbreaking agreements with leading European universities for student exchange and joint research programs...</p>
+                        <a href="news/news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
 
-			<div class="profile">
-				<img src="img/pro2.webp" alt="">
-				<h6>Jason chua</h6>
-				<p>Data Design Expert</p>
-				<div class="pro-links">
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-linkedin-in"></i>
-				</div>
-			</div>
+                <div class="news-card reveal">
+                    <img src="img/b3.jpg" alt="Research Conference" onerror="this.src='https://via.placeholder.com/400x200/004080/ffffff?text=Research+Conference'">
+                    <div class="news-card-content">
+                        <div class="news-date">December 5, 2025</div>
+                        <h4>Annual Research Conference 2025</h4>
+                        <p>Join us for our annual research conference featuring presentations from students, faculty, and international scholars...</p>
+                        <a href="news/events.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
 
-			<div class="profile">
-				<img src="img/pro3.webp" alt="">
-				<h6>Maalik Halper</h6>
-				<p>Full Stack Developer</p>
-				<div class="pro-links">
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-linkedin-in"></i>
-				</div>
-			</div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="news/index.html" class="cta-primary">View All News</a>
+            </div>
+        </div>
+    </section>
 
-			<div class="profile">
-				<img src="img/pro4.webp" alt="">
-				<h6>Jennifer Lopez</h6>
-				<p>Design Expert</p>
-				<div class="pro-links">
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-linkedin-in"></i>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Experts section ends from here -->
+    <!-- ================================================
+         CTA Section
+         ================================================ -->
+    <section class="cta-section reveal">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join thousands of students who have chosen TIU for their higher education</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="admissions/apply-now.html" class="cta-gold">Apply Now</a>
+                <a href="contact/support.html" class="cta-secondary" style="color: white; border-color: white;">Request Information</a>
+                <a href="about/index.html" class="cta-secondary" style="color: white; border-color: white;">Learn More About TIU</a>
+            </div>
+        </div>
+    </section>
 
-	<!-- Footer section starts from here -->
-	<footer>
-		<div class="footer-col">
-			<h3>Top Products</h3>
-			<li>Manage Reputation</li>
-			<li>Power Tools</li>
-			<li>Managed Website</li>
-			<li>Marketing Service</li>
-		</div>
+    <!-- ================================================
+         Newsletter Section
+         ================================================ -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>Stay Connected</h3>
+                <p>Subscribe to our newsletter for updates, news, and opportunities</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
-		<div class="footer-col">
-			<h3>Power Tools</h3>
-			<li>Jobs</li>
-			<li>Marketing Service</li>
-			<li>Top Products</li>
-			<li>Manage Reputation</li>
-		</div>
+    <!-- ================================================
+         Footer
+         ================================================ -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tashkent International University</h3>
+                <p>Leading institution of higher education committed to excellence in teaching, research, and community service.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
 
-		<div class="footer-col">
-			<h3>Power Tools</h3>
-			<li>Managed Website</li>
-			<li>Manage Reputation</li>
-			<li>Top Products</li>
-			<li>Marketing Service</li>
-		</div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about/index.html">About TIU</a></li>
+                    <li><a href="admissions/index.html">Admissions</a></li>
+                    <li><a href="programs/index.html">Programs</a></li>
+                    <li><a href="research/index.html">Research</a></li>
+                    <li><a href="faculty/index.html">Faculty</a></li>
+                    <li><a href="contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
 
-		<div class="footer-col">
-			<h3>Guides</h3>
-			<li>Research</li>
-			<li>Experts</li>
-			<li>Managed Website</li>
-			<li>Marketing Service</li>
-		</div>
+            <div class="footer-section">
+                <h3>For Students</h3>
+                <ul>
+                    <li><a href="current-students/lms.html">Student Portal</a></li>
+                    <li><a href="current-students/library.html">E-Library</a></li>
+                    <li><a href="current-students/calendar.html">Academic Calendar</a></li>
+                    <li><a href="current-students/timetable.html">Timetable</a></li>
+                    <li><a href="current-students/exams-results.html">Exams & Results</a></li>
+                    <li><a href="current-students/student-life.html">Student Life</a></li>
+                </ul>
+            </div>
 
-		<div class="footer-col">
-			<h3>Newsletter</h3>
-			<p>You can trust us. we only send promo offers.</p>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 University Street, Tashkent, Uzbekistan</li>
+                    <li><i class="fas fa-phone"></i> +998 71 XXX XX XX</li>
+                    <li><i class="fas fa-envelope"></i> info@tiu.uz</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                </ul>
+                <div style="margin-top: 1rem;">
+                    <a href="contact/contact-info.html" class="cta-secondary" style="display: inline-block;">View on Map</a>
+                </div>
+            </div>
+        </div>
 
-			<div class="subscribe">
-				<input type="email" placeholder="Your email Address">
-				<a href="#" class="yellow">SUBSCRIBE</a>
-			</div>
-		</div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tashkent International University. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+    </footer>
 
-		<div class="copyright">
-			<p>
-				Copyright @ 2022 All rights reserved | This template is made by <a href="https://atulcodex.com" target="_blank">atulcodex</a>
-			</p>
-			<div class="pro-links">
-				<i class="fab fa-facebook"></i>
-				<i class="fab fa-instagram"></i>
-				<i class="fab fa-linkedin-in"></i>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer section ends from here -->
-
-	<script>
-		// Show menu links on burger click
-		$('#menu-btn').click(function(){
-			$('nav .navigation ul').addClass('active')
-		});
-
-		// Hide navbar on click function
-		$('#menu-close').click(function(){
-			$('nav .navigation ul').removeClass('active')
-		});
-	</script>
+    <!-- Main JavaScript -->
+    <script src="assets/js/tiu-main.js"></script>
+    <script src="assets/js/homepage-enhanced.js"></script>
 </body>
 </html>
