@@ -15,8 +15,10 @@
     box-shadow: none;
     position: fixed;
     width: 100%;
+    top: 42px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
 }
 
 .main-header.transparent .logo-text h1,
@@ -39,6 +41,8 @@
     background: linear-gradient(135deg, #004080 0%, #003366 100%);
     box-shadow: 0 4px 20px rgba(0, 64, 128, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    z-index: 999;
 }
 
 .main-header.scrolled .logo-section img {
@@ -135,8 +139,7 @@
 
 .video-hero-buttons .cta-primary:hover,
 .video-hero-buttons .cta-secondary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
 }
 
 .scroll-indicator {

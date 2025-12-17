@@ -145,7 +145,7 @@ ul {
     box-shadow: var(--shadow-md);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .nav-container {
@@ -310,8 +310,7 @@ ul {
 }
 
 .cta-primary:hover {
-    background-color: var(--light-blue);
-    border-color: var(--light-blue);
+    opacity: 0.9;
 }
 
 .cta-secondary {
@@ -326,8 +325,7 @@ ul {
 }
 
 .cta-secondary:hover {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    opacity: 0.9;
 }
 
 /* Removed gold button - using only blue/white/black colors */

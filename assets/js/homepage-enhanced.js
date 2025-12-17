@@ -193,20 +193,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ================================================
-    // Parallax Effect for Video Hero (subtle)
+    // Parallax Effect - DISABLED for professional look
     // ================================================
-    const videoHeroContent = document.querySelector('.video-hero-content');
-    if (videoHeroContent) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallaxSpeed = 0.5;
+    // const videoHeroContent = document.querySelector('.video-hero-content');
+    // if (videoHeroContent) {
+    //     window.addEventListener('scroll', function() {
+    //         const scrolled = window.pageYOffset;
+    //         const parallaxSpeed = 0.5;
 
-            if (scrolled < window.innerHeight) {
-                videoHeroContent.style.transform = 'translateY(' + (scrolled * parallaxSpeed) + 'px)';
-                videoHeroContent.style.opacity = 1 - (scrolled / 600);
-            }
-        });
-    }
+    //         if (scrolled < window.innerHeight) {
+    //             videoHeroContent.style.transform = 'translateY(' + (scrolled * parallaxSpeed) + 'px)';
+    //             videoHeroContent.style.opacity = 1 - (scrolled / 600);
+    //         }
+    //     });
+    // }
 
     // ================================================
     // Dynamic Active State for Navigation
