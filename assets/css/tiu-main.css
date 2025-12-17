@@ -86,6 +86,7 @@ ul {
     padding: 0.5rem 0;
     position: relative;
     z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .utility-bar .container {
@@ -446,8 +447,7 @@ ul {
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 24px rgba(0, 64, 128, 0.12);
 }
 
 .card img {
