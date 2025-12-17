@@ -235,19 +235,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 
     // ================================================
-    // Smooth Parallax Effect
+    // Smooth Parallax Effect - DISABLED for professional look
     // ================================================
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    // const parallaxElements = document.querySelectorAll('[data-parallax]');
 
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
+    // window.addEventListener('scroll', function() {
+    //     const scrolled = window.pageYOffset;
 
-        parallaxElements.forEach(element => {
-            const speed = element.getAttribute('data-parallax') || 0.5;
-            const yPos = -(scrolled * speed);
-            element.style.transform = `translateY(${yPos}px)`;
-        });
-    });
+    //     parallaxElements.forEach(element => {
+    //         const speed = element.getAttribute('data-parallax') || 0.5;
+    //         const yPos = -(scrolled * speed);
+    //         element.style.transform = `translateY(${yPos}px)`;
+    //     });
+    // });
 
     // ================================================
     // Typing Effect for Hero Text
