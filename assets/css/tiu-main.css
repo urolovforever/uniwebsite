@@ -516,7 +516,7 @@ ul {
    Footer
    ================================================ */
 .main-footer {
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #004080 0%, #003366 100%);
     color: var(--white);
     padding: 3rem 2rem 1rem;
 }
