@@ -36,46 +36,46 @@ document.addEventListener('DOMContentLoaded', function() {
     createScrollProgress();
 
     // ================================================
-    // Particle Effect for Hero Section
+    // Particle Effect for Hero Section - DISABLED FOR PROFESSIONAL LOOK
     // ================================================
-    function createParticles() {
-        const hero = document.querySelector('.video-hero');
-        if (!hero) return;
+    // function createParticles() {
+    //     const hero = document.querySelector('.video-hero');
+    //     if (!hero) return;
 
-        const particlesContainer = document.createElement('div');
-        particlesContainer.className = 'particles';
-        hero.appendChild(particlesContainer);
+    //     const particlesContainer = document.createElement('div');
+    //     particlesContainer.className = 'particles';
+    //     hero.appendChild(particlesContainer);
 
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 15 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            particlesContainer.appendChild(particle);
-        }
-    }
-    createParticles();
+    //     for (let i = 0; i < 50; i++) {
+    //         const particle = document.createElement('div');
+    //         particle.className = 'particle';
+    //         particle.style.left = Math.random() * 100 + '%';
+    //         particle.style.animationDelay = Math.random() * 15 + 's';
+    //         particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+    //         particlesContainer.appendChild(particle);
+    //     }
+    // }
+    // createParticles();
 
     // ================================================
-    // Animated Background Gradients
+    // Animated Background Gradients - DISABLED FOR PROFESSIONAL LOOK
     // ================================================
-    function createAnimatedBackground() {
-        const hero = document.querySelector('.video-hero');
-        if (!hero) return;
+    // function createAnimatedBackground() {
+    //     const hero = document.querySelector('.video-hero');
+    //     if (!hero) return;
 
-        const bgDiv = document.createElement('div');
-        bgDiv.className = 'hero-animated-bg';
+    //     const bgDiv = document.createElement('div');
+    //     bgDiv.className = 'hero-animated-bg';
 
-        for (let i = 0; i < 3; i++) {
-            const circle = document.createElement('div');
-            circle.className = 'gradient-circle';
-            bgDiv.appendChild(circle);
-        }
+    //     for (let i = 0; i < 3; i++) {
+    //         const circle = document.createElement('div');
+    //         circle.className = 'gradient-circle';
+    //         bgDiv.appendChild(circle);
+    //     }
 
-        hero.insertBefore(bgDiv, hero.firstChild);
-    }
-    createAnimatedBackground();
+    //     hero.insertBefore(bgDiv, hero.firstChild);
+    // }
+    // createAnimatedBackground();
 
     // ================================================
     // Enhanced Navigation Interactions
@@ -137,23 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ================================================
-    // Enhanced Card Interactions
+    // Enhanced Card Interactions - SIMPLIFIED FOR PROFESSIONAL LOOK
     // ================================================
     const cards = document.querySelectorAll('.card, .news-card, .icon-card');
 
     cards.forEach(card => {
         card.addEventListener('mouseenter', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-
-            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            // Simple hover effect - just lift the card
+            this.style.transform = 'translateY(-5px)';
         });
 
         card.addEventListener('mouseleave', function() {
