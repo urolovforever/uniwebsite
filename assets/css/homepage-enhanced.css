@@ -9,27 +9,40 @@
 
 /* Transparent Navigation (default state) */
 .main-header.transparent {
-    background-color: transparent;
+    background: rgba(0, 64, 128, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: none;
     position: fixed;
     width: 100%;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-header.transparent .logo-text h1,
 .main-header.transparent .logo-text p,
 .main-header.transparent .nav-menu > li > a {
     color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .main-header.transparent .mobile-toggle span {
     background-color: var(--white);
 }
 
+.main-header.transparent .logo-section img {
+    filter: brightness(0) invert(1);
+}
+
 /* Scrolled Navigation (solid state) */
 .main-header.scrolled {
-    background-color: var(--primary-blue);
-    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+    box-shadow: 0 4px 20px rgba(0, 64, 128, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-header.scrolled .logo-section img {
+    filter: brightness(0) invert(1);
 }
 
 .main-header.scrolled .logo-text h1,
