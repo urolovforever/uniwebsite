@@ -18,8 +18,22 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/tiu-main.css">
     <link rel="stylesheet" href="assets/css/homepage-enhanced.css">
+    <link rel="stylesheet" href="assets/css/modern-effects.css">
 </head>
 <body>
+
+    <!-- ================================================
+         Page Loader
+         ================================================ -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="img/logo.svg" alt="TIU Logo" style="width: 100%; height: 100%; filter: brightness(0) invert(1);">
+            </div>
+            <div class="loader-text gradient-text" style="-webkit-text-fill-color: white;">Loading TIU...</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
     <!-- ================================================
          Utility Bar (Top Bar)
@@ -172,10 +186,10 @@
     <!-- ================================================
          Hero Section with Real Campus Image
          ================================================ -->
-    <section class="video-hero" style="background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.6)), url('img/back.jpg') center/cover no-repeat; height: 85vh;">
+    <section class="video-hero" style="background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.6)), url('img/back.jpg') center/cover no-repeat; height: 85vh;" data-parallax="0.5">
         <div class="video-hero-content">
-            <h1 style="font-size: 3.5rem; font-weight: 800; letter-spacing: -1px;">Tashkent International University</h1>
-            <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 2.5rem;">Excellence in Education | Innovation in Research | Leadership for Tomorrow</p>
+            <h1 style="font-size: 3.5rem; font-weight: 800; letter-spacing: -1px;" class="gradient-text" data-text="Tashkent International University">Tashkent International University</h1>
+            <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 2.5rem; animation: fadeInUp 1s ease 0.3s both;">Excellence in Education | Innovation in Research | Leadership for Tomorrow</p>
             <div class="video-hero-buttons">
                 <a href="admissions/apply-now.html" class="cta-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Apply Now</a>
                 <a href="programs/index.html" class="cta-secondary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Explore Programs</a>
@@ -479,5 +493,6 @@
     <!-- Main JavaScript -->
     <script src="assets/js/tiu-main.js"></script>
     <script src="assets/js/homepage-enhanced.js"></script>
+    <script src="assets/js/modern-effects.js"></script>
 </body>
 </html>
