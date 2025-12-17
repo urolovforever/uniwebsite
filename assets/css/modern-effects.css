@@ -104,7 +104,7 @@
     left: 50%;
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent-gold), #ffd700);
+    background: var(--white);
     transform: translateX(-50%);
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 3px 3px 0 0;
@@ -116,7 +116,7 @@
 }
 
 .nav-menu > li > a:hover {
-    color: var(--accent-gold);
+    color: var(--white);
 }
 
 /* Enhanced Dropdown with Modern Effects */
@@ -212,7 +212,7 @@
 .gradient-circle:nth-child(3) {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, #d4af37 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 86, 163, 0.3) 0%, transparent 70%);
     top: 50%;
     left: 50%;
     animation-delay: 10s;
@@ -356,10 +356,10 @@
     left: 0;
     width: 0;
     height: 4px;
-    background: linear-gradient(90deg, #004080, #d4af37, #0056a3);
+    background: linear-gradient(90deg, #004080, #0056a3);
     z-index: 9999;
     transition: width 0.1s ease;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 10px rgba(0, 86, 163, 0.5);
 }
 
 /* ================================================
@@ -403,16 +403,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-gold);
+    background: var(--white);
     transition: width 0.3s ease;
 }
 
 .utility-links a:hover::before {
     width: 100%;
-}
-
-.utility-links a:hover {
-    transform: translateY(-2px);
 }
 
 /* ================================================
@@ -500,7 +496,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #004080, #d4af37, #0056a3, #004080);
+    background: linear-gradient(90deg, #004080, #0056a3, #004080);
     background-size: 200% 100%;
     animation: waveMove 3s linear infinite;
 }
@@ -530,7 +526,7 @@
 }
 
 /* ================================================
-   Loading Animation
+   Loading Animation - Simplified
    ================================================ */
 .page-loader {
     position: fixed;
@@ -538,7 +534,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+    background: #004080;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -553,69 +549,34 @@
 
 .loader-content {
     text-align: center;
-    color: white;
 }
 
-.loader-logo {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 2rem;
-    animation: logoSpin 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
-@keyframes logoSpin {
-    0%, 100% {
-        transform: rotate(0deg) scale(1);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.1);
-    }
-}
-
-.loader-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.loader-bar {
-    width: 200px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.loader-bar::before {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg, #d4af37, #ffd700);
-    animation: loaderSlide 1.5s ease-in-out infinite;
-}
-
-@keyframes loaderSlide {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(300%);
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
 /* ================================================
-   Cursor Trail Effect (Optional - can be toggled)
+   Cursor Trail Effect - DISABLED FOR PROFESSIONAL LOOK
    ================================================ */
-.cursor-trail {
+/* .cursor-trail {
     position: fixed;
     width: 20px;
     height: 20px;
-    border: 2px solid var(--accent-gold);
+    border: 2px solid var(--primary-blue);
     border-radius: 50%;
     pointer-events: none;
     z-index: 99999;
     transition: transform 0.2s ease;
     opacity: 0.5;
-}
+} */
