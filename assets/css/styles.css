@@ -165,7 +165,11 @@ ul {
    Utility Bar
    ================================================ */
 .utility-bar {
-    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+    /* Backgroundni shaffof qilish */
+    background: rgba(0, 32, 64, 0.4) !important;
+    /* Agar matnlar ko'rinmay qolsa, yarim shaffof qora yoki oq rang berish mumkin:
+       background: rgba(0, 0, 0, 0.2); */
+
     color: var(--white);
     font-size: 0.875rem;
     padding: 0.5rem 0;
@@ -175,16 +179,21 @@ ul {
     z-index: 1000;
     transition: var(--transition);
     overflow: hidden;
+
+    /* Soyani olib tashlash (agar bo'lsa) */
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Yarim shaffof oq chiziq */
 }
 
 .utility-bar::before {
+    /* Shimmer effektini ham shaffofroq qilish yoki o'chirib qo'yish */
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
     animation: shimmer 3s infinite;
 }
 
@@ -236,114 +245,145 @@ ul {
     opacity: 0.8;
 }
 
-.language-switcher {
+/* Til tanlash tugmasi (Border 0 radius bilan) */
+/* O'ng blokni tartibga solish */
+.utility-right {
     display: flex;
-    gap: 0.5rem;
     align-items: center;
-    position: relative;
+    gap: 10px;
 }
 
-.language-switcher::before {
-    content: '🌐';
-    font-size: 1.2rem;
-    margin-right: 0.3rem;
-    position: relative;
-    z-index: 10;
+/* Til tanlash tugmasi - rasmga mos stil */
+.lang-wrapper {
+    display: flex;
+    align-items: center;
 }
 
-.lang-btn {
-    padding: 0.4rem 0.8rem;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    color: var(--white);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 600;
-    font-size: 0.85rem;
-    position: relative;
+.lang-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    height: 28px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: 10;
+    width: 55px; /* Faqat globus va bitta til uchun ixcham o'lcham */
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    white-space: nowrap; /* Tillar pastga tushib ketmasligi uchun muhim */
 }
 
-.lang-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.4s, height 0.4s;
+/* Ustiga borganda uzunroq ochilishi */
+.lang-container:hover {
+    width: 175px; /* 3 ta til uchun yetarli joy */
+    background: rgba(255, 255, 255, 0.12);
 }
 
-.lang-btn:hover::before {
-    width: 100%;
+.lang-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 55px; /* Har bir til uchun aniq belgilangan kenglik */
+    flex-shrink: 0; /* Siqilib qolmasligi uchun */
+    color: #cccccc; /* Kulrang matn */
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
     height: 100%;
+    transition: all 0.3s ease;
 }
 
-.lang-btn:hover,
-.lang-btn.active {
-    background: var(--white);
-    color: var(--primary-blue);
-    border-color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+/* Globus ikonkasi (OQ rangda) */
+.lang-item i {
+    font-size: 0.8rem;
+    color: #ffffff !important; /* Doimiy oq rang */
 }
 
-.lang-btn.active {
-    animation: langPulse 2s infinite;
+.lang-item.active {
+    color: #ffffff; /* Faol til ham oq */
 }
 
-@keyframes langPulse {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-2px); }
+.lang-hidden {
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.1s; /* Ozgina kechikish bilan chiqadi */
 }
 
-.lang-btn[data-lang="en"]::after {
-    content: ' 🇬🇧';
-    margin-left: 0.3rem;
+.lang-container:hover .lang-hidden {
+    opacity: 1;
 }
 
-.lang-btn[data-lang="ru"]::after {
-    content: ' 🇷🇺';
-    margin-left: 0.3rem;
+/* Hover effekti - shaffof kulrang fon */
+.lang-item:hover:not(.active) {
+    background: rgba(255, 255, 255, 0);
+    color: #ffffff;
 }
 
-.lang-btn[data-lang="uz"]::after {
-    content: ' 🇺🇿';
-    margin-left: 0.3rem;
+/* Oradagi chiziqlar */
+.lang-item:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+/* Social Media qismi */
+.social-medias {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 8px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 2px;
+}
+
+/* Brend ranglari (Hoverda ko'rinadi) */
+.social-icon.x-twitter { color: #000000; }
+.social-icon.linkedin { color: #0077b5; }
+.social-icon.telegram { color: #0088cc; }
+.social-icon.facebook { color: #1877f2; }
+.social-icon.instagram { color: #e4405f; }
+.social-icon.youtube { color: #ff0000; }
 
 /* ================================================
    Navigation
    ================================================ */
+/* Asosiy header */
 .main-header {
     background-color: var(--white);
     box-shadow: var(--shadow-md);
-    position: sticky;
+    position: fixed; /* sticky o'rniga fixed ishlating, shunda transition silliq ishlaydi */
+    width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    /* Transition barcha o'zgarishlarni (top, background, padding) sekinlashtiradi */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Transparent holati (Scroll bo'lmasdan oldin) */
 .main-header.transparent {
-    background: rgba(0, 64, 128, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 32, 64, 0.4) !important;
     -webkit-backdrop-filter: blur(10px);
     box-shadow: none;
-    position: fixed;
-    width: 100%;
-    top: 42px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 999;
+    top: 42px; /* Utility bar balandligi */
 }
 
+/* Scrolled holati (Scroll bo'lgandan keyin) */
 .main-header.scrolled {
     background: linear-gradient(135deg, #004080 0%, #003366 100%);
     box-shadow: var(--shadow-lg);
-    top: 0;
+    top: 0; /* Sekin 42px dan 0 ga ko'tariladi */
+    padding: 5px 0; /* Ichki bo'shliqni kamaytirib, header sekin kichrayishini ta'minlaydi */
 }
 
 .main-header.transparent .nav-menu > li > a,
@@ -363,7 +403,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px;
+    min-height: 90px;
 }
 
 .logo-section img {
@@ -425,95 +465,126 @@ ul {
     color: var(--white);
 }
 
-/* Dropdown */
 .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
-    min-width: 250px;
-    border: 1px solid rgba(0, 64, 128, 0.1);
-    border-radius: 12px;
-    padding: 0.8rem 0;
-    margin-top: 0.5rem;
-    box-shadow: var(--shadow-lg);
+    -webkit-backdrop-filter: blur(10px);
+
+    min-width: 200px; /* Ixcham kenglik */
+    border: 1px solid rgba(0, 64, 128, 0.15);
+    border-radius: 0; /* To'rtburchak */
+
+    padding: 5px 0;
+    margin-top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: var(--transition);
+    transform: translateY(8px);
+    transition: all 0.3s ease-out;
     z-index: 1000;
+
+    /* Sub-menu ko'rinishi uchun overflow ochiq bo'lishi shart */
+    overflow: visible !important;
 }
 
-.dropdown::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 20px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid rgba(255, 255, 255, 0.98);
-}
-
-.nav-menu > li:hover .dropdown {
+/* Hoverda dropdownni chiqarish */
+.nav-menu > li:hover > .dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
+/* Dropdown ichidagi har bir qator */
+.dropdown li {
+    position: relative; /* Sub-dropdown shu qatorga nisbatan chiqadi */
+    list-style: none;
+}
+
 .dropdown li a {
-    display: block;
-    padding: 0.8rem 1.5rem;
-    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Matn va strelka ikki tomonga */
+    padding: 8px 15px;
+    color: #333 !important;
+    font-size: 0.82rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    position: relative;
-    overflow: hidden;
+    border-left: 0 solid var(--primary-blue);
     white-space: nowrap;
+    text-decoration: none;
 }
 
-.dropdown li a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 0;
-    background: var(--primary-blue);
-    transition: height 0.3s ease;
-}
-
-.dropdown li a:hover::before {
-    height: 100%;
-}
-
+/* Dropdown link hover */
 .dropdown li a:hover {
-    background: linear-gradient(90deg, rgba(0, 64, 128, 0.08) 0%, transparent 100%);
-    color: var(--primary-blue);
-    padding-left: 2rem;
+    background: rgba(0, 64, 128, 0.05);
+    color: var(--primary-blue) !important;
+    border-left: 3px solid var(--primary-blue);
+    padding-left: 18px;
 }
 
-/* Sub-dropdown */
+/* ================================================
+   3. SUB-DROPDOWN (2-DARAJA)
+   ================================================ */
 .sub-dropdown {
     position: absolute;
-    top: 0;
-    left: 100%;
-    background-color: var(--white);
-    min-width: 250px;
-    box-shadow: var(--shadow-lg);
-    padding: 0.5rem 0;
+    top: -1px; /* Asosiy dropdown bilan parallel */
+    left: 100%; /* O'ng tomondan chiqadi */
+    background: #ffffff;
+    min-width: 180px;
+    border-radius: 0;
+    border: 1px solid rgba(0, 64, 128, 0.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-10px);
-    transition: var(--transition);
+    transform: translateX(8px);
+    transition: all 0.2s ease;
 }
 
-.dropdown li:hover .sub-dropdown {
+/* Hoverda sub-dropdownni chiqarish */
+.dropdown li:hover > .sub-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
+}
+
+/* ================================================
+   4. SUB-KATEGORIYA ARROW (BILDIRGICH)
+   ================================================ */
+/* Agar li ichida sub-dropdown bo'lsa, a tegining o'ngiga strelka qo'yish */
+.dropdown li:has(.sub-dropdown) > a::after {
+    content: '›'; /* Oddiy va chiroyli strelka */
+    font-size: 1.1rem;
+    margin-left: 10px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    color: #999;
+}
+
+.dropdown li:hover > a::after {
+    transform: translateX(3px);
+    color: var(--primary-blue);
+}
+
+/* Oxirgi menyularda sub-dropdown chapga ochilishi uchun (ekrandan chiqib ketmasligi uchun) */
+.nav-menu > li:nth-last-child(-n+2) .sub-dropdown {
+    left: auto;
+    right: 100%;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown yopilib qolmasligi uchun ko'prik bo'shliq */
+.nav-menu > li::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
 }
 
 /* Mobile Toggle */
@@ -601,10 +672,15 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* Muhim: background-image mana bu tartibda yozilishi kerak */
+    background-image: url('../img/back.jpg') !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../img/back.jpg');
+
+    /* Rasm ko'rinishi uchun z-index-ni to'g'irlaymiz */
+    z-index: 1;
 }
 
 .hero-section::before {
@@ -614,22 +690,29 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 64, 128, 0.3);
-    z-index: 1;
+    /* Rasm ko'rinishi uchun overlay shaffofligini tekshiring (0.4) */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1; /* BU MUHIM: overlay rasmdan orqada yoki rasm bilan birga bo'lishi kerak */
 }
 
 .hero-content {
     position: relative;
     z-index: 10;
     text-align: center;
-    color: var(--white);
 }
 
+/* Logotipni kattaroq va markazda ko'rsatish */
 .hero-content img {
-    max-width: 400px;
-    width: 80%;
-    margin: 0 auto;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+    max-width: 500px; /* Kattaroq qildik */
+    width: 90%;
+    height: auto;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+    animation: fadeInLogo 1.5s ease-out; /* Kirib kelish effekti */
+}
+
+@keyframes fadeInLogo {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .hero-content h1 {

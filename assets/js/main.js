@@ -23,25 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const utilityBar = document.querySelector('.utility-bar');
 
     if (mainHeader) {
+        // JS kodingiz ichidagi handleScroll qismini shunday tahrirlang:
         function handleScroll() {
             const scrollPosition = window.pageYOffset;
 
-            if (scrollPosition > 100) {
+            // Masofani 150 yoki 200 qilsangiz, header darhol almashib qolmaydi
+            if (scrollPosition > 150) {
                 mainHeader.classList.remove('transparent');
                 mainHeader.classList.add('scrolled');
                 if (utilityBar) {
-                    utilityBar.style.opacity = '0';
-                    utilityBar.style.visibility = 'hidden';
+                    utilityBar.style.transform = 'translateY(-100%)'; // Hidden o'rniga transform ishlating
+                    utilityBar.style.transition = '0.4s';
                 }
             } else {
                 mainHeader.classList.add('transparent');
                 mainHeader.classList.remove('scrolled');
                 if (utilityBar) {
-                    utilityBar.style.opacity = '1';
-                    utilityBar.style.visibility = 'visible';
+                    utilityBar.style.transform = 'translateY(0)';
                 }
             }
-        }
+}
 
         window.addEventListener('scroll', handleScroll);
         handleScroll();
