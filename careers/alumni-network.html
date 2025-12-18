@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alumni Network - TIU</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/tiu-main.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/careers.css">
 </head>
 <body>
-    <!-- Utility Bar -->
+        <!-- Utility Bar (Top Bar) -->
     <div class="utility-bar">
         <div class="container">
             <div class="utility-links">
@@ -18,24 +20,45 @@
                 <a href="../current-students/timetable.html"><i class="fas fa-calendar"></i> Timetable</a>
                 <a href="#"><i class="fas fa-envelope"></i> University Email</a>
             </div>
-            <div class="language-switcher">
-                <span>Language:</span>
-                <a href="#" class="lang-btn active" data-lang="en">EN</a>
-                <a href="#" class="lang-btn" data-lang="ru">RU</a>
-                <a href="#" class="lang-btn" data-lang="uz">UZ</a>
+
+            <div class="utility-right">
+                <div class="lang-wrapper">
+                    <div class="lang-container">
+                        <div class="lang-item active">
+                            <i class="fas fa-globe"></i>
+                            <span>EN</span>
+                        </div>
+                        <div class="lang-hidden">
+                            <a href="#" class="lang-item">UZ</a>
+                            <a href="#" class="lang-item">RU</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-medias">
+                    <span class="divider">|</span>
+                    <a href="#" class="social-icon x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <span class="divider">|</span>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                    <span class="divider">|</span>
+                    <a href="#" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+                    <span class="divider">|</span>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                    <span class="divider">|</span>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <span class="divider">|</span>
+                    <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Header -->
-    <header class="main-header">
+    <!-- Main Header & Navigation -->
+    <header class="main-header" id="mainHeader">
         <div class="nav-container">
             <div class="logo-section">
-                <a href="../index-tiu.html">
-                    <div class="logo-text">
-                        <h1>TIU</h1>
-                        <p>Tashkent International University</p>
-                    </div>
+                <a href="../index.html">
+                    <img src="../assets/img/logo.png" alt="TIU Logo" style="height: 60px; width: auto;">
                 </a>
             </div>
 
@@ -47,16 +70,167 @@
 
             <nav class="main-nav">
                 <ul class="nav-menu">
-                    <li><a href="../about/index.html">About TIU <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../admissions/index.html">Admissions <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../programs/index.html">Programs <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../international/index.html">International <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../current-students/index.html">Current Students <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../research/index.html">Research <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../faculty/index.html">Faculty <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../careers/index.html">Careers & Alumni <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../news/index.html">News & Media <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="../contact/index.html">Contact <i class="fas fa-chevron-down"></i></a></li>
+                    <!-- About TIU -->
+                    <li>
+                        <a href="../about/index.html">About</a>
+                        <ul class="dropdown">
+                            <li><a href="../about/overview.html">Overview</a></li>
+                            <li><a href="../about/mission-vision.html">Mission & Vision</a></li>
+                            <li><a href="../about/leadership.html">Leadership & Administration</a></li>
+                            <li><a href="../about/why-tiu.html">Why TIU</a></li>
+                            <li><a href="../about/sustainability.html">Sustainability & Impact</a></li>
+                            <li><a href="../about/campus-map.html">Campus Map</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Admissions -->
+                    <li>
+                        <a href="../admissions/index.html">Admissions</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="../admissions/how-to-apply.html">How to Apply</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../admissions/apply-bachelor.html">Bachelor</a></li>
+                                    <li><a href="../admissions/apply-master.html">Master</a></li>
+                                    <li><a href="../admissions/apply-international.html">International Applicants</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../admissions/requirements.html">Admission Requirements</a></li>
+                            <li><a href="../admissions/tuition-fees.html">Tuition & Fees</a></li>
+                            <li><a href="../admissions/scholarships.html">Scholarships & Financial Aid</a></li>
+                            <li><a href="../admissions/faqs.html">FAQs</a></li>
+                            <li><a href="../admissions/apply-now.html" class="highlight">Apply Now</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Programs -->
+                    <li>
+                        <a href="../programs/index.html">Programs</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="../programs/by-level.html">By Level</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../programs/bachelor.html">Bachelor</a></li>
+                                    <li><a href="../programs/master.html">Master</a></li>
+                                    <li><a href="../programs/certificates.html">Certificates & Short Programs</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../programs/by-faculty.html">By Faculty / School</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../programs/business-economics.html">Business & Economics</a></li>
+                                    <li><a href="../programs/it-engineering.html">IT & Engineering</a></li>
+                                    <li><a href="../programs/law.html">Law</a></li>
+                                    <li><a href="../programs/humanities.html">Humanities & Social Sciences</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../programs/international-programs.html">International Programs</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../programs/joint-degrees.html">Joint Degrees</a></li>
+                                    <li><a href="../programs/exchange-programs.html">Exchange Programs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- International Students -->
+                    <li>
+                        <a href="../international/index.html">International Students</a>
+                        <ul class="dropdown">
+                            <li><a href="../international/why-study-tiu.html">Why Study at TIU</a></li>
+                            <li><a href="../international/admission-process.html">Admission Process</a></li>
+                            <li><a href="../international/visa-immigration.html">Visa & Immigration</a></li>
+                            <li><a href="../international/accommodation.html">Accommodation</a></li>
+                            <li><a href="../international/partner-universities.html">Partner Universities</a></li>
+                            <li><a href="../international/exchange-opportunities.html">Exchange Opportunities</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Current Students -->
+                    <li>
+                        <a href="../current-students/index.html">Current Students</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="../current-students/academic-life.html">Academic Life</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../current-students/calendar.html">Academic Calendar</a></li>
+                                    <li><a href="../current-students/lms.html">LMS / Moodle</a></li>
+                                    <li><a href="../current-students/exams-results.html">Exams & Results</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../current-students/campus-services.html">Campus Services</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../current-students/housing.html">Housing</a></li>
+                                    <li><a href="../current-students/library.html">Library</a></li>
+                                    <li><a href="../current-students/it-services.html">IT Services</a></li>
+                                    <li><a href="../current-students/cafeteria.html">Cafeteria</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../current-students/student-life.html">Student Life</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="../current-students/student-union.html">Student Union</a></li>
+                                    <li><a href="../current-students/clubs.html">Clubs</a></li>
+                                    <li><a href="../current-students/sports.html">Sports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Research -->
+                    <li>
+                        <a href="../research/index.html">Research</a>
+                        <ul class="dropdown">
+                            <li><a href="../research/centers.html">Research Centers</a></li>
+                            <li><a href="../research/publications.html">Publications & Journals</a></li>
+                            <li><a href="../research/conferences.html">Conferences & Events</a></li>
+                            <li><a href="../research/innovation.html">Innovation & Projects</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Faculty -->
+                    <li>
+                        <a href="../faculty/index.html">Faculty</a>
+                        <ul class="dropdown">
+                            <li><a href="../faculty/directory.html">Faculty Directory</a></li>
+                            <li><a href="../faculty/departments.html">Departments</a></li>
+                            <li><a href="../faculty/profiles.html">Academic Staff Profiles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Careers & Alumni -->
+                    <li>
+                        <a href="../careers/index.html">Careers & Alumni</a>
+                        <ul class="dropdown">
+                            <li><a href="../careers/career-center.html">Career Center</a></li>
+                            <li><a href="../careers/internships.html">Internships & Employment</a></li>
+                            <li><a href="../careers/employer-partnerships.html">Employer Partnerships</a></li>
+                            <li><a href="../careers/alumni-network.html">Alumni Network</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- News & Media -->
+                    <li>
+                        <a href="../news/index.html">News & Media</a>
+                        <ul class="dropdown">
+                            <li><a href="../news/news.html">News</a></li>
+                            <li><a href="../news/events.html">Events</a></li>
+                            <li><a href="../news/press-releases.html">Press Releases</a></li>
+                            <li><a href="../news/gallery.html">Photo & Video Gallery</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact -->
+                    <li>
+                        <a href="../contact/index.html">Contact</a>
+                        <ul class="dropdown">
+                            <li><a href="../contact/contact-info.html">Contact Information</a></li>
+                            <li><a href="../contact/rector-reception.html">Rector's Virtual Reception</a></li>
+                            <li><a href="../contact/support.html">Ask a Question / Support</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -66,7 +240,7 @@
     <div class="page-header">
         <h1>Alumni Network</h1>
         <div class="breadcrumb">
-            <a href="../index-tiu.html">Home</a>
+            <a href="../index.html">Home</a>
             <span>/</span>
             <a href="index.html">Careers & Alumni</a>
             <span>/</span>
@@ -137,34 +311,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
+        <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About TIU</h3>
-                <p>Leading institution committed to excellence in teaching, research, and community service.</p>
+                <h3>TIU</h3>
+                <p style="margin-bottom: 1.5rem;">Leading institution of higher education committed to excellence in teaching, research, and global engagement.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
+
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../about/index.html">About TIU</a></li>
                     <li><a href="../admissions/index.html">Admissions</a></li>
-                    <li><a href="../programs/index.html">Programs</a></li>
-                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../programs/index.html">Academic Programs</a></li>
+                    <li><a href="../research/index.html">Research</a></li>
+                    <li><a href="../international/index.html">International</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h3>Contact</h3>
+                <h3>For Students</h3>
                 <ul>
+                    <li><a href="../current-students/lms.html">Student Portal</a></li>
+                    <li><a href="../current-students/library.html">E-Library</a></li>
+                    <li><a href="../current-students/calendar.html">Academic Calendar</a></li>
+                    <li><a href="../current-students/timetable.html">Timetable</a></li>
+                    <li><a href="../careers/career-center.html">Career Services</a></li>
+                    <li><a href="../current-students/student-life.html">Student Life</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Tashkent, Uzbekistan</li>
                     <li><i class="fas fa-phone"></i> +998 71 XXX XX XX</li>
                     <li><i class="fas fa-envelope"></i> info@tiu.uz</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
                 </ul>
+                <div style="margin-top: 1.5rem;">
+                    <a href="../contact/contact-info.html" class="cta-secondary" style="display: inline-block; font-size: 0.95rem;">Visit Us</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Tashkent International University. All rights reserved.</p>
+
+        <div class="footer-bottom" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2025 Tashkent International University. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Use</a></p>
         </div>
     </footer>
 
-    <script src="../assets/js/tiu-main.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/careers.js"></script>
 </body>
 </html>
