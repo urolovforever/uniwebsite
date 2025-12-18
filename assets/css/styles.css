@@ -126,6 +126,8 @@ ul {
 
 .section-spacing {
     padding: 6rem 2rem;
+    position: relative;
+    z-index: 10;
 }
 
 .bg-white {
@@ -695,8 +697,9 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Rasm ko'rinishi uchun z-index-ni to'g'irlaymiz */
-    z-index: 1;
+    /* Hero section should not overlap other content */
+    z-index: 0;
+    overflow: hidden;
 }
 
 .hero-section::before {
@@ -761,6 +764,8 @@ ul {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
     color: var(--white);
     padding: 4rem 2rem;
+    position: relative;
+    z-index: 10;
 }
 
 .stats-grid {
@@ -1029,6 +1034,7 @@ ul {
     padding: 4rem 2rem 1.5rem;
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
 .main-footer::before {
@@ -1342,6 +1348,32 @@ ul {
     .icon-card i {
         font-size: 2.5rem;
     }
+
+    /* Fix grid layouts on mobile */
+    [style*="display: grid"][style*="grid-template-columns: 1fr 1fr"],
+    [style*="grid-template-columns: 2fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Adjust hero content image on mobile */
+    .hero-content img {
+        max-width: 80%;
+    }
+}
+
+/* ================================================
+   CTA Section
+   ================================================ */
+.cta-section {
+    position: relative;
+    z-index: 10;
+}
+
+/* ================================================
+   Ensure proper stacking context for all main sections
+   ================================================ */
+section {
+    position: relative;
 }
 
 /* Reduce motion for accessibility */
