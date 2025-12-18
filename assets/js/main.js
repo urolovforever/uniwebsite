@@ -282,4 +282,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
     images.forEach(img => imageObserver.observe(img));
 
+    // ================================================
+    // Language Selector Dropdown
+    // ================================================
+    const langSelectorBtn = document.getElementById('langSelectorBtn');
+    const langDropdown = document.getElementById('langDropdown');
+    const langSelector = document.querySelector('.language-selector-dropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const currentLangSpan = document.querySelector('.current-lang');
+
+    if (langSelectorBtn && langDropdown) {
+        // Toggle dropdown
+        langSelectorBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langSelector.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!langSelector.contains(e.target)) {
+                langSelector.classList.remove('active');
+            }
+        });
+
+        // Handle language selection
+        langOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Remove active class from all options
+                langOptions.forEach(opt => opt.classList.remove('active'));
+
+                // Add active class to selected option
+                this.classList.add('active');
+
+                // Update button text
+                const selectedLang = this.getAttribute('data-lang').toUpperCase();
+                currentLangSpan.textContent = selectedLang;
+
+                // Close dropdown
+                langSelector.classList.remove('active');
+
+                // Here you can add logic to actually change the language
+                console.log('Language changed to:', selectedLang);
+            });
+        });
+    }
+
 });
