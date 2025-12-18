@@ -171,8 +171,8 @@ ul {
        background: rgba(0, 0, 0, 0.2); */
 
     color: var(--white);
-    font-size: 0.875rem;
-    padding: 0.5rem 0;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+    padding: clamp(0.75rem, 1.5vh, 1rem) 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -214,16 +214,17 @@ ul {
 
 .utility-links {
     display: flex;
-    gap: 1.5rem;
+    gap: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .utility-links a {
     color: var(--white);
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.4rem;
     position: relative;
     transition: all 0.3s ease;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
 }
 
 .utility-links a::before {
@@ -264,10 +265,10 @@ ul {
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 4px;
-    height: 28px;
+    border-radius: 0.25rem;
+    height: clamp(2rem, 3vh, 2.5rem);
     overflow: hidden;
-    width: 55px; /* Faqat globus va bitta til uchun ixcham o'lcham */
+    width: clamp(3.5rem, 5vw, 4.5rem); /* Faqat globus va bitta til uchun ixcham o'lcham */
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     white-space: nowrap; /* Tillar pastga tushib ketmasligi uchun muhim */
@@ -275,7 +276,7 @@ ul {
 
 /* Ustiga borganda uzunroq ochilishi */
 .lang-container:hover {
-    width: 175px; /* 3 ta til uchun yetarli joy */
+    width: clamp(11rem, 15vw, 13rem); /* 3 ta til uchun yetarli joy */
     background: rgba(255, 255, 255, 0.12);
 }
 
@@ -283,12 +284,12 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    width: 55px; /* Har bir til uchun aniq belgilangan kenglik */
+    gap: 0.35rem;
+    width: clamp(3.5rem, 5vw, 4.5rem); /* Har bir til uchun aniq belgilangan kenglik */
     flex-shrink: 0; /* Siqilib qolmasligi uchun */
     color: #cccccc; /* Kulrang matn */
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
     font-weight: 500;
     height: 100%;
     transition: all 0.3s ease;
@@ -296,7 +297,7 @@ ul {
 
 /* Globus ikonkasi (OQ rangda) */
 .lang-item i {
-    font-size: 0.8rem;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
     color: #ffffff !important; /* Doimiy oq rang */
 }
 
@@ -329,12 +330,13 @@ ul {
 .social-medias {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .social-icon {
     text-decoration: none;
-    font-size: 1rem;
-    margin: 0 8px;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    margin: 0 0.5rem;
     transition: transform 0.3s;
 }
 
@@ -344,7 +346,7 @@ ul {
 
 .divider {
     color: rgba(255, 255, 255, 0.5);
-    margin: 0 2px;
+    margin: 0 0.25rem;
 }
 
 /* Brend ranglari (Hoverda ko'rinadi) */
@@ -375,7 +377,7 @@ ul {
     background: rgba(0, 32, 64, 0.4) !important;
     -webkit-backdrop-filter: blur(10px);
     box-shadow: none;
-    top: 42px; /* Utility bar balandligi */
+    top: clamp(3rem, 5vh, 4rem); /* Utility bar balandligi */
 }
 
 /* Scrolled holati (Scroll bo'lgandan keyin) */
@@ -383,7 +385,7 @@ ul {
     background: linear-gradient(135deg, #004080 0%, #003366 100%);
     box-shadow: var(--shadow-lg);
     top: 0; /* Sekin 42px dan 0 ga ko'tariladi */
-    padding: 5px 0; /* Ichki bo'shliqni kamaytirib, header sekin kichrayishini ta'minlaydi */
+    padding: clamp(0.3rem, 0.5vh, 0.5rem) 0; /* Ichki bo'shliqni kamaytirib, header sekin kichrayishini ta'minlaydi */
 }
 
 .main-header.transparent .nav-menu > li > a,
@@ -399,15 +401,15 @@ ul {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 clamp(1rem, 2vw, 2rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 90px;
+    min-height: clamp(5rem, 8vh, 6.5rem);
 }
 
 .logo-section img {
-    height: 60px;
+    height: clamp(3.5rem, 5vw, 4.5rem);
     width: auto;
 }
 
@@ -418,7 +420,7 @@ ul {
 
 .nav-menu {
     display: flex;
-    gap: 0.2rem;
+    gap: clamp(0.25rem, 0.5vw, 0.5rem);
     align-items: center;
 }
 
@@ -429,11 +431,11 @@ ul {
 .nav-menu > li > a {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.6rem 0.7rem;
+    gap: 0.35rem;
+    padding: clamp(0.75rem, 1.2vh, 1rem) clamp(0.85rem, 1.2vw, 1.25rem);
     color: var(--text-dark);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: clamp(1rem, 1.1vw, 1.15rem);
     white-space: nowrap;
     position: relative;
 }
@@ -473,17 +475,17 @@ ul {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    min-width: 200px; /* Ixcham kenglik */
+    min-width: clamp(12rem, 15vw, 15rem); /* Ixcham kenglik */
     border: 1px solid rgba(0, 64, 128, 0.15);
     border-radius: 0; /* To'rtburchak */
 
-    padding: 5px 0;
+    padding: 0.5rem 0;
     margin-top: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(8px);
+    transform: translateY(0.5rem);
     transition: all 0.3s ease-out;
     z-index: 1000;
 
@@ -508,9 +510,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Matn va strelka ikki tomonga */
-    padding: 8px 15px;
+    padding: clamp(0.6rem, 1vh, 0.75rem) clamp(1rem, 1.5vw, 1.25rem);
     color: #333 !important;
-    font-size: 0.82rem;
+    font-size: clamp(0.95rem, 1vw, 1.05rem);
     font-weight: 500;
     transition: all 0.2s ease;
     border-left: 0 solid var(--primary-blue);
@@ -522,8 +524,8 @@ ul {
 .dropdown li a:hover {
     background: rgba(0, 64, 128, 0.05);
     color: var(--primary-blue) !important;
-    border-left: 3px solid var(--primary-blue);
-    padding-left: 18px;
+    border-left: 0.2rem solid var(--primary-blue);
+    padding-left: clamp(1.15rem, 1.7vw, 1.4rem);
 }
 
 /* ================================================
@@ -534,14 +536,14 @@ ul {
     top: -1px; /* Asosiy dropdown bilan parallel */
     left: 100%; /* O'ng tomondan chiqadi */
     background: #ffffff;
-    min-width: 180px;
+    min-width: clamp(11rem, 13vw, 13rem);
     border-radius: 0;
     border: 1px solid rgba(0, 64, 128, 0.15);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.1);
 
     opacity: 0;
     visibility: hidden;
-    transform: translateX(8px);
+    transform: translateX(0.5rem);
     transition: all 0.2s ease;
 }
 
@@ -558,15 +560,15 @@ ul {
 /* Agar li ichida sub-dropdown bo'lsa, a tegining o'ngiga strelka qo'yish */
 .dropdown li:has(.sub-dropdown) > a::after {
     content: '›'; /* Oddiy va chiroyli strelka */
-    font-size: 1.1rem;
-    margin-left: 10px;
+    font-size: clamp(1.15rem, 1.3vw, 1.35rem);
+    margin-left: 0.65rem;
     line-height: 1;
     transition: transform 0.3s ease;
     color: #999;
 }
 
 .dropdown li:hover > a::after {
-    transform: translateX(3px);
+    transform: translateX(0.2rem);
     color: var(--primary-blue);
 }
 
