@@ -167,26 +167,25 @@ ul {
 .utility-bar {
     /* Backgroundni shaffof qilish */
     background: rgba(0, 32, 64, 0.4) !important;
-    /* Agar matnlar ko'rinmay qolsa, yarim shaffof qora yoki oq rang berish mumkin:
-       background: rgba(0, 0, 0, 0.2); */
 
     color: var(--white);
-    font-size: 0.875rem;
-    padding: 0.5rem 0;
+    /* Shrift 0.875rem dan 1.1rem ga oshirildi */
+    font-size: 1.1rem;
+    /* Padding oshirildi */
+    padding: 0.8rem 0;
+
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    transition: var(--transition);
+    z-index: 1100; /* Headerdan balandda turishi uchun */
+    transition: all 0.4s ease;
     overflow: hidden;
 
-    /* Soyani olib tashlash (agar bo'lsa) */
     box-shadow: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Yarim shaffof oq chiziq */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .utility-bar::before {
-    /* Shimmer effektini ham shaffofroq qilish yoki o'chirib qo'yish */
     content: '';
     position: absolute;
     top: 0;
@@ -198,32 +197,33 @@ ul {
 }
 
 @keyframes shimmer {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 .utility-bar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1500px; /* Konteyner kengaytirildi */
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .utility-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Oraliq masofa oshirildi */
 }
 
 .utility-links a {
     color: var(--white);
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem; /* Ikonka va matn orasi */
     position: relative;
     transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .utility-links a::before {
@@ -232,7 +232,7 @@ ul {
     bottom: -2px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 3px; /* Chiziq qalinligi oshirildi */
     background: var(--white);
     transition: width 0.3s ease;
 }
@@ -250,7 +250,7 @@ ul {
 .utility-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px; /* Gap 10px dan 20px ga oshirildi */
 }
 
 /* Til tanlash tugmasi - rasmga mos stil */
@@ -262,41 +262,41 @@ ul {
 .lang-container {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 4px;
-    height: 28px;
+    border-radius: 0; /* To'rtburchak border radius 0 */
+    height: 36px; /* 28px dan 36px ga oshirildi */
     overflow: hidden;
-    width: 55px; /* Faqat globus va bitta til uchun ixcham o'lcham */
+    width: 70px; /* Boshlang'ich kenglik oshirildi */
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    white-space: nowrap; /* Tillar pastga tushib ketmasligi uchun muhim */
+    white-space: nowrap;
 }
 
 /* Ustiga borganda uzunroq ochilishi */
 .lang-container:hover {
-    width: 175px; /* 3 ta til uchun yetarli joy */
-    background: rgba(255, 255, 255, 0.12);
+    width: 210px; /* 175px dan oshirildi */
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .lang-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    width: 55px; /* Har bir til uchun aniq belgilangan kenglik */
-    flex-shrink: 0; /* Siqilib qolmasligi uchun */
-    color: #cccccc; /* Kulrang matn */
+    gap: 8px;
+    width: 70px; /* Har bir element kengligi */
+    flex-shrink: 0;
+    color: #eeeeee;
     text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 1rem; /* 0.8rem dan oshirildi */
+    font-weight: 600;
     height: 100%;
     transition: all 0.3s ease;
 }
 
 /* Globus ikonkasi (OQ rangda) */
 .lang-item i {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #ffffff !important; /* Doimiy oq rang */
 }
 
@@ -333,18 +333,19 @@ ul {
 
 .social-icon {
     text-decoration: none;
-    font-size: 1rem;
-    margin: 0 8px;
+    font-size: 1.3rem; /* 1rem dan 1.3rem ga oshirildi */
+    margin: 0 10px;
     transition: transform 0.3s;
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
 }
 
 .divider {
-    color: rgba(255, 255, 255, 0.5);
-    margin: 0 2px;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 5px;
+    font-size: 1.2rem;
 }
 
 /* Brend ranglari (Hoverda ko'rinadi) */
@@ -362,53 +363,63 @@ ul {
 .main-header {
     background-color: var(--white);
     box-shadow: var(--shadow-md);
-    position: fixed; /* sticky o'rniga fixed ishlating, shunda transition silliq ishlaydi */
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    /* Transition barcha o'zgarishlarni (top, background, padding) sekinlashtiradi */
+    /* Silliq o'tish effekti */
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Transparent holati (Scroll bo'lmasdan oldin) */
+/* Transparent holati (Utility bar ostida turishi uchun) */
 .main-header.transparent {
     background: rgba(0, 32, 64, 0.4) !important;
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
     box-shadow: none;
-    top: 42px; /* Utility bar balandligi */
+    /* Utility bar yangi balandligiga (54px) moslandi */
+    top: 64px;
 }
 
-/* Scrolled holati (Scroll bo'lgandan keyin) */
+/* Scrolled holati (Pastga tushganda) */
 .main-header.scrolled {
     background: linear-gradient(135deg, #004080 0%, #003366 100%);
     box-shadow: var(--shadow-lg);
-    top: 0; /* Sekin 42px dan 0 ga ko'tariladi */
-    padding: 5px 0; /* Ichki bo'shliqni kamaytirib, header sekin kichrayishini ta'minlaydi */
+    top: 0;
+    padding: 5px 0; /* Ixchamroq balandlik */
 }
 
+/* Matn va Logo ranglari */
 .main-header.transparent .nav-menu > li > a,
 .main-header.scrolled .nav-menu > li > a {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .main-header.transparent .logo-section img,
 .main-header.scrolled .logo-section img {
     filter: brightness(0) invert(1);
+    opacity: 1;
 }
 
 .nav-container {
-    max-width: 1400px;
+    max-width: 1500px; /* Keng ekranlar uchun */
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 90px;
+    /* Balandlik 110px qilib belgilandi (125% masshtab uchun ideal) */
+    min-height: 130px;
+    transition: all 0.4s ease;
 }
 
 .logo-section img {
-    height: 60px;
+    /* Logo balandligi 80px (avval 60px edi) */
+    height: 80px;
     width: auto;
+    transition: all 0.4s ease;
+}
+.main-header.scrolled .logo-section img {
+    height: 65px;
 }
 
 .main-nav {
@@ -418,7 +429,7 @@ ul {
 
 .nav-menu {
     display: flex;
-    gap: 0.2rem;
+    gap: 1.2rem;
     align-items: center;
 }
 
@@ -430,10 +441,10 @@ ul {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    padding: 0.6rem 0.7rem;
+    padding: 0.5rem 0.2rem;
     color: var(--text-dark);
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 1rem;
     white-space: nowrap;
     position: relative;
 }
@@ -441,14 +452,14 @@ ul {
 .nav-menu > li > a::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 50%;
     width: 0;
-    height: 3px;
+    height: 5px; /* Chiziq qalinlashdi */
     background: var(--white);
     transform: translateX(-50%);
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 3px 3px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 
 .nav-menu > li > a:hover::before,
@@ -458,11 +469,16 @@ ul {
 
 .nav-menu > li > a:hover {
     color: var(--primary-blue);
+    opacity: 0.8;
 }
 
 .main-header.transparent .nav-menu > li > a:hover,
 .main-header.scrolled .nav-menu > li > a:hover {
     color: var(--white);
+}
+
+.main-header.scrolled .nav-container {
+    min-height: 85px; /* Scroll bo'lganda biroz kichrayadi */
 }
 
 .dropdown {
@@ -510,8 +526,8 @@ ul {
     justify-content: space-between; /* Matn va strelka ikki tomonga */
     padding: 8px 15px;
     color: #333 !important;
-    font-size: 0.82rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
     transition: all 0.2s ease;
     border-left: 0 solid var(--primary-blue);
     white-space: nowrap;
@@ -713,91 +729,6 @@ ul {
 @keyframes fadeInLogo {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    color: var(--white);
-}
-
-.hero-tagline {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-    opacity: 0.95;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-}
-
-.hero-btn {
-    padding: 1.2rem 3rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: var(--transition);
-    display: inline-block;
-}
-
-.hero-btn-primary {
-    background-color: var(--white);
-    color: var(--primary-blue);
-    border: 3px solid var(--white);
-}
-
-.hero-btn-primary:hover {
-    opacity: 0.9;
-}
-
-.hero-btn-secondary {
-    background-color: transparent;
-    color: var(--white);
-    border: 3px solid var(--white);
-}
-
-.hero-btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Quick Access Links */
-.hero-quick-access {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.quick-link {
-    padding: 0.75rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    color: var(--white);
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.quick-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Scroll Indicator */
