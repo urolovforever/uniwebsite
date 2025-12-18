@@ -23,26 +23,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const utilityBar = document.querySelector('.utility-bar');
 
     if (mainHeader) {
-        // JS kodingiz ichidagi handleScroll qismini shunday tahrirlang:
-        function handleScroll() {
-            const scrollPosition = window.pageYOffset;
+        // Check if this is a sticky header (subpage) or transparent header (home page)
+        const isSticky = mainHeader.classList.contains('sticky');
 
-            // Masofani 150 yoki 200 qilsangiz, header darhol almashib qolmaydi
-            if (scrollPosition > 150) {
-                mainHeader.classList.remove('transparent');
-                mainHeader.classList.add('scrolled');
-                if (utilityBar) {
-                    utilityBar.style.transform = 'translateY(-100%)'; // Hidden o'rniga transform ishlating
-                    utilityBar.style.transition = '0.4s';
-                }
-            } else {
-                mainHeader.classList.add('transparent');
-                mainHeader.classList.remove('scrolled');
-                if (utilityBar) {
-                    utilityBar.style.transform = 'translateY(0)';
+        function handleScroll() {
+            // Only handle scroll for non-sticky headers (home page)
+            if (!isSticky) {
+                const scrollPosition = window.pageYOffset;
+
+                // Masofani 150 yoki 200 qilsangiz, header darhol almashib qolmaydi
+                if (scrollPosition > 150) {
+                    mainHeader.classList.remove('transparent');
+                    mainHeader.classList.add('scrolled');
+                    if (utilityBar) {
+                        utilityBar.style.transform = 'translateY(-100%)'; // Hidden o'rniga transform ishlating
+                        utilityBar.style.transition = '0.4s';
+                    }
+                } else {
+                    mainHeader.classList.add('transparent');
+                    mainHeader.classList.remove('scrolled');
+                    if (utilityBar) {
+                        utilityBar.style.transform = 'translateY(0)';
+                    }
                 }
             }
-}
+            // Sticky headers don't need scroll handling - they stay fixed
+        }
 
         window.addEventListener('scroll', handleScroll);
         handleScroll();
