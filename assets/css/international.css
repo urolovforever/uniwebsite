@@ -1,0 +1,264 @@
+/* International Students Section Specific Styles */
+
+.international-hero {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+}
+
+.country-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.country-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+    transform: translateY(-8px);
+}
+
+.country-flag {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.country-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.student-count {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.visa-process {
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.process-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.process-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 2px;
+    height: calc(100% + 40px);
+    background: var(--primary-blue);
+}
+
+.process-step:last-child::before {
+    display: none;
+}
+
+.step-icon {
+    min-width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.accommodation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.accommodation-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.accommodation-image {
+    height: 200px;
+    background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.accommodation-details {
+    padding: 1.5rem;
+}
+
+.accommodation-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.accommodation-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.feature i {
+    color: #10b981;
+}
+
+.price-tag {
+    background: var(--accent-gold);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.partner-universities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.partner-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: scale(1.05);
+}
+
+.partner-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--primary-blue);
+}
+
+.partner-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.partner-location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.exchange-programs {
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.testimonial-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.testimonial-card {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.author-country {
+    color: #666;
+    font-size: 0.9rem;
+}
