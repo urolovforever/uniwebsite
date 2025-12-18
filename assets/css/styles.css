@@ -1362,26 +1362,71 @@ ul {
 }
 
 /* ================================================
-   About Section Image Gallery
+   About Section Enhancements
    ================================================ */
+.about-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
 .about-img {
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
 .about-img:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 50px rgba(0, 64, 128, 0.25) !important;
+    box-shadow: 0 20px 60px rgba(0, 64, 128, 0.3) !important;
+}
+
+.stat-highlight {
+    transition: transform 0.3s ease;
+}
+
+.stat-highlight:hover {
+    transform: translateY(-5px);
+}
+
+.value-card {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card:hover .fa-globe-americas,
+.value-card:hover .fa-lightbulb,
+.value-card:hover .fa-users {
+    animation: iconPulse 0.6s ease;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 /* ================================================
    Campus Life Section
    ================================================ */
 .campus-life-section {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../img/back1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.campus-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 64, 128, 0.2) !important;
+}
+
+.campus-feature-card:hover .fas {
+    transform: rotate(0deg) !important;
+}
+
+.campus-hero {
+    transition: transform 0.3s ease;
+}
+
+.campus-hero:hover {
+    transform: scale(1.01);
 }
 
 /* ================================================
