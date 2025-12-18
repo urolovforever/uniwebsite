@@ -181,9 +181,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (heroSection) {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const parallaxSpeed = 0.5;
-            if (scrolled < window.innerHeight) {
+            const parallaxSpeed = 0.3;
+            const heroHeight = heroSection.offsetHeight;
+
+            // Only apply parallax while hero is visible
+            if (scrolled < heroHeight) {
                 heroSection.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+                heroSection.style.opacity = 1 - (scrolled / heroHeight) * 0.3;
+            } else {
+                // Reset transform when scrolled past hero
+                heroSection.style.transform = 'translateY(0)';
             }
         });
     }
