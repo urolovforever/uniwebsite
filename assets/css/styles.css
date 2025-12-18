@@ -125,7 +125,7 @@ ul {
 }
 
 .section-spacing {
-    padding: 6rem 2rem;
+    padding: 3.5rem 2rem;
     position: relative;
     z-index: 10;
 }
@@ -763,7 +763,7 @@ ul {
 .stats-section {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
     color: var(--white);
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     position: relative;
     z-index: 10;
 }
@@ -1359,6 +1359,50 @@ ul {
     .hero-content img {
         max-width: 80%;
     }
+}
+
+/* ================================================
+   About Section Image Gallery
+   ================================================ */
+.about-img {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(0, 64, 128, 0.25) !important;
+}
+
+/* ================================================
+   Campus Life Section
+   ================================================ */
+.campus-life-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../img/back1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ================================================
+   Partners Carousel Animation
+   ================================================ */
+@keyframes carouselScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.partners-carousel {
+    display: flex;
+    width: max-content;
+}
+
+.partners-carousel:hover {
+    animation-play-state: paused;
 }
 
 /* ================================================
