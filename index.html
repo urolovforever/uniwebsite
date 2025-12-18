@@ -431,7 +431,7 @@
     </section>
 
     <!-- ================================================
-         Global Partnerships
+         Global Partnerships - Carousel
          ================================================ -->
     <section class="section-spacing reveal" style="background-color: var(--light-gray);">
         <div class="container">
@@ -440,13 +440,33 @@
                 <p style="font-size: 1.15rem;">Connected to leading universities worldwide</p>
             </div>
 
-            <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem; opacity: 0.7;">
-                <img src="img/trust (1).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <img src="img/trust (2).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <img src="img/trust (3).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <img src="img/trust (4).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <img src="img/trust (5).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <img src="img/trust (6).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+            <div class="partners-carousel-wrapper" style="margin-top: 3rem; position: relative; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <button class="carousel-btn carousel-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: rgba(0, 64, 128, 0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="partners-carousel-container" style="overflow: hidden;">
+                    <div class="partners-carousel" style="display: flex; gap: 4rem; align-items: center; justify-content: center; transition: transform 0.5s ease; opacity: 0.7;">
+                        <div class="partner-slide" style="flex: 0 0 auto;">
+                            <img src="img/trust (1).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                        <div class="partner-slide" style="flex: 0 0 auto;">
+                            <img src="img/trust (2).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                        <div class="partner-slide" style="flex: 0 0 auto;">
+                            <img src="img/trust (3).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                        <div class="partner-slide" style="flex: 0 0 auto;">
+                            <img src="img/trust (4).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                        <div class="partner-slide" style="flex: 0 0 auto;">
+                            <img src="img/trust (5).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                        <div class="partner-slide" style="flex: 0 0 auto;">
+                            <img src="img/trust (6).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-next" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); background: rgba(0, 64, 128, 0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;"><i class="fas fa-chevron-right"></i></button>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
