@@ -799,6 +799,29 @@ ul {
     .stat-number {
         font-size: 2.5rem;
     }
+
+    /* Persona cards responsive */
+    .persona-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .persona-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .persona-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .persona-icon i {
+        font-size: 2rem;
+    }
+
+    .persona-card h3 {
+        font-size: 1.35rem;
+    }
 }
 
 /* ================================================
@@ -969,6 +992,121 @@ ul {
 }
 
 /* ================================================
+   Persona-Based Navigation
+   ================================================ */
+.persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.persona-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.persona-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 64, 128, 0.15);
+    border-color: var(--primary-blue);
+}
+
+.persona-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.persona-card:hover .persona-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 64, 128, 0.3);
+}
+
+.persona-icon i {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.persona-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.persona-card > p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.persona-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.persona-links li {
+    margin-bottom: 0.75rem;
+}
+
+.persona-links a {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.persona-links a:hover {
+    color: var(--primary-blue);
+    padding-left: 0.5rem;
+}
+
+.persona-links i {
+    font-size: 0.75rem;
+    color: var(--primary-blue);
+}
+
+.persona-cta {
+    display: block;
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+.persona-cta:hover {
+    background-color: var(--light-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 64, 128, 0.3);
+}
+
+/* ================================================
    Utilities
    ================================================ */
 .text-center { text-align: center; }
@@ -1012,6 +1150,14 @@ ul {
 .hero-quick-access .quick-link:nth-child(2) { transition-delay: 0.6s; }
 .hero-quick-access .quick-link:nth-child(3) { transition-delay: 0.7s; }
 .hero-quick-access .quick-link:nth-child(4) { transition-delay: 0.8s; }
+
+/* Persona cards stagger */
+.persona-grid .persona-card:nth-child(1) { transition-delay: 0.1s; }
+.persona-grid .persona-card:nth-child(2) { transition-delay: 0.2s; }
+.persona-grid .persona-card:nth-child(3) { transition-delay: 0.3s; }
+.persona-grid .persona-card:nth-child(4) { transition-delay: 0.4s; }
+.persona-grid .persona-card:nth-child(5) { transition-delay: 0.5s; }
+.persona-grid .persona-card:nth-child(6) { transition-delay: 0.6s; }
 
 /* Hero content entrance animation */
 .hero-content h1 {

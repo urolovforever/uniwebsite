@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe all sections and cards
-    const animatedElements = document.querySelectorAll('.section-spacing, .card, .stat-item, .hero-quick-access, .news-card, .icon-card');
+    const animatedElements = document.querySelectorAll('.section-spacing, .card, .stat-item, .hero-quick-access, .news-card, .icon-card, .persona-card');
     animatedElements.forEach(el => {
         el.classList.add('fade-in-element');
         observer.observe(el);
