@@ -386,6 +386,54 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+    // ================================================
+    // Partners Carousel
+    // ================================================
+    const carouselPrev = document.querySelector('.carousel-prev');
+    const carouselNext = document.querySelector('.carousel-next');
+    const partnersCarousel = document.querySelector('.partners-carousel');
+
+    if (carouselPrev && carouselNext && partnersCarousel) {
+        let currentIndex = 0;
+        const slides = partnersCarousel.querySelectorAll('.partner-slide');
+        const visibleSlides = window.innerWidth < 768 ? 1 : 3; // Responsive: 1 on mobile, 3 on desktop
+        const maxIndex = Math.max(0, slides.length - visibleSlides);
+
+        function updateCarousel() {
+            const slideWidth = slides[0].offsetWidth;
+            const gap = window.innerWidth < 768 ? 32 : 64; // 2rem on mobile, 4rem on desktop
+            const offset = -(currentIndex * (slideWidth + gap));
+            partnersCarousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        carouselNext.addEventListener('click', () => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        carouselPrev.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        // Auto-slide every 3 seconds
+        setInterval(() => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }, 3000);
+
+        // Update on window resize for responsive behavior
+        window.addEventListener('resize', throttle(updateCarousel, 250));
+    }
+
 }
 
 // Throttle function for scroll events

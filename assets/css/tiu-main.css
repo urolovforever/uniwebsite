@@ -80,11 +80,15 @@ ul {
    Utility Bar (Top Bar)
    ================================================ */
 .utility-bar {
-    background-color: var(--primary-blue);
+    background-color: rgba(0, 64, 128, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: var(--white);
     font-size: 0.875rem;
     padding: 0.5rem 0;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

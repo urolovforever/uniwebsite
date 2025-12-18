@@ -500,6 +500,27 @@
     .stat-number {
         font-size: 2.5rem;
     }
+
+    /* About Us section responsive */
+    .container > div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Carousel buttons responsive */
+    .carousel-btn {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 0.875rem !important;
+    }
+
+    .carousel-prev {
+        left: -20px !important;
+    }
+
+    .carousel-next {
+        right: -20px !important;
+    }
 }
 
 @media (max-width: 768px) {
