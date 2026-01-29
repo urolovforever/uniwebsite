@@ -527,6 +527,103 @@ ul { list-style: none; }
 }
 
 /* ================================================
+   Love Where You Learn Section
+   ================================================ */
+.love-learn-section {
+    display: flex;
+    min-height: 600px;
+}
+
+.love-learn-content {
+    flex: 0 0 400px;
+    background: var(--primary-blue);
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.love-learn-accent {
+    width: 60px;
+    height: 4px;
+    background: var(--white);
+    margin-bottom: 2rem;
+}
+
+.love-learn-content h2 {
+    color: var(--white);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.love-learn-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.love-learn-content p a {
+    color: var(--white);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.love-learn-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-love-learn {
+    display: block;
+    background: transparent;
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-love-learn:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+.btn-love-learn-filled {
+    display: block;
+    background: var(--white);
+    color: var(--primary-blue);
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-love-learn-filled:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+.love-learn-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.love-learn-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================================================
    Upcoming Events Section
    ================================================ */
 .upcoming-events-section { padding: 5rem 0; background: #fff; }
