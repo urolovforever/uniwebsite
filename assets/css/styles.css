@@ -1783,78 +1783,140 @@ section {
 /* Programs Pathway Section */
 .programs-pathway {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+    background: #ffffff;
+}
+
+.pathway-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pathway-header h2 {
+    font-size: 2.75rem;
+    color: var(--text-dark);
+    font-weight: 400;
+}
+
+.pathway-header h2 strong {
+    font-weight: 800;
+}
+
+.pathway-underline {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-blue);
+    margin: 1rem auto 0;
 }
 
 .pathway-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .pathway-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 2.5rem;
-    text-align: center;
-    transition: all 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .pathway-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
-.pathway-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--accent-gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
+.pathway-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
 }
 
-.pathway-icon i {
-    font-size: 2rem;
-    color: var(--white);
+.pathway-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.pathway-card:hover .pathway-image img {
+    transform: scale(1.05);
+}
+
+.pathway-content {
+    padding: 1.5rem 2rem 2rem;
 }
 
 .pathway-card h3 {
-    color: var(--white);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.pathway-stats {
-    color: var(--accent-gold);
+    color: var(--text-dark);
+    font-size: 1.25rem;
     font-weight: 700;
-    font-size: 1.1rem;
     margin-bottom: 1rem;
+    letter-spacing: 0.5px;
 }
 
-.pathway-card p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+.pathway-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
 }
 
-.pathway-link {
+.pathway-content ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.pathway-content ul li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-size: 0.5rem;
+    top: 0.4rem;
+}
+
+.pathway-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-pathway-primary {
+    display: block;
+    background: var(--primary-blue);
     color: var(--white);
+    text-align: center;
+    padding: 0.875rem 1.5rem;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
-.pathway-link:hover {
-    color: var(--accent-gold);
-    gap: 0.8rem;
+.btn-pathway-primary:hover {
+    background: #003366;
+}
+
+.btn-pathway-secondary {
+    display: block;
+    background: transparent;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.btn-pathway-secondary:hover {
+    background: var(--text-dark);
+    color: var(--white);
 }
 
 /* Rector Section */
@@ -2224,8 +2286,13 @@ section {
 
 @media (max-width: 992px) {
     .pathway-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .pathway-grid .pathway-card:last-child {
+        grid-column: span 2;
+        max-width: 400px;
         margin: 0 auto;
     }
 
@@ -2262,8 +2329,25 @@ section {
         padding: 3rem 0;
     }
 
-    .pathway-card {
-        padding: 2rem;
+    .pathway-header h2 {
+        font-size: 2rem;
+    }
+
+    .pathway-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pathway-grid .pathway-card:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .pathway-image {
+        height: 180px;
+    }
+
+    .pathway-content {
+        padding: 1.25rem 1.5rem 1.5rem;
     }
 
     .rector-content h2 {
