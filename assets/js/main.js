@@ -55,20 +55,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ================================================
-    // Dropdown Navigation for Mobile
+    // Mega Menu & Dropdown Navigation for Mobile
     // ================================================
     const navItems = document.querySelectorAll('.nav-menu > li');
 
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            if (window.innerWidth <= 968) {
-                const dropdown = this.querySelector('.dropdown');
-                if (dropdown) {
-                    e.stopPropagation();
-                    this.classList.toggle('active');
+        const link = item.querySelector(':scope > a');
+
+        // Add click handler for mobile navigation
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 968) {
+                    const megaMenu = item.querySelector('.mega-menu');
+                    const dropdown = item.querySelector('.dropdown');
+
+                    if (megaMenu || dropdown) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        // Close other open menus
+                        navItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current menu
+                        item.classList.toggle('active');
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 
     const dropdownItems = document.querySelectorAll('.dropdown > li');
@@ -83,6 +100,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+    });
+
+    // Close mega menu when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 968) {
+            if (!e.target.closest('.main-nav')) {
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        }
     });
 
     // ================================================
