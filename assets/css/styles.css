@@ -434,14 +434,26 @@ ul { list-style: none; }
    Experience TIU Section
    ================================================ */
 .experience-section {
-    padding: 0;
+    padding: 5rem 0;
     background: var(--white);
+}
+
+.experience-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .experience-block {
     display: flex;
     align-items: stretch;
-    min-height: 500px;
+    min-height: 450px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.experience-block:last-child {
+    margin-bottom: 0;
 }
 
 .experience-block.reverse {
@@ -450,7 +462,7 @@ ul { list-style: none; }
 
 .experience-text {
     flex: 0 0 50%;
-    padding: 5rem 6rem;
+    padding: 3rem 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
