@@ -658,16 +658,20 @@ ul {
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(0, 32, 64, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, #004080 0%, #003366 100%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transform: translateY(5px);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
-    border-top: none;
+}
+
+/* Transparent header uchun mega menu ham shaffof */
+.main-header.transparent .mega-menu {
+    background: rgba(0, 32, 64, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 /* Mega menu hover state */
@@ -1613,9 +1617,13 @@ ul {
         transform: none;
         box-shadow: none;
         display: none;
-        background: rgba(0, 32, 64, 0.92);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: linear-gradient(135deg, #004080 0%, #003366 100%);
+    }
+
+    .main-header.transparent .mega-menu {
+        background: rgba(0, 32, 64, 0.5);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
     }
 
     .has-mega-menu.active > .mega-menu {
