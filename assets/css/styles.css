@@ -1821,11 +1821,13 @@ section {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     overflow: hidden;
+    border: 1px solid #e0e0e0;
 }
 
 .pathway-card:hover {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
+    border-color: var(--primary-blue);
 }
 
 .pathway-image {
@@ -2066,11 +2068,13 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
 }
 
 .news-highlight-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-blue);
 }
 
 .news-highlight-card a {
