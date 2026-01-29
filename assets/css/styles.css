@@ -468,6 +468,7 @@ ul {
     font-size: 1.1rem;
     white-space: nowrap;
     position: relative;
+    text-transform: uppercase;
 }
 
 
@@ -725,7 +726,7 @@ ul {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .mega-menu-image {
@@ -735,7 +736,7 @@ ul {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .mega-menu-image img {
@@ -791,9 +792,9 @@ ul {
     align-items: center;
     gap: 0.5rem;
     padding: 0.7rem 1.5rem;
-    background: var(--accent-gold);
-    color: var(--white) !important;
-    border-radius: 4px;
+    background: var(--white);
+    color: var(--primary-blue) !important;
+    border-radius: 0;
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -804,9 +805,10 @@ ul {
 }
 
 .mega-menu-cta:hover {
-    background: #c4956a;
+    background: var(--light-blue);
+    color: var(--white) !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 64, 128, 0.4);
 }
 
 .mega-menu-cta.highlight {
@@ -844,7 +846,7 @@ ul {
 .mega-menu-column h4 {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--accent-gold);
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 1.25rem;
@@ -879,7 +881,7 @@ ul {
 .mega-menu-column ul li a:hover {
     color: var(--white) !important;
     padding-left: 12px;
-    border-left-color: var(--accent-gold);
+    border-left-color: var(--white);
 }
 
 .mega-menu-column ul li a::before {
@@ -1545,7 +1547,7 @@ ul {
         font-size: 0.7rem;
         margin-bottom: 0.5rem;
         padding-bottom: 0.5rem;
-        color: var(--accent-gold);
+        color: var(--white);
     }
 
     .mega-menu-column ul li a {
@@ -1748,7 +1750,7 @@ section {
 }
 
 .breadcrumb a:hover {
-    color: var(--accent-gold);
+    color: var(--light-blue);
 }
 
 .breadcrumb .separator {
@@ -1977,7 +1979,7 @@ section {
 }
 
 .welcome-content p a:hover {
-    color: var(--accent-gold);
+    color: var(--light-blue);
 }
 
 .welcome-buttons {
@@ -2482,10 +2484,10 @@ section {
 
 .news-tag {
     display: inline-block;
-    background: var(--accent-gold);
+    background: var(--primary-blue);
     color: var(--white);
     padding: 0.3rem 1rem;
-    border-radius: 20px;
+    border-radius: 0;
     font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -2595,7 +2597,7 @@ section {
 }
 
 .campus-overlay a {
-    color: var(--accent-gold);
+    color: var(--white);
     font-weight: 600;
     font-size: 0.9rem;
     display: inline-flex;
@@ -2689,7 +2691,7 @@ section {
 
 /* CTA Banner */
 .cta-banner {
-    background: linear-gradient(135deg, var(--accent-gold) 0%, #c9a227 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
     padding: 5rem 0;
     text-align: center;
 }
@@ -2740,7 +2742,7 @@ section {
 
 .cta-btn-secondary:hover {
     background: var(--white);
-    color: var(--accent-gold);
+    color: var(--primary-blue);
 }
 
 /* Responsive Homepage */
