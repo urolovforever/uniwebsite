@@ -2219,10 +2219,13 @@ section {
 .event-card {
     background: #fff;
     transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
 }
 
 .event-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-blue);
+    box-shadow: 0 10px 30px rgba(0, 64, 128, 0.15);
 }
 
 .event-card a {
