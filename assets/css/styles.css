@@ -651,10 +651,12 @@ ul {
     z-index: 1000;
 }
 
-/* Transparent header uchun mega menu */
+/* Transparent header uchun mega menu - shaffof */
 .main-header.transparent .mega-menu {
-    background: #ffffff;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     border-top: none;
 }
 
