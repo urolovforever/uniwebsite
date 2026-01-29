@@ -1770,8 +1770,534 @@ section {
     .breadcrumb-container {
         padding: 0.75rem 0;
     }
-    
+
     .breadcrumb {
         font-size: 0.85rem;
     }
 }
+
+/* ================================================
+   Homepage Sections - New Design
+   ================================================ */
+
+/* Programs Pathway Section */
+.programs-pathway {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+}
+
+.pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pathway-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pathway-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pathway-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.pathway-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.pathway-card h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pathway-stats {
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.pathway-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.pathway-link {
+    color: var(--white);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.pathway-link:hover {
+    color: var(--accent-gold);
+    gap: 0.8rem;
+}
+
+/* Rector Section */
+.rector-section {
+    background: var(--white);
+}
+
+.rector-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.rector-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.rector-label {
+    display: inline-block;
+    color: var(--accent-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.rector-content h2 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rector-content blockquote {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    font-style: italic;
+    border-left: 4px solid var(--accent-gold);
+    padding-left: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+.rector-info {
+    margin-bottom: 2rem;
+}
+
+.rector-info strong {
+    display: block;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.rector-info span {
+    color: var(--text-gray);
+}
+
+/* News Grid Layout */
+.news-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.news-card-large {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.news-card-large img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.news-card-large .news-card-content {
+    padding: 2rem;
+}
+
+.news-tag {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--white);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.news-card-large h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.news-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.news-card-small {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.news-card-small:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.news-card-small h4 {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-card-small p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.bg-light {
+    background: #f8fafc;
+}
+
+/* Campus Life Grid */
+.campus-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.campus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 1.5rem;
+}
+
+.campus-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.campus-card.campus-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.campus-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.campus-card:hover img {
+    transform: scale(1.1);
+}
+
+.campus-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 32, 64, 0.95) 0%, transparent 100%);
+    color: var(--white);
+    transform: translateY(30%);
+    transition: transform 0.4s ease;
+}
+
+.campus-card:hover .campus-overlay {
+    transform: translateY(0);
+}
+
+.campus-overlay h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.campus-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.campus-overlay a {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Instagram Section */
+.instagram-section {
+    background: var(--white);
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.instagram-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.instagram-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.instagram-item:hover img {
+    transform: scale(1.1);
+}
+
+.instagram-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 64, 128, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-item:hover .instagram-overlay {
+    opacity: 1;
+}
+
+.instagram-overlay i {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+/* Partners Carousel */
+.partners-carousel-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.partners-carousel-container {
+    overflow: hidden;
+}
+
+.partners-carousel {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    animation: carouselScroll 25s linear infinite;
+}
+
+.partner-slide {
+    flex: 0 0 auto;
+}
+
+.partner-slide img {
+    height: 60px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-slide:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #c9a227 100%);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-btn-primary {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-btn-primary:hover {
+    background: #003366;
+    transform: translateY(-3px);
+}
+
+.cta-btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid var(--white);
+    transition: all 0.3s ease;
+}
+
+.cta-btn-secondary:hover {
+    background: var(--white);
+    color: var(--accent-gold);
+}
+
+/* Responsive Homepage */
+@media (max-width: 1200px) {
+    .pathway-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .campus-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+    }
+
+    .campus-card.campus-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 992px) {
+    .pathway-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .rector-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .rector-image img {
+        height: 400px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campus-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+    }
+
+    .campus-card.campus-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-pathway {
+        padding: 3rem 0;
+    }
+
+    .pathway-card {
+        padding: 2rem;
+    }
+
+    .rector-content h2 {
+        font-size: 2rem;
+    }
+
+    .rector-content blockquote {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+
+    .campus-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .campus-card,
+    .campus-card.campus-large {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 250px;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

@@ -398,68 +398,58 @@
     </header>
 
     <!-- ================================================
-         Hero Section
+         1. HERO SECTION
          ================================================ -->
     <section class="hero-section">
         <div class="hero-content">
             <img src="assets/img/logo.png" alt="Tashkent International University Logo">
         </div>
-
-        <div class="scroll-indicator" onclick="document.querySelector('.stats-section').scrollIntoView({behavior: 'smooth'});">
+        <div class="scroll-indicator" onclick="document.querySelector('.programs-pathway').scrollIntoView({behavior: 'smooth'});">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- ================================================
-         Latest News & Events
+         2. PROGRAMS PATHWAY SECTION
          ================================================ -->
-    <section class="section-spacing bg-white reveal">
+    <section class="programs-pathway">
         <div class="container">
-            <div class="section-title">
-                <h2 style="font-size: 2.5rem;">News & Events</h2>
-                <p style="font-size: 1.15rem;">Stay informed about the latest at TIU</p>
-            </div>
-
-            <div class="card-grid">
-                <div class="news-card reveal">
-                    <img src="assets/img/b1.jpg" alt="University News">
-                    <div class="news-card-content">
-                        <div class="news-date"><i class="far fa-calendar"></i> December 15, 2025</div>
-                        <h4>TIU Achieves Top Ranking in Central Asia</h4>
-                        <p>Tashkent International University has been ranked among the top universities in Central Asia for academic excellence and research impact.</p>
-                        <a href="news/news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            <div class="pathway-grid">
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
+                    <h3>Undergraduate Programs</h3>
+                    <p class="pathway-stats">25+ Bachelor's Degrees</p>
+                    <p>Build your foundation with world-class undergraduate education across business, technology, law, and humanities.</p>
+                    <a href="programs/bachelor.html" class="pathway-link">Explore Programs <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <div class="news-card reveal">
-                    <img src="assets/img/b2.jpg" alt="Partnership News">
-                    <div class="news-card-content">
-                        <div class="news-date"><i class="far fa-calendar"></i> December 10, 2025</div>
-                        <h4>New International Partnerships Announced</h4>
-                        <p>TIU signs collaboration agreements with leading European and Asian universities to enhance student exchange programs.</p>
-                        <a href="news/news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-user-graduate"></i>
                     </div>
+                    <h3>Graduate Programs</h3>
+                    <p class="pathway-stats">15+ Master's & PhD Programs</p>
+                    <p>Advance your career with research-driven graduate programs designed for tomorrow's leaders.</p>
+                    <a href="programs/master.html" class="pathway-link">Explore Programs <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <div class="news-card reveal">
-                    <img src="assets/img/b3.jpg" alt="Research Conference">
-                    <div class="news-card-content">
-                        <div class="news-date"><i class="far fa-calendar"></i> December 5, 2025</div>
-                        <h4>Annual Research Conference 2025</h4>
-                        <p>Join us for the premier showcase of student and faculty research achievements featuring international speakers.</p>
-                        <a href="news/events.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
+                    <h3>International Programs</h3>
+                    <p class="pathway-stats">100+ Partner Universities</p>
+                    <p>Experience global education through exchange programs, dual degrees, and international partnerships.</p>
+                    <a href="international/index.html" class="pathway-link">Explore Programs <i class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="news/index.html" class="cta-secondary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">All News & Events</a>
             </div>
         </div>
     </section>
 
     <!-- ================================================
-         Quick Stats - University at a Glance
+         3. QUICK STATS
          ================================================ -->
     <section class="stats-section">
         <div class="stats-grid">
@@ -469,201 +459,296 @@
             </div>
             <div class="stat-item">
                 <div class="stat-number">500+</div>
-                <div class="stat-label">Faculty</div>
+                <div class="stat-label">Faculty Members</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">50+</div>
-                <div class="stat-label">Programs</div>
+                <div class="stat-label">Academic Programs</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Global Partners</div>
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Employment Rate</div>
             </div>
         </div>
     </section>
 
     <!-- ================================================
-         About Us Section
+         4. RECTOR'S WELCOME MESSAGE
          ================================================ -->
-    <section class="section-spacing about-section reveal">
+    <section class="section-spacing rector-section">
         <div class="container">
-            <!-- Hero Text -->
-            <div class="about-hero reveal" style="text-align: center; max-width: 900px; margin: 0 auto 4rem;">
-                <h2 style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 1.5rem; font-weight: 800; line-height: 1.2;">Shaping Tomorrow's Leaders Today</h2>
-                <p style="font-size: 1.3rem; line-height: 1.8; color: var(--text-gray);">
-                    At Tashkent International University, we're not just teaching—we're transforming lives and building futures. Join a community where innovation meets tradition, and where your potential becomes reality.
-                </p>
-            </div>
-
-            <!-- Main Content Grid -->
-            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; margin-bottom: 4rem; align-items: center;">
-                <div class="reveal">
-                    <h3 style="color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 2rem; font-weight: 700;">Our Story</h3>
-                    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-gray); margin-bottom: 1.5rem;">
-                        Founded with a bold vision to revolutionize higher education in Central Asia, Tashkent International University has grown into a beacon of academic excellence and innovation. For over 25 years, we've been at the forefront of shaping minds and building futures.
-                    </p>
-                    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-gray); margin-bottom: 2rem;">
-                        Our commitment goes beyond textbooks and lectures. We create an ecosystem where curiosity thrives, where diverse perspectives converge, and where every student is empowered to reach their full potential.
-                    </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="about/index.html" class="cta-primary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">Discover More</a>
-                        <a href="admissions/apply-now.html" class="cta-secondary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">Apply Today</a>
-                    </div>
+            <div class="rector-grid">
+                <div class="rector-image reveal">
+                    <img src="assets/img/rector.jpg" alt="TIU Rector">
                 </div>
-                <div class="reveal">
-                    <img src="assets/img/back1.jpg" alt="TIU Campus" class="about-img" style="width: 100%; height: 450px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);">
+                <div class="rector-content reveal">
+                    <span class="rector-label">Welcome Message</span>
+                    <h2>From the Rector's Desk</h2>
+                    <blockquote>
+                        "At Tashkent International University, we believe education is the most powerful tool for transforming lives and societies. Our mission is to nurture innovative thinkers, ethical leaders, and global citizens who will shape the future of Uzbekistan and beyond."
+                    </blockquote>
+                    <div class="rector-info">
+                        <strong>Prof. Dr. John Smith</strong>
+                        <span>Rector, Tashkent International University</span>
+                    </div>
+                    <a href="about/leadership.html" class="cta-primary">Meet Our Leadership</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ================================================
-         Academic Excellence Section
+         5. NEWS & EVENTS
          ================================================ -->
-    <section class="section-spacing bg-white reveal">
+    <section class="section-spacing bg-light">
         <div class="container">
             <div class="section-title">
-                <h2 style="font-size: 2.5rem;">Academic Excellence</h2>
-                <p style="font-size: 1.15rem; color: var(--text-gray);">World-class education across diverse disciplines</p>
+                <h2>Latest News & Events</h2>
+                <p>Stay connected with what's happening at TIU</p>
             </div>
 
-            <div class="card-grid" style="margin-top: 3rem;">
-                <div class="card reveal">
-                    <img src="assets/img/c1.jpg" alt="Business & Economics" style="height: 250px; object-fit: cover;">
-                    <div class="card-content">
-                        <h3 style="color: var(--primary-blue); font-size: 1.5rem;"><i class="fas fa-chart-line"></i> Business & Economics</h3>
-                        <p>Shape the future of global commerce with our internationally accredited business programs.</p>
-                        <a href="programs/business-economics.html" class="cta-primary">Learn More</a>
+            <div class="news-grid">
+                <div class="news-card-large reveal">
+                    <img src="assets/img/b1.jpg" alt="Featured News">
+                    <div class="news-card-content">
+                        <span class="news-tag">Featured</span>
+                        <div class="news-date"><i class="far fa-calendar"></i> January 25, 2026</div>
+                        <h3>TIU Achieves Top Ranking in Central Asia</h3>
+                        <p>Tashkent International University has been recognized as one of the leading institutions in Central Asia for academic excellence and research impact.</p>
+                        <a href="news/news.html" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="card reveal">
-                    <img src="assets/img/c2.jpg" alt="IT & Engineering" style="height: 250px; object-fit: cover;">
-                    <div class="card-content">
-                        <h3 style="color: var(--primary-blue); font-size: 1.5rem;"><i class="fas fa-laptop-code"></i> IT & Engineering</h3>
-                        <p>Lead technological innovation with cutting-edge programs in computer science and engineering.</p>
-                        <a href="programs/it-engineering.html" class="cta-primary">Learn More</a>
+                <div class="news-sidebar">
+                    <div class="news-card-small reveal">
+                        <div class="news-date"><i class="far fa-calendar"></i> January 20, 2026</div>
+                        <h4>New International Partnerships Announced</h4>
+                        <p>TIU signs collaboration agreements with European universities.</p>
+                        <a href="news/news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
 
-                <div class="card reveal">
-                    <img src="assets/img/c3.jpg" alt="Law & Justice" style="height: 250px; object-fit: cover;">
-                    <div class="card-content">
-                        <h3 style="color: var(--primary-blue); font-size: 1.5rem;"><i class="fas fa-balance-scale"></i> Law & Justice</h3>
-                        <p>Become a leader in law with comprehensive legal education and practical experience.</p>
-                        <a href="programs/law.html" class="cta-primary">Learn More</a>
+                    <div class="news-card-small reveal">
+                        <div class="news-date"><i class="far fa-calendar"></i> January 15, 2026</div>
+                        <h4>Spring Semester Registration Opens</h4>
+                        <p>Online registration for Spring 2026 is now available for all students.</p>
+                        <a href="news/news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="news-card-small reveal">
+                        <div class="news-date"><i class="far fa-calendar"></i> January 10, 2026</div>
+                        <h4>Research Conference 2026</h4>
+                        <p>Annual research showcase featuring international speakers.</p>
+                        <a href="news/events.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="programs/index.html" class="cta-secondary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">View All Programs</a>
+                <a href="news/index.html" class="cta-secondary">View All News & Events</a>
             </div>
         </div>
     </section>
 
     <!-- ================================================
-         Research & Innovation
+         6. CAMPUS LIFE
          ================================================ -->
-    <section class="section-spacing reveal" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+    <section class="section-spacing campus-section">
         <div class="container">
             <div class="section-title">
-                <h2 style="font-size: 2.5rem;">Research & Innovation</h2>
-                <p style="font-size: 1.15rem;">Advancing knowledge through groundbreaking research</p>
+                <h2>Experience Campus Life</h2>
+                <p>More than education - a vibrant community awaits</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: center;">
-                <div class="reveal">
-                    <img src="assets/img/c4.jpg" alt="Research Labs" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); width: 100%;">
+            <div class="campus-grid">
+                <div class="campus-card campus-large reveal">
+                    <img src="assets/img/c1.jpg" alt="Student Activities">
+                    <div class="campus-overlay">
+                        <h3>Student Clubs & Activities</h3>
+                        <p>Join 50+ clubs and organizations</p>
+                        <a href="current-students/clubs.html">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="reveal">
-                    <h3 style="color: var(--primary-blue); font-size: 2rem; margin-bottom: 1.5rem;">Leading Research Centers</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        Our state-of-the-art research facilities empower faculty and students to explore innovative solutions
-                        to global challenges. From artificial intelligence to sustainable development, TIU researchers are
-                        making significant contributions to their fields.
-                    </p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-gold); margin-right: 0.5rem;"></i> Advanced AI & Machine Learning Lab</li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-gold); margin-right: 0.5rem;"></i> Sustainable Development Research Center</li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-gold); margin-right: 0.5rem;"></i> Innovation & Entrepreneurship Hub</li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-gold); margin-right: 0.5rem;"></i> International Relations Institute</li>
-                    </ul>
-                    <a href="research/index.html" class="cta-primary" style="font-size: 1.05rem;">Explore Research</a>
+
+                <div class="campus-card reveal">
+                    <img src="assets/img/c2.jpg" alt="Sports">
+                    <div class="campus-overlay">
+                        <h3>Sports & Recreation</h3>
+                        <p>State-of-the-art facilities</p>
+                        <a href="current-students/sports.html">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="campus-card reveal">
+                    <img src="assets/img/c3.jpg" alt="Library">
+                    <div class="campus-overlay">
+                        <h3>Modern Library</h3>
+                        <p>24/7 access to resources</p>
+                        <a href="current-students/library.html">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="campus-card reveal">
+                    <img src="assets/img/c4.jpg" alt="Housing">
+                    <div class="campus-overlay">
+                        <h3>Student Housing</h3>
+                        <p>Comfortable living spaces</p>
+                        <a href="current-students/housing.html">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="campus-card reveal">
+                    <img src="assets/img/b2.jpg" alt="Events">
+                    <div class="campus-overlay">
+                        <h3>Events & Culture</h3>
+                        <p>Vibrant campus events</p>
+                        <a href="news/events.html">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ================================================
-         Global Partnerships - Carousel
+         7. INSTAGRAM FEED
          ================================================ -->
-    <section class="section-spacing reveal" style="background-color: var(--light-gray);">
+    <section class="section-spacing instagram-section">
         <div class="container">
             <div class="section-title">
-                <h2 style="font-size: 2.5rem;">Global Network</h2>
-                <p style="font-size: 1.15rem;">Connected to leading universities worldwide</p>
+                <h2><i class="fab fa-instagram"></i> @tikiuz</h2>
+                <p>Follow us on Instagram for daily campus updates</p>
             </div>
 
-            <div class="partners-carousel-wrapper" style="margin-top: 3rem; position: relative; max-width: 100%; margin-left: auto; margin-right: auto; overflow: hidden;">
-                <div class="partners-carousel-container" style="overflow: hidden;">
-                    <div class="partners-carousel" style="display: flex; gap: 4rem; align-items: center; transition: transform 0.5s ease; animation: carouselScroll 20s linear infinite;">
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (1).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+            <div class="instagram-grid">
+                <a href="https://instagram.com/tiuuz" target="_blank" class="instagram-item">
+                    <img src="assets/img/b1.jpg" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://instagram.com/tiuuz" target="_blank" class="instagram-item">
+                    <img src="assets/img/b2.jpg" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://instagram.com/tiuuz" target="_blank" class="instagram-item">
+                    <img src="assets/img/b3.jpg" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://instagram.com/tiuuz" target="_blank" class="instagram-item">
+                    <img src="assets/img/c1.jpg" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://instagram.com/tiuuz" target="_blank" class="instagram-item">
+                    <img src="assets/img/c2.jpg" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://instagram.com/tiuuz" target="_blank" class="instagram-item">
+                    <img src="assets/img/c3.jpg" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://instagram.com/tiuuz" target="_blank" class="cta-secondary">
+                    <i class="fab fa-instagram"></i> Follow @tiuuz
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         8. PARTNER UNIVERSITIES
+         ================================================ -->
+    <section class="section-spacing bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Global Partners</h2>
+                <p>Connected to leading universities worldwide</p>
+            </div>
+
+            <div class="partners-carousel-wrapper">
+                <div class="partners-carousel-container">
+                    <div class="partners-carousel">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (1).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (2).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (2).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (3).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (3).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (4).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (4).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (5).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (5).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (6).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (6).png" alt="Partner University">
                         </div>
                         <!-- Duplicate for seamless loop -->
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (1).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (1).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (2).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (2).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (3).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (3).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (4).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (4).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (5).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (5).png" alt="Partner University">
                         </div>
-                        <div class="partner-slide" style="flex: 0 0 auto;">
-                            <img src="assets/img/trust (6).png" alt="Partner University" style="height: 60px; filter: grayscale(100%); transition: all 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <div class="partner-slide">
+                            <img src="assets/img/trust (6).png" alt="Partner University">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 1.5rem;">Exchange programs and joint degrees with 100+ universities across the globe</p>
-                <a href="international/partner-universities.html" class="cta-secondary" style="font-size: 1.05rem;">View All Partners</a>
+                <a href="international/partner-universities.html" class="cta-secondary">View All Partners</a>
             </div>
         </div>
     </section>
 
     <!-- ================================================
-         Footer
+         9. CTA SECTION
+         ================================================ -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Join thousands of students who have transformed their futures at TIU</p>
+                <div class="cta-buttons">
+                    <a href="admissions/apply-now.html" class="cta-btn-primary">Apply Now</a>
+                    <a href="contact/index.html" class="cta-btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         10. FOOTER
          ================================================ -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>TIU</h3>
-                <p style="margin-bottom: 1.5rem;">Leading institution of higher education committed to excellence in teaching, research, and global engagement.</p>
+                <h3>Tashkent International University</h3>
+                <p>Leading institution of higher education committed to excellence in teaching, research, and global engagement.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -705,14 +790,11 @@
                     <li><i class="fas fa-envelope"></i> info@tiu.uz</li>
                     <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
                 </ul>
-                <div style="margin-top: 1.5rem;">
-                    <a href="contact/contact-info.html" class="cta-secondary" style="display: inline-block; font-size: 0.95rem;">Visit Us</a>
-                </div>
             </div>
         </div>
 
-        <div class="footer-bottom" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p>&copy; 2025 Tashkent International University. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Use</a></p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tashkent International University. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
         </div>
     </footer>
 
