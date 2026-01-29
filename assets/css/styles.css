@@ -650,13 +650,31 @@ ul {
     z-index: 1000;
 }
 
-/* Transparent header uchun mega menu - shaffof */
+/* Transparent header uchun mega menu - nav container bilan bir xil */
 .main-header.transparent .mega-menu {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-    border-top: none;
+    background: rgba(0, 32, 64, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-header.transparent .mega-menu-links {
+    background: rgba(0, 32, 64, 0.3);
+}
+
+.main-header.transparent .mega-menu-column h4 {
+    color: var(--white);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.main-header.transparent .mega-menu-column ul li a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.main-header.transparent .mega-menu-column ul li a:hover {
+    color: var(--white) !important;
+    border-left-color: var(--white);
 }
 
 /* Scrolled/Sticky header uchun oq background */
@@ -761,13 +779,43 @@ ul {
 
 .mega-menu-img-item .img-overlay h4 {
     font-size: 1.1rem;
-    margin: 0;
+    margin: 0 0 0.25rem 0;
     font-weight: 700;
 }
 
 .mega-menu-img-item .img-overlay span {
     font-size: 0.8rem;
     opacity: 0.8;
+    display: block;
+}
+
+/* CTA button on images */
+.mega-menu-img-item .img-overlay .img-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: var(--white);
+    color: var(--primary-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.mega-menu-img-item:hover .img-overlay .img-cta {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.mega-menu-img-item .img-overlay .img-cta i {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.mega-menu-img-item:hover .img-overlay .img-cta i {
+    transform: translateX(3px);
 }
 
 /* Links Section */
