@@ -674,6 +674,20 @@ ul {
     -webkit-backdrop-filter: blur(15px);
 }
 
+/* Mega menu ochilganda nav container ham blur bo'lishi uchun */
+.main-header.transparent .mega-menu::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 200px; /* nav-container balandligidan katta */
+    background: rgba(0, 32, 64, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: -1;
+}
+
 /* Mega menu hover state */
 .has-mega-menu:hover > .mega-menu {
     opacity: 1;
