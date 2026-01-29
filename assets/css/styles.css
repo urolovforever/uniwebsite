@@ -709,16 +709,96 @@ ul {
 
 /* Mega menu content wrapper */
 .mega-menu-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1.5rem;
+    width: 100%;
+    padding: 0;
     display: flex;
     align-items: stretch;
-    min-height: 400px;
-    gap: 2rem;
+    min-height: 420px;
+    gap: 0;
 }
 
-/* Featured section with image */
+/* Image Grid Section */
+.mega-menu-images {
+    flex: 0 0 55%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+}
+
+.mega-menu-img-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.mega-menu-img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mega-menu-img-item:hover img {
+    transform: scale(1.1);
+}
+
+.mega-menu-img-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.mega-menu-img-item .img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 32, 64, 0.9) 0%, transparent 100%);
+    color: #fff;
+}
+
+.mega-menu-img-item .img-overlay h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.mega-menu-img-item .img-overlay span {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Links Section */
+.mega-menu-links {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+    background: rgba(0, 32, 64, 0.95);
+}
+
+/* Scrolled state for new mega menu */
+.main-header.scrolled .mega-menu-links,
+.main-header.sticky .mega-menu-links {
+    background: #f8fafc;
+}
+
+.main-header.scrolled .mega-menu-img-item .img-overlay,
+.main-header.sticky .mega-menu-img-item .img-overlay {
+    background: linear-gradient(to top, rgba(0, 64, 128, 0.9) 0%, transparent 100%);
+}
+
+/* No image mega menus */
+.mega-menu-no-image .mega-menu-content {
+    min-height: auto;
+}
+
+.mega-menu-no-image .mega-menu-links {
+    flex: 1;
+    padding: 2rem 3rem;
+}
+
+/* Featured section with image - legacy support */
 .mega-menu-featured {
     flex: 0 0 380px;
     padding: 0;
