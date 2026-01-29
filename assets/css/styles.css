@@ -470,23 +470,6 @@ ul {
     position: relative;
 }
 
-.nav-menu > li > a::before {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 0;
-    height: 5px; /* Chiziq qalinlashdi */
-    background: var(--white);
-    transform: translateX(-50%);
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 4px 4px 0 0;
-}
-
-.nav-menu > li > a:hover::before,
-.nav-menu > li > a.active::before {
-    width: 80%;
-}
 
 .nav-menu > li > a:hover {
     color: var(--primary-blue);
@@ -671,6 +654,7 @@ ul {
 .main-header.transparent .mega-menu {
     background: rgba(0, 32, 64, 0.4);
     box-shadow: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Scrolled/Sticky header uchun oq background */
@@ -939,32 +923,6 @@ ul {
 }
 
 
-/* Active indicator on main nav */
-.has-mega-menu > a {
-    position: relative;
-}
-
-.has-mega-menu:hover > a::before {
-    width: 80%;
-}
-
-/* Arrow indicator for mega menu items */
-.has-mega-menu > a::after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 6px;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 5px solid currentColor;
-    transition: transform 0.3s ease;
-    vertical-align: middle;
-}
-
-.has-mega-menu:hover > a::after {
-    transform: rotate(180deg);
-}
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
