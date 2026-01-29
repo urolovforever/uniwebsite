@@ -2333,6 +2333,102 @@ section {
     background: var(--dark-blue);
 }
 
+/* ================================================
+   Partners Full Width Section
+   ================================================ */
+.partners-fullwidth-section {
+    padding: 4rem 0;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.partners-fullwidth-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.partners-fullwidth-title h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0;
+    font-weight: 700;
+}
+
+.partners-fullwidth-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.partners-fullwidth-track {
+    display: flex;
+    gap: 5rem;
+    animation: scrollPartners 30s linear infinite;
+    width: max-content;
+}
+
+.partners-fullwidth-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollPartners {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.partner-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+
+.partner-logo img {
+    height: 100px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.4s ease;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.partners-fullwidth-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive Partners */
+@media (max-width: 768px) {
+    .partners-fullwidth-section {
+        padding: 3rem 0;
+    }
+
+    .partners-fullwidth-title h2 {
+        font-size: 2rem;
+    }
+
+    .partners-fullwidth-track {
+        gap: 3rem;
+    }
+
+    .partner-logo img {
+        height: 70px;
+        max-width: 150px;
+    }
+}
+
 /* Responsive Upcoming Events */
 @media (max-width: 1200px) {
     .upcoming-events-grid {
