@@ -658,7 +658,7 @@ ul {
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(135deg, rgba(0, 64, 128, 0.97) 0%, rgba(0, 51, 102, 0.98) 100%);
+    background: rgba(0, 32, 64, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -1613,8 +1613,9 @@ ul {
         transform: none;
         box-shadow: none;
         display: none;
-        background: linear-gradient(135deg, rgba(0, 64, 128, 0.98) 0%, rgba(0, 51, 102, 0.98) 100%);
-        backdrop-filter: none;
+        background: rgba(0, 32, 64, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .has-mega-menu.active > .mega-menu {
