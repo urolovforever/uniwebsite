@@ -654,7 +654,7 @@ ul {
 .main-header.transparent .mega-menu {
     background: rgba(0, 32, 64, 0.4);
     box-shadow: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-header.transparent .mega-menu-links {
