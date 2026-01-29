@@ -642,8 +642,8 @@ ul {
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(135deg, #004080 0%, #003366 100%);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     opacity: 0;
     visibility: hidden;
     transform: translateY(5px);
@@ -651,11 +651,11 @@ ul {
     z-index: 1000;
 }
 
-/* Transparent header uchun mega menu ham shaffof */
+/* Transparent header uchun mega menu */
 .main-header.transparent .mega-menu {
-    background: rgba(0, 32, 64, 0.4);
-    box-shadow: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-top: none;
 }
 
 /* Scrolled/Sticky header uchun oq background */
@@ -723,7 +723,8 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 0;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .mega-menu-img-item {
@@ -774,12 +775,6 @@ ul {
     display: flex;
     gap: 2rem;
     padding: 2.5rem 3rem;
-    background: rgba(0, 32, 64, 0.95);
-}
-
-/* Scrolled state for new mega menu */
-.main-header.scrolled .mega-menu-links,
-.main-header.sticky .mega-menu-links {
     background: #f8fafc;
 }
 
@@ -926,12 +921,12 @@ ul {
 .mega-menu-column h4 {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--primary-blue);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 1.25rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid var(--primary-blue);
     white-space: nowrap;
 }
 
@@ -949,7 +944,7 @@ ul {
     display: flex;
     align-items: center;
     padding: 0.6rem 0;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--text-dark) !important;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
@@ -959,9 +954,9 @@ ul {
 }
 
 .mega-menu-column ul li a:hover {
-    color: var(--white) !important;
+    color: var(--primary-blue) !important;
     padding-left: 12px;
-    border-left-color: var(--white);
+    border-left-color: var(--primary-blue);
 }
 
 .mega-menu-column ul li a::before {
@@ -1627,17 +1622,17 @@ ul {
         font-size: 0.7rem;
         margin-bottom: 0.5rem;
         padding-bottom: 0.5rem;
-        color: var(--white);
+        color: var(--primary-blue);
     }
 
     .mega-menu-column ul li a {
         padding: 0.4rem 0;
         font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.9) !important;
+        color: var(--text-dark) !important;
     }
 
     .mega-menu-column ul li a:hover {
-        color: var(--white) !important;
+        color: var(--primary-blue) !important;
     }
 
     .has-mega-menu > a::after {
