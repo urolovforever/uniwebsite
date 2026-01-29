@@ -670,8 +670,6 @@ ul {
 /* Transparent header uchun mega menu ham shaffof */
 .main-header.transparent .mega-menu {
     background: rgba(0, 32, 64, 0.4);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
 }
 
 /* Mega menu hover state */
@@ -1622,8 +1620,6 @@ ul {
 
     .main-header.transparent .mega-menu {
         background: rgba(0, 32, 64, 0.5);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
     }
 
     .has-mega-menu.active > .mega-menu {
