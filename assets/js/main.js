@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const utilityBar = document.querySelector('.utility-bar');
 
     if (mainHeader) {
-        // Check if this is a sticky header (subpage) or transparent header (home page)
-        const isSticky = mainHeader.classList.contains('sticky');
+        // Check if this is a scrolled header (subpage) or transparent header (home page)
+        const isSubpage = mainHeader.classList.contains('scrolled');
 
         function handleScroll() {
-            // Only handle scroll for non-sticky headers (home page)
-            if (!isSticky) {
+            // Only handle scroll for home page (transparent header)
+            if (!isSubpage) {
                 const scrollPosition = window.pageYOffset;
 
                 // Masofani 150 yoki 200 qilsangiz, header darhol almashib qolmaydi
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }
-            // Sticky headers don't need scroll handling - they stay fixed
+            // Subpages with scrolled class don't need scroll handling - they stay fixed
         }
 
         window.addEventListener('scroll', handleScroll);
