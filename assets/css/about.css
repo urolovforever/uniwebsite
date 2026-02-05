@@ -741,6 +741,97 @@
     transform: scale(1.05);
 }
 
+/* ================================================
+   Graduation Section (Dark Blue)
+   ================================================ */
+.graduation-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+}
+
+.graduation-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.graduation-grid {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 5%;
+    align-items: center;
+}
+
+.graduation-content {
+    padding-right: 2rem;
+}
+
+.graduation-category {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.graduation-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    white-space: normal;
+}
+
+.graduation-content h2 em {
+    font-style: italic;
+}
+
+.graduation-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.graduation-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.graduation-link:hover {
+    gap: 1rem;
+}
+
+.graduation-link i {
+    transition: transform 0.3s ease;
+}
+
+.graduation-link:hover i {
+    transform: translateX(5px);
+}
+
+.graduation-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.graduation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .about-hero {
     background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
     padding: 4rem 0;
