@@ -144,7 +144,8 @@ ul { list-style: none; }
     top: 64px;
 }
 .main-header.scrolled {
-    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+    background: linear-gradient(135deg, #004080 0%, #003366 100%) !important;
+    background-color: #004080 !important;
     box-shadow: var(--shadow-lg);
     top: 0;
     padding: 5px 0;
