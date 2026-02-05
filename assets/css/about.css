@@ -1,5 +1,145 @@
 /* About Section Specific Styles */
 
+/* Hull-style Overview Hero Section */
+.overview-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 4rem;
+}
+
+.overview-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+}
+
+.overview-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.overview-hero .hero-breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.overview-hero .hero-breadcrumb a,
+.overview-hero .hero-breadcrumb span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.overview-hero .hero-breadcrumb a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.overview-hero .hero-breadcrumb .separator {
+    margin: 0 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.overview-hero .hero-breadcrumb .separator i {
+    font-size: 0.7rem;
+}
+
+.overview-hero .hero-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+}
+
+.overview-hero .hero-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.overview-hero .hero-description {
+    display: flex;
+    align-items: stretch;
+    max-width: 700px;
+}
+
+.overview-hero .hero-description .accent-bar {
+    width: 5px;
+    background: #c6f135;
+    margin-right: 1.25rem;
+    flex-shrink: 0;
+    border-radius: 2px;
+}
+
+.overview-hero .hero-description p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Rainbow bar under hero */
+.rainbow-bar {
+    height: 8px;
+    background: linear-gradient(90deg,
+        #ff0000 0%,
+        #ff8000 16.67%,
+        #ffff00 33.33%,
+        #00ff00 50%,
+        #00ffff 66.67%,
+        #0080ff 83.33%,
+        #8000ff 100%);
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+    .overview-hero {
+        min-height: 60vh;
+        padding-bottom: 3rem;
+    }
+
+    .overview-hero .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .overview-hero .hero-description p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-hero .hero-title {
+        font-size: 2rem;
+    }
+
+    .overview-hero .hero-content {
+        padding: 0 1rem;
+    }
+}
+
 .about-hero {
     background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
     padding: 4rem 0;
@@ -171,4 +311,227 @@
 
 .metric-description {
     color: #666;
+}
+
+/* ===== Overview Page Content Sections ===== */
+
+.overview-section {
+    padding: 5rem 0;
+}
+
+.overview-section.overview-intro {
+    padding-top: 6rem;
+}
+
+.overview-section.alt-bg {
+    background-color: #f8f9fa;
+}
+
+.overview-section.campus-section {
+    background-color: #c6f135;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.overview-grid.reverse {
+    direction: rtl;
+}
+
+.overview-grid.reverse > * {
+    direction: ltr;
+}
+
+.overview-text {
+    max-width: 500px;
+}
+
+.overview-grid.reverse .overview-text {
+    margin-left: auto;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+}
+
+.campus-section .section-label {
+    color: #1a365d;
+}
+
+.overview-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--primary-blue);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.campus-section .overview-heading {
+    color: #1a365d;
+}
+
+.overview-text p {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.campus-section .overview-text p {
+    color: #2d3748;
+}
+
+.section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: gap 0.3s ease;
+}
+
+.section-link:hover {
+    gap: 0.75rem;
+    text-decoration: underline;
+}
+
+.campus-section .section-link {
+    color: #1a365d;
+}
+
+.overview-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.overview-image.campus-gallery .main-img {
+    margin-bottom: 1rem;
+    height: 300px;
+}
+
+.gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.gallery-thumbs img {
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumbs img:hover {
+    transform: scale(1.05);
+}
+
+/* Overview CTA Section */
+.overview-cta {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+
+.overview-cta h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.overview-cta p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-outline {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.cta-outline:hover {
+    background: white;
+    color: var(--primary-blue);
+}
+
+/* Responsive Overview Sections */
+@media (max-width: 968px) {
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .overview-grid.reverse {
+        direction: ltr;
+    }
+
+    .overview-grid.reverse .overview-text {
+        margin-left: 0;
+    }
+
+    .overview-text {
+        max-width: 100%;
+    }
+
+    .overview-section {
+        padding: 3.5rem 0;
+    }
+
+    .overview-heading {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-thumbs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-thumbs img {
+        height: 70px;
+    }
+
+    .overview-image.campus-gallery .main-img {
+        height: 220px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-gold,
+    .cta-outline {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
 }
