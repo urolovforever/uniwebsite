@@ -27,8 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const isSubpage = mainHeader.classList.contains('scrolled');
 
         // Add padding to body for subpages to account for fixed header
-        if (isSubpage) {
-            document.body.style.paddingTop = '100px';
+        // Skip if page has .page-hero (hero handles its own padding)
+        const hasPageHero = document.querySelector('.page-hero');
+        if (isSubpage && !hasPageHero) {
+            document.body.style.paddingTop = '85px';
         }
 
         function handleScroll() {
