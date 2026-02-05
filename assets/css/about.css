@@ -639,6 +639,108 @@
     object-fit: cover;
 }
 
+/* ================================================
+   Features Cards Section (Three Columns)
+   ================================================ */
+.features-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.features-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card-content {
+    padding: 2.5rem 2rem;
+    flex: 1;
+}
+
+.feature-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.feature-card-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+    white-space: normal;
+}
+
+.feature-card-content h3 em {
+    font-style: italic;
+}
+
+.feature-card-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.feature-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.feature-link:hover {
+    gap: 1rem;
+}
+
+.feature-link i {
+    transition: transform 0.3s ease;
+}
+
+.feature-link:hover i {
+    transform: translateX(5px);
+}
+
+.feature-card-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.feature-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-card-image img {
+    transform: scale(1.05);
+}
+
 .about-hero {
     background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
     padding: 4rem 0;
