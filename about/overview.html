@@ -348,6 +348,63 @@
         </div>
     </section>
 
+    <!-- Campus Section -->
+    <section class="campus-section">
+        <div class="container">
+            <div class="campus-grid">
+                <div class="campus-content">
+                    <div class="campus-category">Our Campus</div>
+                    <h2>Find your haven in a sea of change</h2>
+                    <p>Over the years, we've evolved our campus to include everything you need to live, study and socialise. Alongside our modern buildings and green spaces, you'll find state-of-the-art facilities. New opportunities for a fresh generation of minds. Like yours.</p>
+                    <a href="campus-map.html" class="campus-link">Our Campus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="campus-gallery">
+                    <div class="campus-main-image" id="campusMainImage">
+                        <img src="../assets/img/back1.jpg" alt="TIU Campus" id="mainCampusImg">
+                    </div>
+                    <div class="campus-thumbnails">
+                        <div class="campus-thumb active" onclick="changeCampusImage('../assets/img/back1.jpg', this)">
+                            <img src="../assets/img/back1.jpg" alt="Campus 1">
+                        </div>
+                        <div class="campus-thumb" onclick="changeCampusImage('../assets/img/back2.jpg', this)">
+                            <img src="../assets/img/back2.jpg" alt="Campus 2">
+                        </div>
+                        <div class="campus-thumb" onclick="changeCampusImage('../assets/img/b1.jpg', this)">
+                            <img src="../assets/img/b1.jpg" alt="Campus 3">
+                        </div>
+                        <div class="campus-thumb" onclick="changeCampusImage('../assets/img/b2.jpg', this)">
+                            <img src="../assets/img/b2.jpg" alt="Campus 4">
+                        </div>
+                        <div class="campus-thumb" onclick="changeCampusImage('../assets/img/b3.jpg', this)">
+                            <img src="../assets/img/b3.jpg" alt="Campus 5">
+                        </div>
+                        <div class="campus-thumb" onclick="changeCampusImage('../assets/img/c2.jpg', this)">
+                            <img src="../assets/img/c2.jpg" alt="Campus 6">
+                        </div>
+                        <div class="campus-fullscreen-btn" onclick="openFullscreen()">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function changeCampusImage(src, thumb) {
+            document.getElementById('mainCampusImg').src = src;
+            document.querySelectorAll('.campus-thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function openFullscreen() {
+            const img = document.getElementById('mainCampusImg');
+            if (img.requestFullscreen) {
+                img.requestFullscreen();
+            }
+        }
+    </script>
+
     <!-- Main Content -->
     <section class="content-section">
         <div class="container">
