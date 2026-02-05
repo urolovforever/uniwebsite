@@ -114,6 +114,60 @@
     z-index: 2;
 }
 
+/* ================================================
+   Intro Section (Two Column Layout)
+   ================================================ */
+.intro-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.intro-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.intro-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .intro-content h2 {
+        font-size: 2rem;
+    }
+}
+
 .about-hero {
     background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
     padding: 4rem 0;
