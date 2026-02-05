@@ -848,14 +848,16 @@
 }
 
 .cta-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .cta-card {
     background: #f5f5f5;
     overflow: hidden;
+    flex: 0 1 45%;
+    max-width: 550px;
 }
 
 .cta-card-content {
