@@ -148,7 +148,6 @@ ul { list-style: none; }
     background-color: #004080 !important;
     box-shadow: var(--shadow-lg);
     top: 0;
-    padding: 5px 0;
 }
 .main-header.transparent .nav-menu > li > a,
 .main-header.scrolled .nav-menu > li > a { color: var(--white) !important; }
