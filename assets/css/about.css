@@ -836,8 +836,9 @@
    CTA Cards Section (Virtual Tour & Ambassadors)
    ================================================ */
 .cta-cards-section {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background: #fff;
+    margin-top: 2rem;
 }
 
 .cta-cards-section .container {
@@ -858,7 +859,7 @@
 }
 
 .cta-card-content {
-    padding: 2.5rem 2.5rem 2rem;
+    padding: 3rem 3rem 2.5rem;
 }
 
 .cta-card-category {
@@ -916,7 +917,7 @@
 
 .cta-card-image {
     position: relative;
-    height: 320px;
+    height: 380px;
     overflow: hidden;
 }
 
