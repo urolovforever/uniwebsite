@@ -1,87 +1,76 @@
-// About Section Specific JavaScript
+// About Section - Campus Gallery & Lightbox
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Animate stats on scroll
-    const observerOptions = {
-        threshold: 0.5,
-        rootMargin: '0px 0px -50px 0px'
-    };
+const campusImages = [
+    { src: '../assets/img/back1.jpg', caption: 'Main entrance to the TIU campus with modern architecture.' },
+    { src: '../assets/img/back2.jpg', caption: 'Beautiful view of the university buildings and surroundings.' },
+    { src: '../assets/img/b1.jpg', caption: 'State-of-the-art facilities for students and faculty.' },
+    { src: '../assets/img/b2.jpg', caption: 'Green spaces and recreational areas on campus.' },
+    { src: '../assets/img/b3.jpg', caption: 'Modern learning environments designed for success.' },
+    { src: '../assets/img/c2.jpg', caption: 'Student life and community at TIU.' }
+];
+let currentImageIndex = 0;
 
-    const statsObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateStats(entry.target);
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe all stat numbers
-    document.querySelectorAll('.stat-number').forEach(stat => {
-        statsObserver.observe(stat);
-    });
-
-    // Animate timeline items
-    const timelineObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateX(0)';
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.timeline-item').forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-30px)';
-        item.style.transition = 'all 0.6s ease';
-        timelineObserver.observe(item);
-    });
-
-    // Leadership card hover effects
-    document.querySelectorAll('.leader-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.02)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // Campus map interactive features
-    const buildingItems = document.querySelectorAll('.building-item');
-    buildingItems.forEach(item => {
-        item.addEventListener('click', function() {
-            buildingItems.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-});
-
-function animateStats(element) {
-    const targetText = element.textContent;
-    const targetNumber = parseInt(targetText.replace(/[^0-9]/g, ''));
-    const suffix = targetText.replace(/[0-9]/g, '');
-    const duration = 2000;
-    const steps = 60;
-    const stepValue = targetNumber / steps;
-    let currentNumber = 0;
-    let currentStep = 0;
-
-    const timer = setInterval(() => {
-        currentStep++;
-        currentNumber = Math.min(Math.floor(stepValue * currentStep), targetNumber);
-        element.textContent = currentNumber.toLocaleString() + suffix;
-
-        if (currentStep >= steps) {
-            clearInterval(timer);
-            element.textContent = targetText;
-        }
-    }, duration / steps);
+function changeCampusImage(src, thumb) {
+    document.getElementById('mainCampusImg').src = src;
+    document.querySelectorAll('.campus-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+    currentImageIndex = campusImages.findIndex(img => img.src === src);
 }
 
-// Export functions for use in other scripts
-window.AboutModule = {
-    animateStats
-};
+function openFullscreen() {
+    const modal = document.getElementById('lightboxModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    updateLightbox();
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function updateLightbox() {
+    const mainImg = document.getElementById('lightboxImg');
+    const caption = document.getElementById('lightboxCaption');
+    const prevImg = document.getElementById('lightboxPrev');
+    const nextImg = document.getElementById('lightboxNext');
+
+    mainImg.src = campusImages[currentImageIndex].src;
+    caption.textContent = campusImages[currentImageIndex].caption;
+
+    const prevIndex = (currentImageIndex - 1 + campusImages.length) % campusImages.length;
+    const nextIndex = (currentImageIndex + 1) % campusImages.length;
+
+    prevImg.src = campusImages[prevIndex].src;
+    nextImg.src = campusImages[nextIndex].src;
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % campusImages.length;
+    updateLightbox();
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + campusImages.length) % campusImages.length;
+    updateLightbox();
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    const lightboxModal = document.getElementById('lightboxModal');
+
+    if (lightboxModal) {
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        // Close on background click
+        lightboxModal.addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+    }
+});
