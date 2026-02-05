@@ -6,6 +6,7 @@
 .page-hero {
     position: relative;
     min-height: 70vh;
+    padding-top: 85px;
     display: flex;
     align-items: center;
     background-size: cover;
