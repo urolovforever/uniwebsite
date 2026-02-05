@@ -123,29 +123,29 @@
 }
 
 .intro-section .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .intro-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 45% 50%;
+    gap: 5%;
     align-items: center;
 }
 
 .intro-content h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #003366;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1.5rem;
 }
 
 .intro-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #333;
     margin: 0;
@@ -155,17 +155,6 @@
     width: 100%;
     height: auto;
     display: block;
-}
-
-@media (max-width: 768px) {
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .intro-content h2 {
-        font-size: 2rem;
-    }
 }
 
 .about-hero {
