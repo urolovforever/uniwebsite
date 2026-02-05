@@ -655,9 +655,8 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 360px));
-    gap: 3rem;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
 }
 
 .feature-card {
@@ -850,9 +849,8 @@
 
 .cta-cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 520px));
-    gap: 3rem;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
 }
 
 .cta-card {
