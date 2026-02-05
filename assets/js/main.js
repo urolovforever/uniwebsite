@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check if this is a scrolled header (subpage) or transparent header (home page)
         const isSubpage = mainHeader.classList.contains('scrolled');
 
+        // Add padding to body for subpages to account for fixed header
+        if (isSubpage) {
+            document.body.style.paddingTop = '100px';
+        }
+
         function handleScroll() {
             // Only handle scroll for home page (transparent header)
             if (!isSubpage) {
