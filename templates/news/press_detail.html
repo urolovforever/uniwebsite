@@ -1,0 +1,99 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{{ release|trans_field:"title" }} - {% trans "TIU Press" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="newsdetail-layout">
+            <!-- Left sidebar — sticky -->
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <!-- Release meta -->
+                    <div class="evlist-filter-group">
+                        <div class="evdetail-info-list">
+                            <div class="evdetail-info-row">
+                                <i class="far fa-calendar-alt"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Published" %}</span>
+                                    <span class="evdetail-info-value">{{ release.published_date|date:"d M Y" }}</span>
+                                </div>
+                            </div>
+                            {% if release.category %}
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-tag"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Category" %}</span>
+                                    <span class="evdetail-info-value">{{ release.get_category_display }}</span>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Share this release" %}</label>
+                        <div class="newsdetail-share-links">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-fb" aria-label="{% trans "Share on Facebook" %}"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ release.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tw" aria-label="{% trans "Share on X" %}"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ release.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tg" aria-label="{% trans "Share on Telegram" %}"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-li" aria-label="{% trans "Share on LinkedIn" %}"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Related releases -->
+                    {% if related_releases %}
+                    <div class="evlist-filter-group" style="border-bottom: none;">
+                        <label class="evlist-filter-label">{% trans "Latest releases" %}</label>
+                        <div class="newsdetail-related-list">
+                            {% for rel in related_releases %}
+                            <a href="{% url 'news:press_detail' rel.slug %}" class="newsdetail-related-item">
+                                <span class="newsdetail-related-date">{{ rel.published_date|date:"d M Y"|upper }}</span>
+                                <span class="newsdetail-related-title">{{ rel|trans_field:"title" }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <a href="{% url 'news:press_releases' %}" class="newsdetail-back-link"><i class="fas fa-arrow-left"></i> {% trans "All press releases" %}</a>
+                </div>
+            </aside>
+
+            <!-- Right side — release content -->
+            <article class="newsdetail-content">
+                {% if release.featured_image %}
+                <div class="newsdetail-hero-img">
+                    <img src="{{ release.featured_image.url }}" alt="{{ release|trans_field:"title" }}" loading="lazy">
+                </div>
+                {% endif %}
+
+                <div class="newsdetail-body">
+                    {{ release|trans_field:"body"|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

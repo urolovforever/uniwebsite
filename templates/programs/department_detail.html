@@ -1,0 +1,41 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+{% endblock %}
+
+{% block title %}{{ department|trans_field:"name" }} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="content-section">
+    <div class="container">
+        {% if department.description %}
+        <div class="article-body">
+            {{ department|trans_field:"description"|safe }}
+        </div>
+        {% endif %}
+
+        <h2>{% trans "Programs" %}</h2>
+        <div class="programs-grid">
+            {% for program in programs %}
+            <div class="program-card">
+                <a href="{% url 'programs:program_detail' program.slug %}">
+                    <div class="program-card-content">
+                        <span class="program-level">{{ program.get_level_display }}</span>
+                        <h3>{{ program|trans_field:"title" }}</h3>
+                        {% if program.duration %}
+                        <span class="program-duration">{{ program.duration }}</span>
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <p>{% trans "No programs in this department yet." %}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

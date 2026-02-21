@@ -1,0 +1,203 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+{% load news_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+{% endblock %}
+
+{% block title %}Faculty of Jurisprudence - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/c3.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Faculty" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Departments" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Jurisprudence" %}</span>
+        </nav>
+        <div class="page-hero-category">Faculty</div>
+        <h1 class="page-hero-title">Faculty of Jurisprudence</h1>
+        <div class="page-hero-description">
+            <p>Critical thinking. Global perspectives. Real-world impact — preparing students for careers in legal practice, diplomacy, policy, and justice.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Welcome from the Dean -->
+<section class="dean-welcome-section">
+    <div class="container">
+        <div class="dean-welcome-grid">
+            <div class="dean-welcome-text">
+                <h2>Welcome from the Dean</h2>
+                <p>At the Faculty of Jurisprudence, we believe that understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</p>
+                <p>Our scholars bring together expertise in international law, public law, human rights, and constitutional studies — creating an interdisciplinary environment where students learn to think critically, argue persuasively, and act with purpose.</p>
+                <p>I'm proud of the community we've built — one that values diverse perspectives, rigorous inquiry, and a genuine commitment to making Central Asia and the wider world a better, more just place.</p>
+            </div>
+            <div class="dean-welcome-quote">
+                <div class="dean-quote-marks">&ldquo;</div>
+                <blockquote>Understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</blockquote>
+                <div class="dean-quote-author">
+                    <img src="{% static 'img/campus/c4.jpg' %}" alt="Dean of Faculty" loading="lazy">
+                    <div class="dean-quote-info">
+                        <strong>Dean of Faculty</strong>
+                        <span>Faculty of Jurisprudence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Schools and Disciplines — Dynamic from Programs -->
+<section class="schools-section">
+    <div class="container">
+        <h2>Schools and disciplines</h2>
+        <p class="schools-desc">Our programmes bring together scholars across law and legal studies — fostering critical thinking, cross-cultural understanding, and the pursuit of justice through world-class teaching and research.</p>
+    </div>
+    <div class="schools-carousel-wrap">
+        <div class="schools-carousel" id="schoolsCarousel">
+            {% for prog in programs %}
+            <a href="{{ prog.get_absolute_url }}" class="school-card">
+                {% if prog.image %}
+                <img src="{{ prog.image.url }}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
+                {% else %}
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
+                {% endif %}
+                <div class="school-card-overlay">
+                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {{ prog.get_level_display }} · {{ prog.get_study_type_display }}{% if prog.duration %} · {{ prog.duration }}{% endif %}</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+            {% empty %}
+            <div style="padding: 2rem; color: #aaa; text-align: center;">No programmes available yet.</div>
+            {% endfor %}
+        </div>
+        <div class="schools-nav">
+            <div class="schools-dots" id="schoolsDots"></div>
+            <div class="schools-arrows">
+                <button class="schools-arrow" onclick="slideSchools(-1)"><i class="fas fa-arrow-left"></i></button>
+                <button class="schools-arrow" onclick="slideSchools(1)"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research -->
+<section class="faculty-research-section">
+    <div class="container">
+        <div class="faculty-research-content">
+            <h2>Research</h2>
+            <p>Research in the Faculty of Jurisprudence is shaping policy, advancing justice, and deepening our understanding of legal systems. We're examining governance frameworks, human rights mechanisms, and constitutional development in Central Asia and beyond.</p>
+            <p>Our scholars are contributing to vital work in international law, migration studies, comparative law, and legal reform — producing research that influences governments, international organisations, and communities.</p>
+            <p>Learn more about our research and our interdisciplinary centres and institutes here:</p>
+            <a href="/research/" class="faculty-research-link">Our research <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News & Upcoming Events -->
+<section class="faculty-news-events-section">
+    <div class="container">
+        <div class="faculty-news-events-grid">
+            <div class="faculty-news-col">
+                <div class="faculty-col-header">
+                    <h2>Latest news</h2>
+                    <a href="{% url 'news:news_list' %}" class="faculty-see-all">{% trans "See all" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="faculty-news-list">
+                    {% latest_news 3 %}
+                </div>
+            </div>
+            <div class="faculty-events-col">
+                <div class="faculty-col-header">
+                    <h2>{% trans "Upcoming events" %}</h2>
+                    <a href="{% url 'news:event_list' %}" class="faculty-see-all">{% trans "See all" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="faculty-events-list">
+                    {% upcoming_events 2 %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="{% url 'people:departments' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'people:dept_business_innovative' %}" class="explore-more-link">{% trans "Faculty of Business and Innovative Education" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    const carousel = document.getElementById('schoolsCarousel');
+    const dotsWrap = document.getElementById('schoolsDots');
+    if (!carousel || !dotsWrap) return;
+
+    const cards = carousel.querySelectorAll('.school-card');
+    const total = cards.length;
+    let current = 0;
+
+    function getCardWidth() {
+        if (!cards[0]) return 0;
+        const style = getComputedStyle(carousel);
+        const gap = parseFloat(style.gap) || 24;
+        return cards[0].offsetWidth + gap;
+    }
+
+    function getMaxIndex() {
+        return Math.max(0, total - 1);
+    }
+
+    function buildDots() {
+        dotsWrap.innerHTML = '';
+        for (let i = 0; i <= getMaxIndex(); i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (i === current ? ' active' : '');
+            dot.addEventListener('click', function() { goTo(i); });
+            dotsWrap.appendChild(dot);
+        }
+    }
+
+    function update() {
+        const cardW = getCardWidth();
+        carousel.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+        dotsWrap.querySelectorAll('.dot').forEach(function(d, i) {
+            d.className = 'dot' + (i === current ? ' active' : '');
+        });
+    }
+
+    function goTo(idx) {
+        current = Math.max(0, Math.min(idx, getMaxIndex()));
+        update();
+    }
+
+    window.slideSchools = function(dir) {
+        goTo(current + dir);
+    };
+
+    buildDots();
+    update();
+
+    window.addEventListener('resize', function() {
+        if (current > getMaxIndex()) current = getMaxIndex();
+        buildDots();
+        update();
+    });
+})();
+</script>
+{% endblock %}

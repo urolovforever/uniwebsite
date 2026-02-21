@@ -1,0 +1,40 @@
+{% load static i18n %}
+{% if breadcrumbs %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ request.scheme }}://{{ request.get_host }}/"}{% for crumb in breadcrumbs %}{% if crumb %},
+        {"@type": "ListItem", "position": {{ forloop.counter|add:1 }}, "name": "{{ crumb.title }}"{% if crumb.url %}, "item": "{{ request.scheme }}://{{ request.get_host }}{{ crumb.url }}"{% endif %}}{% endif %}{% endfor %}
+    ]
+}
+</script>
+{% endif %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
+            {% for crumb in breadcrumbs %}
+            {% if crumb %}
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            {% if crumb.url %}
+            <span>{{ crumb.title }}</span>
+            {% else %}
+            <span class="current">{{ crumb.title }}</span>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </nav>
+        {% if hero_category %}
+        <div class="page-hero-category">{{ hero_category }}</div>
+        {% endif %}
+        <h1 class="page-hero-title">{{ hero_title }}</h1>
+        {% if hero_description %}
+        <div class="page-hero-description">
+            <p>{{ hero_description }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>

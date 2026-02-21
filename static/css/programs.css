@@ -1,0 +1,466 @@
+/* =============================================
+   PROGRAMS LIST PAGE
+   ============================================= */
+
+/* Search Section */
+.prog-search-section {
+    padding: 3rem 0 0;
+}
+
+.prog-search-bar {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.prog-search-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    border: 2px solid #e8e8e8;
+    padding: 1rem 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.prog-search-input-wrap:focus-within {
+    border-color: #003366;
+}
+
+.prog-search-input-wrap i {
+    color: #999;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.prog-search-input-wrap input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background: transparent;
+    font-family: inherit;
+}
+
+.prog-search-input-wrap input::placeholder {
+    color: #bbb;
+}
+
+/* Level Tabs */
+.prog-level-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #e8e8e8;
+    justify-content: center;
+}
+
+.prog-level-tab {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #888;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.prog-level-tab:hover {
+    color: #003366;
+}
+
+.prog-level-tab.active {
+    color: #003366;
+    border-bottom-color: #003366;
+}
+
+/* Results Info */
+.prog-grid-section {
+    padding: 2.5rem 0 5rem;
+}
+
+.prog-results-info {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.prog-results-info span {
+    font-weight: 700;
+    color: #003366;
+}
+
+/* Programme Cards Grid */
+.prog-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Programme Card */
+.prog-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #eee;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.prog-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+/* Card Image */
+.prog-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: #003366;
+}
+
+.prog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.prog-card:hover .prog-card-image img {
+    transform: scale(1.05);
+}
+
+.prog-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #003366 0%, #00508a 100%);
+}
+
+.prog-card-placeholder i {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.prog-card-level {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #00bcd4;
+    color: #fff;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+/* Card Body */
+.prog-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.prog-card-school {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.prog-card-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    white-space: normal !important;
+}
+
+.prog-card-meta {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.prog-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.prog-card-meta i {
+    font-size: 0.75rem;
+    color: #00bcd4;
+}
+
+.prog-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.prog-card:hover .prog-card-link {
+    gap: 0.7rem;
+}
+
+.prog-card-link i {
+    font-size: 0.75rem;
+    transition: transform 0.2s;
+}
+
+.prog-card:hover .prog-card-link i {
+    transform: translateX(3px);
+}
+
+/* Empty & No Results */
+.prog-empty,
+.prog-no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.prog-empty i,
+.prog-no-results i {
+    font-size: 2.5rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.prog-empty p,
+.prog-no-results p {
+    font-size: 1rem;
+    color: #999;
+    max-width: 400px;
+}
+
+/* =============================================
+   PROGRAM DETAIL PAGE (legacy styles preserved)
+   ============================================= */
+
+.program-header {
+    background: linear-gradient(135deg, #003366 0%, #00508a 100%);
+    color: white;
+    padding: 2rem;
+}
+
+.program-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.program-content {
+    padding: 2rem;
+}
+
+.program-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.meta-item i {
+    color: #003366;
+}
+
+.program-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.program-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.feature-item i {
+    color: #00bcd4;
+    font-size: 1.3rem;
+}
+
+.curriculum-section {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.course-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.course-item {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #003366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-name {
+    font-weight: 600;
+    color: #003366;
+}
+
+.course-credits {
+    background: #00bcd4;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.faculty-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.faculty-tag {
+    background: linear-gradient(135deg, #003366 0%, #00508a 100%);
+    color: white;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.faculty-tag:hover {
+    transform: scale(1.05);
+}
+
+.degree-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.degree-column {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.degree-header {
+    background: #003366;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.degree-body {
+    padding: 2rem;
+}
+
+.degree-feature {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.degree-feature:last-child {
+    border-bottom: none;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 1024px) {
+    .prog-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .prog-search-section { padding: 2rem 0 0; }
+    .prog-grid-section { padding: 2rem 0 4rem; }
+    .prog-level-tab { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+}
+
+@media (max-width: 640px) {
+    .prog-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prog-search-input-wrap {
+        padding: 0.8rem 1rem;
+    }
+
+    .prog-search-input-wrap input {
+        font-size: 0.9rem;
+    }
+
+    .prog-level-tabs {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .prog-level-tab {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .prog-card-image {
+        height: 170px;
+    }
+
+    .prog-card-body h3 {
+        font-size: 1.05rem;
+    }
+
+    .degree-comparison {
+        grid-template-columns: 1fr;
+    }
+}

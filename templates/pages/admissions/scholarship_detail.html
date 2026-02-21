@@ -1,0 +1,122 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{{ scholarship|trans_field:"title" }} - {% trans "TIU Scholarships" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="newsdetail-layout">
+            <!-- Left sidebar -->
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <!-- Scholarship details -->
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Scholarship details" %}</label>
+
+                        <div class="evdetail-info-list">
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Provider" %}</span>
+                                    <span class="evdetail-info-value">{{ scholarship.provider }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Programme Level" %}</span>
+                                    <span class="evdetail-info-value">{{ scholarship.get_level_display }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="{{ scholarship.type_tag_icon }}"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Award Type" %}</span>
+                                    <span class="evdetail-info-value">{{ scholarship.get_award_type_display }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Applicant Type" %}</span>
+                                    <span class="evdetail-info-value">{{ scholarship.get_applicant_type_display }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="{{ scholarship.award_tag_icon }}"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Award" %}</span>
+                                    <span class="evdetail-info-value">{{ scholarship.award_tag_text }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Share this scholarship" %}</label>
+                        <div class="newsdetail-share-links">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-fb" aria-label="{% trans "Share on Facebook" %}"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ scholarship.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tw" aria-label="{% trans "Share on X" %}"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ scholarship.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tg" aria-label="{% trans "Share on Telegram" %}"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-li" aria-label="{% trans "Share on LinkedIn" %}"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Other scholarships -->
+                    {% if other_scholarships %}
+                    <div class="evlist-filter-group" style="border-bottom: none;">
+                        <label class="evlist-filter-label">{% trans "Other scholarships" %}</label>
+                        <div class="newsdetail-related-list">
+                            {% for s in other_scholarships %}
+                            <a href="{{ s.get_absolute_url }}" class="newsdetail-related-item">
+                                <span class="newsdetail-related-date">{{ s.get_award_type_display|upper }}</span>
+                                <span class="newsdetail-related-title">{{ s|trans_field:"title" }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <a href="{% url 'core:scholarships' %}" class="newsdetail-back-link"><i class="fas fa-arrow-left"></i> {% trans "All scholarships" %}</a>
+                </div>
+            </aside>
+
+            <!-- Right side — scholarship content -->
+            <article class="newsdetail-content">
+                <div class="newsdetail-body">
+                    {{ scholarship|trans_field:"description"|safe }}
+                </div>
+
+                <!-- Apply CTA -->
+                <div class="deadlines-cta-box" style="margin-top: 2.5rem;">
+                    <h2>{% trans "Not sure if you qualify?" %}</h2>
+                    <p>{% trans "Our admissions team can help you identify the best funding options based on your profile, programme choice, and personal circumstances. Get in touch — we're here to help." %}</p>
+                    <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="deadlines-cta-link">{% trans "Contact the admissions office" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='admissions/how-to-apply' %}" class="explore-more-link">{% trans "How to Apply" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="explore-more-link">{% trans "Requirements" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:tuition_fees' %}" class="explore-more-link">{% trans "Tuition & Fees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/faqs' %}" class="explore-more-link">{% trans "FAQs" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

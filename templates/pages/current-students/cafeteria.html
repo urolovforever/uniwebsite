@@ -1,0 +1,161 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+{% endblock %}
+
+{% block title %}Cafeteria & Dining - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Cafeteria</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">Cafeteria & Dining</h1>
+        <div class="page-hero-description">
+            <p>Affordable meals, diverse menus, and a social space at the heart of campus life.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro with image -->
+<section class="cafe-intro-section">
+    <div class="container">
+        <div class="cafe-intro-grid">
+            <div class="cafe-intro-image">
+                <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU Cafeteria" loading="lazy">
+            </div>
+            <div class="cafe-intro-text">
+                <h2>Eat well, study well</h2>
+                <p>The TIU cafeteria serves fresh, affordable meals every day — from traditional Uzbek dishes to international options. It's also one of the most popular social spots on campus, where students catch up between classes over a cup of tea or a hot lunch.</p>
+                <p>All food is prepared daily by our on-site kitchen team using fresh, locally sourced ingredients.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Highlights -->
+<section class="cafe-menu-section">
+    <div class="container">
+        <div class="cafe-menu-header">
+            <span class="cafe-menu-label">What's on the menu</span>
+            <h2>Daily dining options</h2>
+        </div>
+        <div class="cafe-menu-grid">
+            <div class="cafe-menu-card">
+                <div class="cafe-menu-icon"><i class="fas fa-sun"></i></div>
+                <h3>Breakfast</h3>
+                <span class="cafe-menu-time">08:00 – 10:00</span>
+                <p>Tea, coffee, bread, eggs, porridge, fruits, and pastries. A healthy start to your day.</p>
+                <div class="cafe-menu-price">From 15,000 UZS</div>
+            </div>
+            <div class="cafe-menu-card">
+                <div class="cafe-menu-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Lunch</h3>
+                <span class="cafe-menu-time">12:00 – 15:00</span>
+                <p>Hot meals including plov, lagman, soups, grilled meats, salads, and vegetarian options.</p>
+                <div class="cafe-menu-price">From 25,000 UZS</div>
+            </div>
+            <div class="cafe-menu-card">
+                <div class="cafe-menu-icon"><i class="fas fa-coffee"></i></div>
+                <h3>Snacks & drinks</h3>
+                <span class="cafe-menu-time">08:00 – 18:00</span>
+                <p>Sandwiches, samsa, pastries, fresh juices, tea, and coffee available all day.</p>
+                <div class="cafe-menu-price">From 8,000 UZS</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info Row -->
+<section class="cafe-info-section">
+    <div class="container">
+        <div class="cafe-info-grid">
+            <div class="cafe-info-item">
+                <i class="fas fa-clock"></i>
+                <h3>Opening hours</h3>
+                <p>Monday – Friday: 08:00 – 18:00<br>Saturday: 09:00 – 15:00<br>Sunday: Closed</p>
+            </div>
+            <div class="cafe-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Ground floor, Building B<br>Directly opposite the main lecture hall</p>
+            </div>
+            <div class="cafe-info-item">
+                <i class="fas fa-credit-card"></i>
+                <h3>Payment</h3>
+                <p>Cash and card accepted<br>Student card top-up available at reception</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Cafeteria FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are there vegetarian or halal options?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. All meat served in the cafeteria is halal. Vegetarian options are available at every meal, including salads, soups, and rice dishes. Let the staff know about any dietary requirements.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I bring my own food?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>You're welcome to bring your own food and eat in the cafeteria seating area. Microwaves are available for reheating. Please clean up after yourself.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there a coffee shop on campus?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>The cafeteria serves tea and coffee throughout the day. There is also a small coffee kiosk near the library entrance offering espresso-based drinks and pastries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,1315 @@
+/* Faculty Directory & Departments Styles */
+
+/* ========== Faculty Index — Departments Grid ========== */
+.faculty-depts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .faculty-depts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== Department Cards ========== */
+.dept-cards-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.dept-cards-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.dept-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 100%;
+    align-items: start;
+}
+
+.dept-card {
+    background: #f3f3f3;
+    overflow: hidden;
+    min-width: 0;
+    position: sticky;
+    top: 100px;
+}
+
+.dept-card-text {
+    padding: 3rem 3rem 2.5rem;
+}
+
+.dept-card-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1.3;
+    margin: 0 0 1.5rem;
+    white-space: normal;
+}
+
+.dept-card-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 0 0 2rem;
+}
+
+.dept-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.dept-card-link:hover {
+    gap: 1rem;
+}
+
+.dept-card-link i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.dept-card-link:hover i {
+    transform: translateX(3px);
+}
+
+.dept-card-image {
+    position: relative;
+}
+
+.dept-card-accent {
+    height: 6px;
+    background: linear-gradient(90deg, #003366 0%, #1e90ff 50%, #003366 100%);
+}
+
+.dept-card-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .dept-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .dept-card-text {
+        padding: 2.5rem 2.5rem 2rem;
+    }
+
+    .dept-card-text h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .dept-cards-section {
+        padding: 3rem 0;
+    }
+
+    .dept-cards-grid {
+        gap: 2rem;
+    }
+
+    .dept-card-text {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+
+    .dept-card-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .dept-card-image img {
+        height: 260px;
+    }
+}
+
+/* ========== Dean Welcome Section ========== */
+.dean-welcome-section {
+    padding: 5rem 0;
+    background: #fff;
+    overflow: visible;
+}
+
+.dean-welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 4rem;
+    align-items: start;
+}
+
+.dean-welcome-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin: 0 0 2rem;
+    white-space: normal;
+}
+
+.dean-welcome-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #444;
+    margin: 0 0 1.25rem;
+}
+
+.dean-welcome-text p:last-child {
+    margin-bottom: 0;
+}
+
+.dean-welcome-quote {
+    background: #f3f3f3;
+    padding: 3.5rem 2.5rem 3rem;
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dean-welcome-text {
+    position: sticky;
+    top: 6rem;
+}
+
+.dean-quote-marks {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8rem;
+    font-weight: 800;
+    color: rgba(0, 51, 102, 0.08);
+    line-height: 1;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+}
+
+.dean-welcome-quote blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: #0a1628;
+    margin: 0 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.dean-quote-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.dean-quote-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dean-quote-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.dean-quote-info strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0a1628;
+}
+
+.dean-quote-info span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .dean-welcome-grid {
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dean-welcome-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .dean-welcome-section {
+        padding: 3.5rem 0;
+    }
+
+    .dean-welcome-quote {
+        max-width: 450px;
+    }
+}
+
+/* Department stat badges (unused but preserved) */
+.dept-stats-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.dept-stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.9rem;
+    background: #f0f4f8;
+    color: #003366;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #dde4ec;
+}
+
+.dept-stat-badge i {
+    font-size: 0.8rem;
+    color: #003366;
+}
+
+/* Search Section */
+.faculty-search-section {
+    padding: 3rem 0 0;
+}
+
+.faculty-search-bar {
+    margin-bottom: 1.5rem;
+}
+
+.faculty-search-input-wrap {
+    position: relative;
+}
+
+.faculty-search-input-wrap i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1rem;
+}
+
+.faculty-search-input-wrap input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 2.8rem;
+    border: 2px solid #e5e7eb;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #003366;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.faculty-search-input-wrap input:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+.faculty-search-input-wrap input::placeholder {
+    color: #aaa;
+}
+
+/* Filters */
+.faculty-filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.faculty-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.faculty-filter-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #003366;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.faculty-filter-group select {
+    padding: 0.7rem 2.5rem 0.7rem 0.9rem;
+    border: 2px solid #e5e7eb;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    min-width: 180px;
+    transition: border-color 0.2s;
+}
+
+.faculty-filter-group select:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+.faculty-reset-btn {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #e5e7eb;
+    background: #fff;
+    color: #666;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.faculty-reset-btn:hover {
+    border-color: #003366;
+    color: #003366;
+}
+
+.faculty-results-count {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0.5rem 0;
+}
+
+/* Faculty meta (role + department badges) */
+.faculty-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.faculty-meta-role {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background: #003366;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.faculty-meta-dept {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background: #f0f4f8;
+    color: #003366;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #dde4ec;
+}
+
+/* ========== Faculty Profiles Grid (Directory Page) ========== */
+.faculty-profiles-section {
+    padding: 3rem 0 5rem;
+    background: #fff;
+}
+
+.faculty-profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.faculty-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faculty-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-card-photo img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.faculty-card-placeholder {
+    width: 100%;
+    height: 260px;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faculty-card-placeholder i {
+    font-size: 4rem;
+    color: #c0cfe0;
+}
+
+.faculty-card-info {
+    padding: 1.5rem;
+}
+
+.faculty-card-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003366;
+    margin: 0 0 0.4rem;
+}
+
+.faculty-card-title {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+.faculty-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.faculty-card-email {
+    display: block;
+    font-size: 0.85rem;
+    color: #003366;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    word-break: break-all;
+}
+
+.faculty-card-email:hover {
+    text-decoration: underline;
+}
+
+.faculty-card-email i {
+    margin-right: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.faculty-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #003366;
+    text-decoration: none;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.15rem;
+    transition: gap 0.3s ease;
+}
+
+.faculty-card-link:hover {
+    gap: 0.8rem;
+}
+
+.faculty-card-link i {
+    font-size: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+    .faculty-profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .faculty-profiles-section {
+        padding: 2rem 0 3rem;
+    }
+
+    .faculty-profiles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-card-photo img,
+    .faculty-card-placeholder {
+        height: 220px;
+    }
+}
+
+/* Specialization tags within leader-text */
+.faculty-profiles-section .faculty-specialization {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.faculty-profiles-section .specialization-tag {
+    background: #f0f4f8;
+    color: #003366;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.8rem;
+    border: 1px solid #dde4ec;
+}
+
+/* No Results State */
+.faculty-no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #999;
+}
+
+.faculty-no-results i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.faculty-no-results h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0 0 0.5rem;
+}
+
+.faculty-no-results p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+}
+
+.faculty-reset-link {
+    background: none;
+    border: none;
+    color: #003366;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit;
+}
+
+.faculty-reset-link:hover {
+    color: #002244;
+}
+
+/* Pagination */
+.faculty-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 0 1rem;
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    color: #003366;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pagination-btn:hover:not(.disabled) {
+    border-color: #003366;
+    background: #003366;
+    color: #fff;
+}
+
+.pagination-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.pagination-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e0e0e0;
+    background: #fff;
+    color: #003366;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pagination-num:hover {
+    border-color: #003366;
+}
+
+.pagination-num.active {
+    background: #003366;
+    border-color: #003366;
+    color: #fff;
+}
+
+/* Department page styles (preserved) */
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.department-card {
+    background: white;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.department-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.department-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #003366 0%, #1e40af 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.department-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.department-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.dept-stat {
+    text-align: center;
+}
+
+.dept-stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+}
+
+.dept-stat-label {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.research-interests {
+    background: #f8fafc;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.research-topic {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    border-left: 4px solid #b8860b;
+}
+
+.topic-title {
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.topic-faculty {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.publications-list {
+    margin: 2rem 0;
+}
+
+.publication-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.publication-title {
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.publication-authors {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.publication-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* ========== Schools & Disciplines Section ========== */
+.schools-section {
+    background: #0a1628;
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+}
+
+.schools-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 1.25rem;
+    white-space: normal;
+}
+
+.schools-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 0 3rem;
+}
+
+.schools-carousel-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.schools-carousel {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s ease;
+}
+
+.school-card {
+    position: relative;
+    min-width: 580px;
+    max-width: 580px;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.school-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.school-card:hover img {
+    transform: scale(1.05);
+}
+
+.school-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 60%;
+}
+
+.school-card-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #fff;
+    margin: 0;
+}
+
+.school-card-overlay p strong {
+    font-size: 1.15rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.school-card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #00cfff;
+    background: rgba(0, 207, 255, 0.15);
+    color: #00cfff;
+    font-size: 1.1rem;
+    margin-top: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.school-card:hover .school-card-btn {
+    background: #00cfff;
+    color: #0a1628;
+    border-color: #00cfff;
+}
+
+.schools-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schools-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.schools-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.schools-dots .dot.active {
+    width: 32px;
+    height: 6px;
+    background: #fff;
+}
+
+.schools-arrows {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.schools-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.schools-arrow:hover {
+    background: #fff;
+    color: #0a1628;
+    border-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .school-card {
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    .school-card img {
+        height: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .school-card {
+        min-width: 320px;
+        max-width: 320px;
+    }
+
+    .school-card img {
+        height: 340px;
+    }
+}
+
+@media (max-width: 640px) {
+    .schools-section {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .schools-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .school-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .school-card img {
+        height: 300px;
+    }
+
+    .schools-arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ========== Faculty Research Section ========== */
+.faculty-research-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.faculty-research-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faculty-research-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin: 0 0 2rem;
+    white-space: normal;
+}
+
+.faculty-research-content p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #444;
+    margin: 0 0 1.25rem;
+}
+
+.faculty-research-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #003366;
+    text-decoration: none;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.2rem;
+    margin-top: 1rem;
+    transition: gap 0.3s ease;
+}
+
+.faculty-research-link:hover {
+    gap: 0.8rem;
+}
+
+.faculty-research-link i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.faculty-research-link:hover i {
+    transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+    .faculty-research-section {
+        padding: 3.5rem 0;
+    }
+
+    .faculty-research-content h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ========== Faculty News & Events Section ========== */
+.faculty-news-events-section {
+    padding: 5rem 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.faculty-news-events-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 3rem;
+}
+
+.faculty-news-events-grid::before {
+    content: '';
+    grid-column: 2;
+    grid-row: 1;
+    background: #ddd;
+}
+
+.faculty-col-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0;
+}
+
+.faculty-col-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin: 0;
+    white-space: normal;
+}
+
+.faculty-see-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0a1628;
+    text-decoration: none;
+    border-bottom: 2px solid #0a1628;
+    padding-bottom: 0.15rem;
+    transition: gap 0.3s ease;
+    white-space: nowrap;
+}
+
+.faculty-see-all:hover {
+    gap: 0.8rem;
+}
+
+.faculty-see-all i {
+    font-size: 0.8rem;
+}
+
+/* News Items */
+.faculty-news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faculty-news-item {
+    display: flex;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.faculty-news-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.faculty-news-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-news-date,
+.faculty-event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #003366;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.faculty-news-item-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.4;
+    margin: 0 0 0.5rem;
+    white-space: normal;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.faculty-news-item:hover h3 {
+    color: #003366;
+}
+
+.faculty-news-item-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Event Items */
+.faculty-events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faculty-event-item {
+    display: flex;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.faculty-event-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.faculty-event-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-event-item-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.4;
+    margin: 0 0 0.4rem;
+    white-space: normal;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.faculty-event-item:hover h3 {
+    color: #003366;
+}
+
+.faculty-event-item-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .faculty-news-events-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .faculty-news-events-grid::before { display: none; }
+    .schools-section h2 { font-size: 2rem; }
+    .faculty-col-header h2 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .faculty-news-events-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .faculty-news-events-grid::before {
+        display: none;
+    }
+
+    .faculty-news-events-section {
+        padding: 3.5rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .faculty-news-item img,
+    .faculty-event-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .faculty-col-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .faculty-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .faculty-filter-group select {
+        min-width: 100%;
+    }
+
+    .faculty-reset-btn {
+        align-self: flex-start;
+    }
+
+    .faculty-pagination {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .pagination-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .pagination-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+}

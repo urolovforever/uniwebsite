@@ -1,0 +1,1811 @@
+/* Admissions Section Specific Styles */
+
+.admissions-hero {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #d97706 100%);
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+}
+
+.application-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.step-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 auto 1.5rem;
+}
+
+.step-title {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.requirements-list {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.requirement-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.requirement-icon {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    min-width: 40px;
+}
+
+.tuition-table {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.tuition-table th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tuition-table td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tuition-table tr:last-child td {
+    border-bottom: none;
+}
+
+.tuition-table tr:hover {
+    background: #f8fafc;
+}
+
+.scholarship-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+.scholarship-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+}
+
+.scholarship-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.deadline-banner {
+    background: #fee2e2;
+    border-left: 4px solid #dc2626;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.deadline-text {
+    color: #991b1b;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.application-form-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--primary-blue);
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-answer {
+    padding: 0 1.2rem 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* =============================================
+   DEADLINES PAGE
+   ============================================= */
+
+/* Dates Header Bar */
+.dates-header-bar {
+    background: #f5f5f5;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.dates-header-bar h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.dates-header-bar p {
+    font-size: 1.05rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Academic Calendar */
+.academic-calendar {
+    padding: 4rem 0;
+}
+
+.semesters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.semester-column {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 0;
+    padding: 2rem;
+    position: relative;
+}
+
+.semester-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #003366;
+}
+
+.semester-date-range {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #999;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.semester-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.semester-events {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.semester-event {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.semester-event-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #003366;
+    font-size: 0.9rem;
+}
+
+.semester-event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.semester-event-info strong {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.semester-event-info span {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Application Deadlines Section */
+.deadlines-section {
+    padding: 4rem 0;
+    background: #003366;
+}
+
+.deadlines-header {
+    margin-bottom: 2.5rem;
+}
+
+.deadlines-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.deadlines-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Deadlines Table */
+.deadlines-table {
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.deadline-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background 0.2s;
+}
+
+.deadline-row:last-child {
+    border-bottom: none;
+}
+
+.deadline-row:not(.header-row):hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.deadline-row.header-row {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.deadline-intake strong {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.deadline-intake {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.deadline-open,
+.deadline-close {
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.status-badge.open {
+    background: #e6f7ed;
+    color: #15803d;
+}
+
+.status-badge.closed {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.status-badge.upcoming {
+    background: #e0f7fa;
+    color: #00838f;
+}
+
+/* Deadlines CTA Box (Hull-inspired dark navy) */
+.deadlines-cta-section {
+    padding: 4rem 0;
+}
+
+.deadlines-cta-box {
+    background: #003366;
+    padding: 3.5rem 4rem;
+}
+
+.deadlines-cta-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+
+.deadlines-cta-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1.5rem;
+    max-width: 650px;
+}
+
+.deadlines-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.25rem;
+    transition: opacity 0.2s;
+}
+
+.deadlines-cta-link:hover {
+    opacity: 0.8;
+}
+
+.deadlines-cta-link i {
+    font-size: 0.85rem;
+    transition: transform 0.2s;
+}
+
+.deadlines-cta-link:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .semesters-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .deadline-row {
+        grid-template-columns: 1.5fr 1fr 1fr 0.8fr;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .deadlines-cta-box { padding: 3rem 2.5rem; }
+    .dates-header-bar h2 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+    .deadlines-cta-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .deadlines-cta-box h2 {
+        font-size: 1.4rem;
+    }
+
+    .dates-header-bar h2 {
+        font-size: 1.6rem;
+    }
+
+    .semester-column {
+        padding: 1.5rem;
+    }
+
+    .deadline-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1.2rem 1rem;
+    }
+
+    .deadline-row.header-row {
+        display: none;
+    }
+
+    .deadline-intake,
+    .deadline-open,
+    .deadline-close,
+    .deadline-status {
+        display: block;
+    }
+
+    .deadline-open::before {
+        content: 'Opens: ';
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .deadline-close::before {
+        content: 'Deadline: ';
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .deadlines-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =============================================
+   TUITION & FEES PAGE
+   ============================================= */
+
+/* Centered Statement */
+.tuition-statement {
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.tuition-statement h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.3;
+}
+
+.tuition-statement p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 750px;
+    margin: 0 auto 1rem;
+}
+
+.tuition-statement a {
+    color: #003366;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s;
+}
+
+.tuition-statement a:hover {
+    opacity: 0.7;
+}
+
+/* Three Feature Cards (Hull-inspired blue cards) */
+.tuition-cards-section {
+    padding: 5rem 0 6rem;
+    background: #f5f5f5;
+}
+
+.tuition-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.tuition-card {
+    background: #003366;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+}
+
+.tuition-card-accent {
+    height: 6px;
+    background: linear-gradient(90deg, #00bcd4, #0077b6, #003366);
+}
+
+.tuition-card-content {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tuition-card-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+}
+
+.tuition-card-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+    white-space: normal !important;
+}
+
+.tuition-card-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: auto;
+    padding-bottom: 2rem;
+}
+
+.tuition-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.25rem;
+    width: fit-content;
+    transition: opacity 0.2s;
+}
+
+.tuition-card-link:hover {
+    opacity: 0.8;
+}
+
+.tuition-card-link i {
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+}
+
+.tuition-card-link:hover i {
+    transform: translateX(4px);
+}
+
+/* =============================================
+   TUITION FEE TABLES
+   ============================================= */
+
+.fee-tables-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.fee-tables-header {
+    margin-bottom: 3.5rem;
+}
+
+.fee-tables-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 0.75rem;
+}
+
+.fee-tables-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    white-space: normal !important;
+    margin-bottom: 0.75rem;
+}
+
+.fee-tables-header p {
+    font-size: 1.05rem;
+    color: #666;
+    max-width: 600px;
+}
+
+/* Fee Table Block */
+.fee-table-block {
+    margin-bottom: 3rem;
+}
+
+.fee-table-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #003366;
+}
+
+.fee-table-title i {
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+.fee-table-title h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    white-space: normal !important;
+    margin-bottom: 0;
+}
+
+/* Table Wrapper for horizontal scroll on mobile */
+.fee-table-wrapper {
+    overflow-x: auto;
+}
+
+/* The Table */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.fee-table thead tr {
+    background: #f8f9fb;
+}
+
+.fee-table thead th {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    text-align: left;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.fee-table thead th:last-child {
+    text-align: right;
+}
+
+.fee-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.fee-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.fee-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.fee-table tbody td {
+    padding: 1.2rem 1.5rem;
+    vertical-align: middle;
+}
+
+.fee-table tbody td strong {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: block;
+    white-space: normal;
+}
+
+.fee-school {
+    font-size: 0.82rem;
+    color: #999;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+/* Type of Education Badges */
+.fee-type {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.fee-type.full-time {
+    background: #e8f4fd;
+    color: #0369a1;
+}
+
+.fee-type.part-time {
+    background: #fef3e2;
+    color: #b45309;
+}
+
+.fee-type.short-course {
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+/* Fee Amount */
+.fee-amount {
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #003366;
+    white-space: nowrap;
+}
+
+/* Info Note */
+.fee-tables-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #f8f9fb;
+    border-left: 4px solid #00bcd4;
+    padding: 1.2rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.fee-tables-note i {
+    color: #00bcd4;
+    font-size: 1.1rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.fee-tables-note p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.fee-tables-note a {
+    color: #003366;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.fee-tables-note a:hover {
+    opacity: 0.7;
+}
+
+/* =============================================
+   REQUIREMENTS PAGE — TABS & CHECKLIST
+   ============================================= */
+
+.req-tabs-section {
+    padding: 4rem 0 5rem;
+    background: #fff;
+}
+
+.req-tabs-header {
+    margin-bottom: 2rem;
+}
+
+.req-tabs-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 0.75rem;
+}
+
+.req-tabs-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    white-space: normal !important;
+}
+
+/* Tab Bar */
+.req-tabs-bar {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #e8e8e8;
+    margin-bottom: 2.5rem;
+}
+
+.req-tab {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #888;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.req-tab:hover {
+    color: #003366;
+}
+
+.req-tab.active {
+    color: #003366;
+    border-bottom-color: #003366;
+}
+
+/* Panels */
+.req-panel {
+    display: none;
+}
+
+.req-panel.active {
+    display: block;
+}
+
+.req-panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.req-panel-aside {
+    position: sticky;
+    top: 120px;
+}
+
+.req-panel-main h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.75rem;
+    white-space: normal !important;
+}
+
+.req-panel-main > p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Checklist */
+.req-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.req-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.req-check-item:last-child {
+    border-bottom: none;
+}
+
+.req-check-item > i {
+    color: #00bcd4;
+    font-size: 1.1rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.req-check-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+}
+
+.req-check-item span {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* Info Box (aside) */
+.req-info-box {
+    background: #f8f9fb;
+    border-left: 4px solid #003366;
+    padding: 2rem;
+}
+
+.req-info-icon {
+    width: 40px;
+    height: 40px;
+    background: #003366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.req-info-box h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.75rem;
+    white-space: normal !important;
+}
+
+.req-info-box p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.req-info-box a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #003366;
+    text-decoration: none;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.2rem;
+    transition: opacity 0.2s;
+}
+
+.req-info-box a:hover {
+    opacity: 0.7;
+}
+
+.req-info-box a i {
+    font-size: 0.75rem;
+}
+
+/* =============================================
+   INTERNATIONAL APPLICANTS — REQUIREMENTS SECTION
+   ============================================= */
+
+.intl-requirements-section {
+    padding: 5rem 0;
+    background: #003366;
+}
+
+.intl-requirements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.intl-requirements-text {
+    position: sticky;
+    top: 120px;
+}
+
+.intl-requirements-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 0.75rem;
+}
+
+.intl-requirements-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: normal !important;
+    margin-bottom: 1rem;
+}
+
+.intl-requirements-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.intl-requirements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.intl-req-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.intl-req-item:first-child {
+    padding-top: 0;
+}
+
+.intl-req-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.intl-req-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #00bcd4;
+    min-width: 28px;
+    margin-top: 0.1rem;
+}
+
+.intl-req-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.intl-req-item span {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.5;
+}
+
+/* =============================================
+   BACHELOR APPLY PAGE — PROGRAMMES GRID
+   ============================================= */
+
+.bachelor-programmes-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.bachelor-programmes-header {
+    margin-bottom: 2.5rem;
+}
+
+.bachelor-programmes-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 0.75rem;
+}
+
+.bachelor-programmes-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    white-space: normal !important;
+}
+
+.bachelor-programmes-list {
+    display: block;
+    width: 100%;
+}
+
+.bachelor-prog-link {
+    display: block;
+    padding: 1.1rem 0;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    transition: padding-left 0.2s;
+}
+
+.bachelor-prog-link:first-child {
+    border-top: 1px solid #eee;
+}
+
+.bachelor-prog-link span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #003366;
+    text-decoration: underline;
+    text-decoration-color: #003366;
+    text-underline-offset: 3px;
+    margin-right: 0.75rem;
+}
+
+.bachelor-prog-link i {
+    font-size: 0.85rem;
+    color: #003366;
+    transition: transform 0.2s;
+}
+
+.bachelor-prog-link:hover {
+    padding-left: 0.5rem;
+}
+
+.bachelor-prog-link:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive - Bachelor Programmes */
+@media (max-width: 640px) {
+    .bachelor-programmes-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .bachelor-prog-link span {
+        font-size: 0.95rem;
+    }
+}
+
+/* Responsive - International */
+@media (max-width: 1024px) {
+    .intl-requirements-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .intl-requirements-text {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .intl-requirements-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .intl-requirements-section {
+        padding: 3.5rem 0;
+    }
+}
+
+/* Responsive - Requirements */
+@media (max-width: 1024px) {
+    .req-panel-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .req-tab {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .req-tabs-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .req-tabs-bar {
+        overflow-x: auto;
+    }
+
+    .req-tab {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .req-info-box {
+        padding: 1.5rem;
+    }
+}
+
+/* =============================================
+   FAQ PAGE — STICKY TOC LAYOUT
+   ============================================= */
+
+.faq-toc-section {
+    padding: 4rem 0 6rem;
+}
+
+.faq-toc-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+/* Sticky Sidebar */
+.faq-toc-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.faq-toc-sidebar h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    white-space: normal !important;
+}
+
+.faq-toc-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 2px solid #e8e8e8;
+    padding-left: 0;
+}
+
+.faq-toc-link {
+    display: block;
+    padding: 0.6rem 0 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    color: #888;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+    transition: all 0.2s;
+}
+
+.faq-toc-link:hover {
+    color: #003366;
+}
+
+.faq-toc-link.active {
+    color: #003366;
+    font-weight: 700;
+    border-left-color: #003366;
+}
+
+/* FAQ Content Area */
+.faq-toc-content {
+    min-width: 0;
+}
+
+.faq-toc-group {
+    margin-bottom: 3.5rem;
+}
+
+.faq-toc-group:last-child {
+    margin-bottom: 0;
+}
+
+.faq-toc-group h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    white-space: normal !important;
+}
+
+.faq-toc-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-toc-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #003366;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    transition: opacity 0.2s;
+}
+
+.faq-toc-question:first-child {
+    border-top: 1px solid #eee;
+}
+
+.faq-toc-question:hover {
+    opacity: 0.7;
+}
+
+.faq-toc-question i {
+    font-size: 0.8rem;
+    color: #003366;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+
+.faq-toc-question:hover i {
+    transform: translateX(4px);
+}
+
+/* =============================================
+   SCHOLARSHIPS PAGE
+   ============================================= */
+
+.scholarships-section {
+    padding: 4rem 0 5rem;
+}
+
+.scholarships-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+/* Sticky Sidebar Filters */
+.scholarships-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.scholarships-filter-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.scholarships-filter-header i {
+    font-size: 1.1rem;
+    color: #003366;
+}
+
+.scholarships-filter-header span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.scholarships-filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.scholarships-filter-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.scholarships-filter-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23999' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.scholarships-filter-group select:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+.scholarships-clear-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.scholarships-clear-btn:hover {
+    color: #dc2626;
+}
+
+.scholarships-clear-btn i {
+    font-size: 0.75rem;
+}
+
+/* Scholarships List */
+.scholarships-list {
+    min-width: 0;
+}
+
+.scholarship-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.scholarship-item:first-child {
+    padding-top: 0;
+}
+
+.scholarship-item:last-of-type {
+    border-bottom: none;
+}
+
+.scholarship-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    white-space: normal !important;
+}
+
+.scholarship-item h3 a {
+    color: #003366;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    transition: opacity 0.2s;
+}
+
+.scholarship-item h3 a:hover {
+    opacity: 0.7;
+}
+
+.scholarship-provider {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 0.75rem;
+}
+
+.scholarship-item > p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+/* Scholarship Tags */
+.scholarship-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.scholarship-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.scholarship-tag i {
+    font-size: 0.65rem;
+}
+
+.tag-gold {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.tag-blue {
+    background: #e0f2fe;
+    color: #0c4a6e;
+}
+
+.tag-green {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.tag-pink {
+    background: #fce7f3;
+    color: #9d174d;
+}
+
+.tag-purple {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.tag-orange {
+    background: #ffedd5;
+    color: #9a3412;
+}
+
+.tag-teal {
+    background: #ccfbf1;
+    color: #115e59;
+}
+
+/* No Results */
+.scholarships-no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #999;
+}
+
+.scholarships-no-results i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.scholarships-no-results p {
+    font-size: 1rem;
+    color: #888;
+}
+
+.scholarships-no-results a {
+    color: #003366;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .tuition-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    .tuition-card {
+        min-height: auto;
+    }
+
+    .scholarships-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .scholarships-sidebar {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: flex-end;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2rem;
+    }
+
+    .scholarships-filter-header {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .scholarships-filter-group {
+        flex: 1;
+        min-width: 150px;
+        margin-bottom: 0;
+    }
+
+    .scholarships-clear-btn {
+        border-top: none;
+        padding-top: 0;
+        width: auto;
+    }
+
+    .faq-toc-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .faq-toc-sidebar {
+        position: static;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2rem;
+    }
+
+    .faq-toc-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .faq-toc-link {
+        border-left: none;
+        margin-left: 0;
+        padding: 0.5rem 1rem;
+        background: #f5f5f5;
+        border-radius: 20px;
+        font-size: 0.85rem;
+    }
+
+    .faq-toc-link.active {
+        background: #003366;
+        color: #fff;
+        border-left-color: transparent;
+    }
+
+    .tuition-statement h2 { font-size: 2rem; }
+    .fee-tables-header h2 { font-size: 2rem; }
+    .bachelor-programmes-header h2 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+    .tuition-statement h2 {
+        font-size: 1.6rem;
+    }
+
+    .tuition-statement p {
+        font-size: 0.95rem;
+    }
+
+    .tuition-card-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .tuition-card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .fee-tables-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .fee-tables-section {
+        padding: 3rem 0;
+    }
+
+    .fee-table-block {
+        margin-bottom: 2rem;
+    }
+
+    .fee-table tbody td {
+        padding: 1rem;
+    }
+
+    .faq-toc-section {
+        padding: 2.5rem 0 4rem;
+    }
+
+    .faq-toc-group h2 {
+        font-size: 1.4rem;
+    }
+
+    .faq-toc-question {
+        font-size: 0.95rem;
+    }
+
+    .scholarships-section {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .scholarship-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .scholarship-item > p {
+        font-size: 0.9rem;
+    }
+
+    .scholarships-sidebar {
+        flex-direction: column;
+    }
+
+    .scholarships-filter-group {
+        min-width: 100%;
+    }
+}

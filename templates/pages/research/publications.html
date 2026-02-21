@@ -1,0 +1,167 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/research.css' %}">
+{% endblock %}
+
+{% block title %}Publications - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Research</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Publications</span>
+        </nav>
+        <div class="page-hero-category">Research</div>
+        <h1 class="page-hero-title">Publications</h1>
+        <div class="page-hero-description">
+            <p>Explore the scholarly output of TIU's researchers — from peer-reviewed journal articles to conference proceedings and books.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Research that reaches <em>the world.</em></h2>
+                <p>TIU faculty and students publish in internationally recognized journals, present at global conferences, and contribute to edited volumes. Our publications span every discipline represented at the university — from IT and engineering to business, law, humanities, and education.</p>
+                <p>We encourage open-access publishing wherever possible, ensuring that our research is available to scholars, practitioners, and policymakers worldwide. TIU also publishes its own conference proceedings and working paper series.</p>
+                <p>The Research Office provides support for manuscript preparation, journal selection, peer review navigation, and publication funding.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Present at a conference</h3>
+                    <p>Submit your research to one of TIU's annual conferences and get published in our proceedings.</p>
+                    <a href="/research/conferences/" class="abroad-sidebar-link">Conferences <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publication types -->
+<section class="section--muted">
+    <div class="container">
+        <h2 class="section-heading">Types of publications</h2>
+        <p class="section-subtitle">TIU researchers contribute to a wide range of scholarly formats.</p>
+        <div class="grid grid--3col mid-container">
+            <div class="accent-card accent-card--cyan">
+                <div class="icon-block"><i class="fas fa-file-alt"></i></div>
+                <h3 class="card-title">Journal articles</h3>
+                <p class="card-text">Peer-reviewed papers published in Scopus-indexed, Web of Science, and other internationally recognized academic journals.</p>
+            </div>
+            <div class="accent-card accent-card--green">
+                <div class="icon-block"><i class="fas fa-book"></i></div>
+                <h3 class="card-title">Books & chapters</h3>
+                <p class="card-text">Monographs, textbooks, and contributed chapters in edited volumes published by international academic presses.</p>
+            </div>
+            <div class="accent-card accent-card--orange">
+                <div class="icon-block"><i class="fas fa-chalkboard"></i></div>
+                <h3 class="card-title">Conference proceedings</h3>
+                <p class="card-text">Papers presented at TIU's own conferences and at external academic events, collected in published proceedings volumes.</p>
+            </div>
+            <div class="accent-card accent-card--pink">
+                <div class="icon-block"><i class="fas fa-scroll"></i></div>
+                <h3 class="card-title">Working papers</h3>
+                <p class="card-text">Pre-publication research shared through TIU's working paper series, providing early access to new findings and inviting feedback.</p>
+            </div>
+            <div class="accent-card accent-card--purple">
+                <div class="icon-block"><i class="fas fa-landmark"></i></div>
+                <h3 class="card-title">Policy briefs</h3>
+                <p class="card-text">Short, accessible documents translating research findings into actionable recommendations for government and industry stakeholders.</p>
+            </div>
+            <div class="accent-card accent-card--navy">
+                <div class="icon-block"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="card-title">Theses & dissertations</h3>
+                <p class="card-text">Master's theses and doctoral dissertations produced by TIU students, available through the university library repository.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key research areas -->
+<section class="section--white">
+    <div class="container">
+        <div class="grid grid--2col-equal wide-container">
+            <div>
+                <h2 class="section-heading--left" style="font-size: 2.25rem;">Key research areas</h2>
+                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">Our publications span every faculty at TIU. The most active areas include:</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Artificial Intelligence & Data Science</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Economic Development in Central Asia</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Legal Reform & Governance</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Multilingual Education & Applied Linguistics</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>International Relations & Diplomacy</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-panel">
+                <h3>Publication support</h3>
+                <div class="detail-row">
+                    <strong>MANUSCRIPT PREPARATION</strong>
+                    <p>Writing workshops, editing assistance, and formatting guidance</p>
+                </div>
+                <div class="detail-row">
+                    <strong>JOURNAL SELECTION</strong>
+                    <p>Advice on choosing appropriate journals for your field and impact goals</p>
+                </div>
+                <div class="detail-row">
+                    <strong>OPEN ACCESS FUNDING</strong>
+                    <p>Grants to cover article processing charges for open-access publications</p>
+                </div>
+                <div class="detail-row">
+                    <strong>CITATION DATABASES</strong>
+                    <p>Access to Scopus, Web of Science, and Google Scholar profiles for all researchers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Ready to publish?</h2>
+        <p>Contact the Research Office for support with manuscript preparation, journal selection, and funding.</p>
+        <div class="cta-banner__buttons">
+            <a href="/contact/contact-info/" class="cta-btn cta-btn--primary">Contact Research Office</a>
+            <a href="/research/centers/" class="cta-btn cta-btn--outline">Research Centers</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/research/centers/" class="explore-more-link">Research Centers <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/conferences/" class="explore-more-link">Conferences <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/innovation/" class="explore-more-link">Innovation <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

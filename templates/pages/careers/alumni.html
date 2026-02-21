@@ -1,0 +1,62 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+{% endblock %}
+
+{% block title %}Alumni Network - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Careers</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Alumni</span>
+        </nav>
+        <div class="page-hero-category">Careers</div>
+        <h1 class="page-hero-title">Alumni Network</h1>
+        <div class="page-hero-description">
+            <p>Our alumni community is growing. Be among the first graduates to shape the TIU legacy.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Coming Soon Section -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div style="max-width: 800px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+        <div style="width: 100px; height: 100px; background: #e8f0fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+            <i class="fas fa-user-graduate" style="font-size: 2.5rem; color: #003366;"></i>
+        </div>
+        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; color: #003366; margin-bottom: 1rem;">
+            Our First Graduates Are on Their Way
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 1.5rem;">
+            As a young and rapidly growing university, TIU has not yet produced its first graduating class. But that milestone is approaching, and we are already building the foundation for a strong, connected alumni network.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.8; color: #555;">
+            When our students graduate, they will join a community dedicated to lifelong learning, professional growth, and giving back to the university that shaped their careers.
+        </p>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/careers/career-center/" class="explore-more-link">Career Center <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/internships/" class="explore-more-link">Internships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/employer-partnerships/" class="explore-more-link">Employer Partnerships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/alumni-network/" class="explore-more-link">Alumni Network <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/hiring/" class="explore-more-link">Hiring <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+{% endblock %}
+
+{% block title %}IT Services - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">IT Services</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">IT Services</h1>
+        <div class="page-hero-description">
+            <p>Get help with Wi-Fi, email, software, and all your technical needs on campus.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro + Quick Links -->
+<section class="it-intro-section">
+    <div class="container">
+        <div class="it-intro-grid">
+            <div class="it-intro-text">
+                <h2>Stay connected, stay productive</h2>
+                <p>TIU's IT team provides the infrastructure and support you need to succeed — from campus-wide Wi-Fi and student email to software licences and technical help. If something's not working, we'll fix it.</p>
+            </div>
+            <div class="it-intro-links">
+                <a href="mailto:it@tiu.uz" class="split-link">Email IT Support <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="it-services-section">
+    <div class="container">
+        <div class="it-services-header">
+            <span class="it-services-label">What we provide</span>
+            <h2>IT services for students</h2>
+        </div>
+        <div class="it-services-grid">
+            <div class="it-service-card">
+                <div class="it-service-number">01</div>
+                <h3>Campus Wi-Fi</h3>
+                <p>High-speed wireless internet across all buildings, lecture halls, dormitories, and outdoor areas. Connect with your student credentials.</p>
+            </div>
+            <div class="it-service-card">
+                <div class="it-service-number">02</div>
+                <h3>Student email</h3>
+                <p>Every student receives a @tiu.uz email address with Microsoft 365 access — including Outlook, Word, Excel, PowerPoint, and OneDrive.</p>
+            </div>
+            <div class="it-service-card">
+                <div class="it-service-number">03</div>
+                <h3>Software licences</h3>
+                <p>Free access to Microsoft Office 365, Adobe Creative Cloud, MATLAB, and other software through your student account.</p>
+            </div>
+            <div class="it-service-card">
+                <div class="it-service-number">04</div>
+                <h3>Computer labs</h3>
+                <p>Open-access labs with desktop computers, high-speed internet, and specialist software for coursework and projects.</p>
+            </div>
+            <div class="it-service-card">
+                <div class="it-service-number">05</div>
+                <h3>IT Help Desk</h3>
+                <p>On-campus support for password resets, connectivity issues, device setup, and software troubleshooting. Walk in or email us.</p>
+            </div>
+            <div class="it-service-card">
+                <div class="it-service-number">06</div>
+                <h3>Cybersecurity</h3>
+                <p>We protect the campus network and your data. Follow our guidelines to stay safe online — and report any suspicious activity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Connect -->
+<section class="it-connect-section">
+    <div class="container">
+        <div class="it-connect-grid">
+            <div class="it-connect-text">
+                <h2>How to connect to campus Wi-Fi</h2>
+                <div class="it-connect-steps">
+                    <div class="it-connect-step">
+                        <span>1</span>
+                        <p>Open Wi-Fi settings and select <strong>TIU-Student</strong></p>
+                    </div>
+                    <div class="it-connect-step">
+                        <span>2</span>
+                        <p>Enter your student ID as username and LMS password</p>
+                    </div>
+                    <div class="it-connect-step">
+                        <span>3</span>
+                        <p>Accept the security certificate when prompted</p>
+                    </div>
+                    <div class="it-connect-step">
+                        <span>4</span>
+                        <p>You're connected — your device will auto-join next time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="it-connect-info">
+                <div class="it-connect-info-box">
+                    <h3><i class="fas fa-exclamation-circle"></i> Having trouble?</h3>
+                    <p>Visit the IT Help Desk in Building A, Room 105, or email <a href="mailto:it@tiu.uz">it@tiu.uz</a>. We're available Monday–Friday, 09:00–18:00.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>IT FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How do I reset my password?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Go to the LMS login page and click "Forgot Password". You'll receive a reset link at your personal email. If that doesn't work, visit the IT Help Desk with your student ID.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I use my own laptop on campus?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Absolutely. Connect to TIU-Student Wi-Fi with your credentials. We recommend keeping your operating system and antivirus software up to date.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How do I install Microsoft Office for free?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Log in to office.com with your @tiu.uz email. From there, you can download and install Office 365 on up to 5 personal devices at no cost.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is printing free for students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Students receive a free printing allowance of 100 pages per semester. Additional pages can be purchased at the IT desk. Colour printing costs extra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+}
+</script>
+{% endblock %}

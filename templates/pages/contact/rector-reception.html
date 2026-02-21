@@ -1,0 +1,224 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Rector's Reception - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/b2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Contact</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Rector's Reception</span>
+        </nav>
+        <div class="page-hero-category">Contact</div>
+        <h1 class="page-hero-title">Rector's Reception</h1>
+        <div class="page-hero-description">
+            <p>A direct line to university leadership. The Rector's Reception is here to listen, guide, and connect you with the right support.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Statement -->
+<section class="statement-section">
+    <div class="container">
+        <div class="statement-icon">
+            <i class="fas fa-door-open"></i>
+        </div>
+        <p class="statement-text">
+            Our door is always open — because every voice <strong>matters.</strong>
+        </p>
+        <p class="statement-attribution">The Rector's Office</p>
+    </div>
+</section>
+
+<!-- Intro (Two Column) -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <h2>Your connection to university leadership</h2>
+                <p>The Rector's Reception serves as the central point of contact between the university community and its leadership. Whether you're a student with a concern, a parent with a question, or a partner seeking collaboration — this is where conversations begin.</p>
+                <p style="margin-top: 1rem;">We believe in transparent, accessible leadership. The Reception team ensures your message reaches the right person, and that you receive a timely, thoughtful response.</p>
+            </div>
+            <div class="intro-image">
+                <img src="{% static 'img/campus/b2.jpg' %}" alt="TIU Administration Building" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Help With - Pillars -->
+<section class="pillars-section" style="background: #f8f8f8;">
+    <div class="container">
+        <div class="pillars-header">
+            <div class="pillars-label">How We Help</div>
+            <h2>What the Rector's Reception handles</h2>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar">
+                <div class="pillar-number">01</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Appeals & Feedback</h3>
+                <p>Submit formal appeals, complaints, or feedback about any aspect of university life. Every submission is reviewed and directed to the appropriate department for resolution.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">02</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3>Official Requests</h3>
+                <p>Request official letters, references, or documents from the university. The Reception coordinates with academic and administrative offices to process your needs.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">03</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Meetings & Appointments</h3>
+                <p>Schedule a meeting with the Rector or senior leadership. We coordinate calendars and ensure your time with university leaders is productive and focused.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works - Steps -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>How to reach the Rector's Office</h2>
+            <p>A simple, transparent process from first contact to resolution</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Submit Your Request</h3>
+                <p>Visit in person, call, email, or use the online form below to share your inquiry</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>We Acknowledge</h3>
+                <p>You'll receive confirmation within 1 business day that your message has been received</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Review & Route</h3>
+                <p>Your inquiry is reviewed and directed to the appropriate office or leadership member</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Response</h3>
+                <p>You receive a formal response or resolution within 5 business days</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Follow-Up</h3>
+                <p>We follow up to ensure your matter has been fully resolved and you are satisfied with the outcome</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Do I need an appointment to visit the Rector's Reception?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>For general inquiries, walk-ins are welcome during office hours. However, if you wish to meet with the Rector or a specific senior leader, we recommend scheduling an appointment in advance by calling or emailing the Reception.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How long does it take to get a response?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>All inquiries are acknowledged within 1 business day. Most requests are fully resolved within 5 business days. Complex matters may take longer, but you will be informed of the timeline and progress.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can parents or guardians contact the Rector's Reception?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Absolutely. Parents and guardians are welcome to reach out with questions about their student's experience, university policies, or any concerns. We value open communication with families and will do our best to assist.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What if my issue is urgent?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>For urgent matters during office hours, please call the Reception directly. Outside office hours, send an email marked "URGENT" in the subject line. Emergency situations should be directed to campus security.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I submit a complaint anonymously?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. While providing your contact details helps us follow up and resolve issues more effectively, anonymous submissions are accepted. All feedback is treated with confidentiality and respect.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can external partners or organizations arrange meetings through the Reception?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. The Rector's Reception coordinates meetings between university leadership and external partners, including businesses, government bodies, and other educational institutions. Please email us with your proposal and we will arrange accordingly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/contact/contact-info/" class="explore-more-link">Contact Info <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact/support/" class="explore-more-link">Support <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact/send/" class="explore-more-link">Send a Message <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

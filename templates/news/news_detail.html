@@ -1,0 +1,85 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{{ article|trans_field:"title" }} - {% trans "TIU News" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="newsdetail-layout">
+            <!-- Left sidebar — sticky -->
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <!-- Article meta -->
+                    <div class="evlist-filter-group">
+                        <div class="newsdetail-meta-block">
+                            <span class="newsdetail-meta-label">{% trans "Published" %}</span>
+                            <span class="newsdetail-meta-value">{{ article.published_date|date:"d M Y" }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Share this article" %}</label>
+                        <div class="newsdetail-share-links">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-fb" aria-label="{% trans "Share on Facebook" %}"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ article.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tw" aria-label="{% trans "Share on X" %}"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ article.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tg" aria-label="{% trans "Share on Telegram" %}"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-li" aria-label="{% trans "Share on LinkedIn" %}"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Related articles -->
+                    {% if related_articles %}
+                    <div class="evlist-filter-group" style="border-bottom: none;">
+                        <label class="evlist-filter-label">{% trans "Latest news" %}</label>
+                        <div class="newsdetail-related-list">
+                            {% for rel in related_articles %}
+                            <a href="{% url 'news:news_detail' rel.slug %}" class="newsdetail-related-item">
+                                <span class="newsdetail-related-date">{{ rel.published_date|date:"d M Y"|upper }}</span>
+                                <span class="newsdetail-related-title">{{ rel|trans_field:"title" }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <a href="{% url 'news:news_list' %}" class="newsdetail-back-link"><i class="fas fa-arrow-left"></i> {% trans "All news" %}</a>
+                </div>
+            </aside>
+
+            <!-- Right side — article content -->
+            <article class="newsdetail-content">
+                {% if article.featured_image %}
+                <div class="newsdetail-hero-img">
+                    <img src="{{ article.featured_image.url }}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                </div>
+                {% endif %}
+
+                <div class="newsdetail-body">
+                    {{ article|trans_field:"body"|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

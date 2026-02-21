@@ -1,0 +1,131 @@
+{% load static i18n compress %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}Tashkent International University - Premier institution of higher education in Uzbekistan offering world-class programs{% endblock %}">
+    <title>{% block title %}Tashkent International University{% endblock %}</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="Tashkent International University">
+    <meta property="og:title" content="{% block og_title %}{{ block.super|default:'Tashkent International University' }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Tashkent International University - Premier institution of higher education in Uzbekistan offering world-class programs{% endblock %}">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/favicon-192.png' %}">
+    <meta property="og:locale" content="{{ LANGUAGE_CODE|default:'en' }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% block twitter_title %}Tashkent International University{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Premier institution of higher education in Uzbekistan offering world-class programs{% endblock %}">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/favicon-192.png' %}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/branding/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/branding/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/branding/favicon-192.png' %}">
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="TIU News" href="{% url 'news:news_feed' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Tashkent International University",
+        "alternateName": "TIU",
+        "url": "{{ request.scheme }}://{{ request.get_host }}",
+        "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/logo.png' %}",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tashkent",
+            "addressCountry": "UZ"
+        },
+        "sameAs": [
+            "{{ site_settings.facebook_url|default:'' }}",
+            "{{ site_settings.instagram_url|default:'' }}",
+            "{{ site_settings.telegram_url|default:'' }}",
+            "{{ site_settings.linkedin_url|default:'' }}",
+            "{{ site_settings.youtube_url|default:'' }}"
+        ]
+    }
+    </script>
+
+    <!-- Analytics -->
+    {% if site_settings.google_analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site_settings.google_analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site_settings.google_analytics_id }}');
+    </script>
+    {% endif %}
+
+    <!-- Main CSS -->
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    {% endcompress %}
+    {% block extra_css %}{% endblock %}
+
+    <!-- Preloader (inline so it renders before external CSS) -->
+    <style>
+        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#003366;display:flex;align-items:center;justify-content:center;z-index:99999}
+        .preloader-logo{width:120px;height:auto}
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <img src="{% static 'img/branding/logo.png' %}" alt="TIU" class="preloader-logo">
+    </div>
+    <script>
+        (function(){
+            var loader=document.getElementById('preloader');
+            window.addEventListener('load',function(){
+                loader.style.transition='opacity .4s ease';
+                loader.style.opacity='0';
+                setTimeout(function(){loader.remove()},400);
+            });
+        })();
+    </script>
+
+    <!-- Skip to content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    {% block utility_bar %}
+    {% include "includes/utility_bar.html" %}
+    {% endblock %}
+
+    {% block header %}
+    {% include "includes/header.html" with header_class=header_class %}
+    {% endblock %}
+
+    <main id="main-content" role="main">
+    {% block content %}{% endblock %}
+    </main>
+
+    {% include "includes/footer.html" %}
+
+    <!-- Main JavaScript -->
+    {% compress js %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endcompress %}
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

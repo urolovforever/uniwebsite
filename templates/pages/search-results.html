@@ -1,0 +1,100 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block title %}{% trans "Search" %}{% if query %}: {{ query }}{% endif %} - TIU{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="section">
+    <div class="container">
+        <!-- Search form -->
+        <form action="{% url 'core:search' %}" method="get" style="max-width:600px;margin:0 auto 2.5rem;display:flex;gap:8px;">
+            <input type="text" name="q" value="{{ query }}" placeholder="{% trans "Search news, events, programs..." %}"
+                   style="flex:1;padding:12px 16px;border:2px solid #ddd;border-radius:8px;font-size:1rem;outline:none;"
+                   onfocus="this.style.borderColor='#003366'" onblur="this.style.borderColor='#ddd'">
+            <button type="submit" style="padding:12px 24px;background:#003366;color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer;">
+                <i class="fas fa-search"></i> {% trans "Search" %}
+            </button>
+        </form>
+
+        {% if query %}
+            {% if total == 0 %}
+            <div style="text-align:center;padding:3rem 1rem;">
+                <i class="fas fa-search" style="font-size:3rem;color:#ccc;margin-bottom:1rem;display:block;"></i>
+                <h2 style="color:#555;margin-bottom:0.5rem;">{% trans "No results found" %}</h2>
+                <p style="color:#777;">{% trans "Try different keywords or check the spelling." %}</p>
+            </div>
+            {% else %}
+
+            <!-- News results -->
+            {% if results.news %}
+            <div style="margin-bottom:2.5rem;">
+                <h2 style="font-size:1.4rem;color:#003366;margin-bottom:1rem;border-bottom:2px solid #003366;padding-bottom:0.5rem;">
+                    <i class="fas fa-newspaper"></i> {% trans "News" %} ({{ results.news|length }})
+                </h2>
+                {% for article in results.news %}
+                <a href="{{ article.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
+                    <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ article|trans_field:"title" }}</h3>
+                    {% if article.excerpt %}<p style="margin:0;color:#666;font-size:0.9rem;">{{ article|trans_field:"excerpt"|truncatewords:25 }}</p>{% endif %}
+                    <span style="font-size:0.8rem;color:#999;">{{ article.published_date|date:"M d, Y" }}</span>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Events results -->
+            {% if results.events %}
+            <div style="margin-bottom:2.5rem;">
+                <h2 style="font-size:1.4rem;color:#003366;margin-bottom:1rem;border-bottom:2px solid #003366;padding-bottom:0.5rem;">
+                    <i class="fas fa-calendar-alt"></i> {% trans "Events" %} ({{ results.events|length }})
+                </h2>
+                {% for event in results.events %}
+                <a href="{{ event.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
+                    <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ event|trans_field:"title" }}</h3>
+                    <span style="font-size:0.85rem;color:#888;"><i class="fas fa-calendar"></i> {{ event.event_date|date:"M d, Y" }}{% if event.location %} &middot; <i class="fas fa-map-marker-alt"></i> {{ event.location }}{% endif %}</span>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Press Releases results -->
+            {% if results.press %}
+            <div style="margin-bottom:2.5rem;">
+                <h2 style="font-size:1.4rem;color:#003366;margin-bottom:1rem;border-bottom:2px solid #003366;padding-bottom:0.5rem;">
+                    <i class="fas fa-bullhorn"></i> {% trans "Press Releases" %} ({{ results.press|length }})
+                </h2>
+                {% for release in results.press %}
+                <a href="{{ release.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
+                    <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ release|trans_field:"title" }}</h3>
+                    {% if release.excerpt %}<p style="margin:0;color:#666;font-size:0.9rem;">{{ release|trans_field:"excerpt"|truncatewords:25 }}</p>{% endif %}
+                    <span style="font-size:0.8rem;color:#999;">{{ release.published_date|date:"M d, Y" }}</span>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Programs results -->
+            {% if results.programs %}
+            <div style="margin-bottom:2.5rem;">
+                <h2 style="font-size:1.4rem;color:#003366;margin-bottom:1rem;border-bottom:2px solid #003366;padding-bottom:0.5rem;">
+                    <i class="fas fa-graduation-cap"></i> {% trans "Programs" %} ({{ results.programs|length }})
+                </h2>
+                {% for program in results.programs %}
+                <a href="{{ program.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
+                    <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ program|trans_field:"title" }}</h3>
+                    <span style="font-size:0.85rem;color:#888;">{{ program.get_level_display }} &middot; {{ program.department|trans_field:"name" }}{% if program.duration %} &middot; {{ program.duration }}{% endif %}</span>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% endif %}
+        {% else %}
+        <div style="text-align:center;padding:3rem 1rem;color:#777;">
+            <p>{% trans "Enter a search term above to find news, events, programs, and more." %}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

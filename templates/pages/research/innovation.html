@@ -1,0 +1,144 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/research.css' %}">
+{% endblock %}
+
+{% block title %}Innovation & Entrepreneurship - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Research</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Innovation</span>
+        </nav>
+        <div class="page-hero-category">Research</div>
+        <h1 class="page-hero-title">Innovation & Entrepreneurship</h1>
+        <div class="page-hero-description">
+            <p>Turning academic research into real-world products, services, and startups through TIU's innovation ecosystem.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>From the lab <em>to the market.</em></h2>
+                <p>TIU is committed to fostering a culture where research doesn't end with a publication — it becomes a product, a company, or a policy change. Our Innovation Hub provides the infrastructure, mentorship, and funding connections that researchers and students need to commercialize their ideas.</p>
+                <p>Whether you have a tech prototype, a social enterprise concept, or a research finding with commercial potential, we can help you take the next step. TIU's innovation programmes are open to students, faculty, and external collaborators.</p>
+                <p>We work closely with government agencies, venture funds, and international accelerators to ensure that promising ideas have a clear path from campus to market.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Explore our research centers</h3>
+                    <p>Learn about the dedicated labs and research groups driving discovery at TIU.</p>
+                    <a href="/research/centers/" class="abroad-sidebar-link">Research Centers <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What we offer -->
+<section class="section--muted">
+    <div class="container">
+        <h2 class="section-heading">What the Innovation Hub offers</h2>
+        <p class="section-subtitle">A complete ecosystem to take your idea from concept to launch.</p>
+        <div class="grid grid--3col mid-container">
+            <div class="accent-card accent-card--cyan">
+                <div class="icon-block"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="card-title">Ideation workshops</h3>
+                <p class="card-text">Regular workshops on design thinking, business model canvas, and lean startup methodology to help you refine your concept.</p>
+            </div>
+            <div class="accent-card accent-card--green">
+                <div class="icon-block"><i class="fas fa-users"></i></div>
+                <h3 class="card-title">Mentorship</h3>
+                <p class="card-text">One-on-one guidance from experienced entrepreneurs, industry experts, and faculty advisors who have launched companies themselves.</p>
+            </div>
+            <div class="accent-card accent-card--orange">
+                <div class="icon-block"><i class="fas fa-building"></i></div>
+                <h3 class="card-title">Co-working space</h3>
+                <p class="card-text">Dedicated desks, meeting rooms, and prototyping equipment available to student and faculty teams working on innovation projects.</p>
+            </div>
+            <div class="accent-card accent-card--pink">
+                <div class="icon-block"><i class="fas fa-trophy"></i></div>
+                <h3 class="card-title">Startup competitions</h3>
+                <p class="card-text">Annual pitch events where the best ideas compete for seed funding, incubator placements, and media exposure.</p>
+            </div>
+            <div class="accent-card accent-card--purple">
+                <div class="icon-block"><i class="fas fa-hand-holding-usd"></i></div>
+                <h3 class="card-title">Funding connections</h3>
+                <p class="card-text">Introductions to venture capital firms, angel investors, grant programmes, and government innovation funds in Uzbekistan and internationally.</p>
+            </div>
+            <div class="accent-card accent-card--navy">
+                <div class="icon-block"><i class="fas fa-file-signature"></i></div>
+                <h3 class="card-title">IP & legal support</h3>
+                <p class="card-text">Guidance on intellectual property protection, patent filing, company registration, and licensing agreements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="section--white">
+    <div class="container">
+        <h2 class="section-heading">From idea to impact</h2>
+        <p class="section-subtitle">Our structured innovation pipeline takes you through four stages.</p>
+        <div class="grid grid--4col wide-container">
+            <div class="step-card step-card--muted">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">1</div>
+                <h3 class="card-title">Discover</h3>
+                <p class="card-text">Identify a problem worth solving. Attend workshops, brainstorm with peers, and validate your idea through user research.</p>
+            </div>
+            <div class="step-card step-card--muted step-card--green">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">2</div>
+                <h3 class="card-title">Develop</h3>
+                <p class="card-text">Build a prototype or minimum viable product. Work with mentors to refine your business model and test assumptions.</p>
+            </div>
+            <div class="step-card step-card--muted step-card--orange">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">3</div>
+                <h3 class="card-title">Pitch</h3>
+                <p class="card-text">Present your idea at TIU's startup competition or external pitch events. Compete for funding and incubation support.</p>
+            </div>
+            <div class="step-card step-card--muted step-card--pink">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">4</div>
+                <h3 class="card-title">Launch</h3>
+                <p class="card-text">Register your company, secure investment, and go to market with ongoing support from TIU's network of partners.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Have an idea?</h2>
+        <p>Visit the Innovation Hub or contact us to discuss how we can help you turn your research into reality.</p>
+        <div class="cta-banner__buttons">
+            <a href="/contact/contact-info/" class="cta-btn cta-btn--primary">Contact Us</a>
+            <a href="/research/centers/" class="cta-btn cta-btn--outline">Research Centers</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/research/centers/" class="explore-more-link">Research Centers <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/publications/" class="explore-more-link">Publications <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/conferences/" class="explore-more-link">Conferences <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static i18n %}
+<div class="utility-bar">
+    <div class="container">
+        <div class="utility-links">
+            <a href="https://student.tiu.uz" target="_blank"><i class="fas fa-user-graduate"></i> {% trans "Student Portal" %}</a>
+            <a href="{% url 'core:static_page' url_path='current-students/library' %}"><i class="fas fa-book"></i> {% trans "E-Library" %}</a>
+            <a href="{% url 'core:static_page' url_path='current-students/academic-calendar' %}"><i class="fas fa-calendar"></i> {% trans "Academic Calendar" %}</a>
+            <a href="#"><i class="fas fa-envelope"></i> {% trans "University Email" %}</a>
+        </div>
+
+        <div class="utility-right">
+            <div class="lang-wrapper">
+                <div class="lang-container">
+                    {% get_current_language as current_lang %}
+                    <div class="lang-item active">
+                        <i class="fas fa-globe"></i>
+                        <span>{{ current_lang|upper }}</span>
+                    </div>
+                    <div class="lang-hidden">
+                        {% get_available_languages as languages %}
+                        {% for lang_code, lang_name in languages %}
+                        {% if lang_code != current_lang %}
+                        <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <input type="hidden" name="language" value="{{ lang_code }}">
+                            <input type="hidden" name="next" value="{{ request.path }}">
+                            <button type="submit" class="lang-item">{{ lang_code|upper }}</button>
+                        </form>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-medias">
+                <span class="divider">|</span>
+                <a href="{{ site_settings.twitter_url|default:'#' }}" class="social-icon x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <span class="divider">|</span>
+                <a href="{{ site_settings.linkedin_url|default:'#' }}" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                <span class="divider">|</span>
+                <a href="{{ site_settings.telegram_url|default:'#' }}" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+                <span class="divider">|</span>
+                <a href="{{ site_settings.facebook_url|default:'#' }}" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                <span class="divider">|</span>
+                <a href="{{ site_settings.instagram_url|default:'#' }}" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <span class="divider">|</span>
+                <a href="{{ site_settings.youtube_url|default:'#' }}" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

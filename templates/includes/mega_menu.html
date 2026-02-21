@@ -1,0 +1,281 @@
+{% load static i18n %}
+<!-- About TIU -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "About" %}</a>
+    <div class="mega-menu">
+        <div class="mega-menu-content">
+            <div class="mega-menu-images">
+                <a href="{% url 'core:static_page' url_path='about/overview' %}" class="mega-menu-img-item large">
+                    <img src="{% static 'img/campus/b1.jpg' %}" alt="Campus Life" loading="lazy">
+                    <div class="img-overlay">
+                        <h4>{% trans "Discover TIU" %}</h4>
+                        <span>{% trans "Explore our campus" %}</span>
+                        <span class="img-cta">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="{% url 'core:static_page' url_path='about/leadership' %}" class="mega-menu-img-item">
+                    <img src="{% static 'img/campus/b2.jpg' %}" alt="Leadership" loading="lazy">
+                    <div class="img-overlay">
+                        <h4>{% trans "Leadership" %}</h4>
+                        <span class="img-cta">{% trans "View" %} <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="mega-menu-img-item">
+                    <img src="{% static 'img/campus/b3.jpg' %}" alt="Campus" loading="lazy">
+                    <div class="img-overlay">
+                        <h4>{% trans "Campus" %}</h4>
+                        <span class="img-cta">{% trans "Explore" %} <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Overview" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='about/overview' %}">{% trans "Overview" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/mission-vision' %}">{% trans "Mission & Vision" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/leadership' %}">{% trans "Leadership" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/why-tiu' %}">{% trans "Why TIU" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "Campus" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='about/sustainability' %}">{% trans "Sustainability" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/campus-map' %}">{% trans "Campus Map" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/accreditation' %}">{% trans "Accreditation" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/history' %}">{% trans "Our History" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Admissions -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "Admissions" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "How to Apply" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:apply_bachelor' %}">{% trans "Bachelor Programs" %}</a></li>
+                        <li><a href="{% url 'core:apply_master' %}">{% trans "Master Programs" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='admissions/apply-international' %}">{% trans "International Applicants" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='admissions/requirements' %}">{% trans "Requirements" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "Financial Info" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:tuition_fees' %}">{% trans "Tuition & Fees" %}</a></li>
+                        <li><a href="{% url 'core:scholarships' %}">{% trans "Scholarships" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='admissions/faqs' %}">{% trans "FAQs" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='admissions/deadlines' %}">{% trans "Deadlines" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Programs -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "Programs" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "By Level" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'programs:bachelor_list' %}">{% trans "Bachelor's Degrees" %}</a></li>
+                        <li><a href="{% url 'programs:master_list' %}">{% trans "Master's Degrees" %}</a></li>
+                        <li><a href="{% url 'programs:phd_list' %}">{% trans "PhD" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "By Faculty" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'people:dept_jurisprudence' %}">{% trans "Faculty of Jurisprudence" %}</a></li>
+                        <li><a href="{% url 'people:dept_business_innovative' %}">{% trans "Faculty of Business and Innovative Education" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "International" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'programs:joint_degrees' %}">{% trans "Joint Degrees" %}</a></li>
+                        <li><a href="{% url 'programs:exchange_programs' %}">{% trans "Exchange Programs" %}</a></li>
+                        <li><a href="{% url 'programs:dual_diploma' %}">{% trans "Dual Diploma" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- International Students -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "International" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Getting Started" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='international/why-study-tiu' %}">{% trans "Why Study at TIU" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='international/admission-process' %}">{% trans "Admission Process" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='international/visa-immigration' %}">{% trans "Visa & Immigration" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='international/accommodation' %}">{% trans "Accommodation" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "Partnerships" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='international/partner-universities' %}">{% trans "Partner Universities" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='international/exchange-opportunities' %}">{% trans "Exchange Opportunities" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='international/study-abroad' %}">{% trans "Study Abroad" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Current Students -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "Students" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Academic" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/academic-calendar' %}">{% trans "Calendar" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/registration' %}">{% trans "Registration" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "Services" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/housing' %}">{% trans "Housing" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/library' %}">{% trans "Library" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/it-services' %}">{% trans "IT Services" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/cafeteria' %}">{% trans "Cafeteria" %}</a></li>
+                    </ul>
+                </div>
+                <div class="mega-menu-column">
+                    <h4>{% trans "Life" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/student-union' %}">{% trans "Student Union" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/clubs' %}">{% trans "Clubs" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='current-students/sports' %}">{% trans "Sports" %}</a></li>
+                        <li><a href="{% url 'news:event_list' %}">{% trans "Events" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Research (hidden for now — may re-enable later)
+<li class="has-mega-menu">
+    <a href="#">{% trans "Research" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Research" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='research/centers' %}">{% trans "Research Centers" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='research/publications' %}">{% trans "Publications" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='research/conferences' %}">{% trans "Conferences" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='research/innovation' %}">{% trans "Innovation" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+-->
+
+<!-- Faculty -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "Faculty" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Faculty" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'people:person_directory' %}">{% trans "Faculty Directory" %}</a></li>
+                        <li><a href="{% url 'people:departments' %}">{% trans "Departments" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='about/leadership' %}">{% trans "Leadership" %}</a></li>
+                        <li><a href="{% url 'core:hiring' %}">{% trans "Open Positions" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Careers & Alumni -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "Careers" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Career Services" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='careers/career-center' %}">{% trans "Career Center" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='careers/internships' %}">{% trans "Internships" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='careers/employer-partnerships' %}">{% trans "Employer Partnerships" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='careers/alumni' %}">{% trans "Alumni" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- News & Media -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "News" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "News & Media" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'news:news_list' %}">{% trans "News" %}</a></li>
+                        <li><a href="{% url 'news:event_list' %}">{% trans "Events" %}</a></li>
+                        <li><a href="{% url 'news:press_releases' %}">{% trans "Press" %}</a></li>
+                        <li><a href="{% url 'news:gallery' %}">{% trans "Gallery" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Contact -->
+<li class="has-mega-menu">
+    <a href="#">{% trans "Contact" %}</a>
+    <div class="mega-menu mega-menu-no-image">
+        <div class="mega-menu-content">
+            <div class="mega-menu-links">
+                <div class="mega-menu-column">
+                    <h4>{% trans "Contact Us" %}</h4>
+                    <ul>
+                        <li><a href="{% url 'core:static_page' url_path='contact/contact-info' %}">{% trans "Information" %}</a></li>
+                        <li><a href="{% url 'core:contact' %}">{% trans "Contact Us" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='contact/rector-reception' %}">{% trans "Reception" %}</a></li>
+                        <li><a href="{% url 'core:static_page' url_path='contact/support' %}">{% trans "Support" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,175 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}Sustainability - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/b3.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Sustainability</span>
+        </nav>
+        <div class="page-hero-category">About TIU</div>
+        <h1 class="page-hero-title">Sustainability</h1>
+        <div class="page-hero-description">
+            <p>Building a greener future through responsible campus practices, sustainable education, and community engagement.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Statement -->
+<section class="statement-section">
+    <div class="container">
+        <div class="statement-icon">
+            <i class="fas fa-leaf"></i>
+        </div>
+        <p class="statement-text">
+            Great universities don't just prepare students for the world — they help <strong>protect it.</strong>
+        </p>
+        <p class="statement-attribution">Our Sustainability Promise</p>
+    </div>
+</section>
+
+<!-- Intro Section (Two Column) -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <h2>A campus that cares for tomorrow</h2>
+                <p>At TIU, sustainability isn't just a buzzword — it's woven into how we operate, teach, and think. From energy-efficient buildings to green spaces across campus, we're committed to minimizing our environmental footprint while maximizing the positive impact of our education.</p>
+                <p style="margin-top: 1rem;">We believe that the next generation of leaders should understand the planet they're inheriting. That's why environmental awareness isn't an add-on at TIU — it's part of every student's journey.</p>
+            </div>
+            <div class="intro-image">
+                <img src="{% static 'img/campus/b3.jpg' %}" alt="TIU Green Campus" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pillars -->
+<section class="pillars-section" style="background: #f8f8f8;">
+    <div class="container">
+        <div class="pillars-header">
+            <div class="pillars-label">Our Focus Areas</div>
+            <h2>Three pillars of sustainability</h2>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar">
+                <div class="pillar-number">01</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h3>Green Campus</h3>
+                <p>Landscaped gardens, tree-lined walkways, and outdoor study areas that improve air quality, reduce urban heat, and create peaceful learning environments.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">02</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Energy Efficiency</h3>
+                <p>Investing in energy-efficient lighting, heating systems, and building designs that reduce consumption without compromising comfort. Lower footprint, better future.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">03</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Sustainable Thinking</h3>
+                <p>Sustainability embedded across our curriculum. Students in every department explore how their field connects to environmental and social responsibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Split Section - Campus Initiatives -->
+<section class="split-section">
+    <div class="split-image" style="background-image: url('{% static 'img/campus/c4.jpg' %}');"></div>
+    <div class="split-content dark">
+        <span class="split-label">Campus Initiatives</span>
+        <h2>Where sustainability meets everyday life</h2>
+        <p>From waste reduction programs and water conservation to digital-first classrooms and eco-friendly procurement, sustainability touches every corner of TIU. Our students don't just learn about sustainability — they live it, every day, on a campus designed with the future in mind.</p>
+        <a href="/about/campus-map/" class="split-link">Explore our campus <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+
+<!-- Feature Block - Curriculum -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <div class="feature-block-label">IN THE CLASSROOM</div>
+            <h2>Sustainability isn't just taught — it's <em>lived</em></h2>
+            <p>Every department at TIU integrates sustainability into its curriculum. Business students study ethical supply chains. IT students explore green computing. Education students learn to teach environmental awareness. And language students engage with global sustainability discourse.</p>
+            <p>We believe that whatever your field, understanding your impact on the planet is essential — not optional.</p>
+            <a href="/programs/bachelor/" class="split-link">Explore Our Programs <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU Classroom" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Feature Block - Community (reversed) -->
+<section class="feature-block">
+    <div class="feature-block-inner reversed">
+        <div class="feature-block-text">
+            <div class="feature-block-label">BEYOND THE CAMPUS</div>
+            <h2>Partnering with communities for a <em>greener</em> Tashkent</h2>
+            <p>TIU's commitment to sustainability extends beyond our campus walls. We partner with local organizations, schools, and community groups on environmental initiatives — from tree-planting drives and clean-up campaigns to sustainability workshops and awareness events.</p>
+            <p>Our students lead many of these projects, gaining hands-on experience while making a real difference in the community.</p>
+            <a href="/current-students/clubs/" class="split-link">Student Initiatives <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c5.jpg' %}" alt="Community Engagement" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Full-bleed Impact -->
+<section class="fullbleed-section" style="background-image: url('{% static 'img/campus/c4.jpg' %}');">
+    <div class="fullbleed-content">
+        <h2>Small steps, <strong>big impact</strong></h2>
+        <p>We're working toward ambitious goals: reducing waste across campus, promoting digital-first practices to cut paper use, and partnering with local organizations on environmental initiatives. Every small action adds up, and every member of our community plays a part.</p>
+        <a href="/contact/support/" class="split-link">Get Involved <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+
+<!-- Highlight Box -->
+<section class="highlight-box">
+    <div class="container">
+        <div class="highlight-inner">
+            <div class="highlight-accent"></div>
+            <div class="highlight-body">
+                <h2>Want to get involved?</h2>
+                <p>Whether you're a student looking to join a green initiative, a staff member with sustainability ideas, or a community partner interested in collaboration — we'd love to hear from you. Together, we can build a more sustainable future for TIU and for Tashkent.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/why-tiu/" class="explore-more-link">Why TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/mission-vision/" class="explore-more-link">Mission & Vision <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/campus-map/" class="explore-more-link">Campus Map <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

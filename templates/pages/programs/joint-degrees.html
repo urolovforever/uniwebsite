@@ -1,0 +1,138 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Joint Degrees - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Programs</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Joint Degrees</span>
+        </nav>
+        <div class="page-hero-category">Programs</div>
+        <h1 class="page-hero-title">Joint Degrees</h1>
+        <div class="page-hero-description">
+            <p>Earn two internationally recognized degrees through our partnership programmes with leading universities worldwide.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Two degrees. <em>One journey.</em></h2>
+                <p>TIU's joint degree programmes allow you to study at two universities and graduate with two fully recognized diplomas. Our partnerships are built on shared academic standards, so credits transfer seamlessly between institutions.</p>
+                <p>Joint degrees are available at both bachelor's and master's level. You'll benefit from the academic strengths of two institutions, experience different cultures and teaching approaches, and build an international professional network — all before you graduate.</p>
+                <p>Each programme is designed so that your studies at both universities complement each other, giving you deeper expertise and broader perspectives in your field.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Not sure which programme?</h3>
+                    <p>Explore our full list of bachelor's and master's programmes to find the right fit for your goals.</p>
+                    <a href="/programs/" class="abroad-sidebar-link">Browse all programmes <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section style="padding: 5rem 0; background: #f8f8f8;">
+    <div class="container">
+        <h2 class="section-heading">How joint degrees work</h2>
+        <p class="section-subtitle" style="color: #003366;">A step-by-step overview of your journey from application to graduation with two degrees.</p>
+        <div class="grid grid--4col wide-container">
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">1</div>
+                <h3 class="card-title">Apply to TIU</h3>
+                <p class="card-text">Submit your application to TIU and indicate your interest in a joint degree programme during the admissions process.</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">2</div>
+                <h3 class="card-title">Study at TIU</h3>
+                <p class="card-text">Complete your first two years at TIU's Tashkent campus, building a strong academic foundation in English.</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">3</div>
+                <h3 class="card-title">Transfer abroad</h3>
+                <p class="card-text">Move to a partner university to complete the remaining two years of your programme in a new country and culture.</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">4</div>
+                <h3 class="card-title">Graduate with two degrees</h3>
+                <p class="card-text">Receive diplomas from both TIU and the partner university — fully recognized in Uzbekistan and internationally.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partner Universities -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div class="container">
+        <h2 class="section-heading--left" style="font-size: 2.5rem; color: #003366;">Our joint degree partners</h2>
+        <p class="section-subtitle--left section-subtitle--mb">We work with carefully selected universities that share our commitment to academic excellence and global outlook.</p>
+        <div class="grid grid--3col">
+            <div class="bordered-card">
+                <div class="card-header-row" style="margin-bottom: 1.25rem;">
+                    <i class="icon-uni fas fa-university"></i>
+                    <div>
+                        <h3 style="font-size: 1.1rem; color: #003366; margin: 0;">South Korean Universities</h3>
+                        <span class="card-sub--sm">South Korea</span>
+                    </div>
+                </div>
+                <p class="card-text card-text--mb">Programmes in Business, IT, and Engineering with leading Korean institutions known for technology and innovation.</p>
+                <a href="/international/partner-universities/" class="text-link--underline" style="font-size: 0.85rem;">View partners <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="bordered-card">
+                <div class="card-header-row" style="margin-bottom: 1.25rem;">
+                    <i class="icon-uni fas fa-university"></i>
+                    <div>
+                        <h3 style="font-size: 1.1rem; color: #003366; margin: 0;">European Universities</h3>
+                        <span class="card-sub--sm">Germany, Netherlands, France</span>
+                    </div>
+                </div>
+                <p class="card-text card-text--mb">Business, Humanities, and Law programmes with established European institutions offering diverse cultural experiences.</p>
+                <a href="/international/partner-universities/" class="text-link--underline" style="font-size: 0.85rem;">View partners <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="bordered-card">
+                <div class="card-header-row" style="margin-bottom: 1.25rem;">
+                    <i class="icon-uni fas fa-university"></i>
+                    <div>
+                        <h3 style="font-size: 1.1rem; color: #003366; margin: 0;">Turkish Universities</h3>
+                        <span class="card-sub--sm">Turkey</span>
+                    </div>
+                </div>
+                <p class="card-text card-text--mb">Programmes in Education and Foreign Languages with Turkish universities offering English-medium instruction and vibrant campus life.</p>
+                <a href="/international/partner-universities/" class="text-link--underline" style="font-size: 0.85rem;">View partners <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/programs/by-level/" class="explore-more-link">By Level <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/by-faculty/" class="explore-more-link">By Faculty <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/international-programs/" class="explore-more-link">International Programs <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/exchange-programs/" class="explore-more-link">Exchange Programs <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/dual-diploma/" class="explore-more-link">Dual Diploma <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% load static i18n i18n_fields %}
+<footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>{% trans "Tashkent International University" %}</h3>
+            <p>{% trans "Leading institution of higher education committed to excellence in teaching, research, and global engagement." %}</p>
+            <div class="social-links">
+                <a href="{{ site_settings.facebook_url|default:'#' }}" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="{{ site_settings.instagram_url|default:'#' }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="{{ site_settings.telegram_url|default:'#' }}" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="{{ site_settings.linkedin_url|default:'#' }}" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="{{ site_settings.youtube_url|default:'#' }}" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>{% trans "Quick Links" %}</h3>
+            <ul>
+                <li><a href="{% url 'core:static_page' url_path='about/overview' %}">{% trans "About TIU" %}</a></li>
+                <li><a href="{% url 'programs:program_list' %}">{% trans "Academic Programs" %}</a></li>
+                <li><a href="{% url 'people:departments' %}">{% trans "Faculty" %}</a></li>
+                <li><a href="{% url 'news:news_list' %}">{% trans "News" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='international/why-study-tiu' %}">{% trans "International" %}</a></li>
+                <li><a href="{% url 'core:hiring' %}">{% trans "Careers" %}</a></li>
+                <li><a href="{% url 'core:contact' %}">{% trans "Contact Us" %}</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>{% trans "Admissions" %}</h3>
+            <ul>
+                <li><a href="{% url 'core:static_page' url_path='admissions/how-to-apply' %}">{% trans "How to Apply" %}</a></li>
+                <li><a href="{% url 'core:tuition_fees' %}">{% trans "Tuition & Fees" %}</a></li>
+                <li><a href="{% url 'core:scholarships' %}">{% trans "Scholarships" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='admissions/requirements' %}">{% trans "Requirements" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='admissions/faqs' %}">{% trans "FAQs" %}</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>{% trans "For Students" %}</h3>
+            <ul>
+                <li><a href="https://student.tiu.uz" target="_blank">{% trans "Student Portal" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='current-students/library' %}">{% trans "E-Library" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='current-students/academic-calendar' %}">{% trans "Academic Calendar" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='current-students/housing' %}">{% trans "Housing" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='current-students/clubs' %}">{% trans "Clubs" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='current-students/it-services' %}">{% trans "IT Services" %}</a></li>
+                <li><a href="{% url 'core:static_page' url_path='careers/career-center' %}">{% trans "Career Services" %}</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>{% trans "Contact Information" %}</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> {{ site_settings|trans_field:"address"|default:"Tashkent, Uzbekistan" }}</li>
+                <li><i class="fas fa-phone"></i> {{ site_settings.phone|default:"+998 71 XXX XX XX" }}</li>
+                <li><i class="fas fa-envelope"></i> {{ site_settings.email|default:"info@tiu.uz" }}</li>
+                <li><i class="fas fa-clock"></i> {% trans "Mon-Fri: 9:00 AM - 6:00 PM" %}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; {% now "Y" %} {% trans "Tashkent International University. All rights reserved." %} | <a href="{% url 'core:static_page' url_path='privacy-policy' %}">{% trans "Privacy Policy" %}</a> | <a href="{% url 'core:static_page' url_path='terms-of-use' %}">{% trans "Terms of Use" %}</a></p>
+    </div>
+</footer>

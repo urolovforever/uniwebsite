@@ -1,0 +1,1515 @@
+/* International Students Section Specific Styles */
+
+.international-hero {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+}
+
+.country-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.country-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+    transform: translateY(-8px);
+}
+
+.country-flag {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.country-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.student-count {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.visa-process {
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.process-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.process-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 2px;
+    height: calc(100% + 40px);
+    background: var(--primary-blue);
+}
+
+.process-step:last-child::before {
+    display: none;
+}
+
+.step-icon {
+    min-width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.accommodation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.accommodation-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.accommodation-image {
+    height: 200px;
+    background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.accommodation-details {
+    padding: 1.5rem;
+}
+
+.accommodation-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.accommodation-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.feature i {
+    color: #10b981;
+}
+
+.price-tag {
+    background: var(--accent-gold);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.partner-universities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.partner-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: scale(1.05);
+}
+
+.partner-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--primary-blue);
+}
+
+.partner-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.partner-location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.exchange-programs {
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.testimonial-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.testimonial-card {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.author-country {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ================================================
+   International Testimonials Section
+   ================================================ */
+.intl-testimonials-section {
+    padding: 5rem 0;
+    background: #f5f5f5;
+}
+
+.intl-testimonials-header {
+    margin-bottom: 3rem;
+}
+
+.intl-testimonials-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.25;
+}
+
+.intl-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.intl-testimonial-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #00bcd4;
+    transition: all 0.3s ease;
+}
+
+.intl-testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.intl-testimonial-quote p {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.intl-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.intl-author-avatar {
+    width: 48px;
+    height: 48px;
+    background: #003366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.intl-author-info {
+    flex: 1;
+}
+
+.intl-author-name {
+    font-weight: 700;
+    color: #003366;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.intl-author-detail {
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+    .intl-testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ================================================
+   Visa & Immigration - Intro Section
+   ================================================ */
+.visa-intro-section {
+    padding: 4rem 0;
+    background: #f0f0f0;
+}
+
+.visa-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.visa-intro-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.visa-intro-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.visa-intro-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 1rem;
+}
+
+.visa-intro-text ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 1rem;
+    line-height: 2;
+    color: #333;
+}
+
+.visa-intro-text ul li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    color: #003366;
+    font-size: 0.5rem;
+    top: 0.45rem;
+}
+
+.visa-intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .visa-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .visa-intro-image { position: static; }
+}
+@media (max-width: 768px) {
+    .visa-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visa-intro-image {
+        order: -1;
+    }
+}
+
+/* ================================================
+   Accommodation - Intro Section
+   ================================================ */
+.accom-intro-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.accom-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.accom-intro-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+
+.accom-intro-text h2 em {
+    font-style: italic;
+}
+
+.accom-intro-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.accom-info-box {
+    display: flex;
+    gap: 1rem;
+    background: #e8f0fe;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.accom-info-box .accom-info-icon {
+    color: #003366;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+.accom-info-box strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0a1628;
+    margin-bottom: 0.5rem;
+}
+
+.accom-info-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.accom-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #003366;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.accom-cta-btn:hover {
+    background: #004080;
+}
+
+.accom-intro-image {
+    position: sticky;
+    top: 120px;
+}
+
+.accom-intro-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .accom-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .accom-intro-image { position: static; }
+}
+@media (max-width: 768px) {
+    .accom-intro-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================================
+   Accommodation - Option Cards
+   ================================================ */
+.accom-cards-section {
+    padding: 2rem 0 5rem;
+    background: #fff;
+}
+
+.accom-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f0f0f0;
+    margin-bottom: 3rem;
+}
+
+.accom-card:last-child {
+    margin-bottom: 0;
+}
+
+.accom-card-text {
+    padding: 3rem;
+}
+
+.accom-card-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.accom-card-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.accom-card-meta span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #0a1628;
+}
+
+.accom-card-meta span i {
+    margin-right: 0.4rem;
+    color: #003366;
+}
+
+.accom-card-text hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 0 0 1.5rem;
+}
+
+.accom-card-text strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0a1628;
+    margin-bottom: 0.75rem;
+}
+
+.accom-card-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.accom-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.accom-card-link:hover {
+    gap: 1rem;
+}
+
+.accom-cards-section > .container {
+    overflow: visible;
+}
+
+.accom-card-image {
+    position: relative;
+    margin: 2rem 0;
+    margin-right: -80px;
+    border-left: 5px solid #00bcd4;
+}
+
+.accom-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.accom-card--reversed .accom-card-image {
+    margin-right: 0;
+    margin-left: -80px;
+    border-left: none;
+    border-right: 5px solid #00bcd4;
+}
+
+@media (max-width: 1024px) {
+    .accom-card { grid-template-columns: 1fr; }
+    .accom-card-image {
+        margin: 0;
+        border-left: none;
+        border-right: none;
+        border-top: 5px solid #00bcd4;
+    }
+    .accom-card--reversed .accom-card-image {
+        order: 2;
+        margin: 0;
+        border-left: none;
+        border-right: none;
+        border-top: 5px solid #00bcd4;
+    }
+    .accom-card--reversed .accom-card-text { order: 1; }
+}
+@media (max-width: 768px) {
+    .accom-card {
+        grid-template-columns: 1fr;
+    }
+
+    .accom-card-image {
+        margin: 0;
+        border-left: none;
+        border-right: none;
+        border-top: 5px solid #00bcd4;
+    }
+
+    .accom-card--reversed .accom-card-image {
+        order: 2;
+        margin: 0;
+        border-left: none;
+        border-right: none;
+        border-top: 5px solid #00bcd4;
+    }
+
+    .accom-card--reversed .accom-card-text {
+        order: 1;
+    }
+
+    .accom-card-image img {
+        height: 300px;
+    }
+}
+
+/* ================================================
+   Accommodation - Guarantee Section
+   ================================================ */
+.accom-guarantee-section {
+    padding: 5rem 0;
+    background: #00bcd4;
+    text-align: center;
+}
+
+.accom-guarantee-icon {
+    font-size: 3rem;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.accom-guarantee-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.accom-guarantee-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #0a1628;
+    max-width: 750px;
+    margin: 0 auto 1rem;
+}
+
+.accom-guarantee-section a {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* ================================================
+   Study Abroad - Intro Section
+   ================================================ */
+.abroad-intro-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.abroad-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.abroad-intro-text {
+    position: sticky;
+    top: 120px;
+}
+
+.abroad-intro-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+
+.abroad-intro-text h2 em {
+    font-style: italic;
+}
+
+.abroad-intro-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+
+.abroad-sidebar-card {
+    background: #f0f0f0;
+    border-left: 5px solid #00bcd4;
+    padding: 2.5rem 2rem;
+}
+
+.abroad-sidebar-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.abroad-sidebar-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.abroad-sidebar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.abroad-sidebar-link:hover {
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .abroad-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .abroad-intro-text { position: static; }
+}
+@media (max-width: 768px) {
+    .abroad-intro-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================================
+   Study Abroad - Benefits Carousel
+   ================================================ */
+.benefits-carousel-section {
+    padding: 5rem 0 3rem;
+    background: #0a1628;
+}
+
+.benefits-carousel-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.benefits-carousel-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2.5rem;
+}
+
+.benefits-carousel-wrapper {
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.benefits-carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.benefits-card {
+    min-width: 280px;
+    width: 280px;
+    background: #e8e8e8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    min-height: 320px;
+}
+
+.benefits-card-icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 2rem;
+}
+
+.benefits-card-icon i {
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+.benefits-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.benefits-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Carousel navigation */
+.benefits-carousel-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.benefits-carousel-counter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.benefits-carousel-arrows {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.benefits-carousel-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.benefits-carousel-arrow:hover {
+    background: #fff;
+    color: #0a1628;
+    border-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .benefits-carousel-inner {
+        padding: 0 2rem;
+    }
+    .benefits-card {
+        min-width: 250px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 640px) {
+    .benefits-carousel-section {
+        padding: 3rem 0 2rem;
+    }
+    .benefits-carousel-inner {
+        padding: 0 1.5rem;
+    }
+    .benefits-carousel-section h2 {
+        font-size: 1.6rem;
+    }
+    .benefits-card {
+        min-width: 230px;
+        width: 230px;
+        min-height: 280px;
+    }
+}
+
+/* ================================================
+   Study Abroad - Duration Section
+   ================================================ */
+.abroad-duration-section {
+    padding: 5rem 0;
+    background: #fff;
+    border-top: 5px solid #003366;
+}
+
+.abroad-duration-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.abroad-duration-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+
+.abroad-duration-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.abroad-duration-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.abroad-duration-content a {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.abroad-duration-content a:hover {
+    color: #004080;
+}
+
+/* ================================================
+   Study Abroad - If not here, then where?
+   ================================================ */
+.abroad-where-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.abroad-where-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.abroad-where-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.abroad-where-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+
+.abroad-where-text h2 em {
+    font-style: italic;
+}
+
+.abroad-where-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #0a1628;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .abroad-where-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .abroad-where-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .abroad-where-image img {
+        height: 350px;
+    }
+}
+
+/* ================================================
+   Study Abroad - How to Apply
+   ================================================ */
+.abroad-apply-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.abroad-apply-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.abroad-apply-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.abroad-apply-caption {
+    font-size: 0.9rem;
+    color: #0a1628;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+.abroad-apply-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+
+.abroad-apply-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+
+.abroad-apply-quote {
+    border-left: 4px solid #00bcd4;
+    padding-left: 1.5rem;
+    margin: 2rem 0 0;
+}
+
+.abroad-apply-quote p {
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+}
+
+.abroad-apply-quote footer {
+    font-size: 0.95rem;
+    color: #0a1628;
+    line-height: 1.5;
+}
+
+.abroad-apply-quote footer strong {
+    display: block;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .abroad-apply-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .abroad-apply-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .abroad-apply-image img {
+        height: 350px;
+    }
+
+    .abroad-apply-quote p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ================================================
+   Exchange - Ways to experience TIU
+   ================================================ */
+.exchange-ways-section {
+    padding: 5rem 0;
+    background: #f0f0f0;
+}
+
+.exchange-ways-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.exchange-ways-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.exchange-ways-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+
+.exchange-ways-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.exchange-ways-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.exchange-ways-info {
+    display: flex;
+    gap: 1rem;
+    background: #d4f0f7;
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.exchange-ways-info-icon {
+    color: #003366;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+.exchange-ways-info strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0a1628;
+    margin-bottom: 0.4rem;
+}
+
+.exchange-ways-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.exchange-ways-info a {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .exchange-ways-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .exchange-ways-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================================
+   Partner Universities - Intro
+   ================================================ */
+.partners-intro-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.partners-intro-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.partners-intro-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.partners-intro-text h2 em {
+    font-style: italic;
+}
+
+.partners-intro-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.partners-intro-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.partners-stat {
+    text-align: center;
+    padding: 2.5rem 2.5rem;
+    background: #f0f0f0;
+    border-left: 4px solid #00bcd4;
+}
+
+.partners-stat-number {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.partners-stat-label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .partners-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .partners-intro-stats { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+@media (max-width: 768px) {
+    .partners-intro-section { padding: 3rem 0; }
+    .partners-intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .partners-intro-text h2 { font-size: 1.5rem; }
+    .partners-intro-stats { grid-template-columns: 1fr; gap: 1rem; }
+    .partners-stat { padding: 1.5rem; display: flex; align-items: center; gap: 1rem; text-align: left; }
+    .partners-stat-number { font-size: 1.8rem; margin-bottom: 0; }
+}
+@media (max-width: 640px) {
+    .partners-stat { flex-direction: column; text-align: center; }
+}
+
+/* ================================================
+   Partner Universities - List by Region
+   ================================================ */
+.partners-list-section {
+    padding: 5rem 0;
+    background: #f0f0f0;
+}
+
+.partners-list-section > .container > h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 3rem;
+}
+
+.partners-region {
+    margin-bottom: 3rem;
+}
+
+.partners-region:last-child {
+    margin-bottom: 0;
+}
+
+.partners-region h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #ddd;
+}
+
+.partners-region h3 i {
+    margin-right: 0.5rem;
+    color: #00bcd4;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+.partner-item {
+    display: flex;
+    gap: 1.25rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 4px solid #00bcd4;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.partner-item-icon {
+    width: 48px;
+    height: 48px;
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.partner-item-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.25rem;
+}
+
+.partner-item-info span {
+    font-size: 0.85rem;
+    color: #666;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.partner-item-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+}
+
+/* ================================================
+   Partner Universities - Become a Partner CTA
+   ================================================ */
+.partners-cta-section {
+    padding: 7rem 0;
+    background: #0a1628;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.partners-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.partners-cta-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.partners-cta-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.partners-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #00bcd4;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.partners-cta-btn:hover {
+    background: #00a5bb;
+}
+
+.partners-cta-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .partners-cta-grid { grid-template-columns: 1fr; gap: 2.5rem; min-height: auto; }
+    .partners-cta-section { min-height: auto; }
+}
+@media (max-width: 768px) {
+    .partners-list-section { padding: 3rem 0; }
+    .partners-list-section > .container > h2 { font-size: 1.5rem; margin-bottom: 2rem; }
+    .partners-region { margin-bottom: 2rem; }
+    .partner-item { padding: 1.25rem; gap: 1rem; }
+    .partner-item-icon { width: 40px; height: 40px; font-size: 0.95rem; }
+
+    .partners-cta-section { padding: 3.5rem 0; min-height: auto; }
+    .partners-cta-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .partners-cta-text h2 { font-size: 1.5rem; }
+    .partners-cta-image img { height: 280px; }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .country-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .accommodation-options {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-universities {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .country-stats {
+        grid-template-columns: 1fr;
+    }
+}
+

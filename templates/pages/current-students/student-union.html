@@ -1,0 +1,205 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+{% endblock %}
+
+{% block title %}Student Union - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Student Union</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">Student Union</h1>
+        <div class="page-hero-description">
+            <p>Your voice on campus — learn about the Student Union and how to get involved.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- What is the Student Union -->
+<section class="su-intro-section">
+    <div class="container">
+        <div class="su-intro-grid">
+            <div class="su-intro-text">
+                <h2>What is the Student Union?</h2>
+                <p>When you join TIU, you automatically become a member of the TIU Student Union (TIUSU).</p>
+                <p>TIUSU is here to ensure you feel part of the student community and help you look forward to a bright future. We do this by representing your academic interests and giving you a voice to speak out about the issues that matter to you most.</p>
+
+                <blockquote class="su-quote">
+                    <p>Getting involved in TIUSU is the best way to make friends, try new things, find your people and become part of something bigger.</p>
+                    <footer>
+                        <strong>Sardor Alimov</strong>
+                        President of Student Union 2025/26
+                    </footer>
+                </blockquote>
+
+                <h3><em>For</em> students, <em>by</em> students</h3>
+                <p>TIUSU is independent from the University. It's led by a team of elected full- and part-time Student Leaders who work to represent students' views and improve university life for all. Students from any year and studying at any level can run for a Student Leader role.</p>
+            </div>
+            <div class="su-intro-image">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="TIU Student Union members" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Slider Section -->
+<section class="su-slider-section">
+    <div class="su-slide-bg active" style="background-image: url('{% static 'img/campus/c3.jpg' %}');"></div>
+    <div class="su-slide-bg" style="background-image: url('{% static 'img/campus/c4.jpg' %}');"></div>
+    <div class="su-slide-bg" style="background-image: url('{% static 'img/campus/c1.jpg' %}');"></div>
+    <div class="su-slide-bg" style="background-image: url('{% static 'img/campus/c5.jpg' %}');"></div>
+
+    <div class="su-slider-inner">
+        <div class="su-slider-card-area">
+            <div class="carousel-wrapper">
+                <div class="carousel-card active">
+                    <div class="carousel-card-icon"><i class="fas fa-users"></i></div>
+                    <div class="carousel-card-body">
+                        <h4>Meet new people, become old friends</h4>
+                        <p>Joining a club, playing sports, or volunteering are the best ways to find your people. Choose from 15+ student clubs, sports teams, and creative societies — or start your own.</p>
+                        <a href="/current-students/clubs/" class="split-link" style="margin-top: 1rem;">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <div class="carousel-card-body">
+                        <h4>Make your voice heard</h4>
+                        <p>TIUSU represents your interests at every level — from course feedback to university policy. Attend Student Council meetings, vote in elections, or run for a leadership position.</p>
+                        <a href="/current-students/student-union/" class="split-link" style="margin-top: 1rem;">Get involved <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-card-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="carousel-card-body">
+                        <h4>Events that bring campus to life</h4>
+                        <p>From welcome week and cultural nights to charity fundraisers and end-of-year celebrations — TIUSU organises events throughout the year that make student life unforgettable.</p>
+                        <a href="/current-students/events/" class="split-link" style="margin-top: 1rem;">View events <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="carousel-card-body">
+                        <h4>Support when you need it</h4>
+                        <p>TIUSU offers independent advice on academic issues, housing concerns, and personal wellbeing. Our student advisors are here to help — confidentially and free of charge.</p>
+                        <a href="/contact/support/" class="split-link" style="margin-top: 1rem;">Get support <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" data-index="0"></span>
+                    <span class="carousel-dot" data-index="1"></span>
+                    <span class="carousel-dot" data-index="2"></span>
+                    <span class="carousel-dot" data-index="3"></span>
+                </div>
+                <div class="carousel-arrows">
+                    <button class="carousel-arrow carousel-prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="carousel-arrow carousel-next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Find TIUSU on Campus -->
+<section class="su-find-section">
+    <div class="container">
+        <div class="su-find-grid">
+            <div class="su-find-text">
+                <h2>Where can I find TIUSU on campus?</h2>
+                <p>You can't miss us. We're based in Building B, ground floor — but we run activities right across campus. You'll find the Student Union office just opposite the main cafeteria and next to the student lounge.</p>
+                <a href="/about/campus-map/" class="split-link">Visit TIU Student Union <i class="fas fa-arrow-right"></i></a>
+                <div class="su-find-social">
+                    <span>FOLLOW TIUSU</span>
+                    <div class="su-find-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="su-find-image">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Student Union building" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Virtual Tour CTA -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">Virtual Tour</div>
+                    <h2>Visit TIU <em>before</em> you get here</h2>
+                    <p>Take a virtual tour of our modern campus, student spaces, and Tashkent itself: a city that combines rich history with a vibrant student scene. There's lots to see and loads to do. So, let's get going...</p>
+                    <a href="/about/campus-map/" class="accommodation-link">Start your virtual tour now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/c7.jpeg' %}" alt="TIU campus life" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var cards = document.querySelectorAll('.su-slider-section .carousel-card');
+    var dots = document.querySelectorAll('.su-slider-section .carousel-dot');
+    var bgs = document.querySelectorAll('.su-slide-bg');
+    var current = 0;
+
+    function showSlide(index) {
+        current = index;
+        cards.forEach(function(c) { c.classList.remove('active'); });
+        dots.forEach(function(d) { d.classList.remove('active'); });
+        bgs.forEach(function(b) { b.classList.remove('active'); });
+        cards[current].classList.add('active');
+        dots[current].classList.add('active');
+        bgs[current].classList.add('active');
+    }
+
+    document.querySelector('.su-slider-section .carousel-prev').addEventListener('click', function() {
+        showSlide(current === 0 ? cards.length - 1 : current - 1);
+    });
+
+    document.querySelector('.su-slider-section .carousel-next').addEventListener('click', function() {
+        showSlide(current === cards.length - 1 ? 0 : current + 1);
+    });
+
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            showSlide(parseInt(this.dataset.index));
+        });
+    });
+})();
+</script>
+{% endblock %}

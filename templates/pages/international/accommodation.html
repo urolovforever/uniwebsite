@@ -1,0 +1,222 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Accommodation - International Students | TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>International</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Accommodation</span>
+        </nav>
+        <div class="page-hero-category">International</div>
+        <h1 class="page-hero-title">Accommodation</h1>
+        <div class="page-hero-description">
+            <p>Find your home in Tashkent — from university housing to private rentals, we'll help you settle in.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Home Sweet Tashkent Intro -->
+<section class="accom-intro-section">
+    <div class="container">
+        <div class="accom-intro-grid">
+            <div class="accom-intro-text">
+                <h2>Home sweet <em>Tashkent</em></h2>
+                <p>This isn't just a place to stay — it's where your university journey begins. The late-night study sessions, the friendships that last a lifetime, the moments that shape who you'll become. Living near campus puts you right at the heart of it all, just minutes from lectures, the library, and student life.</p>
+
+                <div class="accom-info-box">
+                    <div class="accom-info-icon"><i class="fas fa-info-circle"></i></div>
+                    <div>
+                        <strong>Your room: guaranteed</strong>
+                        <p>International students accepted to TIU are guaranteed accommodation support. Apply by <strong>1 August</strong> in your year of entry to secure your place in university-arranged housing.</p>
+                    </div>
+                </div>
+
+                <p>Whether you're looking for a shared student apartment or a private studio, TIU's International Office will help you find the right option. Rent in Tashkent starts from just $200/month — making it one of the most affordable student cities in Asia.</p>
+
+                <a href="/contact/support/" class="split-link">Enquire about housing <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="accom-intro-image">
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="Student accommodation in Tashkent" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accommodation Options -->
+<section class="accom-cards-section">
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="accom-card">
+            <div class="accom-card-text">
+                <h3>University Student Residence</h3>
+                <div class="accom-card-meta">
+                    <span><i class="fas fa-wallet"></i> FROM $200 P/M</span>
+                    <span><i class="fas fa-calendar-alt"></i> 10 OR 12 MONTHS</span>
+                </div>
+                <hr>
+                <strong>Affordable, social, convenient</strong>
+                <p>TIU's partner student residence is the most popular choice for international students. Located just 10 minutes from campus, it offers fully furnished shared rooms, communal kitchens, laundry facilities, and 24/7 security. It's where most friendships start — and where you'll feel at home from day one.</p>
+                <a href="/contact/support/" class="accom-card-link">Find out more about the residence <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="accom-card-image">
+                <img src="{% static 'img/campus/c1.jpg' %}" alt="University Student Residence" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Card 2 (reversed) -->
+        <div class="accom-card accom-card--reversed">
+            <div class="accom-card-image">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="Private Studio Apartment" loading="lazy">
+            </div>
+            <div class="accom-card-text">
+                <h3>Private Studio Apartments</h3>
+                <div class="accom-card-meta">
+                    <span><i class="fas fa-wallet"></i> FROM $350 P/M</span>
+                    <span><i class="fas fa-calendar-alt"></i> 6 OR 12 MONTHS</span>
+                </div>
+                <hr>
+                <strong>Independence and privacy</strong>
+                <p>For students who prefer their own space, TIU's International Office can help you find a private studio apartment near campus. These come fully furnished with a kitchen, bathroom, Wi-Fi, and air conditioning. Ideal for postgraduate students or those who value a quieter environment for focused study.</p>
+                <a href="/contact/support/" class="accom-card-link">Explore private apartments <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="accom-card">
+            <div class="accom-card-text">
+                <h3>Shared Student Flats</h3>
+                <div class="accom-card-meta">
+                    <span><i class="fas fa-wallet"></i> FROM $150 P/M</span>
+                    <span><i class="fas fa-calendar-alt"></i> 10 OR 12 MONTHS</span>
+                </div>
+                <hr>
+                <strong>Budget-friendly, community living</strong>
+                <p>Share a flat with fellow international or local students in the neighbourhoods around campus. Each student gets their own bedroom, with shared living room, kitchen, and bathroom. It's the most affordable option and a great way to experience Tashkent life while building lasting friendships.</p>
+                <a href="/contact/support/" class="accom-card-link">Learn about shared flats <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="accom-card-image">
+                <img src="{% static 'img/campus/c5.jpg' %}" alt="Shared Student Flat" loading="lazy">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Accommodation Guarantee -->
+<section class="accom-guarantee-section">
+    <div class="container">
+        <div class="accom-guarantee-icon"><i class="fas fa-award"></i></div>
+        <h2>Our accommodation guarantee</h2>
+        <p>All new international students accepted to TIU are guaranteed accommodation support through our International Office. Just as long as you apply by <strong>1 August</strong> in your year of entry.</p>
+        <p>Whether you need help finding a student residence, a private apartment, or a shared flat — our team will guide you through every step, from booking to move-in day. Contact the <span>International Office</span> to get started.</p>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Accommodation FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is accommodation guaranteed for international students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. All international students accepted to TIU receive accommodation support from the International Office. Apply by 1 August in your year of entry to secure your preferred housing option.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How much does accommodation cost?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Prices vary depending on the type of housing. Shared student flats start from $150/month, the university student residence from $200/month, and private studio apartments from $350/month. All prices include utilities and basic furnishings.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I choose who I live with?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. If you and another student both request to share, we'll do our best to accommodate that. Otherwise, we'll match you with a compatible roommate based on your preferences (gender, study habits, language).</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What is included in the accommodation?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>All housing options come fully furnished with a bed, desk, wardrobe, and kitchen access. Wi-Fi, water, and electricity are included. Some options also include air conditioning, laundry facilities, and 24/7 security.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I move in before the semester starts?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. International students can typically move in 3–5 days before orientation week begins. The International Office will confirm your exact move-in date once your housing is arranged.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What if I need to change my accommodation?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>If you're unhappy with your housing, contact the International Office. Room changes are possible within the first 2 weeks of the semester, subject to availability. We'll work with you to find a better fit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/international/why-study-tiu/" class="explore-more-link">Why Study at TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/admission-process/" class="explore-more-link">Admission Process <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/visa-immigration/" class="explore-more-link">Visa & Immigration <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/exchange-opportunities/" class="explore-more-link">Exchange Opportunities <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/partner-universities/" class="explore-more-link">Partner Universities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

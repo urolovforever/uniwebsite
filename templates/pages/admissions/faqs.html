@@ -1,0 +1,195 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+{% endblock %}
+
+{% block title %}FAQs - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Admissions</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">FAQs</span>
+        </nav>
+        <div class="page-hero-category">Admissions</div>
+        <h1 class="page-hero-title">Frequently Asked Questions</h1>
+        <div class="page-hero-description">
+            <p>Find answers to the most common questions about admissions, programmes, fees, and student life at TIU.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- FAQ Section with Sticky TOC -->
+<section class="faq-toc-section">
+    <div class="container">
+        <div class="faq-toc-layout">
+
+            <!-- Sticky Table of Contents -->
+            <aside class="faq-toc-sidebar">
+                <h4>Table of contents</h4>
+                <nav class="faq-toc-nav">
+                    <a href="#admissions" class="faq-toc-link active">Admissions</a>
+                    <a href="#programmes" class="faq-toc-link">Programmes & Study</a>
+                    <a href="#tuition" class="faq-toc-link">Tuition & Fees</a>
+                    <a href="#international" class="faq-toc-link">International Students</a>
+                    <a href="#campus" class="faq-toc-link">Campus & Student Life</a>
+                    <a href="#after-graduation" class="faq-toc-link">After Graduation</a>
+                </nav>
+            </aside>
+
+            <!-- FAQ Content -->
+            <div class="faq-toc-content">
+
+                <!-- Admissions -->
+                <div class="faq-toc-group" id="admissions">
+                    <h2>Admissions</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">How do I apply to TIU? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What are the entry requirements? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What documents do I need to submit? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">When is the application deadline? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I apply for more than one programme? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Is there an entrance exam? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How long does it take to receive a decision? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I defer my offer to the next intake? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What happens after I submit my application? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Programmes & Study -->
+                <div class="faq-toc-group" id="programmes">
+                    <h2>Programmes & Study</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">What programmes does TIU offer? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What is the language of instruction? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are there part-time study options? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How long are the degree programmes? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I transfer from another university? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are TIU degrees internationally recognized? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Does TIU offer joint or dual degree programmes? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tuition & Fees -->
+                <div class="faq-toc-group" id="tuition">
+                    <h2>Tuition & Fees</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">How much is tuition at TIU? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are there scholarships available? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I pay tuition in instalments? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What does the tuition fee cover? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Is there financial aid for students in hardship? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are fees different for international students? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- International Students -->
+                <div class="faq-toc-group" id="international">
+                    <h2>International Students</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">Do I need a visa to study at TIU? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Does TIU help with visa applications? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Is there an orientation for international students? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What English language requirements are there? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can international students work while studying? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are there exchange or study abroad opportunities? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Campus & Student Life -->
+                <div class="faq-toc-group" id="campus">
+                    <h2>Campus & Student Life</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">Is there student housing available? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What facilities are on campus? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are there student clubs and organizations? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Does TIU offer mental health support? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How do I access the library and online resources? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Is there IT support for students? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What sports and recreation options are available? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- After Graduation -->
+                <div class="faq-toc-group" id="after-graduation">
+                    <h2>After Graduation</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">Does TIU offer career support? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Are there internship opportunities during my studies? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I pursue a Master's degree at TIU after my Bachelor's? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What is the employment rate for TIU graduates? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Does TIU have an alumni network? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/admissions/how-to-apply/" class="explore-more-link">How to Apply <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/requirements/" class="explore-more-link">Requirements <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/tuition-fees/" class="explore-more-link">Tuition & Fees <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/scholarships/" class="explore-more-link">Scholarships <i class="fas fa-arrow-right"></i></a>
+            <a href="https://urolovforever.github.io/landingpage/" class="explore-more-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var tocLinks = document.querySelectorAll('.faq-toc-link');
+    var groups = document.querySelectorAll('.faq-toc-group');
+
+    function onScroll() {
+        var scrollPos = window.scrollY + 150;
+        var current = '';
+
+        groups.forEach(function(group) {
+            if (group.offsetTop <= scrollPos) {
+                current = group.getAttribute('id');
+            }
+        });
+
+        tocLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    // Smooth scroll on TOC click
+    tocLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+})();
+</script>
+{% endblock %}

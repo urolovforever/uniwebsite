@@ -1,0 +1,115 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{{ job|trans_field:"title" }} - {% trans "TIU Careers" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="newsdetail-layout">
+            <!-- Left sidebar -->
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <!-- Job details -->
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Position details" %}</label>
+
+                        <div class="evdetail-info-list">
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Department" %}</span>
+                                    <span class="evdetail-info-value">{{ job.display_department }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Type" %}</span>
+                                    <span class="evdetail-info-value">{{ job.get_job_type_display }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-user-tie"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Role" %}</span>
+                                    <span class="evdetail-info-value">{{ job.get_role_display }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Deadline" %}</span>
+                                    <span class="evdetail-info-value">{{ job.deadline|date:"d M Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Share this position" %}</label>
+                        <div class="newsdetail-share-links">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-fb" aria-label="{% trans "Share on Facebook" %}"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ job.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tw" aria-label="{% trans "Share on X" %}"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ job.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tg" aria-label="{% trans "Share on Telegram" %}"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-li" aria-label="{% trans "Share on LinkedIn" %}"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Other open positions -->
+                    {% if other_positions %}
+                    <div class="evlist-filter-group" style="border-bottom: none;">
+                        <label class="evlist-filter-label">{% trans "Other open positions" %}</label>
+                        <div class="newsdetail-related-list">
+                            {% for pos in other_positions %}
+                            <a href="{{ pos.get_absolute_url }}" class="newsdetail-related-item">
+                                <span class="newsdetail-related-date">{{ pos.get_job_type_display|upper }} · {{ pos.get_role_display|upper }}</span>
+                                <span class="newsdetail-related-title">{{ pos|trans_field:"title" }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <a href="{% url 'core:hiring' %}" class="newsdetail-back-link"><i class="fas fa-arrow-left"></i> {% trans "All open positions" %}</a>
+                </div>
+            </aside>
+
+            <!-- Right side — job content -->
+            <article class="newsdetail-content">
+                <div class="newsdetail-body">
+                    {{ job|trans_field:"description"|safe }}
+                </div>
+
+                <!-- Apply CTA -->
+                <div class="deadlines-cta-box" style="margin-top: 2.5rem;">
+                    <h2>{% trans "Interested in this position?" %}</h2>
+                    <p>{% trans "Send your CV, cover letter, and relevant documents to our HR department. We review applications on a rolling basis and will contact shortlisted candidates for an interview." %}</p>
+                    <a href="mailto:hr@tiu.uz?subject=Application: {{ job.title|urlencode }}" class="deadlines-cta-link">{% trans "Apply now: hr@tiu.uz" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='careers/career-center' %}" class="explore-more-link">{% trans "Career Center" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='careers/internships' %}" class="explore-more-link">{% trans "Internships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='careers/employer-partnerships' %}" class="explore-more-link">{% trans "Employer Partnerships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='careers/alumni-network' %}" class="explore-more-link">{% trans "Alumni Network" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,328 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}International Applicants - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Admissions</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">International Applicants</span>
+        </nav>
+        <div class="page-hero-category">Admissions</div>
+        <h1 class="page-hero-title">International Applicants</h1>
+        <div class="page-hero-description">
+            <p>Your journey to studying in Uzbekistan starts here. Everything you need to know about applying from abroad.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Centered Statement -->
+<section class="tuition-statement">
+    <div class="container">
+        <h2>TIU welcomes students from<br>all over the world</h2>
+        <p>We're proud to be a truly international university. With students from across Central Asia, the Middle East, South Asia, and beyond — you'll join a diverse, multicultural community from day one. Our dedicated International Office is here to support you every step of the way.</p>
+    </div>
+</section>
+
+<!-- Three Cards — Hull-inspired -->
+<section class="tuition-cards-section">
+    <div class="container">
+        <div class="tuition-cards-grid">
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">Visa Support</span>
+                    <h3>We'll help you with your visa</h3>
+                    <p>Our International Office provides full visa guidance — from invitation letters and document preparation to registration upon arrival in Uzbekistan.</p>
+                    <a href="/contact/support/" class="tuition-card-link">Get visa help <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">English-Taught</span>
+                    <h3>All programmes taught in English</h3>
+                    <p>No need to learn Uzbek before you arrive. All degree programmes at TIU are delivered entirely in English by international faculty.</p>
+                    <a href="/programs/bachelor/" class="tuition-card-link">View programmes <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">Affordable Living</span>
+                    <h3>One of the most affordable cities in Central Asia</h3>
+                    <p>Tashkent offers an exceptional quality of life at a fraction of the cost of most capital cities. From rent to dining out — your money goes further here.</p>
+                    <a href="/current-students/housing/" class="tuition-card-link">Cost of living <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Apply — Steps -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>How to apply as an international student</h2>
+            <p>A step-by-step guide from application to arrival</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Choose</h3>
+                <p>Browse our programmes and select the degree that matches your goals and interests</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Apply</h3>
+                <p>Submit your online application with all required documents before the international deadline</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Receive Offer</h3>
+                <p>Get your admission decision within 2-4 weeks. Accept your offer and pay the deposit to secure your place</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Visa & Travel</h3>
+                <p>Receive your invitation letter, apply for your visa, and prepare for your journey to Tashkent</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Arrive & Enrol</h3>
+                <p>Arrive in Tashkent, complete orientation, and officially enrol to begin your studies at TIU</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Requirements Checklist (dark navy section) -->
+<section class="intl-requirements-section">
+    <div class="container">
+        <div class="intl-requirements-grid">
+            <div class="intl-requirements-text">
+                <span class="intl-requirements-label">What you'll need</span>
+                <h2>Documents & requirements</h2>
+                <p>Make sure you have the following ready before starting your application. All documents should be in English, or accompanied by a certified translation.</p>
+            </div>
+            <div class="intl-requirements-list">
+                <div class="intl-req-item">
+                    <div class="intl-req-num">01</div>
+                    <div>
+                        <strong>Valid passport</strong>
+                        <span>With at least 12 months validity remaining from your intended start date</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">02</div>
+                    <div>
+                        <strong>Academic certificates & transcripts</strong>
+                        <span>Secondary school certificate (Bachelor's) or Bachelor's degree (Master's) with full transcript</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">03</div>
+                    <div>
+                        <strong>English language certificate</strong>
+                        <span>IELTS 5.5+ / TOEFL 65+ for Bachelor's, IELTS 6.0+ / TOEFL 78+ for Master's</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">04</div>
+                    <div>
+                        <strong>Motivation letter</strong>
+                        <span>A personal statement explaining why you want to study at TIU</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">05</div>
+                    <div>
+                        <strong>Passport-size photos</strong>
+                        <span>2 recent photos (3.5 x 4.5 cm) on white background</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">06</div>
+                    <div>
+                        <strong>Medical certificate</strong>
+                        <span>Health clearance certificate (required for visa application)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accommodation-style Box — Arrival Support -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">Arrival & Orientation</div>
+                    <h2>We'll be there when you land</h2>
+                    <p>From airport pickup and housing arrangements to campus orientation and city tours — our International Office makes sure you feel at home from the moment you arrive in Tashkent.</p>
+                    <a href="/international/" class="accommodation-link">International student support <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/c2.jpg' %}" alt="International students at TIU" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pillars Section — Why TIU for International Students -->
+<section class="pillars-section" style="background: #f8f8f8;">
+    <div class="container">
+        <div class="pillars-header">
+            <div class="pillars-label">Why International Students Choose TIU</div>
+            <h2>A university built for the world</h2>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar">
+                <div class="pillar-number">01</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Multicultural Campus</h3>
+                <p>Study alongside students from 15+ countries. Our diverse community ensures a rich cultural exchange both inside and outside the classroom.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">02</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>Internationally Recognized</h3>
+                <p>TIU degrees are recognized worldwide. Our partnerships with international universities mean your qualification opens doors globally.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">03</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Full Support System</h3>
+                <p>Dedicated visa assistance, housing help, academic advising, language support, and a 24/7 student helpline — all for international students.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Dates Box (dark navy CTA) -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>International application deadline: 1 June 2026</h2>
+            <p>Don't leave it too late. International applicants have an earlier deadline to allow time for visa processing, document verification, and travel arrangements. Apply early to secure your place.</p>
+            <a href="/admissions/deadlines/" class="deadlines-cta-link">View all deadlines <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>International Applicant FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Do I need a visa to study in Uzbekistan?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Most international students require a student visa (type "O'T-2") to study in Uzbekistan. Citizens of some CIS countries may be exempt. TIU's International Office will issue an official invitation letter to support your visa application once you've been accepted.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Does TIU provide accommodation for international students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. TIU offers student housing options both on and near campus. International students are given priority for university accommodation. Alternatively, we can help you find private rental options in Tashkent at affordable rates.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What is the cost of living in Tashkent?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Tashkent is one of the most affordable capital cities in the region. On average, students spend approximately $300-500 USD per month on rent, food, transport, and personal expenses — significantly lower than most European or Asian cities.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I work while studying on a student visa?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Part-time work opportunities may be available depending on your visa conditions. TIU also offers on-campus work-study positions and internship placements through our Career Centre. Contact the International Office for the latest regulations.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there an orientation programme for new international students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Absolutely. Every September, we run a dedicated International Orientation Week that includes campus tours, city tours, registration support, SIM card and bank account setup, and social events to help you settle in and make friends before classes begin.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are scholarships available for international students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. TIU offers merit-based scholarships for high-achieving international applicants covering up to 50% of tuition fees. Additional financial aid and fee discounts may be available. Visit our scholarships page for full details and eligibility criteria.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/admissions/how-to-apply/" class="explore-more-link">How to Apply <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/requirements/" class="explore-more-link">Requirements <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/tuition-fees/" class="explore-more-link">Tuition & Fees <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/scholarships/" class="explore-more-link">Scholarships <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/faqs/" class="explore-more-link">FAQs <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

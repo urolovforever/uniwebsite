@@ -1,0 +1,128 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+{% endblock %}
+
+{% block title %}{{ hero_title }} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <a href="{% url 'programs:program_list' %}">{% trans "Programs" %}</a>
+            {% if current_level %}
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{{ hero_title }}</span>
+            {% endif %}
+        </nav>
+        <div class="page-hero-category">{% trans "Academic Programs" %}</div>
+        <h1 class="page-hero-title">{{ hero_title }}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Explore our range of internationally recognized programmes designed to prepare you for a successful career." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Search & Filter Bar -->
+<section class="prog-search-section">
+    <div class="container">
+        <div class="prog-search-bar">
+            <div class="prog-search-input-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="progSearch" placeholder="{% trans "Search programmes by name, school, or keyword..." %}" autocomplete="off">
+            </div>
+        </div>
+        <div class="prog-level-tabs">
+            <a href="{% url 'programs:program_list' %}" class="prog-level-tab{% if not current_level %} active{% endif %}">{% trans "All Programmes" %}</a>
+            <a href="{% url 'programs:bachelor_list' %}" class="prog-level-tab{% if current_level == 'bachelor' %} active{% endif %}">{% trans "Bachelor's" %}</a>
+            <a href="{% url 'programs:master_list' %}" class="prog-level-tab{% if current_level == 'master' %} active{% endif %}">{% trans "Master's" %}</a>
+            <a href="{% url 'programs:phd_list' %}" class="prog-level-tab{% if current_level == 'phd' %} active{% endif %}">{% trans "PhD" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Programme Cards Grid -->
+<section class="prog-grid-section">
+    <div class="container">
+        <div class="prog-results-info">
+            <span id="progCount">{{ programs|length }}</span> {% trans "programme" %}{{ programs|length|pluralize }} {% trans "found" %}
+        </div>
+        <div class="prog-cards-grid" id="progGrid">
+            {% for program in programs %}
+            <a href="{% url 'programs:program_detail' program.slug %}" class="prog-card" data-title="{{ program|trans_field:"title"|lower }}" data-dept="{{ program.department|trans_field:"name"|lower }}">
+                <div class="prog-card-image">
+                    {% if program.image %}
+                    <img src="{{ program.image.url }}" alt="{{ program|trans_field:"title" }}" loading="lazy">
+                    {% else %}
+                    <div class="prog-card-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    {% endif %}
+                    <span class="prog-card-level">{{ program.get_level_display }}</span>
+                </div>
+                <div class="prog-card-body">
+                    <span class="prog-card-school">{{ program.department|trans_field:"name" }}</span>
+                    <h3>{{ program|trans_field:"title" }}</h3>
+                    {% if program.duration %}
+                    <div class="prog-card-meta">
+                        <span><i class="fas fa-clock"></i> {{ program.duration }}</span>
+                        <span><i class="fas fa-language"></i> {% trans "English" %}</span>
+                    </div>
+                    {% endif %}
+                    <span class="prog-card-link">{% trans "Learn more" %} <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            {% empty %}
+            <div class="prog-empty">
+                <i class="fas fa-folder-open"></i>
+                <p>{% trans "No programmes available at this level yet. Please check back soon." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- No search results message -->
+        <div class="prog-no-results" id="progNoResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <p>{% trans "No programmes match your search. Try a different keyword." %}</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var search = document.getElementById('progSearch');
+    var grid = document.getElementById('progGrid');
+    var cards = grid.querySelectorAll('.prog-card');
+    var countEl = document.getElementById('progCount');
+    var noResults = document.getElementById('progNoResults');
+
+    search.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        var visible = 0;
+
+        cards.forEach(function(card) {
+            var title = card.dataset.title || '';
+            var dept = card.dataset.dept || '';
+            var match = !query || title.indexOf(query) !== -1 || dept.indexOf(query) !== -1;
+
+            card.style.display = match ? '' : 'none';
+            if (match) visible++;
+        });
+
+        countEl.textContent = visible;
+        noResults.style.display = visible === 0 ? 'flex' : 'none';
+        grid.style.display = visible === 0 ? 'none' : '';
+    });
+})();
+</script>
+{% endblock %}

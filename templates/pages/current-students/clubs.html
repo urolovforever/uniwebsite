@@ -1,0 +1,222 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+{% endblock %}
+
+{% block title %}Clubs & Societies - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Clubs & Societies</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">Clubs & Societies</h1>
+        <div class="page-hero-description">
+            <p>Join a student club or start your own — connect with like-minded students at TIU.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="clubs-intro-section">
+    <div class="container">
+        <div class="clubs-intro-grid">
+            <div class="clubs-intro-text">
+                <h2>Where unconventional minds <em>connect</em></h2>
+                <p>A student club or society is more than just a group — it's a chance to find your people. Whether you're diving deeper into something you love or throwing yourself into something completely new, there's no easier way to meet like-minded friends and make the most of university life.</p>
+                <p>Our clubs and societies cover everything — from the academic to the creative, debate to drama, football to photography. Whatever you're into, there's a place for you here.</p>
+                <div class="clubs-intro-notice">
+                    <div class="clubs-intro-notice-icon"><i class="fas fa-info-circle"></i></div>
+                    <div>
+                        <strong>Heads up</strong>
+                        <p>You'll need to be an enrolled TIU student to join a club or society</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clubs-intro-image">
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU student clubs" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clubs & Sports Teams Gallery -->
+<section class="campus-section">
+    <div class="container">
+        <div class="campus-grid clubs-gallery-reversed">
+            <div class="campus-content">
+                <h2>Clubs and sports teams</h2>
+                <p>Sport and creativity are a huge part of student life at TIU, and our Student Union is at the heart of it all.</p>
+                <p>With a growing number of student-led clubs, ranging from casual meetups to competitive leagues, it's the perfect way to meet new people, stay active and make unforgettable memories.</p>
+                <p>You'll be supported by the <span>Student Union</span>, dedicated club coordinators, and TIU staff. They will help to grow your clubs and ensure student life continues to go from strength to strength.</p>
+                <a href="/current-students/sports/" class="campus-link">See all sports teams <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="campus-gallery">
+                <div class="campus-main-image" id="clubsMainImage">
+                    <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU Clubs" id="mainClubsImg" loading="lazy">
+                </div>
+                <div class="campus-thumbnails">
+                    <div class="campus-thumb active" onclick="changeClubsImage('{% static 'img/campus/c3.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c3.jpg' %}" alt="Club 1" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c4.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c4.jpg' %}" alt="Club 2" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c5.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c5.jpg' %}" alt="Club 3" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c6.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c6.jpg' %}" alt="Club 4" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c1.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c1.jpg' %}" alt="Club 5" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c2.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="Club 6" loading="lazy">
+                    </div>
+                    <div class="campus-fullscreen-btn" onclick="openClubsFullscreen()">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Start Your Own -->
+<section class="clubs-start-section">
+    <div class="container">
+        <div class="clubs-start-content">
+            <span class="clubs-start-label">CAN'T FIND WHAT YOU'RE LOOKING FOR?</span>
+            <h2>Start your own club or society</h2>
+            <p>Don't see anything that suits you? You can set up your own club or sports team. TIU is full of different, like-minded people, and starting your own society is a great way to build your own tribe. You don't need hundreds of new members (just 3!) and sometimes it's about quality over quantity.</p>
+            <p>So if you know 3 other people who want to start a debate club, a coding society, a book circle, or anything else — you know what to do.</p>
+            <p>And they're easier to find than you think...</p>
+            <a href="/current-students/student-union/" class="clubs-start-link">Find out more <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Student Union Link -->
+<section class="clubs-su-section">
+    <div class="container">
+        <div class="clubs-su-grid">
+            <div class="clubs-su-text">
+                <h2>Student Union</h2>
+                <p>Your Student Union is led by students, for students. When you enrol at TIU, you're automatically a free member of TIUSU — there's no membership fee.</p>
+                <p>We're here to make sure you feel part of a thriving community, supporting you to stand up for what you believe in, speak out on the issues that matter, and gain the skills to shape your future.</p>
+                <p>From societies and sports to social spaces, support, and representation, TIUSU is here to make your university experience unforgettable.</p>
+                <a href="/current-students/student-union/" class="clubs-su-link">Visit TIU Student Union <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="clubs-su-image">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="TIU Student Union" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="clubsLightbox">
+    <button class="lightbox-close" onclick="closeClubsLightbox()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="lightbox-side lightbox-side-left">
+        <img src="" alt="Previous" id="clubsLbPrev">
+    </div>
+    <button class="lightbox-prev" onclick="clubsPrevImage()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="lightbox-main">
+        <img src="" alt="Club" id="clubsLbImg">
+    </div>
+    <button class="lightbox-next" onclick="clubsNextImage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+    <div class="lightbox-side lightbox-side-right">
+        <img src="" alt="Next" id="clubsLbNext">
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+var clubsImages = [
+    '{% static "img/campus/c3.jpg" %}',
+    '{% static "img/campus/c4.jpg" %}',
+    '{% static "img/campus/c5.jpg" %}',
+    '{% static "img/campus/c6.jpg" %}',
+    '{% static "img/campus/c1.jpg" %}',
+    '{% static "img/campus/c2.jpg" %}'
+];
+var clubsLbIndex = 0;
+
+function changeClubsImage(src, thumb) {
+    document.getElementById('mainClubsImg').src = src;
+    var thumbs = thumb.parentElement.querySelectorAll('.campus-thumb');
+    thumbs.forEach(function(t) { t.classList.remove('active'); });
+    thumb.classList.add('active');
+}
+
+function openClubsFullscreen() {
+    var currentSrc = document.getElementById('mainClubsImg').src;
+    clubsLbIndex = 0;
+    for (var i = 0; i < clubsImages.length; i++) {
+        if (currentSrc.indexOf(clubsImages[i].split('/').pop()) !== -1) {
+            clubsLbIndex = i;
+            break;
+        }
+    }
+    updateClubsLightbox();
+    document.getElementById('clubsLightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeClubsLightbox() {
+    document.getElementById('clubsLightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function updateClubsLightbox() {
+    var prev = (clubsLbIndex - 1 + clubsImages.length) % clubsImages.length;
+    var next = (clubsLbIndex + 1) % clubsImages.length;
+    document.getElementById('clubsLbImg').src = clubsImages[clubsLbIndex];
+    document.getElementById('clubsLbPrev').src = clubsImages[prev];
+    document.getElementById('clubsLbNext').src = clubsImages[next];
+}
+
+function clubsPrevImage() {
+    clubsLbIndex = (clubsLbIndex - 1 + clubsImages.length) % clubsImages.length;
+    updateClubsLightbox();
+}
+
+function clubsNextImage() {
+    clubsLbIndex = (clubsLbIndex + 1) % clubsImages.length;
+    updateClubsLightbox();
+}
+
+document.getElementById('clubsLightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeClubsLightbox();
+});
+</script>
+{% endblock %}

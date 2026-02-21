@@ -1,0 +1,89 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+{% endblock %}
+
+{% block title %}Faculty - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Faculty</span>
+        </nav>
+        <div class="page-hero-category">Faculty</div>
+        <h1 class="page-hero-title">Our Faculty</h1>
+        <div class="page-hero-description">
+            <p>Meet the internationally recruited academics and professionals who make TIU's education world-class.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <h2>World-class teaching starts with world-class people</h2>
+                <p>TIU's faculty are recruited internationally and bring diverse academic backgrounds from universities across Europe, Asia, and beyond. Every course is designed to international standards, with regular peer review and external assessment ensuring we consistently deliver excellence.</p>
+                <p style="margin-top: 1rem;">Our academics are not just teachers — they are researchers, industry professionals, and mentors who are passionate about helping students reach their full potential.</p>
+            </div>
+            <div class="intro-image">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Faculty" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Departments -->
+<section style="padding: 5rem 0; background: #f8f8f8;">
+    <div class="container">
+        <h2 class="section-heading" style="text-align: center; margin-bottom: 1rem;">Academic Departments</h2>
+        <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: #003366;">Our two departments cover the full range of programmes offered at TIU.</p>
+        <div class="faculty-depts-grid">
+            <div style="background: #fff; padding: 2.5rem; border-left: 4px solid #00bcd4;">
+                <h3 style="color: #003366; margin-bottom: 1rem;">IT, Business & Engineering</h3>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">Computer Science, Software Engineering, Business Administration, Economics, and Engineering programmes.</p>
+                <a href="/faculty/departments/it-business-engineering/" class="split-link">View department <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div style="background: #fff; padding: 2.5rem; border-left: 4px solid #00bcd4;">
+                <h3 style="color: #003366; margin-bottom: 1rem;">Humanities, Law & Social Sciences</h3>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">International Law, Political Science, Education, Foreign Languages, and Translation Studies programmes.</p>
+                <a href="/faculty/departments/humanities-law-social-sciences/" class="split-link">View department <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Split Section -->
+<section class="split-section">
+    <div class="split-image" style="background-image: url('{% static 'img/campus/c5.jpg' %}');"></div>
+    <div class="split-content dark">
+        <span class="split-label">Join Our Team</span>
+        <h2>Work at TIU</h2>
+        <p>We're always looking for talented academics and professionals to join our growing team. If you're passionate about education and want to make a difference, we'd love to hear from you.</p>
+        <a href="/careers/" class="split-link" style="color: #fff; border-bottom-color: #fff;">View open positions <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/faculty/departments/" class="explore-more-link">Departments <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/" class="explore-more-link">Research <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/" class="explore-more-link">Programs <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/overview/" class="explore-more-link">About TIU <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,377 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Requirements - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Admissions</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Requirements</span>
+        </nav>
+        <div class="page-hero-category">Admissions</div>
+        <h1 class="page-hero-title">Admission Requirements</h1>
+        <div class="page-hero-description">
+            <p>Everything you need to know about what's required to join TIU — from documents and qualifications to language proficiency.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Centered Statement -->
+<section class="tuition-statement">
+    <div class="container">
+        <h2>What you need to get started</h2>
+        <p>Admission to TIU is based on academic merit, personal motivation, and readiness for an international learning environment. Requirements vary by programme level, but we've made the process as clear and straightforward as possible.</p>
+    </div>
+</section>
+
+<!-- Requirements by Level — Tabs -->
+<section class="req-tabs-section">
+    <div class="container">
+        <div class="req-tabs-header">
+            <span class="req-tabs-label">By Programme Level</span>
+            <h2>Entry requirements</h2>
+        </div>
+        <div class="req-tabs-bar">
+            <button class="req-tab active" data-tab="bachelor">Bachelor's</button>
+            <button class="req-tab" data-tab="master">Master's</button>
+            <button class="req-tab" data-tab="phd">PhD</button>
+        </div>
+
+        <!-- Bachelor's Panel -->
+        <div class="req-panel active" id="req-bachelor">
+            <div class="req-panel-grid">
+                <div class="req-panel-main">
+                    <h3>Bachelor's Programme Requirements</h3>
+                    <p>To be considered for admission to a Bachelor's programme at TIU, applicants must meet the following criteria:</p>
+                    <div class="req-checklist">
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Secondary School Certificate</strong>
+                                <span>Completed secondary education (11-year programme or equivalent) with official transcript</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>English Language Proficiency</strong>
+                                <span>IELTS 5.5+ / TOEFL 65+ / CEFR B2, or pass TIU's internal English assessment</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Passport / National ID</strong>
+                                <span>Valid passport for international applicants, or national ID for Uzbek citizens</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Motivation Letter</strong>
+                                <span>A personal statement (300-500 words) explaining your goals and why you chose TIU</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Passport-size Photos</strong>
+                                <span>2 recent passport-size photographs (3.5 x 4.5 cm)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="req-panel-aside">
+                    <div class="req-info-box">
+                        <div class="req-info-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Good to know</h4>
+                        <p>Applicants who don't yet meet the English language requirement may be offered a place on our <strong>Foundation Programme</strong> to prepare for degree-level study.</p>
+                        <a href="/programs/certificate/">Learn about Foundation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Master's Panel -->
+        <div class="req-panel" id="req-master">
+            <div class="req-panel-grid">
+                <div class="req-panel-main">
+                    <h3>Master's Programme Requirements</h3>
+                    <p>Applicants to Master's programmes must hold a relevant undergraduate degree and demonstrate readiness for advanced study:</p>
+                    <div class="req-checklist">
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Bachelor's Degree</strong>
+                                <span>Completed undergraduate degree in a relevant field from an accredited institution</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Official Transcript</strong>
+                                <span>Academic transcript showing all courses and grades from your undergraduate studies</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>English Language Proficiency</strong>
+                                <span>IELTS 6.0+ / TOEFL 78+ / CEFR B2-C1, or TIU internal assessment</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>CV / Resume</strong>
+                                <span>Updated CV highlighting academic and professional experience</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Statement of Purpose</strong>
+                                <span>A detailed statement (500-800 words) outlining research interests and career goals</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Two Recommendation Letters</strong>
+                                <span>From academic or professional referees who can speak to your capabilities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="req-panel-aside">
+                    <div class="req-info-box">
+                        <div class="req-info-icon"><i class="fas fa-briefcase"></i></div>
+                        <h4>Work experience</h4>
+                        <p>For the MBA programme, a minimum of <strong>1 year of professional experience</strong> is preferred. Other Master's programmes welcome fresh graduates.</p>
+                        <a href="/programs/master/">View Master's programmes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PhD Panel -->
+        <div class="req-panel" id="req-phd">
+            <div class="req-panel-grid">
+                <div class="req-panel-main">
+                    <h3>PhD Programme Requirements</h3>
+                    <p>Our doctoral programmes are designed for candidates with strong academic records and a commitment to original research:</p>
+                    <div class="req-checklist">
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Master's Degree</strong>
+                                <span>Completed master's degree in a relevant field from an accredited institution</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Research Proposal</strong>
+                                <span>A 2,000–3,000 word research proposal outlining your intended area of study</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>English Proficiency</strong>
+                                <span>IELTS 6.5+ or TOEFL 90+ (or equivalent)</span>
+                            </div>
+                        </div>
+                        <div class="req-check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Academic References</strong>
+                                <span>Two academic reference letters from university professors or research supervisors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="req-panel-aside">
+                    <div class="req-info-box">
+                        <div class="req-info-icon"><i class="fas fa-flask"></i></div>
+                        <h4>Research-driven admission</h4>
+                        <p>PhD admissions are based on the strength of your <strong>research proposal</strong> and alignment with our faculty's research areas. Contact a potential supervisor before applying.</p>
+                        <a href="/programs/phd/">Browse PhD programmes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Steps Section -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>How to submit your documents</h2>
+            <p>A simple process from gathering documents to securing your place</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Prepare</h3>
+                <p>Gather all required documents based on your programme level. Make sure certificates are translated if not in English or Uzbek.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Apply Online</h3>
+                <p>Submit your application and upload all documents through our online portal. You'll receive a confirmation email immediately.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Assessment</h3>
+                <p>Our admissions team reviews your application. You may be invited for an interview or asked to take the internal English test.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Decision</h3>
+                <p>Receive your admission decision within 2-4 weeks. If accepted, you'll get an official offer letter via email.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Enrolment</h3>
+                <p>Confirm your place by paying the registration fee and completing the enrolment form before the deadline.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accommodation-style CTA -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">Not sure if you qualify?</div>
+                    <h2>Talk to our admissions team</h2>
+                    <p>If you're unsure about whether you meet the requirements, or have questions about specific documents — our team is happy to help. Get in touch and we'll guide you through the process.</p>
+                    <a href="/contact/contact-info/" class="accommodation-link">Contact admissions <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/hero/back1.jpg' %}" alt="TIU admissions office" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Requirements FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Do I need IELTS to apply?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>IELTS is one accepted English proficiency test, but we also accept TOEFL, Cambridge English, and our own internal English assessment. If you don't have a test score, you can take the TIU placement test during the admissions process.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>My documents are not in English. What should I do?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>All documents must be submitted in English, Uzbek, or Russian. If your documents are in another language, please provide officially certified translations. Notarised copies are recommended but not always required — check with the Admissions Office.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I apply before I finish my current studies?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. You can apply with predicted grades or a provisional transcript. If accepted, your offer will be conditional on successfully completing your current programme and meeting the stated requirements.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are there age limits for applying?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>There are no strict age limits. Bachelor's programmes are typically for recent school leavers (17+), but mature students are welcome. Master's and certificate programmes are open to applicants of all ages.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there an entrance exam?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>For most programmes, there is no formal entrance exam. Admission is based on your academic documents, motivation letter, and English proficiency. Some programmes may include an interview or portfolio review as part of the assessment process.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/admissions/how-to-apply/" class="explore-more-link">How to Apply <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/tuition-fees/" class="explore-more-link">Tuition & Fees <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/scholarships/" class="explore-more-link">Scholarships <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/faqs/" class="explore-more-link">FAQs <i class="fas fa-arrow-right"></i></a>
+            <a href="https://urolovforever.github.io/landingpage/" class="explore-more-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Requirements tabs
+(function() {
+    var tabs = document.querySelectorAll('.req-tab');
+    var panels = document.querySelectorAll('.req-panel');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            panels.forEach(function(p) { p.classList.remove('active'); });
+
+            tab.classList.add('active');
+            document.getElementById('req-' + tab.dataset.tab).classList.add('active');
+        });
+    });
+})();
+
+// FAQ toggle
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

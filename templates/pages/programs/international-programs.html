@@ -1,0 +1,159 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}International Programs - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Programs</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">International Programs</span>
+        </nav>
+        <div class="page-hero-category">Programs</div>
+        <h1 class="page-hero-title">International Programs</h1>
+        <div class="page-hero-description">
+            <p>Programmes designed to give you a truly global education — dual diplomas, exchange semesters, and joint degrees with partner universities worldwide.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Study without borders. <em>Graduate for the world.</em></h2>
+                <p>At TIU, international education isn't an add-on — it's at the core of everything we do. All our programmes are taught in English, and many offer built-in pathways to study abroad, earn dual degrees, or complete a semester at a partner university.</p>
+                <p>Our international programmes connect you to a network of universities in South Korea, Turkey, Germany, the Netherlands, and beyond. Whether you choose a full dual diploma, a one-semester exchange, or a joint degree, you'll graduate with the global perspective that employers increasingly demand.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Our partner universities</h3>
+                    <p>See the full list of institutions we work with across Asia, Europe, and beyond.</p>
+                    <a href="/international/partner-universities/" class="abroad-sidebar-link">View Partners <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Three pathways -->
+<section class="section--muted">
+    <div class="container">
+        <h2 class="section-heading">Three international pathways</h2>
+        <p class="section-subtitle">Choose the option that fits your goals, timeline, and budget.</p>
+        <div class="grid grid--3col wide-container">
+
+            <!-- Dual Diploma -->
+            <div class="top-card" style="padding: 2.5rem;">
+                <div class="icon-block icon-block--lg"><i class="fas fa-scroll"></i></div>
+                <h3 style="font-size: 1.25rem; color: #003366; margin-bottom: 0.5rem;">Dual Diploma (2 + 2)</h3>
+                <div style="font-size: 0.8rem; font-weight: 700; color: #00bcd4; margin-bottom: 1rem;">4 YEARS — TWO DEGREES</div>
+                <p class="card-text card-text--mb-lg">Study two years at TIU and two years at a partner university. Graduate with two bachelor's degrees recognized in both countries.</p>
+                <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #00bcd4;"></i>Two internationally recognized diplomas</li>
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #00bcd4;"></i>Full immersion in partner country</li>
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #00bcd4;"></i>Available across all faculties</li>
+                </ul>
+                <a href="/programs/dual-diploma/" class="text-link--underline">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Exchange -->
+            <div class="top-card top-card--green" style="padding: 2.5rem;">
+                <div class="icon-block icon-block--lg"><i class="fas fa-exchange-alt"></i></div>
+                <h3 style="font-size: 1.25rem; color: #003366; margin-bottom: 0.5rem;">Semester Exchange</h3>
+                <div style="font-size: 0.8rem; font-weight: 700; color: #4caf50; margin-bottom: 1rem;">1–2 SEMESTERS ABROAD</div>
+                <p class="card-text card-text--mb-lg">Spend one or two semesters at a partner university while staying enrolled at TIU. Credits transfer directly to your TIU degree.</p>
+                <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #4caf50;"></i>No extra tuition at partner university</li>
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #4caf50;"></i>Full credit transfer</li>
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #4caf50;"></i>International Office support</li>
+                </ul>
+                <a href="/programs/exchange-programs/" class="text-link--underline">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Joint Degree -->
+            <div class="top-card top-card--orange" style="padding: 2.5rem;">
+                <div class="icon-block icon-block--lg"><i class="fas fa-handshake"></i></div>
+                <h3 style="font-size: 1.25rem; color: #003366; margin-bottom: 0.5rem;">Joint Degrees</h3>
+                <div style="font-size: 0.8rem; font-weight: 700; color: #ff9800; margin-bottom: 1rem;">SHARED CURRICULUM — TWO DIPLOMAS</div>
+                <p class="card-text card-text--mb-lg">Study a jointly designed curriculum delivered by TIU and a partner university. Graduate with degrees from both institutions.</p>
+                <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #ff9800;"></i>Integrated curriculum design</li>
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #ff9800;"></i>Deeper academic specialization</li>
+                    <li class="list-check-item"><i class="fas fa-check" style="color: #ff9800;"></i>Strong career advantage</li>
+                </ul>
+                <a href="/programs/joint-degrees/" class="text-link--underline">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Destinations -->
+<section class="section--white">
+    <div class="container">
+        <h2 class="section-heading">Where can you go?</h2>
+        <p class="section-subtitle">TIU partners with universities across multiple countries and regions.</p>
+        <div class="grid grid--4col" style="gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+            <div class="country-card">
+                <div class="country-card__flag">🇰🇷</div>
+                <h3>South Korea</h3>
+                <p>IT, Engineering, Business</p>
+            </div>
+            <div class="country-card">
+                <div class="country-card__flag">🇹🇷</div>
+                <h3>Turkey</h3>
+                <p>Education, Languages, Law</p>
+            </div>
+            <div class="country-card">
+                <div class="country-card__flag">🇩🇪</div>
+                <h3>Germany</h3>
+                <p>Business, Humanities</p>
+            </div>
+            <div class="country-card">
+                <div class="country-card__flag">🇳🇱</div>
+                <h3>Netherlands</h3>
+                <p>Business, Economics</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Go global with TIU</h2>
+        <p>Talk to the International Office to find the programme that fits your ambitions.</p>
+        <div class="cta-banner__buttons">
+            <a href="https://urolovforever.github.io/landingpage/" class="cta-btn cta-btn--primary">Apply Now</a>
+            <a href="/contact/contact-info/" class="cta-btn cta-btn--outline">Contact International Office</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/programs/by-level/" class="explore-more-link">By Level <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/by-faculty/" class="explore-more-link">By Faculty <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/joint-degrees/" class="explore-more-link">Joint Degrees <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/exchange-programs/" class="explore-more-link">Exchange Programs <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/dual-diploma/" class="explore-more-link">Dual Diploma <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

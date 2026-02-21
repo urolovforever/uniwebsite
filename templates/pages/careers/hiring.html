@@ -1,0 +1,396 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Open Positions" %} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Careers" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Open Positions" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Careers" %}</div>
+        <h1 class="page-hero-title">{% trans "Open Positions" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Join a growing international university in the heart of Central Asia. Explore current vacancies and become part of the TIU community." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Centered Statement -->
+<section class="tuition-statement">
+    <div class="container">
+        <h2>{% trans "Achieving your full potential" %}<br>{% trans "is just the" %} <em>{% trans "start" %}</em></h2>
+        <p>{% trans "Our brilliance comes from those who pass through our doors. Theirs comes from learning to see and think differently. Want to work with other unconventionally brilliant minds? Join us, and together we'll help you reach" %} <em>{% trans "higher" %}</em> {% trans "than your potential." %}</p>
+    </div>
+</section>
+
+<!-- Why Work Here — Sticky Image + Scrolling Text -->
+<section class="why-work-section">
+    <div class="container">
+        <div class="why-work-grid">
+            <div class="why-work-text">
+                <h2>{% trans "Why work here?" %} <em>{% trans "Here's" %}</em> {% trans "why..." %}</h2>
+
+                <div class="why-work-block">
+                    <p class="why-work-intro">{% trans "You'll be joining a University with a proudly progressive vision. Since its founding, TIU has been empowering generations of people to think differently and take unconventional approaches to solve the pressing issues of our time." %}</p>
+                </div>
+
+                <div class="why-work-block">
+                    <h3>{% trans "Because we're a research-driven," %} <em>{% trans "Gold" %}</em>{% trans "-standard University" %}</h3>
+                    <p>{% trans "TIU is committed to academic excellence and impactful research. Our faculty contribute to internationally recognised journals, and we continuously invest in research infrastructure, innovation labs, and interdisciplinary collaboration." %}</p>
+                </div>
+
+                <div class="why-work-block">
+                    <h3>{% trans "Because we're a friendly community to discover your" %} <em>{% trans "true" %}</em> {% trans "potential" %}</h3>
+                    <p>{% trans "At TIU, hospitality is more than a word — it's a way of life. We embody the genuine friendliness of Uzbekistan's culture. We want you to have a long-term career with us, so we'll support you every step of the way to help you succeed." %}</p>
+                </div>
+
+                <div class="why-work-block">
+                    <h3>{% trans "Because we're a University of the" %} <em>{% trans "real" %}</em> {% trans "world" %}</h3>
+                    <p>{% trans "As an internationally-minded university, we partner with organisations, businesses, and community groups across Central Asia and beyond. Together, we drive innovation and growth, facilitate research, tackle regional challenges, and promote fairness." %}</p>
+                </div>
+
+                <div class="why-work-block">
+                    <h3>{% trans "Because we invest in" %} <em>{% trans "your" %}</em> {% trans "growth" %}</h3>
+                    <p>{% trans "We offer competitive salaries, professional development opportunities, international conference funding, and a supportive environment where every team member can thrive. Your career growth is our priority." %}</p>
+                </div>
+            </div>
+            <div class="why-work-image">
+                <div class="why-work-gallery">
+                    <div class="why-work-main-image" id="whyWorkMainImage">
+                        <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "Life at TIU" %}" id="whyWorkMainImg" loading="lazy">
+                    </div>
+                    <div class="why-work-thumbnails">
+                        <div class="why-work-thumb active" onclick="changeWhyWorkImage('{% static 'img/hero/back1.jpg' %}', this)">
+                            <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "Campus" %} 1" loading="lazy">
+                        </div>
+                        <div class="why-work-thumb" onclick="changeWhyWorkImage('{% static 'img/hero/back2.jpg' %}', this)">
+                            <img src="{% static 'img/hero/back2.jpg' %}" alt="{% trans "Campus" %} 2" loading="lazy">
+                        </div>
+                        <div class="why-work-thumb" onclick="changeWhyWorkImage('{% static 'img/campus/b1.jpg' %}', this)">
+                            <img src="{% static 'img/campus/b1.jpg' %}" alt="{% trans "Campus" %} 3" loading="lazy">
+                        </div>
+                        <div class="why-work-thumb" onclick="changeWhyWorkImage('{% static 'img/campus/b2.jpg' %}', this)">
+                            <img src="{% static 'img/campus/b2.jpg' %}" alt="{% trans "Campus" %} 4" loading="lazy">
+                        </div>
+                        <div class="why-work-thumb" onclick="changeWhyWorkImage('{% static 'img/campus/b3.jpg' %}', this)">
+                            <img src="{% static 'img/campus/b3.jpg' %}" alt="{% trans "Campus" %} 5" loading="lazy">
+                        </div>
+                        <div class="why-work-thumb" onclick="changeWhyWorkImage('{% static 'img/campus/c2.jpg' %}', this)">
+                            <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Campus" %} 6" loading="lazy">
+                        </div>
+                        <div class="why-work-fullscreen" onclick="openWhyWorkFullscreen()">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Openings -->
+<section class="openings-section">
+    <div class="container">
+        <div class="openings-header">
+            <span class="openings-label">{% trans "Current Vacancies" %}</span>
+            <h2>{% trans "Open positions at TIU" %}</h2>
+        </div>
+        <!-- Filters -->
+        <div class="openings-filters">
+            <div class="openings-filter-group">
+                <label>{% trans "Department" %}</label>
+                <select id="filterDept" onchange="filterOpenings()">
+                    <option value="all">{% trans "All Departments" %}</option>
+                    <option value="it">{% trans "School of IT & Engineering" %}</option>
+                    <option value="business">{% trans "School of Business & Economics" %}</option>
+                    <option value="law">{% trans "School of Law" %}</option>
+                    <option value="humanities">{% trans "School of Humanities & Social Sciences" %}</option>
+                    <option value="foundation">{% trans "Foundation Programme" %}</option>
+                    <option value="admin">{% trans "Administrative" %}</option>
+                </select>
+            </div>
+            <div class="openings-filter-group">
+                <label>{% trans "Type" %}</label>
+                <select id="filterType" onchange="filterOpenings()">
+                    <option value="all">{% trans "All Types" %}</option>
+                    <option value="full-time">{% trans "Full-time" %}</option>
+                    <option value="part-time">{% trans "Part-time" %}</option>
+                </select>
+            </div>
+            <div class="openings-filter-group">
+                <label>{% trans "Role" %}</label>
+                <select id="filterRole" onchange="filterOpenings()">
+                    <option value="all">{% trans "All Roles" %}</option>
+                    <option value="academic">{% trans "Academic" %}</option>
+                    <option value="staff">{% trans "Staff" %}</option>
+                </select>
+            </div>
+            <button class="openings-filter-reset" onclick="resetFilters()"><i class="fas fa-times"></i> {% trans "Reset" %}</button>
+        </div>
+
+        <div class="openings-count" id="openingsCount">{% trans "Showing" %} {{ positions|length }} {% trans "position" %}{{ positions|length|pluralize }}</div>
+
+        <div class="openings-list" id="openingsList">
+            {% for pos in positions %}
+            <a href="{{ pos.get_absolute_url }}" class="opening-item" data-dept="{{ pos.department }}" data-type="{{ pos.job_type }}" data-role="{{ pos.role }}">
+                <div class="opening-info">
+                    <h3>{{ pos|trans_field:"title" }}</h3>
+                    <span class="opening-dept">{{ pos.display_department }}</span>
+                </div>
+                <div class="opening-meta">
+                    <span class="opening-type{% if pos.job_type == 'part-time' %} part-time{% endif %}">{{ pos.get_job_type_display }}</span>
+                    <span class="opening-deadline"><i class="fas fa-clock"></i> {% trans "Deadline:" %} {{ pos.deadline|date:"j F Y" }}</span>
+                </div>
+                <i class="fas fa-arrow-right opening-arrow"></i>
+            </a>
+            {% empty %}
+            <p style="text-align:center;padding:2rem;color:#666;">{% trans "No open positions at the moment. Please check back later." %}</p>
+            {% endfor %}
+        </div>
+
+        <div class="openings-empty" id="openingsEmpty" style="display: none;">
+            <i class="fas fa-search"></i>
+            <p>{% trans "No positions match your filters. Try adjusting your criteria or" %} <button onclick="resetFilters()" class="openings-empty-reset">{% trans "reset all filters" %}</button>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits CTA -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>{% trans "Ready to join TIU?" %}</h2>
+            <p>{% trans "Send your CV, cover letter, and relevant documents to our HR department. We review applications on a rolling basis and will contact shortlisted candidates for an interview." %}</p>
+            <a href="mailto:hr@tiu.uz" class="deadlines-cta-link">{% trans "Apply now: hr@tiu.uz" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>{% trans "Working at TIU — FAQs" %}</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What qualifications do I need to teach at TIU?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Academic positions typically require a Master's degree at minimum, with a PhD preferred for senior roles. Relevant teaching experience, research publications, and English language proficiency are also essential. Specific requirements vary by position." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Do you hire international faculty?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes, TIU actively recruits international faculty members. We provide visa support, relocation assistance, and competitive compensation packages for international hires. Our diverse faculty represents multiple nationalities." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What benefits does TIU offer employees?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Benefits include competitive salary, health insurance, professional development funding, conference travel support, subsidised meals on campus, and access to university facilities including the library, gym, and research labs." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "How long does the hiring process take?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "The typical process takes 3–6 weeks from application deadline to offer. This includes initial screening, a teaching demonstration or interview, and reference checks. We aim to communicate decisions promptly to all applicants." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I apply if there are no current openings in my field?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Absolutely. You can send a speculative application to hr@tiu.uz with your CV and cover letter. We keep promising applications on file and will reach out when a suitable position becomes available." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="why-work-lightbox" id="whyWorkLightbox">
+    <button class="why-work-lb-close" onclick="closeWhyWorkLightbox()">
+        <i class="fas fa-times"></i>
+    </button>
+    <button class="why-work-lb-prev" onclick="whyWorkLbPrev()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="why-work-lb-main">
+        <img src="" alt="{% trans "TIU Campus" %}" id="whyWorkLbImg" loading="lazy">
+    </div>
+    <button class="why-work-lb-next" onclick="whyWorkLbNext()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+    <div class="why-work-lb-counter" id="whyWorkLbCounter"></div>
+</div>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='careers/career-center' %}" class="explore-more-link">{% trans "Career Center" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='careers/internships' %}" class="explore-more-link">{% trans "Internships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='careers/employer-partnerships' %}" class="explore-more-link">{% trans "Employer Partnerships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='careers/alumni-network' %}" class="explore-more-link">{% trans "Alumni Network" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+/* FAQ Toggle */
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+
+/* Why Work Here — Image Carousel */
+var whyWorkAutoInterval;
+var whyWorkImages = [];
+var whyWorkCurrentIdx = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.why-work-thumb img').forEach(function(img) {
+        whyWorkImages.push(img.src);
+    });
+    whyWorkAutoInterval = setInterval(autoRotateWhyWork, 4000);
+
+    /* Lightbox keyboard controls */
+    document.addEventListener('keydown', function(e) {
+        var lb = document.getElementById('whyWorkLightbox');
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeWhyWorkLightbox();
+        if (e.key === 'ArrowRight') whyWorkLbNext();
+        if (e.key === 'ArrowLeft') whyWorkLbPrev();
+    });
+
+    document.getElementById('whyWorkLightbox').addEventListener('click', function(e) {
+        if (e.target === this) closeWhyWorkLightbox();
+    });
+});
+
+function changeWhyWorkImage(src, thumb) {
+    var img = document.getElementById('whyWorkMainImg');
+    img.style.opacity = '0';
+    setTimeout(function() {
+        img.src = src;
+        img.style.opacity = '1';
+    }, 200);
+    document.querySelectorAll('.why-work-thumb').forEach(function(t) {
+        t.classList.remove('active');
+    });
+    thumb.classList.add('active');
+    whyWorkCurrentIdx = whyWorkImages.indexOf(src);
+    resetWhyWorkAuto();
+}
+
+function autoRotateWhyWork() {
+    var thumbs = document.querySelectorAll('.why-work-thumb');
+    if (!thumbs.length) return;
+    var current = document.querySelector('.why-work-thumb.active');
+    var idx = Array.from(thumbs).indexOf(current);
+    var next = (idx + 1) % thumbs.length;
+    thumbs[next].click();
+}
+
+function resetWhyWorkAuto() {
+    clearInterval(whyWorkAutoInterval);
+    whyWorkAutoInterval = setInterval(autoRotateWhyWork, 4000);
+}
+
+/* Lightbox */
+function openWhyWorkFullscreen() {
+    clearInterval(whyWorkAutoInterval);
+    var lb = document.getElementById('whyWorkLightbox');
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    updateWhyWorkLb();
+}
+
+function closeWhyWorkLightbox() {
+    document.getElementById('whyWorkLightbox').classList.remove('active');
+    document.body.style.overflow = '';
+    resetWhyWorkAuto();
+}
+
+function updateWhyWorkLb() {
+    document.getElementById('whyWorkLbImg').src = whyWorkImages[whyWorkCurrentIdx];
+    document.getElementById('whyWorkLbCounter').textContent = (whyWorkCurrentIdx + 1) + ' / ' + whyWorkImages.length;
+}
+
+function whyWorkLbNext() {
+    whyWorkCurrentIdx = (whyWorkCurrentIdx + 1) % whyWorkImages.length;
+    updateWhyWorkLb();
+}
+
+function whyWorkLbPrev() {
+    whyWorkCurrentIdx = (whyWorkCurrentIdx - 1 + whyWorkImages.length) % whyWorkImages.length;
+    updateWhyWorkLb();
+}
+
+/* Open Positions — Filter */
+function filterOpenings() {
+    var dept = document.getElementById('filterDept').value;
+    var type = document.getElementById('filterType').value;
+    var role = document.getElementById('filterRole').value;
+    var items = document.querySelectorAll('.opening-item');
+    var count = 0;
+
+    items.forEach(function(item) {
+        var show = true;
+        if (dept !== 'all' && item.getAttribute('data-dept') !== dept) show = false;
+        if (type !== 'all' && item.getAttribute('data-type') !== type) show = false;
+        if (role !== 'all' && item.getAttribute('data-role') !== role) show = false;
+        item.style.display = show ? '' : 'none';
+        if (show) count++;
+    });
+
+    document.getElementById('openingsCount').textContent = 'Showing ' + count + ' position' + (count !== 1 ? 's' : '');
+    document.getElementById('openingsEmpty').style.display = count === 0 ? 'block' : 'none';
+    document.getElementById('openingsList').style.display = count === 0 ? 'none' : '';
+}
+
+function resetFilters() {
+    document.getElementById('filterDept').value = 'all';
+    document.getElementById('filterType').value = 'all';
+    document.getElementById('filterRole').value = 'all';
+    filterOpenings();
+}
+</script>
+{% endblock %}

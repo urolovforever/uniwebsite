@@ -1,0 +1,232 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+{% load news_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+{% endblock %}
+
+{% block title %}Faculty of Humanities, Law, and Social Sciences - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/c3.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Faculty</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Departments</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Humanities, Law & Social Sciences</span>
+        </nav>
+        <div class="page-hero-category">Faculty</div>
+        <h1 class="page-hero-title">Faculty of Humanities, Law, and Social Sciences</h1>
+        <div class="page-hero-description">
+            <p>Critical thinking. Global perspectives. Real-world impact — preparing students for careers in diplomacy, policy, education, and justice.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Welcome from the Dean -->
+<section class="dean-welcome-section">
+    <div class="container">
+        <div class="dean-welcome-grid">
+            <div class="dean-welcome-text">
+                <h2>Welcome from the Dean</h2>
+                <p>At the Faculty of Humanities, Law, and Social Sciences, we believe that understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</p>
+                <p>Our scholars bring together expertise in international law, political science, linguistics, and social sciences — creating an interdisciplinary environment where students learn to think critically, communicate effectively, and act with purpose.</p>
+                <p>I'm proud of the community we've built — one that values diverse perspectives, rigorous inquiry, and a genuine commitment to making Central Asia and the wider world a better, more just place.</p>
+            </div>
+            <div class="dean-welcome-quote">
+                <div class="dean-quote-marks">&ldquo;</div>
+                <blockquote>Understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</blockquote>
+                <div class="dean-quote-author">
+                    <img src="{% static 'img/campus/c4.jpg' %}" alt="Dean of Faculty" loading="lazy">
+                    <div class="dean-quote-info">
+                        <strong>Dean of Faculty</strong>
+                        <span>Faculty of Humanities, Law & Social Sciences</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Schools and Disciplines -->
+<section class="schools-section">
+    <div class="container">
+        <h2>Schools and disciplines</h2>
+        <p class="schools-desc">Our Schools bring together scholars across law, humanities, and social sciences — fostering critical thinking, cross-cultural understanding, and the pursuit of justice through world-class teaching and research.</p>
+    </div>
+    <div class="schools-carousel-wrap">
+        <div class="schools-carousel" id="schoolsCarousel">
+            <a href="/programs/department/law/" class="school-card">
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="School of Law" loading="lazy">
+                <div class="school-card-overlay">
+                    <p>The <strong>School of Law</strong> offers programmes in international law, public law, and human rights — preparing graduates for careers in legal practice, diplomacy, and policy-making.</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+            <a href="/programs/department/humanities-social-sciences/" class="school-card">
+                <img src="{% static 'img/campus/c4.jpg' %}" alt="School of Humanities & Social Sciences" loading="lazy">
+                <div class="school-card-overlay">
+                    <p>The <strong>School of Humanities & Social Sciences</strong> covers political science, linguistics, psychology, and education — developing thinkers who shape societies.</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+            <a href="/programs/foundation/" class="school-card">
+                <img src="{% static 'img/campus/c7.jpeg' %}" alt="Foundation Programme" loading="lazy">
+                <div class="school-card-overlay">
+                    <p>The <strong>Foundation Programme</strong> provides academic English, study skills, and subject preparation — giving students a strong start before entering degree programmes.</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+            <a href="/programs/department/political-science/" class="school-card">
+                <img src="{% static 'img/campus/c5.jpg' %}" alt="Political Science & International Relations" loading="lazy">
+                <div class="school-card-overlay">
+                    <p><strong>Political Science & International Relations</strong> explores governance, diplomacy, and global affairs — preparing students for careers in policy, international organisations, and public service.</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+            <a href="/programs/department/linguistics/" class="school-card">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="Linguistics & Languages" loading="lazy">
+                <div class="school-card-overlay">
+                    <p>The <strong>Linguistics & Languages</strong> programme develops expertise in applied linguistics, translation studies, and multilingual communication across Central Asia and beyond.</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+            <a href="/programs/department/education/" class="school-card">
+                <img src="{% static 'img/campus/c1.jpg' %}" alt="Education & Pedagogy" loading="lazy">
+                <div class="school-card-overlay">
+                    <p><strong>Education & Pedagogy</strong> trains the next generation of educators with modern teaching methodologies, curriculum design, and educational leadership skills.</p>
+                    <span class="school-card-btn"><i class="fas fa-plus"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="schools-nav">
+            <div class="schools-dots" id="schoolsDots"></div>
+            <div class="schools-arrows">
+                <button class="schools-arrow" onclick="slideSchools(-1)"><i class="fas fa-arrow-left"></i></button>
+                <button class="schools-arrow" onclick="slideSchools(1)"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research -->
+<section class="faculty-research-section">
+    <div class="container">
+        <div class="faculty-research-content">
+            <h2>Research</h2>
+            <p>Research in the Faculty of Humanities, Law, and Social Sciences is shaping policy, advancing justice, and deepening our understanding of societies. We're examining governance systems, human rights frameworks, and the cultural dynamics of Central Asia and beyond.</p>
+            <p>Our scholars are contributing to vital work in constitutional law, migration studies, applied linguistics, and educational reform — producing research that influences governments, international organisations, and communities.</p>
+            <p>Learn more about our research and our interdisciplinary centres and institutes here:</p>
+            <a href="/research/" class="faculty-research-link">Our research <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News & Upcoming Events -->
+<section class="faculty-news-events-section">
+    <div class="container">
+        <div class="faculty-news-events-grid">
+            <!-- Latest News -->
+            <div class="faculty-news-col">
+                <div class="faculty-col-header">
+                    <h2>Latest news</h2>
+                    <a href="/news/" class="faculty-see-all">See all <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="faculty-news-list">
+                    {% latest_news 3 %}
+                </div>
+            </div>
+            <!-- Upcoming Events -->
+            <div class="faculty-events-col">
+                <div class="faculty-col-header">
+                    <h2>Upcoming events</h2>
+                    <a href="/news/" class="faculty-see-all">See all <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="faculty-events-list">
+                    {% upcoming_events 2 %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/faculty/departments/" class="explore-more-link">Departments <i class="fas fa-arrow-right"></i></a>
+            <a href="/faculty/it-business-engineering/" class="explore-more-link">IT, Business & Engineering <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    const carousel = document.getElementById('schoolsCarousel');
+    const dotsWrap = document.getElementById('schoolsDots');
+    if (!carousel || !dotsWrap) return;
+
+    const cards = carousel.querySelectorAll('.school-card');
+    const total = cards.length;
+    let current = 0;
+
+    function getCardWidth() {
+        if (!cards[0]) return 0;
+        const style = getComputedStyle(carousel);
+        const gap = parseFloat(style.gap) || 24;
+        return cards[0].offsetWidth + gap;
+    }
+
+    function getMaxIndex() {
+        return Math.max(0, total - 1);
+    }
+
+    function buildDots() {
+        dotsWrap.innerHTML = '';
+        for (let i = 0; i <= getMaxIndex(); i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (i === current ? ' active' : '');
+            dot.addEventListener('click', function() { goTo(i); });
+            dotsWrap.appendChild(dot);
+        }
+    }
+
+    function update() {
+        const cardW = getCardWidth();
+        carousel.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+        dotsWrap.querySelectorAll('.dot').forEach(function(d, i) {
+            d.className = 'dot' + (i === current ? ' active' : '');
+        });
+    }
+
+    function goTo(idx) {
+        current = Math.max(0, Math.min(idx, getMaxIndex()));
+        update();
+    }
+
+    window.slideSchools = function(dir) {
+        goTo(current + dir);
+    };
+
+    buildDots();
+    update();
+
+    window.addEventListener('resize', function() {
+        if (current > getMaxIndex()) current = getMaxIndex();
+        buildDots();
+        update();
+    });
+})();
+</script>
+{% endblock %}

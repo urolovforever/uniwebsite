@@ -1,0 +1,203 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}Our History - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/b1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Our History</span>
+        </nav>
+        <div class="page-hero-category">About TIU</div>
+        <h1 class="page-hero-title">Our History</h1>
+        <div class="page-hero-description">
+            <p>From a bold idea to a thriving institution — the story of how Tashkent International University came to be.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- History Intro -->
+<section class="history-intro">
+    <div class="container">
+        <h2>We didn't come this far by holding back</h2>
+        <p>Since 2023 we've been passing on our knowledge to generations of learners. People who've left their mark on their fields, their profession and the world. How have we thrived for so long? Because it's in our blood. Yes, we deserve to look back on all we've achieved. But it's always with a view of forging ahead with renewed energy, purpose and determination.</p>
+    </div>
+</section>
+
+<!-- History Feature -->
+<section class="history-feature">
+    <div class="history-feature-inner">
+        <div class="history-feature-text">
+            <h2>It takes one person to change countless lives</h2>
+            <p>Tashkent International University was founded in 2023 — born from a bold vision to bring world-class, English-medium education to Central Asia.</p>
+            <p>From the very beginning, TIU opened its doors with four departments, an international faculty, and a promise: that education here would lead somewhere far beyond the classroom walls.</p>
+            <p>Our mission — connecting students to the world through the 2+2 dual degree pathway — honours the ambition of our founding vision. And we're still driven by an unwavering desire for progress.</p>
+            <a href="/about/overview/" class="history-feature-link">Here's where it all began... <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="history-feature-img">
+            <img src="{% static 'img/campus/b1.jpg' %}" alt="TIU founding moment" loading="lazy">
+            <div class="history-feature-caption">The founding of Tashkent International University in 2023.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Horizontal Timeline Carousel -->
+<section class="htimeline">
+    <div class="htimeline-header">
+        <h2>Where do we start? In the <em>future.</em></h2>
+        <p>From its founding to today's generation of changemakers, TIU has a rich and evolving story. Here are just some of our key milestones — from landmark research breakthroughs and campus expansions to moments of social and cultural impact — that have defined TIU's place in history over the last century.</p>
+    </div>
+    <div class="htimeline-overflow">
+        <div class="htimeline-track" id="htimelineTrack">
+            <div class="htimeline-card">
+                <div class="htimeline-card-img"><img src="{% static 'img/campus/b1.jpg' %}" alt="2023" loading="lazy"></div>
+                <div class="htimeline-bar"></div>
+                <div class="htimeline-card-body">
+                    <div class="htimeline-year">2023</div>
+                    <p>TIU is officially founded in Tashkent. Four departments open simultaneously with 100% English-medium instruction and an international faculty team.</p>
+                </div>
+            </div>
+            <div class="htimeline-card">
+                <div class="htimeline-card-img"><img src="{% static 'img/campus/c2.jpg' %}" alt="2024" loading="lazy"></div>
+                <div class="htimeline-bar"></div>
+                <div class="htimeline-card-body">
+                    <div class="htimeline-year">2024</div>
+                    <p>International partnerships expand across South Korea, Malaysia, Latvia, and beyond. The first exchange students arrive. The 2+2 dual degree pathway becomes reality.</p>
+                    <a href="/international/partner-universities/" class="htimeline-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="htimeline-card">
+                <div class="htimeline-card-img"><img src="{% static 'img/campus/c3.jpg' %}" alt="2025" loading="lazy"></div>
+                <div class="htimeline-bar"></div>
+                <div class="htimeline-card-body">
+                    <div class="htimeline-year">2025</div>
+                    <p>New programs and research initiatives launch. Campus facilities expand with modern labs and collaborative workspaces. TIU's reputation continues to grow.</p>
+                    <a href="/research/" class="htimeline-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="htimeline-card">
+                <div class="htimeline-card-img"><img src="{% static 'img/campus/c5.jpg' %}" alt="2026" loading="lazy"></div>
+                <div class="htimeline-bar"></div>
+                <div class="htimeline-card-body">
+                    <div class="htimeline-year">2026</div>
+                    <p>First cohort of 2+2 students transfer to partner universities abroad. New campus developments and student housing projects begin.</p>
+                    <a href="/programs/joint-degrees/" class="htimeline-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="htimeline-card">
+                <div class="htimeline-card-img"><img src="{% static 'img/hero/back2.jpg' %}" alt="The Future" loading="lazy"></div>
+                <div class="htimeline-bar"></div>
+                <div class="htimeline-card-body">
+                    <div class="htimeline-year">The Future</div>
+                    <p>The best chapters of TIU's story are still being written — and you could be part of them. More programs, deeper research, new partnerships, and a campus that keeps evolving.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="htimeline-nav">
+        <div class="htimeline-dots" id="htimelineDots"></div>
+        <div class="htimeline-arrows">
+            <button class="htimeline-arrow" id="htimelinePrev"><i class="fas fa-arrow-left"></i></button>
+            <button class="htimeline-arrow" id="htimelineNext"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Quote -->
+<section class="history-quote">
+    <div class="history-quote-inner">
+        <h2>An exceptional education for the <em>many</em></h2>
+        <p class="history-quote-subtitle">Our founding charter says our mission is to:</p>
+        <blockquote>
+            <p>"...advance education, scholarship, knowledge and understanding by teaching and research, for the benefit of individuals and society at large."</p>
+        </blockquote>
+        <p>We believe that your background should never limit your future. At TIU, it's <em>what</em> you know — not <em>who</em> you know — that matters. Here, everyone is empowered to succeed in their own way.</p>
+    </div>
+</section>
+
+<!-- Our Work Feature -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <h2>Our work here is <em>never</em> done</h2>
+            <p>Since day one, we've been working hard to make education more accessible, more international, and more impactful. But we're just getting started.</p>
+            <p>We believe in a future where every student in Central Asia has access to world-class education. Where borders don't limit ambition. Where innovation in teaching transforms lives — not just careers.</p>
+            <p>It won't be easy. And there will be new challenges to overcome along the way. But that's never stopped us before. Because we know that every step — and misstep — will take us closer towards the university we want to be.</p>
+            <a href="/research/" class="history-feature-link">Our research <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Students" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/why-tiu/" class="explore-more-link">Why TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/mission-vision/" class="explore-more-link">Mission & Vision <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/campus-map/" class="explore-more-link">Campus Map <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    const track = document.getElementById('htimelineTrack');
+    const dotsContainer = document.getElementById('htimelineDots');
+    const prevBtn = document.getElementById('htimelinePrev');
+    const nextBtn = document.getElementById('htimelineNext');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const cards = track.querySelectorAll('.htimeline-card');
+    const totalCards = cards.length;
+    let current = 0;
+
+    function getCardWidth() {
+        var gap = parseFloat(getComputedStyle(track).gap) || 0;
+        return cards[0].getBoundingClientRect().width + gap;
+    }
+
+    // Build dots
+    for (let i = 0; i < totalCards; i++) {
+        var dot = document.createElement('span');
+        dot.className = 'htimeline-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = function() { goTo(i); };
+        dotsContainer.appendChild(dot);
+    }
+
+    function goTo(index) {
+        var maxScroll = Math.max(0, totalCards - Math.floor(track.parentElement.offsetWidth / getCardWidth()));
+        current = Math.max(0, Math.min(index, maxScroll));
+        track.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
+        updateDots();
+    }
+
+    function updateDots() {
+        dotsContainer.querySelectorAll('.htimeline-dot').forEach(function(d, i) {
+            d.classList.toggle('active', i === current);
+        });
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+})();
+</script>
+{% endblock %}

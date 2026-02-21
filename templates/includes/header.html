@@ -1,0 +1,39 @@
+{% load static i18n %}
+<header class="main-header {{ header_class|default:'transparent' }}" id="mainHeader" role="banner">
+    <div class="nav-container">
+        <div class="logo-section">
+            <a href="{% url 'core:homepage' %}" aria-label="Tashkent International University - Home">
+                <img src="{% static 'img/branding/logo.png' %}" alt="TIU Logo" style="height: 60px; width: auto;">
+            </a>
+        </div>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+            <ul class="nav-menu" role="menubar">
+                {% include "includes/mega_menu.html" %}
+            </ul>
+            <div class="mobile-lang-switcher">
+                {% get_current_language as current_lang %}
+                {% get_available_languages as languages %}
+                {% for lang_code, lang_name in languages %}
+                <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{{ lang_code }}">
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button type="submit" class="mobile-lang-btn{% if lang_code == current_lang %} active{% endif %}">{{ lang_code|upper }}</button>
+                </form>
+                {% endfor %}
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="{% url 'core:search' %}" class="nav-search-btn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>

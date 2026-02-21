@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /ckeditor5/
+
+Sitemap: https://tiu.uz/sitemap.xml

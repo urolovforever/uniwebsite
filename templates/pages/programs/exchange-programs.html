@@ -1,0 +1,154 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Exchange Programs - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Programs</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Exchange Programs</span>
+        </nav>
+        <div class="page-hero-category">Programs</div>
+        <h1 class="page-hero-title">Exchange Programs</h1>
+        <div class="page-hero-description">
+            <p>Spend a semester or year abroad at one of our partner universities — broaden your perspective and enrich your degree.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Experience the world <em>while you study.</em></h2>
+                <p>TIU's exchange programmes give you the opportunity to study at a partner university for one or two semesters while remaining enrolled at TIU. Your credits transfer back to your TIU degree, so you don't lose any time.</p>
+                <p>Exchange students immerse themselves in a different academic culture, improve their language skills, and gain independence — all qualities that employers value highly. Many of our students describe their exchange semester as the highlight of their university experience.</p>
+                <p>Our International Office supports you at every step, from choosing a destination to arranging accommodation and visa documents.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Interested in a full joint degree?</h3>
+                    <p>If you want to graduate with two diplomas rather than doing a semester exchange, explore our joint degree programmes.</p>
+                    <a href="/programs/joint-degrees/" class="abroad-sidebar-link">Joint Degrees <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What you get -->
+<section style="padding: 5rem 0; background: #f8f8f8;">
+    <div class="container">
+        <h2 class="section-heading">What you get</h2>
+        <p class="section-subtitle" style="color: #003366;">An exchange at TIU is more than just studying abroad — it's a complete international experience.</p>
+        <div class="grid grid--3col mid-container">
+            <div class="accent-card">
+                <div class="icon-block"><i class="fas fa-exchange-alt"></i></div>
+                <h3 class="card-title">Credit transfer</h3>
+                <p class="card-text">All credits earned at the partner university transfer directly to your TIU degree. No time lost, no repeated courses.</p>
+            </div>
+            <div class="accent-card">
+                <div class="icon-block"><i class="fas fa-wallet"></i></div>
+                <h3 class="card-title">No extra tuition</h3>
+                <p class="card-text">You continue paying TIU tuition fees during your exchange. Partner university tuition is waived under our agreements.</p>
+            </div>
+            <div class="accent-card">
+                <div class="icon-block"><i class="fas fa-hands-helping"></i></div>
+                <h3 class="card-title">Full support</h3>
+                <p class="card-text">Our International Office helps with visa applications, accommodation, travel logistics, and pre-departure orientation.</p>
+            </div>
+            <div class="accent-card">
+                <div class="icon-block"><i class="fas fa-globe-asia"></i></div>
+                <h3 class="card-title">Cultural immersion</h3>
+                <p class="card-text">Live in a new country, learn about different cultures first-hand, and develop the intercultural skills employers value.</p>
+            </div>
+            <div class="accent-card">
+                <div class="icon-block"><i class="fas fa-user-friends"></i></div>
+                <h3 class="card-title">International network</h3>
+                <p class="card-text">Build friendships and professional connections with students from around the world that last well beyond graduation.</p>
+            </div>
+            <div class="accent-card">
+                <div class="icon-block"><i class="fas fa-briefcase"></i></div>
+                <h3 class="card-title">Career advantage</h3>
+                <p class="card-text">International experience on your CV sets you apart. Exchange alumni consistently report stronger career outcomes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Eligibility -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div class="container">
+        <div class="grid grid--2col-equal wide-container">
+            <div>
+                <h2 class="section-heading--left" style="font-size: 2.25rem; color: #003366;">Who can apply?</h2>
+                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">Exchange programmes are open to all TIU students who meet the following criteria:</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Completed at least one full academic year at TIU</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Minimum GPA of 3.0 (on a 4.0 scale)</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>English language proficiency (IELTS 6.0+ or equivalent)</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>No outstanding disciplinary issues</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Approval from your department head</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-panel" style="background: #f8f8f8;">
+                <h3>Application timeline</h3>
+                <div class="detail-row">
+                    <strong>FALL SEMESTER EXCHANGE</strong>
+                    <p>Apply by 1 March — depart in September</p>
+                </div>
+                <div class="detail-row">
+                    <strong>SPRING SEMESTER EXCHANGE</strong>
+                    <p>Apply by 1 October — depart in February</p>
+                </div>
+                <div class="detail-row">
+                    <strong>FULL YEAR EXCHANGE</strong>
+                    <p>Apply by 1 March — depart in September</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/programs/by-level/" class="explore-more-link">By Level <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/by-faculty/" class="explore-more-link">By Faculty <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/international-programs/" class="explore-more-link">International Programs <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/joint-degrees/" class="explore-more-link">Joint Degrees <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/dual-diploma/" class="explore-more-link">Dual Diploma <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

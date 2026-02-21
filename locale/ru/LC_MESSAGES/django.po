@@ -1,0 +1,2772 @@
+# Russian translations for TIU Website
+# Copyright (C) 2026 Tashkent International University
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TIU Website 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-21 22:00+0500\n"
+"PO-Revision-Date: 2026-02-20 19:43+0500\n"
+"Last-Translator: TIU Web Team\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14) ? 2 : 3);\n"
+
+#: apps/core/views.py:63
+msgid "Your message has been sent. We will get back to you shortly."
+msgstr ""
+
+#: apps/core/views.py:107
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: apps/core/views.py:108 apps/core/views.py:110
+#: templates/news/news_list.html:25 templates/news/press_list.html:25
+#: templates/pages/search-results.html:4 templates/pages/search-results.html:17
+msgid "Search"
+msgstr "Поиск"
+
+#: apps/core/views.py:109
+#, python-format
+msgid "Found %(total)d results for \"%(query)s\""
+msgstr ""
+
+#: apps/core/views.py:109
+msgid "Search across TIU"
+msgstr ""
+
+#: apps/core/views.py:132 apps/core/views.py:135
+#: templates/includes/footer.html:20 templates/includes/mega_menu.html:57
+#: templates/pages/admissions/apply-bachelor.html:19
+#: templates/pages/admissions/apply-bachelor.html:23
+#: templates/pages/admissions/apply-master.html:19
+#: templates/pages/admissions/apply-master.html:23
+#: templates/pages/admissions/scholarships.html:19
+#: templates/pages/admissions/scholarships.html:23
+#: templates/pages/admissions/tuition-fees.html:18
+#: templates/pages/admissions/tuition-fees.html:22
+msgid "Admissions"
+msgstr "Приём"
+
+#: apps/core/views.py:136 templates/includes/mega_menu.html:74
+#: templates/pages/admissions/apply-bachelor.html:246
+#: templates/pages/admissions/apply-master.html:262
+#: templates/pages/admissions/scholarships.html:21
+#: templates/pages/admissions/tuition-fees.html:207
+#: templates/programs/program_detail.html:134
+msgid "Scholarships"
+msgstr "Стипендии"
+
+#: apps/core/views.py:200 apps/core/views.py:203
+#: templates/includes/mega_menu.html:225 templates/pages/careers/hiring.html:20
+#: templates/pages/careers/hiring.html:24
+msgid "Careers"
+msgstr "Карьера"
+
+#: apps/core/views.py:204 templates/includes/mega_menu.html:215
+#: templates/pages/careers/hiring.html:11
+#: templates/pages/careers/hiring.html:22
+#: templates/pages/careers/hiring.html:25
+msgid "Open Positions"
+msgstr "Вакансии"
+
+#: apps/news/views.py:27 apps/news/views.py:30 apps/news/views.py:41
+#: apps/news/views.py:44 apps/news/views.py:70 apps/news/views.py:87
+#: apps/news/views.py:114 apps/news/views.py:130 apps/news/views.py:145
+#: templates/includes/mega_menu.html:245 templates/includes/mega_menu.html:252
+#: templates/news/news_list.html:8 templates/pages/search-results.html:34
+msgid "News"
+msgstr "Новости"
+
+#: apps/news/views.py:28 apps/news/views.py:67 apps/news/views.py:111
+#: apps/news/views.py:142 templates/includes/mega_menu.html:250
+msgid "News & Media"
+msgstr "Новости и СМИ"
+
+#: apps/news/views.py:29
+msgid ""
+"Stay informed with the latest news, announcements, and stories from Tashkent "
+"International University."
+msgstr ""
+
+#: apps/news/views.py:66 apps/news/views.py:71 apps/news/views.py:85
+#: apps/news/views.py:88 templates/includes/mega_menu.html:174
+#: templates/includes/mega_menu.html:253 templates/news/event_detail.html:131
+#: templates/news/event_list.html:8 templates/news/event_list.html:112
+#: templates/news/gallery.html:60 templates/news/news_detail.html:79
+#: templates/news/news_list.html:101 templates/news/press_detail.html:93
+#: templates/news/press_list.html:106 templates/pages/search-results.html:50
+msgid "Events"
+msgstr "Мероприятия"
+
+#: apps/news/views.py:68
+msgid ""
+"Discover upcoming events, workshops, conferences, and activities happening "
+"at TIU."
+msgstr ""
+
+#: apps/news/views.py:110 apps/news/views.py:115 apps/news/views.py:127
+#: templates/news/event_detail.html:132 templates/news/event_list.html:113
+#: templates/news/gallery.html:61 templates/news/news_detail.html:80
+#: templates/news/news_list.html:102 templates/news/press_detail.html:94
+#: templates/news/press_list.html:8 templates/news/press_list.html:107
+#: templates/pages/search-results.html:65
+msgid "Press Releases"
+msgstr ""
+
+#: apps/news/views.py:112
+msgid ""
+"Official statements, announcements, and media resources from Tashkent "
+"International University."
+msgstr ""
+
+#: apps/news/views.py:131 templates/includes/mega_menu.html:254
+msgid "Press"
+msgstr "Пресса"
+
+#: apps/news/views.py:141 apps/news/views.py:146
+#: templates/includes/mega_menu.html:255 templates/news/event_detail.html:133
+#: templates/news/event_list.html:114 templates/news/gallery.html:8
+#: templates/news/gallery.html:62 templates/news/news_detail.html:81
+#: templates/news/news_list.html:103 templates/news/press_detail.html:95
+#: templates/news/press_list.html:108
+msgid "Gallery"
+msgstr "Галерея"
+
+#: apps/news/views.py:143
+msgid ""
+"Browse photos from campus life, events, and academic activities at Tashkent "
+"International University."
+msgstr ""
+
+#: apps/news/views.py:157 apps/news/views.py:182
+msgid "Invalid request."
+msgstr ""
+
+#: apps/news/views.py:161 apps/news/views.py:191
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: apps/news/views.py:169
+msgid "This email is already subscribed."
+msgstr ""
+
+#: apps/news/views.py:173
+msgid "Successfully subscribed to our newsletter!"
+msgstr ""
+
+#: apps/news/views.py:189
+msgid "Please enter your name."
+msgstr ""
+
+#: apps/news/views.py:201
+msgid "You are already registered for this event."
+msgstr ""
+
+#: apps/news/views.py:203
+msgid "Successfully registered for the event!"
+msgstr ""
+
+#: apps/people/views.py:29 templates/includes/mega_menu.html:205
+#: templates/includes/mega_menu.html:210
+#: templates/pages/faculty/business-innovative-education.html:19
+#: templates/pages/faculty/jurisprudence.html:19
+msgid "Faculty"
+msgstr "Факультет"
+
+#: apps/programs/views.py:9
+msgid "All Programs"
+msgstr "Все программы"
+
+#: apps/programs/views.py:13 templates/home/index.html:68
+msgid "PhD Programs"
+msgstr "Программы PhD"
+
+#: apps/programs/views.py:15
+msgid "Master's Programs"
+msgstr "Магистерские программы"
+
+#: apps/programs/views.py:17
+msgid "Bachelor's Programs"
+msgstr "Бакалаврские программы"
+
+#: apps/programs/views.py:26 templates/includes/footer.html:21
+#: templates/programs/program_list.html:24
+msgid "Academic Programs"
+msgstr "Учебные программы"
+
+#: apps/programs/views.py:28 apps/programs/views.py:46
+#: apps/programs/views.py:62 templates/includes/mega_menu.html:86
+#: templates/pages/faculty/directory.html:143
+#: templates/pages/programs/by-faculty.html:17
+#: templates/pages/programs/by-faculty.html:21
+#: templates/pages/programs/by-level.html:17
+#: templates/pages/programs/by-level.html:21
+#: templates/pages/search-results.html:81
+#: templates/programs/department_detail.html:21
+#: templates/programs/program_list.html:18
+msgid "Programs"
+msgstr "Программы"
+
+#: apps/programs/views.py:43 templates/pages/admissions/tuition-fees.html:114
+#: templates/pages/admissions/tuition-fees.html:144
+#: templates/pages/admissions/tuition-fees.html:174
+msgid "Programme"
+msgstr ""
+
+#: apps/programs/views.py:60 templates/home/index.html:94
+#: templates/home/index.html:281 templates/includes/mega_menu.html:213
+#: templates/pages/faculty/business-innovative-education.html:21
+#: templates/pages/faculty/business-innovative-education.html:137
+#: templates/pages/faculty/directory.html:142
+#: templates/pages/faculty/jurisprudence.html:21
+#: templates/pages/faculty/jurisprudence.html:137
+msgid "Departments"
+msgstr "Кафедры"
+
+#: templates/home/index.html:4
+#, fuzzy
+#| msgid "Tashkent International University"
+msgid "Tashkent International University - Excellence in Education"
+msgstr "Ташкентский Международный Университет"
+
+#: templates/home/index.html:21
+msgid "Let's Get"
+msgstr ""
+
+#: templates/home/index.html:21
+msgid "Started"
+msgstr ""
+
+#: templates/home/index.html:28 templates/includes/mega_menu.html:64
+msgid "Bachelor Programs"
+msgstr "Бакалавриат"
+
+#: templates/home/index.html:31
+msgid "BACHELOR'S PROGRAMS"
+msgstr ""
+
+#: templates/home/index.html:33
+msgid "Business & Economics"
+msgstr ""
+
+#: templates/home/index.html:34
+msgid "Information Technology"
+msgstr ""
+
+#: templates/home/index.html:35
+msgid "Education & Pedagogy"
+msgstr ""
+
+#: templates/home/index.html:36
+msgid "Foreign Languages"
+msgstr ""
+
+#: templates/home/index.html:37
+#, python-format
+msgid "100%% English medium instruction"
+msgstr ""
+
+#: templates/home/index.html:40
+msgid "Explore Bachelor's Degrees"
+msgstr ""
+
+#: templates/home/index.html:41 templates/home/index.html:61
+#: templates/home/index.html:81 templates/home/index.html:259
+#: templates/pages/admissions/scholarships.html:183
+#: templates/pages/admissions/tuition-fees.html:209
+#: templates/pages/programs/by-faculty.html:99
+#: templates/pages/programs/by-level.html:134
+msgid "Apply Now"
+msgstr ""
+
+#: templates/home/index.html:48 templates/includes/mega_menu.html:65
+msgid "Master Programs"
+msgstr "Магистратура"
+
+#: templates/home/index.html:51
+msgid "MASTER'S PROGRAMS"
+msgstr ""
+
+#: templates/home/index.html:53
+msgid "Advanced specializations"
+msgstr ""
+
+#: templates/home/index.html:54
+#, fuzzy
+#| msgid "International"
+msgid "International faculty"
+msgstr "Международный"
+
+#: templates/home/index.html:55
+msgid "Research opportunities"
+msgstr ""
+
+#: templates/home/index.html:56
+msgid "Industry connections"
+msgstr ""
+
+#: templates/home/index.html:57
+msgid "Flexible study options"
+msgstr ""
+
+#: templates/home/index.html:60
+msgid "Explore Master's Degrees"
+msgstr ""
+
+#: templates/home/index.html:71
+msgid "PhD PROGRAMMES"
+msgstr ""
+
+#: templates/home/index.html:73
+msgid "3-4 years full-time research"
+msgstr ""
+
+#: templates/home/index.html:74
+msgid "Expert faculty supervision"
+msgstr ""
+
+#: templates/home/index.html:75
+msgid "International conference funding"
+msgstr ""
+
+#: templates/home/index.html:76
+msgid "Publication opportunities"
+msgstr ""
+
+#: templates/home/index.html:77
+msgid "Teaching experience"
+msgstr ""
+
+#: templates/home/index.html:80
+msgid "Explore PhD Programmes"
+msgstr ""
+
+#: templates/home/index.html:98 templates/home/index.html:270
+msgid "Dual Degree Program"
+msgstr ""
+
+#: templates/home/index.html:102 templates/includes/mega_menu.html:136
+msgid "Partner Universities"
+msgstr "Университеты-партнёры"
+
+#: templates/home/index.html:106
+msgid "English Medium"
+msgstr ""
+
+#: templates/home/index.html:115 templates/news/news_detail.html:41
+msgid "Latest news"
+msgstr ""
+
+#: templates/home/index.html:116 templates/home/index.html:324
+#: templates/pages/faculty/business-innovative-education.html:113
+#: templates/pages/faculty/business-innovative-education.html:122
+#: templates/pages/faculty/jurisprudence.html:113
+#: templates/pages/faculty/jurisprudence.html:122
+msgid "See all"
+msgstr ""
+
+#: templates/home/index.html:124 templates/home/index.html:171
+msgid "TOP STORY"
+msgstr ""
+
+#: templates/home/index.html:129 templates/home/index.html:174
+#: templates/home/index.html:347 templates/home/index.html:404
+#: templates/pages/admissions/tuition-fees.html:78
+msgid "Find out more"
+msgstr ""
+
+#: templates/home/index.html:172
+msgid "TIU Achieves Top Ranking in Central Asia for Academic Excellence"
+msgstr ""
+
+#: templates/home/index.html:173
+msgid ""
+"Tashkent International University has been recognized as one of the leading "
+"institutions in Central Asia for its outstanding academic programs and "
+"research contributions."
+msgstr ""
+
+#: templates/home/index.html:188
+msgid ""
+"TIU launches new AI & Machine Learning research lab in partnership with KAIST"
+msgstr ""
+
+#: templates/home/index.html:189
+msgid ""
+"Tashkent International University has opened a state-of-the-art research "
+"laboratory dedicated to artificial intelligence and machine learning..."
+msgstr ""
+
+#: templates/home/index.html:200
+msgid ""
+"Business students win Central Asian case competition for second consecutive "
+"year"
+msgstr ""
+
+#: templates/home/index.html:201
+msgid ""
+"A team of four undergraduate students from the School of Business & "
+"Economics secured first place at the regional case competition..."
+msgstr ""
+
+#: templates/home/index.html:212
+msgid ""
+"Cybersecurity programme receives international accreditation from EC-Council"
+msgstr ""
+
+#: templates/home/index.html:213
+msgid ""
+"The Faculty's cybersecurity track has been officially accredited by the EC-"
+"Council, making TIU the first university in Central Asia..."
+msgstr ""
+
+#: templates/home/index.html:224
+msgid ""
+"International faculty exchange program expands to 15 new partner universities"
+msgstr ""
+
+#: templates/home/index.html:225
+msgid ""
+"TIU has signed new agreements with universities across Europe and Asia, "
+"expanding opportunities for faculty and student exchanges..."
+msgstr ""
+
+#: templates/home/index.html:236
+msgid ""
+"TIU students showcase innovation at annual technology and entrepreneurship "
+"fair"
+msgstr ""
+
+#: templates/home/index.html:237
+msgid ""
+"Over 50 student projects were presented at the annual fair, featuring "
+"solutions in AI, sustainability, and social impact..."
+msgstr ""
+
+#: templates/home/index.html:254
+msgid "Your Gateway to Global Education."
+msgstr ""
+
+#: templates/home/index.html:256
+msgid ""
+"Founded in 2023, Tashkent International University offers a unique 2+2 dual "
+"degree program with prestigious partner universities worldwide. Study in "
+"English across four dynamic departments — Business, Education, IT, and "
+"Foreign Languages — and graduate with two internationally recognized "
+"degrees. At TIU, we prepare future leaders for success in the global economy."
+msgstr ""
+
+#: templates/home/index.html:260
+msgid "Schedule a Visit"
+msgstr ""
+
+#: templates/home/index.html:271
+msgid ""
+"Our unique dual degree program offers you the best of both worlds. Spend "
+"your first two years at TIU in Tashkent, then complete your studies at one "
+"of our prestigious partner universities abroad. Graduate with two "
+"internationally recognized degrees that open doors to global career "
+"opportunities. This is education without boundaries."
+msgstr ""
+
+#: templates/home/index.html:272
+#, fuzzy
+#| msgid "Academic Programs"
+msgid "Explore Programs"
+msgstr "Учебные программы"
+
+#: templates/home/index.html:281
+msgid "Four Dynamic"
+msgstr ""
+
+#: templates/home/index.html:282
+msgid ""
+"Choose from four cutting-edge departments: Business for future entrepreneurs "
+"and economists, Education for tomorrow's teachers and leaders, IT for tech "
+"innovators, and Foreign Languages for global communicators. Each department "
+"offers bachelor's and master's programs taught entirely in English by "
+"international faculty."
+msgstr ""
+
+#: templates/home/index.html:283
+msgid "View Departments"
+msgstr ""
+
+#: templates/home/index.html:292
+msgid "Modern"
+msgstr ""
+
+#: templates/home/index.html:292
+msgid "Campus Life"
+msgstr ""
+
+#: templates/home/index.html:293
+msgid ""
+"Located on Little Ring Road in the heart of Tashkent, our modern campus "
+"provides everything you need for academic success and personal growth. State-"
+"of-the-art classrooms, wellness facilities, student clubs, and a vibrant "
+"community await you. At TIU, you'll find the perfect environment to learn, "
+"connect, and thrive."
+msgstr ""
+
+#: templates/home/index.html:294 templates/home/index.html:313
+msgid "Explore Campus"
+msgstr ""
+
+#: templates/home/index.html:310
+msgid "Study in the Heart of Tashkent."
+msgstr ""
+
+#: templates/home/index.html:311
+msgid ""
+"Our campus on Little Ring Road 7 puts you at the center of Uzbekistan's "
+"capital city. Experience a modern learning environment with state-of-the-art "
+"facilities, dedicated wellness resources, and a supportive community. Join "
+"student organizations, compete in the annual Student of the Year "
+"competition, and build connections that last a lifetime."
+msgstr ""
+
+#: templates/home/index.html:314
+msgid "Book a Visit"
+msgstr ""
+
+#: templates/home/index.html:323 templates/news/event_detail.html:93
+#: templates/pages/faculty/business-innovative-education.html:121
+#: templates/pages/faculty/jurisprudence.html:121
+msgid "Upcoming events"
+msgstr ""
+
+#: templates/home/index.html:332 templates/home/index.html:391
+msgid "FEATURED EVENT"
+msgstr ""
+
+#: templates/home/index.html:398
+msgid "CONFERENCE"
+msgstr ""
+
+#: templates/home/index.html:402
+msgid "International Research Conference on Innovation and Technology 2026"
+msgstr ""
+
+#: templates/home/index.html:403
+msgid ""
+"Join leading researchers, academics, and industry leaders for a day of "
+"groundbreaking presentations, panel discussions, and networking at TIU's "
+"flagship annual research conference."
+msgstr ""
+
+#: templates/home/index.html:418
+msgid "OPEN DAY"
+msgstr ""
+
+#: templates/home/index.html:419
+msgid "Spring Open Day - Explore TIU Campus and Meet Faculty"
+msgstr ""
+
+#: templates/home/index.html:431
+msgid "WORKSHOP"
+msgstr ""
+
+#: templates/home/index.html:432
+msgid "Career Skills Workshop: Resume Building and Interview Preparation"
+msgstr ""
+
+#: templates/home/index.html:444
+msgid "SEMINAR"
+msgstr ""
+
+#: templates/home/index.html:445
+msgid "Guest Lecture: Digital Transformation in Emerging Economies"
+msgstr ""
+
+#: templates/home/index.html:457
+msgid "COMPETITION"
+msgstr ""
+
+#: templates/home/index.html:458
+msgid "Annual Student of the Year Competition - Register Now"
+msgstr ""
+
+#: templates/home/index.html:470
+msgid "CULTURAL"
+msgstr ""
+
+#: templates/home/index.html:471
+msgid "Nawruz Cultural Festival - Celebrating Diversity at TIU"
+msgstr ""
+
+#: templates/home/index.html:485
+msgid "Global Partners"
+msgstr ""
+
+#: templates/includes/footer.html:5
+msgid "Tashkent International University"
+msgstr "Ташкентский Международный Университет"
+
+#: templates/includes/footer.html:6
+msgid ""
+"Leading institution of higher education committed to excellence in teaching, "
+"research, and global engagement."
+msgstr ""
+"Ведущее учреждение высшего образования, стремящееся к совершенству в "
+"преподавании, научных исследованиях и международном сотрудничестве."
+
+#: templates/includes/footer.html:17
+msgid "Quick Links"
+msgstr "Быстрые ссылки"
+
+#: templates/includes/footer.html:19 templates/pages/faculty/directory.html:145
+msgid "About TIU"
+msgstr "О TIU"
+
+#: templates/includes/footer.html:22 templates/includes/mega_menu.html:184
+#: templates/includes/mega_menu.html:189
+#: templates/pages/faculty/directory.html:144
+msgid "Research"
+msgstr "Наука"
+
+#: templates/includes/footer.html:23 templates/includes/mega_menu.html:106
+#: templates/includes/mega_menu.html:120
+#: templates/pages/admissions/scholarships.html:69
+msgid "International"
+msgstr "Международный"
+
+#: templates/includes/footer.html:24 templates/includes/mega_menu.html:270
+#: templates/includes/mega_menu.html:273
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+#: templates/includes/footer.html:29
+msgid "For Students"
+msgstr "Для студентов"
+
+#: templates/includes/footer.html:31 templates/includes/utility_bar.html:6
+msgid "E-Library"
+msgstr "Библиотека"
+
+#: templates/includes/footer.html:32 templates/includes/utility_bar.html:7
+msgid "Academic Calendar"
+msgstr "Календарь"
+
+#: templates/includes/footer.html:33 templates/includes/mega_menu.html:230
+msgid "Career Services"
+msgstr "Карьерные услуги"
+
+#: templates/includes/footer.html:38
+msgid "Contact Information"
+msgstr "Контактная информация"
+
+#: templates/includes/footer.html:43
+msgid "Mon-Fri: 9:00 AM - 6:00 PM"
+msgstr "Пн-Пт: 9:00 - 18:00"
+
+#: templates/includes/footer.html:49
+msgid "Tashkent International University. All rights reserved."
+msgstr "Ташкентский Международный Университет. Все права защищены."
+
+#: templates/includes/footer.html:49
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+#: templates/includes/footer.html:49
+msgid "Terms of Use"
+msgstr "Условия использования"
+
+#: templates/includes/mega_menu.html:4
+msgid "About"
+msgstr "О нас"
+
+#: templates/includes/mega_menu.html:11
+msgid "Discover TIU"
+msgstr "Откройте TIU"
+
+#: templates/includes/mega_menu.html:12
+msgid "Explore our campus"
+msgstr "Исследуйте наш кампус"
+
+#: templates/includes/mega_menu.html:13
+msgid "Learn More"
+msgstr "Подробнее"
+
+#: templates/includes/mega_menu.html:19 templates/includes/mega_menu.html:37
+#: templates/includes/mega_menu.html:214
+msgid "Leadership"
+msgstr "Руководство"
+
+#: templates/includes/mega_menu.html:20
+msgid "View"
+msgstr "Смотреть"
+
+#: templates/includes/mega_menu.html:26 templates/includes/mega_menu.html:42
+#: templates/pages/careers/hiring.html:79
+#: templates/pages/careers/hiring.html:82
+#: templates/pages/careers/hiring.html:85
+#: templates/pages/careers/hiring.html:88
+#: templates/pages/careers/hiring.html:91
+#: templates/pages/careers/hiring.html:94
+msgid "Campus"
+msgstr "Кампус"
+
+#: templates/includes/mega_menu.html:27
+msgid "Explore"
+msgstr "Исследовать"
+
+#: templates/includes/mega_menu.html:33 templates/includes/mega_menu.html:35
+msgid "Overview"
+msgstr "Обзор"
+
+#: templates/includes/mega_menu.html:36
+msgid "Mission & Vision"
+msgstr "Миссия и видение"
+
+#: templates/includes/mega_menu.html:38
+msgid "Why TIU"
+msgstr "Почему TIU"
+
+#: templates/includes/mega_menu.html:44
+msgid "Sustainability"
+msgstr "Устойчивое развитие"
+
+#: templates/includes/mega_menu.html:45
+msgid "Campus Map"
+msgstr "Карта кампуса"
+
+#: templates/includes/mega_menu.html:46
+msgid "Accreditation"
+msgstr "Аккредитация"
+
+#: templates/includes/mega_menu.html:47
+msgid "Our History"
+msgstr "Наша история"
+
+#: templates/includes/mega_menu.html:62
+#: templates/pages/admissions/apply-bachelor.html:243
+#: templates/pages/admissions/apply-master.html:259
+#: templates/pages/admissions/scholarship_detail.html:115
+#: templates/pages/admissions/scholarships.html:179
+#: templates/pages/admissions/tuition-fees.html:205
+msgid "How to Apply"
+msgstr "Как подать заявку"
+
+#: templates/includes/mega_menu.html:66
+msgid "International Applicants"
+msgstr "Иностранные абитуриенты"
+
+#: templates/includes/mega_menu.html:67
+#: templates/pages/admissions/apply-bachelor.html:244
+#: templates/pages/admissions/apply-master.html:260
+#: templates/pages/admissions/scholarship_detail.html:116
+#: templates/pages/admissions/scholarships.html:180
+#: templates/pages/admissions/tuition-fees.html:206
+#: templates/programs/program_detail.html:135
+msgid "Requirements"
+msgstr "Требования"
+
+#: templates/includes/mega_menu.html:71
+msgid "Financial Info"
+msgstr "Финансы"
+
+#: templates/includes/mega_menu.html:73
+#: templates/pages/admissions/apply-bachelor.html:231
+#: templates/pages/admissions/apply-bachelor.html:245
+#: templates/pages/admissions/apply-master.html:238
+#: templates/pages/admissions/apply-master.html:261
+#: templates/pages/admissions/scholarship_detail.html:117
+#: templates/pages/admissions/scholarships.html:181
+#: templates/pages/admissions/tuition-fees.html:9
+#: templates/pages/admissions/tuition-fees.html:20
+#: templates/pages/admissions/tuition-fees.html:23
+#: templates/programs/program_detail.html:133
+msgid "Tuition & Fees"
+msgstr "Стоимость обучения"
+
+#: templates/includes/mega_menu.html:75
+#: templates/pages/admissions/apply-bachelor.html:247
+#: templates/pages/admissions/apply-master.html:263
+#: templates/pages/admissions/scholarship_detail.html:118
+#: templates/pages/admissions/scholarships.html:182
+#: templates/pages/admissions/tuition-fees.html:208
+msgid "FAQs"
+msgstr "Вопросы и ответы"
+
+#: templates/includes/mega_menu.html:76
+msgid "Deadlines"
+msgstr "Сроки подачи"
+
+#: templates/includes/mega_menu.html:91
+#: templates/pages/programs/by-faculty.html:110
+msgid "By Level"
+msgstr "По уровню"
+
+#: templates/includes/mega_menu.html:93
+msgid "Bachelor's Degrees"
+msgstr "Бакалавриат"
+
+#: templates/includes/mega_menu.html:94
+msgid "Master's Degrees"
+msgstr "Магистратура"
+
+#: templates/includes/mega_menu.html:95 templates/programs/program_list.html:46
+msgid "PhD"
+msgstr "PhD"
+
+#: templates/includes/mega_menu.html:99
+#: templates/pages/programs/by-level.html:145
+msgid "By Faculty"
+msgstr "По факультету"
+
+#: templates/includes/mega_menu.html:101
+#: templates/pages/faculty/business-innovative-education.html:138
+#: templates/pages/programs/by-faculty.html:59
+msgid "Faculty of Jurisprudence"
+msgstr "Факультет юриспруденции"
+
+#: templates/includes/mega_menu.html:102
+#: templates/pages/faculty/jurisprudence.html:138
+#: templates/pages/programs/by-faculty.html:77
+msgid "Faculty of Business and Innovative Education"
+msgstr "Факультет бизнеса и инновационного образования"
+
+#: templates/includes/mega_menu.html:108
+#: templates/pages/programs/by-faculty.html:112
+#: templates/pages/programs/by-level.html:147
+msgid "Joint Degrees"
+msgstr "Совместные программы"
+
+#: templates/includes/mega_menu.html:109
+#: templates/pages/programs/by-faculty.html:113
+#: templates/pages/programs/by-level.html:148
+msgid "Exchange Programs"
+msgstr "Обменные программы"
+
+#: templates/includes/mega_menu.html:110
+#: templates/pages/programs/by-faculty.html:114
+#: templates/pages/programs/by-level.html:149
+msgid "Dual Diploma"
+msgstr "Двойной диплом"
+
+#: templates/includes/mega_menu.html:125
+msgid "Getting Started"
+msgstr "Начало"
+
+#: templates/includes/mega_menu.html:127
+msgid "Why Study at TIU"
+msgstr "Почему TIU"
+
+#: templates/includes/mega_menu.html:128
+msgid "Admission Process"
+msgstr "Процесс поступления"
+
+#: templates/includes/mega_menu.html:129
+msgid "Visa & Immigration"
+msgstr "Виза и иммиграция"
+
+#: templates/includes/mega_menu.html:130
+msgid "Accommodation"
+msgstr "Проживание"
+
+#: templates/includes/mega_menu.html:134
+msgid "Partnerships"
+msgstr "Партнёрства"
+
+#: templates/includes/mega_menu.html:137
+msgid "Exchange Opportunities"
+msgstr "Возможности обмена"
+
+#: templates/includes/mega_menu.html:138
+msgid "Study Abroad"
+msgstr "Обучение за рубежом"
+
+#: templates/includes/mega_menu.html:148
+msgid "Students"
+msgstr "Студенты"
+
+#: templates/includes/mega_menu.html:153
+#: templates/pages/careers/hiring.html:139
+msgid "Academic"
+msgstr "Учёба"
+
+#: templates/includes/mega_menu.html:155
+msgid "Calendar"
+msgstr "Календарь"
+
+#: templates/includes/mega_menu.html:156
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/includes/mega_menu.html:160
+msgid "Services"
+msgstr "Услуги"
+
+#: templates/includes/mega_menu.html:162
+msgid "Housing"
+msgstr "Общежитие"
+
+#: templates/includes/mega_menu.html:163
+msgid "Library"
+msgstr "Библиотека"
+
+#: templates/includes/mega_menu.html:164
+msgid "IT Services"
+msgstr "IT-сервисы"
+
+#: templates/includes/mega_menu.html:165
+msgid "Cafeteria"
+msgstr "Столовая"
+
+#: templates/includes/mega_menu.html:169
+msgid "Life"
+msgstr "Жизнь"
+
+#: templates/includes/mega_menu.html:171
+msgid "Student Union"
+msgstr "Студсовет"
+
+#: templates/includes/mega_menu.html:172
+msgid "Clubs"
+msgstr "Клубы"
+
+#: templates/includes/mega_menu.html:173
+msgid "Sports"
+msgstr "Спорт"
+
+#: templates/includes/mega_menu.html:191
+#, fuzzy
+#| msgid "Research"
+msgid "Research Centers"
+msgstr "Наука"
+
+#: templates/includes/mega_menu.html:192
+msgid "Publications"
+msgstr ""
+
+#: templates/includes/mega_menu.html:193
+msgid "Conferences"
+msgstr ""
+
+#: templates/includes/mega_menu.html:194
+#, fuzzy
+#| msgid "International"
+msgid "Innovation"
+msgstr "Международный"
+
+#: templates/includes/mega_menu.html:212
+msgid "Faculty Directory"
+msgstr "Преподаватели"
+
+#: templates/includes/mega_menu.html:232
+#: templates/pages/careers/hiring.html:260
+#: templates/pages/careers/job_detail.html:108
+msgid "Career Center"
+msgstr "Центр карьеры"
+
+#: templates/includes/mega_menu.html:233
+#: templates/pages/careers/hiring.html:261
+#: templates/pages/careers/job_detail.html:109
+msgid "Internships"
+msgstr "Стажировки"
+
+#: templates/includes/mega_menu.html:234
+#: templates/pages/careers/hiring.html:262
+#: templates/pages/careers/job_detail.html:110
+msgid "Employer Partnerships"
+msgstr "Партнёры-работодатели"
+
+#: templates/includes/mega_menu.html:235
+msgid "Alumni"
+msgstr "Выпускники"
+
+#: templates/includes/mega_menu.html:265
+msgid "Contact"
+msgstr "Контакты"
+
+#: templates/includes/mega_menu.html:272
+msgid "Information"
+msgstr "Информация"
+
+#: templates/includes/mega_menu.html:274
+msgid "Reception"
+msgstr "Приёмная ректора"
+
+#: templates/includes/mega_menu.html:275
+msgid "Support"
+msgstr "Поддержка"
+
+#: templates/includes/page_hero.html:17
+#: templates/pages/admissions/apply-bachelor.html:17
+#: templates/pages/admissions/apply-master.html:17
+#: templates/pages/admissions/scholarships.html:17
+#: templates/pages/admissions/tuition-fees.html:16
+#: templates/pages/careers/hiring.html:18
+#: templates/pages/faculty/business-innovative-education.html:17
+#: templates/pages/faculty/directory.html:16
+#: templates/pages/faculty/jurisprudence.html:17
+#: templates/pages/programs/by-faculty.html:15
+#: templates/pages/programs/by-level.html:15
+#: templates/programs/program_list.html:16
+msgid "Home"
+msgstr "Главная"
+
+#: templates/includes/utility_bar.html:5
+msgid "Student Portal"
+msgstr "Портал"
+
+#: templates/includes/utility_bar.html:8
+msgid "University Email"
+msgstr "Почта"
+
+#: templates/news/event_detail.html:8
+msgid "TIU Events"
+msgstr ""
+
+#: templates/news/event_detail.html:39
+msgid "Event details"
+msgstr ""
+
+#: templates/news/event_detail.html:45
+msgid "Date"
+msgstr ""
+
+#: templates/news/event_detail.html:53
+#, fuzzy
+#| msgid "Timetable"
+msgid "Time"
+msgstr "Расписание"
+
+#: templates/news/event_detail.html:62
+msgid "Location"
+msgstr ""
+
+#: templates/news/event_detail.html:71 templates/news/press_detail.html:33
+#: templates/news/press_list.html:33
+msgid "Category"
+msgstr ""
+
+#: templates/news/event_detail.html:81
+msgid "Share this event"
+msgstr ""
+
+#: templates/news/event_detail.html:83 templates/news/news_detail.html:31
+#: templates/news/press_detail.html:45
+#: templates/pages/admissions/scholarship_detail.html:67
+#: templates/pages/careers/job_detail.html:60
+#: templates/programs/program_detail.html:78
+msgid "Share on Facebook"
+msgstr ""
+
+#: templates/news/event_detail.html:84 templates/news/news_detail.html:32
+#: templates/news/press_detail.html:46
+#: templates/pages/admissions/scholarship_detail.html:68
+#: templates/pages/careers/job_detail.html:61
+#: templates/programs/program_detail.html:79
+msgid "Share on X"
+msgstr ""
+
+#: templates/news/event_detail.html:85 templates/news/news_detail.html:33
+#: templates/news/press_detail.html:47
+#: templates/pages/admissions/scholarship_detail.html:69
+#: templates/pages/careers/job_detail.html:62
+#: templates/programs/program_detail.html:80
+msgid "Share on Telegram"
+msgstr ""
+
+#: templates/news/event_detail.html:86 templates/news/news_detail.html:34
+#: templates/news/press_detail.html:48
+#: templates/pages/admissions/scholarship_detail.html:70
+#: templates/pages/careers/job_detail.html:63
+#: templates/programs/program_detail.html:81
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: templates/news/event_detail.html:105
+msgid "All events"
+msgstr ""
+
+#: templates/news/event_detail.html:128 templates/news/event_list.html:109
+#: templates/news/gallery.html:57 templates/news/news_detail.html:76
+#: templates/news/news_list.html:98 templates/news/press_detail.html:90
+#: templates/news/press_list.html:103
+#: templates/pages/admissions/apply-bachelor.html:241
+#: templates/pages/admissions/apply-master.html:257
+#: templates/pages/admissions/scholarship_detail.html:113
+#: templates/pages/admissions/scholarships.html:177
+#: templates/pages/admissions/tuition-fees.html:203
+#: templates/pages/careers/hiring.html:258
+#: templates/pages/careers/job_detail.html:106
+#: templates/pages/programs/by-faculty.html:108
+#: templates/pages/programs/by-level.html:143
+#: templates/programs/program_detail.html:130
+msgid "EXPLORE MORE"
+msgstr ""
+
+#: templates/news/event_detail.html:130 templates/news/event_list.html:111
+#: templates/news/gallery.html:59 templates/news/news_detail.html:78
+#: templates/news/news_list.html:100 templates/news/press_detail.html:92
+#: templates/news/press_list.html:105
+msgid "Latest News"
+msgstr ""
+
+#: templates/news/event_list.html:21 templates/news/news_list.html:21
+#: templates/news/press_list.html:21
+#: templates/pages/admissions/scholarships.html:41
+msgid "Filters"
+msgstr ""
+
+#: templates/news/event_list.html:25
+msgid "Categories"
+msgstr ""
+
+#: templates/news/event_list.html:28
+msgid "Select an option"
+msgstr ""
+
+#: templates/news/event_list.html:39
+msgid "Show past events"
+msgstr ""
+
+#: templates/news/event_list.html:47 templates/news/news_list.html:42
+#: templates/news/press_list.html:47
+#: templates/pages/admissions/scholarships.html:74
+msgid "Clear filters"
+msgstr ""
+
+#: templates/news/event_list.html:83
+msgid "No upcoming events"
+msgstr ""
+
+#: templates/news/event_list.html:84
+msgid "Check back soon for new events, or toggle \\"
+msgstr ""
+
+#: templates/news/event_list.html:91 templates/news/gallery.html:44
+#: templates/news/news_list.html:80 templates/news/press_list.html:85
+msgid "Previous"
+msgstr ""
+
+#: templates/news/event_list.html:97 templates/news/gallery.html:45
+#: templates/news/news_list.html:86 templates/news/press_list.html:91
+msgid "Next"
+msgstr ""
+
+#: templates/news/gallery.html:20
+msgid "TIU Gallery"
+msgstr ""
+
+#: templates/news/gallery.html:33
+msgid "Gallery coming soon"
+msgstr ""
+
+#: templates/news/gallery.html:34
+msgid ""
+"We're curating photos from campus life, events, and academic activities. "
+"Check back soon!"
+msgstr ""
+
+#: templates/news/gallery.html:43
+msgid "Close"
+msgstr ""
+
+#: templates/news/includes/latest_news_list.html:14
+msgid "No news articles yet."
+msgstr ""
+
+#: templates/news/includes/upcoming_events_list.html:14
+msgid "No upcoming events."
+msgstr ""
+
+#: templates/news/news_detail.html:8
+msgid "TIU News"
+msgstr ""
+
+#: templates/news/news_detail.html:22 templates/news/press_detail.html:25
+msgid "Published"
+msgstr ""
+
+#: templates/news/news_detail.html:29
+msgid "Share this article"
+msgstr ""
+
+#: templates/news/news_detail.html:53
+msgid "All news"
+msgstr ""
+
+#: templates/news/news_list.html:27
+msgid "Search news..."
+msgstr ""
+
+#: templates/news/news_list.html:34
+msgid "Featured only"
+msgstr ""
+
+#: templates/news/news_list.html:72
+msgid "No news articles found"
+msgstr ""
+
+#: templates/news/news_list.html:73
+msgid "Try adjusting your search or clearing filters to see all news."
+msgstr ""
+
+#: templates/news/press_detail.html:8
+msgid "TIU Press"
+msgstr ""
+
+#: templates/news/press_detail.html:43
+msgid "Share this release"
+msgstr ""
+
+#: templates/news/press_detail.html:55
+msgid "Latest releases"
+msgstr ""
+
+#: templates/news/press_detail.html:67
+msgid "All press releases"
+msgstr ""
+
+#: templates/news/press_list.html:27
+msgid "Search press releases..."
+msgstr ""
+
+#: templates/news/press_list.html:36
+msgid "All categories"
+msgstr ""
+
+#: templates/news/press_list.html:77
+msgid "No press releases found"
+msgstr ""
+
+#: templates/news/press_list.html:78
+msgid ""
+"Try adjusting your search or clearing filters to see all press releases."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:10
+#: templates/pages/admissions/apply-master.html:150
+msgid "Apply for Bachelor's"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:10
+#: templates/pages/admissions/apply-master.html:10
+#: templates/pages/admissions/scholarships.html:10
+#: templates/pages/admissions/tuition-fees.html:9
+#: templates/pages/careers/hiring.html:11 templates/people/person_detail.html:8
+#: templates/programs/department_detail.html:8
+#: templates/programs/program_detail.html:9
+#: templates/programs/program_list.html:9
+msgid "TIU"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:21
+msgid "Apply — Bachelor's"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:24
+msgid "Apply for a Bachelor's Degree"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:26
+msgid ""
+"Start your undergraduate journey at TIU. Here's everything you need to know "
+"about applying for a Bachelor's programme."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:35
+msgid "Your path to a world-class"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:35
+msgid "undergraduate education"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:36
+msgid ""
+"Whether you're a school leaver, a gap-year student, or making a fresh start "
+"— TIU's Bachelor's programmes are designed to challenge, inspire, and "
+"prepare you for a successful career. All programmes are taught in English by "
+"international faculty."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:44
+#: templates/pages/admissions/apply-master.html:44
+msgid "How to apply in 5 simple steps"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:45
+#: templates/pages/admissions/apply-master.html:45
+msgid "From choosing your programme to accepting your offer"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:50
+#: templates/pages/admissions/apply-master.html:50
+msgid "Choose"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:51
+msgid ""
+"Browse our Bachelor's programmes and select the one that fits your interests "
+"and career goals"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:55
+#: templates/pages/admissions/apply-master.html:55
+msgid "Prepare"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:56
+msgid ""
+"Gather your documents: school certificate, English test results, motivation "
+"letter, passport, and photos"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:60
+#: templates/pages/admissions/apply-master.html:60
+msgid "Apply Online"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:61
+#: templates/pages/admissions/apply-master.html:61
+msgid ""
+"Complete the application form and upload your documents through our online "
+"portal"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:65
+#: templates/pages/admissions/apply-master.html:65
+msgid "Assessment"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:66
+msgid ""
+"Our team reviews your application. You may be invited for an interview or "
+"internal English test"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:70
+#: templates/pages/admissions/apply-master.html:70
+msgid "Accept & Enrol"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:71
+#: templates/pages/admissions/apply-master.html:71
+msgid ""
+"Receive your offer, confirm your place, and complete enrolment before the "
+"semester starts"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:82
+#: templates/pages/admissions/apply-master.html:82
+#: templates/pages/programs/by-level.html:135
+msgid "Entry Requirements"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:83
+#: templates/pages/admissions/apply-master.html:83
+msgid "What you need to apply"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:84
+#: templates/pages/admissions/apply-master.html:84
+msgid ""
+"Make sure you have the following documents ready. All materials should be in "
+"English, Uzbek, or Russian — or accompanied by a certified translation."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:90
+msgid "Secondary School Certificate"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:91
+msgid ""
+"Completed 11-year secondary education (or international equivalent) with "
+"official transcript"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:97
+#: templates/pages/admissions/apply-master.html:97
+msgid "English Language Proficiency"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:98
+msgid ""
+"IELTS 5.5+ / TOEFL 65+ / CEFR B2, or pass TIU's internal English placement "
+"test"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:104
+#: templates/pages/admissions/apply-master.html:125
+msgid "Passport or National ID"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:105
+#: templates/pages/admissions/apply-master.html:126
+msgid ""
+"Valid passport for international applicants, or national ID for Uzbek "
+"citizens"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:111
+msgid "Motivation Letter"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:112
+msgid ""
+"A personal statement (300–500 words) explaining why you want to study at TIU"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:118
+#: templates/pages/admissions/apply-master.html:132
+msgid "Passport-size Photos"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:119
+#: templates/pages/admissions/apply-master.html:133
+msgid "2 recent photographs (3.5 x 4.5 cm) on white background"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:125
+msgid "Medical Certificate"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:126
+msgid ""
+"Required for international students as part of the visa application process"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:140
+msgid "Not ready yet?"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:141
+msgid "Start with our Foundation Programme"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:142
+msgid ""
+"If you don't yet meet the English language or academic requirements, our "
+"Foundation Programme prepares you for degree-level study with intensive "
+"English, study skills, and introductory courses in your chosen field."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:143
+msgid "Explore Foundation Programme"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:146
+msgid "Students in class at TIU"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:157
+#: templates/pages/admissions/apply-master.html:164
+#, fuzzy
+#| msgid "Academic Programs"
+msgid "Available Programmes"
+msgstr "Учебные программы"
+
+#: templates/pages/admissions/apply-bachelor.html:158
+msgid "Bachelor's degrees at TIU"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:167
+#: templates/pages/admissions/apply-master.html:174
+msgid "No programmes available at the moment."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:177
+msgid "Bachelor's application deadline: 15 July 2026"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:178
+#: templates/pages/admissions/apply-master.html:185
+msgid ""
+"Applications for Fall 2026 intake are now open. Apply early to maximise your "
+"chances and allow time for document processing."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:179
+#: templates/pages/admissions/apply-master.html:186
+msgid "View all key dates"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:187
+msgid "Bachelor's Application FAQs"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:191
+msgid "What secondary school grades do I need?"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:195
+msgid ""
+"We don't set a strict minimum grade requirement. However, competitive "
+"applicants typically have strong overall grades, particularly in subjects "
+"relevant to their chosen programme. Each application is reviewed "
+"holistically."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:200
+msgid "Can I apply if I haven't finished school yet?"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:204
+msgid ""
+"Yes. You can apply with predicted grades or a provisional transcript. If "
+"accepted, your offer will be conditional on successfully completing your "
+"secondary education and meeting the stated requirements."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:209
+msgid "Do I need to take an entrance exam?"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:213
+msgid ""
+"For most Bachelor's programmes, there is no entrance exam. Admission is "
+"based on your academic documents, motivation letter, and English "
+"proficiency. If you don't have an IELTS/TOEFL score, you can take TIU's "
+"internal English test."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:218
+msgid "Can I switch programmes after enrolling?"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:222
+msgid ""
+"Programme transfers within TIU are possible during the first year, subject "
+"to availability and approval from the Academic Office. Speak with your "
+"academic advisor to discuss your options."
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:227
+msgid "What is the tuition fee for Bachelor's programmes?"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:231
+#, python-format
+msgid ""
+"Tuition fees vary by programme, ranging from approximately 19,000,000 to "
+"22,000,000 UZS per year. Scholarships of up to 100%% are available for high-"
+"achieving students. Visit our"
+msgstr ""
+
+#: templates/pages/admissions/apply-bachelor.html:231
+#: templates/pages/admissions/apply-master.html:238
+msgid "page for full details."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:10
+msgid "Apply for Master's"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:21
+msgid "Apply — Master's"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:24
+msgid "Apply for a Master's Degree"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:26
+msgid ""
+"Take the next step in your academic career. Here's everything you need to "
+"know about applying for a Master's programme at TIU."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:35
+msgid "Advance your career with a"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:35
+msgid "world-class postgraduate degree"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:36
+msgid ""
+"Whether you're deepening your expertise or changing career direction, TIU's "
+"Master's programmes combine rigorous academics with real-world application. "
+"All programmes are taught in English by international faculty with industry "
+"experience."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:51
+msgid ""
+"Browse our Master's programmes and select the one that aligns with your "
+"career goals and academic background"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:56
+msgid ""
+"Gather your documents: bachelor's diploma, transcripts, English test "
+"results, CV, and recommendation letters"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:66
+msgid ""
+"Our admissions committee reviews your application. You may be invited for an "
+"interview to discuss your research interests"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:90
+msgid "Bachelor's Degree Diploma"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:91
+msgid ""
+"Completed undergraduate degree from an accredited institution with official "
+"transcript of academic records"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:98
+msgid ""
+"IELTS 6.0+ / TOEFL 80+ / CEFR B2–C1, or pass TIU's internal English "
+"placement test"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:104
+msgid "Curriculum Vitae (CV)"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:105
+msgid ""
+"An up-to-date CV highlighting your education, work experience, and relevant "
+"achievements"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:111
+msgid "Statement of Purpose"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:112
+msgid ""
+"A personal statement (500–800 words) outlining your academic interests, "
+"career goals, and motivation for the programme"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:118
+msgid "Letters of Recommendation"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:119
+msgid ""
+"Two academic or professional references from individuals who can speak to "
+"your qualifications and potential"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:147
+msgid "Don't have a Bachelor's yet?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:148
+msgid "Explore our Bachelor's Programmes"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:149
+msgid ""
+"If you haven't completed your undergraduate degree yet, take a look at our "
+"Bachelor's programmes. Build a strong academic foundation before progressing "
+"to postgraduate study at TIU."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:153
+msgid "Graduate students at TIU"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:165
+msgid "Master's degrees at TIU"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:184
+msgid "Master's application deadline: 15 July 2026"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:194
+msgid "Master's Application FAQs"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:198
+msgid "What GPA do I need from my Bachelor's degree?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:202
+msgid ""
+"There is no strict minimum GPA requirement. However, competitive applicants "
+"typically hold a Bachelor's degree with a GPA of 3.0 or above (or "
+"equivalent). Each application is assessed holistically, considering your "
+"academic record, professional experience, and motivation."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:207
+msgid "Can I apply if I'm still completing my Bachelor's degree?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:211
+msgid ""
+"Yes. Final-year undergraduate students can apply with a provisional "
+"transcript. If accepted, your offer will be conditional on successfully "
+"completing your Bachelor's degree and meeting the stated requirements before "
+"enrolment."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:216
+msgid "Do I need work experience to apply?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:220
+msgid ""
+"Work experience is not mandatory for most Master's programmes. However, for "
+"the MBA programme, at least one year of professional experience is strongly "
+"recommended. Relevant work experience strengthens any application and is "
+"considered during the review process."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:225
+msgid "Is there an entrance exam for Master's programmes?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:229
+msgid ""
+"Most Master's programmes do not require an entrance exam. Admission is based "
+"on your academic documents, statement of purpose, recommendations, and "
+"English proficiency. Some programmes may include an interview as part of the "
+"assessment process."
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:234
+msgid "What is the tuition fee for Master's programmes?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:238
+#, python-format
+msgid ""
+"Tuition fees vary by programme, ranging from approximately 18,000,000 to "
+"28,000,000 UZS per year. Scholarships of up to 100%% are available for high-"
+"achieving students. Visit our"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:243
+msgid "Can I study part-time?"
+msgstr ""
+
+#: templates/pages/admissions/apply-master.html:247
+msgid ""
+"Some Master's programmes, such as Public Administration, are available in "
+"part-time format, allowing you to balance studies with professional "
+"commitments. Check the specific programme page for available study modes."
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:9
+msgid "TIU Scholarships"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:22
+msgid "Scholarship details"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:28
+msgid "Provider"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:35
+msgid "Programme Level"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:42
+msgid "Award Type"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:49
+msgid "Applicant Type"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:56
+msgid "Award"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:65
+msgid "Share this scholarship"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:77
+msgid "Other scholarships"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:89
+msgid "All scholarships"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:101
+msgid "Not sure if you qualify?"
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:102
+#: templates/pages/admissions/scholarships.html:114
+msgid ""
+"Our admissions team can help you identify the best funding options based on "
+"your profile, programme choice, and personal circumstances. Get in touch — "
+"we're here to help."
+msgstr ""
+
+#: templates/pages/admissions/scholarship_detail.html:103
+#: templates/pages/admissions/scholarships.html:115
+msgid "Contact the admissions office"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:10
+#: templates/pages/admissions/scholarships.html:24
+msgid "Scholarships & Financial Aid"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:26
+msgid ""
+"We believe talent should never be held back by finances. Explore "
+"scholarships, grants, and awards available to TIU students."
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:45
+msgid "Programme level"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:47
+#: templates/pages/admissions/scholarships.html:50
+msgid "All levels"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:48
+#: templates/programs/program_list.html:44
+msgid "Bachelor's"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:49
+#: templates/programs/program_list.html:45
+msgid "Master's"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:55
+msgid "Type of award"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:57
+msgid "All types"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:58
+msgid "Merit-based"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:59
+msgid "Need-based"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:60
+msgid "Special category"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:65
+msgid "Applicant type"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:67
+msgid "All applicants"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:68
+msgid "Domestic"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:90
+#, fuzzy
+#| msgid "International"
+msgid "International Only"
+msgstr "Международный"
+
+#: templates/pages/admissions/scholarships.html:95
+msgid "No scholarships available at the moment. Please check back later."
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:101
+msgid ""
+"No scholarships match your selected filters. Try adjusting your criteria or"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:101
+msgid "clear all filters"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:113
+msgid "Not sure which scholarship is right for you?"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:123
+msgid "Scholarship FAQs"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:127
+msgid "How do I apply for a scholarship?"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:131
+msgid ""
+"Most scholarships are considered automatically as part of your admissions "
+"application. Some awards (like the Graduate Research Fellowship) require a "
+"separate application. Check each scholarship's details for specific "
+"instructions."
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:136
+msgid "Can I combine multiple scholarships?"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:140
+msgid ""
+"In most cases, you can hold one primary scholarship at a time. However, the "
+"Financial Hardship Grant and Emergency Fund can be combined with other merit-"
+"based awards. Contact the Finance Office for individual guidance."
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:145
+msgid "When will I know if I've received a scholarship?"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:149
+msgid ""
+"Scholarship decisions are typically communicated alongside your admission "
+"offer. For awards requiring a separate application, results are announced "
+"within 4 weeks of the application deadline."
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:154
+msgid "Are scholarships renewable each year?"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:158
+msgid ""
+"Yes, most scholarships are renewable for the full duration of your "
+"programme, provided you maintain the required GPA (typically 3.0+) and "
+"remain in good academic standing. Renewal conditions are specified in your "
+"scholarship letter."
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:163
+msgid "Are there scholarships specifically for international students?"
+msgstr ""
+
+#: templates/pages/admissions/scholarships.html:167
+msgid ""
+"Yes. The International Excellence Scholarship is exclusively for "
+"international applicants. Additionally, several other awards are open to "
+"both domestic and international students. Use the filters above to find "
+"scholarships available to you."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:25
+msgid ""
+"Transparent, affordable tuition designed to make world-class education "
+"accessible to every student."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:34
+msgid "Investing in your future is one of the smartest"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:34
+msgid "decisions you'll ever make"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:35
+msgid ""
+"At TIU, we believe that a quality education should be within reach. Our "
+"tuition fees are competitively structured to offer exceptional value — with "
+"internationally recognized programmes, experienced faculty, and modern "
+"facilities. And with a range of"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:35
+msgid "scholarships and financial aid"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:35
+msgid "options available, your investment goes even further."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:36
+msgid "Add into that our"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:36
+msgid "affordable student housing"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:36
+msgid ""
+", vibrant campus life, and one of the lowest costs of living in Central Asia "
+"— and you'll see why TIU is a smart choice."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:46
+msgid "Payment Guide"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:47
+msgid "Your complete guide to tuition & payment"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:48
+msgid ""
+"Everything you need to know about fees, payment schedules, instalment plans, "
+"and financial support — all in one place. Whether you're a domestic or "
+"international student, we've made it simple."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:49
+msgid "Read the guide"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:52
+msgid "TIU campus building"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:66
+msgid "Scholarships & Awards"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:67
+msgid "Big support for big ambitions"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:68
+msgid ""
+"We offer a range of merit-based scholarships, fee discounts, and financial "
+"awards for both domestic and international students — designed to ease the "
+"financial load and reward excellence."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:69
+msgid "See what's available"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:75
+msgid "Affordability"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:76
+msgid "A student city that won't break the bank"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:77
+msgid ""
+"Tashkent is one of Central Asia's most affordable cities — fact. That means "
+"your money goes further on rent, food, transport, and social life. Don't "
+"believe us? Take a look."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:84
+msgid "Financial Support"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:85
+msgid "Worried about money? We can help."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:86
+msgid ""
+"Get expert advice from our financial support team. Whether you need help "
+"with payment plans, budgeting, or emergency funding — we're here to make "
+"sure finances never hold you back."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:87
+msgid "Get advice"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:98
+msgid "Tuition Fees 2025/26"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:99
+msgid "Programme fees by level"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:100
+msgid ""
+"All fees listed below are per academic year. Fees may vary depending on the "
+"type of education and programme."
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:108
+#: templates/pages/programs/by-level.html:57
+msgid "Bachelor's Programmes"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:115
+#: templates/pages/admissions/tuition-fees.html:145
+#: templates/pages/admissions/tuition-fees.html:175
+msgid "Type of Education"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:116
+#: templates/pages/admissions/tuition-fees.html:146
+msgid "Annual Tuition Fee"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:138
+#: templates/pages/programs/by-level.html:83
+#, fuzzy
+#| msgid "Academic Programs"
+msgid "Master's Programmes"
+msgstr "Учебные программы"
+
+#: templates/pages/admissions/tuition-fees.html:168
+#: templates/pages/programs/by-level.html:109
+msgid "PhD Programmes"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:176
+msgid "Annual Fee"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:195
+msgid ""
+"Tuition fees are reviewed annually and may be subject to change. The fees "
+"above apply to the 2025/26 academic year. For the most up-to-date "
+"information, please contact the"
+msgstr ""
+
+#: templates/pages/admissions/tuition-fees.html:195
+#, fuzzy
+#| msgid "Admissions"
+msgid "Admissions Office"
+msgstr "Приём"
+
+#: templates/pages/careers/hiring.html:27
+msgid ""
+"Join a growing international university in the heart of Central Asia. "
+"Explore current vacancies and become part of the TIU community."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:36
+msgid "Achieving your full potential"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:36
+msgid "is just the"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:36
+msgid "start"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:37
+msgid ""
+"Our brilliance comes from those who pass through our doors. Theirs comes "
+"from learning to see and think differently. Want to work with other "
+"unconventionally brilliant minds? Join us, and together we'll help you reach"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:37
+msgid "higher"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:37
+msgid "than your potential."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:46
+msgid "Why work here?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:46
+msgid "Here's"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:46
+msgid "why..."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:49
+msgid ""
+"You'll be joining a University with a proudly progressive vision. Since its "
+"founding, TIU has been empowering generations of people to think differently "
+"and take unconventional approaches to solve the pressing issues of our time."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:53
+msgid "Because we're a research-driven,"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:53
+msgid "Gold"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:53
+#, fuzzy
+#| msgid "Tashkent International University"
+msgid "-standard University"
+msgstr "Ташкентский Международный Университет"
+
+#: templates/pages/careers/hiring.html:54
+msgid ""
+"TIU is committed to academic excellence and impactful research. Our faculty "
+"contribute to internationally recognised journals, and we continuously "
+"invest in research infrastructure, innovation labs, and interdisciplinary "
+"collaboration."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:58
+msgid "Because we're a friendly community to discover your"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:58
+msgid "true"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:58
+msgid "potential"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:59
+msgid ""
+"At TIU, hospitality is more than a word — it's a way of life. We embody the "
+"genuine friendliness of Uzbekistan's culture. We want you to have a long-"
+"term career with us, so we'll support you every step of the way to help you "
+"succeed."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:63
+msgid "Because we're a University of the"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:63
+msgid "real"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:63
+msgid "world"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:64
+msgid ""
+"As an internationally-minded university, we partner with organisations, "
+"businesses, and community groups across Central Asia and beyond. Together, "
+"we drive innovation and growth, facilitate research, tackle regional "
+"challenges, and promote fairness."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:68
+msgid "Because we invest in"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:68
+msgid "your"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:68
+msgid "growth"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:69
+msgid ""
+"We offer competitive salaries, professional development opportunities, "
+"international conference funding, and a supportive environment where every "
+"team member can thrive. Your career growth is our priority."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:75
+msgid "Life at TIU"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:110
+msgid "Current Vacancies"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:111
+msgid "Open positions at TIU"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:116
+#: templates/pages/careers/job_detail.html:28
+#: templates/programs/program_detail.html:35
+msgid "Department"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:118
+msgid "All Departments"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:119
+msgid "School of IT & Engineering"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:120
+msgid "School of Business & Economics"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:121
+msgid "School of Law"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:122
+msgid "School of Humanities & Social Sciences"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:123
+msgid "Foundation Programme"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:124
+msgid "Administrative"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:128
+#: templates/pages/careers/job_detail.html:35
+msgid "Type"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:130
+msgid "All Types"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:131
+msgid "Full-time"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:132
+msgid "Part-time"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:136
+#: templates/pages/careers/job_detail.html:42
+msgid "Role"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:138
+msgid "All Roles"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:140
+msgid "Staff"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:143
+#, fuzzy
+#| msgid "Research"
+msgid "Reset"
+msgstr "Наука"
+
+#: templates/pages/careers/hiring.html:146
+msgid "Showing"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:146
+msgid "position"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:157
+msgid "Deadline:"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:162
+msgid "No open positions at the moment. Please check back later."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:168
+msgid "No positions match your filters. Try adjusting your criteria or"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:168
+msgid "reset all filters"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:177
+msgid "Ready to join TIU?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:178
+#: templates/pages/careers/job_detail.html:95
+msgid ""
+"Send your CV, cover letter, and relevant documents to our HR department. We "
+"review applications on a rolling basis and will contact shortlisted "
+"candidates for an interview."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:179
+#: templates/pages/careers/job_detail.html:96
+msgid "Apply now: hr@tiu.uz"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:187
+msgid "Working at TIU — FAQs"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:191
+msgid "What qualifications do I need to teach at TIU?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:195
+msgid ""
+"Academic positions typically require a Master's degree at minimum, with a "
+"PhD preferred for senior roles. Relevant teaching experience, research "
+"publications, and English language proficiency are also essential. Specific "
+"requirements vary by position."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:200
+msgid "Do you hire international faculty?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:204
+msgid ""
+"Yes, TIU actively recruits international faculty members. We provide visa "
+"support, relocation assistance, and competitive compensation packages for "
+"international hires. Our diverse faculty represents multiple nationalities."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:209
+msgid "What benefits does TIU offer employees?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:213
+msgid ""
+"Benefits include competitive salary, health insurance, professional "
+"development funding, conference travel support, subsidised meals on campus, "
+"and access to university facilities including the library, gym, and research "
+"labs."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:218
+msgid "How long does the hiring process take?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:222
+msgid ""
+"The typical process takes 3–6 weeks from application deadline to offer. This "
+"includes initial screening, a teaching demonstration or interview, and "
+"reference checks. We aim to communicate decisions promptly to all applicants."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:227
+msgid "Can I apply if there are no current openings in my field?"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:231
+msgid ""
+"Absolutely. You can send a speculative application to hr@tiu.uz with your CV "
+"and cover letter. We keep promising applications on file and will reach out "
+"when a suitable position becomes available."
+msgstr ""
+
+#: templates/pages/careers/hiring.html:247
+msgid "TIU Campus"
+msgstr ""
+
+#: templates/pages/careers/hiring.html:263
+#: templates/pages/careers/job_detail.html:111
+msgid "Alumni Network"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:9
+msgid "TIU Careers"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:22
+msgid "Position details"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:49
+msgid "Deadline"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:58
+msgid "Share this position"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:70
+msgid "Other open positions"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:82
+msgid "All open positions"
+msgstr ""
+
+#: templates/pages/careers/job_detail.html:94
+msgid "Interested in this position?"
+msgstr ""
+
+#: templates/pages/faculty/business-innovative-education.html:23
+msgid "Business and Innovative Education"
+msgstr ""
+
+#: templates/pages/faculty/jurisprudence.html:23
+msgid "Jurisprudence"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:9
+#: templates/pages/programs/by-faculty.html:19
+#: templates/pages/programs/by-faculty.html:22
+#: templates/pages/programs/by-level.html:43
+msgid "Programs by Faculty"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:24
+msgid ""
+"Explore our academic programmes organized by faculty — find the right "
+"department for your interests and career goals."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:35
+msgid "Two faculties."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:35
+msgid "Endless possibilities."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:36
+msgid ""
+"TIU's academic programmes are delivered through two faculties, each with "
+"dedicated departments, experienced faculty, and strong industry connections. "
+"Every programme is taught in English and designed to international standards."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:37
+msgid ""
+"Whether you're drawn to law, business, technology, or education, you'll find "
+"a programme that matches your ambitions and prepares you for a global career."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:41
+msgid "Browse by level instead?"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:42
+msgid "View all bachelor's, master's, and certificate programmes in one place."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:43
+#: templates/pages/programs/by-level.html:9
+#: templates/pages/programs/by-level.html:19
+#: templates/pages/programs/by-level.html:22
+msgid "Programs by Level"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:60
+msgid "International Law, Public Law, Human Rights, Constitutional Studies"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:63
+msgid ""
+"Programmes combining rigorous legal education with global perspectives. "
+"Students develop critical thinking, argumentation, and cross-cultural "
+"understanding through moot courts, debates, and research seminars."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:69
+#: templates/pages/programs/by-faculty.html:87
+#: templates/programs/program_list.html:79
+msgid "Learn more"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:78
+msgid "Business, IT, Engineering, Economics, Education"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:81
+msgid ""
+"Programmes focused on business leadership, technology, and innovative "
+"education. Students gain hands-on experience through lab projects, case "
+"studies, internships, and partnerships with leading employers."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:96
+msgid "Find your programme"
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:97
+msgid ""
+"Not sure which faculty is right for you? Get in touch and our admissions "
+"team will help you choose."
+msgstr ""
+
+#: templates/pages/programs/by-faculty.html:100
+#, fuzzy
+#| msgid "Admissions"
+msgid "Contact Admissions"
+msgstr "Приём"
+
+#: templates/pages/programs/by-faculty.html:111
+#: templates/pages/programs/by-level.html:146
+#, fuzzy
+#| msgid "International"
+msgid "International Programs"
+msgstr "Международный"
+
+#: templates/pages/programs/by-level.html:24
+msgid ""
+"Browse our academic programmes by degree level — bachelor's, master's, or "
+"PhD."
+msgstr ""
+
+#: templates/pages/programs/by-level.html:35
+msgid "Choose your level."
+msgstr ""
+
+#: templates/pages/programs/by-level.html:35
+msgid "Build your future."
+msgstr ""
+
+#: templates/pages/programs/by-level.html:36
+msgid ""
+"TIU offers programmes at three levels: bachelor's degrees for school leavers "
+"and transfer students, master's degrees for those seeking advanced "
+"expertise, and PhD programmes for researchers and academics pursuing "
+"original scholarship."
+msgstr ""
+
+#: templates/pages/programs/by-level.html:37
+msgid ""
+"All programmes are taught in English and follow international academic "
+"standards. Many include options for dual diplomas, exchange semesters, and "
+"industry placements."
+msgstr ""
+
+#: templates/pages/programs/by-level.html:41
+msgid "Browse by faculty instead?"
+msgstr ""
+
+#: templates/pages/programs/by-level.html:42
+msgid "See which programmes each department offers."
+msgstr ""
+
+#: templates/pages/programs/by-level.html:58
+msgid "4 years — 240 ECTS credits"
+msgstr ""
+
+#: templates/pages/programs/by-level.html:84
+msgid "2 years — 120 ECTS credits"
+msgstr ""
+
+#: templates/pages/programs/by-level.html:110
+msgid "3-4 years — full-time research"
+msgstr ""
+
+#: templates/pages/programs/by-level.html:131
+#: templates/programs/program_detail.html:118
+msgid "Ready to apply?"
+msgstr ""
+
+#: templates/pages/programs/by-level.html:132
+msgid ""
+"Start your application today or contact our admissions team to learn more "
+"about any programme."
+msgstr ""
+
+#: templates/pages/search-results.html:13
+msgid "Search news, events, programs..."
+msgstr ""
+
+#: templates/pages/search-results.html:25
+msgid "No results found"
+msgstr ""
+
+#: templates/pages/search-results.html:26
+msgid "Try different keywords or check the spelling."
+msgstr ""
+
+#: templates/pages/search-results.html:95
+msgid "Enter a search term above to find news, events, programs, and more."
+msgstr ""
+
+#: templates/programs/department_detail.html:36
+msgid "No programs in this department yet."
+msgstr ""
+
+#: templates/programs/program_detail.html:22
+msgid "Programme details"
+msgstr ""
+
+#: templates/programs/program_detail.html:28
+msgid "Level"
+msgstr ""
+
+#: templates/programs/program_detail.html:43
+msgid "Duration"
+msgstr ""
+
+#: templates/programs/program_detail.html:51
+msgid "Study Type"
+msgstr ""
+
+#: templates/programs/program_detail.html:58
+msgid "Language"
+msgstr ""
+
+#: templates/programs/program_detail.html:66
+msgid "Tuition Fee"
+msgstr ""
+
+#: templates/programs/program_detail.html:76
+msgid "Share this programme"
+msgstr ""
+
+#: templates/programs/program_detail.html:88
+msgid "Related programmes"
+msgstr ""
+
+#: templates/programs/program_detail.html:100
+msgid "All"
+msgstr ""
+
+#: templates/programs/program_detail.html:100
+msgid "programmes"
+msgstr ""
+
+#: templates/programs/program_detail.html:119
+msgid ""
+"Start your application today or contact our admissions team to learn more "
+"about this programme."
+msgstr ""
+
+#: templates/programs/program_detail.html:120
+msgid "Apply now"
+msgstr ""
+
+#: templates/programs/program_detail.html:132
+#: templates/programs/program_list.html:43
+#, fuzzy
+#| msgid "Academic Programs"
+msgid "All Programmes"
+msgstr "Учебные программы"
+
+#: templates/programs/program_list.html:27
+msgid ""
+"Explore our range of internationally recognized programmes designed to "
+"prepare you for a successful career."
+msgstr ""
+
+#: templates/programs/program_list.html:39
+msgid "Search programmes by name, school, or keyword..."
+msgstr ""
+
+#: templates/programs/program_list.html:55
+msgid "programme"
+msgstr ""
+
+#: templates/programs/program_list.html:55
+msgid "found"
+msgstr ""
+
+#: templates/programs/program_list.html:76
+msgid "English"
+msgstr ""
+
+#: templates/programs/program_list.html:85
+msgid "No programmes available at this level yet. Please check back soon."
+msgstr ""
+
+#: templates/programs/program_list.html:93
+msgid "No programmes match your search. Try a different keyword."
+msgstr ""

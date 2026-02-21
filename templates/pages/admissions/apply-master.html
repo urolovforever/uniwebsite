@@ -1,0 +1,284 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Apply for Master's" %} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Admissions" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Apply — Master's" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Admissions" %}</div>
+        <h1 class="page-hero-title">{% trans "Apply for a Master's Degree" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Take the next step in your academic career. Here's everything you need to know about applying for a Master's programme at TIU." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Centered Statement -->
+<section class="tuition-statement">
+    <div class="container">
+        <h2>{% trans "Advance your career with a" %}<br>{% trans "world-class postgraduate degree" %}</h2>
+        <p>{% trans "Whether you're deepening your expertise or changing career direction, TIU's Master's programmes combine rigorous academics with real-world application. All programmes are taught in English by international faculty with industry experience." %}</p>
+    </div>
+</section>
+
+<!-- How to Apply — Steps -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>{% trans "How to apply in 5 simple steps" %}</h2>
+            <p>{% trans "From choosing your programme to accepting your offer" %}</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>{% trans "Choose" %}</h3>
+                <p>{% trans "Browse our Master's programmes and select the one that aligns with your career goals and academic background" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>{% trans "Prepare" %}</h3>
+                <p>{% trans "Gather your documents: bachelor's diploma, transcripts, English test results, CV, and recommendation letters" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>{% trans "Apply Online" %}</h3>
+                <p>{% trans "Complete the application form and upload your documents through our online portal" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>{% trans "Assessment" %}</h3>
+                <p>{% trans "Our admissions committee reviews your application. You may be invited for an interview to discuss your research interests" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>{% trans "Accept & Enrol" %}</h3>
+                <p>{% trans "Receive your offer, confirm your place, and complete enrolment before the semester starts" %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Requirements — Sticky Left + Checklist Right -->
+<section class="intl-requirements-section">
+    <div class="container">
+        <div class="intl-requirements-grid">
+            <div class="intl-requirements-text">
+                <span class="intl-requirements-label">{% trans "Entry Requirements" %}</span>
+                <h2>{% trans "What you need to apply" %}</h2>
+                <p>{% trans "Make sure you have the following documents ready. All materials should be in English, Uzbek, or Russian — or accompanied by a certified translation." %}</p>
+            </div>
+            <div class="intl-requirements-list">
+                <div class="intl-req-item">
+                    <div class="intl-req-num">01</div>
+                    <div>
+                        <strong>{% trans "Bachelor's Degree Diploma" %}</strong>
+                        <span>{% trans "Completed undergraduate degree from an accredited institution with official transcript of academic records" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">02</div>
+                    <div>
+                        <strong>{% trans "English Language Proficiency" %}</strong>
+                        <span>{% trans "IELTS 6.0+ / TOEFL 80+ / CEFR B2–C1, or pass TIU's internal English placement test" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">03</div>
+                    <div>
+                        <strong>{% trans "Curriculum Vitae (CV)" %}</strong>
+                        <span>{% trans "An up-to-date CV highlighting your education, work experience, and relevant achievements" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">04</div>
+                    <div>
+                        <strong>{% trans "Statement of Purpose" %}</strong>
+                        <span>{% trans "A personal statement (500–800 words) outlining your academic interests, career goals, and motivation for the programme" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">05</div>
+                    <div>
+                        <strong>{% trans "Letters of Recommendation" %}</strong>
+                        <span>{% trans "Two academic or professional references from individuals who can speak to your qualifications and potential" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">06</div>
+                    <div>
+                        <strong>{% trans "Passport or National ID" %}</strong>
+                        <span>{% trans "Valid passport for international applicants, or national ID for Uzbek citizens" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">07</div>
+                    <div>
+                        <strong>{% trans "Passport-size Photos" %}</strong>
+                        <span>{% trans "2 recent photographs (3.5 x 4.5 cm) on white background" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accommodation-style Box — Research Focus -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "Don't have a Bachelor's yet?" %}</div>
+                    <h2>{% trans "Explore our Bachelor's Programmes" %}</h2>
+                    <p>{% trans "If you haven't completed your undergraduate degree yet, take a look at our Bachelor's programmes. Build a strong academic foundation before progressing to postgraduate study at TIU." %}</p>
+                    <a href="{% url 'core:apply_bachelor' %}" class="accommodation-link">{% trans "Apply for Bachelor's" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "Graduate students at TIU" %}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Available Programmes — List -->
+<section class="bachelor-programmes-section">
+    <div class="container">
+        <div class="bachelor-programmes-header">
+            <span class="bachelor-programmes-label">{% trans "Available Programmes" %}</span>
+            <h2>{% trans "Master's degrees at TIU" %}</h2>
+        </div>
+        <div class="bachelor-programmes-list">
+            {% for prog in programs %}
+            <a href="{{ prog.get_absolute_url }}" class="bachelor-prog-link">
+                <span>{{ prog|trans_field:"title" }}</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            {% empty %}
+            <p style="text-align:center;padding:1rem;color:#666;">{% trans "No programmes available at the moment." %}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Key Dates CTA -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>{% trans "Master's application deadline: 15 July 2026" %}</h2>
+            <p>{% trans "Applications for Fall 2026 intake are now open. Apply early to maximise your chances and allow time for document processing." %}</p>
+            <a href="{% url 'core:static_page' url_path='admissions/deadlines' %}" class="deadlines-cta-link">{% trans "View all key dates" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>{% trans "Master's Application FAQs" %}</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What GPA do I need from my Bachelor's degree?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "There is no strict minimum GPA requirement. However, competitive applicants typically hold a Bachelor's degree with a GPA of 3.0 or above (or equivalent). Each application is assessed holistically, considering your academic record, professional experience, and motivation." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I apply if I'm still completing my Bachelor's degree?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes. Final-year undergraduate students can apply with a provisional transcript. If accepted, your offer will be conditional on successfully completing your Bachelor's degree and meeting the stated requirements before enrolment." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Do I need work experience to apply?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Work experience is not mandatory for most Master's programmes. However, for the MBA programme, at least one year of professional experience is strongly recommended. Relevant work experience strengthens any application and is considered during the review process." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Is there an entrance exam for Master's programmes?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Most Master's programmes do not require an entrance exam. Admission is based on your academic documents, statement of purpose, recommendations, and English proficiency. Some programmes may include an interview as part of the assessment process." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What is the tuition fee for Master's programmes?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Tuition fees vary by programme, ranging from approximately 18,000,000 to 28,000,000 UZS per year. Scholarships of up to 100% are available for high-achieving students. Visit our" %} <span>{% trans "Tuition & Fees" %}</span> {% trans "page for full details." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I study part-time?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Some Master's programmes, such as Public Administration, are available in part-time format, allowing you to balance studies with professional commitments. Check the specific programme page for available study modes." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='admissions/how-to-apply' %}" class="explore-more-link">{% trans "How to Apply" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="explore-more-link">{% trans "Requirements" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:tuition_fees' %}" class="explore-more-link">{% trans "Tuition & Fees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:scholarships' %}" class="explore-more-link">{% trans "Scholarships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/faqs' %}" class="explore-more-link">{% trans "FAQs" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}Mission & Vision - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Mission & Vision</span>
+        </nav>
+        <div class="page-hero-category">About TIU</div>
+        <h1 class="page-hero-title">Mission & Vision</h1>
+        <div class="page-hero-description">
+            <p>Shaping the future through education, innovation, and global partnerships that empower the next generation of leaders.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Strategy Intro -->
+<section class="strategy-intro">
+    <div class="container">
+        <h2><em>Together on the frontier of education's future</em></h2>
+        <p>TIU Strategy 2030 is our roadmap for the next decade — a bold plan to become Central Asia's most internationally connected university. It sets out how we will expand global partnerships, pioneer dual-degree pathways, and empower every student to build a career without borders.</p>
+        <p>From strengthening research and innovation to deepening our ties with industry and communities, Strategy 2030 defines who we are, where we're heading, and how we'll get there — together.</p>
+        <a href="#" class="split-link">Download Strategy 2030 <span class="btn-meta">PDF | 1.9MB</span> <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Mission Block -->
+<section class="mission-block">
+    <div class="mission-block-inner">
+        <div class="mission-block-text">
+            <span class="mission-block-label">Our Mission</span>
+            <h2>An exceptional education for the <em>many</em></h2>
+            <p>Our mission, as established in our founding charter, is to:</p>
+            <blockquote>
+                "...advance education, bridge cultures, and empower students through world-class teaching and global partnerships, for the benefit of individuals, Uzbekistan, and the world."
+            </blockquote>
+            <p>We believe where you're from shouldn't decide how far you can go. At TIU, it's more about <em>what</em> you know than <em>who</em> you know. And everyone is empowered to achieve in their own way.</p>
+            <p>As one of Uzbekistan's pioneering international universities, we have a bold commitment to academic excellence and a vision of creating life-changing opportunities through education. We'll build on this foundation to fulfil our strategy.</p>
+        </div>
+        <div class="mission-block-image">
+            <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU Student" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Vision Section -->
+<section class="vision-block">
+    <div class="container">
+        <span class="vision-block-label">Our Vision</span>
+        <h2>Shaping a brighter, bolder future <em>for all</em></h2>
+        <p>The world is more connected than ever, yet access to quality education remains unequal. Think of the barriers facing young people across Central Asia. The gap between potential and opportunity. Motivated by these challenges and inspired by the power of international collaboration, we're building a fairer, brighter future.</p>
+        <p>Founded as Uzbekistan's first truly international university, TIU has been pioneering dual-degree education and cross-border learning from the start. Contributing to education, research, and the social, economic, and cultural growth of our region. We'll continue this work into the next decade and beyond. But <em>more</em> than that...</p>
+        <p>As an internationally engaged university, we address the challenges facing our society. Sharing solutions across borders in an increasingly connected world. And guided at every turn by the dedication of our <em>people</em>, our strong sense of <em>place</em>, and the vitality of our <em>partnerships</em>.</p>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+    <div class="container">
+        <span class="values-label">Our Values</span>
+
+        <!-- Value 1: Inclusive — image right -->
+        <div class="value-block">
+            <div class="value-text">
+                <h2>We're <em>inclusive</em></h2>
+                <p>A supportive, global community of students, scholars, and partners. The true spirit of international friendship. Where everyone can grow into who, what, and where they want to be in the world.</p>
+                <h3>A welcoming community to discover your true potential</h3>
+                <ul>
+                    <li>We provide a safe, friendly, and welcoming environment for all, where our differences are celebrated</li>
+                    <li>We help each and every one of our students, staff, and partners to achieve their full potential with a personal, supportive approach</li>
+                    <li>We celebrate individual and collective success</li>
+                    <li>We're mindful of the positive impact of what we each do, every day, on other individuals and communities both near and far</li>
+                </ul>
+            </div>
+            <div class="value-image">
+                <img src="{% static 'img/campus/c5.jpg' %}" alt="Inclusive community" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Value 2: Empowering — image left -->
+        <div class="value-block reverse">
+            <div class="value-text">
+                <h2>We're <em>empowering</em></h2>
+                <p>A civic university equipping people to understand the defining issues of our time. And empowering them to act and shape their personal and collective future for the better.</p>
+                <h3>Defying convention to break new ground</h3>
+                <ul>
+                    <li>We empower people to succeed, recognizing that with empowerment comes responsibility and accountability</li>
+                    <li>We build people's confidence through understanding, knowledge, skills, and experience</li>
+                    <li>We stretch people's minds and help them develop new ways of thinking that will help shape a fairer, brighter future</li>
+                    <li>Through equal opportunity, we ensure everyone has the opportunity to shine</li>
+                </ul>
+            </div>
+            <div class="value-image">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="Empowering students" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Value 3: Progressive — image right -->
+        <div class="value-block">
+            <div class="value-text">
+                <h2>We're <em>progressive</em></h2>
+                <p>A living laboratory. A place where all students, scholars, and partners from every faculty collaborate hands-on. Where we generate new thinking in defiance of traditional academic barriers and conventions.</p>
+                <h3>Driven by an unwavering desire for progress</h3>
+                <ul>
+                    <li>We set high standards and challenge ourselves and others to deliver meaningful progress with tangible outcomes</li>
+                    <li>We follow and develop best practice across all areas of our activity</li>
+                    <li>We work at pace and are always future-facing and, with agility, ready to adapt</li>
+                    <li>We learn to be self-reflective so we can seek improvement, make an even bigger difference, and embrace a different future</li>
+                </ul>
+            </div>
+            <div class="value-image">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="Progressive thinking" loading="lazy">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/why-tiu/" class="explore-more-link">Why TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/campus-map/" class="explore-more-link">Campus Map <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/sustainability/" class="explore-more-link">Sustainability <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

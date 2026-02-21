@@ -1,0 +1,275 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Support - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/c5.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Contact</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Support</span>
+        </nav>
+        <div class="page-hero-category">Contact</div>
+        <h1 class="page-hero-title">Support</h1>
+        <div class="page-hero-description">
+            <p>Whatever you need, whenever you need it — TIU's support services are here to help you thrive academically, personally, and professionally.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Support Services Carousel (Hull-inspired) -->
+<section class="support-services">
+    <div class="support-services-inner">
+        <div class="support-services-header">
+            <h2>Support to fit your every need</h2>
+            <p>As a TIU student, you have access to a wide range of services and resources designed to support you both personally and academically. Here are just some of the things we offer.</p>
+        </div>
+        <div class="support-carousel-wrapper">
+            <div class="support-carousel" id="supportCarousel">
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <p><strong>Mental health</strong> and wellbeing counseling — free and confidential for all students</p>
+                    <a href="#" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <p><strong>Academic advising</strong> to help you choose the right courses and plan your pathway</p>
+                    <a href="#" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <p><strong>IT support</strong> for LMS access, email setup, Wi-Fi, and all technical needs</p>
+                    <a href="/current-students/it-services/" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <p>Full <strong>library access</strong> with study spaces, e-resources, and research support</p>
+                    <a href="/current-students/library/" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p><strong>Career guidance</strong> and CV workshops to prepare you for life after university</p>
+                    <a href="/careers/career-center/" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <p><strong>Housing support</strong> to help you find safe, comfortable accommodation on or near campus</p>
+                    <a href="/current-students/housing/" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <p><strong>International student</strong> support — visa help, orientation, and cultural integration</p>
+                    <a href="/international/" class="support-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="support-carousel-nav">
+            <span class="support-carousel-counter" id="supportCounter">01/07</span>
+            <div class="support-carousel-arrows">
+                <button class="support-carousel-arrow" id="supportPrev"><i class="fas fa-arrow-left"></i></button>
+                <button class="support-carousel-arrow" id="supportNext"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 24/7 Online Support (accommodation-style box) -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">24/7 Online Support</div>
+                    <h2>Need help <em>outside</em> office hours? We've got you covered.</h2>
+                    <p>Our online student portal gives you access to support resources around the clock. Submit requests, track progress, browse self-help guides, and connect with advisors — all from your phone or laptop.</p>
+                    <p>Whether it's 2 PM or 2 AM, <strong>help is always just a click away.</strong></p>
+                    <a href="/current-students/it-services/" class="accommodation-link">IT Services <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/c2.jpg' %}" alt="Student using online support" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Three Column Support Highlights (Hull-inspired) -->
+<section class="support-columns">
+    <div class="container">
+        <div class="support-columns-grid">
+            <div class="support-column">
+                <h2>Get <em>ahead</em> with academic support</h2>
+                <p>From study skills workshops and writing assistance to one-on-one tutoring and exam preparation — our academic support team is here to ensure no student falls behind.</p>
+                <p>We also run regular peer mentoring sessions, group study programmes, and intensive revision workshops during exam season.</p>
+                <a href="/current-students/library/" class="support-column-link">Academic resources <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="support-column">
+                <h2>Your wellbeing comes first, <em>always</em></h2>
+                <p>University life is exciting — but it can also be challenging. Our professional counselors offer free, confidential sessions to help you manage stress, anxiety, homesickness, or anything else on your mind.</p>
+                <p>And our support doesn't end at graduation. As a TIU student, the wellbeing team is there for you — for the duration of your studies and beyond.</p>
+                <a href="#" class="support-column-link">Book a session <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="support-column">
+                <h2>You didn't come this far by <em>holding back</em></h2>
+                <p>Make sure you're connected to all the resources available to you. From career guidance and internship placements to financial aid and emergency support.</p>
+                <p>Stay up to date with the latest opportunities, workshops, and events designed to help you succeed — academically, professionally, and personally.</p>
+                <a href="/careers/career-center/" class="support-column-link">Career support <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Peer Support CTA (mint box) -->
+<section class="support-cta-box-section">
+    <div class="container">
+        <div class="support-cta-box">
+            <div class="support-cta-box-content">
+                <h2>Every student deserves someone in their corner</h2>
+                <p>Sometimes the best support comes from someone who's been through it. Our peer mentoring programme connects you with experienced students who can offer guidance, encouragement, and honest advice about university life.</p>
+                <p>Whether you're a first-year finding your feet or a senior preparing for graduation — there's a mentor ready to help you navigate what's next.</p>
+                <a href="/current-students/clubs/" class="split-link">Become a mentor <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="support-cta-box-image">
+                <img src="{% static 'img/campus/c5.jpg' %}" alt="Student peer mentoring" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Support FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How do I access counseling services?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>You can book a counseling session online through the student portal, email studentlife@tiu.uz, or visit the Student Affairs office during walk-in hours (Monday-Friday, 10:00 AM - 12:00 PM). All sessions are free and confidential.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>I'm struggling with my coursework. Where do I get help?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Start by speaking with your course instructor or academic advisor. You can also visit the Academic Support Centre for tutoring, study skills workshops, and writing assistance. The library also offers research support sessions.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>I'm having technical issues with the LMS. Who do I contact?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Contact IT Support by emailing it@tiu.uz or visiting the IT Help Desk on campus. For urgent issues during class hours, you can also call the IT hotline. Most issues are resolved within the same day.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can international students get visa and immigration support?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. The International Office provides full visa and immigration support for all international students, including document preparation, registration assistance, and renewal guidance. Contact international@tiu.uz for help.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there financial aid or emergency funding available?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>TIU offers scholarships and financial aid options. If you're experiencing financial hardship, contact the Finance Office at finance@tiu.uz to discuss your situation. We also have an emergency fund for students facing unexpected circumstances.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/contact/contact-info/" class="explore-more-link">Contact Info <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact/rector-reception/" class="explore-more-link">Rector's Reception <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact/send/" class="explore-more-link">Send a Message <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var carousel = document.getElementById('supportCarousel');
+    var counter = document.getElementById('supportCounter');
+    var prevBtn = document.getElementById('supportPrev');
+    var nextBtn = document.getElementById('supportNext');
+    var cards = carousel.querySelectorAll('.support-card');
+    var total = cards.length;
+    var current = 0;
+
+    function getStep() {
+        return cards[0].offsetWidth + 20;
+    }
+
+    function getVisible() {
+        return Math.floor(carousel.parentElement.offsetWidth / getStep()) || 1;
+    }
+
+    function goTo(index) {
+        var max = Math.max(0, total - getVisible());
+        current = Math.max(0, Math.min(index, max));
+        carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+        var display = String(current + 1).padStart(2, '0') + '/' + String(total).padStart(2, '0');
+        counter.textContent = display;
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+})();
+
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,407 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}Our Campus - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Our Campus</span>
+        </nav>
+        <div class="page-hero-category">Life at TIU</div>
+        <h1 class="page-hero-title">Discover Our Campus</h1>
+        <div class="page-hero-description">
+            <p>Live, learn and make friends on our modern single-site campus. With teaching spaces, accommodation, sports facilities and social areas all close by, you'll feel right at home from day one.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Campus Intro (centered) -->
+<section class="campus-intro">
+    <div class="container">
+        <h2>Cross campus in <strong>10 minutes</strong></h2>
+        <p>Our campus on Little Ring Road 7 in Tashkent puts everything you need within a short walk. Modern classrooms, a well-stocked library, sports center, cafeteria, and green outdoor spaces — all designed to support your studies and social life.</p>
+        <a href="#" class="split-link">Take a Virtual Tour <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Interactive Campus Map -->
+<section class="campus-map-section">
+    <div class="container">
+        <div class="campus-map-label"><i class="far fa-hand-pointer"></i> Tap pins to explore</div>
+        <div class="campus-map-wrapper">
+            <img src="{% static 'img/hero/back1.jpg' %}" alt="TIU Campus Aerial View" loading="lazy">
+            <div class="map-pin" style="top: 35%; left: 30%;" onclick="togglePin(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="pin-tooltip">
+                    <span class="pin-name">Main Academic Building</span>
+                    <span class="pin-desc">Home to lecture halls, seminar rooms, and faculty offices across all four departments</span>
+                </span>
+            </div>
+            <div class="map-pin" style="top: 45%; left: 55%;" onclick="togglePin(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="pin-tooltip">
+                    <span class="pin-name">Library & Study Center</span>
+                    <span class="pin-desc">Thousands of books and digital resources, quiet study rooms, and collaborative spaces</span>
+                </span>
+            </div>
+            <div class="map-pin" style="top: 25%; left: 70%;" onclick="togglePin(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="pin-tooltip">
+                    <span class="pin-name">Sports Center</span>
+                    <span class="pin-desc">Multi-court sports hall, gym, and outdoor pitches for students and staff</span>
+                </span>
+            </div>
+            <div class="map-pin" style="top: 60%; left: 40%;" onclick="togglePin(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="pin-tooltip">
+                    <span class="pin-name">Student Cafeteria</span>
+                    <span class="pin-desc">Fresh, affordable meals served daily with vegetarian and dietary options</span>
+                </span>
+            </div>
+            <div class="map-pin" style="top: 50%; left: 20%;" onclick="togglePin(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="pin-tooltip">
+                    <span class="pin-name">Administration</span>
+                    <span class="pin-desc">Admissions, student services, finance, and the Rector's Reception</span>
+                </span>
+            </div>
+            <div class="map-pin" style="top: 70%; left: 65%;" onclick="togglePin(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="pin-tooltip">
+                    <span class="pin-name">Student Housing</span>
+                    <span class="pin-desc">On-campus accommodation just steps away from classes and facilities</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Welcome Section (teal background, text + video) -->
+<section class="campus-welcome">
+    <div class="container">
+        <div class="campus-welcome-grid">
+            <div class="campus-welcome-content">
+                <h2>Looking for next? Welcome to <em>TIU.</em></h2>
+                <p>Step onto a campus designed for the future. From smart classrooms and collaborative study spaces to a vibrant student community — discover why TIU feels like home from the moment you arrive.</p>
+            </div>
+            <div class="campus-welcome-video">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="Campus Video Preview" loading="lazy">
+                <div class="campus-welcome-video-caption">
+                    <div class="caption-title">A day in the life at TIU</div>
+                    <div class="caption-duration">2 mins</div>
+                </div>
+                <div class="video-play-btn"><i class="fas fa-play"></i> Watch</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section (heading + dark navy card carousel) -->
+<section class="campus-stats-section">
+    <div class="campus-stats-heading">
+        <h2>Up-to-the-minute facilities to live <em>and</em> learn</h2>
+        <p>Our campus is home to modern teaching spaces, a well-equipped library, sports facilities, and comfortable student accommodation. Alongside these, you'll find collaborative study areas, green outdoor spaces, and everything you need for university life — all in one place.</p>
+    </div>
+    <div class="campus-stats-carousel">
+        <div class="campus-stats-track" id="statsTrack">
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-building"></i></div>
+                <div class="campus-stat-number">4</div>
+                <div class="campus-stat-text">Academic departments under one roof</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-language"></i></div>
+                <div class="campus-stat-number">100%</div>
+                <div class="campus-stat-text">English-medium instruction in every classroom</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-book-open"></i></div>
+                <div class="campus-stat-number">10+</div>
+                <div class="campus-stat-text">Study spaces across campus</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-dumbbell"></i></div>
+                <div class="campus-stat-number">Modern</div>
+                <div class="campus-stat-text">Sports hall, gym, and outdoor pitches</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-wifi"></i></div>
+                <div class="campus-stat-number">24/7</div>
+                <div class="campus-stat-text">Wi-Fi across the entire campus</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-utensils"></i></div>
+                <div class="campus-stat-number">On-site</div>
+                <div class="campus-stat-text">Cafeteria serving fresh meals daily</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-globe-americas"></i></div>
+                <div class="campus-stat-number">10+</div>
+                <div class="campus-stat-text">Partner universities worldwide</div>
+            </div>
+            <div class="campus-stat-card">
+                <div class="campus-stat-icon"><i class="fas fa-home"></i></div>
+                <div class="campus-stat-number">On-campus</div>
+                <div class="campus-stat-text">Student accommodation available</div>
+            </div>
+        </div>
+    </div>
+    <div class="campus-stats-nav">
+        <div class="campus-stats-counter">
+            <span class="current-stat">01</span>/<span class="total-stat">08</span>
+        </div>
+        <button class="campus-stats-arrow" id="statsPrev" aria-label="Previous">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="campus-stats-arrow" id="statsNext" aria-label="Next">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</section>
+
+<!-- Facility Showcase (stacked full-viewport slides) -->
+<div class="facility-showcase">
+    <section class="facility-slide" style="background-image: url('{% static 'img/campus/c3.jpg' %}');">
+        <div class="facility-slide-content">
+            <div class="facility-slide-label">Accommodation</div>
+            <h2>Start a city break that <strong>never ends</strong></h2>
+            <p>Our on-campus housing puts you steps away from lectures, the library, and your friends. Roll out of bed and into your studies — no commute, no stress.</p>
+            <a href="/current-students/housing/" class="facility-slide-link">Accommodation <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <button class="facility-pause"><i class="fas fa-pause"></i></button>
+    </section>
+
+    <section class="facility-slide" style="background-image: url('{% static 'img/campus/c5.jpg' %}');">
+        <div class="facility-slide-content">
+            <div class="facility-slide-label">Library</div>
+            <h2>Travel the world from your <strong>reading chair</strong></h2>
+            <p>Physical and digital resources, international databases, quiet study rooms, and collaborative group spaces. Whether you need silence or teamwork, there's a corner for you.</p>
+            <a href="/current-students/library/" class="facility-slide-link">E-Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <button class="facility-pause"><i class="fas fa-pause"></i></button>
+    </section>
+
+    <section class="facility-slide" style="background-image: url('{% static 'img/campus/c6.jpg' %}');">
+        <div class="facility-slide-content">
+            <div class="facility-slide-label">Sports</div>
+            <h2>Sports facilities fit for <strong>every body</strong></h2>
+            <p>From the gym and multi-court sports hall to outdoor pitches and fitness classes — stay active, competitive, or just have fun. All on campus, all for you.</p>
+            <a href="/current-students/sports/" class="facility-slide-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <button class="facility-pause"><i class="fas fa-pause"></i></button>
+    </section>
+</div>
+
+<!-- More to Explore (accordion left + paired image right) -->
+<section class="explore-list">
+    <div class="container">
+        <div class="explore-list-header">
+            <h2>More to explore on campus</h2>
+        </div>
+
+        <div class="explore-list-grid">
+            <div class="explore-list-items">
+                <div class="explore-item">
+                    <button class="explore-item-header active" data-image="{% static 'img/campus/c5.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">Smart Classrooms & Lecture Halls</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body show">
+                        <p>Our classrooms are equipped with the latest presentation technology, comfortable seating, and layouts designed for collaboration. Whether it's a large lecture or a small seminar, the space adapts to how you learn best.</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/c4.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">IT Labs & Digital Resources</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>Computer labs with high-speed internet, licensed software, and printing facilities. Our IT services team provides technical support and ensures all digital infrastructure runs smoothly.</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/c7.jpeg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">Cafeteria & Food Options</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>The campus cafeteria serves fresh, affordable meals throughout the day — from hearty lunches to quick snacks and coffee between classes. Vegetarian and dietary options are always available.</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/b3.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">Green Spaces & Outdoor Areas</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>Landscaped gardens, tree-lined walkways, and outdoor seating areas give you places to relax, study, or meet friends between lectures. Fresh air and green views are never far away.</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/c2.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">Health & Wellbeing</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>Your wellbeing matters. Campus support services include counseling, health advice, and wellness programs designed to keep you physically and mentally healthy throughout your studies.</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/hero/back.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">Getting Here — Transport & Parking</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>TIU is accessible by bus, metro, and taxi from all parts of Tashkent. The nearest metro station is a short walk away, multiple bus routes stop directly outside campus, and parking is available on site.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paired image that changes per accordion item -->
+            <div class="explore-list-image">
+                <img id="exploreImage" src="{% static 'img/campus/c5.jpg' %}" alt="Campus Feature" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Virtual Tour CTA (full-width bg with teal overlay card) -->
+<section class="virtual-tour-cta" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="virtual-tour-card">
+        <div class="virtual-tour-card-label">Virtual Tour</div>
+        <h2>Visit our campus <em>before</em> you arrive</h2>
+        <p>Explore every corner of TIU from wherever you are. Our virtual tour lets you walk through classrooms, the library, sports facilities, and student spaces — all from your screen.</p>
+        <a href="#" class="split-link">Start virtual tour <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/why-tiu/" class="explore-more-link">Why TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/mission-vision/" class="explore-more-link">Mission & Vision <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/sustainability/" class="explore-more-link">Sustainability <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// === Map Pin Toggle (click to show/hide tooltip) ===
+function togglePin(pin) {
+    const wasActive = pin.classList.contains('active');
+    // Close all pins
+    document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('active'));
+    // Toggle clicked pin
+    if (!wasActive) {
+        pin.classList.add('active');
+    }
+}
+// Close pins when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.map-pin')) {
+        document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('active'));
+    }
+});
+
+// === Stats Carousel ===
+(function() {
+    const track = document.getElementById('statsTrack');
+    const prevBtn = document.getElementById('statsPrev');
+    const nextBtn = document.getElementById('statsNext');
+    const counter = document.querySelector('.campus-stats-counter');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const cards = track.querySelectorAll('.campus-stat-card');
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    const cardWidth = 286; // 270px card + 16px gap
+
+    function updateStats() {
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        if (counter) {
+            counter.querySelector('.current-stat').textContent = String(currentIndex + 1).padStart(2, '0');
+            counter.querySelector('.total-stat').textContent = String(totalCards).padStart(2, '0');
+        }
+    }
+
+    prevBtn.addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateStats();
+        }
+    });
+
+    nextBtn.addEventListener('click', function() {
+        const containerWidth = track.parentElement.offsetWidth;
+        const visibleCards = Math.floor(containerWidth / cardWidth);
+        const maxScroll = Math.max(0, totalCards - visibleCards);
+        if (currentIndex < maxScroll) {
+            currentIndex++;
+            updateStats();
+        }
+    });
+})();
+
+// === Accordion with paired image ===
+function toggleExploreWithImage(btn) {
+    const body = btn.parentElement.querySelector('.explore-item-body');
+    const wasActive = btn.classList.contains('active');
+
+    // Close all
+    document.querySelectorAll('.explore-item-header').forEach(h => h.classList.remove('active'));
+    document.querySelectorAll('.explore-item-body').forEach(b => b.classList.remove('show'));
+
+    // Toggle current
+    if (!wasActive) {
+        btn.classList.add('active');
+        body.classList.add('show');
+
+        // Update paired image
+        const imgSrc = btn.getAttribute('data-image');
+        const exploreImg = document.getElementById('exploreImage');
+        if (imgSrc && exploreImg) {
+            exploreImg.style.opacity = '0';
+            setTimeout(function() {
+                exploreImg.src = imgSrc;
+                exploreImg.style.opacity = '1';
+            }, 250);
+        }
+    }
+}
+</script>
+{% endblock %}

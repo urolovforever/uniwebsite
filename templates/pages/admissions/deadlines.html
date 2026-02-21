@@ -1,0 +1,291 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Deadlines & Key Dates - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Admissions</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Deadlines & Key Dates</span>
+        </nav>
+        <div class="page-hero-category">Admissions</div>
+        <h1 class="page-hero-title">Deadlines & Key Dates</h1>
+        <div class="page-hero-description">
+            <p>Stay on track with important admission deadlines, semester dates, and key events throughout the academic year.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Dates Header Bar -->
+<section class="dates-header-bar">
+    <div class="container">
+        <h2>Dates for 2025/26</h2>
+        <p>See key dates for this academic year listed below.</p>
+    </div>
+</section>
+
+<!-- Academic Calendar - Three Semesters -->
+<section class="academic-calendar">
+    <div class="container">
+        <div class="semesters-grid">
+
+            <!-- Semester 1 -->
+            <div class="semester-column">
+                <div class="semester-date-range">SEPTEMBER 2025 - JANUARY 2026</div>
+                <h3 class="semester-title">Semester 1</h3>
+                <div class="semester-events">
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Orientation Week</strong>
+                            <span>1 - 5 September 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Teaching</strong>
+                            <span>8 September - 12 December 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Winter Break</strong>
+                            <span>15 December 2025 - 5 January 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Exams</strong>
+                            <span>6 - 24 January 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semester 2 -->
+            <div class="semester-column">
+                <div class="semester-date-range">FEBRUARY 2026 - JUNE 2026</div>
+                <h3 class="semester-title">Semester 2</h3>
+                <div class="semester-events">
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Teaching</strong>
+                            <span>2 February - 1 May 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Spring Break</strong>
+                            <span>23 March - 3 April 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Exams</strong>
+                            <span>4 - 22 May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summer -->
+            <div class="semester-column">
+                <div class="semester-date-range">JUNE 2026 - AUGUST 2026</div>
+                <h3 class="semester-title">Summer</h3>
+                <div class="semester-events">
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Graduation</strong>
+                            <span>June 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <div class="semester-event-info">
+                            <strong>Resits</strong>
+                            <span>6 - 17 July 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Application Deadlines -->
+<section class="deadlines-section">
+    <div class="container">
+        <div class="deadlines-header">
+            <span class="deadlines-label">Application Deadlines</span>
+            <h2>Don't miss your chance to apply</h2>
+        </div>
+        <div class="deadlines-table">
+            <div class="deadline-row header-row">
+                <span class="deadline-intake">Intake</span>
+                <span class="deadline-open">Applications Open</span>
+                <span class="deadline-close">Deadline</span>
+                <span class="deadline-status">Status</span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Fall 2026</strong><br>Bachelor's Programs</span>
+                <span class="deadline-open">1 February 2026</span>
+                <span class="deadline-close">15 July 2026</span>
+                <span class="deadline-status"><span class="status-badge open">Open</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Fall 2026</strong><br>Master's Programs</span>
+                <span class="deadline-open">1 March 2026</span>
+                <span class="deadline-close">1 August 2026</span>
+                <span class="deadline-status"><span class="status-badge open">Open</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Fall 2026</strong><br>International Applicants</span>
+                <span class="deadline-open">1 February 2026</span>
+                <span class="deadline-close">1 June 2026</span>
+                <span class="deadline-status"><span class="status-badge open">Open</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Spring 2026</strong><br>Transfer Students</span>
+                <span class="deadline-open">1 September 2025</span>
+                <span class="deadline-close">15 December 2025</span>
+                <span class="deadline-status"><span class="status-badge closed">Closed</span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Box (Hull-inspired dark navy) -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>Ready to start your application?</h2>
+            <p>Head to our application portal to begin the process. Make sure you have your documents ready and apply before the deadline for your chosen programme.</p>
+            <a href="https://urolovforever.github.io/landingpage/" class="deadlines-cta-link">Start your application <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What happens if I miss the application deadline?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>If you miss the deadline for your chosen intake, you may still be considered for late admission depending on programme availability. Contact the Admissions Office at admissions@tiu.uz to discuss your options. We recommend applying as early as possible to secure your place.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>When does the academic year start and end?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>The academic year begins in September with Orientation Week and runs through to June the following year. Semester 1 covers September to January, Semester 2 runs from February to May, and the summer period (June-August) includes graduation ceremonies and resit examinations.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are there different deadlines for international students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. International applicants typically have an earlier deadline to allow time for visa processing, document verification, and travel arrangements. Check the Application Deadlines table above for the specific dates that apply to your category.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I defer my offer to the next intake?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Deferral requests are considered on a case-by-case basis. If you've received an offer but need to delay your start date, contact the Admissions Office as soon as possible. Deferrals are generally granted for up to one academic year, subject to programme availability.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How long does it take to receive a decision after applying?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Most applicants receive a decision within 2-4 weeks of submitting a complete application. During peak periods, it may take slightly longer. You can track your application status through the student portal or by contacting admissions@tiu.uz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/admissions/how-to-apply/" class="explore-more-link">How to Apply <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/requirements/" class="explore-more-link">Requirements <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/tuition-fees/" class="explore-more-link">Tuition & Fees <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/scholarships/" class="explore-more-link">Scholarships <i class="fas fa-arrow-right"></i></a>
+            <a href="/admissions/faqs/" class="explore-more-link">FAQs <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

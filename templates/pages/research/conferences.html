@@ -1,0 +1,151 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/research.css' %}">
+{% endblock %}
+
+{% block title %}Conferences - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Research</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Conferences</span>
+        </nav>
+        <div class="page-hero-category">Research</div>
+        <h1 class="page-hero-title">Conferences</h1>
+        <div class="page-hero-description">
+            <p>TIU hosts and participates in academic conferences that connect scholars, practitioners, and students across disciplines.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Share knowledge. <em>Shape the future.</em></h2>
+                <p>Academic conferences are central to TIU's research mission. They give our faculty and students a platform to present findings, receive peer feedback, and engage with international thought leaders.</p>
+                <p>Each year TIU organizes its own flagship conferences and supports faculty attendance at major international events. We believe that the exchange of ideas across borders is what drives genuine academic progress.</p>
+                <p>Conference participation is open to researchers at all levels — from undergraduate presenters to distinguished keynote speakers.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Upcoming events</h3>
+                    <p>Check our events calendar for the latest conference dates, registration deadlines, and call for papers.</p>
+                    <a href="/news/events/" class="abroad-sidebar-link">View Events <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Annual conferences -->
+<section class="section--muted">
+    <div class="container">
+        <h2 class="section-heading">Our annual conferences</h2>
+        <p class="section-subtitle">TIU hosts several flagship conferences each academic year, drawing participants from across Central Asia and beyond.</p>
+        <div class="grid grid--3col mid-container">
+            <div class="top-card">
+                <div class="text-label">SPRING</div>
+                <h3 class="card-title">International Research Forum</h3>
+                <p class="card-text card-text--mb-lg">TIU's largest annual event bringing together researchers from 20+ countries to present papers across all faculties. Includes keynote addresses, panel discussions, and networking sessions.</p>
+                <span class="card-sub--sm" style="color: #999;"><i class="far fa-calendar-alt" style="margin-right: 0.4rem;"></i>April — 3 days</span>
+            </div>
+            <div class="top-card top-card--green">
+                <div class="text-label">AUTUMN</div>
+                <h3 class="card-title">Technology & Innovation Summit</h3>
+                <p class="card-text card-text--mb-lg">Focused on IT, engineering, and digital transformation. Features industry speakers, live demos, hackathons, and startup pitch competitions alongside academic presentations.</p>
+                <span class="card-sub--sm" style="color: #999;"><i class="far fa-calendar-alt" style="margin-right: 0.4rem;"></i>October — 2 days</span>
+            </div>
+            <div class="top-card top-card--orange">
+                <div class="text-label">WINTER</div>
+                <h3 class="card-title">Student Research Symposium</h3>
+                <p class="card-text card-text--mb-lg">A platform exclusively for undergraduate and master's students to present their research. Winners receive grants, publication support, and invitations to partner university events.</p>
+                <span class="card-sub--sm" style="color: #999;"><i class="far fa-calendar-alt" style="margin-right: 0.4rem;"></i>December — 1 day</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to participate -->
+<section class="section--white">
+    <div class="container">
+        <div class="grid grid--2col-equal wide-container">
+            <div>
+                <h2 class="section-heading--left" style="font-size: 2.25rem;">How to participate</h2>
+                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">Whether you want to present a paper, attend as a listener, or volunteer, here's how to get involved:</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Submit an abstract</strong> — respond to the call for papers published on our events page before the deadline</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Peer review</strong> — your abstract is reviewed by the scientific committee; accepted papers are scheduled for presentation</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Register</strong> — all participants (presenters and attendees) must register through the conference portal</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Publication</strong> — selected papers are published in TIU's conference proceedings or partner journals</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-panel">
+                <h3>For presenters</h3>
+                <div class="detail-row">
+                    <strong>ABSTRACT LENGTH</strong>
+                    <p>250–300 words in English</p>
+                </div>
+                <div class="detail-row">
+                    <strong>PRESENTATION FORMAT</strong>
+                    <p>15-minute talk + 5-minute Q&A or poster session</p>
+                </div>
+                <div class="detail-row">
+                    <strong>REGISTRATION FEE</strong>
+                    <p>Free for TIU students and staff</p>
+                </div>
+                <div class="detail-row">
+                    <strong>LANGUAGE</strong>
+                    <p>English (Uzbek/Russian sessions available)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Ready to present your research?</h2>
+        <p>Check the events calendar for upcoming calls for papers and registration details.</p>
+        <div class="cta-banner__buttons">
+            <a href="/news/events/" class="cta-btn cta-btn--primary">View Events</a>
+            <a href="/contact/contact-info/" class="cta-btn cta-btn--outline">Contact Research Office</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/research/centers/" class="explore-more-link">Research Centers <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/publications/" class="explore-more-link">Publications <i class="fas fa-arrow-right"></i></a>
+            <a href="/research/innovation/" class="explore-more-link">Innovation <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

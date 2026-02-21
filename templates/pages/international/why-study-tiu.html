@@ -1,0 +1,240 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Why Study at TIU - International Students{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>International</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Why Study at TIU</span>
+        </nav>
+        <div class="page-hero-category">International</div>
+        <h1 class="page-hero-title">Why Study at TIU</h1>
+        <div class="page-hero-description">
+            <p>A globally connected university in the heart of Central Asia — where international students thrive.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Top Reasons Carousel -->
+<section class="top-reasons">
+    <div class="top-reasons-inner">
+        <div class="top-reasons-text">
+            <h2>Top 5 reasons international students choose TIU</h2>
+            <p>From globally recognised degrees to an affordable lifestyle in one of Asia's safest capitals — here's why students from around the world are choosing Tashkent.</p>
+        </div>
+        <div class="top-reasons-carousel-wrapper">
+            <div class="top-reasons-carousel" id="reasonsCarousel">
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-language"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">100%</div>
+                        <div class="reason-card-desc">All programmes taught entirely in English — no Uzbek language requirement</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-passport"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">2+2</div>
+                        <div class="reason-card-desc">Start in Tashkent, finish at a partner university in Europe or Asia</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-coins"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">Low</div>
+                        <div class="reason-card-desc">Affordable tuition and cost of living compared to Western universities</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">Safe</div>
+                        <div class="reason-card-desc">Tashkent is ranked among the safest capitals in Central Asia</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">10+</div>
+                        <div class="reason-card-desc">Partner universities across South Korea, Europe, and beyond</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-reasons-nav">
+        <div class="top-reasons-dots" id="reasonsDots"></div>
+        <div class="top-reasons-arrows">
+            <button class="top-reasons-arrow" onclick="slideReasons(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="top-reasons-arrow" onclick="slideReasons(1)"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Big Statement -->
+<section class="big-statement">
+    <div class="container">
+        <h2>Your degree.<br><em>Recognised</em> worldwide.</h2>
+    </div>
+</section>
+
+<!-- Split - Dual Degree for International Students -->
+<section class="split-section">
+    <div class="split-image" style="background-image: url('{% static 'img/hero/back1.jpg' %}');"></div>
+    <div class="split-content">
+        <span class="split-label">Global Pathway</span>
+        <h2>Two countries. Two degrees. One incredible journey.</h2>
+        <p>Our 2+2 dual degree programme is designed for students who think globally. Spend your first two years at TIU in Tashkent, immersing yourself in a multicultural campus. Then transfer to one of our partner universities in South Korea, Poland, Latvia, or beyond to complete your degree. You'll graduate with two internationally recognised qualifications and a truly global perspective.</p>
+        <a href="/programs/dual-diploma/" class="split-link">Explore the 2+2 programme <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- English-Medium Instruction -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <div class="feature-block-label">ENGLISH-MEDIUM INSTRUCTION</div>
+            <h2>Study in English from <em>day one</em></h2>
+            <p>Every lecture, every seminar, every assignment — delivered in English. Our international faculty come from universities across Europe, Asia, and North America, bringing diverse teaching styles and global academic standards. You won't need to learn Uzbek to succeed here, though you're welcome to pick it up along the way.</p>
+            <a href="/faculty/departments/" class="split-link">Meet Our International Faculty <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="International Faculty at TIU" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Affordable Living -->
+<section class="feature-block">
+    <div class="feature-block-inner reversed">
+        <div class="feature-block-text">
+            <div class="feature-block-label">AFFORDABLE EDUCATION</div>
+            <h2>World-class education without the <em>world-class price tag</em></h2>
+            <p>Tashkent offers one of the lowest costs of living among university cities in Asia. A full meal costs around $3, monthly rent starts from $200, and public transport is under $10 a month. Combined with competitive tuition fees and scholarship opportunities, TIU makes quality international education genuinely accessible.</p>
+            <a href="/admissions/tuition-fees/" class="split-link">View Tuition & Scholarships <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c3.jpg' %}" alt="Student Life in Tashkent" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Visa & Support -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <div class="feature-block-label">VISA & STUDENT SUPPORT</div>
+            <h2>We'll handle the paperwork. You focus on <em>packing.</em></h2>
+            <p>Our dedicated International Office guides you through every step — from visa applications and invitation letters to airport pickup and accommodation arrangements. We provide orientation programmes, buddy systems pairing you with local students, and 24/7 support to make sure you feel at home from the moment you arrive.</p>
+            <a href="/international/visa-immigration/" class="split-link">Visa & Immigration Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU International Support" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Discover Tashkent CTA -->
+<section class="culture-cta">
+    <div class="container">
+        <div class="culture-cta-label">DISCOVER TASHKENT</div>
+        <h2>An ancient city with a <em>modern</em> heartbeat</h2>
+        <p>Tashkent is a city of contrasts — where 2,000-year-old Silk Road heritage meets gleaming metro stations, bustling bazaars sit next to modern shopping centres, and world-class museums are just a short walk from vibrant nightlife. With direct flights to dozens of international destinations, it's your gateway to exploring Central Asia and beyond.</p>
+        <a href="/international/accommodation/" class="split-link">Living In Tashkent <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/international/admission-process/" class="explore-more-link">Admission Process <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/visa-immigration/" class="explore-more-link">Visa & Immigration <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/accommodation/" class="explore-more-link">Accommodation <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/exchange-opportunities/" class="explore-more-link">Exchange Opportunities <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/partner-universities/" class="explore-more-link">Partner Universities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    const carousel = document.getElementById('reasonsCarousel');
+    const dotsContainer = document.getElementById('reasonsDots');
+    const cards = Array.from(carousel.querySelectorAll('.reason-card'));
+    const totalCards = cards.length;
+    let current = 0;
+
+    cards.forEach(function(card) {
+        carousel.appendChild(card.cloneNode(true));
+    });
+
+    for (let i = 0; i < totalCards; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'reasons-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = function() { goToSlide(i); };
+        dotsContainer.appendChild(dot);
+    }
+
+    function getStep() {
+        return cards[0].getBoundingClientRect().width + 16;
+    }
+
+    function goToSlide(index) {
+        current = index;
+        var offset = current * getStep();
+        carousel.style.transition = 'transform 0.4s ease';
+        carousel.style.transform = 'translateX(-' + offset + 'px)';
+        updateDots();
+    }
+
+    function updateDots() {
+        var dotIndex = current % totalCards;
+        dotsContainer.querySelectorAll('.reasons-dot').forEach(function(d, i) {
+            d.classList.toggle('active', i === dotIndex);
+        });
+    }
+
+    carousel.addEventListener('transitionend', function() {
+        if (current >= totalCards) {
+            carousel.style.transition = 'none';
+            current = current % totalCards;
+            carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+        }
+    });
+
+    window.slideReasons = function(dir) {
+        if (dir === 1) {
+            goToSlide(current + 1);
+        } else {
+            if (current === 0) {
+                carousel.style.transition = 'none';
+                current = totalCards;
+                carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+                carousel.offsetHeight;
+                goToSlide(current - 1);
+            } else {
+                goToSlide(current - 1);
+            }
+        }
+    };
+})();
+</script>
+{% endblock %}

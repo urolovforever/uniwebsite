@@ -1,0 +1,164 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+{% endblock %}
+
+{% block title %}Alumni Network - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Careers</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Alumni Network</span>
+        </nav>
+        <div class="page-hero-category">Careers</div>
+        <h1 class="page-hero-title">Alumni Network</h1>
+        <div class="page-hero-description">
+            <p>Stay connected after graduation — join a growing community of TIU alumni making an impact across the globe.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Once a TIU student, <em>always part of the family.</em></h2>
+                <p>Graduation doesn't mean goodbye. TIU's Alumni Network connects thousands of graduates working in Uzbekistan and internationally — in technology, business, law, education, government, and beyond.</p>
+                <p>As an alumnus, you gain access to career resources, networking events, mentorship opportunities, and exclusive job postings. You also have the chance to give back by mentoring current students, speaking at campus events, or supporting scholarships.</p>
+                <p>The network grows stronger every year, and so do the opportunities it creates for every member.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Current student?</h3>
+                    <p>Visit the Career Center for internship listings, CV workshops, and career counselling.</p>
+                    <a href="/careers/career-center/" class="abroad-sidebar-link">Career Center <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="section--muted">
+    <div class="container">
+        <h2 class="section-heading">Alumni benefits</h2>
+        <p class="section-subtitle">Your TIU connection keeps working for you long after you graduate.</p>
+        <div class="grid grid--3col mid-container">
+            <div class="accent-card accent-card--cyan">
+                <div class="icon-block"><i class="fas fa-briefcase"></i></div>
+                <h3 class="card-title">Job board access</h3>
+                <p class="card-text">Browse exclusive job listings from TIU employer partners, posted directly to our alumni portal.</p>
+            </div>
+            <div class="accent-card accent-card--green">
+                <div class="icon-block"><i class="fas fa-calendar-check"></i></div>
+                <h3 class="card-title">Networking events</h3>
+                <p class="card-text">Attend alumni mixers, industry panels, and homecoming events to reconnect and expand your professional circle.</p>
+            </div>
+            <div class="accent-card accent-card--orange">
+                <div class="icon-block"><i class="fas fa-user-tie"></i></div>
+                <h3 class="card-title">Mentorship programme</h3>
+                <p class="card-text">Mentor current students or be mentored by senior alumni — building bridges across generations of TIU graduates.</p>
+            </div>
+            <div class="accent-card accent-card--pink">
+                <div class="icon-block"><i class="fas fa-book-reader"></i></div>
+                <h3 class="card-title">Lifelong learning</h3>
+                <p class="card-text">Access discounted professional development courses, workshops, and certificate programmes at TIU.</p>
+            </div>
+            <div class="accent-card accent-card--purple">
+                <div class="icon-block"><i class="fas fa-id-card"></i></div>
+                <h3 class="card-title">Alumni card</h3>
+                <p class="card-text">Receive a TIU Alumni Card granting access to campus facilities, the library, sports center, and partner discounts.</p>
+            </div>
+            <div class="accent-card accent-card--navy">
+                <div class="icon-block"><i class="fas fa-globe"></i></div>
+                <h3 class="card-title">Global chapters</h3>
+                <p class="card-text">Connect with TIU alumni in your city through regional chapters in South Korea, Turkey, Europe, and across Uzbekistan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to get involved -->
+<section class="section--white">
+    <div class="container">
+        <div class="grid grid--2col-equal wide-container">
+            <div>
+                <h2 class="section-heading--left" style="font-size: 2.25rem;">Get involved</h2>
+                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">There are many ways to stay connected and give back to the TIU community:</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Become a mentor</strong> — guide current students through career decisions and professional development</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Guest lecture</strong> — share your industry expertise with students in your former faculty</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Refer talent</strong> — post job opportunities and internships from your company on the alumni portal</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Support scholarships</strong> — contribute to the Alumni Scholarship Fund that supports the next generation of TIU students</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-panel">
+                <h3>Network at a glance</h3>
+                <div class="detail-row">
+                    <div class="stat-value">2,000+</div>
+                    <p>Alumni worldwide</p>
+                </div>
+                <div class="detail-row">
+                    <div class="stat-value">10+</div>
+                    <p>Regional chapters</p>
+                </div>
+                <div class="detail-row">
+                    <div class="stat-value">92%</div>
+                    <p>Employed within 6 months of graduation</p>
+                </div>
+                <div class="detail-row">
+                    <div class="stat-value">50+</div>
+                    <p>Alumni events per year</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Join the alumni community</h2>
+        <p>Register on the alumni portal or get in touch with the Alumni Relations Office to stay connected.</p>
+        <div class="cta-banner__buttons">
+            <a href="/contact/contact-info/" class="cta-btn cta-btn--primary">Contact Us</a>
+            <a href="/careers/career-center/" class="cta-btn cta-btn--outline">Career Center</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/careers/career-center/" class="explore-more-link">Career Center <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/internships/" class="explore-more-link">Internships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/employer-partnerships/" class="explore-more-link">Employer Partnerships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/hiring/" class="explore-more-link">Hiring <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

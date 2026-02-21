@@ -1,0 +1,215 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Visa & Immigration - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>International</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Visa & Immigration</span>
+        </nav>
+        <div class="page-hero-category">International</div>
+        <h1 class="page-hero-title">Visa & Immigration</h1>
+        <div class="page-hero-description">
+            <p>Everything you need to know about visas, entry requirements, and living in Uzbekistan as an international student.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Plan Your Journey Intro -->
+<section class="visa-intro-section">
+    <div class="container">
+        <div class="visa-intro-grid">
+            <div class="visa-intro-text">
+                <h2>Plan Your Journey</h2>
+                <p>Planning to study at TIU? This page provides essential information about visas and immigration for international students coming to Uzbekistan.</p>
+                <p>Learn how to:</p>
+                <ul>
+                    <li>Apply for a Student Visa</li>
+                    <li>Prepare your documents for entry</li>
+                    <li>Register upon arrival in Uzbekistan</li>
+                </ul>
+                <p>You will also find details about working in Uzbekistan during your studies, travelling in Central Asia, and helpful resources.</p>
+                <p>Whether you are starting your application or need advice, our International Office is here to support you.</p>
+            </div>
+            <div class="visa-intro-image">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="International student at TIU" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visa Guide with TOC -->
+<section class="faq-toc-section">
+    <div class="container">
+        <div class="faq-toc-layout">
+
+            <!-- Sticky Table of Contents -->
+            <aside class="faq-toc-sidebar">
+                <h4>Table of Contents</h4>
+                <nav class="faq-toc-nav">
+                    <a href="#do-i-need-visa" class="faq-toc-link active">Do I need a visa?</a>
+                    <a href="#applying-visa" class="faq-toc-link">Applying for a Student Visa</a>
+                    <a href="#during-studies" class="faq-toc-link">During your studies</a>
+                    <a href="#working-uzbekistan" class="faq-toc-link">Working in Uzbekistan</a>
+                    <a href="#visa-refused" class="faq-toc-link">What if your visa is refused</a>
+                    <a href="#contact-us" class="faq-toc-link">Contact us</a>
+                    <a href="#resources" class="faq-toc-link">Helpful Resources</a>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="faq-toc-content">
+
+                <!-- Do I need a visa? -->
+                <div class="faq-toc-group" id="do-i-need-visa">
+                    <h2>Do I need a visa?</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">Do international students need a visa to study in Uzbekistan? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Which countries are exempt from visa requirements? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What type of visa do I need? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Does TIU provide an invitation letter? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Applying for a Student Visa -->
+                <div class="faq-toc-group" id="applying-visa">
+                    <h2>Applying for a Student Visa</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">Applying from outside Uzbekistan <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Applying from inside Uzbekistan <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What documents do I need for my visa application? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How long does the visa process take? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How much does a student visa cost? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- During your studies -->
+                <div class="faq-toc-group" id="during-studies">
+                    <h2>During your studies</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">How do I register upon arrival? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How do I renew or extend my student visa? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I travel outside Uzbekistan during my studies? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">What happens if my visa expires while studying? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Working in Uzbekistan -->
+                <div class="faq-toc-group" id="working-uzbekistan">
+                    <h2>Working in Uzbekistan</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I work part-time while studying? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Do I need a work permit? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I work in Uzbekistan after graduation? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- What if your visa is refused -->
+                <div class="faq-toc-group" id="visa-refused">
+                    <h2>What if your visa is refused?</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">What are the common reasons for visa refusal? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I reapply after a refusal? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">How can TIU help if my visa is refused? <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact us -->
+                <div class="faq-toc-group" id="contact-us">
+                    <h2>Contact us</h2>
+                    <div class="faq-toc-list">
+                        <a href="#" class="faq-toc-question" onclick="return false;">How do I contact the International Office? <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="faq-toc-question" onclick="return false;">Can I book a one-on-one consultation? <i class="fas fa-arrow-right"></i></a>
+                        <a href="/contact/support/" class="faq-toc-question">Get in touch with TIU <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Helpful Resources -->
+                <div class="faq-toc-group" id="resources">
+                    <h2>Helpful Resources</h2>
+                    <div class="faq-toc-list">
+                        <a href="https://mfa.uz/en" target="_blank" rel="noopener" class="faq-toc-question">Ministry of Foreign Affairs of Uzbekistan <i class="fas fa-arrow-right"></i></a>
+                        <a href="/international/accommodation/" class="faq-toc-question">TIU Accommodation Guide <i class="fas fa-arrow-right"></i></a>
+                        <a href="/international/admission-process/" class="faq-toc-question">International Admission Process <i class="fas fa-arrow-right"></i></a>
+                        <a href="/admissions/scholarships/" class="faq-toc-question">Scholarships for International Students <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/international/why-study-tiu/" class="explore-more-link">Why Study at TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/admission-process/" class="explore-more-link">Admission Process <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/accommodation/" class="explore-more-link">Accommodation <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/exchange-opportunities/" class="explore-more-link">Exchange Opportunities <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/partner-universities/" class="explore-more-link">Partner Universities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var tocLinks = document.querySelectorAll('.faq-toc-link');
+    var groups = document.querySelectorAll('.faq-toc-group');
+
+    function getTop(el) {
+        return el.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function onScroll() {
+        var scrollPos = window.scrollY + 150;
+        var current = '';
+
+        groups.forEach(function(group) {
+            if (getTop(group) <= scrollPos) {
+                current = group.getAttribute('id');
+            }
+        });
+
+        tocLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    tocLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: getTop(target) - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Events" %} - TIU{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="evlist-layout">
+            <!-- Left sidebar — sticky filters -->
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <div class="evlist-filters-heading">
+                        <i class="fas fa-sliders-h"></i>
+                        <span>{% trans "Filters" %}</span>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Categories" %}</label>
+                        <div class="evlist-select-wrapper">
+                            <select id="evlist-category-select" class="evlist-select" onchange="applyFilters()">
+                                <option value="">{% trans "Select an option" %}</option>
+                                {% for cat in categories %}
+                                <option value="{{ cat }}" {% if selected_category == cat %}selected{% endif %}>{{ cat }}</option>
+                                {% endfor %}
+                            </select>
+                            <i class="fas fa-chevron-down evlist-select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <label class="evlist-toggle-row">
+                            <span class="evlist-toggle-label">{% trans "Show past events" %}</span>
+                            <input type="checkbox" id="evlist-past-toggle" {% if show_past %}checked{% endif %} onchange="applyFilters()">
+                            <span class="evlist-toggle-switch"></span>
+                        </label>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <button class="evlist-clear-btn" onclick="clearFilters()">
+                            <i class="fas fa-times"></i> {% trans "Clear filters" %}
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right side — event list -->
+            <div class="evlist-content">
+                {% for event in events %}
+                <article class="evlist-item">
+                    <a href="{% url 'news:event_detail' event.slug %}" class="evlist-item-link">
+                        <div class="evlist-item-thumb">
+                            {% if event.image %}
+                            <img src="{{ event.image.url }}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+                            {% else %}
+                            <img src="{% static 'img/campus/b1.jpg' %}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+                            {% endif %}
+                        </div>
+                        <div class="evlist-item-info">
+                            <h3 class="evlist-item-title">{{ event|trans_field:"title" }}</h3>
+                            <span class="evlist-item-date">{{ event.event_date|date:"d M Y"|upper }}</span>
+                            {% if event.description %}
+                            <p class="evlist-item-desc">{{ event|trans_field:"description"|striptags|truncatewords:25 }}</p>
+                            {% endif %}
+                            {% if event.event_time or event.location %}
+                            <div class="evlist-item-meta">
+                                {% if event.event_time %}<span><i class="far fa-clock"></i> {{ event.event_time|time:"h:i A" }}</span>{% endif %}
+                                {% if event.location %}<span><i class="fas fa-map-marker-alt"></i> {{ event.location }}</span>{% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </a>
+                </article>
+                {% empty %}
+                <div class="evlist-empty">
+                    <i class="far fa-calendar-alt"></i>
+                    <h3>{% trans "No upcoming events" %}</h3>
+                    <p>{% trans "Check back soon for new events, or toggle \"Show past events\" to browse previous ones." %}</p>
+                </div>
+                {% endfor %}
+
+                {% if events.has_other_pages %}
+                <div class="pagination">
+                    {% if events.has_previous %}
+                    <a href="?page={{ events.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+                    {% endif %}
+                    {% for num in events.paginator.page_range %}
+                    <a href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}" class="pagination-btn{% if events.number == num %} active{% endif %}">{{ num }}</a>
+                    {% endfor %}
+                    {% if events.has_next %}
+                    <a href="?page={{ events.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function applyFilters() {
+    var cat = document.getElementById('evlist-category-select').value;
+    var past = document.getElementById('evlist-past-toggle').checked;
+    var params = new URLSearchParams();
+    if (cat) params.set('category', cat);
+    if (past) params.set('past', '1');
+    window.location.href = window.location.pathname + '?' + params.toString();
+}
+function clearFilters() {
+    document.getElementById('evlist-category-select').value = '';
+    document.getElementById('evlist-past-toggle').checked = false;
+    window.location.href = window.location.pathname;
+}
+</script>
+{% endblock %}

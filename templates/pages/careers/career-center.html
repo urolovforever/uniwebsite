@@ -1,0 +1,213 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+{% endblock %}
+
+{% block title %}Career Center - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Careers</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Career Center</span>
+        </nav>
+        <div class="page-hero-category">Careers</div>
+        <h1 class="page-hero-title">Career Center</h1>
+        <div class="page-hero-description">
+            <p>Your one-stop destination for career guidance, job search support, and professional development resources at TIU.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Get Job Ready Section -->
+<section class="job-ready-section">
+    <div class="container">
+        <div class="job-ready-grid">
+            <!-- Left — Text -->
+            <div class="job-ready-text">
+                <h2>Get job ready from day one</h2>
+                <p>Whatever your goals, we're here to help you take the next step with confidence.</p>
+                <p>At the University of Hull, you'll receive personalised careers advice, opportunities to gain experience, and support to boost your employability.</p>
+                <p>Employability is embedded in your course, and there are plenty of ways to get involved in workshops, events, and one-to-one guidance.</p>
+                <p>Whether you're looking for part-time work, your first graduate job, or exploring your options, we're with you every step of the way.</p>
+            </div>
+
+            <!-- Right — Card Carousel -->
+            <div class="job-ready-carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-card active">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-people-arrows"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Career mentoring</h4>
+                            <p>Get advice from someone who's been there. Our mentoring programme connects you with alumni and industry professionals for advice, support and encouragement as you explore your career options.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Skills workshops</h4>
+                            <p>Get practical support to feel career ready. From writing strong CVs and applications to interview preparation, our workshops give you the tools to succeed - whatever stage you're at.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Work placements</h4>
+                            <p>Gain hands-on experience in your field with structured work placements. Build your professional network and develop the skills employers are looking for.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Employer connections</h4>
+                            <p>Meet employers at careers fairs, networking events and on-campus talks. Build relationships with organisations looking to recruit talented graduates like you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="carousel-arrow carousel-prev"><i class="fas fa-arrow-left"></i></button>
+                        <button class="carousel-arrow carousel-next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Find Work & Build Experience -->
+<section class="find-work-section">
+    <div class="container">
+        <div class="find-work-grid">
+            <!-- Left — Image -->
+            <div class="find-work-image">
+                <img src="{% static 'img/hero/back1.jpg' %}" alt="Students at work" loading="lazy">
+            </div>
+
+            <!-- Right — Text + Items -->
+            <div class="find-work-text">
+                <h2>Find work and build experience</h2>
+                <p>Our Careers team can help you find part-time work, paid placements and summer internships.</p>
+
+                <div class="find-work-items">
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h4>Search part-time vacancies</h4>
+                            <p>on Handshake</p>
+                        </div>
+                    </div>
+
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h4>Meet employers</h4>
+                            <p>at our dedicated part-time jobs fairs</p>
+                        </div>
+                    </div>
+
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <h4>Become a Student Ambassador</h4>
+                            <p>to support events, lead campus tours and create content</p>
+                        </div>
+                    </div>
+
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div>
+                            <h4>Work with the Students' Union</h4>
+                            <p>from bar shifts to helping run campus events</p>
+                        </div>
+                    </div>
+
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h4>Explore paid placements</h4>
+                            <p>to gain real-world experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var cards = document.querySelectorAll('.carousel-card');
+    var dots = document.querySelectorAll('.carousel-dot');
+    var current = 0;
+
+    function showCard(index) {
+        current = index;
+        cards.forEach(function (c) { c.classList.remove('active'); });
+        dots.forEach(function (d) { d.classList.remove('active'); });
+        cards[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', function () {
+        showCard(current === 0 ? cards.length - 1 : current - 1);
+    });
+
+    document.querySelector('.carousel-next').addEventListener('click', function () {
+        showCard(current === cards.length - 1 ? 0 : current + 1);
+    });
+
+    dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+            showCard(parseInt(this.dataset.index));
+        });
+    });
+});
+</script>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/careers/internships/" class="explore-more-link">Internships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/employer-partnerships/" class="explore-more-link">Employer Partnerships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/alumni-network/" class="explore-more-link">Alumni Network <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/hiring/" class="explore-more-link">Hiring <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

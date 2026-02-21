@@ -1,0 +1,297 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+{% endblock %}
+
+{% block title %}Sports & Fitness - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Sports & Fitness</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">Sports & Fitness</h1>
+        <div class="page-hero-description">
+            <p>Stay active and competitive with TIU's sports facilities, teams, and fitness programmes.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="sports-intro-section">
+    <div class="container">
+        <div class="sports-intro-grid">
+            <div class="sports-intro-text">
+                <h2>Move more, achieve more</h2>
+                <p>Whether you're a competitive athlete or just want to stay active, TIU has something for you. Our sports programme is open to all students — no experience required. Just bring your energy.</p>
+                <p>From football and basketball to table tennis and chess, our teams compete in inter-university leagues across Tashkent. And if competition isn't your thing, our fitness sessions and recreational clubs are the perfect way to unwind after lectures.</p>
+            </div>
+            <div class="sports-intro-image">
+                <img src="{% static 'img/campus/c4.jpg' %}" alt="TIU Sports" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Teams Gallery -->
+<section class="campus-section">
+    <div class="container">
+        <div class="campus-grid clubs-gallery-reversed">
+            <div class="campus-content">
+                <div class="campus-category">Our Teams</div>
+                <h2>World-class sports facilities, open to all</h2>
+                <p>At TIU, sport is for everyone — not just the few. Whether you're here to train, compete, or simply stay active, our facilities are ready for you. From football and basketball to table tennis and chess, our teams compete in inter-university leagues across Tashkent.</p>
+                <a href="/current-students/clubs/" class="campus-link">Explore Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="campus-gallery">
+                <div class="campus-main-image" id="sportsMainImage">
+                    <img src="{% static 'img/campus/c4.jpg' %}" alt="TIU Sports" id="mainSportsImg" loading="lazy">
+                </div>
+                <div class="campus-thumbnails">
+                    <div class="campus-thumb active" onclick="changeSportsImage('{% static 'img/campus/c4.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c4.jpg' %}" alt="Sports 1" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeSportsImage('{% static 'img/campus/c3.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c3.jpg' %}" alt="Sports 2" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeSportsImage('{% static 'img/campus/c5.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c5.jpg' %}" alt="Sports 3" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeSportsImage('{% static 'img/campus/c6.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c6.jpg' %}" alt="Sports 4" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeSportsImage('{% static 'img/campus/c1.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c1.jpg' %}" alt="Sports 5" loading="lazy">
+                    </div>
+                    <div class="campus-thumb" onclick="changeSportsImage('{% static 'img/campus/c2.jpg' %}', this)">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="Sports 6" loading="lazy">
+                    </div>
+                    <div class="campus-fullscreen-btn" onclick="openSportsFullscreen()">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities -->
+<section class="sports-facilities-section">
+    <div class="container">
+        <div class="sports-facilities-grid">
+            <div class="sports-facilities-image">
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU sports hall" loading="lazy">
+            </div>
+            <div class="sports-facilities-text">
+                <h2>Our facilities</h2>
+                <p>TIU's sports facilities are available to all students free of charge. Whether you want a quick workout or a full training session, everything is on campus and easy to access.</p>
+                <div class="sports-facility-list">
+                    <div class="sports-facility-item">
+                        <i class="fas fa-check"></i>
+                        <span>Indoor sports hall for basketball, volleyball, and futsal</span>
+                    </div>
+                    <div class="sports-facility-item">
+                        <i class="fas fa-check"></i>
+                        <span>Outdoor football pitch</span>
+                    </div>
+                    <div class="sports-facility-item">
+                        <i class="fas fa-check"></i>
+                        <span>Table tennis room with 4 tables</span>
+                    </div>
+                    <div class="sports-facility-item">
+                        <i class="fas fa-check"></i>
+                        <span>Fitness area with cardio and weights</span>
+                    </div>
+                    <div class="sports-facility-item">
+                        <i class="fas fa-check"></i>
+                        <span>Changing rooms and showers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Join -->
+<section class="sports-join-section">
+    <div class="container">
+        <h2>How to get involved</h2>
+        <p class="sports-join-intro">Getting started is easy — no tryouts, no pressure. Just show up.</p>
+        <div class="sports-join-grid">
+            <div class="sports-join-step">
+                <div class="sports-join-number">01</div>
+                <h3>Check the schedule</h3>
+                <p>Training times and sessions are posted on the LMS portal and the sports noticeboard in Building B.</p>
+            </div>
+            <div class="sports-join-step">
+                <div class="sports-join-number">02</div>
+                <h3>Turn up</h3>
+                <p>Most sessions are open to everyone. Just come to the sports hall at the listed time — no registration needed.</p>
+            </div>
+            <div class="sports-join-step">
+                <div class="sports-join-number">03</div>
+                <h3>Join a team</h3>
+                <p>If you want to compete, speak to the team captain or the Sports Coordinator to join the official squad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Sports FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Do I need to be experienced to join a team?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Not at all. Our sports teams welcome all skill levels. Recreational sessions are open to complete beginners, and competitive squads hold regular training to help you improve.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are sports facilities free for students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. All on-campus sports facilities are free for enrolled TIU students. Just bring your student ID card to access the sports hall and fitness area.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>When are training sessions?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Most team training sessions are held in the evenings (17:00–20:00) on weekdays. The fitness area is open Monday–Saturday, 08:00–21:00. Check the LMS portal for the latest schedule.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I start a new sports team?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. If you have at least 5 interested students, you can propose a new team through the Student Union. The Sports Coordinator will help you get set up with training slots and equipment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="sportsLightbox">
+    <button class="lightbox-close" onclick="closeSportsLightbox()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="lightbox-side lightbox-side-left">
+        <img src="" alt="Previous" id="sportsLbPrev">
+    </div>
+    <button class="lightbox-prev" onclick="sportsPrevImage()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="lightbox-main">
+        <img src="" alt="Sports" id="sportsLbImg">
+    </div>
+    <button class="lightbox-next" onclick="sportsNextImage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+    <div class="lightbox-side lightbox-side-right">
+        <img src="" alt="Next" id="sportsLbNext">
+    </div>
+</div>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+}
+
+var sportsImages = [
+    '{% static "img/campus/c4.jpg" %}',
+    '{% static "img/campus/c3.jpg" %}',
+    '{% static "img/campus/c5.jpg" %}',
+    '{% static "img/campus/c6.jpg" %}',
+    '{% static "img/campus/c1.jpg" %}',
+    '{% static "img/campus/c2.jpg" %}'
+];
+var sportsLbIndex = 0;
+
+function changeSportsImage(src, thumb) {
+    document.getElementById('mainSportsImg').src = src;
+    var thumbs = thumb.parentElement.querySelectorAll('.campus-thumb');
+    thumbs.forEach(function(t) { t.classList.remove('active'); });
+    thumb.classList.add('active');
+}
+
+function openSportsFullscreen() {
+    var currentSrc = document.getElementById('mainSportsImg').src;
+    sportsLbIndex = 0;
+    for (var i = 0; i < sportsImages.length; i++) {
+        if (currentSrc.indexOf(sportsImages[i].split('/').pop()) !== -1) {
+            sportsLbIndex = i;
+            break;
+        }
+    }
+    updateSportsLightbox();
+    document.getElementById('sportsLightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeSportsLightbox() {
+    document.getElementById('sportsLightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function updateSportsLightbox() {
+    var prev = (sportsLbIndex - 1 + sportsImages.length) % sportsImages.length;
+    var next = (sportsLbIndex + 1) % sportsImages.length;
+    document.getElementById('sportsLbImg').src = sportsImages[sportsLbIndex];
+    document.getElementById('sportsLbPrev').src = sportsImages[prev];
+    document.getElementById('sportsLbNext').src = sportsImages[next];
+}
+
+function sportsPrevImage() {
+    sportsLbIndex = (sportsLbIndex - 1 + sportsImages.length) % sportsImages.length;
+    updateSportsLightbox();
+}
+
+function sportsNextImage() {
+    sportsLbIndex = (sportsLbIndex + 1) % sportsImages.length;
+    updateSportsLightbox();
+}
+
+document.getElementById('sportsLightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeSportsLightbox();
+});
+</script>
+{% endblock %}

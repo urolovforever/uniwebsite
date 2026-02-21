@@ -1,0 +1,15 @@
+{% load i18n i18n_fields %}
+{% for article in articles %}
+<a href="{{ article.get_absolute_url }}" class="faculty-news-item">
+    {% if article.featured_image %}
+    <img src="{{ article.featured_image.url }}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+    {% endif %}
+    <div class="faculty-news-item-text">
+        <span class="faculty-news-date">{{ article.published_date|date:"d M Y"|upper }}</span>
+        <h3>{{ article|trans_field:"title" }}</h3>
+        <p>{{ article|trans_field:"excerpt"|truncatewords:25 }}</p>
+    </div>
+</a>
+{% empty %}
+<p>{% trans "No news articles yet." %}</p>
+{% endfor %}

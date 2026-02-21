@@ -1,0 +1,125 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "News" %} - TIU{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="evlist-layout">
+            <!-- Left sidebar — sticky filters -->
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <div class="evlist-filters-heading">
+                        <i class="fas fa-sliders-h"></i>
+                        <span>{% trans "Filters" %}</span>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Search" %}</label>
+                        <div class="evlist-search-wrapper">
+                            <input type="text" id="newslist-search" class="evlist-search-input" placeholder="{% trans "Search news..." %}" value="{{ search_query }}" onkeydown="if(event.key==='Enter')applyNewsFilters()">
+                            <button class="evlist-search-btn" onclick="applyNewsFilters()"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <label class="evlist-toggle-row">
+                            <span class="evlist-toggle-label">{% trans "Featured only" %}</span>
+                            <input type="checkbox" id="newslist-featured-toggle" {% if featured_only %}checked{% endif %} onchange="applyNewsFilters()">
+                            <span class="evlist-toggle-switch"></span>
+                        </label>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <button class="evlist-clear-btn" onclick="clearNewsFilters()">
+                            <i class="fas fa-times"></i> {% trans "Clear filters" %}
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right side — news list -->
+            <div class="evlist-content">
+                {% for article in articles %}
+                <article class="evlist-item">
+                    <a href="{% url 'news:news_detail' article.slug %}" class="evlist-item-link">
+                        <div class="evlist-item-thumb">
+                            {% if article.featured_image %}
+                            <img src="{{ article.featured_image.url }}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                            {% else %}
+                            <img src="{% static 'img/campus/b1.jpg' %}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                            {% endif %}
+                        </div>
+                        <div class="evlist-item-info">
+                            <h3 class="evlist-item-title">{{ article|trans_field:"title" }}</h3>
+                            <span class="evlist-item-date">{{ article.published_date|date:"d M Y"|upper }}</span>
+                            {% if article.excerpt %}
+                            <p class="evlist-item-desc">{{ article|trans_field:"excerpt"|truncatewords:25 }}</p>
+                            {% endif %}
+                        </div>
+                    </a>
+                </article>
+                {% empty %}
+                <div class="evlist-empty">
+                    <i class="far fa-newspaper"></i>
+                    <h3>{% trans "No news articles found" %}</h3>
+                    <p>{% trans "Try adjusting your search or clearing filters to see all news." %}</p>
+                </div>
+                {% endfor %}
+
+                {% if articles.has_other_pages %}
+                <div class="pagination">
+                    {% if articles.has_previous %}
+                    <a href="?page={{ articles.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if featured_only %}&featured=1{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+                    {% endif %}
+                    {% for num in articles.paginator.page_range %}
+                    <a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}{% if featured_only %}&featured=1{% endif %}" class="pagination-btn{% if articles.number == num %} active{% endif %}">{{ num }}</a>
+                    {% endfor %}
+                    {% if articles.has_next %}
+                    <a href="?page={{ articles.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if featured_only %}&featured=1{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function applyNewsFilters() {
+    var q = document.getElementById('newslist-search').value.trim();
+    var featured = document.getElementById('newslist-featured-toggle').checked;
+    var params = new URLSearchParams();
+    if (q) params.set('q', q);
+    if (featured) params.set('featured', '1');
+    window.location.href = window.location.pathname + '?' + params.toString();
+}
+function clearNewsFilters() {
+    document.getElementById('newslist-search').value = '';
+    document.getElementById('newslist-featured-toggle').checked = false;
+    window.location.href = window.location.pathname;
+}
+</script>
+{% endblock %}

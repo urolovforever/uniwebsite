@@ -1,0 +1,394 @@
+/* Research Section Specific Styles */
+
+.research-hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+}
+
+.research-centers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.research-center-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-center-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.center-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1e40af 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.center-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.center-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.center-focus {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.center-content {
+    padding: 1.5rem;
+}
+
+.center-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.center-stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.publications-showcase {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.publication-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--accent-gold);
+}
+
+.publication-type {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.publication-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.publication-authors {
+    color: #666;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.publication-journal {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.publication-metrics {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.metric i {
+    color: var(--accent-gold);
+}
+
+.conferences-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.conference-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.conference-date {
+    min-width: 120px;
+    background: var(--accent-gold);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.conference-day {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.conference-month-year {
+    font-size: 0.85rem;
+    opacity: 0.95;
+}
+
+.conference-details {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.conference-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.conference-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.conference-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.innovation-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--primary-blue);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-status {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-status.ongoing { background: #3b82f6; }
+.project-status.completed { background: #10b981; }
+.project-status.planning { background: #f59e0b; }
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.8rem;
+}
+
+.project-team {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.research-impact {
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.impact-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.impact-metric {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+}
+
+.impact-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.impact-label {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.research-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.research-area-tag {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.research-area-tag:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.area-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.area-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+/* ================================================
+   RESPONSIVE — 1024px (Tablet Landscape)
+   ================================================ */
+@media (max-width: 1024px) {
+    .research-centers-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .innovation-projects { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+    .impact-number { font-size: 2.5rem; }
+    .conference-item { gap: 1.5rem; }
+    .research-impact { padding: 2rem; }
+}
+
+/* ================================================
+   RESPONSIVE — 768px (Tablet Portrait / Mobile)
+   ================================================ */
+@media (max-width: 768px) {
+    /* Research hero */
+    .research-hero { padding: 2.5rem 0; }
+
+    /* Research centers */
+    .research-centers-grid { grid-template-columns: 1fr; }
+    .center-header { padding: 1.5rem; }
+    .center-icon { font-size: 2.5rem; }
+    .center-name { font-size: 1.15rem; }
+
+    /* Publications */
+    .publication-card { padding: 1.5rem; }
+    .publication-title { font-size: 1.1rem; }
+    .publication-journal { flex-direction: column; gap: 0.5rem; }
+    .publication-metrics { flex-wrap: wrap; gap: 1rem; }
+
+    /* Conferences */
+    .conference-item { flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+    .conference-date { min-width: auto; display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; }
+    .conference-day { font-size: 1.75rem; }
+    .conference-meta { flex-direction: column; gap: 0.5rem; }
+
+    /* Innovation projects */
+    .innovation-projects { grid-template-columns: 1fr; }
+    .project-image { height: 170px; }
+
+    /* Impact section */
+    .research-impact { padding: 2rem 1.25rem; margin: 1.5rem 0; }
+    .impact-metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .impact-metric { padding: 1.25rem; }
+    .impact-number { font-size: 2rem; }
+    .impact-label { font-size: 0.95rem; }
+
+    /* Research areas */
+    .research-areas { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .research-area-tag { padding: 1.25rem; }
+    .area-icon { font-size: 2rem; }
+}
+
+/* ================================================
+   RESPONSIVE — 640px (Small Mobile)
+   ================================================ */
+@media (max-width: 640px) {
+    .impact-metrics-grid { grid-template-columns: 1fr; }
+    .research-areas { grid-template-columns: 1fr; }
+    .center-stats { flex-direction: column; gap: 1rem; }
+    .project-image { height: 140px; font-size: 3rem; }
+}

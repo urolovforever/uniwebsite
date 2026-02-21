@@ -1,0 +1,268 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Apply for Bachelor's" %} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Admissions" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Apply — Bachelor's" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Admissions" %}</div>
+        <h1 class="page-hero-title">{% trans "Apply for a Bachelor's Degree" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Start your undergraduate journey at TIU. Here's everything you need to know about applying for a Bachelor's programme." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Centered Statement -->
+<section class="tuition-statement">
+    <div class="container">
+        <h2>{% trans "Your path to a world-class" %}<br>{% trans "undergraduate education" %}</h2>
+        <p>{% trans "Whether you're a school leaver, a gap-year student, or making a fresh start — TIU's Bachelor's programmes are designed to challenge, inspire, and prepare you for a successful career. All programmes are taught in English by international faculty." %}</p>
+    </div>
+</section>
+
+<!-- How to Apply — Steps -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>{% trans "How to apply in 5 simple steps" %}</h2>
+            <p>{% trans "From choosing your programme to accepting your offer" %}</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>{% trans "Choose" %}</h3>
+                <p>{% trans "Browse our Bachelor's programmes and select the one that fits your interests and career goals" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>{% trans "Prepare" %}</h3>
+                <p>{% trans "Gather your documents: school certificate, English test results, motivation letter, passport, and photos" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>{% trans "Apply Online" %}</h3>
+                <p>{% trans "Complete the application form and upload your documents through our online portal" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>{% trans "Assessment" %}</h3>
+                <p>{% trans "Our team reviews your application. You may be invited for an interview or internal English test" %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>{% trans "Accept & Enrol" %}</h3>
+                <p>{% trans "Receive your offer, confirm your place, and complete enrolment before the semester starts" %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Requirements — Sticky Left + Checklist Right -->
+<section class="intl-requirements-section">
+    <div class="container">
+        <div class="intl-requirements-grid">
+            <div class="intl-requirements-text">
+                <span class="intl-requirements-label">{% trans "Entry Requirements" %}</span>
+                <h2>{% trans "What you need to apply" %}</h2>
+                <p>{% trans "Make sure you have the following documents ready. All materials should be in English, Uzbek, or Russian — or accompanied by a certified translation." %}</p>
+            </div>
+            <div class="intl-requirements-list">
+                <div class="intl-req-item">
+                    <div class="intl-req-num">01</div>
+                    <div>
+                        <strong>{% trans "Secondary School Certificate" %}</strong>
+                        <span>{% trans "Completed 11-year secondary education (or international equivalent) with official transcript" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">02</div>
+                    <div>
+                        <strong>{% trans "English Language Proficiency" %}</strong>
+                        <span>{% trans "IELTS 5.5+ / TOEFL 65+ / CEFR B2, or pass TIU's internal English placement test" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">03</div>
+                    <div>
+                        <strong>{% trans "Passport or National ID" %}</strong>
+                        <span>{% trans "Valid passport for international applicants, or national ID for Uzbek citizens" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">04</div>
+                    <div>
+                        <strong>{% trans "Motivation Letter" %}</strong>
+                        <span>{% trans "A personal statement (300–500 words) explaining why you want to study at TIU" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">05</div>
+                    <div>
+                        <strong>{% trans "Passport-size Photos" %}</strong>
+                        <span>{% trans "2 recent photographs (3.5 x 4.5 cm) on white background" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">06</div>
+                    <div>
+                        <strong>{% trans "Medical Certificate" %}</strong>
+                        <span>{% trans "Required for international students as part of the visa application process" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accommodation-style Box — Foundation Programme -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "Not ready yet?" %}</div>
+                    <h2>{% trans "Start with our Foundation Programme" %}</h2>
+                    <p>{% trans "If you don't yet meet the English language or academic requirements, our Foundation Programme prepares you for degree-level study with intensive English, study skills, and introductory courses in your chosen field." %}</p>
+                    <a href="/programs/certificate/" class="accommodation-link">{% trans "Explore Foundation Programme" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "Students in class at TIU" %}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Available Programmes — List -->
+<section class="bachelor-programmes-section">
+    <div class="container">
+        <div class="bachelor-programmes-header">
+            <span class="bachelor-programmes-label">{% trans "Available Programmes" %}</span>
+            <h2>{% trans "Bachelor's degrees at TIU" %}</h2>
+        </div>
+        <div class="bachelor-programmes-list">
+            {% for prog in programs %}
+            <a href="{{ prog.get_absolute_url }}" class="bachelor-prog-link">
+                <span>{{ prog|trans_field:"title" }}</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            {% empty %}
+            <p style="text-align:center;padding:1rem;color:#666;">{% trans "No programmes available at the moment." %}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Key Dates CTA -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>{% trans "Bachelor's application deadline: 15 July 2026" %}</h2>
+            <p>{% trans "Applications for Fall 2026 intake are now open. Apply early to maximise your chances and allow time for document processing." %}</p>
+            <a href="{% url 'core:static_page' url_path='admissions/deadlines' %}" class="deadlines-cta-link">{% trans "View all key dates" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>{% trans "Bachelor's Application FAQs" %}</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What secondary school grades do I need?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "We don't set a strict minimum grade requirement. However, competitive applicants typically have strong overall grades, particularly in subjects relevant to their chosen programme. Each application is reviewed holistically." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I apply if I haven't finished school yet?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes. You can apply with predicted grades or a provisional transcript. If accepted, your offer will be conditional on successfully completing your secondary education and meeting the stated requirements." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Do I need to take an entrance exam?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "For most Bachelor's programmes, there is no entrance exam. Admission is based on your academic documents, motivation letter, and English proficiency. If you don't have an IELTS/TOEFL score, you can take TIU's internal English test." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I switch programmes after enrolling?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Programme transfers within TIU are possible during the first year, subject to availability and approval from the Academic Office. Speak with your academic advisor to discuss your options." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What is the tuition fee for Bachelor's programmes?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Tuition fees vary by programme, ranging from approximately 19,000,000 to 22,000,000 UZS per year. Scholarships of up to 100% are available for high-achieving students. Visit our" %} <span>{% trans "Tuition & Fees" %}</span> {% trans "page for full details." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='admissions/how-to-apply' %}" class="explore-more-link">{% trans "How to Apply" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="explore-more-link">{% trans "Requirements" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:tuition_fees' %}" class="explore-more-link">{% trans "Tuition & Fees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:scholarships' %}" class="explore-more-link">{% trans "Scholarships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/faqs' %}" class="explore-more-link">{% trans "FAQs" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

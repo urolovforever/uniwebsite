@@ -1,0 +1,153 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+{% endblock %}
+
+{% block title %}Faculty Directory - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Faculty</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Directory</span>
+        </nav>
+        <div class="page-hero-category">Faculty</div>
+        <h1 class="page-hero-title">Faculty Directory</h1>
+        <div class="page-hero-description">
+            <p>Browse our internationally recruited academics and professionals. Search by name, filter by department or role.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Search & Filter -->
+<section class="faculty-search-section">
+    <div class="container">
+        <div class="faculty-search-bar">
+            <div class="faculty-search-input-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="faculty-search" placeholder="Search by name, title, or department...">
+            </div>
+        </div>
+        <div class="faculty-filters">
+            <div class="faculty-filter-group">
+                <label for="dept-filter">Department</label>
+                <select id="dept-filter">
+                    <option value="all">All Departments</option>
+                    {% for dept in departments %}
+                    <option value="{{ dept.name }}">{{ dept|trans_field:"name" }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="faculty-filter-group">
+                <label for="role-filter">Role</label>
+                <select id="role-filter">
+                    <option value="all">All Roles</option>
+                    <option value="leadership">Leadership</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="staff">Staff</option>
+                </select>
+            </div>
+            <button class="faculty-reset-btn" id="reset-filters">
+                <i class="fas fa-undo"></i> Reset
+            </button>
+        </div>
+        <div class="faculty-results-count" id="results-count">
+            Showing {{ people|length }} member{{ people|length|pluralize }}
+        </div>
+    </div>
+</section>
+
+<!-- Faculty Profiles (Leadership Style) -->
+<section class="leadership-section">
+    <div class="container">
+        <div id="faculty-list">
+            {% for person in people %}
+            <div class="leader-profile faculty-profile-item"
+                 data-name="{{ person.full_name|lower }}"
+                 data-title="{{ person.job_title|lower }}{{ person.job_title_uz|lower }}{{ person.job_title_ru|lower }}"
+                 data-department="{{ person.department.name|default:'' }}"
+                 data-role="{{ person.role }}">
+                <div class="leader-text">
+                    <h2>{{ person.full_name }}</h2>
+                    <div class="faculty-meta">
+                        <span class="faculty-meta-role">{{ person.get_role_display }}</span>
+                        {% if person.department %}
+                        <span class="faculty-meta-dept">{{ person.department|trans_field:"name" }}</span>
+                        {% endif %}
+                    </div>
+                    <p>{{ person|trans_field:"job_title" }}</p>
+                    {% if person.email %}
+                    <p><a href="mailto:{{ person.email }}" style="color: #003366; text-decoration: none;"><i class="fas fa-envelope" style="margin-right: 0.4rem;"></i>{{ person.email }}</a></p>
+                    {% endif %}
+                    {% if person.bio %}
+                    <div class="leader-accordion">
+                        <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                            Find out more <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="leader-accordion-content">
+                            {{ person|trans_field:"bio"|safe }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <a href="{{ person.get_absolute_url }}" class="faculty-card-link" style="margin-top: 1.25rem;">
+                        View Profile <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="leader-photo">
+                    {% if person.photo %}
+                    <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" loading="lazy">
+                    {% else %}
+                    <div class="faculty-card-placeholder" style="aspect-ratio: 3 / 3.5;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    {% endif %}
+                    <div class="leader-photo-overlay">
+                        <div class="leader-photo-name">{{ person.full_name }}</div>
+                        <div class="leader-photo-title">{{ person|trans_field:"job_title" }}</div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p style="text-align: center; color: #666; padding: 3rem 0;">No faculty members found.</p>
+            {% endfor %}
+        </div>
+
+        <!-- No Results State -->
+        <div class="faculty-no-results" id="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No results found</h3>
+            <p>Try adjusting your search or filter criteria.</p>
+            <button class="faculty-reset-link" id="reset-filters-link">Clear all filters</button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="faculty-pagination" id="pagination"></div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="{% url 'people:departments' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:program_list' %}" class="explore-more-link">{% trans "Programs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='research/centers' %}" class="explore-more-link">{% trans "Research" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='about/overview' %}" class="explore-more-link">{% trans "About TIU" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/faculty.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,277 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Partner Universities - International | TIU{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>International</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Partner Universities</span>
+        </nav>
+        <div class="page-hero-category">International</div>
+        <h1 class="page-hero-title">Partner Universities</h1>
+        <div class="page-hero-description">
+            <p>Our growing network of international partnerships opens doors to global education and career opportunities.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro Section -->
+<section class="partners-intro-section">
+    <div class="container">
+        <div class="partners-intro-grid">
+            <div class="partners-intro-text">
+                <h2>A global network built on <em>partnership</em></h2>
+                <p>TIU collaborates with universities across Asia, Europe, and beyond to offer our students exchange programmes, dual degrees, joint research, and international career pathways.</p>
+                <p>Whether you want to spend a semester abroad, earn a dual qualification, or participate in a summer school — our partnerships make it possible.</p>
+            </div>
+            <div class="partners-intro-stats">
+                <div class="partners-stat">
+                    <span class="partners-stat-number">10+</span>
+                    <span class="partners-stat-label">Partner universities</span>
+                    <a href="/international/partner-universities/" class="split-link" style="margin-top: 1.5rem;">View partners <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="partners-stat">
+                    <span class="partners-stat-number">6+</span>
+                    <span class="partners-stat-label">Countries</span>
+                    <a href="/international/exchange-opportunities/" class="split-link" style="margin-top: 1.5rem;">Explore countries <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="partners-stat">
+                    <span class="partners-stat-number">2+2</span>
+                    <span class="partners-stat-label">Dual degree programmes</span>
+                    <a href="/programs/dual-diploma/" class="split-link" style="margin-top: 1.5rem;">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partner Universities by Region -->
+<section class="partners-list-section">
+    <div class="container">
+        <h2>Our partners by region</h2>
+
+        <!-- South Korea -->
+        <div class="partners-region">
+            <h3><i class="fas fa-map-marker-alt"></i> South Korea</h3>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>Woosong University</h4>
+                        <span>Daejeon, South Korea</span>
+                        <p>Exchange programmes, dual degree in Business Administration</p>
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>Solbridge International School of Business</h4>
+                        <span>Daejeon, South Korea</span>
+                        <p>Semester exchange, joint workshops, Business & Economics</p>
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>Hanyang University</h4>
+                        <span>Seoul, South Korea</span>
+                        <p>Research collaboration, student exchange, Engineering & IT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Europe -->
+        <div class="partners-region">
+            <h3><i class="fas fa-map-marker-alt"></i> Europe</h3>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>University of Latvia</h4>
+                        <span>Riga, Latvia</span>
+                        <p>Semester exchange, dual degree pathway, Humanities & Social Sciences</p>
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>Warsaw University of Technology</h4>
+                        <span>Warsaw, Poland</span>
+                        <p>Engineering exchange, joint research projects, summer school</p>
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>University of Szeged</h4>
+                        <span>Szeged, Hungary</span>
+                        <p>Semester exchange, Law & International Relations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Turkey -->
+        <div class="partners-region">
+            <h3><i class="fas fa-map-marker-alt"></i> Turkey</h3>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>Istanbul Aydin University</h4>
+                        <span>Istanbul, Turkey</span>
+                        <p>Semester exchange, Business & Education programmes</p>
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>Ankara University</h4>
+                        <span>Ankara, Turkey</span>
+                        <p>Research collaboration, faculty exchange, Languages & Humanities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Central Asia -->
+        <div class="partners-region">
+            <h3><i class="fas fa-map-marker-alt"></i> Central Asia</h3>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>KIMEP University</h4>
+                        <span>Almaty, Kazakhstan</span>
+                        <p>Semester exchange, joint conferences, Business & Law</p>
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="partner-item-info">
+                        <h4>American University of Central Asia</h4>
+                        <span>Bishkek, Kyrgyzstan</span>
+                        <p>Student exchange, summer school, Liberal Arts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Become a Partner CTA -->
+<section class="partners-cta-section">
+    <div class="container">
+        <div class="partners-cta-grid">
+            <div class="partners-cta-text">
+                <h2>Become a partner university</h2>
+                <p>We're always looking to expand our international network. If your institution is interested in establishing an exchange agreement, dual degree programme, or research collaboration with TIU, we'd love to hear from you.</p>
+                <a href="mailto:international@tiu.uz" class="split-link" style="color: #fff; border-bottom-color: #fff;">Contact our partnerships team <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="partners-cta-image">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU campus partnership" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Partnership FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How are partner universities selected?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>TIU evaluates potential partners based on academic quality, programme compatibility, student support infrastructure, and shared values. All partnerships are reviewed and approved by the university's International Committee.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I suggest a university for a new partnership?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes! If you know of a university that would be a good fit for TIU, contact the International Office with details. We welcome suggestions from students and faculty and will explore the possibility of establishing a new agreement.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are all partner universities available for all programmes?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Not all partnerships cover every programme. Exchange availability depends on the specific agreement between TIU and the partner institution. Check with the International Office to see which destinations are available for your field of study.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What is a dual degree programme?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>A dual degree (2+2) programme allows you to study two years at TIU and two years at a partner university, graduating with two internationally recognised qualifications. This is available with select partners in South Korea and Europe.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there funding for exchange programmes?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>TIU offers travel grants and exchange bursaries. Some partner universities also provide scholarships or housing support for incoming exchange students. Contact the International Office for details on available funding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/international/why-study-tiu/" class="explore-more-link">Why Study at TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/admission-process/" class="explore-more-link">Admission Process <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/visa-immigration/" class="explore-more-link">Visa & Immigration <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/accommodation/" class="explore-more-link">Accommodation <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/exchange-opportunities/" class="explore-more-link">Exchange Opportunities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,203 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}University Leadership Team - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/b2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">University Leadership Team</span>
+        </nav>
+        <div class="page-hero-category">About</div>
+        <h1 class="page-hero-title">University Leadership Team</h1>
+        <div class="page-hero-description">
+            <p>The University Leadership Team develop and deliver the vision and strategy of Tashkent International University, providing academic and operational leadership across the institution.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Leadership Profiles -->
+<section class="leadership-section">
+    <div class="container">
+
+        <!-- Rector -->
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>Rector</h2>
+                <p>The Rector provides overall strategic leadership for Tashkent International University, guiding the institution's academic mission, international partnerships, and long-term development. Under their direction, TIU has established its unique 2+2 dual degree model and built partnerships with over 10 universities worldwide.</p>
+                <p>As the university's chief executive, the Rector represents TIU in national and international forums, building relationships with government bodies, industry partners, and academic institutions across the globe.</p>
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        Find out more <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        <p>The Rector oversees all university operations, from academic program development and faculty recruitment to campus expansion and student experience.</p>
+                        <p>A strong advocate for internationalization in higher education, the Rector has been instrumental in securing partnerships with universities across South Korea, Malaysia, Latvia, and other countries — ensuring TIU students have genuine pathways to dual qualifications and global careers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-photo">
+                <img src="{% static 'img/campus/b2.jpg' %}" alt="Rector of TIU" loading="lazy">
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">Rector of TIU</div>
+                    <div class="leader-photo-title">Rector, Tashkent International University</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vice Rector for Academic Affairs -->
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>Vice Rector for Academic Affairs</h2>
+                <p>Oversees curriculum development, faculty recruitment, and academic quality assurance across all four departments. Ensures every program meets rigorous international standards and aligns with partner university requirements for seamless credit transfer in the 2+2 pathway.</p>
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        Find out more <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        <p>The Vice Rector for Academic Affairs leads the continuous improvement of TIU's educational programs, working closely with department heads and international partners to ensure curriculum relevance and academic rigor. They oversee accreditation processes, faculty development initiatives, and the implementation of innovative teaching methodologies.</p>
+                        <p>Under their leadership, TIU has adopted modern pedagogical approaches including project-based learning, collaborative seminars, and digital-first assessment methods — all delivered in 100% English-medium instruction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-photo">
+                <img src="{% static 'img/campus/c5.jpg' %}" alt="Vice Rector for Academic Affairs" loading="lazy">
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">Vice Rector for Academic Affairs</div>
+                    <div class="leader-photo-title">Vice Rector, Academic Affairs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vice Rector for International Affairs -->
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>Vice Rector for International Affairs</h2>
+                <p>Manages TIU's growing network of global partnerships, coordinates student exchange programs, and develops new international opportunities. A key architect behind the university's 2+2 dual degree agreements with institutions across Europe and Asia.</p>
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        Find out more <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        <p>The Vice Rector for International Affairs represents TIU at international education conferences, negotiates partnership agreements, and ensures the smooth operation of exchange and transfer pathways for students. They work to expand TIU's global footprint, identifying new partner universities and collaborative research opportunities.</p>
+                        <p>Their office also supports international students coming to TIU, managing visa coordination, orientation programs, and cross-cultural integration — making the university a truly international campus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-photo">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="Vice Rector for International Affairs" loading="lazy">
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">Vice Rector for International Affairs</div>
+                    <div class="leader-photo-title">Vice Rector, International Affairs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vice Rector for Student Life -->
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>Vice Rector for Student Life</h2>
+                <p>Dedicated to creating a vibrant, supportive campus experience for every student — from housing and wellness services to clubs, sports, and career development. Ensures students at TIU feel connected, empowered, and prepared for life after graduation.</p>
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        Find out more <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        <p>The Vice Rector for Student Life oversees all non-academic aspects of the student experience, including the Student Union, campus events, accommodation services, counseling and wellbeing, and the career center. They champion student voice in university governance and lead initiatives like the annual "Student of the Year" competition.</p>
+                        <p>Working closely with the Student Union leadership, they ensure every student — whether from Tashkent or abroad — has access to the resources, support, and community they need to thrive academically and personally.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-photo">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="Vice Rector for Student Life" loading="lazy">
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">Vice Rector for Student Life</div>
+                    <div class="leader-photo-title">Vice Rector, Student Affairs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chief Operating Officer -->
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>Chief Operating Officer</h2>
+                <p>Oversees the operational infrastructure that keeps TIU running — from campus facilities and IT systems to finance, HR, and strategic planning. Ensures the university operates efficiently while maintaining the resources needed for academic excellence and growth.</p>
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        Find out more <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        <p>The COO manages the university's day-to-day operations and long-term infrastructure planning. This includes oversight of campus development, digital systems, procurement, health and safety, and sustainability initiatives. They work to ensure TIU's physical and digital environment supports the university's ambitions for growth and international standing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-photo">
+                <img src="{% static 'img/campus/b1.jpg' %}" alt="Chief Operating Officer" loading="lazy">
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">Chief Operating Officer</div>
+                    <div class="leader-photo-title">Chief Operating Officer</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dean of Business & Economics -->
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>Dean of Business & Economics</h2>
+                <p>Leads the Department of Business & Economics, overseeing program development, faculty management, and industry partnerships. Drives the department's mission to produce graduates who are ready for leadership roles in the global economy.</p>
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        Find out more <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        <p>The Dean works to ensure Business & Economics programs at TIU combine rigorous academic theory with practical, real-world application. They oversee partnerships with businesses and organizations, creating internship opportunities and guest lecture series that connect students with industry leaders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-photo">
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="Dean of Business & Economics" loading="lazy">
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">Dean of Business & Economics</div>
+                    <div class="leader-photo-title">Dean, Department of Business & Economics</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/why-tiu/" class="explore-more-link">Why TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/mission-vision/" class="explore-more-link">Mission & Vision <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/campus-map/" class="explore-more-link">Campus Map <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/sustainability/" class="explore-more-link">Sustainability <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleLeaderBio(btn) {
+    const content = btn.parentElement.querySelector('.leader-accordion-content');
+    btn.classList.toggle('active');
+    content.classList.toggle('show');
+}
+</script>
+{% endblock %}

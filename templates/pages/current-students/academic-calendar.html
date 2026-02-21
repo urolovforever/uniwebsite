@@ -1,0 +1,341 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+{% endblock %}
+
+{% block title %}Academic Calendar - TIU{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Academic Calendar</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">Academic Calendar</h1>
+        <div class="page-hero-description">
+            <p>Key dates, deadlines, and term schedules for the current academic year.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Dates Header Bar -->
+<section class="dates-header-bar">
+    <div class="container">
+        <h2>Academic Year 2025/26</h2>
+        <p>Plan your semester with the key dates listed below — from teaching periods and breaks to exam weeks and graduation.</p>
+    </div>
+</section>
+
+<!-- Academic Calendar - Three Semesters -->
+<section class="academic-calendar">
+    <div class="container">
+        <div class="semesters-grid">
+
+            <!-- Semester 1 -->
+            <div class="semester-column">
+                <div class="semester-date-range">SEPTEMBER 2025 - JANUARY 2026</div>
+                <h3 class="semester-title">Semester 1</h3>
+                <div class="semester-events">
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-star"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Orientation Week</strong>
+                            <span>1 - 5 September 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Course Registration</strong>
+                            <span>1 - 12 September 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Teaching Period</strong>
+                            <span>8 September - 12 December 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Add/Drop Deadline</strong>
+                            <span>22 September 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Midterm Exams</strong>
+                            <span>20 - 31 October 2025</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-snowflake"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Winter Break</strong>
+                            <span>15 December 2025 - 5 January 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Final Exams</strong>
+                            <span>6 - 24 January 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semester 2 -->
+            <div class="semester-column">
+                <div class="semester-date-range">FEBRUARY 2026 - JUNE 2026</div>
+                <h3 class="semester-title">Semester 2</h3>
+                <div class="semester-events">
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Course Registration</strong>
+                            <span>26 - 30 January 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Teaching Period</strong>
+                            <span>2 February - 1 May 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Add/Drop Deadline</strong>
+                            <span>13 February 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Midterm Exams</strong>
+                            <span>9 - 20 March 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-sun"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Spring Break</strong>
+                            <span>23 March - 3 April 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Final Exams</strong>
+                            <span>4 - 22 May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summer -->
+            <div class="semester-column">
+                <div class="semester-date-range">JUNE 2026 - AUGUST 2026</div>
+                <h3 class="semester-title">Summer</h3>
+                <div class="semester-events">
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Grades Published</strong>
+                            <span>1 June 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Graduation Ceremony</strong>
+                            <span>15 June 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-redo"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Resit Exams</strong>
+                            <span>6 - 17 July 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-book-reader"></i></div>
+                        <div class="semester-event-info">
+                            <strong>Summer School</strong>
+                            <span>20 July - 14 August 2026</span>
+                        </div>
+                    </div>
+                    <div class="semester-event">
+                        <div class="semester-event-icon"><i class="fas fa-star"></i></div>
+                        <div class="semester-event-info">
+                            <strong>New Year Orientation</strong>
+                            <span>1 September 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Student Deadlines Table -->
+<section class="deadlines-section">
+    <div class="container">
+        <div class="deadlines-header">
+            <span class="deadlines-label">Student Deadlines</span>
+            <h2>Key dates you need to know</h2>
+        </div>
+        <div class="deadlines-table">
+            <div class="deadline-row header-row">
+                <span class="deadline-intake">What</span>
+                <span class="deadline-open">Opens</span>
+                <span class="deadline-close">Deadline</span>
+                <span class="deadline-status">Status</span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Semester 2</strong><br>Course Registration</span>
+                <span class="deadline-open">26 January 2026</span>
+                <span class="deadline-close">13 February 2026</span>
+                <span class="deadline-status"><span class="status-badge open">Open</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Semester 2</strong><br>Scholarship Renewal</span>
+                <span class="deadline-open">1 February 2026</span>
+                <span class="deadline-close">28 February 2026</span>
+                <span class="deadline-status"><span class="status-badge open">Open</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Summer 2026</strong><br>Exchange Programme Applications</span>
+                <span class="deadline-open">1 March 2026</span>
+                <span class="deadline-close">1 May 2026</span>
+                <span class="deadline-status"><span class="status-badge upcoming">Upcoming</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Summer 2026</strong><br>Summer School Registration</span>
+                <span class="deadline-open">1 May 2026</span>
+                <span class="deadline-close">30 June 2026</span>
+                <span class="deadline-status"><span class="status-badge upcoming">Upcoming</span></span>
+            </div>
+            <div class="deadline-row">
+                <span class="deadline-intake"><strong>Semester 1</strong><br>Course Registration (completed)</span>
+                <span class="deadline-open">1 September 2025</span>
+                <span class="deadline-close">22 September 2025</span>
+                <span class="deadline-status"><span class="status-badge closed">Closed</span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Box -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>Need help with registration or deadlines?</h2>
+            <p>The Academic Affairs office can help you with course registration, deadline extensions, and any questions about the academic calendar. Don't hesitate to reach out.</p>
+            <a href="/contact/support/" class="deadlines-cta-link">Contact Academic Affairs <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Calendar FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>When does the semester start and end?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Semester 1 runs from September to January, and Semester 2 runs from February to May. The summer period (June-August) includes graduation, resit exams, and optional summer school.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What is the add/drop deadline?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>The add/drop period allows you to change your course selection within the first two weeks of each semester. After this deadline, changes require approval from the Academic Affairs office and may appear on your transcript.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>When are exam results published?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Semester 1 results are published by early February. Semester 2 results are published by 1 June. You can access your grades through the LMS student portal.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I take courses during summer school?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. Summer school runs from late July to mid-August. It's a great option if you want to get ahead, retake a course, or explore a subject outside your programme. Registration opens in May.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Are there any public holidays during the semester?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. TIU observes Uzbekistan's national holidays including Independence Day (1 September), Constitution Day (8 December), Navruz (21 March), and other public holidays. Classes are not held on these days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

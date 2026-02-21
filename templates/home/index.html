@@ -1,0 +1,517 @@
+{% extends "base.html" %}
+{% load static i18n i18n_fields %}
+
+{% block title %}{% trans "Tashkent International University - Excellence in Education" %}{% endblock %}
+
+{% block content %}
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="{% static 'img/branding/logo.png' %}" alt="Tashkent International University Logo">
+        </div>
+        <div class="scroll-indicator" onclick="document.querySelector('.programs-pathway').scrollIntoView({behavior: 'smooth'});">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 2. PROGRAMS PATHWAY SECTION -->
+    <section class="programs-pathway">
+        <div class="container">
+            <div class="pathway-header">
+                <h2>{% trans "Let's Get" %} <strong>{% trans "Started" %}</strong></h2>
+                <div class="pathway-underline"></div>
+            </div>
+
+            <div class="pathway-grid">
+                <div class="pathway-card">
+                    <div class="pathway-image">
+                        <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Bachelor Programs" %}" loading="lazy">
+                    </div>
+                    <div class="pathway-content">
+                        <h3>{% trans "BACHELOR'S PROGRAMS" %}</h3>
+                        <ul>
+                            <li>{% trans "Business & Economics" %}</li>
+                            <li>{% trans "Information Technology" %}</li>
+                            <li>{% trans "Education & Pedagogy" %}</li>
+                            <li>{% trans "Foreign Languages" %}</li>
+                            <li>{% trans "100% English medium instruction" %}</li>
+                        </ul>
+                        <div class="pathway-buttons">
+                            <a href="{% url 'programs:bachelor_list' %}" class="btn-pathway-primary">{% trans "Explore Bachelor's Degrees" %}</a>
+                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-image">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
+                    </div>
+                    <div class="pathway-content">
+                        <h3>{% trans "MASTER'S PROGRAMS" %}</h3>
+                        <ul>
+                            <li>{% trans "Advanced specializations" %}</li>
+                            <li>{% trans "International faculty" %}</li>
+                            <li>{% trans "Research opportunities" %}</li>
+                            <li>{% trans "Industry connections" %}</li>
+                            <li>{% trans "Flexible study options" %}</li>
+                        </ul>
+                        <div class="pathway-buttons">
+                            <a href="{% url 'programs:master_list' %}" class="btn-pathway-primary">{% trans "Explore Master's Degrees" %}</a>
+                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-image">
+                        <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
+                    </div>
+                    <div class="pathway-content">
+                        <h3>{% trans "PhD PROGRAMMES" %}</h3>
+                        <ul>
+                            <li>{% trans "3-4 years full-time research" %}</li>
+                            <li>{% trans "Expert faculty supervision" %}</li>
+                            <li>{% trans "International conference funding" %}</li>
+                            <li>{% trans "Publication opportunities" %}</li>
+                            <li>{% trans "Teaching experience" %}</li>
+                        </ul>
+                        <div class="pathway-buttons">
+                            <a href="{% url 'programs:phd_list' %}" class="btn-pathway-primary">{% trans "Explore PhD Programmes" %}</a>
+                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. QUICK STATS -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">{% trans "Departments" %}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2+2</div>
+                <div class="stat-label">{% trans "Dual Degree Program" %}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">{% trans "Partner Universities" %}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">{% trans "English Medium" %}</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NEWS SECTION (dynamic) -->
+    <section class="news-highlight-section">
+        <div class="container">
+            <div class="news-highlight-header">
+                <h2>{% trans "Latest news" %}</h2>
+                <a href="{% url 'news:news_list' %}" class="news-view-all">{% trans "See all" %} <i class="fas fa-arrow-right"></i></a>
+            </div>
+            {% if news_articles %}
+            <div class="news-highlight-layout">
+                {% for article in news_articles %}
+                    {% if forloop.first %}
+                    <article class="news-featured-card">
+                        <div class="news-featured-content">
+                            <span class="news-featured-label">{% trans "TOP STORY" %}</span>
+                            <h3><a href="{% url 'news:news_detail' article.slug %}">{{ article|trans_field:"title" }}</a></h3>
+                            {% if article.excerpt %}
+                            <p>{{ article|trans_field:"excerpt" }}</p>
+                            {% endif %}
+                            <a href="{% url 'news:news_detail' article.slug %}" class="news-featured-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <a href="{% url 'news:news_detail' article.slug %}" class="news-featured-image">
+                            {% if article.featured_image %}
+                            <img src="{{ article.featured_image.url }}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                            {% else %}
+                            <img src="{% static 'img/campus/b1.jpg' %}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                            {% endif %}
+                        </a>
+                    </article>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="news-list-side">
+                    {% for article in news_articles %}
+                        {% if not forloop.first %}
+                        <article class="news-list-item">
+                            <a href="{% url 'news:news_detail' article.slug %}">
+                                <div class="news-list-thumb">
+                                    {% if article.featured_image %}
+                                    <img src="{{ article.featured_image.url }}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                                    {% else %}
+                                    <img src="{% static 'img/campus/b1.jpg' %}" alt="{{ article|trans_field:"title" }}" loading="lazy">
+                                    {% endif %}
+                                </div>
+                                <div class="news-list-info">
+                                    <span class="news-list-date">{{ article.published_date|date:"d M Y"|upper }}</span>
+                                    <h4>{{ article|trans_field:"title" }}</h4>
+                                    {% if article.excerpt %}
+                                    <p>{{ article|trans_field:"excerpt"|truncatewords:20 }}</p>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </article>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% else %}
+            <div class="news-highlight-layout">
+                <article class="news-featured-card">
+                    <div class="news-featured-content">
+                        <span class="news-featured-label">{% trans "TOP STORY" %}</span>
+                        <h3><a href="{% url 'news:news_list' %}">{% trans "TIU Achieves Top Ranking in Central Asia for Academic Excellence" %}</a></h3>
+                        <p>{% trans "Tashkent International University has been recognized as one of the leading institutions in Central Asia for its outstanding academic programs and research contributions." %}</p>
+                        <a href="{% url 'news:news_list' %}" class="news-featured-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <a href="{% url 'news:news_list' %}" class="news-featured-image">
+                        <img src="{% static 'img/campus/b1.jpg' %}" alt="TIU News" loading="lazy">
+                    </a>
+                </article>
+                <div class="news-list-side">
+                    <article class="news-list-item">
+                        <a href="{% url 'news:news_list' %}">
+                            <div class="news-list-thumb">
+                                <img src="{% static 'img/campus/b2.jpg' %}" alt="TIU News" loading="lazy">
+                            </div>
+                            <div class="news-list-info">
+                                <span class="news-list-date">12 FEB 2026</span>
+                                <h4>{% trans "TIU launches new AI & Machine Learning research lab in partnership with KAIST" %}</h4>
+                                <p>{% trans "Tashkent International University has opened a state-of-the-art research laboratory dedicated to artificial intelligence and machine learning..." %}</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-list-item">
+                        <a href="{% url 'news:news_list' %}">
+                            <div class="news-list-thumb">
+                                <img src="{% static 'img/campus/b3.jpg' %}" alt="TIU News" loading="lazy">
+                            </div>
+                            <div class="news-list-info">
+                                <span class="news-list-date">28 JAN 2026</span>
+                                <h4>{% trans "Business students win Central Asian case competition for second consecutive year" %}</h4>
+                                <p>{% trans "A team of four undergraduate students from the School of Business & Economics secured first place at the regional case competition..." %}</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-list-item">
+                        <a href="{% url 'news:news_list' %}">
+                            <div class="news-list-thumb">
+                                <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU News" loading="lazy">
+                            </div>
+                            <div class="news-list-info">
+                                <span class="news-list-date">15 JAN 2026</span>
+                                <h4>{% trans "Cybersecurity programme receives international accreditation from EC-Council" %}</h4>
+                                <p>{% trans "The Faculty's cybersecurity track has been officially accredited by the EC-Council, making TIU the first university in Central Asia..." %}</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-list-item">
+                        <a href="{% url 'news:news_list' %}">
+                            <div class="news-list-thumb">
+                                <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU News" loading="lazy">
+                            </div>
+                            <div class="news-list-info">
+                                <span class="news-list-date">05 JAN 2026</span>
+                                <h4>{% trans "International faculty exchange program expands to 15 new partner universities" %}</h4>
+                                <p>{% trans "TIU has signed new agreements with universities across Europe and Asia, expanding opportunities for faculty and student exchanges..." %}</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-list-item">
+                        <a href="{% url 'news:news_list' %}">
+                            <div class="news-list-thumb">
+                                <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU News" loading="lazy">
+                            </div>
+                            <div class="news-list-info">
+                                <span class="news-list-date">20 DEC 2025</span>
+                                <h4>{% trans "TIU students showcase innovation at annual technology and entrepreneurship fair" %}</h4>
+                                <p>{% trans "Over 50 student projects were presented at the annual fair, featuring solutions in AI, sustainability, and social impact..." %}</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- 5. WELCOME MESSAGE SECTION -->
+    <section class="welcome-section">
+        <div class="welcome-image">
+            <img src="{% static 'img/hero/back1.jpg' %}" alt="TIU Campus Life" loading="lazy">
+        </div>
+        <div class="welcome-content">
+            <div class="welcome-accent"></div>
+            <h2>{% trans "Your Gateway to Global Education." %}</h2>
+            <p>
+                {% trans "Founded in 2023, Tashkent International University offers a unique 2+2 dual degree program with prestigious partner universities worldwide. Study in English across four dynamic departments — Business, Education, IT, and Foreign Languages — and graduate with two internationally recognized degrees. At TIU, we prepare future leaders for success in the global economy." %}
+            </p>
+            <div class="welcome-buttons">
+                <a href="https://urolovforever.github.io/landingpage/" class="btn-welcome">{% trans "Apply Now" %}</a>
+                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Schedule a Visit" %}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EXPERIENCE TIU SECTION -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="experience-block">
+                <div class="experience-text">
+                    <h2>2+2 <strong>{% trans "Dual Degree Program" %}</strong></h2>
+                    <p>{% trans "Our unique dual degree program offers you the best of both worlds. Spend your first two years at TIU in Tashkent, then complete your studies at one of our prestigious partner universities abroad. Graduate with two internationally recognized degrees that open doors to global career opportunities. This is education without boundaries." %}</p>
+                    <a href="{% url 'programs:program_list' %}" class="btn-experience">{% trans "Explore Programs" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="experience-image">
+                    <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU Students" loading="lazy">
+                </div>
+            </div>
+
+            <div class="experience-block reverse">
+                <div class="experience-text">
+                    <h2>{% trans "Four Dynamic" %} <strong>{% trans "Departments" %}</strong></h2>
+                    <p>{% trans "Choose from four cutting-edge departments: Business for future entrepreneurs and economists, Education for tomorrow's teachers and leaders, IT for tech innovators, and Foreign Languages for global communicators. Each department offers bachelor's and master's programs taught entirely in English by international faculty." %}</p>
+                    <a href="{% url 'programs:program_list' %}" class="btn-experience">{% trans "View Departments" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="experience-image">
+                    <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Departments" loading="lazy">
+                </div>
+            </div>
+
+            <div class="experience-block">
+                <div class="experience-text">
+                    <h2>{% trans "Modern" %} <strong>{% trans "Campus Life" %}</strong></h2>
+                    <p>{% trans "Located on Little Ring Road in the heart of Tashkent, our modern campus provides everything you need for academic success and personal growth. State-of-the-art classrooms, wellness facilities, student clubs, and a vibrant community await you. At TIU, you'll find the perfect environment to learn, connect, and thrive." %}</p>
+                    <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-experience">{% trans "Explore Campus" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="experience-image">
+                    <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU Campus" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOVE WHERE YOU LEARN SECTION -->
+    <section class="welcome-section reverse">
+        <div class="welcome-image">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus Life" loading="lazy">
+        </div>
+        <div class="welcome-content">
+            <div class="welcome-accent"></div>
+            <h2>{% trans "Study in the Heart of Tashkent." %}</h2>
+            <p>{% trans "Our campus on Little Ring Road 7 puts you at the center of Uzbekistan's capital city. Experience a modern learning environment with state-of-the-art facilities, dedicated wellness resources, and a supportive community. Join student organizations, compete in the annual Student of the Year competition, and build connections that last a lifetime." %}</p>
+            <div class="welcome-buttons">
+                <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
+                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. UPCOMING EVENTS SECTION (dynamic) -->
+    <section class="upcoming-events-section">
+        <div class="container">
+            <div class="upcoming-events-header">
+                <h2>{% trans "Upcoming events" %}</h2>
+                <a href="{% url 'news:event_list' %}" class="events-view-all">{% trans "See all" %} <i class="fas fa-arrow-right"></i></a>
+            </div>
+            {% if upcoming_events %}
+            <div class="upcoming-events-layout">
+                {% for event in upcoming_events %}
+                    {% if forloop.first %}
+                    <article class="event-featured-card">
+                        <div class="event-featured-content">
+                            <span class="event-featured-label">{% trans "FEATURED EVENT" %}</span>
+                            <div class="event-featured-date-row">
+                                <span class="event-featured-badge">
+                                    <span class="event-badge-month">{{ event.event_date|date:"M"|upper }}</span>
+                                    <span class="event-badge-day">{{ event.event_date|date:"d" }}</span>
+                                </span>
+                                <div class="event-featured-meta">
+                                    {% if event.category %}<span class="event-featured-category">{{ event.category|upper }}</span>{% endif %}
+                                    {% if event.event_time %}<span class="event-featured-time"><i class="far fa-clock"></i> {{ event.event_time|time:"h:i A" }}</span>{% endif %}
+                                </div>
+                            </div>
+                            <h3><a href="{% url 'news:event_detail' event.slug %}">{{ event|trans_field:"title" }}</a></h3>
+                            {% if event.description %}
+                            <p>{{ event|trans_field:"description"|truncatewords:30 }}</p>
+                            {% endif %}
+                            <a href="{% url 'news:event_detail' event.slug %}" class="event-featured-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <a href="{% url 'news:event_detail' event.slug %}" class="event-featured-image">
+                            {% if event.image %}
+                            <img src="{{ event.image.url }}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+                            {% else %}
+                            <img src="{% static 'img/campus/b1.jpg' %}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+                            {% endif %}
+                        </a>
+                    </article>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="events-list-side">
+                    {% for event in upcoming_events %}
+                        {% if not forloop.first %}
+                        <article class="events-list-item">
+                            <a href="{% url 'news:event_detail' event.slug %}">
+                                <div class="events-list-thumb">
+                                    {% if event.image %}
+                                    <img src="{{ event.image.url }}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+                                    {% else %}
+                                    <img src="{% static 'img/campus/b1.jpg' %}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+                                    {% endif %}
+                                    <span class="events-thumb-badge">
+                                        <span>{{ event.event_date|date:"M"|upper }}</span>
+                                        <span>{{ event.event_date|date:"d" }}</span>
+                                    </span>
+                                </div>
+                                <div class="events-list-info">
+                                    {% if event.category %}<span class="events-list-category">{{ event.category|upper }}</span>{% endif %}
+                                    <h4>{{ event|trans_field:"title" }}</h4>
+                                    {% if event.event_time %}<span class="events-list-time"><i class="far fa-clock"></i> {{ event.event_time|time:"h:i A" }}</span>{% endif %}
+                                </div>
+                            </a>
+                        </article>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% else %}
+            <div class="upcoming-events-layout">
+                <article class="event-featured-card">
+                    <div class="event-featured-content">
+                        <span class="event-featured-label">{% trans "FEATURED EVENT" %}</span>
+                        <div class="event-featured-date-row">
+                            <span class="event-featured-badge">
+                                <span class="event-badge-month">MAR</span>
+                                <span class="event-badge-day">10</span>
+                            </span>
+                            <div class="event-featured-meta">
+                                <span class="event-featured-category">{% trans "CONFERENCE" %}</span>
+                                <span class="event-featured-time"><i class="far fa-clock"></i> 09:00 AM</span>
+                            </div>
+                        </div>
+                        <h3><a href="{% url 'news:event_list' %}">{% trans "International Research Conference on Innovation and Technology 2026" %}</a></h3>
+                        <p>{% trans "Join leading researchers, academics, and industry leaders for a day of groundbreaking presentations, panel discussions, and networking at TIU's flagship annual research conference." %}</p>
+                        <a href="{% url 'news:event_list' %}" class="event-featured-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <a href="{% url 'news:event_list' %}" class="event-featured-image">
+                        <img src="{% static 'img/campus/b1.jpg' %}" alt="Research Conference" loading="lazy">
+                    </a>
+                </article>
+                <div class="events-list-side">
+                    <article class="events-list-item">
+                        <a href="{% url 'news:event_list' %}">
+                            <div class="events-list-thumb">
+                                <img src="{% static 'img/campus/b2.jpg' %}" alt="Event" loading="lazy">
+                                <span class="events-thumb-badge"><span>MAR</span><span>15</span></span>
+                            </div>
+                            <div class="events-list-info">
+                                <span class="events-list-category">{% trans "OPEN DAY" %}</span>
+                                <h4>{% trans "Spring Open Day - Explore TIU Campus and Meet Faculty" %}</h4>
+                                <span class="events-list-time"><i class="far fa-clock"></i> 10:00 AM</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="events-list-item">
+                        <a href="{% url 'news:event_list' %}">
+                            <div class="events-list-thumb">
+                                <img src="{% static 'img/campus/b3.jpg' %}" alt="Event" loading="lazy">
+                                <span class="events-thumb-badge"><span>MAR</span><span>22</span></span>
+                            </div>
+                            <div class="events-list-info">
+                                <span class="events-list-category">{% trans "WORKSHOP" %}</span>
+                                <h4>{% trans "Career Skills Workshop: Resume Building and Interview Preparation" %}</h4>
+                                <span class="events-list-time"><i class="far fa-clock"></i> 02:00 PM</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="events-list-item">
+                        <a href="{% url 'news:event_list' %}">
+                            <div class="events-list-thumb">
+                                <img src="{% static 'img/campus/c1.jpg' %}" alt="Event" loading="lazy">
+                                <span class="events-thumb-badge"><span>APR</span><span>05</span></span>
+                            </div>
+                            <div class="events-list-info">
+                                <span class="events-list-category">{% trans "SEMINAR" %}</span>
+                                <h4>{% trans "Guest Lecture: Digital Transformation in Emerging Economies" %}</h4>
+                                <span class="events-list-time"><i class="far fa-clock"></i> 11:00 AM</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="events-list-item">
+                        <a href="{% url 'news:event_list' %}">
+                            <div class="events-list-thumb">
+                                <img src="{% static 'img/campus/c2.jpg' %}" alt="Event" loading="lazy">
+                                <span class="events-thumb-badge"><span>APR</span><span>12</span></span>
+                            </div>
+                            <div class="events-list-info">
+                                <span class="events-list-category">{% trans "COMPETITION" %}</span>
+                                <h4>{% trans "Annual Student of the Year Competition - Register Now" %}</h4>
+                                <span class="events-list-time"><i class="far fa-clock"></i> 09:30 AM</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="events-list-item">
+                        <a href="{% url 'news:event_list' %}">
+                            <div class="events-list-thumb">
+                                <img src="{% static 'img/campus/c3.jpg' %}" alt="Event" loading="lazy">
+                                <span class="events-thumb-badge"><span>APR</span><span>20</span></span>
+                            </div>
+                            <div class="events-list-info">
+                                <span class="events-list-category">{% trans "CULTURAL" %}</span>
+                                <h4>{% trans "Nawruz Cultural Festival - Celebrating Diversity at TIU" %}</h4>
+                                <span class="events-list-time"><i class="far fa-clock"></i> 04:00 PM</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- 8. PARTNERS CAROUSEL -->
+    <section class="partners-fullwidth-section">
+        <div class="partners-fullwidth-title">
+            <h2>{% trans "Global Partners" %}</h2>
+        </div>
+        <div class="partners-fullwidth-carousel">
+            <div class="partners-fullwidth-track">
+                {% for partner in partners %}
+                <div class="partner-logo">
+                    <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" loading="lazy">
+                </div>
+                {% empty %}
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-1.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-2.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-3.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-4.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-5.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-6.png' %}" alt="Partner University" loading="lazy"></div>
+                {% endfor %}
+                <!-- Duplicate for seamless loop -->
+                {% for partner in partners %}
+                <div class="partner-logo">
+                    <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" loading="lazy">
+                </div>
+                {% empty %}
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-1.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-2.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-3.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-4.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-5.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-6.png' %}" alt="Partner University" loading="lazy"></div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

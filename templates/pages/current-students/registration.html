@@ -1,0 +1,206 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/current-students.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Registration - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Current Students</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Registration</span>
+        </nav>
+        <div class="page-hero-category">Students</div>
+        <h1 class="page-hero-title">Registration</h1>
+        <div class="page-hero-description">
+            <p>Step-by-step guide to course registration, enrolment, and module selection.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section" style="background: #fff;">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>Register on time. <em>Stay on track.</em></h2>
+                <p>Course registration is your opportunity to build your semester schedule. Each registration period, you select the modules you want to study, confirm your enrolment, and secure your place in classes.</p>
+                <p>Registration opens twice a year — before the fall and spring semesters. Late registration is possible within the first week of classes but is subject to availability and a late fee. We strongly recommend registering during the main registration window.</p>
+                <p>If you need help choosing modules, speak to your academic advisor or visit the Registrar's Office.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card" style="background: #f8f8f8; padding: 3rem 2rem;">
+                    <h3>Need help registering?</h3>
+                    <p>Visit the Registrar's Office or contact your academic advisor for guidance on module selection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to register -->
+<section style="padding: 5rem 0; background: #f8f8f8;">
+    <div class="container">
+        <h2 class="section-heading">How to register</h2>
+        <p class="section-subtitle" style="color: #003366;">Follow these steps to complete your course registration each semester.</p>
+        <div class="grid grid--4col wide-container">
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">1</div>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Check your status</h3>
+                <p class="card-text">Log in to the student portal and confirm that you have no outstanding financial or academic holds on your account.</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">2</div>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Choose modules</h3>
+                <p class="card-text">Browse available modules for your programme and year. Check prerequisites and timetable conflicts before selecting.</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">3</div>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Submit registration</h3>
+                <p class="card-text">Add your chosen modules to the registration form and submit. You'll receive a confirmation email within 24 hours.</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">4</div>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Attend classes</h3>
+                <p class="card-text">Once confirmed, your timetable is finalized. Attend all registered classes from the first day of the semester.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key dates & Important info -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div class="container">
+        <div class="grid grid--2col-equal wide-container">
+            <div>
+                <h2 class="section-heading--left" style="font-size: 2.25rem; color: #003366;">Important information</h2>
+                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">Keep these points in mind during the registration process:</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>You must clear all tuition balances before registration opens</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Module changes (add/drop) are allowed during the first week of classes only</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Some modules have limited seats — register early to secure your first choices</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Check prerequisites — you cannot register for advanced modules without completing required courses</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>Late registration incurs a fee and is subject to seat availability</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-panel" style="background: #f8f8f8;">
+                <h3>Registration dates</h3>
+                <div class="detail-row">
+                    <strong>FALL SEMESTER</strong>
+                    <p>Main registration: 15–30 August</p>
+                    <p>Late registration: 1–7 September</p>
+                </div>
+                <div class="detail-row">
+                    <strong>SPRING SEMESTER</strong>
+                    <p>Main registration: 15–31 January</p>
+                    <p>Late registration: 1–7 February</p>
+                </div>
+                <div class="detail-row">
+                    <strong>ADD / DROP PERIOD</strong>
+                    <p>First 7 days of each semester</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Registration FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What if I miss the registration deadline?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>You can still register during the late registration period (first week of classes), but a late fee applies and popular modules may already be full. Contact the Registrar's Office as soon as possible.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I change my modules after registration?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes, during the add/drop period (first 7 days of the semester). After that, dropping a module requires your academic advisor's approval and may appear as a withdrawal on your transcript.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How many credits should I take per semester?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>A standard full-time load is 30 ECTS credits per semester (typically 5–6 modules). The minimum is 15 credits to maintain full-time status. Exceeding 36 credits requires special permission.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>I have a financial hold on my account — what do I do?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Visit the Finance Office to settle any outstanding balances. Once cleared, the hold will be removed within 1–2 business days and you can proceed with registration.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

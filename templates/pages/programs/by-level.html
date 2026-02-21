@@ -1,0 +1,153 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Programs by Level" %} - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Programs" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Programs by Level" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Programs" %}</div>
+        <h1 class="page-hero-title">{% trans "Programs by Level" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Browse our academic programmes by degree level — bachelor's, master's, or PhD." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>{% trans "Choose your level." %} <em>{% trans "Build your future." %}</em></h2>
+                <p>{% trans "TIU offers programmes at three levels: bachelor's degrees for school leavers and transfer students, master's degrees for those seeking advanced expertise, and PhD programmes for researchers and academics pursuing original scholarship." %}</p>
+                <p>{% trans "All programmes are taught in English and follow international academic standards. Many include options for dual diplomas, exchange semesters, and industry placements." %}</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>{% trans "Browse by faculty instead?" %}</h3>
+                    <p>{% trans "See which programmes each department offers." %}</p>
+                    <a href="{% url 'programs:by_faculty' %}" class="abroad-sidebar-link">{% trans "Programs by Faculty" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bachelor's -->
+{% if bachelor_programs %}
+<section class="section--muted">
+    <div class="container mid-container">
+        <div class="card-header-row" style="margin-bottom: 2rem;">
+            <div class="icon-circle icon-circle--lg"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #003366; margin: 0;">{% trans "Bachelor's Programmes" %}</h2>
+                <p class="card-sub" style="margin: 0.25rem 0 0;">{% trans "4 years — 240 ECTS credits" %}</p>
+            </div>
+        </div>
+        <div class="grid grid--3col" style="gap: 1.5rem;">
+            {% for prog in bachelor_programs %}
+            <a href="{{ prog.get_absolute_url }}" class="top-card top-card--sm" style="text-decoration: none; color: inherit;">
+                <h3 class="card-title--sm">{{ prog|trans_field:"title" }}</h3>
+                {% if prog.duration %}
+                <p class="card-text card-text--mb" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.get_study_type_display }}</p>
+                {% endif %}
+                <span class="card-sub--colored" style="color: #004080;">{{ prog.department|trans_field:"name" }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Master's -->
+{% if master_programs %}
+<section class="section--white">
+    <div class="container mid-container">
+        <div class="card-header-row" style="margin-bottom: 2rem;">
+            <div class="icon-circle icon-circle--lg"><i class="fas fa-user-graduate"></i></div>
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #003366; margin: 0;">{% trans "Master's Programmes" %}</h2>
+                <p class="card-sub" style="margin: 0.25rem 0 0;">{% trans "2 years — 120 ECTS credits" %}</p>
+            </div>
+        </div>
+        <div class="grid grid--3col" style="gap: 1.5rem;">
+            {% for prog in master_programs %}
+            <a href="{{ prog.get_absolute_url }}" class="top-card top-card--sm top-card--muted" style="text-decoration: none; color: inherit;">
+                <h3 class="card-title--sm">{{ prog|trans_field:"title" }}</h3>
+                {% if prog.duration %}
+                <p class="card-text card-text--mb" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.get_study_type_display }}</p>
+                {% endif %}
+                <span class="card-sub--colored" style="color: #004080;">{{ prog.department|trans_field:"name" }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- PhD -->
+{% if phd_programs %}
+<section class="section--muted">
+    <div class="container mid-container">
+        <div class="card-header-row" style="margin-bottom: 2rem;">
+            <div class="icon-circle icon-circle--lg"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #003366; margin: 0;">{% trans "PhD Programmes" %}</h2>
+                <p class="card-sub" style="margin: 0.25rem 0 0;">{% trans "3-4 years — full-time research" %}</p>
+            </div>
+        </div>
+        <div class="grid grid--3col" style="gap: 1.5rem;">
+            {% for prog in phd_programs %}
+            <a href="{{ prog.get_absolute_url }}" class="top-card top-card--sm top-card--navy" style="text-decoration: none; color: inherit;">
+                <h3 class="card-title--sm">{{ prog|trans_field:"title" }}</h3>
+                {% if prog.duration %}
+                <p class="card-text" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.get_study_type_display }}</p>
+                {% endif %}
+                <span class="card-sub--colored" style="color: rgba(255,255,255,0.8);">{{ prog.department|trans_field:"name" }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>{% trans "Ready to apply?" %}</h2>
+        <p>{% trans "Start your application today or contact our admissions team to learn more about any programme." %}</p>
+        <div class="cta-banner__buttons">
+            <a href="https://urolovforever.github.io/landingpage/" class="cta-btn cta-btn--primary">{% trans "Apply Now" %}</a>
+            <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="cta-btn cta-btn--outline">{% trans "Entry Requirements" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'programs:by_faculty' %}" class="explore-more-link">{% trans "By Faculty" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='programs/international-programs' %}" class="explore-more-link">{% trans "International Programs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:joint_degrees' %}" class="explore-more-link">{% trans "Joint Degrees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:exchange_programs' %}" class="explore-more-link">{% trans "Exchange Programs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:dual_diploma' %}" class="explore-more-link">{% trans "Dual Diploma" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

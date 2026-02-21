@@ -1,0 +1,255 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Exchange Opportunities - International | TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>International</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Exchange Opportunities</span>
+        </nav>
+        <div class="page-hero-category">International</div>
+        <h1 class="page-hero-title">Exchange Opportunities</h1>
+        <div class="page-hero-description">
+            <p>Discover semester exchanges, summer schools, and international programmes available to TIU students.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Why come to TIU on exchange -->
+<section class="job-ready-section">
+    <div class="container">
+        <div class="job-ready-grid">
+            <div class="job-ready-text">
+                <h2>Why come to TIU?</h2>
+                <p>A proud history, academic excellence, and a destination filled with opportunity.</p>
+                <p>You'll be part of a diverse student community and have the chance to study and socialise on a safe and friendly campus that has everything you need in one place. If you want to explore further afield, Tashkent's historic Silk Road landmarks and vibrant bazaars await. And as one of the most affordable cities in Central Asia, your money goes further here.</p>
+            </div>
+
+            <div class="job-ready-carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-card active">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-train"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Explore Central Asia while you study</h4>
+                            <p>Tashkent has great transport links making it easy to visit Samarkand, Bukhara, and other historic cities during your time with us.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Study in English from day one</h4>
+                            <p>All exchange courses are delivered in English. No Uzbek language requirement — though you're welcome to learn along the way.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Affordable student living</h4>
+                            <p>Tashkent is one of the most affordable student cities in Asia. A full meal costs around $3, and rent starts from $200 per month.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>A welcoming international community</h4>
+                            <p>Join students from across Central Asia, South Korea, Turkey, Europe, and beyond. Our campus is built on diversity and inclusion.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Safe and supportive environment</h4>
+                            <p>Tashkent is ranked among the safest capitals in the region. Our International Office provides full support from arrival to departure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
+                        <span class="carousel-dot" data-index="4"></span>
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="carousel-arrow carousel-prev"><i class="fas fa-arrow-left"></i></button>
+                        <button class="carousel-arrow carousel-next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ways to experience TIU -->
+<section class="exchange-ways-section">
+    <div class="container">
+        <div class="exchange-ways-grid">
+            <div class="exchange-ways-image">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="International exchange students at TIU" loading="lazy">
+            </div>
+            <div class="exchange-ways-text">
+                <h2>Ways to experience TIU</h2>
+
+                <h3>Exchange student programme</h3>
+                <p>If your institution has an exchange agreement with us, you can come to TIU as an international exchange student. You'll study alongside our degree students for one or two semesters, with full access to campus facilities and student life.</p>
+
+                <h3>Visiting student programme</h3>
+                <p>If your university does not have an exchange agreement, you can still apply directly to TIU as an international visiting student. Choose from a range of modules across our faculties and earn credits that transfer back to your home institution.</p>
+
+                <div class="exchange-ways-info">
+                    <div class="exchange-ways-info-icon"><i class="fas fa-info-circle"></i></div>
+                    <div>
+                        <strong>Not sure which applies to you?</strong>
+                        <p>Contact our team at <a href="mailto:international@tiu.uz">international@tiu.uz</a> and we'll be happy to help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Exchange FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Does my university need a partnership with TIU?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>For the Exchange Student Programme, yes — your home university must have an active exchange agreement with TIU. If there is no agreement, you can still apply through our Visiting Student Programme, which is open to students from any accredited university.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How long can I study at TIU on exchange?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Exchange students can study at TIU for one semester (autumn or spring) or a full academic year. The duration depends on your home university's agreement with TIU and your own academic plan.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Do I pay tuition fees to TIU?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Exchange students continue to pay tuition to their home university — no additional tuition is charged by TIU. Visiting students may be subject to a separate fee; contact the International Office for details.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Will my credits transfer back to my home university?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. Before arriving, you'll agree a learning agreement with both TIU and your home university. The courses you complete at TIU will be mapped to equivalent credits at your institution. We use the ECTS credit system for easy transfer.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What support does TIU offer exchange students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Our International Office provides full support — from visa and accommodation assistance to airport pickup, orientation, and a buddy programme pairing you with a local student. You'll have access to all campus facilities, student clubs, and events.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>When should I apply?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>For the autumn semester, apply by 1 May. For the spring semester, apply by 1 November. Applications are submitted through your home university's exchange coordinator, who will liaise with our International Office.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/international/why-study-tiu/" class="explore-more-link">Why Study at TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/admission-process/" class="explore-more-link">Admission Process <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/visa-immigration/" class="explore-more-link">Visa & Immigration <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/accommodation/" class="explore-more-link">Accommodation <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/partner-universities/" class="explore-more-link">Partner Universities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var cards = document.querySelectorAll('.carousel-card');
+    var dots = document.querySelectorAll('.carousel-dot');
+    var current = 0;
+
+    function showCard(index) {
+        current = index;
+        cards.forEach(function (c) { c.classList.remove('active'); });
+        dots.forEach(function (d) { d.classList.remove('active'); });
+        cards[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', function () {
+        showCard(current === 0 ? cards.length - 1 : current - 1);
+    });
+
+    document.querySelector('.carousel-next').addEventListener('click', function () {
+        showCard(current === cards.length - 1 ? 0 : current + 1);
+    });
+
+    dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+            showCard(parseInt(this.dataset.index));
+        });
+    });
+});
+
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

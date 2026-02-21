@@ -1,0 +1,15 @@
+{% load i18n i18n_fields %}
+{% for event in events %}
+<a href="{{ event.get_absolute_url }}" class="faculty-event-item">
+    {% if event.image %}
+    <img src="{{ event.image.url }}" alt="{{ event|trans_field:"title" }}" loading="lazy">
+    {% endif %}
+    <div class="faculty-event-item-text">
+        <h3>{{ event|trans_field:"title" }}</h3>
+        <span class="faculty-event-date">{{ event.event_date|date:"d M Y"|upper }}</span>
+        <p>{{ event|trans_field:"description"|striptags|truncatewords:25 }}</p>
+    </div>
+</a>
+{% empty %}
+<p>{% trans "No upcoming events." %}</p>
+{% endfor %}

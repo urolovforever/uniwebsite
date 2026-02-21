@@ -1,0 +1,281 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+{% endblock %}
+
+{% block title %}Employer Partnerships - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Careers</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Employer Partnerships</span>
+        </nav>
+        <div class="page-hero-category">Careers</div>
+        <h1 class="page-hero-title">Employer Partnerships</h1>
+        <div class="page-hero-description">
+            <p>Connect with the next generation of talented, multilingual professionals. Partner with TIU to recruit exceptional graduates.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+<!-- Why Recruit From TIU -->
+<section class="why-students-section">
+    <div class="container">
+        <div class="why-students-grid">
+            <div class="why-students-text">
+                <h2>Why Recruit From TIU?</h2>
+                <p>
+                    Tashkent International University produces graduates who are not only academically excellent but also professionally prepared. Our curriculum integrates real-world projects, international standards, and industry partnerships to ensure students are job-ready from day one.
+                </p>
+                <p>
+                    Our students are fluent in multiple languages including Uzbek, Russian, English, and often a fourth language. They bring diverse perspectives, strong analytical skills, and a global mindset to every organization they join.
+                </p>
+                <p>
+                    With programs spanning Business & Economics, IT & Engineering, Law, and Humanities, we offer a broad talent pool across disciplines. Our Career Center team works directly with employers to understand hiring needs and match the right candidates.
+                </p>
+            </div>
+            <div class="why-students-involved sticky-col">
+                <span class="involved-label">What Sets Us Apart</span>
+
+                <div class="involved-item">
+                    <div class="involved-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="involved-content">
+                        <h4>International Curriculum</h4>
+                        <p>Programs aligned with global standards, accredited internationally, and taught by faculty from leading universities worldwide.</p>
+                    </div>
+                </div>
+
+                <div class="involved-item">
+                    <div class="involved-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="involved-content">
+                        <h4>Multilingual Graduates</h4>
+                        <p>Students are proficient in at least three languages, making them ideal for multinational teams and global operations.</p>
+                    </div>
+                </div>
+
+                <div class="involved-item">
+                    <div class="involved-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="involved-content">
+                        <h4>Industry-Ready Skills</h4>
+                        <p>Capstone projects, internships, and hands-on training ensure graduates can contribute from their first day on the job.</p>
+                    </div>
+                </div>
+
+                <div class="involved-item">
+                    <div class="involved-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="involved-content">
+                        <h4>Proven Track Record</h4>
+                        <p>92% of our graduates are employed within six months, many at top companies in Central Asia and beyond.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partnership Opportunities — Carousel -->
+<section class="job-ready-section" style="background: #f5f5f5;">
+    <div class="container">
+        <div class="job-ready-grid">
+            <div class="job-ready-text">
+                <h2>Partnership Opportunities</h2>
+                <p>
+                    We offer flexible partnership models designed to meet your recruitment goals, whether you are a startup looking for interns or a multinational corporation seeking top graduates.
+                </p>
+                <p>
+                    Each partnership tier includes dedicated support from our employer relations team, access to our student database, and branding opportunities across campus.
+                </p>
+                <p>
+                    Custom packages are also available for organizations with unique needs. Contact us to discuss a tailored partnership plan.
+                </p>
+            </div>
+            <div class="job-ready-carousel sticky-col">
+                <div class="carousel-wrapper">
+                    <div class="carousel-card active">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Job Board Access</h4>
+                            <p>Post unlimited job and internship listings on our exclusive job board, reaching thousands of qualified TIU students and alumni.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Career Fair Participation</h4>
+                            <p>Reserve a booth at our biannual career fairs and meet hundreds of candidates in person. Includes branding materials and interview rooms.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>On-Campus Presence</h4>
+                            <p>Host branded info sessions, workshops, and hackathons on campus. Build your employer brand directly with students.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="carousel-card-body">
+                            <h4>Strategic Partnership</h4>
+                            <p>Co-develop curriculum, sponsor research projects, and gain priority access to top talent through our exclusive strategic partner program.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="carousel-arrow carousel-prev"><i class="fas fa-arrow-left"></i></button>
+                        <button class="carousel-arrow carousel-next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Talent by Faculty -->
+<section class="find-work-section" style="background: #fff;">
+    <div class="container">
+        <div class="find-work-grid">
+            <div class="find-work-image sticky-col">
+                <img src="{% static 'img/campus/b2.jpg' %}" alt="TIU students" loading="lazy">
+            </div>
+            <div class="find-work-text">
+                <h2>Talent Across Every Discipline</h2>
+                <p>Our students come from diverse academic backgrounds, giving you access to a wide range of skills and expertise.</p>
+
+                <div class="find-work-items">
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h4>Business & Economics</h4>
+                            <p>Finance, marketing, management, accounting, and international business graduates with strong analytical skills.</p>
+                        </div>
+                    </div>
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h4>IT & Engineering</h4>
+                            <p>Software developers, data scientists, cybersecurity specialists, and engineers trained on the latest technologies.</p>
+                        </div>
+                    </div>
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div>
+                            <h4>Law</h4>
+                            <p>Legal professionals with expertise in international law, corporate law, and public policy.</p>
+                        </div>
+                    </div>
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div>
+                            <h4>Humanities & Social Sciences</h4>
+                            <p>Communication, international relations, translation, and education specialists with cross-cultural competency.</p>
+                        </div>
+                    </div>
+                    <div class="find-work-item">
+                        <div class="find-work-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div>
+                            <h4>Research & Innovation</h4>
+                            <p>Graduate students and researchers with advanced skills in data analysis, academic writing, and applied research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Carousel
+    var cards = document.querySelectorAll('.carousel-card');
+    var dots = document.querySelectorAll('.carousel-dot');
+    var current = 0;
+
+    function showCard(index) {
+        current = index;
+        cards.forEach(function (c) { c.classList.remove('active'); });
+        dots.forEach(function (d) { d.classList.remove('active'); });
+        cards[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', function () {
+        showCard(current === 0 ? cards.length - 1 : current - 1);
+    });
+
+    document.querySelector('.carousel-next').addEventListener('click', function () {
+        showCard(current === cards.length - 1 ? 0 : current + 1);
+    });
+
+    dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+            showCard(parseInt(this.dataset.index));
+        });
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-header').forEach(function (header) {
+        header.addEventListener('click', function () {
+            var item = this.parentElement;
+            var wasActive = item.classList.contains('active');
+            document.querySelectorAll('.accordion-item').forEach(function (i) { i.classList.remove('active'); });
+            if (!wasActive) item.classList.add('active');
+        });
+    });
+});
+</script>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/careers/career-center/" class="explore-more-link">Career Center <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/internships/" class="explore-more-link">Internships <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/alumni-network/" class="explore-more-link">Alumni Network <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/hiring/" class="explore-more-link">Hiring <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

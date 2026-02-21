@@ -1,0 +1,74 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+{% endblock %}
+
+{% block title %}Academic Departments - Tashkent International University{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Faculty</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Departments</span>
+        </nav>
+        <div class="page-hero-category">Faculty</div>
+        <h1 class="page-hero-title">Academic Departments</h1>
+        <div class="page-hero-description">
+            <p>Two faculties, one mission — delivering internationally recognised education that prepares students for the real world.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Department Cards -->
+<section class="dept-cards-section">
+    <div class="container">
+        <div class="dept-cards-grid">
+
+            <div class="dept-card">
+                <div class="dept-card-text">
+                    <h2>Faculty of Jurisprudence</h2>
+                    <p>Critical thinking. Global perspectives. Real-world impact. Our faculty brings together scholars in international law, public law, human rights, and justice — preparing students for careers in legal practice, diplomacy, policy, and justice across Central Asia and beyond.</p>
+                    <a href="/faculty/departments/jurisprudence/" class="dept-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="dept-card-image">
+                    <div class="dept-card-accent"></div>
+                    <img src="{% static 'img/campus/c3.jpg' %}" alt="Faculty of Jurisprudence" loading="lazy">
+                </div>
+            </div>
+
+            <div class="dept-card">
+                <div class="dept-card-text">
+                    <h2>Faculty of Business and Innovative Education</h2>
+                    <p>Cutting-edge research. Modern facilities. Industry-driven programmes. We're home to leading academics and practitioners who bring global expertise into teaching a diverse range of degrees — from Business Administration and Economics to IT, Engineering, and Education.</p>
+                    <a href="/faculty/departments/business-innovative-education/" class="dept-card-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="dept-card-image">
+                    <div class="dept-card-accent"></div>
+                    <img src="{% static 'img/campus/c1.jpg' %}" alt="Faculty of Business and Innovative Education" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/faculty/departments/jurisprudence/" class="explore-more-link">Faculty of Jurisprudence <i class="fas fa-arrow-right"></i></a>
+            <a href="/faculty/departments/business-innovative-education/" class="explore-more-link">Faculty of Business and Innovative Education <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

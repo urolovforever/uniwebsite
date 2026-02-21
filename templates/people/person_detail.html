@@ -1,0 +1,39 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+{% endblock %}
+
+{% block title %}{{ person.full_name }} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="content-section">
+    <div class="container">
+        <div class="person-profile">
+            {% if person.photo %}
+            <div class="person-photo">
+                <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" loading="lazy">
+            </div>
+            {% endif %}
+            <div class="person-info">
+                <h2>{{ person.full_name }}</h2>
+                <p class="person-title">{{ person|trans_field:"job_title" }}</p>
+                {% if person.department %}
+                <p class="person-department">{{ person.department|trans_field:"name" }}</p>
+                {% endif %}
+                {% if person.email %}
+                <p class="person-email"><i class="fas fa-envelope"></i> <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+                {% endif %}
+            </div>
+        </div>
+        {% if person.bio %}
+        <div class="article-body">
+            {{ person|trans_field:"bio"|safe }}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

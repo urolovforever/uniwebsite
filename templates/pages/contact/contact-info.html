@@ -1,0 +1,428 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}Contact Information - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>Contact</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Contact Information</span>
+        </nav>
+        <div class="page-hero-category">Contact</div>
+        <h1 class="page-hero-title">Contact Information</h1>
+        <div class="page-hero-description">
+            <p>Get in touch with Tashkent International University. We're here to help with admissions, academics, student life, and more.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Location Map Section (Hull-inspired) -->
+<section class="location-hero">
+    <div class="location-hero-content">
+        <div class="location-hero-label">LOCATION</div>
+        <h2>Easy access, <em>wherever</em> you are</h2>
+        <p>Located in the heart of Tashkent, Uzbekistan's vibrant capital, TIU is easy to reach from anywhere in the country — and beyond. With excellent road, rail, and air connections, including Tashkent International Airport just 20 minutes away, getting here is the easy part. Discovering everything we have to offer? That's the exciting part.</p>
+    </div>
+    <div class="location-hero-map">
+        <!-- SVG Map of Uzbekistan with Tashkent highlighted -->
+        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" class="uzbekistan-map">
+            <!-- Uzbekistan outline (simplified) -->
+            <path d="M180,120 L220,100 L280,90 L320,80 L380,75 L420,85 L460,80 L500,90 L540,85 L580,100 L620,110 L650,130 L670,160 L680,200 L690,240 L700,270 L690,300 L670,330 L640,350 L600,360 L560,370 L520,380 L480,375 L440,360 L400,350 L360,340 L320,330 L280,310 L250,290 L220,260 L200,230 L180,200 L160,170 L165,140 Z"
+                  fill="#f48fb1" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+
+            <!-- Karakalpakstan region -->
+            <path d="M160,170 L180,120 L220,100 L200,140 L190,180 L170,200 L140,220 L120,250 L130,280 L160,300 L180,280 L200,260 L200,230 L180,200 Z"
+                  fill="#ec407a" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+            <!-- Connection lines from cities to Tashkent -->
+            <line x1="595" y1="128" x2="450" y2="250" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="6,4"/>
+            <line x1="595" y1="128" x2="350" y2="200" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="6,4"/>
+            <line x1="595" y1="128" x2="280" y2="260" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="6,4"/>
+            <line x1="595" y1="128" x2="500" y2="300" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="6,4"/>
+            <line x1="595" y1="128" x2="380" y2="320" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="6,4"/>
+
+            <!-- City dots -->
+            <!-- Samarkand -->
+            <circle cx="450" cy="250" r="5" fill="#fff" opacity="0.7"/>
+            <text x="460" y="245" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Montserrat, sans-serif" font-weight="600">SAMARKAND</text>
+
+            <!-- Bukhara -->
+            <circle cx="350" cy="200" r="5" fill="#fff" opacity="0.7"/>
+            <text x="355" y="220" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Montserrat, sans-serif" font-weight="600">BUKHARA</text>
+
+            <!-- Nukus -->
+            <circle cx="200" cy="180" r="4" fill="#fff" opacity="0.6"/>
+            <text x="170" y="175" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">NUKUS</text>
+
+            <!-- Navoi -->
+            <circle cx="380" cy="230" r="4" fill="#fff" opacity="0.6"/>
+            <text x="385" y="225" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">NAVOI</text>
+
+            <!-- Namangan -->
+            <circle cx="650" cy="130" r="4" fill="#fff" opacity="0.6"/>
+            <text x="655" y="125" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">NAMANGAN</text>
+
+            <!-- Fergana -->
+            <circle cx="670" cy="160" r="4" fill="#fff" opacity="0.6"/>
+            <text x="680" y="165" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">FERGANA</text>
+
+            <!-- Karshi -->
+            <circle cx="500" cy="300" r="4" fill="#fff" opacity="0.6"/>
+            <text x="510" y="305" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">KARSHI</text>
+
+            <!-- Termez -->
+            <circle cx="530" cy="370" r="4" fill="#fff" opacity="0.6"/>
+            <text x="540" y="375" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">TERMEZ</text>
+
+            <!-- Urgench -->
+            <circle cx="280" cy="160" r="4" fill="#fff" opacity="0.6"/>
+            <text x="240" y="155" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">URGENCH</text>
+
+            <!-- Jizzakh -->
+            <circle cx="530" cy="200" r="4" fill="#fff" opacity="0.6"/>
+            <text x="540" y="200" fill="rgba(255,255,255,0.7)" font-size="10" font-family="Montserrat, sans-serif" font-weight="600">JIZZAKH</text>
+
+            <!-- TASHKENT - highlighted -->
+            <circle cx="595" cy="128" r="8" fill="#00bcd4" stroke="#fff" stroke-width="2"/>
+            <circle cx="595" cy="128" r="16" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.4">
+                <animate attributeName="r" values="16;24;16" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Tashkent label box -->
+            <rect x="608" y="108" width="110" height="32" rx="3" fill="#00bcd4"/>
+            <text x="663" y="129" fill="#fff" font-size="14" font-family="Montserrat, sans-serif" font-weight="800" text-anchor="middle">TASHKENT</text>
+
+            <!-- TIU marker icon -->
+            <rect x="722" y="110" width="30" height="28" rx="3" fill="#fff"/>
+            <text x="737" y="129" fill="#003366" font-size="9" font-family="Montserrat, sans-serif" font-weight="800" text-anchor="middle">TIU</text>
+
+            <!-- Arrow from TIU box -->
+            <line x1="752" y1="124" x2="770" y2="124" stroke="#fff" stroke-width="2"/>
+            <polygon points="770,120 778,124 770,128" fill="#fff"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Getting Here (Hull-inspired tabbed transport) -->
+<section class="getting-here">
+    <div class="getting-here-inner">
+        <div class="getting-here-content">
+            <!-- Transport Tabs -->
+            <div class="transport-tabs">
+                <button class="transport-tab active" data-tab="car" aria-label="By car">
+                    <i class="fas fa-car"></i>
+                </button>
+                <button class="transport-tab" data-tab="bus" aria-label="By bus">
+                    <i class="fas fa-bus"></i>
+                </button>
+                <button class="transport-tab" data-tab="metro" aria-label="By metro">
+                    <i class="fas fa-subway"></i>
+                </button>
+                <button class="transport-tab" data-tab="taxi" aria-label="By taxi">
+                    <i class="fas fa-taxi"></i>
+                </button>
+                <button class="transport-tab" data-tab="plane" aria-label="By plane">
+                    <i class="fas fa-plane"></i>
+                </button>
+                <button class="transport-tab" data-tab="train" aria-label="By train">
+                    <i class="fas fa-train"></i>
+                </button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="transport-panel active" id="panel-car">
+                <h3>By car</h3>
+                <div class="transport-locations">
+                    <div class="transport-location">
+                        <div class="transport-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Main Entrance</strong>
+                            <p>Tashkent, Uzbekistan<br>Free parking available on campus</p>
+                        </div>
+                    </div>
+                    <div class="transport-location">
+                        <div class="transport-location-icon checked">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Visitor Parking</strong>
+                            <p>Designated visitor parking near<br>the main administration building</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-panel" id="panel-bus">
+                <h3>By bus</h3>
+                <div class="transport-locations">
+                    <div class="transport-location">
+                        <div class="transport-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Nearest Bus Stop</strong>
+                            <p>Multiple bus routes stop within<br>a 5-minute walk of campus</p>
+                        </div>
+                    </div>
+                    <div class="transport-location">
+                        <div class="transport-location-icon checked">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Routes Available</strong>
+                            <p>Regular services from all major<br>districts of Tashkent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-panel" id="panel-metro">
+                <h3>By metro</h3>
+                <div class="transport-locations">
+                    <div class="transport-location">
+                        <div class="transport-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Nearest Metro Station</strong>
+                            <p>Tashkent Metro — the fastest way<br>to get across the city</p>
+                        </div>
+                    </div>
+                    <div class="transport-location">
+                        <div class="transport-location-icon checked">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Walking Distance</strong>
+                            <p>10-minute walk from the nearest<br>station to campus entrance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-panel" id="panel-taxi">
+                <h3>By taxi</h3>
+                <div class="transport-locations">
+                    <div class="transport-location">
+                        <div class="transport-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Taxi Drop-off</strong>
+                            <p>Drop-off point at the main gate<br>Use Yandex Go or MyTaxi apps</p>
+                        </div>
+                    </div>
+                    <div class="transport-location">
+                        <div class="transport-location-icon checked">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>From City Center</strong>
+                            <p>Approximately 15-20 minutes<br>depending on traffic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-panel" id="panel-plane">
+                <h3>By plane</h3>
+                <div class="transport-locations">
+                    <div class="transport-location">
+                        <div class="transport-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Tashkent International Airport</strong>
+                            <p>Islam Karimov International Airport (TAS)<br>20 minutes from campus by car</p>
+                        </div>
+                    </div>
+                    <div class="transport-location">
+                        <div class="transport-location-icon checked">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Airport Transfer</strong>
+                            <p>Taxi, bus, and Aeroexpress<br>connections available from the airport</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-panel" id="panel-train">
+                <h3>By train</h3>
+                <div class="transport-locations">
+                    <div class="transport-location">
+                        <div class="transport-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>Tashkent Railway Station</strong>
+                            <p>High-speed Afrosiyob trains from<br>Samarkand, Bukhara, and more</p>
+                        </div>
+                    </div>
+                    <div class="transport-location">
+                        <div class="transport-location-icon checked">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="transport-location-info">
+                            <strong>From the Station</strong>
+                            <p>15 minutes by taxi or metro<br>from Tashkent Yuzhniy station</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campus Image -->
+        <div class="getting-here-image">
+            <img src="{% static 'img/hero/back1.jpg' %}" alt="TIU Campus Aerial View" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Campus Map (Hull-inspired light blue section) -->
+<section class="campus-map-block">
+    <div class="campus-map-block-inner">
+        <div class="campus-map-block-image">
+            <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU Students on Campus" loading="lazy">
+        </div>
+        <div class="campus-map-block-content">
+            <h2>Campus map</h2>
+            <p>With everything on one beautiful, single-site campus, getting around the university is easy. See where you're heading by downloading our campus map — it only takes around 10 minutes to get from one side to the other.</p>
+            <a href="#" class="split-link">Download Campus Map <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Travel FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Travel FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How far is TIU from Tashkent International Airport?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Tashkent International University is approximately 20 minutes from Islam Karimov International Airport (TAS) by car or taxi. You can use Yandex Go or MyTaxi apps for a convenient ride directly to campus.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there parking available on campus?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes, free parking is available on campus for both students and visitors. Designated visitor parking is located near the main administration building. Just follow the signs from the main entrance.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I reach TIU by public transport?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Absolutely. Multiple bus routes stop within a 5-minute walk of campus, and the nearest Tashkent Metro station is about 10 minutes away on foot. The metro is the fastest way to travel across the city.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>How do I get to TIU from other cities in Uzbekistan?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>High-speed Afrosiyob trains connect Tashkent to Samarkand (around 2 hours), Bukhara (around 4 hours), and other cities. From Tashkent Railway Station, you can reach campus in about 15 minutes by taxi or metro.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there a shuttle or transfer service for new students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>During orientation and Open Day events, TIU arranges shuttle services from key locations. For international students arriving by air, we can help coordinate airport pick-up through the International Office. Contact us in advance to arrange.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>What taxi apps work in Tashkent?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>The most popular taxi apps in Tashkent are Yandex Go and MyTaxi. Both are affordable, reliable, and accept card payments. Simply enter "Tashkent International University" as your destination.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/contact/support/" class="explore-more-link">Support <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact/rector-reception/" class="explore-more-link">Rector's Reception <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact/send/" class="explore-more-link">Send a Message <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var tabs = document.querySelectorAll('.transport-tab');
+    var panels = document.querySelectorAll('.transport-panel');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var target = this.getAttribute('data-tab');
+
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            panels.forEach(function(p) { p.classList.remove('active'); });
+
+            this.classList.add('active');
+            document.getElementById('panel-' + target).classList.add('active');
+        });
+    });
+})();
+
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    // Toggle clicked
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

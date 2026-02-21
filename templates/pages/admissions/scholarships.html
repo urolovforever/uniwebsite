@@ -1,0 +1,231 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Scholarships & Financial Aid" %} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Admissions" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Scholarships" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Admissions" %}</div>
+        <h1 class="page-hero-title">{% trans "Scholarships & Financial Aid" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "We believe talent should never be held back by finances. Explore scholarships, grants, and awards available to TIU students." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Scholarships Section — Sticky Filters + List -->
+<section class="scholarships-section">
+    <div class="container">
+        <div class="scholarships-layout">
+
+            <!-- Sticky Filters Sidebar -->
+            <aside class="scholarships-sidebar">
+                <div class="scholarships-filter-header">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>{% trans "Filters" %}</span>
+                </div>
+
+                <div class="scholarships-filter-group">
+                    <label>{% trans "Programme level" %}</label>
+                    <select id="filterLevel" onchange="filterScholarships()">
+                        <option value="">{% trans "All levels" %}</option>
+                        <option value="bachelor">{% trans "Bachelor's" %}</option>
+                        <option value="master">{% trans "Master's" %}</option>
+                        <option value="all-levels">{% trans "All levels" %}</option>
+                    </select>
+                </div>
+
+                <div class="scholarships-filter-group">
+                    <label>{% trans "Type of award" %}</label>
+                    <select id="filterType" onchange="filterScholarships()">
+                        <option value="">{% trans "All types" %}</option>
+                        <option value="merit">{% trans "Merit-based" %}</option>
+                        <option value="need">{% trans "Need-based" %}</option>
+                        <option value="special">{% trans "Special category" %}</option>
+                    </select>
+                </div>
+
+                <div class="scholarships-filter-group">
+                    <label>{% trans "Applicant type" %}</label>
+                    <select id="filterApplicant" onchange="filterScholarships()">
+                        <option value="">{% trans "All applicants" %}</option>
+                        <option value="domestic">{% trans "Domestic" %}</option>
+                        <option value="international">{% trans "International" %}</option>
+                    </select>
+                </div>
+
+                <button class="scholarships-clear-btn" onclick="clearFilters()">
+                    <i class="fas fa-times"></i> {% trans "Clear filters" %}
+                </button>
+            </aside>
+
+            <!-- Scholarships List -->
+            <div class="scholarships-list">
+
+                {% for s in scholarships %}
+                <div class="scholarship-item" data-level="{{ s.level }}" data-type="{{ s.award_type }}" data-applicant="{{ s.applicant_type }}">
+                    <h3><a href="{{ s.get_absolute_url }}">{{ s|trans_field:"title" }}</a></h3>
+                    <div class="scholarship-provider">{{ s.provider|upper }}</div>
+                    <p>{{ s|trans_field:"excerpt" }}</p>
+                    <div class="scholarship-tags">
+                        <span class="scholarship-tag {{ s.award_tag_color }}"><i class="{{ s.award_tag_icon }}"></i> {{ s.award_tag_text }}</span>
+                        <span class="scholarship-tag {{ s.type_tag_color }}"><i class="{{ s.type_tag_icon }}"></i> {{ s.get_award_type_display }}</span>
+                        {% if s.is_international_only %}
+                        <span class="scholarship-tag tag-teal"><i class="fas fa-globe"></i> {% trans "International Only" %}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% empty %}
+                <p style="text-align:center;padding:2rem;color:#666;">{% trans "No scholarships available at the moment. Please check back later." %}</p>
+                {% endfor %}
+
+                <!-- No results message -->
+                <div class="scholarships-no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>{% trans "No scholarships match your selected filters. Try adjusting your criteria or" %} <a href="#" onclick="clearFilters(); return false;">{% trans "clear all filters" %}</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Box -->
+<section class="deadlines-cta-section">
+    <div class="container">
+        <div class="deadlines-cta-box">
+            <h2>{% trans "Not sure which scholarship is right for you?" %}</h2>
+            <p>{% trans "Our admissions team can help you identify the best funding options based on your profile, programme choice, and personal circumstances. Get in touch — we're here to help." %}</p>
+            <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="deadlines-cta-link">{% trans "Contact the admissions office" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>{% trans "Scholarship FAQs" %}</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "How do I apply for a scholarship?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Most scholarships are considered automatically as part of your admissions application. Some awards (like the Graduate Research Fellowship) require a separate application. Check each scholarship's details for specific instructions." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I combine multiple scholarships?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "In most cases, you can hold one primary scholarship at a time. However, the Financial Hardship Grant and Emergency Fund can be combined with other merit-based awards. Contact the Finance Office for individual guidance." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "When will I know if I've received a scholarship?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Scholarship decisions are typically communicated alongside your admission offer. For awards requiring a separate application, results are announced within 4 weeks of the application deadline." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Are scholarships renewable each year?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes, most scholarships are renewable for the full duration of your programme, provided you maintain the required GPA (typically 3.0+) and remain in good academic standing. Renewal conditions are specified in your scholarship letter." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Are there scholarships specifically for international students?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes. The International Excellence Scholarship is exclusively for international applicants. Additionally, several other awards are open to both domestic and international students. Use the filters above to find scholarships available to you." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='admissions/how-to-apply' %}" class="explore-more-link">{% trans "How to Apply" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="explore-more-link">{% trans "Requirements" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:tuition_fees' %}" class="explore-more-link">{% trans "Tuition & Fees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/faqs' %}" class="explore-more-link">{% trans "FAQs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="https://urolovforever.github.io/landingpage/" class="explore-more-link">{% trans "Apply Now" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function filterScholarships() {
+    var level = document.getElementById('filterLevel').value;
+    var type = document.getElementById('filterType').value;
+    var applicant = document.getElementById('filterApplicant').value;
+    var items = document.querySelectorAll('.scholarship-item');
+    var visible = 0;
+
+    items.forEach(function(item) {
+        var show = true;
+        if (level && item.dataset.level.indexOf(level) === -1) show = false;
+        if (type && item.dataset.type !== type) show = false;
+        if (applicant && item.dataset.applicant.indexOf(applicant) === -1) show = false;
+
+        item.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+
+    document.getElementById('noResults').style.display = visible === 0 ? 'flex' : 'none';
+}
+
+function clearFilters() {
+    document.getElementById('filterLevel').value = '';
+    document.getElementById('filterType').value = '';
+    document.getElementById('filterApplicant').value = '';
+    filterScholarships();
+}
+
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

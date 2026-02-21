@@ -1,0 +1,247 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}Accreditation - TIU{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Accreditation</span>
+        </nav>
+        <div class="page-hero-category">About TIU</div>
+        <h1 class="page-hero-title">Accreditation</h1>
+        <div class="page-hero-description">
+            <p>Recognized, accredited, and trusted — your degree from TIU meets the highest national and international standards.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Statement -->
+<section class="statement-section">
+    <div class="container">
+        <div class="statement-icon">
+            <i class="fas fa-award"></i>
+        </div>
+        <p class="statement-text">
+            A degree worth earning should be a degree worth <strong>trusting.</strong>
+        </p>
+        <p class="statement-attribution">Our Quality Promise</p>
+    </div>
+</section>
+
+<!-- Intro Section (Two Column) -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <h2>Quality you can count on</h2>
+                <p>Your TIU degree is officially recognized by the Ministry of Higher Education of Uzbekistan and validated by our international partner universities. Through our 2+2 dual degree partnerships, TIU programs align with the academic requirements of partner institutions abroad.</p>
+                <p style="margin-top: 1rem;">This means seamless credit transfer — no extra exams, no lost credits. We continuously review and improve our programs to stay aligned with global best practices in higher education.</p>
+            </div>
+            <div class="intro-image">
+                <img src="{% static 'img/hero/back.jpg' %}" alt="TIU Accreditation" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recognition Cards -->
+<section class="accreditation-recognition">
+    <div class="container">
+        <div class="accreditation-recognition-header">
+            <span class="accreditation-recognition-label">Official Recognition</span>
+            <h2>Accredited at every level</h2>
+        </div>
+        <div class="accreditation-recognition-grid">
+            <div class="accreditation-card">
+                <div class="accreditation-card-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3>Government Licensed</h3>
+                <p>Fully licensed by the Ministry of Higher Education of the Republic of Uzbekistan, meeting all national requirements for degree-granting institutions.</p>
+                <div class="accreditation-card-badge">National</div>
+            </div>
+            <div class="accreditation-card">
+                <div class="accreditation-card-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Partner Validated</h3>
+                <p>All 2+2 programs are co-developed and validated by our international partner universities, ensuring credits transfer seamlessly across borders.</p>
+                <div class="accreditation-card-badge">International</div>
+            </div>
+            <div class="accreditation-card">
+                <div class="accreditation-card-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Globally Recognized</h3>
+                <p>Graduates earn dual degrees recognized by employers and institutions worldwide. Your qualification travels with you, wherever your career takes you.</p>
+                <div class="accreditation-card-badge">Global</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Steps - Quality Assurance Process -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>How quality is maintained</h2>
+            <p>A rigorous, multi-layered approach to academic excellence</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Government License</h3>
+                <p>Full license from the Ministry of Higher Education meeting all national requirements</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Partner Validation</h3>
+                <p>Programs co-developed with partner universities for seamless credit transfer</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Internal Review</h3>
+                <p>Regular audits, student feedback, and benchmarking against international standards</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Continuous Improvement</h3>
+                <p>Ongoing program updates based on industry trends and academic research</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>External Assessment</h3>
+                <p>Independent evaluation by international experts to verify standards and ensure global competitiveness</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Split - Partner Recognition -->
+<section class="split-section">
+    <div class="split-image" style="background-image: url('{% static 'img/campus/c2.jpg' %}');"></div>
+    <div class="split-content dark">
+        <span class="split-label">International Recognition</span>
+        <h2>Degrees that travel with you</h2>
+        <p>Every TIU program in the 2+2 pathway is validated by our partner universities. When you transfer for your final two years, your credits move with you — seamlessly. And when you graduate, you hold two degrees recognized across the globe.</p>
+        <a href="/international/partner-universities/" class="split-link">View partner universities <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Feature Block - Academic Standards -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <div class="feature-block-label">ACADEMIC STANDARDS</div>
+            <h2>Teaching that meets the <em>highest</em> bar</h2>
+            <p>Our faculty are recruited internationally and bring diverse academic backgrounds from universities across Europe, Asia, and beyond. Every course is designed to international standards, with regular peer review and external assessment ensuring we consistently deliver excellence.</p>
+            <p>We don't just meet standards — we set them. TIU's commitment to quality means that your education here is an investment that pays dividends throughout your career.</p>
+            <a href="/about/leadership/" class="split-link">Meet Our Leadership <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="Academic Excellence" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Feature Block - Student Voice (reversed) -->
+<section class="feature-block" style="background: #f8f8f8;">
+    <div class="feature-block-inner reversed">
+        <div class="feature-block-text">
+            <div class="feature-block-label">STUDENT VOICE</div>
+            <h2>Your feedback shapes our <em>future</em></h2>
+            <p>Quality assurance at TIU isn't just top-down. Students play a vital role in shaping our programs through regular feedback surveys, student representation on academic boards, and open forums with university leadership.</p>
+            <p>When students speak, we listen — and we act. It's how we stay relevant, responsive, and genuinely focused on the student experience.</p>
+            <a href="/current-students/student-union/" class="split-link">Student Union <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c5.jpg' %}" alt="Student Voice" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Pillars - What Accreditation Means -->
+<section class="pillars-section">
+    <div class="container">
+        <div class="pillars-header">
+            <div class="pillars-label">What It Means For You</div>
+            <h2>Why accreditation matters</h2>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar">
+                <div class="pillar-number">01</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Credit Transfer</h3>
+                <p>Your credits transfer seamlessly to partner universities through the 2+2 pathway. No gaps, no repeats, no wasted time — your academic progress is protected.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">02</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Employer Confidence</h3>
+                <p>Employers trust accredited degrees. Your TIU qualification tells the world that you've been rigorously trained to the highest standards — nationally and internationally.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">03</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-passport"></i>
+                </div>
+                <h3>Global Mobility</h3>
+                <p>An accredited dual degree opens doors worldwide. Whether you want to work abroad, pursue postgraduate study, or return home — your qualification is recognized everywhere.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Full-bleed CTA -->
+<section class="fullbleed-section" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="fullbleed-content">
+        <h2>Your future deserves a degree that <strong>opens doors</strong></h2>
+        <p>Browse bachelor's and master's programs across four departments — all accredited, all in English, all designed for your global future.</p>
+        <a href="/programs/bachelor/" class="split-link">View Programs <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Highlight Box -->
+<section class="highlight-box">
+    <div class="container">
+        <div class="highlight-inner">
+            <div class="highlight-accent"></div>
+            <div class="highlight-body">
+                <h2>Have questions about accreditation?</h2>
+                <p>Our admissions team can answer any questions about credit transfer, degree recognition, and how TIU programs are validated internationally. Whether you're a student, parent, or employer — we're happy to provide documentation and clarity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Banner CTA -->
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/why-tiu/" class="explore-more-link">Why TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/mission-vision/" class="explore-more-link">Mission & Vision <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/campus-map/" class="explore-more-link">Campus Map <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

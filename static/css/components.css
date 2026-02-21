@@ -1,0 +1,825 @@
+/* =============================================
+   components.css — Shared UI Components
+   Extracted from section-specific CSS files.
+   Import BEFORE section CSS so that section
+   files can override with more-specific selectors.
+   ============================================= */
+
+/* -----------------------------------------
+   1. SECTION HERO
+   Background gradient, centered white text.
+   Override gradient per section via --hero-from
+   and --hero-to custom properties.
+   ----------------------------------------- */
+.section-hero {
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, var(--hero-from, var(--primary-blue)) 0%, var(--hero-to, #1e40af) 100%);
+}
+
+/* -----------------------------------------
+   2. CARD BASE
+   White card with rounded corners and shadow.
+   .card-base          — overflow hidden (for cards with image headers)
+   .card-base--padded  — 2rem padding (for content-only cards)
+   ----------------------------------------- */
+.card-base {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-base--padded {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------------------
+   3. CARD HOVER — LIFT
+   translateY(-5px) + deeper shadow on hover.
+   ----------------------------------------- */
+.card-hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------------------
+   4. AUTO GRID
+   Responsive grid using auto-fit.
+   Set --min-col-width to control column width
+   (default 280px). Set --grid-gap for gap (default 2rem).
+   ----------------------------------------- */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-col-width, 280px), 1fr));
+    gap: var(--grid-gap, 2rem);
+    margin: 2rem 0;
+}
+
+.auto-grid--fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min-col-width, 280px), 1fr));
+    gap: var(--grid-gap, 2rem);
+    margin: 2rem 0;
+}
+
+/* -----------------------------------------
+   5. BADGE / TAG
+   Small inline pill-shaped label.
+   ----------------------------------------- */
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge--gold {
+    background: var(--accent-gold);
+    color: white;
+}
+
+.badge--blue {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.badge--green {
+    background: #10b981;
+    color: white;
+}
+
+.badge--amber {
+    background: #f59e0b;
+    color: white;
+}
+
+/* ================================================
+   Page Hero Section (University of Hull Style)
+   Moved here from about.css so all pages can use it.
+   ================================================ */
+.page-hero {
+    position: relative;
+    min-height: 70vh;
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 64, 128, 0.75) 0%, rgba(0, 51, 102, 0.65) 100%);
+    z-index: 1;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    color: #fff;
+}
+
+.page-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.page-hero-breadcrumb a {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease;
+}
+
+.page-hero-breadcrumb a:hover {
+    color: #fff;
+}
+
+.page-hero-breadcrumb .separator {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.page-hero-breadcrumb .current {
+    color: #fff;
+    font-weight: 500;
+}
+
+.page-hero-category {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.page-hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    white-space: normal;
+}
+
+.page-hero-description {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 4px solid #00bcd4;
+    max-width: 700px;
+}
+
+.page-hero-description p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+.page-hero-gradient-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(
+        90deg,
+        #00bcd4 0%,
+        #4caf50 15%,
+        #8bc34a 30%,
+        #ffeb3b 45%,
+        #ff9800 60%,
+        #f44336 75%,
+        #e91e63 90%,
+        #9c27b0 100%
+    );
+    z-index: 2;
+}
+
+/* =============================================
+   REUSABLE COMPONENT CLASSES
+   Extracted from inline styles across templates.
+   ============================================= */
+
+/* -----------------------------------------
+   1. SECTION — padding + background variants
+   ----------------------------------------- */
+.section { padding: 5rem 0; }
+.section--muted { padding: 5rem 0; background: var(--bg-muted); }
+.section--white { padding: 5rem 0; background: #fff; }
+.section--dark  { padding: 4rem 0; background: var(--accent-navy); }
+.section--sm    { padding: 4rem 0; }
+
+/* -----------------------------------------
+   2. SECTION-HEADING / SECTION-SUBTITLE
+   ----------------------------------------- */
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    color: #00bcd4;
+    font-size: 1.05rem;
+}
+
+/* -----------------------------------------
+   3. GRID — fixed-column layouts
+   ----------------------------------------- */
+.grid       { display: grid; gap: 2rem; }
+.grid--2col { grid-template-columns: repeat(2, 1fr); }
+.grid--3col { grid-template-columns: repeat(3, 1fr); }
+.grid--4col { grid-template-columns: repeat(4, 1fr); }
+.grid--2col-equal {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.grid--2col-start {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* -----------------------------------------
+   4. ACCENT-CARD — left-bordered content card
+   ----------------------------------------- */
+.accent-card {
+    padding: 2.25rem;
+    background: #fff;
+    border-left: 4px solid #00bcd4;
+}
+.accent-card--lg   { padding: 2.5rem; }
+.accent-card--cyan   { border-left-color: var(--accent-cyan); }
+.accent-card--green  { border-left-color: var(--accent-green); }
+.accent-card--orange { border-left-color: var(--accent-orange); }
+.accent-card--pink   { border-left-color: var(--accent-pink); }
+.accent-card--purple { border-left-color: var(--accent-purple); }
+.accent-card--navy   { border-left-color: var(--accent-navy); }
+.accent-card--muted  { background: var(--bg-muted); }
+
+/* -----------------------------------------
+   5. ICON-CIRCLE — numbered / icon circles
+   ----------------------------------------- */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+.icon-circle--lg {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.icon-circle--centered {
+    margin: 0 auto 1.25rem;
+}
+
+/* -----------------------------------------
+   6. ICON-BLOCK — large icon above card text
+   ----------------------------------------- */
+.icon-block {
+    font-size: 1.75rem;
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------------------
+   7. CARD-HEADER-ROW — icon + heading inline
+   ----------------------------------------- */
+.card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.card-header-row h3 {
+    font-size: 1.15rem;
+    color: var(--accent-navy);
+    margin: 0;
+}
+.card-header-row--lg h3 { font-size: 1.25rem; }
+
+/* -----------------------------------------
+   8. CHECKLIST-ITEM — check icon + text
+   ----------------------------------------- */
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+.checklist-item i {
+    color: #004080;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}
+.checklist-item span {
+    font-size: 0.95rem;
+    color: var(--text-subtle);
+    line-height: 1.6;
+}
+.checklist-item:last-child { margin-bottom: 0; }
+
+/* -----------------------------------------
+   9. BULLET-ITEM — small dot + text (legal)
+   ----------------------------------------- */
+.bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.bullet-item i {
+    color: var(--accent-cyan);
+    font-size: 0.4rem;
+    margin-top: 0.6rem;
+    flex-shrink: 0;
+}
+.bullet-item span {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+.bullet-item:last-child { margin-bottom: 0; }
+
+/* -----------------------------------------
+   10. DETAIL-ROW — label + value + divider
+   ----------------------------------------- */
+.detail-row {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.detail-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.detail-row strong {
+    font-size: 0.8rem;
+    color: #004080;
+    letter-spacing: 1px;
+}
+.detail-row p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin: 0.25rem 0 0;
+}
+
+/* -----------------------------------------
+   11. LEGAL-SECTION — privacy/terms blocks
+   ----------------------------------------- */
+.legal-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.legal-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.legal-section h2 {
+    font-size: 1.35rem;
+    color: var(--accent-navy);
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------------------
+   12. CTA-BANNER — gradient call-to-action
+   ----------------------------------------- */
+.cta-banner {
+    background: linear-gradient(135deg, #004080 0%, var(--accent-navy) 100%);
+    padding: 4rem 0;
+}
+.cta-banner .container { text-align: center; color: #fff; }
+.cta-banner h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.cta-banner p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 550px;
+    margin: 0 auto 2rem;
+}
+.cta-banner p.cta-banner__sub--wide { max-width: 600px; }
+.cta-banner__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.cta-btn {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.cta-btn--primary {
+    background: #fff;
+    color: var(--accent-navy);
+}
+.cta-btn--outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+.cta-btn--dark-primary {
+    background: var(--accent-navy);
+    color: #fff;
+}
+.cta-btn--dark-outline {
+    border: 2px solid var(--accent-navy);
+    color: var(--accent-navy);
+}
+
+/* -----------------------------------------
+   13. INFO-PANEL — top-bordered info box
+   ----------------------------------------- */
+.info-panel {
+    background: var(--bg-muted);
+    padding: 2.5rem;
+    border-top: 4px solid var(--accent-cyan);
+}
+.info-panel h3 {
+    font-size: 1.25rem;
+    color: var(--accent-navy);
+    margin-bottom: 1.25rem;
+}
+
+/* -----------------------------------------
+   14. STATS-BAR — stats in dark section
+   ----------------------------------------- */
+.stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.stats-bar__number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-cyan);
+}
+.stats-bar__label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.25rem;
+}
+
+/* -----------------------------------------
+   15. TAG — small colored labels
+   ----------------------------------------- */
+.tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    display: inline-block;
+}
+.tag--blue   { background: #e3f2fd; color: #004080; }
+.tag--green  { background: #e8f5e9; color: #2e7d32; }
+.tag--orange { background: #fff3e0; color: #e65100; }
+.tag--pink   { background: #fce4ec; color: #c62828; }
+.tag--purple { background: #f3e5f5; color: #6a1b9a; }
+.tag--navy   { background: #e3f2fd; color: #004080; }
+
+/* -----------------------------------------
+   16. PROG-TAG — programme link tag
+   ----------------------------------------- */
+.prog-tag {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    display: inline-block;
+}
+.prog-tag--blue   { background: #e3f2fd; color: #004080; }
+.prog-tag--green  { background: #e8f5e9; color: #2e7d32; }
+.prog-tag--orange { background: #fff3e0; color: #e65100; }
+.prog-tag--pink   { background: #fce4ec; color: #c62828; }
+.prog-tag--purple { background: #f3e5f5; color: #6a1b9a; }
+
+/* -----------------------------------------
+   17. BORDERED-CARD — simple bordered card
+   ----------------------------------------- */
+.bordered-card {
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+.bordered-card--bg { background: #fff; }
+
+/* -----------------------------------------
+   18. FAQ-CARD — question + answer card
+   ----------------------------------------- */
+.faq-card {
+    margin-bottom: 1.5rem;
+    background: #fff;
+    padding: 2rem;
+    border-left: 4px solid var(--accent-cyan);
+}
+.faq-card h3 {
+    font-size: 1.05rem;
+    color: var(--accent-navy);
+    margin-bottom: 0.5rem;
+}
+.faq-card p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin: 0;
+}
+.faq-card--green  { border-left-color: var(--accent-green); }
+.faq-card--orange { border-left-color: var(--accent-orange); }
+.faq-card--pink   { border-left-color: var(--accent-pink); }
+
+/* -----------------------------------------
+   19. TEXT UTILITIES
+   ----------------------------------------- */
+.text-body {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+.text-body--intro {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+.text-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #004080;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+.text-date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+.text-link { color: #004080; }
+.text-link--underline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-navy);
+    border-bottom: 2px solid var(--accent-navy);
+}
+.tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.prog-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.narrow-container { max-width: 900px; margin: 0 auto; }
+.mid-container    { max-width: 1100px; margin: 0 auto; }
+.wide-container   { max-width: 1200px; margin: 0 auto; }
+.card-title {
+    font-size: 1.1rem;
+    color: var(--accent-navy);
+    margin-bottom: 0.75rem;
+}
+.card-title--sm {
+    font-size: 1rem;
+    color: var(--accent-navy);
+    margin-bottom: 0.5rem;
+}
+.card-text {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.65;
+    margin: 0;
+}
+.card-text--mb { margin: 0 0 1rem; }
+.card-text--mb-lg { margin: 0 0 1.5rem; }
+.card-sub {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+.card-sub--sm {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+.card-sub--colored {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.top-card {
+    background: #fff;
+    padding: 2.25rem;
+    border-top: 4px solid var(--accent-cyan);
+}
+.top-card--sm { padding: 1.75rem; border-top-width: 3px; }
+.top-card--green  { border-top-color: var(--accent-green); }
+.top-card--orange { border-top-color: var(--accent-orange); }
+.top-card--pink   { border-top-color: var(--accent-pink); }
+.top-card--purple { border-top-color: var(--accent-purple); }
+.top-card--navy   { border-top-color: var(--accent-navy); }
+.top-card--muted  { background: var(--bg-muted); }
+.country-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--bg-muted);
+}
+.country-card__flag { font-size: 2rem; margin-bottom: 0.75rem; }
+.country-card h3 { font-size: 1rem; color: var(--accent-navy); margin-bottom: 0.25rem; }
+.country-card p { font-size: 0.8rem; color: var(--text-gray); margin: 0; }
+.step-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-top: 4px solid #00bcd4;
+}
+.step-card--muted { background: var(--bg-muted); }
+.step-card--green  { border-top-color: var(--accent-green); }
+.step-card--orange { border-top-color: var(--accent-orange); }
+.step-card--pink   { border-top-color: var(--accent-pink); }
+.contact-box {
+    background: var(--bg-muted);
+    padding: 2.5rem;
+    border-left: 4px solid var(--accent-cyan);
+}
+.contact-box h2 {
+    font-size: 1.35rem;
+    color: var(--accent-navy);
+    margin-bottom: 1rem;
+}
+.list-check-item {
+    font-size: 0.85rem;
+    color: var(--text-subtle);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.list-check-item:last-child { border-bottom: none; }
+.list-check-item i { margin-right: 0.5rem; }
+.section-heading--left {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+.section-subtitle--left {
+    text-align: left;
+    margin: 0 0 1.5rem;
+    max-width: none;
+}
+.section-subtitle--mb { margin-bottom: 3rem; }
+.icon-block--lg { font-size: 2rem; }
+.icon-uni { font-size: 1.5rem; color: #004080; }
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #004080;
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS for component classes
+   ============================================= */
+@media (max-width: 1024px) {
+    .grid--4col { grid-template-columns: repeat(2, 1fr); }
+    .grid--3col { grid-template-columns: repeat(2, 1fr); }
+    .stats-bar  { grid-template-columns: repeat(2, 1fr); }
+
+    /* Page Hero */
+    .page-hero-title { font-size: 3rem; }
+    .page-hero-content { padding: 4rem 2rem; }
+
+    /* Section padding */
+    .section, .section--muted, .section--white { padding: 4rem 0; }
+    .cta-banner { padding: 3rem 0; }
+}
+@media (max-width: 768px) {
+    .grid--2col,
+    .grid--3col,
+    .grid--2col-equal,
+    .grid--2col-start { grid-template-columns: 1fr; }
+    .grid--4col { grid-template-columns: 1fr; }
+    .stats-bar  { grid-template-columns: repeat(2, 1fr); }
+    .section     { padding: 3rem 0; }
+    .section--muted { padding: 3rem 0; }
+    .section--white { padding: 3rem 0; }
+    .section--dark  { padding: 2.5rem 0; }
+    .section-heading { font-size: 2rem; }
+    .cta-banner { padding: 3rem 0; }
+}
+@media (max-width: 640px) {
+    .cta-banner__buttons { flex-direction: column; align-items: center; }
+    .stats-bar { grid-template-columns: 1fr; }
+    .grid--2col-equal,
+    .grid--2col-start { gap: 2rem; }
+    .auto-grid,
+    .auto-grid--fill { grid-template-columns: 1fr; }
+}
+
+/* ================================================
+   EXPLORE MORE LINKS (global)
+   ================================================ */
+.explore-more-section {
+    padding: 4rem 0;
+    background: #fff;
+    border-top: 3px solid #e0e0e0;
+}
+
+.explore-more-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.explore-more-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.explore-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.explore-more-link:hover {
+    gap: 0.75rem;
+}
+
+.explore-more-link i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.explore-more-link:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .explore-more-section { padding: 2.5rem 0; }
+    .explore-more-links { gap: 1.5rem; }
+
+    /* Page Hero — tablet */
+    .page-hero { min-height: 50vh; margin-top: 70px; }
+    .page-hero-content { padding: 3rem 1.5rem; }
+    .page-hero-title { font-size: 2.2rem; }
+    .page-hero-breadcrumb { font-size: 0.85rem; gap: 0.5rem; flex-wrap: wrap; }
+    .page-hero-description p { font-size: 1rem; }
+    .page-hero-category { font-size: 0.8rem; }
+}
+
+@media (max-width: 640px) {
+    /* Page Hero — small mobile */
+    .page-hero { min-height: 40vh; }
+    .page-hero-title { font-size: 1.75rem; margin-bottom: 1.25rem; }
+    .page-hero-content { padding: 2.5rem 1.25rem; }
+    .page-hero-description { padding-left: 1rem; }
+    .container { padding: 0 1.25rem; }
+    .explore-more-links { flex-direction: column; gap: 1.25rem; }
+}

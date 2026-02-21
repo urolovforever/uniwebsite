@@ -1,0 +1,1863 @@
+/* Current Students Section Specific Styles */
+
+.students-dashboard {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    padding: 3rem;
+    border-radius: 12px;
+    color: white;
+    margin: 2rem 0;
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.quick-link-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.quick-link-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.quick-link-title {
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.academic-calendar {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.calendar-event {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: #f8fafc;
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 8px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.event-date {
+    min-width: 80px;
+    text-align: center;
+}
+
+.event-day {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+.event-month {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-title {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.3rem;
+}
+
+.event-description {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.timetable-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timetable th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.timetable td {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    vertical-align: top;
+}
+
+.class-slot {
+    background: #dbeafe;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.class-name {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.3rem;
+}
+
+.class-room {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.library-resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.resource-icon {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.resource-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.resource-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.club-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+}
+
+.club-banner {
+    height: 150px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1e40af 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.club-content {
+    padding: 1.5rem;
+}
+
+.club-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.club-category {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.club-members {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.sports-facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.facility-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.facility-image {
+    height: 180px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.facility-info {
+    padding: 1.5rem;
+}
+
+.facility-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.housing-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.housing-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.housing-header {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.housing-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+}
+
+.housing-period {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.housing-features {
+    padding: 1.5rem;
+}
+
+.housing-feature {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.housing-feature:last-child {
+    border-bottom: none;
+}
+
+.housing-feature i {
+    color: #10b981;
+}
+
+/* ============================================
+   HOUSING PAGE
+   ============================================ */
+
+/* Centered Statement */
+.housing-statement {
+    padding: 5rem 0 4rem;
+    text-align: center;
+}
+.housing-statement h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+.housing-statement p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.housing-statement a {
+    color: #00bcd4;
+    text-decoration: underline;
+}
+
+/* Room Types Section */
+.housing-types-section {
+    padding: 4rem 0;
+    background: #f5f6fa;
+}
+.housing-types-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.housing-types-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    margin-bottom: 0.8rem;
+}
+.housing-types-header h2 {
+    font-size: 1.8rem;
+    color: #003366;
+}
+.housing-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.housing-type-card {
+    background: #fff;
+    border-top: 4px solid #003366;
+    display: flex;
+    flex-direction: column;
+}
+.housing-type-top {
+    padding: 2rem 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+.housing-type-icon {
+    width: 56px;
+    height: 56px;
+    background: #f0f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.4rem;
+    color: #004080;
+}
+.housing-type-top h3 {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 0.8rem;
+}
+.housing-type-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #004080;
+}
+.housing-type-price span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #666;
+}
+.housing-type-body {
+    padding: 1.5rem 2rem 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.housing-type-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    flex: 1;
+}
+.housing-type-body li {
+    padding: 0.5rem 0;
+    color: #333;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+.housing-type-body li i {
+    color: #10b981;
+    margin-top: 3px;
+    font-size: 0.8rem;
+}
+.housing-type-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #f0f9ff;
+    color: #004080;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.housing-type-tag.best {
+    background: #00bcd4;
+    color: #fff;
+}
+
+/* What's Included Section */
+.housing-included-section {
+    padding: 5rem 0;
+}
+.housing-included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.housing-included-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+.housing-included-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 0.8rem;
+}
+.housing-included-text > p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+.housing-included-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.housing-included-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.housing-included-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.housing-included-item h4 {
+    font-size: 0.95rem;
+    color: #003366;
+    margin-bottom: 0.15rem;
+}
+.housing-included-item p {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* How to Apply Steps */
+.housing-steps-section {
+    padding: 5rem 0;
+    background: #0a1628;
+    color: #fff;
+}
+.housing-steps-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+.housing-steps-intro {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+.housing-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.housing-step {
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+.housing-step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.housing-step h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+.housing-step p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Living Costs Section */
+.housing-costs-section {
+    padding: 5rem 0;
+}
+.housing-costs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.housing-costs-text {
+    position: sticky;
+    top: 120px;
+}
+.housing-costs-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    margin-bottom: 0.8rem;
+}
+.housing-costs-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.housing-costs-text p {
+    color: #555;
+    line-height: 1.7;
+}
+.housing-costs-table {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+}
+.housing-cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+.housing-cost-row:last-child {
+    border-bottom: none;
+}
+.housing-cost-row.total {
+    background: #f0f9ff;
+    border-top: 2px solid #004080;
+}
+.housing-cost-item {
+    color: #333;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.housing-cost-item i {
+    color: #004080;
+    width: 20px;
+    text-align: center;
+}
+.housing-cost-value {
+    color: #004080;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Contact CTA */
+.housing-contact-section {
+    padding: 0 0 5rem;
+}
+.housing-contact-box {
+    background: #f5f6fa;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.housing-contact-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.housing-contact-text {
+    flex: 1;
+}
+.housing-contact-text h3 {
+    font-size: 1.15rem;
+    color: #003366;
+    margin-bottom: 0.4rem;
+}
+.housing-contact-text p {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+.housing-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+.housing-contact-btn:hover {
+    background: #004080;
+}
+
+/* Housing Responsive */
+@media (max-width: 1024px) {
+    .housing-types-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .housing-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .housing-included-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .housing-costs-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .housing-costs-text { position: static; }
+}
+@media (max-width: 768px) {
+    .housing-included-grid {
+        grid-template-columns: 1fr;
+    }
+    .housing-costs-grid {
+        grid-template-columns: 1fr;
+    }
+    .housing-steps-grid {
+        grid-template-columns: 1fr;
+    }
+    .housing-contact-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    .housing-statement h2 br {
+        display: none;
+    }
+}
+
+/* ============================================
+   LIBRARY PAGE
+   ============================================ */
+
+/* Stats Bar */
+.lib-stats-bar {
+    background: #003366;
+    padding: 2.5rem 0;
+}
+.lib-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+.lib-stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #00bcd4;
+    margin-bottom: 0.3rem;
+}
+.lib-stat-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+/* Intro */
+.lib-intro-section {
+    padding: 5rem 0;
+}
+.lib-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.lib-intro-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.lib-intro-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.lib-intro-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+/* Services */
+.lib-services-section {
+    padding: 4rem 0 5rem;
+    background: #f5f6fa;
+}
+.lib-services-section > .container > h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.lib-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.lib-service {
+    background: #fff;
+    padding: 2rem;
+    border-bottom: 3px solid #003366;
+}
+.lib-service-icon {
+    width: 44px;
+    height: 44px;
+    background: #f0f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004080;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+.lib-service h3 {
+    font-size: 1.05rem;
+    color: #003366;
+    margin-bottom: 0.6rem;
+}
+.lib-service p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Opening Hours */
+.lib-hours-section {
+    padding: 5rem 0;
+}
+.lib-hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.lib-hours-text {
+    position: sticky;
+    top: 120px;
+}
+.lib-hours-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.lib-hours-text p {
+    color: #555;
+    line-height: 1.7;
+}
+.lib-hours-table {
+    border: 1px solid #e5e7eb;
+}
+.lib-hour-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #333;
+    font-size: 0.95rem;
+}
+.lib-hour-row:last-child {
+    border-bottom: none;
+}
+.lib-hour-row.highlight {
+    background: #003366;
+    color: #fff;
+    border-bottom: none;
+}
+
+/* Library Responsive */
+@media (max-width: 1024px) {
+    .lib-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .lib-services-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+    .lib-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .lib-hours-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .lib-hours-text { position: static; }
+}
+@media (max-width: 768px) {
+    .lib-intro-grid { grid-template-columns: 1fr; }
+    .lib-hours-grid { grid-template-columns: 1fr; }
+    .lib-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .lib-stats-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   IT SERVICES PAGE
+   ============================================ */
+
+/* Intro + Quick Links */
+.it-intro-section {
+    padding: 5rem 0;
+}
+.it-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+}
+.it-intro-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.it-intro-text p {
+    color: #555;
+    line-height: 1.8;
+    max-width: 640px;
+}
+.it-intro-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.it-quick-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+.it-quick-link:hover {
+    background: #004080;
+}
+.it-quick-link i {
+    font-size: 1rem;
+}
+
+/* Services Grid */
+.it-services-section {
+    padding: 4rem 0 5rem;
+    background: #f5f6fa;
+}
+.it-services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.it-services-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    margin-bottom: 0.8rem;
+}
+.it-services-header h2 {
+    font-size: 1.8rem;
+    color: #003366;
+}
+.it-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.it-service-card {
+    background: #fff;
+    padding: 2rem;
+    border-left: 4px solid #00bcd4;
+}
+.it-service-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #e5e7eb;
+    margin-bottom: 0.8rem;
+    line-height: 1;
+}
+.it-service-card h3 {
+    font-size: 1.05rem;
+    color: #003366;
+    margin-bottom: 0.6rem;
+}
+.it-service-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* How to Connect */
+.it-connect-section {
+    padding: 5rem 0;
+}
+.it-connect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.it-connect-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+.it-connect-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.it-connect-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.it-connect-step span {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+.it-connect-step p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 4px;
+}
+.it-connect-info {
+    display: flex;
+    align-items: start;
+    padding-top: 2rem;
+    position: sticky;
+    top: 120px;
+}
+.it-connect-info-box {
+    background: #fff3cd;
+    padding: 2rem;
+    border-left: 4px solid #f0ad4e;
+}
+.it-connect-info-box h3 {
+    font-size: 1rem;
+    color: #003366;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.it-connect-info-box h3 i {
+    color: #f0ad4e;
+}
+.it-connect-info-box p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+.it-connect-info-box a {
+    color: #004080;
+    font-weight: 600;
+}
+
+/* IT Responsive */
+@media (max-width: 1024px) {
+    .it-services-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+    .it-intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .it-connect-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .it-connect-info { position: static; }
+}
+@media (max-width: 768px) {
+    .it-intro-grid { grid-template-columns: 1fr; }
+    .it-connect-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   CAFETERIA PAGE
+   ============================================ */
+
+/* Intro */
+.cafe-intro-section {
+    padding: 5rem 0;
+}
+.cafe-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.cafe-intro-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+.cafe-intro-text h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.cafe-intro-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Menu Cards */
+.cafe-menu-section {
+    padding: 4rem 0 5rem;
+    background: #f5f6fa;
+}
+.cafe-menu-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.cafe-menu-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    margin-bottom: 0.8rem;
+}
+.cafe-menu-header h2 {
+    font-size: 1.8rem;
+    color: #003366;
+}
+.cafe-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.cafe-menu-card {
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-top: 4px solid #003366;
+}
+.cafe-menu-icon {
+    width: 52px;
+    height: 52px;
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin: 0 auto 1.2rem;
+}
+.cafe-menu-card h3 {
+    font-size: 1.15rem;
+    color: #003366;
+    margin-bottom: 0.4rem;
+}
+.cafe-menu-time {
+    display: inline-block;
+    color: #00bcd4;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.cafe-menu-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+.cafe-menu-price {
+    font-weight: 700;
+    color: #004080;
+    font-size: 1rem;
+}
+
+/* Info Row */
+.cafe-info-section {
+    padding: 4rem 0;
+    background: #0a1628;
+}
+.cafe-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.cafe-info-item {
+    text-align: center;
+    color: #fff;
+    padding: 1.5rem;
+}
+.cafe-info-item > i {
+    font-size: 1.8rem;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+    display: block;
+}
+.cafe-info-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+}
+.cafe-info-item p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Cafeteria Responsive */
+@media (max-width: 1024px) {
+    .cafe-menu-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .cafe-info-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .cafe-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .cafe-intro-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   STUDENT UNION PAGE
+   ============================================ */
+
+.su-intro-section {
+    padding: 5rem 0;
+}
+.su-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.su-intro-text h2 {
+    font-size: 2rem;
+    color: #003366;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+.su-intro-text > p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.su-intro-text h3 {
+    font-size: 1.5rem;
+    color: #003366;
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.su-intro-text h3 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Quote */
+.su-quote {
+    border-left: 4px solid #00bcd4;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    margin: 2.5rem 0;
+}
+.su-quote p {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #003366;
+    margin: 0 0 1rem;
+}
+.su-quote footer {
+    font-family: inherit;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #0a1628;
+    line-height: 1.5;
+}
+.su-quote footer strong {
+    display: block;
+    font-weight: 700;
+}
+
+/* Image */
+.su-intro-image {
+    position: sticky;
+    top: 120px;
+}
+.su-intro-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Full-width Slider */
+.su-slider-section {
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+.su-slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.su-slide-bg.active {
+    opacity: 1;
+}
+.su-slider-inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.su-slider-card-area {
+    max-width: 460px;
+    width: 100%;
+}
+.su-slider-section .carousel-card-body {
+    background: rgba(248, 248, 248, 0.92);
+    backdrop-filter: blur(4px);
+    text-align: left;
+    align-items: flex-start;
+    min-height: 480px;
+    justify-content: center;
+}
+.su-slider-section .carousel-controls {
+    position: absolute;
+    bottom: 2rem;
+    left: 2.5rem;
+    margin-top: 0;
+    z-index: 3;
+}
+.su-slider-section .carousel-wrapper {
+    position: relative;
+}
+.su-slider-section .carousel-card-icon {
+    display: none;
+}
+.su-slider-section .carousel-card-body h4 {
+    font-size: 1.4rem;
+}
+.su-card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: #0a1628;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+.su-card-link:hover {
+    background: #003366;
+}
+.su-slider-card-area {
+    position: relative;
+}
+
+/* Find on Campus */
+.su-find-section {
+    padding: 5rem 0;
+}
+.su-find-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.su-find-text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+.su-find-text > p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+.su-find-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #0a1628;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+.su-find-btn:hover {
+    background: #003366;
+}
+.su-find-social {
+    margin-top: 3rem;
+}
+.su-find-social span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.su-find-social-icons {
+    display: flex;
+    gap: 1rem;
+}
+.su-find-social-icons a {
+    font-size: 1.4rem;
+    color: #0a1628;
+    transition: color 0.3s;
+}
+.su-find-social-icons a:hover {
+    color: #00bcd4;
+}
+.su-find-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* SU Responsive */
+@media (max-width: 1024px) {
+    .su-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .su-intro-image { position: static; }
+    .su-find-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .su-intro-grid { grid-template-columns: 1fr; }
+    .su-intro-image { position: static; }
+    .su-quote p { font-size: 1.2rem; }
+    .su-slider-section { height: auto; min-height: 400px; }
+    .su-slider-inner { align-items: flex-end; padding-bottom: 2rem; justify-content: center; }
+    .su-slider-card-area { max-width: 100%; }
+    .su-slider-section .carousel-card-body { min-height: 280px; padding: 2.5rem 1.5rem 1.5rem; }
+    .su-slider-section .carousel-card-body h4 { font-size: 1.15rem; }
+    .su-find-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   CLUBS PAGE
+   ============================================ */
+
+.clubs-intro-section {
+    padding: 5rem 0;
+}
+.clubs-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.clubs-intro-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+.clubs-intro-text h2 em {
+    font-style: italic;
+    font-weight: 800;
+}
+.clubs-intro-text > p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.clubs-intro-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f0f9ff;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+.clubs-intro-notice-icon {
+    font-size: 1.2rem;
+    color: #004080;
+    margin-top: 2px;
+}
+.clubs-intro-notice strong {
+    display: block;
+    font-size: 1rem;
+    color: #0a1628;
+    margin-bottom: 0.3rem;
+}
+.clubs-intro-notice p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+.clubs-intro-image {
+    position: sticky;
+    top: 120px;
+}
+
+.clubs-intro-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.clubs-intro-section + .campus-section {
+    padding: 7rem 0;
+}
+
+.clubs-gallery-reversed .campus-content {
+    position: sticky;
+    top: 120px;
+}
+
+.clubs-gallery-reversed {
+    direction: rtl;
+    grid-template-columns: 45% 1fr;
+}
+.clubs-gallery-reversed > * {
+    direction: ltr;
+}
+.clubs-gallery-reversed .campus-main-image {
+    height: 550px;
+}
+.clubs-gallery-reversed .campus-main-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Start Your Own Section */
+.clubs-start-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+.clubs-start-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.clubs-start-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+}
+.clubs-start-section h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 2rem;
+}
+.clubs-start-section p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.clubs-start-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+.clubs-start-link:hover {
+    gap: 1rem;
+}
+.clubs-start-link i {
+    font-size: 0.8rem;
+}
+
+/* Student Union Link Section */
+.clubs-su-section {
+    padding: 5rem 0;
+}
+.clubs-su-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.clubs-su-text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+.clubs-su-text p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.clubs-su-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #003366;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+.clubs-su-link:hover {
+    gap: 1rem;
+}
+.clubs-su-link i {
+    font-size: 0.8rem;
+}
+.clubs-su-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .clubs-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .clubs-intro-image { position: static; }
+    .clubs-su-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .clubs-intro-section { padding: 3rem 0; }
+    .clubs-intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .clubs-intro-text h2 { font-size: 1.5rem; }
+    .clubs-intro-image { position: static; }
+    .clubs-intro-image img { height: 280px; }
+
+    .clubs-intro-section + .campus-section { padding: 3.5rem 0; }
+    .clubs-gallery-reversed { direction: ltr; grid-template-columns: 1fr; gap: 2rem; }
+    .clubs-gallery-reversed .campus-content { position: static; }
+    .clubs-gallery-reversed .campus-main-image { height: 300px; }
+
+    .clubs-start-section { padding: 3rem 0; }
+    .clubs-start-section h2 { font-size: 1.5rem; }
+
+    .clubs-su-section { padding: 3rem 0; }
+    .clubs-su-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .clubs-su-text h2 { font-size: 1.5rem; }
+    .clubs-su-image img { height: 260px; }
+}
+
+/* ============================================
+   SPORTS & FITNESS PAGE
+   ============================================ */
+
+/* Intro */
+.sports-intro-section {
+    padding: 5rem 0;
+}
+.sports-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.sports-intro-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+.sports-intro-text p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.sports-intro-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+/* Sports Gallery Override */
+.sports-intro-section + .campus-section {
+    padding: 6rem 0;
+}
+.sports-intro-section + .campus-section .campus-main-image {
+    height: 520px;
+}
+.sports-intro-section + .campus-section .campus-content {
+    padding-top: 3rem;
+}
+
+/* Sports Teams */
+.sports-teams-section {
+    padding: 4rem 0 5rem;
+    background: #f5f6fa;
+}
+.sports-teams-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.sports-teams-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    margin-bottom: 0.8rem;
+}
+.sports-teams-header h2 {
+    font-size: 1.8rem;
+    color: #003366;
+}
+.sports-teams-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.sports-team-card {
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid #003366;
+}
+.sports-team-icon {
+    width: 56px;
+    height: 56px;
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 auto 1.2rem;
+}
+.sports-team-card h3 {
+    font-size: 1.1rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+.sports-team-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Facilities */
+.sports-facilities-section {
+    padding: 5rem 0;
+}
+.sports-facilities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.sports-facilities-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.sports-facilities-text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.sports-facilities-text > p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+.sports-facility-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sports-facility-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #333;
+    font-size: 0.95rem;
+}
+.sports-facility-item i {
+    color: #00bcd4;
+    font-size: 0.85rem;
+}
+
+/* How to Join */
+.sports-join-section {
+    padding: 4rem 0 5rem;
+    background: #0a1628;
+}
+.sports-join-section h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+.sports-join-intro {
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 3rem;
+}
+.sports-join-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.sports-join-step {
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.sports-join-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00bcd4;
+    line-height: 1;
+    margin-bottom: 1.2rem;
+}
+.sports-join-step h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.6rem;
+}
+.sports-join-step p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Sports Responsive */
+@media (max-width: 1024px) {
+    .sports-teams-grid { grid-template-columns: repeat(2, 1fr); }
+    .sports-join-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    .sports-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .sports-facilities-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .sports-intro-grid { grid-template-columns: 1fr; }
+    .sports-facilities-grid { grid-template-columns: 1fr; }
+    .sports-facilities-image img { height: 250px; }
+    .sports-teams-grid { grid-template-columns: 1fr; max-width: 100%; gap: 1rem; }
+    .sports-team-card { padding: 1.25rem; display: flex; align-items: center; gap: 1rem; text-align: left; }
+    .sports-team-icon { width: 44px; height: 44px; font-size: 1rem; margin: 0; flex-shrink: 0; }
+    .sports-team-card h3 { font-size: 1rem; margin-bottom: 0.2rem; }
+    .sports-team-card p { font-size: 0.85rem; line-height: 1.5; }
+
+    /* Stack remaining auto-fit grids */
+    .quick-links-grid { grid-template-columns: repeat(2, 1fr); }
+    .library-resources { grid-template-columns: 1fr; }
+    .clubs-grid { grid-template-columns: 1fr; }
+    .sports-facilities { grid-template-columns: 1fr; }
+    .housing-options { grid-template-columns: 1fr; }
+    .it-intro-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+    .quick-links-grid { grid-template-columns: 1fr; }
+}

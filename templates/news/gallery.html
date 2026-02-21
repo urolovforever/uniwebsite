@@ -1,0 +1,122 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Gallery" %} - TIU{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="gallery-section">
+    <div class="container">
+        {% if images %}
+        <div class="gallery-masonry">
+            {% for image in images %}
+            <div class="gallery-card" onclick="openLightbox({{ forloop.counter0 }})">
+                <div class="gallery-card-img">
+                    <img src="{{ image.image.url }}" alt="{{ image|trans_field:"caption"|default:_("TIU Gallery") }}" loading="lazy">
+                </div>
+                {% if image.caption %}
+                <div class="gallery-card-overlay">
+                    <p>{{ image|trans_field:"caption" }}</p>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="gallery-empty">
+            <i class="far fa-images"></i>
+            <h3>{% trans "Gallery coming soon" %}</h3>
+            <p>{% trans "We're curating photos from campus life, events, and academic activities. Check back soon!" %}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% if images %}
+<!-- Lightbox -->
+<div class="gallery-lightbox" id="galleryLightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="{% trans "Close" %}"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev" onclick="navigateLightbox(-1)" aria-label="{% trans "Previous" %}"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" onclick="navigateLightbox(1)" aria-label="{% trans "Next" %}"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+</div>
+{% endif %}
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+{% if images %}
+<script>
+(function() {
+    var images = [
+        {% for image in images %}
+        { src: "{{ image.image.url }}", caption: "{{ image.caption|escapejs }}" }{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    ];
+    var currentIndex = 0;
+    var lightbox = document.getElementById('galleryLightbox');
+    var lbImg = document.getElementById('lightboxImage');
+    var lbCap = document.getElementById('lightboxCaption');
+    var lbCount = document.getElementById('lightboxCounter');
+
+    window.openLightbox = function(index) {
+        currentIndex = index;
+        showSlide();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = function() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    window.navigateLightbox = function(dir) {
+        currentIndex = (currentIndex + dir + images.length) % images.length;
+        showSlide();
+    };
+
+    function showSlide() {
+        var item = images[currentIndex];
+        lbImg.src = item.src;
+        lbImg.alt = item.caption || 'Gallery image';
+        lbCap.textContent = item.caption || '';
+        lbCap.style.display = item.caption ? 'block' : 'none';
+        lbCount.textContent = (currentIndex + 1) + ' / ' + images.length;
+    }
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+})();
+</script>
+{% endif %}
+{% endblock %}

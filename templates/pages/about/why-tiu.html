@@ -1,0 +1,243 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}Why TIU - Tashkent International University{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/campus/c1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>About</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Why TIU</span>
+        </nav>
+        <div class="page-hero-category">About TIU</div>
+        <h1 class="page-hero-title">Why TIU</h1>
+        <div class="page-hero-description">
+            <p>A university built for the future — where global education meets local ambition.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Top Reasons -->
+<section class="top-reasons">
+    <div class="top-reasons-inner">
+        <div class="top-reasons-text">
+            <h2>Top 5 reasons to choose<br>TIU</h2>
+            <p>We're not saying we've got all the answers. But that this is where they're going to be found. So, want to change lives? Start with yours.</p>
+        </div>
+        <div class="top-reasons-carousel-wrapper">
+            <div class="top-reasons-carousel" id="reasonsCarousel">
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">2+2</div>
+                        <div class="reason-card-desc">Dual degree pathway — two years at TIU, two years abroad</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">100%</div>
+                        <div class="reason-card-desc">English-medium instruction across every program</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-globe-americas"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">10+</div>
+                        <div class="reason-card-desc">Partner universities across Europe and Asia</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-building-columns"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">4</div>
+                        <div class="reason-card-desc">Dynamic departments across business, IT, education, and languages</div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-card-icon"><i class="fas fa-users"></i></div>
+                    <div class="reason-card-bottom">
+                        <div class="reason-card-stat">Global</div>
+                        <div class="reason-card-desc">Faculty from around the world bringing diverse perspectives</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-reasons-nav">
+        <div class="top-reasons-dots" id="reasonsDots"></div>
+        <div class="top-reasons-arrows">
+            <button class="top-reasons-arrow" onclick="slideReasons(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="top-reasons-arrow" onclick="slideReasons(1)"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Big Statement -->
+<section class="big-statement">
+    <div class="container">
+        <h2>Live your best <em>day</em><br>and <em>night</em> life</h2>
+    </div>
+</section>
+
+<!-- Split - Dual Degree -->
+<section class="split-section">
+    <div class="split-image" style="background-image: url('{% static 'img/hero/back2.jpg' %}');"></div>
+    <div class="split-content">
+        <span class="split-label">What Makes Us Different</span>
+        <h2>Two degrees. Two countries. One journey.</h2>
+        <p>TIU isn't just another university. We're the only institution in Uzbekistan offering a full 2+2 dual degree program — two years in Tashkent, two years at a partner university abroad. You graduate with two degrees, fluency in English, and an international network that follows you for life.</p>
+        <a href="/programs/dual-diploma/" class="split-link">Explore the 2+2 program <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Gold-Standard Teaching -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <div class="feature-block-label">GOLD-STANDARD TEACHING</div>
+            <h2>Teaching worth its weight in <em>Gold</em></h2>
+            <p>We're rated Gold in the latest Teaching Excellence Framework (TEF). What does that mean for you? It means you learn from the best, so <em>you'll</em> be at your best. And that means you'll have the best chance of achieving what you want in your life and career.</p>
+            <a href="/faculty/directory/" class="split-link">Come and meet our lecturers <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Lecturer" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- CV-Boosting Experience -->
+<section class="feature-block">
+    <div class="feature-block-inner reversed">
+        <div class="feature-block-text">
+            <div class="feature-block-label">CV-BOOSTING EXPERIENCE</div>
+            <h2>Our job is to get you ready for <em>yours</em></h2>
+            <p>We don't just exist to teach. We're here to help you prepare for life after university. Whether that's a year studying abroad, a rewarding work placement, or a volunteering role you can't get anywhere else. Learn how to get career-ready at an Open Day.</p>
+            <a href="https://urolovforever.github.io/landingpage/" class="split-link">Book your place now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Student" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Support When You Need It -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <div class="feature-block-label">SUPPORT WHEN YOU NEED IT</div>
+            <h2>Asking for help can be hard. Getting it is <em>easy.</em></h2>
+            <p>Our experts in mental health, finance, and disability and neurodivergence support offer tailored advice and interventions. Before you start, while you're here and even after you graduate. And our online support portal gives you access to help 24/7, wherever you are.</p>
+            <a href="/contact/support/" class="split-link">Here for your support needs <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Students" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- City of Culture -->
+<section class="culture-cta">
+    <div class="container">
+        <div class="culture-cta-label">A CITY OF CULTURE</div>
+        <h2>All dressed up with <em>everywhere</em> to go</h2>
+        <p>Morning, noon and night, there's always somewhere to go and something to do in Tashkent. In fact, you'll do well to fit everything in during your university years. So we'd better get started. Scroll on for just some of the highlights...</p>
+        <a href="/about/overview/" class="split-link">Explore TIU at an open day <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/about/overview/" class="explore-more-link">Overview <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/mission-vision/" class="explore-more-link">Mission & Vision <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/leadership/" class="explore-more-link">Leadership <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/campus-map/" class="explore-more-link">Campus Map <i class="fas fa-arrow-right"></i></a>
+            <a href="/about/sustainability/" class="explore-more-link">Sustainability <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    const carousel = document.getElementById('reasonsCarousel');
+    const dotsContainer = document.getElementById('reasonsDots');
+    const cards = Array.from(carousel.querySelectorAll('.reason-card'));
+    const totalCards = cards.length;
+    let current = 0;
+
+    // Clone all cards and append for seamless loop
+    cards.forEach(function(card) {
+        carousel.appendChild(card.cloneNode(true));
+    });
+
+    // Build dots for original cards only
+    for (let i = 0; i < totalCards; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'reasons-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = function() { goToSlide(i); };
+        dotsContainer.appendChild(dot);
+    }
+
+    function getStep() {
+        return cards[0].getBoundingClientRect().width + 16;
+    }
+
+    function goToSlide(index) {
+        current = index;
+        var offset = current * getStep();
+        carousel.style.transition = 'transform 0.4s ease';
+        carousel.style.transform = 'translateX(-' + offset + 'px)';
+        updateDots();
+    }
+
+    function updateDots() {
+        var dotIndex = current % totalCards;
+        dotsContainer.querySelectorAll('.reasons-dot').forEach(function(d, i) {
+            d.classList.toggle('active', i === dotIndex);
+        });
+    }
+
+    // When transition ends on cloned set, jump back instantly
+    carousel.addEventListener('transitionend', function() {
+        if (current >= totalCards) {
+            carousel.style.transition = 'none';
+            current = current % totalCards;
+            carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+        }
+    });
+
+    window.slideReasons = function(dir) {
+        if (dir === 1) {
+            goToSlide(current + 1);
+        } else {
+            if (current === 0) {
+                // Jump to cloned last card instantly, then animate back
+                carousel.style.transition = 'none';
+                current = totalCards;
+                carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+                // Force reflow
+                carousel.offsetHeight;
+                goToSlide(current - 1);
+            } else {
+                goToSlide(current - 1);
+            }
+        }
+    };
+})();
+</script>
+{% endblock %}

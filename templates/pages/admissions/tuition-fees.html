@@ -1,0 +1,213 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Tuition & Fees" %} - {% trans "TIU" %}{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Admissions" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Tuition & Fees" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Admissions" %}</div>
+        <h1 class="page-hero-title">{% trans "Tuition & Fees" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Transparent, affordable tuition designed to make world-class education accessible to every student." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Centered Statement -->
+<section class="tuition-statement">
+    <div class="container">
+        <h2>{% trans "Investing in your future is one of the smartest" %}<br>{% trans "decisions you'll ever make" %}</h2>
+        <p>{% trans "At TIU, we believe that a quality education should be within reach. Our tuition fees are competitively structured to offer exceptional value — with internationally recognized programmes, experienced faculty, and modern facilities. And with a range of" %} <span>{% trans "scholarships and financial aid" %}</span> {% trans "options available, your investment goes even further." %}</p>
+        <p>{% trans "Add into that our" %} <span>{% trans "affordable student housing" %}</span>{% trans ", vibrant campus life, and one of the lowest costs of living in Central Asia — and you'll see why TIU is a smart choice." %}</p>
+    </div>
+</section>
+
+<!-- Payment Guide Box (accommodation-style) -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "Payment Guide" %}</div>
+                    <h2>{% trans "Your complete guide to tuition & payment" %}</h2>
+                    <p>{% trans "Everything you need to know about fees, payment schedules, instalment plans, and financial support — all in one place. Whether you're a domestic or international student, we've made it simple." %}</p>
+                    <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="accommodation-link">{% trans "Read the guide" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "TIU campus building" %}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Three Feature Cards (Hull-inspired) -->
+<section class="tuition-cards-section">
+    <div class="container">
+        <div class="tuition-cards-grid">
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">{% trans "Scholarships & Awards" %}</span>
+                    <h3>{% trans "Big support for big ambitions" %}</h3>
+                    <p>{% trans "We offer a range of merit-based scholarships, fee discounts, and financial awards for both domestic and international students — designed to ease the financial load and reward excellence." %}</p>
+                    <a href="{% url 'core:scholarships' %}" class="tuition-card-link">{% trans "See what's available" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">{% trans "Affordability" %}</span>
+                    <h3>{% trans "A student city that won't break the bank" %}</h3>
+                    <p>{% trans "Tashkent is one of Central Asia's most affordable cities — fact. That means your money goes further on rent, food, transport, and social life. Don't believe us? Take a look." %}</p>
+                    <a href="{% url 'core:static_page' url_path='current-students/housing' %}" class="tuition-card-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">{% trans "Financial Support" %}</span>
+                    <h3>{% trans "Worried about money? We can help." %}</h3>
+                    <p>{% trans "Get expert advice from our financial support team. Whether you need help with payment plans, budgeting, or emergency funding — we're here to make sure finances never hold you back." %}</p>
+                    <a href="{% url 'core:static_page' url_path='contact/support' %}" class="tuition-card-link">{% trans "Get advice" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tuition Fee Tables -->
+<section class="fee-tables-section">
+    <div class="container">
+        <div class="fee-tables-header">
+            <span class="fee-tables-label">{% trans "Tuition Fees 2025/26" %}</span>
+            <h2>{% trans "Programme fees by level" %}</h2>
+            <p>{% trans "All fees listed below are per academic year. Fees may vary depending on the type of education and programme." %}</p>
+        </div>
+
+        <!-- Bachelor's Programmes -->
+        {% if bachelor_programs %}
+        <div class="fee-table-block">
+            <div class="fee-table-title">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>{% trans "Bachelor's Programmes" %}</h3>
+            </div>
+            <div class="fee-table-wrapper">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>{% trans "Programme" %}</th>
+                            <th>{% trans "Type of Education" %}</th>
+                            <th>{% trans "Annual Tuition Fee" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prog in bachelor_programs %}
+                        <tr>
+                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a><br><span class="fee-school">{{ prog.department|trans_field:"name" }}</span></td>
+                            <td><span class="fee-type {{ prog.study_type }}">{{ prog.get_study_type_display }}</span></td>
+                            <td class="fee-amount">{{ prog.tuition_fee|default:"Contact us" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Master's Programmes -->
+        {% if master_programs %}
+        <div class="fee-table-block">
+            <div class="fee-table-title">
+                <i class="fas fa-user-graduate"></i>
+                <h3>{% trans "Master's Programmes" %}</h3>
+            </div>
+            <div class="fee-table-wrapper">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>{% trans "Programme" %}</th>
+                            <th>{% trans "Type of Education" %}</th>
+                            <th>{% trans "Annual Tuition Fee" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prog in master_programs %}
+                        <tr>
+                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a><br><span class="fee-school">{{ prog.department|trans_field:"name" }}</span></td>
+                            <td><span class="fee-type {{ prog.study_type }}">{{ prog.get_study_type_display }}</span></td>
+                            <td class="fee-amount">{{ prog.tuition_fee|default:"Contact us" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- PhD Programmes -->
+        {% if phd_programs %}
+        <div class="fee-table-block">
+            <div class="fee-table-title">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>{% trans "PhD Programmes" %}</h3>
+            </div>
+            <div class="fee-table-wrapper">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>{% trans "Programme" %}</th>
+                            <th>{% trans "Type of Education" %}</th>
+                            <th>{% trans "Annual Fee" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prog in phd_programs %}
+                        <tr>
+                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a><br><span class="fee-school">{{ prog.department|trans_field:"name" }}</span></td>
+                            <td><span class="fee-type {{ prog.study_type }}">{{ prog.get_study_type_display }}</span></td>
+                            <td class="fee-amount">{{ prog.tuition_fee|default:"Contact us" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="fee-tables-note">
+            <i class="fas fa-info-circle"></i>
+            <p>{% trans "Tuition fees are reviewed annually and may be subject to change. The fees above apply to the 2025/26 academic year. For the most up-to-date information, please contact the" %} <span>{% trans "Admissions Office" %}</span>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'core:static_page' url_path='admissions/how-to-apply' %}" class="explore-more-link">{% trans "How to Apply" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/requirements' %}" class="explore-more-link">{% trans "Requirements" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:scholarships' %}" class="explore-more-link">{% trans "Scholarships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='admissions/faqs' %}" class="explore-more-link">{% trans "FAQs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="https://urolovforever.github.io/landingpage/" class="explore-more-link">{% trans "Apply Now" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

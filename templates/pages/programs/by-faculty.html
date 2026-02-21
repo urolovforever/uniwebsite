@@ -1,0 +1,118 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Programs by Faculty" %} - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Programs" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Programs by Faculty" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Programs" %}</div>
+        <h1 class="page-hero-title">{% trans "Programs by Faculty" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Explore our academic programmes organized by faculty — find the right department for your interests and career goals." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>{% trans "Two faculties." %} <em>{% trans "Endless possibilities." %}</em></h2>
+                <p>{% trans "TIU's academic programmes are delivered through two faculties, each with dedicated departments, experienced faculty, and strong industry connections. Every programme is taught in English and designed to international standards." %}</p>
+                <p>{% trans "Whether you're drawn to law, business, technology, or education, you'll find a programme that matches your ambitions and prepares you for a global career." %}</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>{% trans "Browse by level instead?" %}</h3>
+                    <p>{% trans "View all bachelor's, master's, and certificate programmes in one place." %}</p>
+                    <a href="{% url 'programs:by_level' %}" class="abroad-sidebar-link">{% trans "Programs by Level" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Faculties -->
+<section class="section--muted">
+    <div class="container mid-container">
+
+        <!-- Faculty 1: Yurisprudensiya -->
+        <div class="accent-card accent-card--lg accent-card--orange" style="margin-bottom: 2rem;">
+            <div class="card-header-row card-header-row--lg">
+                <div class="icon-circle"><i class="fas fa-balance-scale"></i></div>
+                <div>
+                    <h3>{% trans "Faculty of Jurisprudence" %}</h3>
+                    <span class="card-sub">{% trans "International Law, Public Law, Human Rights, Constitutional Studies" %}</span>
+                </div>
+            </div>
+            <p class="card-text card-text--mb-lg" style="font-size: 0.95rem; line-height: 1.7;">{% trans "Programmes combining rigorous legal education with global perspectives. Students develop critical thinking, argumentation, and cross-cultural understanding through moot courts, debates, and research seminars." %}</p>
+            <div class="prog-tags-row">
+                {% for prog in jurisprudence_programs %}
+                <a href="{{ prog.get_absolute_url }}" class="prog-tag prog-tag--orange">{{ prog|trans_field:"title" }}</a>
+                {% endfor %}
+            </div>
+            <a href="{% url 'people:dept_jurisprudence' %}" style="color: #e65100; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">{% trans "Learn more" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Faculty 2: Biznes va Innovatsion ta'lim -->
+        <div class="accent-card accent-card--lg accent-card--cyan">
+            <div class="card-header-row card-header-row--lg">
+                <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+                <div>
+                    <h3>{% trans "Faculty of Business and Innovative Education" %}</h3>
+                    <span class="card-sub">{% trans "Business, IT, Engineering, Economics, Education" %}</span>
+                </div>
+            </div>
+            <p class="card-text card-text--mb-lg" style="font-size: 0.95rem; line-height: 1.7;">{% trans "Programmes focused on business leadership, technology, and innovative education. Students gain hands-on experience through lab projects, case studies, internships, and partnerships with leading employers." %}</p>
+            <div class="prog-tags-row">
+                {% for prog in business_programs %}
+                <a href="{{ prog.get_absolute_url }}" class="prog-tag prog-tag--blue">{{ prog|trans_field:"title" }}</a>
+                {% endfor %}
+            </div>
+            <a href="{% url 'people:dept_business_innovative' %}" style="color: #00acc1; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">{% trans "Learn more" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>{% trans "Find your programme" %}</h2>
+        <p>{% trans "Not sure which faculty is right for you? Get in touch and our admissions team will help you choose." %}</p>
+        <div class="cta-banner__buttons">
+            <a href="https://urolovforever.github.io/landingpage/" class="cta-btn cta-btn--primary">{% trans "Apply Now" %}</a>
+            <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="cta-btn cta-btn--outline">{% trans "Contact Admissions" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'programs:by_level' %}" class="explore-more-link">{% trans "By Level" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:static_page' url_path='programs/international-programs' %}" class="explore-more-link">{% trans "International Programs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:joint_degrees' %}" class="explore-more-link">{% trans "Joint Degrees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:exchange_programs' %}" class="explore-more-link">{% trans "Exchange Programs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:dual_diploma' %}" class="explore-more-link">{% trans "Dual Diploma" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

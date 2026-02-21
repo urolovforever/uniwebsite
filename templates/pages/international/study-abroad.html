@@ -1,0 +1,314 @@
+{% extends "base_subpage.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/international.css' %}">
+{% endblock %}
+
+{% block title %}Study Abroad - International | TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>International</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">Study Abroad</span>
+        </nav>
+        <div class="page-hero-category">International</div>
+        <h1 class="page-hero-title">Study Abroad</h1>
+        <div class="page-hero-description">
+            <p>Expand your horizons — spend a semester or year at one of our partner universities around the world.</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- What does study abroad mean -->
+<section class="abroad-intro-section">
+    <div class="container">
+        <div class="abroad-intro-grid">
+            <div class="abroad-intro-text">
+                <h2>What <em>exactly</em> does 'study abroad' mean?</h2>
+                <p>It's a term used by universities to describe a range of international opportunities — including semester exchanges, dual degree programmes, summer schools, and academic field trips.</p>
+                <p>At TIU, when we talk about 'study abroad', we typically mean our formal Exchange Programme where you spend either a semester or a full academic year studying at one of our partner universities around the world.</p>
+                <p>Our International Office works with faculties to identify suitable partner universities that complement and expand your studies here. Our growing portfolio includes partners across South Korea, Europe, Turkey, and beyond.</p>
+            </div>
+            <div class="abroad-intro-sidebar">
+                <div class="abroad-sidebar-card">
+                    <h3>Summer opportunities</h3>
+                    <p>We also offer other types of international experiences to our students that don't have to be linked to your degree.</p>
+                    <a href="/international/exchange-opportunities/" class="abroad-sidebar-link">Find out more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Carousel -->
+<section class="benefits-carousel-section">
+    <div class="benefits-carousel-inner">
+        <h2>The benefits of studying abroad</h2>
+        <div class="benefits-carousel-wrapper">
+            <div class="benefits-carousel" id="benefitsCarousel">
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Achieve better grades</h3>
+                    <p>with students who study abroad being more likely to graduate with higher academic performance</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Boost your career</h3>
+                    <p>by developing skills in communication, adaptability, public speaking and more</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3>Earn more</h3>
+                    <p>with students who study abroad being more likely to have a higher wage after graduation</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h3>Funding is available</h3>
+                    <p>to support your living and travel costs while studying abroad</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-users"></i></div>
+                    <h3>Meet new people</h3>
+                    <p>and make lifelong connections with students from around the world</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>Experience a new culture</h3>
+                    <p>by immersing yourself in a different country, language, and way of life</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-language"></i></div>
+                    <h3>Learn a new language</h3>
+                    <p>or improve existing skills through daily immersion in a multilingual environment</p>
+                </div>
+                <div class="benefits-card">
+                    <div class="benefits-card-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Gain confidence</h3>
+                    <p>by stepping out of your comfort zone and building independence in a new environment</p>
+                </div>
+            </div>
+        </div>
+        <div class="benefits-carousel-nav">
+            <span class="benefits-carousel-counter" id="benefitsCounter">01/08</span>
+            <div class="benefits-carousel-arrows">
+                <button class="benefits-carousel-arrow" id="benefitsPrev"><i class="fas fa-arrow-left"></i></button>
+                <button class="benefits-carousel-arrow" id="benefitsNext"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Duration -->
+<section class="abroad-duration-section">
+    <div class="container">
+        <div class="abroad-duration-content">
+            <h2>Duration</h2>
+
+            <h3>Semester abroad</h3>
+            <p>For our <span>Business & Economics</span>, <span>Languages & Humanities</span> and <span>IT & Engineering</span> programmes, study abroad is available for one semester. This is typically integrated into the second year of your Bachelor's degree, allowing you to gain international experience without extending your graduation timeline.</p>
+
+            <h3>Year abroad</h3>
+            <p>For other subjects that offer a study abroad option, this takes place over a full academic year. This extends a standard undergraduate degree from four to five years, with your year abroad taking place in year three. In this case, you'll then return to complete the final year of your degree at TIU.</p>
+        </div>
+    </div>
+</section>
+
+<!-- If not here, then where? -->
+<section class="abroad-where-section">
+    <div class="container">
+        <div class="abroad-where-grid">
+            <div class="abroad-where-image">
+                <img src="{% static 'img/campus/c7.jpeg' %}" alt="Aerial view of a city abroad" loading="lazy">
+            </div>
+            <div class="abroad-where-text">
+                <h2>If not here, then <em>where?</em></h2>
+                <p>We provide the opportunity; you decide the destination.</p>
+                <p>With more than 10 partner universities around the globe to choose from, the world is literally your oyster.</p>
+                <p>But remember, our Exchange Programme is specific to your department and area of study, so you'll need to choose an option that's available for your subject.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- How to Apply -->
+<section class="abroad-apply-section">
+    <div class="container">
+        <div class="abroad-apply-grid">
+            <div class="abroad-apply-image">
+                <img src="{% static 'img/campus/c4.jpg' %}" alt="TIU student studying abroad" loading="lazy">
+                <p class="abroad-apply-caption"><em>Dilnoza Karimova, BA Business Administration Student (with Study Abroad)</em></p>
+            </div>
+            <div class="abroad-apply-text">
+                <h2>How to apply</h2>
+                <p>It is easy to apply for the Study Abroad programme — just complete the simple online application form during your second year. Don't worry if you haven't selected a course with Study Abroad from the start, you will still have time to transfer to this option.</p>
+                <p>Our International Office and Academic Coordinators offer personalised advice and guidance on choosing the right destination, completing the application process, and module selection.</p>
+                <blockquote class="abroad-apply-quote">
+                    <p>Studying abroad has truly been the most amazing experience and I couldn't recommend it anymore. You learn a lot about both life and the subject you're studying.</p>
+                    <footer>
+                        <strong>Dilnoza Karimova</strong>
+                        BA Business Administration (with Study Abroad)
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>Study Abroad FAQs</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Who is eligible to study abroad?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>All TIU students enrolled in a programme with a study abroad option are eligible. You'll typically need to maintain a GPA of 2.5 or above and be in good academic standing. Some partner universities may have additional language requirements.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Will I pay tuition at the partner university?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>No. Exchange students continue to pay their regular TIU tuition fees. You will not be charged tuition by the partner university. However, you will need to cover your own living expenses, travel, and accommodation at the host city.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Will my credits transfer back to TIU?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. Before you go, you'll agree a learning plan with your Academic Coordinator. The courses you take abroad will be mapped to TIU modules, and your credits will transfer back once you've successfully completed them.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Can I choose which country I go to?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>You can express a preference, but available destinations depend on your department and programme. The International Office will present the options available for your subject and help you choose the best fit.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>Is there funding or financial support available?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Yes. TIU offers travel grants and exchange bursaries to help cover living and travel costs. Some partner universities also offer additional support for incoming exchange students. Contact the International Office for details.</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>When do I need to apply?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>Applications typically open in October for the following academic year. Deadlines vary by destination, but most close by February. Apply early to secure your preferred destination — places are limited.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-links">
+            <a href="/international/why-study-tiu/" class="explore-more-link">Why Study at TIU <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/admission-process/" class="explore-more-link">Admission Process <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/visa-immigration/" class="explore-more-link">Visa & Immigration <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/accommodation/" class="explore-more-link">Accommodation <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/exchange-opportunities/" class="explore-more-link">Exchange Opportunities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var carousel = document.getElementById('benefitsCarousel');
+    var counter = document.getElementById('benefitsCounter');
+    var prevBtn = document.getElementById('benefitsPrev');
+    var nextBtn = document.getElementById('benefitsNext');
+    var originalCards = Array.from(carousel.querySelectorAll('.benefits-card'));
+    var total = originalCards.length;
+    var current = 0;
+
+    // Clone all cards for infinite loop
+    originalCards.forEach(function(card) {
+        carousel.appendChild(card.cloneNode(true));
+    });
+
+    var allCards = carousel.querySelectorAll('.benefits-card');
+
+    function getStep() {
+        return allCards[0].offsetWidth + 20;
+    }
+
+    function updateCounter() {
+        var display = String((current % total) + 1).padStart(2, '0') + '/' + String(total).padStart(2, '0');
+        counter.textContent = display;
+    }
+
+    function goTo(index) {
+        current = index;
+        carousel.style.transition = 'transform 0.4s ease';
+        carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+        updateCounter();
+    }
+
+    carousel.addEventListener('transitionend', function() {
+        if (current >= total) {
+            carousel.style.transition = 'none';
+            current = current % total;
+            carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+        }
+    });
+
+    nextBtn.addEventListener('click', function() {
+        goTo(current + 1);
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (current === 0) {
+            carousel.style.transition = 'none';
+            current = total;
+            carousel.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+            carousel.offsetHeight;
+            goTo(current - 1);
+        } else {
+            goTo(current - 1);
+        }
+    });
+})();
+
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) {
+        el.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+    }
+}
+</script>
+{% endblock %}
