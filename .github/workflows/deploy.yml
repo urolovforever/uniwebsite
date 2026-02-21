@@ -16,6 +16,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /opt/tiu
+            git checkout -- .
             git pull origin main
             docker compose build web
             docker compose up -d web
