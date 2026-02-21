@@ -27,6 +27,11 @@ RUN DJANGO_SETTINGS_MODULE=tiu_project.settings.prod \
     DJANGO_SECRET_KEY=build-only-key \
     python manage.py compilemessages
 
+# Compress static files (django-compressor offline mode)
+RUN DJANGO_SETTINGS_MODULE=tiu_project.settings.prod \
+    DJANGO_SECRET_KEY=build-only-key \
+    python manage.py compress --force
+
 EXPOSE 8000
 
 CMD ["gunicorn", "tiu_project.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120"]
