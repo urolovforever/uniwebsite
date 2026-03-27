@@ -23,61 +23,57 @@
             </div>
 
             <div class="pathway-grid">
-                <div class="pathway-featured">
-                    <div class="pathway-card">
-                        <div class="pathway-image">
-                            <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Bachelor Programs" %}" loading="lazy">
-                        </div>
-                        <div class="pathway-content">
-                            <h3>{% trans "BACHELOR'S PROGRAMS" %}</h3>
-                            <ul>
-                                <li>{% trans "Business & Economics" %}</li>
-                                <li>{% trans "Information Technology" %}</li>
-                                <li>{% trans "Education & Pedagogy" %}</li>
-                                <li>{% trans "Foreign Languages & Literature" %}</li>
-                                <li>{% trans "Jurisprudence" %}</li>
-                            </ul>
-                            <div class="pathway-buttons">
-                                <a href="{% url 'programs:bachelor_list' %}" class="btn-pathway-primary">{% trans "Explore Bachelor's Degrees" %}</a>
-                                <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
-                            </div>
+                <div class="pathway-card">
+                    <div class="pathway-image">
+                        <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Bachelor Programs" %}" loading="lazy">
+                    </div>
+                    <div class="pathway-content">
+                        <h3>{% trans "BACHELOR'S PROGRAMS" %}</h3>
+                        <ul>
+                            <li>{% trans "Business & Economics" %}</li>
+                            <li>{% trans "Information Technology" %}</li>
+                            <li>{% trans "Education & Pedagogy" %}</li>
+                            <li>{% trans "Foreign Languages & Literature" %}</li>
+                            <li>{% trans "Jurisprudence" %}</li>
+                        </ul>
+                        <div class="pathway-buttons">
+                            <a href="{% url 'programs:bachelor_list' %}" class="btn-pathway-primary">{% trans "Explore Bachelor's Degrees" %}</a>
+                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="pathway-list">
-                    <div class="pathway-card">
-                        <div class="pathway-image">
-                            <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
-                        </div>
-                        <div class="pathway-content">
-                            <h3>{% trans "MASTER'S PROGRAMS" %}</h3>
-                            <ul>
-                                <li>{% trans "Public Finance & International Finance" %}</li>
-                                <li>{% trans "Economics" %}</li>
-                            </ul>
-                            <div class="pathway-buttons">
-                                <a href="{% url 'programs:master_list' %}" class="btn-pathway-primary">{% trans "Explore Master's Degrees" %}</a>
-                                <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
-                            </div>
+                <div class="pathway-card">
+                    <div class="pathway-image">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
+                    </div>
+                    <div class="pathway-content">
+                        <h3>{% trans "MASTER'S PROGRAMS" %}</h3>
+                        <ul>
+                            <li>{% trans "Public Finance & International Finance" %}</li>
+                            <li>{% trans "Economics" %}</li>
+                        </ul>
+                        <div class="pathway-buttons">
+                            <a href="{% url 'programs:master_list' %}" class="btn-pathway-primary">{% trans "Explore Master's Degrees" %}</a>
+                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="pathway-card">
-                        <div class="pathway-image">
-                            <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
-                        </div>
-                        <div class="pathway-content">
-                            <h3>{% trans "PhD & DCs PROGRAMS" %}</h3>
-                            <ul>
-                                <li>{% trans "Public Finance & International Finance" %}</li>
-                                <li>{% trans "Economics" %}</li>
-                                <li>{% trans "Management" %}</li>
-                            </ul>
-                            <div class="pathway-buttons">
-                                <a href="{% url 'programs:phd_list' %}" class="btn-pathway-primary">{% trans "Explore PhD Programmes" %}</a>
-                                <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
-                            </div>
+                <div class="pathway-card">
+                    <div class="pathway-image">
+                        <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
+                    </div>
+                    <div class="pathway-content">
+                        <h3>{% trans "PhD & DCs PROGRAMS" %}</h3>
+                        <ul>
+                            <li>{% trans "Public Finance & International Finance" %}</li>
+                            <li>{% trans "Economics" %}</li>
+                            <li>{% trans "Management" %}</li>
+                        </ul>
+                        <div class="pathway-buttons">
+                            <a href="{% url 'programs:phd_list' %}" class="btn-pathway-primary">{% trans "Explore PhD Programmes" %}</a>
+                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
                         </div>
                     </div>
                 </div>
@@ -252,7 +248,7 @@
             <div class="welcome-accent"></div>
             <h2>{% trans "Your Gateway to Global Education." %}</h2>
             <p>
-                {% trans "Tashkent International University (TIU) is a modern private university located in Tashkent, founded in October 2023. TIU develops partnerships with prestigious foreign universities and organizations, creating broad academic opportunities for students. With international collaborations including a 2+2 dual degree program and a modern campus equipped with the latest technology, our main goal is to provide students with a solid foundation for success in their chosen profession and life path. Start your future today — join TIU." %}
+                {% trans "TIU is a modern university in Tashkent founded in 2023, offering international partnerships, a 2+2 dual degree program, and a campus equipped with the latest technology. We build a solid foundation for your success. Start your future today — join TIU." %}
             </p>
             <div class="welcome-buttons">
                 <a href="https://urolovforever.github.io/landingpage/" class="btn-welcome">{% trans "Apply Now" %}</a>

@@ -228,10 +228,8 @@ msgid "Departments"
 msgstr "Kafedralar"
 
 #: templates/home/index.html:4
-#, fuzzy
-#| msgid "Tashkent International University"
 msgid "Tashkent International University - Excellence in Education"
-msgstr "Toshkent Xalqaro Universiteti"
+msgstr "Toshkent Xalqaro Universiteti - Ta'limda mukammallik"
 
 #: templates/home/index.html:21
 msgid "A Place Where Knowledge and Opportunities Unite!"
@@ -324,7 +322,7 @@ msgstr "Talabalar"
 
 #: templates/home/index.html:115 templates/news/news_detail.html:41
 msgid "Latest news"
-msgstr ""
+msgstr "So'nggi yangiliklar"
 
 #: templates/home/index.html:116 templates/home/index.html:324
 #: templates/pages/faculty/business-innovative-education.html:113
@@ -332,114 +330,107 @@ msgstr ""
 #: templates/pages/faculty/jurisprudence.html:113
 #: templates/pages/faculty/jurisprudence.html:122
 msgid "See all"
-msgstr ""
+msgstr "Hammasini ko'rish"
 
 #: templates/home/index.html:124 templates/home/index.html:171
 msgid "TOP STORY"
-msgstr ""
+msgstr "ASOSIY YANGILIK"
 
 #: templates/home/index.html:129 templates/home/index.html:174
 #: templates/home/index.html:347 templates/home/index.html:404
 #: templates/pages/admissions/tuition-fees.html:78
 msgid "Find out more"
-msgstr ""
+msgstr "Batafsil"
 
 #: templates/home/index.html:172
 msgid "TIU Achieves Top Ranking in Central Asia for Academic Excellence"
-msgstr ""
+msgstr "TIU akademik mukammallik bo'yicha Markaziy Osiyoda yuqori reytingga erishdi"
 
 #: templates/home/index.html:173
 msgid ""
 "Tashkent International University has been recognized as one of the leading "
 "institutions in Central Asia for its outstanding academic programs and "
 "research contributions."
-msgstr ""
+msgstr "Toshkent Xalqaro Universiteti Markaziy Osiyodagi yetakchi ta'lim muassasalaridan biri sifatida e'tirof etildi."
 
 #: templates/home/index.html:188
 msgid ""
 "TIU launches new AI & Machine Learning research lab in partnership with KAIST"
-msgstr ""
+msgstr "TIU KAIST bilan hamkorlikda yangi sun'iy intellekt va mashina o'rganish laboratoriyasini ishga tushirdi"
 
 #: templates/home/index.html:189
 msgid ""
 "Tashkent International University has opened a state-of-the-art research "
 "laboratory dedicated to artificial intelligence and machine learning..."
-msgstr ""
+msgstr "Toshkent Xalqaro Universiteti sun'iy intellekt va mashina o'rganishga bag'ishlangan zamonaviy tadqiqot laboratoriyasini ochdi..."
 
 #: templates/home/index.html:200
 msgid ""
 "Business students win Central Asian case competition for second consecutive "
 "year"
-msgstr ""
+msgstr "Biznes talabalari ikkinchi yil ketma-ket Markaziy Osiyo keys musobaqasida g'olib bo'ldi"
 
 #: templates/home/index.html:201
 msgid ""
 "A team of four undergraduate students from the School of Business & "
 "Economics secured first place at the regional case competition..."
-msgstr ""
+msgstr "Biznes va iqtisodiyot fakultetining to'rt talabasi mintaqaviy keys musobaqasida birinchi o'rinni egalladi..."
 
 #: templates/home/index.html:212
 msgid ""
 "Cybersecurity programme receives international accreditation from EC-Council"
-msgstr ""
+msgstr "Kiberxavfsizlik dasturi EC-Council dan xalqaro akkreditatsiya oldi"
 
 #: templates/home/index.html:213
 msgid ""
 "The Faculty's cybersecurity track has been officially accredited by the EC-"
 "Council, making TIU the first university in Central Asia..."
-msgstr ""
+msgstr "Fakultetning kiberxavfsizlik yo'nalishi EC-Council tomonidan rasman akkreditatsiya qilindi, bu TIUni Markaziy Osiyodagi birinchi universitetga aylantirdi..."
 
 #: templates/home/index.html:224
 msgid ""
 "International faculty exchange program expands to 15 new partner universities"
-msgstr ""
+msgstr "Xalqaro professor-o'qituvchilar almashinuvi dasturi 15 ta yangi hamkor universitetga kengaydi"
 
 #: templates/home/index.html:225
 msgid ""
 "TIU has signed new agreements with universities across Europe and Asia, "
 "expanding opportunities for faculty and student exchanges..."
 msgstr ""
+"TIU Yevropa va Osiyo bo'ylab universitetlar bilan yangi shartnomalar imzoladi, "
+"professor-o'qituvchilar va talabalar almashinuvi imkoniyatlarini kengaytirdi..."
 
 #: templates/home/index.html:236
 msgid ""
 "TIU students showcase innovation at annual technology and entrepreneurship "
 "fair"
-msgstr ""
+msgstr "TIU talabalari yillik texnologiya va tadbirkorlik ko'rgazmasida innovatsiyalarni namoyish etdi"
 
 #: templates/home/index.html:237
 msgid ""
 "Over 50 student projects were presented at the annual fair, featuring "
 "solutions in AI, sustainability, and social impact..."
-msgstr ""
+msgstr "Yillik ko'rgazmada 50 dan ortiq talaba loyihasi taqdim etildi, sun'iy intellekt, barqaror rivojlanish va ijtimoiy ta'sir bo'yicha yechimlar..."
 
 #: templates/home/index.html:254
 msgid "Your Gateway to Global Education."
-msgstr ""
+msgstr "Global ta'limga yo'lingiz."
 
 #: templates/home/index.html:256
 msgid ""
-"Tashkent International University (TIU) is a modern private university "
-"located in Tashkent, founded in October 2023. TIU develops partnerships "
-"with prestigious foreign universities and organizations, creating broad "
-"academic opportunities for students. With international collaborations "
-"including a 2+2 dual degree program and a modern campus equipped with the "
-"latest technology, our main goal is to provide students with a solid "
-"foundation for success in their chosen profession and life path. Start your "
-"future today — join TIU."
+"TIU is a modern university in Tashkent founded in 2023, offering "
+"international partnerships, a 2+2 dual degree program, and a campus "
+"equipped with the latest technology. We build a solid foundation for your "
+"success. Start your future today — join TIU."
 msgstr ""
-"Toshkent Xalqaro Universiteti (TIU) — Toshkent shahrida joylashgan "
-"zamonaviy xususiy universitet bo'lib, 2023-yil oktyabr oyida tashkil "
-"etilgan. TIU nufuzli xorijiy universitetlar va tashkilotlar bilan "
-"hamkorlikni rivojlantirib, talabalarga keng akademik imkoniyatlar yaratadi. "
-"2+2 qo'shma diplom dasturini o'z ichiga olgan xalqaro hamkorliklar va "
-"zamonaviy texnologiyalar bilan jihozlangan kampus orqali bizning asosiy "
-"maqsadimiz — talabalarimizni tanlagan kasbi va hayot yo'lida "
-"muvaffaqiyatga erishishlari uchun mustahkam poydevor bilan ta'minlash. "
-"Kelajagingizni bugundan boshlang — TIUga qo'shiling."
+"TIU — 2023-yilda tashkil etilgan Toshkentdagi zamonaviy universitet. "
+"Xalqaro hamkorliklar, 2+2 qo'shma diplom dasturi va zamonaviy "
+"texnologiyalar bilan jihozlangan kampus. Muvaffaqiyatingiz uchun mustahkam "
+"poydevor yaratamiz. Kelajagingizni bugundan boshlang — TIUga qo'shiling."
 
 #: templates/home/index.html:260
 msgid "Schedule a Visit"
-msgstr ""
+msgstr "Tashrif rejalashtirish"
 
 #: templates/home/index.html:271
 msgid ""
@@ -449,12 +440,15 @@ msgid ""
 "internationally recognized degrees that open doors to global career "
 "opportunities. This is education without boundaries."
 msgstr ""
+"Bizning noyob qo'shma diplom dasturimiz sizga ikki dunyoning eng yaxshisini "
+"taklif etadi. Birinchi ikki yilni Toshkentdagi TIUda o'tkazing, so'ngra "
+"o'qishingizni xorijdagi nufuzli hamkor universitetlardan birida yakunlang. "
+"Xalqaro karyera imkoniyatlarini ochadigan ikkita xalqaro tan olingan diplom "
+"bilan bitiring. Bu chegarasiz ta'limdir."
 
 #: templates/home/index.html:272
-#, fuzzy
-#| msgid "Academic Programs"
 msgid "Explore Programs"
-msgstr "Akademik dasturlar"
+msgstr "Dasturlarni ko'rish"
 
 #: templates/home/index.html:281
 msgid "Five Dynamic"
@@ -468,10 +462,15 @@ msgid ""
 "offers bachelor's and master's programs taught entirely in English by "
 "international faculty."
 msgstr ""
+"To'rtta ilg'or kafedradan tanlang: kelajakdagi tadbirkorlar va iqtisodchilar "
+"uchun Biznes, ertangi o'qituvchilar va yetakchilar uchun Ta'lim, texnologiya "
+"innovatorlari uchun IT va global muloqotchilar uchun Chet tillari. Har bir "
+"kafedra xalqaro professor-o'qituvchilar tomonidan to'liq ingliz tilida "
+"o'qitiladigan bakalavr va magistratura dasturlarini taklif etadi."
 
 #: templates/home/index.html:283
 msgid "View Departments"
-msgstr ""
+msgstr "Kafedralarni ko'rish"
 
 #: templates/home/index.html:292
 msgid "Student Life"
@@ -502,11 +501,11 @@ msgstr "Talaba hayotini kashf eting"
 
 #: templates/home/index.html:313
 msgid "Explore Campus"
-msgstr ""
+msgstr "Kampusni ko'rish"
 
 #: templates/home/index.html:310
 msgid "Study in the Heart of Tashkent."
-msgstr ""
+msgstr "Toshkent markazida o'qing."
 
 #: templates/home/index.html:311
 msgid ""
@@ -527,25 +526,25 @@ msgstr ""
 
 #: templates/home/index.html:314
 msgid "Book a Visit"
-msgstr ""
+msgstr "Tashrif buyurish"
 
 #: templates/home/index.html:323 templates/news/event_detail.html:93
 #: templates/pages/faculty/business-innovative-education.html:121
 #: templates/pages/faculty/jurisprudence.html:121
 msgid "Upcoming events"
-msgstr ""
+msgstr "Kelgusi tadbirlar"
 
 #: templates/home/index.html:332 templates/home/index.html:391
 msgid "FEATURED EVENT"
-msgstr ""
+msgstr "ASOSIY TADBIR"
 
 #: templates/home/index.html:398
 msgid "CONFERENCE"
-msgstr ""
+msgstr "KONFERENSIYA"
 
 #: templates/home/index.html:402
 msgid "International Research Conference on Innovation and Technology 2026"
-msgstr ""
+msgstr "Innovatsiya va texnologiya bo'yicha xalqaro ilmiy konferensiya 2026"
 
 #: templates/home/index.html:403
 msgid ""
@@ -553,50 +552,53 @@ msgid ""
 "groundbreaking presentations, panel discussions, and networking at TIU's "
 "flagship annual research conference."
 msgstr ""
+"TIUning yillik ilmiy konferensiyasida yetakchi tadqiqotchilar, akademiklar "
+"va sanoat yetakchilari bilan inqilobiy taqdimotlar, panel muhokamalar va "
+"networking kunida ishtirok eting."
 
 #: templates/home/index.html:418
 msgid "OPEN DAY"
-msgstr ""
+msgstr "OCHIQ ESHIKLAR KUNI"
 
 #: templates/home/index.html:419
 msgid "Spring Open Day - Explore TIU Campus and Meet Faculty"
-msgstr ""
+msgstr "Bahorgi ochiq eshiklar kuni - TIU kampusini ko'ring va o'qituvchilar bilan tanishing"
 
 #: templates/home/index.html:431
 msgid "WORKSHOP"
-msgstr ""
+msgstr "SEMINAR"
 
 #: templates/home/index.html:432
 msgid "Career Skills Workshop: Resume Building and Interview Preparation"
-msgstr ""
+msgstr "Karyera ko'nikmalari seminari: Rezyume yaratish va intervyuga tayyorgarlik"
 
 #: templates/home/index.html:444
 msgid "SEMINAR"
-msgstr ""
+msgstr "SEMINAR"
 
 #: templates/home/index.html:445
 msgid "Guest Lecture: Digital Transformation in Emerging Economies"
-msgstr ""
+msgstr "Mehmon ma'ruza: Rivojlanayotgan iqtisodiyotlarda raqamli transformatsiya"
 
 #: templates/home/index.html:457
 msgid "COMPETITION"
-msgstr ""
+msgstr "MUSOBAQA"
 
 #: templates/home/index.html:458
 msgid "Annual Student of the Year Competition - Register Now"
-msgstr ""
+msgstr "Yillik Yilning eng yaxshi talabasi tanlovi - Hozir ro'yxatdan o'ting"
 
 #: templates/home/index.html:470
 msgid "CULTURAL"
-msgstr ""
+msgstr "MADANIY"
 
 #: templates/home/index.html:471
 msgid "Nawruz Cultural Festival - Celebrating Diversity at TIU"
-msgstr ""
+msgstr "Navro'z madaniy festivali - TIUda xilma-xillikni nishonlash"
 
 #: templates/home/index.html:485
 msgid "Global Partners"
-msgstr ""
+msgstr "Xalqaro hamkorlar"
 
 #: templates/includes/footer.html:5
 msgid "Tashkent International University"
@@ -670,6 +672,14 @@ msgstr "Maxfiylik siyosati"
 #: templates/includes/footer.html:49
 msgid "Terms of Use"
 msgstr "Foydalanish shartlari"
+
+#: templates/includes/footer.html
+msgid "Academics"
+msgstr "Ta'lim"
+
+#: templates/includes/footer.html
+msgid "Campus Life"
+msgstr "Kampus hayoti"
 
 #: templates/includes/mega_menu.html:4
 msgid "About"

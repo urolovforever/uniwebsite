@@ -230,10 +230,8 @@ msgid "Departments"
 msgstr "Кафедры"
 
 #: templates/home/index.html:4
-#, fuzzy
-#| msgid "Tashkent International University"
 msgid "Tashkent International University - Excellence in Education"
-msgstr "Ташкентский Международный Университет"
+msgstr "Ташкентский Международный Университет - Превосходство в образовании"
 
 #: templates/home/index.html:21
 msgid "A Place Where Knowledge and Opportunities Unite!"
@@ -326,7 +324,7 @@ msgstr "Студенты"
 
 #: templates/home/index.html:115 templates/news/news_detail.html:41
 msgid "Latest news"
-msgstr ""
+msgstr "Последние новости"
 
 #: templates/home/index.html:116 templates/home/index.html:324
 #: templates/pages/faculty/business-innovative-education.html:113
@@ -334,21 +332,21 @@ msgstr ""
 #: templates/pages/faculty/jurisprudence.html:113
 #: templates/pages/faculty/jurisprudence.html:122
 msgid "See all"
-msgstr ""
+msgstr "Смотреть все"
 
 #: templates/home/index.html:124 templates/home/index.html:171
 msgid "TOP STORY"
-msgstr ""
+msgstr "ГЛАВНАЯ НОВОСТЬ"
 
 #: templates/home/index.html:129 templates/home/index.html:174
 #: templates/home/index.html:347 templates/home/index.html:404
 #: templates/pages/admissions/tuition-fees.html:78
 msgid "Find out more"
-msgstr ""
+msgstr "Подробнее"
 
 #: templates/home/index.html:172
 msgid "TIU Achieves Top Ranking in Central Asia for Academic Excellence"
-msgstr ""
+msgstr "TIU достиг высшего рейтинга в Центральной Азии за академическое превосходство"
 
 #: templates/home/index.html:173
 msgid ""
@@ -356,92 +354,104 @@ msgid ""
 "institutions in Central Asia for its outstanding academic programs and "
 "research contributions."
 msgstr ""
+"Ташкентский Международный Университет был признан одним из ведущих учебных "
+"заведений Центральной Азии за выдающиеся академические программы и вклад в "
+"науку."
 
 #: templates/home/index.html:188
 msgid ""
 "TIU launches new AI & Machine Learning research lab in partnership with KAIST"
 msgstr ""
+"TIU запускает новую лабораторию ИИ и машинного обучения в партнёрстве с KAIST"
 
 #: templates/home/index.html:189
 msgid ""
 "Tashkent International University has opened a state-of-the-art research "
 "laboratory dedicated to artificial intelligence and machine learning..."
 msgstr ""
+"Ташкентский Международный Университет открыл современную исследовательскую "
+"лабораторию, посвящённую искусственному интеллекту и машинному обучению..."
 
 #: templates/home/index.html:200
 msgid ""
 "Business students win Central Asian case competition for second consecutive "
 "year"
 msgstr ""
+"Студенты бизнес-факультета второй год подряд побеждают на кейс-чемпионате "
+"Центральной Азии"
 
 #: templates/home/index.html:201
 msgid ""
 "A team of four undergraduate students from the School of Business & "
 "Economics secured first place at the regional case competition..."
 msgstr ""
+"Команда из четырёх студентов факультета бизнеса и экономики заняла первое "
+"место на региональном кейс-чемпионате..."
 
 #: templates/home/index.html:212
 msgid ""
 "Cybersecurity programme receives international accreditation from EC-Council"
 msgstr ""
+"Программа кибербезопасности получила международную аккредитацию EC-Council"
 
 #: templates/home/index.html:213
 msgid ""
 "The Faculty's cybersecurity track has been officially accredited by the EC-"
 "Council, making TIU the first university in Central Asia..."
 msgstr ""
+"Направление кибербезопасности факультета официально аккредитовано EC-Council, "
+"что делает TIU первым университетом в Центральной Азии..."
 
 #: templates/home/index.html:224
 msgid ""
 "International faculty exchange program expands to 15 new partner universities"
 msgstr ""
+"Программа международного обмена преподавателями расширяется до 15 новых "
+"университетов-партнёров"
 
 #: templates/home/index.html:225
 msgid ""
 "TIU has signed new agreements with universities across Europe and Asia, "
 "expanding opportunities for faculty and student exchanges..."
 msgstr ""
+"TIU подписал новые соглашения с университетами Европы и Азии, расширяя "
+"возможности для обмена преподавателями и студентами..."
 
 #: templates/home/index.html:236
 msgid ""
 "TIU students showcase innovation at annual technology and entrepreneurship "
 "fair"
 msgstr ""
+"Студенты TIU демонстрируют инновации на ежегодной ярмарке технологий и "
+"предпринимательства"
 
 #: templates/home/index.html:237
 msgid ""
 "Over 50 student projects were presented at the annual fair, featuring "
 "solutions in AI, sustainability, and social impact..."
 msgstr ""
+"На ежегодной ярмарке было представлено более 50 студенческих проектов с "
+"решениями в области ИИ, устойчивого развития и социального воздействия..."
 
 #: templates/home/index.html:254
 msgid "Your Gateway to Global Education."
-msgstr ""
+msgstr "Ваш путь к глобальному образованию."
 
 #: templates/home/index.html:256
 msgid ""
-"Tashkent International University (TIU) is a modern private university "
-"located in Tashkent, founded in October 2023. TIU develops partnerships "
-"with prestigious foreign universities and organizations, creating broad "
-"academic opportunities for students. With international collaborations "
-"including a 2+2 dual degree program and a modern campus equipped with the "
-"latest technology, our main goal is to provide students with a solid "
-"foundation for success in their chosen profession and life path. Start your "
-"future today — join TIU."
+"TIU is a modern university in Tashkent founded in 2023, offering "
+"international partnerships, a 2+2 dual degree program, and a campus "
+"equipped with the latest technology. We build a solid foundation for your "
+"success. Start your future today — join TIU."
 msgstr ""
-"Ташкентский Международный Университет (TIU) — современный частный "
-"университет, расположенный в Ташкенте, основанный в октябре 2023 года. TIU "
-"развивает партнёрство с престижными зарубежными университетами и "
-"организациями, создавая широкие академические возможности для студентов. "
-"Благодаря международному сотрудничеству, включая программу двойного диплома "
-"2+2, и современному кампусу, оснащённому новейшими технологиями, наша "
-"главная цель — обеспечить студентам прочную основу для успеха в выбранной "
-"профессии и жизненном пути. Начните своё будущее сегодня — "
-"присоединяйтесь к TIU."
+"TIU — современный университет в Ташкенте, основанный в 2023 году. "
+"Международное сотрудничество, программа двойного диплома 2+2 и кампус, "
+"оснащённый новейшими технологиями. Мы создаём прочную основу для вашего "
+"успеха. Начните своё будущее сегодня — присоединяйтесь к TIU."
 
 #: templates/home/index.html:260
 msgid "Schedule a Visit"
-msgstr ""
+msgstr "Запланировать визит"
 
 #: templates/home/index.html:271
 msgid ""
@@ -451,12 +461,15 @@ msgid ""
 "internationally recognized degrees that open doors to global career "
 "opportunities. This is education without boundaries."
 msgstr ""
+"Наша уникальная программа двойного диплома предлагает вам лучшее из двух "
+"миров. Проведите первые два года в TIU в Ташкенте, затем завершите обучение "
+"в одном из наших престижных университетов-партнёров за рубежом. Получите два "
+"международно признанных диплома, открывающих двери к глобальным карьерным "
+"возможностям. Это образование без границ."
 
 #: templates/home/index.html:272
-#, fuzzy
-#| msgid "Academic Programs"
 msgid "Explore Programs"
-msgstr "Учебные программы"
+msgstr "Обзор программ"
 
 #: templates/home/index.html:281
 msgid "Five Dynamic"
@@ -470,10 +483,16 @@ msgid ""
 "offers bachelor's and master's programs taught entirely in English by "
 "international faculty."
 msgstr ""
+"Выбирайте из четырёх передовых факультетов: Бизнес для будущих "
+"предпринимателей и экономистов, Образование для учителей и лидеров "
+"завтрашнего дня, IT для технологических инноваторов и Иностранные языки для "
+"глобальных коммуникаторов. Каждый факультет предлагает программы бакалавриата "
+"и магистратуры, полностью преподаваемые на английском языке международными "
+"преподавателями."
 
 #: templates/home/index.html:283
 msgid "View Departments"
-msgstr ""
+msgstr "Просмотр кафедр"
 
 #: templates/home/index.html:292
 msgid "Student Life"
@@ -504,11 +523,11 @@ msgstr "Узнайте о студенческой жизни"
 
 #: templates/home/index.html:313
 msgid "Explore Campus"
-msgstr ""
+msgstr "Обзор кампуса"
 
 #: templates/home/index.html:310
 msgid "Study in the Heart of Tashkent."
-msgstr ""
+msgstr "Учитесь в сердце Ташкента."
 
 #: templates/home/index.html:311
 msgid ""
@@ -529,25 +548,25 @@ msgstr ""
 
 #: templates/home/index.html:314
 msgid "Book a Visit"
-msgstr ""
+msgstr "Записаться на визит"
 
 #: templates/home/index.html:323 templates/news/event_detail.html:93
 #: templates/pages/faculty/business-innovative-education.html:121
 #: templates/pages/faculty/jurisprudence.html:121
 msgid "Upcoming events"
-msgstr ""
+msgstr "Предстоящие события"
 
 #: templates/home/index.html:332 templates/home/index.html:391
 msgid "FEATURED EVENT"
-msgstr ""
+msgstr "ГЛАВНОЕ СОБЫТИЕ"
 
 #: templates/home/index.html:398
 msgid "CONFERENCE"
-msgstr ""
+msgstr "КОНФЕРЕНЦИЯ"
 
 #: templates/home/index.html:402
 msgid "International Research Conference on Innovation and Technology 2026"
-msgstr ""
+msgstr "Международная научная конференция по инновациям и технологиям 2026"
 
 #: templates/home/index.html:403
 msgid ""
@@ -555,50 +574,53 @@ msgid ""
 "groundbreaking presentations, panel discussions, and networking at TIU's "
 "flagship annual research conference."
 msgstr ""
+"Присоединяйтесь к ведущим исследователям, учёным и лидерам отрасли на "
+"революционных презентациях, панельных дискуссиях и нетворкинге на ежегодной "
+"научной конференции TIU."
 
 #: templates/home/index.html:418
 msgid "OPEN DAY"
-msgstr ""
+msgstr "ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ"
 
 #: templates/home/index.html:419
 msgid "Spring Open Day - Explore TIU Campus and Meet Faculty"
-msgstr ""
+msgstr "Весенний день открытых дверей - Познакомьтесь с кампусом TIU и преподавателями"
 
 #: templates/home/index.html:431
 msgid "WORKSHOP"
-msgstr ""
+msgstr "СЕМИНАР"
 
 #: templates/home/index.html:432
 msgid "Career Skills Workshop: Resume Building and Interview Preparation"
-msgstr ""
+msgstr "Семинар по карьерным навыкам: составление резюме и подготовка к собеседованию"
 
 #: templates/home/index.html:444
 msgid "SEMINAR"
-msgstr ""
+msgstr "СЕМИНАР"
 
 #: templates/home/index.html:445
 msgid "Guest Lecture: Digital Transformation in Emerging Economies"
-msgstr ""
+msgstr "Гостевая лекция: Цифровая трансформация в развивающихся экономиках"
 
 #: templates/home/index.html:457
 msgid "COMPETITION"
-msgstr ""
+msgstr "КОНКУРС"
 
 #: templates/home/index.html:458
 msgid "Annual Student of the Year Competition - Register Now"
-msgstr ""
+msgstr "Ежегодный конкурс «Студент года» - Зарегистрируйтесь сейчас"
 
 #: templates/home/index.html:470
 msgid "CULTURAL"
-msgstr ""
+msgstr "КУЛЬТУРНОЕ"
 
 #: templates/home/index.html:471
 msgid "Nawruz Cultural Festival - Celebrating Diversity at TIU"
-msgstr ""
+msgstr "Культурный фестиваль Навруз - Празднование многообразия в TIU"
 
 #: templates/home/index.html:485
 msgid "Global Partners"
-msgstr ""
+msgstr "Международные партнёры"
 
 #: templates/includes/footer.html:5
 msgid "Tashkent International University"
@@ -672,6 +694,14 @@ msgstr "Политика конфиденциальности"
 #: templates/includes/footer.html:49
 msgid "Terms of Use"
 msgstr "Условия использования"
+
+#: templates/includes/footer.html
+msgid "Academics"
+msgstr "Образование"
+
+#: templates/includes/footer.html
+msgid "Campus Life"
+msgstr "Жизнь в кампусе"
 
 #: templates/includes/mega_menu.html:4
 msgid "About"
