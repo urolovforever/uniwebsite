@@ -467,8 +467,10 @@ ul { list-style: none; }
 .pathway-header h2 { font-size: 3rem; color: #003366; font-weight: 400; letter-spacing: -0.5px; }
 .pathway-header h2 strong { font-weight: 800; }
 .pathway-underline { width: 60px; height: 4px; background: #00bcd4; margin: 1.5rem auto 0; }
-.pathway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; max-width: 1300px; margin: 0 auto; align-items: stretch; }
-.pathway-card { background: #fff; display: flex; flex-direction: column; height: 100%; transition: all 0.3s ease; border: 1px solid transparent; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden; }
+.pathway-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; max-width: 1300px; margin: 0 auto; align-items: start; }
+.pathway-featured { position: sticky; top: 100px; align-self: start; }
+.pathway-list { display: flex; flex-direction: column; gap: 2.5rem; }
+.pathway-card { background: #fff; display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid transparent; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden; border-radius: 12px; }
 .pathway-card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); border-color: var(--primary-blue); }
 .pathway-image { width: 100%; height: 240px; overflow: hidden; flex-shrink: 0; }
 .pathway-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
@@ -1151,8 +1153,9 @@ textarea:focus-visible,
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .stat-number { font-size: 2.5rem; }
 
-    /* Pathway / Programs — go to 1col at 1024px (3 cards orphan badly in 2col) */
+    /* Pathway / Programs — stack on tablet */
     .pathway-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+    .pathway-featured { position: static; }
     .pathway-header h2 { font-size: 2.5rem; }
     .programs-pathway { padding: 4rem 0; }
 

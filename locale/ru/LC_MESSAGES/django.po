@@ -236,12 +236,8 @@ msgid "Tashkent International University - Excellence in Education"
 msgstr "Ташкентский Международный Университет"
 
 #: templates/home/index.html:21
-msgid "Let's Get"
-msgstr ""
-
-#: templates/home/index.html:21
-msgid "Started"
-msgstr ""
+msgid "A Place Where Knowledge and Opportunities Unite!"
+msgstr "Место, где объединяются знания и возможности!"
 
 #: templates/home/index.html:28 templates/includes/mega_menu.html:64
 msgid "Bachelor Programs"
@@ -249,32 +245,31 @@ msgstr "Бакалавриат"
 
 #: templates/home/index.html:31
 msgid "BACHELOR'S PROGRAMS"
-msgstr ""
+msgstr "ПРОГРАММА БАКАЛАВРИАТА"
 
 #: templates/home/index.html:33
 msgid "Business & Economics"
-msgstr ""
+msgstr "Бизнес и экономика"
 
 #: templates/home/index.html:34
 msgid "Information Technology"
-msgstr ""
+msgstr "Информационные технологии"
 
 #: templates/home/index.html:35
 msgid "Education & Pedagogy"
-msgstr ""
+msgstr "Образование и педагогика"
 
 #: templates/home/index.html:36
-msgid "Foreign Languages"
-msgstr ""
+msgid "Foreign Languages & Literature"
+msgstr "Иностранные языки и литература"
 
 #: templates/home/index.html:37
-#, python-format
-msgid "100%% English medium instruction"
-msgstr ""
+msgid "Jurisprudence"
+msgstr "Юриспруденция"
 
 #: templates/home/index.html:40
 msgid "Explore Bachelor's Degrees"
-msgstr ""
+msgstr "Подробнее"
 
 #: templates/home/index.html:41 templates/home/index.html:61
 #: templates/home/index.html:81 templates/home/index.html:259
@@ -283,7 +278,7 @@ msgstr ""
 #: templates/pages/programs/by-faculty.html:99
 #: templates/pages/programs/by-level.html:134
 msgid "Apply Now"
-msgstr ""
+msgstr "Регистрация"
 
 #: templates/home/index.html:48 templates/includes/mega_menu.html:65
 msgid "Master Programs"
@@ -291,73 +286,43 @@ msgstr "Магистратура"
 
 #: templates/home/index.html:51
 msgid "MASTER'S PROGRAMS"
-msgstr ""
+msgstr "ПРОГРАММА МАГИСТРАТУРЫ"
 
 #: templates/home/index.html:53
-msgid "Advanced specializations"
-msgstr ""
+msgid "Public Finance & International Finance"
+msgstr "Государственные финансы и международные финансы"
 
 #: templates/home/index.html:54
-#, fuzzy
-#| msgid "International"
-msgid "International faculty"
-msgstr "Международный"
-
-#: templates/home/index.html:55
-msgid "Research opportunities"
-msgstr ""
-
-#: templates/home/index.html:56
-msgid "Industry connections"
-msgstr ""
-
-#: templates/home/index.html:57
-msgid "Flexible study options"
-msgstr ""
+msgid "Economics"
+msgstr "Экономика"
 
 #: templates/home/index.html:60
 msgid "Explore Master's Degrees"
-msgstr ""
+msgstr "Подробнее"
 
 #: templates/home/index.html:71
-msgid "PhD PROGRAMMES"
-msgstr ""
+msgid "PhD & DCs PROGRAMS"
+msgstr "ПРОГРАММЫ PhD И DCs"
 
 #: templates/home/index.html:73
-msgid "3-4 years full-time research"
-msgstr ""
-
-#: templates/home/index.html:74
-msgid "Expert faculty supervision"
-msgstr ""
-
-#: templates/home/index.html:75
-msgid "International conference funding"
-msgstr ""
-
-#: templates/home/index.html:76
-msgid "Publication opportunities"
-msgstr ""
-
-#: templates/home/index.html:77
-msgid "Teaching experience"
-msgstr ""
+msgid "Management"
+msgstr "Менеджмент"
 
 #: templates/home/index.html:80
 msgid "Explore PhD Programmes"
-msgstr ""
+msgstr "Подробнее"
 
 #: templates/home/index.html:98 templates/home/index.html:270
 msgid "Dual Degree Program"
-msgstr ""
+msgstr "Программа двойного диплома"
 
 #: templates/home/index.html:102 templates/includes/mega_menu.html:136
 msgid "Partner Universities"
 msgstr "Университеты-партнёры"
 
 #: templates/home/index.html:106
-msgid "English Medium"
-msgstr ""
+msgid "Students"
+msgstr "Студенты"
 
 #: templates/home/index.html:115 templates/news/news_detail.html:41
 msgid "Latest news"
@@ -455,12 +420,24 @@ msgstr ""
 
 #: templates/home/index.html:256
 msgid ""
-"Founded in 2023, Tashkent International University offers a unique 2+2 dual "
-"degree program with prestigious partner universities worldwide. Study in "
-"English across four dynamic departments — Business, Education, IT, and "
-"Foreign Languages — and graduate with two internationally recognized "
-"degrees. At TIU, we prepare future leaders for success in the global economy."
+"Tashkent International University (TIU) is a modern private university "
+"located in Tashkent, founded in October 2023. TIU develops partnerships "
+"with prestigious foreign universities and organizations, creating broad "
+"academic opportunities for students. With international collaborations "
+"including a 2+2 dual degree program and a modern campus equipped with the "
+"latest technology, our main goal is to provide students with a solid "
+"foundation for success in their chosen profession and life path. Start your "
+"future today — join TIU."
 msgstr ""
+"Ташкентский Международный Университет (TIU) — современный частный "
+"университет, расположенный в Ташкенте, основанный в октябре 2023 года. TIU "
+"развивает партнёрство с престижными зарубежными университетами и "
+"организациями, создавая широкие академические возможности для студентов. "
+"Благодаря международному сотрудничеству, включая программу двойного диплома "
+"2+2, и современному кампусу, оснащённому новейшими технологиями, наша "
+"главная цель — обеспечить студентам прочную основу для успеха в выбранной "
+"профессии и жизненном пути. Начните своё будущее сегодня — "
+"присоединяйтесь к TIU."
 
 #: templates/home/index.html:260
 msgid "Schedule a Visit"
@@ -482,8 +459,8 @@ msgid "Explore Programs"
 msgstr "Учебные программы"
 
 #: templates/home/index.html:281
-msgid "Four Dynamic"
-msgstr ""
+msgid "Five Dynamic"
+msgstr "Пять динамичных"
 
 #: templates/home/index.html:282
 msgid ""
@@ -499,23 +476,33 @@ msgid "View Departments"
 msgstr ""
 
 #: templates/home/index.html:292
-msgid "Modern"
-msgstr ""
+msgid "Student Life"
+msgstr "Студенческая жизнь"
 
 #: templates/home/index.html:292
-msgid "Campus Life"
-msgstr ""
+msgid "& Culture"
+msgstr "и культура"
 
 #: templates/home/index.html:293
 msgid ""
-"Located on Little Ring Road in the heart of Tashkent, our modern campus "
-"provides everything you need for academic success and personal growth. State-"
-"of-the-art classrooms, wellness facilities, student clubs, and a vibrant "
-"community await you. At TIU, you'll find the perfect environment to learn, "
-"connect, and thrive."
+"At TIU, education goes beyond the classroom. Join 50+ student clubs, "
+"participate in sports tournaments, cultural festivals, and hackathons. Our "
+"students organize TEDx events, volunteer projects, and international "
+"exchange programs. TIU is not just a university — it's a community where "
+"you grow as a leader and build lifelong friendships."
 msgstr ""
+"В TIU образование выходит за рамки аудитории. Присоединяйтесь к 50+ "
+"студенческим клубам, участвуйте в спортивных турнирах, культурных "
+"фестивалях и хакатонах. Наши студенты организуют мероприятия TEDx, "
+"волонтёрские проекты и международные программы обмена. TIU — это не просто "
+"университет, это сообщество, где вы растёте как лидер и строите дружбу "
+"на всю жизнь."
 
-#: templates/home/index.html:294 templates/home/index.html:313
+#: templates/home/index.html:294
+msgid "Discover Student Life"
+msgstr "Узнайте о студенческой жизни"
+
+#: templates/home/index.html:313
 msgid "Explore Campus"
 msgstr ""
 
@@ -525,12 +512,20 @@ msgstr ""
 
 #: templates/home/index.html:311
 msgid ""
-"Our campus on Little Ring Road 7 puts you at the center of Uzbekistan's "
-"capital city. Experience a modern learning environment with state-of-the-art "
-"facilities, dedicated wellness resources, and a supportive community. Join "
-"student organizations, compete in the annual Student of the Year "
-"competition, and build connections that last a lifetime."
+"Our campus at Little Ring Road 7 is located in the very center of Tashkent "
+"— just minutes from Amir Temur Square, the National Library, and major "
+"metro stations. Modern lecture halls, coworking spaces, a well-equipped "
+"library, and comfortable rest areas create the perfect environment for "
+"productive learning. Cafes, parks, and cultural landmarks surround the "
+"campus, making student life convenient and inspiring."
 msgstr ""
+"Наш кампус на Малой кольцевой дороге 7 расположен в самом центре "
+"Ташкента — в нескольких минутах от площади Амира Темура, Национальной "
+"библиотеки и крупных станций метро. Современные лекционные залы, "
+"коворкинг-пространства, хорошо оснащённая библиотека и комфортные зоны "
+"отдыха создают идеальную среду для продуктивного обучения. Кафе, парки и "
+"культурные достопримечательности вокруг кампуса делают студенческую жизнь "
+"удобной и вдохновляющей."
 
 #: templates/home/index.html:314
 msgid "Book a Visit"
@@ -944,11 +939,11 @@ msgstr "Наука"
 
 #: templates/includes/mega_menu.html:192
 msgid "Publications"
-msgstr ""
+msgstr "Публикации"
 
 #: templates/includes/mega_menu.html:193
 msgid "Conferences"
-msgstr ""
+msgstr "Конференции"
 
 #: templates/includes/mega_menu.html:194
 #, fuzzy

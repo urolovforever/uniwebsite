@@ -18,67 +18,66 @@
     <section class="programs-pathway">
         <div class="container">
             <div class="pathway-header">
-                <h2>{% trans "Let's Get" %} <strong>{% trans "Started" %}</strong></h2>
+                <h2>{% trans "A Place Where Knowledge and Opportunities Unite!" %}</h2>
                 <div class="pathway-underline"></div>
             </div>
 
             <div class="pathway-grid">
-                <div class="pathway-card">
-                    <div class="pathway-image">
-                        <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Bachelor Programs" %}" loading="lazy">
-                    </div>
-                    <div class="pathway-content">
-                        <h3>{% trans "BACHELOR'S PROGRAMS" %}</h3>
-                        <ul>
-                            <li>{% trans "Business & Economics" %}</li>
-                            <li>{% trans "Information Technology" %}</li>
-                            <li>{% trans "Education & Pedagogy" %}</li>
-                            <li>{% trans "Foreign Languages" %}</li>
-                            <li>{% trans "100% English medium instruction" %}</li>
-                        </ul>
-                        <div class="pathway-buttons">
-                            <a href="{% url 'programs:bachelor_list' %}" class="btn-pathway-primary">{% trans "Explore Bachelor's Degrees" %}</a>
-                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                <div class="pathway-featured">
+                    <div class="pathway-card">
+                        <div class="pathway-image">
+                            <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Bachelor Programs" %}" loading="lazy">
+                        </div>
+                        <div class="pathway-content">
+                            <h3>{% trans "BACHELOR'S PROGRAMS" %}</h3>
+                            <ul>
+                                <li>{% trans "Business & Economics" %}</li>
+                                <li>{% trans "Information Technology" %}</li>
+                                <li>{% trans "Education & Pedagogy" %}</li>
+                                <li>{% trans "Foreign Languages & Literature" %}</li>
+                                <li>{% trans "Jurisprudence" %}</li>
+                            </ul>
+                            <div class="pathway-buttons">
+                                <a href="{% url 'programs:bachelor_list' %}" class="btn-pathway-primary">{% trans "Explore Bachelor's Degrees" %}</a>
+                                <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="pathway-card">
-                    <div class="pathway-image">
-                        <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
-                    </div>
-                    <div class="pathway-content">
-                        <h3>{% trans "MASTER'S PROGRAMS" %}</h3>
-                        <ul>
-                            <li>{% trans "Advanced specializations" %}</li>
-                            <li>{% trans "International faculty" %}</li>
-                            <li>{% trans "Research opportunities" %}</li>
-                            <li>{% trans "Industry connections" %}</li>
-                            <li>{% trans "Flexible study options" %}</li>
-                        </ul>
-                        <div class="pathway-buttons">
-                            <a href="{% url 'programs:master_list' %}" class="btn-pathway-primary">{% trans "Explore Master's Degrees" %}</a>
-                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                <div class="pathway-list">
+                    <div class="pathway-card">
+                        <div class="pathway-image">
+                            <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
+                        </div>
+                        <div class="pathway-content">
+                            <h3>{% trans "MASTER'S PROGRAMS" %}</h3>
+                            <ul>
+                                <li>{% trans "Public Finance & International Finance" %}</li>
+                                <li>{% trans "Economics" %}</li>
+                            </ul>
+                            <div class="pathway-buttons">
+                                <a href="{% url 'programs:master_list' %}" class="btn-pathway-primary">{% trans "Explore Master's Degrees" %}</a>
+                                <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="pathway-card">
-                    <div class="pathway-image">
-                        <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
-                    </div>
-                    <div class="pathway-content">
-                        <h3>{% trans "PhD PROGRAMMES" %}</h3>
-                        <ul>
-                            <li>{% trans "3-4 years full-time research" %}</li>
-                            <li>{% trans "Expert faculty supervision" %}</li>
-                            <li>{% trans "International conference funding" %}</li>
-                            <li>{% trans "Publication opportunities" %}</li>
-                            <li>{% trans "Teaching experience" %}</li>
-                        </ul>
-                        <div class="pathway-buttons">
-                            <a href="{% url 'programs:phd_list' %}" class="btn-pathway-primary">{% trans "Explore PhD Programmes" %}</a>
-                            <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                    <div class="pathway-card">
+                        <div class="pathway-image">
+                            <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
+                        </div>
+                        <div class="pathway-content">
+                            <h3>{% trans "PhD & DCs PROGRAMS" %}</h3>
+                            <ul>
+                                <li>{% trans "Public Finance & International Finance" %}</li>
+                                <li>{% trans "Economics" %}</li>
+                                <li>{% trans "Management" %}</li>
+                            </ul>
+                            <div class="pathway-buttons">
+                                <a href="{% url 'programs:phd_list' %}" class="btn-pathway-primary">{% trans "Explore PhD Programmes" %}</a>
+                                <a href="https://urolovforever.github.io/landingpage/" class="btn-pathway-secondary">{% trans "Apply Now" %}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +89,7 @@
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">4</div>
+                <div class="stat-number">5</div>
                 <div class="stat-label">{% trans "Departments" %}</div>
             </div>
             <div class="stat-item">
@@ -102,8 +101,8 @@
                 <div class="stat-label">{% trans "Partner Universities" %}</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">{% trans "English Medium" %}</div>
+                <div class="stat-number">10000+</div>
+                <div class="stat-label">{% trans "Students" %}</div>
             </div>
         </div>
     </section>
@@ -253,7 +252,7 @@
             <div class="welcome-accent"></div>
             <h2>{% trans "Your Gateway to Global Education." %}</h2>
             <p>
-                {% trans "Founded in 2023, Tashkent International University offers a unique 2+2 dual degree program with prestigious partner universities worldwide. Study in English across four dynamic departments — Business, Education, IT, and Foreign Languages — and graduate with two internationally recognized degrees. At TIU, we prepare future leaders for success in the global economy." %}
+                {% trans "Tashkent International University (TIU) is a modern private university located in Tashkent, founded in October 2023. TIU develops partnerships with prestigious foreign universities and organizations, creating broad academic opportunities for students. With international collaborations including a 2+2 dual degree program and a modern campus equipped with the latest technology, our main goal is to provide students with a solid foundation for success in their chosen profession and life path. Start your future today — join TIU." %}
             </p>
             <div class="welcome-buttons">
                 <a href="https://urolovforever.github.io/landingpage/" class="btn-welcome">{% trans "Apply Now" %}</a>
@@ -278,7 +277,7 @@
 
             <div class="experience-block reverse">
                 <div class="experience-text">
-                    <h2>{% trans "Four Dynamic" %} <strong>{% trans "Departments" %}</strong></h2>
+                    <h2>{% trans "Five Dynamic" %} <strong>{% trans "Departments" %}</strong></h2>
                     <p>{% trans "Choose from four cutting-edge departments: Business for future entrepreneurs and economists, Education for tomorrow's teachers and leaders, IT for tech innovators, and Foreign Languages for global communicators. Each department offers bachelor's and master's programs taught entirely in English by international faculty." %}</p>
                     <a href="{% url 'programs:program_list' %}" class="btn-experience">{% trans "View Departments" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -289,9 +288,9 @@
 
             <div class="experience-block">
                 <div class="experience-text">
-                    <h2>{% trans "Modern" %} <strong>{% trans "Campus Life" %}</strong></h2>
-                    <p>{% trans "Located on Little Ring Road in the heart of Tashkent, our modern campus provides everything you need for academic success and personal growth. State-of-the-art classrooms, wellness facilities, student clubs, and a vibrant community await you. At TIU, you'll find the perfect environment to learn, connect, and thrive." %}</p>
-                    <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-experience">{% trans "Explore Campus" %} <i class="fas fa-arrow-right"></i></a>
+                    <h2>{% trans "Student Life" %} <strong>{% trans "& Culture" %}</strong></h2>
+                    <p>{% trans "At TIU, education goes beyond the classroom. Join 50+ student clubs, participate in sports tournaments, cultural festivals, and hackathons. Our students organize TEDx events, volunteer projects, and international exchange programs. TIU is not just a university — it's a community where you grow as a leader and build lifelong friendships." %}</p>
+                    <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-experience">{% trans "Discover Student Life" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="experience-image">
                     <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU Campus" loading="lazy">
@@ -308,7 +307,7 @@
         <div class="welcome-content">
             <div class="welcome-accent"></div>
             <h2>{% trans "Study in the Heart of Tashkent." %}</h2>
-            <p>{% trans "Our campus on Little Ring Road 7 puts you at the center of Uzbekistan's capital city. Experience a modern learning environment with state-of-the-art facilities, dedicated wellness resources, and a supportive community. Join student organizations, compete in the annual Student of the Year competition, and build connections that last a lifetime." %}</p>
+            <p>{% trans "Our campus at Little Ring Road 7 is located in the very center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. Modern lecture halls, coworking spaces, a well-equipped library, and comfortable rest areas create the perfect environment for productive learning. Cafes, parks, and cultural landmarks surround the campus, making student life convenient and inspiring." %}</p>
             <div class="welcome-buttons">
                 <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
                 <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
