@@ -876,10 +876,6 @@ msgstr "Almashinuv imkoniyatlari"
 msgid "Study Abroad"
 msgstr "Chet elda o'qish"
 
-#: templates/includes/mega_menu.html:148
-msgid "Students"
-msgstr "Talabalar"
-
 #: templates/includes/mega_menu.html:153
 #: templates/pages/careers/hiring.html:139
 msgid "Academic"
@@ -2491,10 +2487,6 @@ msgstr ""
 
 #: templates/pages/faculty/business-innovative-education.html:23
 msgid "Business and Innovative Education"
-msgstr ""
-
-#: templates/pages/faculty/jurisprudence.html:23
-msgid "Jurisprudence"
 msgstr ""
 
 #: templates/pages/programs/by-faculty.html:9
