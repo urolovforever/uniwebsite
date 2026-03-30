@@ -44,7 +44,7 @@ urlpatterns += i18n_patterns(
     path('faculty/', include('apps.people.urls')),
     # Homepage + static page catch-all — must be last
     path('', include('apps.core.urls')),
-    prefix_default_language=True,
+    prefix_default_language=False,
 )
 
 if settings.DEBUG:

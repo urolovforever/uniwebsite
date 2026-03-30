@@ -47,46 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         applyFilters();
     }
 
-    // Legacy department filter buttons
-    var deptFilters = document.querySelectorAll('.dept-filter');
-    deptFilters.forEach(function(filter) {
-        filter.addEventListener('click', function() {
-            var dept = this.dataset.department;
-            filterByDepartment(dept);
-            deptFilters.forEach(function(f) { f.classList.remove('active'); });
-            this.classList.add('active');
-        });
-    });
-
-    // Faculty profile modal
-    var profileButtons = document.querySelectorAll('.view-profile-btn');
-    profileButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var facultyId = this.dataset.facultyId;
-            openFacultyProfile(facultyId);
-        });
-    });
-
-    // Research interests filter
-    var researchFilters = document.querySelectorAll('.research-filter');
-    researchFilters.forEach(function(filter) {
-        filter.addEventListener('click', function() {
-            var topic = this.dataset.topic;
-            filterByResearchTopic(topic);
-        });
-    });
-
-    // Sort faculty
-    var sortSelect = document.getElementById('faculty-sort');
-    if (sortSelect) {
-        sortSelect.addEventListener('change', function() {
-            sortFaculty(this.value);
-        });
-    }
-
     // Animate cards (uses shared animateCards from main.js)
     if (typeof animateCards === 'function') {
-        animateCards('.faculty-card, .faculty-member-card, .department-card, .faculty-profile-item');
+        animateCards('.faculty-card, .department-card, .faculty-profile-item');
     }
 });
 
@@ -228,72 +191,8 @@ function resetAllFilters() {
     applyFilters();
 }
 
-function filterFaculty(query) {
-    var cards = document.querySelectorAll('.faculty-member-card');
-    cards.forEach(function(card) {
-        var name = card.querySelector('.faculty-name').textContent.toLowerCase();
-        var dept = card.querySelector('.faculty-department').textContent.toLowerCase();
-        var specializations = card.querySelector('.faculty-specialization');
-        var specText = specializations ? specializations.textContent.toLowerCase() : '';
-
-        if (name.includes(query) || dept.includes(query) || specText.includes(query)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-function filterByDepartment(dept) {
-    var cards = document.querySelectorAll('.faculty-member-card');
-    cards.forEach(function(card) {
-        if (dept === 'all' || card.dataset.department === dept) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-function filterByResearchTopic(topic) {
-    var cards = document.querySelectorAll('.faculty-member-card');
-    cards.forEach(function(card) {
-        var research = card.dataset.research || '';
-        if (topic === 'all' || research.includes(topic)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-function sortFaculty(sortBy) {
-    var container = document.querySelector('.faculty-directory');
-    if (!container) return;
-
-    var cards = Array.from(document.querySelectorAll('.faculty-member-card'));
-
-    cards.sort(function(a, b) {
-        if (sortBy === 'name') {
-            var nameA = a.querySelector('.faculty-name').textContent;
-            var nameB = b.querySelector('.faculty-name').textContent;
-            return nameA.localeCompare(nameB);
-        } else if (sortBy === 'department') {
-            var deptA = a.dataset.department || '';
-            var deptB = b.dataset.department || '';
-            return deptA.localeCompare(deptB);
-        }
-        return 0;
-    });
-
-    cards.forEach(function(card) { container.appendChild(card); });
-}
-
 // Export functions
 window.FacultyModule = {
-    filterFaculty: filterFaculty,
-    filterByDepartment: filterByDepartment,
-    sortFaculty: sortFaculty,
     applyFilters: applyFilters,
     resetAllFilters: resetAllFilters
 };

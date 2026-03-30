@@ -152,22 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ================================================
     // Counter Animation for Stats
     // ================================================
-    function animateCounter(element, target, duration = 2000) {
-        const start = 0;
-        const increment = target / (duration / 16); // 60fps
-        let current = start;
-
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current).toLocaleString();
-            }
-        }, 16);
-    }
-
     const statsObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -336,25 +320,6 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => imageObserver.observe(img));
 
 });
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150; // Element qachon ko'rinishni boshlashi
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-
-// Sahifa yuklanganda ham bir marta tekshirib olish uchun:
-reveal();
 
 // ================================================
 // Shared Utilities (used by section-specific JS)

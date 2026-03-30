@@ -19,7 +19,7 @@ jobs:
             git checkout -- .
             git pull origin main
             docker compose build web
-            docker compose up -d web
+            docker compose up -d --force-recreate web
             docker compose exec -T web python manage.py migrate --noinput
             docker compose exec -T web python manage.py collectstatic --noinput
             docker compose exec -T web python manage.py compilemessages

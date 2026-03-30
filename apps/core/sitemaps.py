@@ -16,9 +16,8 @@ class StaticPagesSitemap(Sitemap):
         'about/overview', 'about/mission-vision', 'about/leadership',
         'about/why-tiu', 'about/sustainability', 'about/campus-map',
         # Admissions
-        'admissions/how-to-apply', 'admissions/requirements',
-        'admissions/tuition-fees', 'admissions/scholarships',
-        'admissions/apply-now', 'admissions/apply-bachelor',
+        'admissions/requirements', 'admissions/tuition-fees',
+        'admissions/scholarships', 'admissions/apply-bachelor',
         'admissions/apply-master', 'admissions/apply-international',
         'admissions/faqs',
         # Programs
@@ -26,14 +25,10 @@ class StaticPagesSitemap(Sitemap):
         'programs/international-programs', 'programs/joint-degrees',
         'programs/exchange-programs', 'programs/dual-diploma',
         # Current Students
-        'current-students/academic-life', 'current-students/timetable',
-        'current-students/exams-results', 'current-students/library',
-        'current-students/lms', 'current-students/housing',
+        'current-students/library', 'current-students/housing',
         'current-students/cafeteria', 'current-students/sports',
         'current-students/clubs', 'current-students/student-union',
-        'current-students/campus-services', 'current-students/it-services',
-        'current-students/registration', 'current-students/calendar',
-        'current-students/student-life',
+        'current-students/it-services', 'current-students/registration',
         # International
         'international/why-study-tiu', 'international/admission-process',
         'international/visa-immigration', 'international/accommodation',
@@ -47,7 +42,7 @@ class StaticPagesSitemap(Sitemap):
         # Contact
         'contact/contact-info', 'contact/rector-reception', 'contact/support',
         # Faculty
-        'faculty/departments', 'faculty/directory', 'faculty/profiles',
+        'faculty/departments', 'faculty/directory',
         # Legal
         'privacy-policy', 'terms-of-use',
     ]
