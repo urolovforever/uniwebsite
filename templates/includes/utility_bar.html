@@ -23,7 +23,7 @@
                         <form action="{% url 'set_language' %}" method="post" style="display:inline;">
                             {% csrf_token %}
                             <input type="hidden" name="language" value="{{ lang_code }}">
-                            <input type="hidden" name="next" value="{{ request.path }}">
+                            <input type="hidden" name="next" value="{{ path_no_lang }}">
                             <button type="submit" class="lang-item">{{ lang_code|upper }}</button>
                         </form>
                         {% endif %}

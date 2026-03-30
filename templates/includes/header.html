@@ -18,7 +18,7 @@
                 <form action="{% url 'set_language' %}" method="post" style="display:inline;">
                     {% csrf_token %}
                     <input type="hidden" name="language" value="{{ lang_code }}">
-                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <input type="hidden" name="next" value="{{ path_no_lang }}">
                     <button type="submit" class="mobile-lang-btn{% if lang_code == current_lang %} active{% endif %}">{{ lang_code|upper }}</button>
                 </form>
                 {% endfor %}
@@ -38,18 +38,34 @@
     </div>
 </header>
 
-<!-- Search Overlay -->
-<div class="search-overlay" id="searchOverlay">
-    <div class="search-overlay-inner">
-        <div class="search-overlay-header">
-            <div class="search-input-wrap">
-                <i class="fas fa-search search-input-icon"></i>
-                <input type="text" id="searchInput" class="search-overlay-input" placeholder="{% trans 'Search programs, news, events...' %}" autocomplete="off">
-                <button class="search-close-btn" id="searchClose" aria-label="{% trans 'Close search' %}">
-                    <i class="fas fa-times"></i>
-                </button>
+<!-- Search Panel (Hull-style) -->
+<div class="search-backdrop" id="searchBackdrop"></div>
+<div class="search-panel" id="searchPanel">
+    <div class="search-panel-inner">
+        <div class="search-panel-left">
+            <h2 class="search-panel-title">{% trans "Search" %}</h2>
+            <div class="search-tabs">
+                <button class="search-tab active" data-type="all">{% trans "ALL" %}</button>
+                <button class="search-tab" data-type="program">{% trans "PROGRAMS" %}</button>
+                <button class="search-tab" data-type="news">{% trans "NEWS" %}</button>
+                <button class="search-tab" data-type="event">{% trans "EVENTS" %}</button>
+            </div>
+            <div class="search-field">
+                <i class="fas fa-search search-field-icon"></i>
+                <input type="text" id="searchInput" class="search-field-input" placeholder="{% trans 'Site search' %}" autocomplete="off">
+            </div>
+            <div class="search-quick-links">
+                <h3 class="search-quick-title">{% trans "FREQUENTLY SEARCHED" %}</h3>
+                <div class="search-quick-grid">
+                    <a href="{% url 'programs:bachelor_list' %}" class="search-quick-link">{% trans "Bachelor Programs" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'programs:master_list' %}" class="search-quick-link">{% trans "Master Programs" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'core:scholarships' %}" class="search-quick-link">{% trans "Scholarships" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'core:tuition_fees' %}" class="search-quick-link">{% trans "Tuition & Fees" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'core:static_page' url_path='international/admission-process' %}" class="search-quick-link">{% trans "International Admissions" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="search-quick-link">{% trans "Campus Map" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-        <div class="search-overlay-results" id="searchResults"></div>
+        <div class="search-panel-results" id="searchResults"></div>
     </div>
 </div>

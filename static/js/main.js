@@ -375,15 +375,16 @@ function animateCards(selector, options = {}) {
 }
 
 // ================================================
-// Header Search Overlay
+// Header Search Panel (Hull-style)
 // ================================================
 (function() {
     const toggle = document.getElementById('searchToggle');
-    const overlay = document.getElementById('searchOverlay');
+    const panel = document.getElementById('searchPanel');
+    const backdrop = document.getElementById('searchBackdrop');
     const input = document.getElementById('searchInput');
-    const closeBtn = document.getElementById('searchClose');
     const resultsEl = document.getElementById('searchResults');
-    if (!toggle || !overlay) return;
+    const quickLinks = document.querySelector('.search-quick-links');
+    if (!toggle || !panel) return;
 
     const TYPE_ICONS = {
         news: 'far fa-newspaper',
@@ -392,42 +393,62 @@ function animateCards(selector, options = {}) {
         program: 'fas fa-graduation-cap',
     };
     const TYPE_LABELS = { news: 'News', event: 'Events', press: 'Press Releases', program: 'Programs' };
+    var activeType = 'all';
 
     function open() {
-        overlay.classList.add('active');
+        panel.classList.add('active');
+        backdrop.classList.add('active');
         document.body.style.overflow = 'hidden';
-        setTimeout(() => input.focus(), 100);
+        setTimeout(function() { input.focus(); }, 150);
     }
 
     function close() {
-        overlay.classList.remove('active');
+        panel.classList.remove('active');
+        backdrop.classList.remove('active');
         document.body.style.overflow = '';
         input.value = '';
         resultsEl.innerHTML = '';
+        if (quickLinks) quickLinks.style.display = '';
     }
 
     toggle.addEventListener('click', open);
-    closeBtn.addEventListener('click', close);
-    overlay.addEventListener('click', function(e) { if (e.target === overlay) close(); });
+    backdrop.addEventListener('click', close);
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) close();
+        if (e.key === 'Escape' && panel.classList.contains('active')) close();
     });
 
-    input.addEventListener('input', debounce(function() {
-        const q = input.value.trim();
+    // Tab filtering
+    document.querySelectorAll('.search-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.search-tab').forEach(function(t) { t.classList.remove('active'); });
+            this.classList.add('active');
+            activeType = this.dataset.type;
+            doSearch();
+        });
+    });
+
+    function doSearch() {
+        var q = input.value.trim();
         if (q.length < 2) {
-            resultsEl.innerHTML = '<div class="search-hint">Type at least 2 characters to search</div>';
+            resultsEl.innerHTML = '';
+            if (quickLinks) quickLinks.style.display = '';
             return;
         }
+        if (quickLinks) quickLinks.style.display = 'none';
+
         fetch('/api/search/?q=' + encodeURIComponent(q))
-            .then(r => r.json())
-            .then(data => {
-                if (!data.results.length) {
-                    resultsEl.innerHTML = '<div class="search-no-results"><i class="fas fa-search" style="font-size:1.5rem;display:block;margin-bottom:0.5rem;"></i>No results found</div>';
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var items = data.results;
+                if (activeType !== 'all') {
+                    items = items.filter(function(item) { return item.type === activeType; });
+                }
+                if (!items.length) {
+                    resultsEl.innerHTML = '<div class="search-no-results"><i class="fas fa-search" style="font-size:1.25rem;display:block;margin-bottom:0.5rem;color:#ccc;"></i>No results found</div>';
                     return;
                 }
                 var grouped = {};
-                data.results.forEach(function(item) {
+                items.forEach(function(item) {
                     if (!grouped[item.type]) grouped[item.type] = [];
                     grouped[item.type].push(item);
                 });
@@ -448,5 +469,7 @@ function animateCards(selector, options = {}) {
             .catch(function() {
                 resultsEl.innerHTML = '<div class="search-no-results">Something went wrong</div>';
             });
-    }, 300));
+    }
+
+    input.addEventListener('input', debounce(doSearch, 300));
 })();
