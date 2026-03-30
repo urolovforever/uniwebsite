@@ -121,25 +121,31 @@ def search_api(request):
             Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
             is_published=True,
         )[:5]:
-            items.append({'title': article.t('title'), 'url': article.get_absolute_url(), 'type': 'news'})
+            items.append({'title': article.t('title'), 'desc': article.t('excerpt')[:120] if article.t('excerpt') else '', 'url': article.get_absolute_url(), 'type': 'news'})
 
         for event in Event.objects.filter(
             Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
             is_published=True,
         )[:5]:
-            items.append({'title': event.t('title'), 'url': event.get_absolute_url(), 'type': 'event'})
+            desc = ''
+            if event.event_date:
+                desc = event.event_date.strftime('%d %b %Y')
+                if event.location:
+                    desc += ' · ' + event.location
+            items.append({'title': event.t('title'), 'desc': desc, 'url': event.get_absolute_url(), 'type': 'event'})
 
         for press in PressRelease.objects.filter(
             Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
             is_published=True,
         )[:5]:
-            items.append({'title': press.t('title'), 'url': press.get_absolute_url(), 'type': 'press'})
+            items.append({'title': press.t('title'), 'desc': press.t('excerpt')[:120] if press.t('excerpt') else '', 'url': press.get_absolute_url(), 'type': 'press'})
 
         for program in Program.objects.filter(
             Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
             is_published=True,
         ).select_related('department')[:5]:
-            items.append({'title': program.t('title'), 'url': program.get_absolute_url(), 'type': 'program'})
+            desc = program.get_level_display() + ' · ' + program.department.t('name')
+            items.append({'title': program.t('title'), 'desc': desc, 'url': program.get_absolute_url(), 'type': 'program'})
 
     return JsonResponse({'results': items, 'total': len(items)})
 

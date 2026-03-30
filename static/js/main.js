@@ -453,17 +453,15 @@ function animateCards(selector, options = {}) {
                     grouped[item.type].push(item);
                 });
                 var html = '';
-                for (var type in grouped) {
-                    html += '<div class="search-result-group">';
-                    html += '<div class="search-result-group-title">' + (TYPE_LABELS[type] || type) + '</div>';
-                    grouped[type].forEach(function(item) {
-                        html += '<a href="' + item.url + '" class="search-result-item">';
-                        html += '<i class="search-result-icon ' + (TYPE_ICONS[type] || 'fas fa-link') + '"></i>';
-                        html += '<span class="search-result-title">' + item.title + '</span>';
-                        html += '</a>';
-                    });
-                    html += '</div>';
-                }
+                items.forEach(function(item) {
+                    html += '<a href="' + item.url + '" class="search-result-item">';
+                    html += '<div class="search-result-title">' + item.title + '</div>';
+                    if (item.desc) {
+                        html += '<div class="search-result-desc">' + item.desc + '</div>';
+                    }
+                    html += '</a>';
+                });
+                html += '<a href="/search/?q=' + encodeURIComponent(q) + '" class="search-view-all">View all search results <i class="fas fa-arrow-right"></i></a>';
                 resultsEl.innerHTML = html;
             })
             .catch(function() {
