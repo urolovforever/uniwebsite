@@ -3053,3 +3053,391 @@ msgstr "Talabalarni kuchaytirish"
 #: templates/pages/about/mission-vision.html
 msgid "Progressive thinking"
 msgstr "Progressiv tafakkur"
+
+#: templates/pages
+msgid "Your one-stop destination for career guidance, job search support, and professional development resources at TIU."
+msgstr "TIUda karyera bo'yicha maslahat, ish qidirish va kasbiy rivojlanish resurslari uchun yagona manba."
+
+#: templates/pages
+msgid "Get job ready from day one"
+msgstr "Birinchi kundan ishga tayyorlaning"
+
+#: templates/pages
+msgid "Whatever your goals, we're here to help you take the next step with confidence."
+msgstr "Maqsadingiz qanday bo'lmasin, biz sizga ishonch bilan keyingi qadamni qo'yishda yordam beramiz."
+
+#: templates/pages
+msgid "At TIU, you'll receive personalised career advice, hands-on experience through our partner network, and dedicated support to boost your employability across Uzbekistan and beyond."
+msgstr "TIUda siz shaxsiy karyera maslahati, hamkor tarmoq orqali amaliy tajriba va O'zbekiston va undan tashqarida bandlikni oshirish uchun maxsus qo'llab-quvvatlash olasiz."
+
+#: templates/pages
+msgid "Employability is embedded in every programme — from internships with leading companies to skills workshops, employer events, and one-to-one guidance with our career advisors."
+msgstr "Bandlik har bir dasturga kiritilgan — yetakchi kompaniyalardagi amaliyotdan tortib ko'nikma seminarlarigacha, ish beruvchilar tadbirlari va karyera maslahatchilari bilan individual uchrashuvlar."
+
+#: templates/pages
+msgid "Whether you're looking for part-time work, your first graduate role, or exploring career paths, we're with you every step of the way."
+msgstr "Yarim stavkali ish, birinchi bitiruvchi lavozimi yoki karyera yo'llarini o'rganayotgan bo'lsangiz — biz har qadamda siz bilan birgamiz."
+
+#: templates/pages
+msgid "Career mentoring"
+msgstr "Karyera mentorlik"
+
+#: templates/pages
+msgid "Get advice from professionals who've been there. Our mentoring programme connects you with TIU alumni and industry leaders in Uzbekistan and abroad for guidance as you explore your career options."
+msgstr "Tajribali mutaxassislardan maslahat oling. Mentorlik dasturimiz sizni TIU bitiruvchilari va O'zbekiston hamda xorijdagi sanoat yetakchilari bilan bog'laydi."
+
+#: templates/pages
+msgid "Skills workshops"
+msgstr "Ko'nikma seminarlari"
+
+#: templates/pages
+msgid "Get practical support to feel career ready. From writing strong CVs and cover letters to interview preparation and LinkedIn optimization, our workshops give you the tools to succeed."
+msgstr "Karyeraga tayyorlanish uchun amaliy yordam oling. Kuchli rezyume yozishdan tortib intervyuga tayyorgarlik va LinkedIn optimizatsiyasigacha — seminarlarimiz muvaffaqiyat uchun vositalar beradi."
+
+#: templates/pages
+msgid "Work placements"
+msgstr "Ish amaliyoti"
+
+#: templates/pages
+msgid "Gain hands-on experience with structured placements at companies across Tashkent and partner organisations internationally. Build your professional network and develop the skills employers value most."
+msgstr "Toshkent va xalqaro hamkor tashkilotlardagi tizimli amaliyot orqali amaliy tajriba oling. Professional tarmoqingizni kengaytiring va ish beruvchilar eng ko'p qadrlaydigan ko'nikmalarni rivojlantiring."
+
+#: templates/pages
+msgid "Employer connections"
+msgstr "Ish beruvchilar bilan aloqalar"
+
+#: templates/pages
+msgid "Meet employers at careers fairs, networking events, and on-campus talks. Build relationships with organisations in Uzbekistan and internationally that are looking to recruit talented TIU graduates."
+msgstr "Karyera yarmarkalari, networking tadbirlari va kampusdagi uchrashuvlarda ish beruvchilar bilan tanishing. TIU bitiruvchilarini yollashni xohlagan tashkilotlar bilan munosabatlarni rivojlantiring."
+
+#: templates/pages
+msgid "Find work and build experience"
+msgstr "Ish toping va tajriba orttiring"
+
+#: templates/pages
+msgid "Our Career Center team helps you find part-time work, paid placements, and summer internships with top employers in Uzbekistan and abroad."
+msgstr "Karyera markazi jamoamiz sizga O'zbekiston va xorijdagi yetakchi ish beruvchilarda yarim stavkali ish, pullik amaliyot va yozgi stajировka topishda yordam beradi."
+
+#: templates/pages
+msgid "Browse job and internship listings"
+msgstr "Ish va stajировka e'lonlarini ko'rish"
+
+#: templates/pages
+msgid "on the TIU Career Portal"
+msgstr "TIU Karyera portalida"
+
+#: templates/pages
+msgid "Meet employers"
+msgstr "Ish beruvchilar bilan uchrashing"
+
+#: templates/pages
+msgid "at our dedicated career fairs and networking events"
+msgstr "maxsus karyera yarmarkalari va networking tadbirlarida"
+
+#: templates/pages
+msgid "Become a Student Ambassador"
+msgstr "Talaba elchisi bo'ling"
+
+#: templates/pages
+msgid "to support events, lead campus tours, and represent TIU"
+msgstr "tadbirlarni qo'llab-quvvatlash, kampus ekskursiyalarini olib borish va TIUni ifodalash uchun"
+
+#: templates/pages
+msgid "Join student-led projects"
+msgstr "Talabalar loyihalariga qo'shiling"
+
+#: templates/pages
+msgid "from hackathons to startup incubators and community initiatives"
+msgstr "hakatonlardan tortib startup inkubatorlari va jamoat tashabbuslarigacha"
+
+#: templates/pages
+msgid "Explore paid placements"
+msgstr "Pullik amaliyotlarni o'rganing"
+
+#: templates/pages
+msgid "to gain real-world experience at partner companies"
+msgstr "hamkor kompaniyalarda haqiqiy tajriba olish uchun"
+
+#: templates/pages
+msgid "Students at work"
+msgstr "Ishda talabalar"
+
+#: templates/pages
+msgid "Gain real-world experience and jumpstart your career with internship opportunities at leading organisations partnered with TIU."
+msgstr "TIU hamkor yetakchi tashkilotlardagi stajировka imkoniyatlari bilan haqiqiy tajriba oling va karyerangizni boshlang."
+
+#: templates/pages
+msgid "Why work with our students?"
+msgstr "Nega bizning talabalar bilan ishlash kerak?"
+
+#: templates/pages
+msgid "At TIU, we go beyond sharing knowledge. Our students study across five dynamic departments — Business & Economics, IT, Education, Foreign Languages, and Jurisprudence — each programme designed to build the skills and experience they need to thrive in the real world."
+msgstr "TIUda biz bilim ulashishdan nariroqqa boramiz. Talabalarimiz beshta kuchli fakultetda o'qishadi — Biznes va iqtisodiyot, IT, Ta'lim, Chet tillari va Huquqshunoslik — har bir dastur haqiqiy dunyoda rivojlanish uchun zarur ko'nikma va tajribani shakllantirishga qaratilgan."
+
+#: templates/pages
+msgid "That creates outstanding opportunities for our employer partners to engage with motivated, multilingual students and tap into a pipeline of career-ready graduates every year."
+msgstr "Bu ish beruvchi hamkorlarga motivatsiyali, ko'p tilli talabalar bilan ishlash va har yili karyeraga tayyor bitiruvchilar oqimidan foydalanish uchun ajoyib imkoniyatlar yaratadi."
+
+#: templates/pages
+msgid "That's where you come in."
+msgstr "Aynan shu yerda siz kerak bo'lasiz."
+
+#: templates/pages
+msgid "HOW YOU CAN GET INVOLVED"
+msgstr "QANDAY ISHTIROK ETISH MUMKIN"
+
+#: templates/pages
+msgid "Promote your job opportunities"
+msgstr "Ish imkoniyatlaringizni targ'ib qiling"
+
+#: templates/pages
+msgid "directly to our students free of charge through the TIU Career Portal"
+msgstr "TIU Karyera portali orqali talabalarimizga bevosita va bepul"
+
+#: templates/pages
+msgid "Access Central Asia's top emerging talent"
+msgstr "Markaziy Osiyoning eng yaxshi yosh iste'dodlariga kirish"
+
+#: templates/pages
+msgid "during their studies through internships, placements, and student projects"
+msgstr "o'qish davomida stajировkalar, amaliyot va talabalar loyihalari orqali"
+
+#: templates/pages
+msgid "Receive tailored support"
+msgstr "Moslashtirilgan qo'llab-quvvatlash oling"
+
+#: templates/pages
+msgid "from our Career Center to find the right fit for your organisation"
+msgstr "tashkilotingiz uchun eng mos kadrni topish uchun Karyera markazimizdan"
+
+#: templates/pages
+msgid "Attend job fairs and events on campus"
+msgstr "Kampusdagi ish yarmarkalari va tadbirlarga tashrif buyuring"
+
+#: templates/pages
+msgid "to build brand awareness and create a talent pipeline of future graduates ready to join your team"
+msgstr "brendingiz haqida xabardorlikni oshirish va jamoangizga qo'shilishga tayyor kelajak bitiruvchilar quvurini yaratish uchun"
+
+#: templates/pages
+msgid "Bring in fresh ideas and insight"
+msgstr "Yangi g'oyalar va fikrlarni keltiring"
+
+#: templates/pages
+msgid "from students equipped with the latest knowledge in their field"
+msgstr "o'z sohasidagi eng so'nggi bilimlar bilan qurollangan talabalardan"
+
+#: templates/pages
+msgid "How to recruit one of our students or graduates"
+msgstr "Talaba yoki bitiruvchimizni qanday yollash mumkin"
+
+#: templates/pages
+msgid "We offer local, regional, and international employers the opportunity to advertise full-time and part-time jobs, internships, and placements through the TIU Career Portal."
+msgstr "Biz mahalliy, mintaqaviy va xalqaro ish beruvchilarga TIU Karyera portali orqali to'liq va yarim stavkali ishlar, stajiovkalar va amaliyotlarni e'lon qilish imkoniyatini taklif etamiz."
+
+#: templates/pages
+msgid "Maintaining an active profile on our portal is quick, easy, and completely free of charge. It allows you to:"
+msgstr "Portalimizda faol profil yuritish tez, oson va butunlay bepul. Bu sizga imkon beradi:"
+
+#: templates/pages
+msgid "Advertise unlimited vacancies to TIU students and graduates across all departments."
+msgstr "TIU talabalar va bitiruvchilariga barcha fakultetlar bo'yicha cheksiz vakansiyalarni e'lon qilish."
+
+#: templates/pages
+msgid "Increase your brand awareness among our multilingual, internationally-minded student body."
+msgstr "Ko'p tilli, xalqaro fikrlaydigan talabalarimiz orasida brendingiz xabardorligini oshiring."
+
+#: templates/pages
+msgid "Send targeted communications to students and graduates matching your hiring needs."
+msgstr "Yollash ehtiyojlaringizga mos talabalar va bitiruvchilarga maqsadli xabarlarni yuboring."
+
+#: templates/pages
+msgid "Post details of online or in-person recruitment events and career talks."
+msgstr "Onlayn yoki oflayn yollash tadbirlari va karyera suhbatlari haqida ma'lumot joylashtiring."
+
+#: templates/pages
+msgid "Our Career Center team works closely with you to maximise engagement and advise on which students or programmes are best suited to your needs."
+msgstr "Karyera markazimiz jamoasi siz bilan yaqindan ishlab, jalb qilishni maksimal darajada oshirish va qaysi talabalar yoki dasturlar ehtiyojlaringizga eng mos kelishini maslahat beradi."
+
+#: templates/pages
+msgid "Student ready for career"
+msgstr "Karyeraga tayyor talaba"
+
+#: templates/pages
+msgid "Other opportunities to speak to us about"
+msgstr "Biz bilan gaplashish mumkin bo'lgan boshqa imkoniyatlar"
+
+#: templates/pages
+msgid "Across all five departments, TIU students are offered the chance to take part in shorter placement programmes and live projects. We are always interested in hearing from employers who want to get involved — please don't hesitate to get in touch."
+msgstr "Barcha beshta fakultetda TIU talabalari qisqa muddatli amaliyot dasturlari va jonli loyihalarda ishtirok etish imkoniyatiga ega. Biz har doim ishtirok etmoqchi bo'lgan ish beruvchilardan eshitishga qiziqamiz — aloqaga chiqishdan tortinmang."
+
+#: templates/pages
+msgid "Mentoring"
+msgstr "Mentorlik"
+
+#: templates/pages
+msgid "Share your industry experience by becoming a mentor to TIU students. Our mentoring programme connects professionals with students to provide guidance on career development, industry insights, and professional skills."
+msgstr "TIU talabalariga mentor bo'lib sanoat tajribangizni ulashing. Mentorlik dasturimiz mutaxassislarni talabalar bilan bog'lab, karyera rivojlanishi va professional ko'nikmalar bo'yicha yo'l-yo'riq beradi."
+
+#: templates/pages
+msgid "Events and careers fairs"
+msgstr "Tadbirlar va karyera yarmarkalari"
+
+#: templates/pages
+msgid "Attend our regular careers fairs and employer events to meet students face-to-face, showcase your organisation, and identify potential talent for your business."
+msgstr "Muntazam karyera yarmarkalari va ish beruvchilar tadbirlarimizga tashrif buyurib, talabalar bilan yuzma-yuz uchrashing va tashkilotingiz uchun iste'dodlarni toping."
+
+#: templates/pages
+msgid "Part-time jobs and seasonal work"
+msgstr "Yarim stavkali va mavsumiy ish"
+
+#: templates/pages
+msgid "Advertise part-time, casual, and seasonal work opportunities to our students. Many TIU students are looking for flexible work that fits around their studies."
+msgstr "Talabalarimizga yarim stavkali va mavsumiy ish imkoniyatlarini e'lon qiling. Ko'p TIU talabalari o'qishlari atrofida moslashuvchan ish qidirmoqda."
+
+#: templates/pages
+msgid "Student academic projects"
+msgstr "Talaba ilmiy loyihalari"
+
+#: templates/pages
+msgid "Collaborate with TIU students on real-world academic projects. Provide a brief or challenge and benefit from fresh perspectives while students gain valuable practical experience."
+msgstr "TIU talabalari bilan haqiqiy ilmiy loyihalarda hamkorlik qiling. Topshiriq yoki muammo taqdim eting va yangi fikrlardan foydalaning, talabalar esa qimmatli amaliy tajriba oladi."
+
+#: templates/pages
+msgid "Frequently Asked Questions"
+msgstr "Ko'p so'raladigan savollar"
+
+#: templates/pages
+msgid "Find answers to the most common questions about admissions, programmes, fees, and student life at TIU."
+msgstr "TIUda qabul, dasturlar, to'lovlar va talaba hayoti haqidagi eng ko'p so'raladigan savollarga javoblarni toping."
+
+#: templates/pages
+msgid "Table of contents"
+msgstr "Mundarija"
+
+#: templates/pages
+msgid "Programmes & Study"
+msgstr "Dasturlar va o'qish"
+
+#: templates/pages
+msgid "International Students"
+msgstr "Xalqaro talabalar"
+
+#: templates/pages
+msgid "Campus & Student Life"
+msgstr "Kampus va talaba hayoti"
+
+#: templates/pages
+msgid "After Graduation"
+msgstr "Bitirganidan keyin"
+
+#: templates/pages
+msgid "How do I apply to TIU?"
+msgstr "TIUga qanday ariza topshiraman?"
+
+#: templates/pages
+msgid "You can apply online through our admissions portal. Visit the Apply Now page, select your programme (Bachelor's, Master's, or PhD), fill in the application form, and upload the required documents. Our admissions team will review your application and contact you within 5–10 business days."
+msgstr "Siz onlayn qabul portalimiz orqali ariza topshirishingiz mumkin. Ariza berish sahifasiga tashrif buyuring, dasturingizni tanlang (Bakalavr, Magistr yoki PhD), ariza shaklini to'ldiring va kerakli hujjatlarni yuklang. Qabul jamoamiz arizangizni ko'rib chiqadi va 5-10 ish kuni ichida siz bilan bog'lanadi."
+
+#: templates/pages
+msgid "What are the entry requirements?"
+msgstr "Kirish talablari qanday?"
+
+#: templates/pages
+msgid "Requirements vary by programme. For Bachelor's programmes, you need a secondary school diploma (attestat) with competitive grades. For Master's programmes, a Bachelor's degree is required. All applicants must demonstrate English proficiency (IELTS 5.5+ or equivalent). Specific programme requirements are listed on each programme page."
+msgstr "Talablar dasturga qarab farq qiladi. Bakalavr dasturlari uchun raqobatbardosh baholi o'rta maktab diplomi (attestat) kerak. Magistratura uchun bakalavr diplomi talab qilinadi. Barcha abituriyentlar ingliz tili bilimini isbotlashi kerak (IELTS 5.5+ yoki ekvivalent)."
+
+#: templates/pages
+msgid "What documents do I need to submit?"
+msgstr "Qanday hujjatlar topshirish kerak?"
+
+#: templates/pages
+msgid "Typically you'll need: a copy of your passport or ID, your most recent diploma/certificate with transcript, an English language proficiency certificate (IELTS, TOEFL, or TIU internal test), a personal statement, and a passport-sized photo. Some programmes may require additional documents such as a portfolio or letters of recommendation."
+msgstr "Odatda sizga kerak: pasport yoki ID nusxasi, so'nggi diplom/sertifikat va transkript, ingliz tili sertifikati (IELTS, TOEFL yoki TIU ichki testi), shaxsiy bayonnoma va pasport formatidagi rasm. Ba'zi dasturlar portfolio yoki tavsiya xatlari kabi qo'shimcha hujjatlar talab qilishi mumkin."
+
+#: templates/pages
+msgid "When is the application deadline?"
+msgstr "Ariza berish muddati qachon?"
+
+#: templates/pages
+msgid "TIU accepts applications on a rolling basis. The main intake is in September, with applications typically closing in late August. An early application is recommended as popular programmes may fill up. Check the Admissions page for the exact deadlines for the current academic year."
+msgstr "TIU arizalarni uzluksiz qabul qiladi. Asosiy qabul sentyabrda bo'lib, arizalar odatda avgust oxirida yopiladi. Mashhur dasturlar to'lib ketishi mumkinligi sababli erta ariza berish tavsiya etiladi."
+
+#: templates/pages
+msgid "Can I apply for more than one programme?"
+msgstr "Bir nechta dasturga ariza topshira olamanmi?"
+
+#: templates/pages
+msgid "Yes, you can apply to up to two programmes simultaneously. If accepted to both, you will choose which offer to accept. There is no additional fee for a second application."
+msgstr "Ha, siz bir vaqtda ikkita dasturga ariza topshirishingiz mumkin. Ikkalasiga ham qabul qilingan bo'lsangiz, qaysi taklifni qabul qilishni tanlaysiz. Ikkinchi ariza uchun qo'shimcha to'lov yo'q."
+
+#: templates/pages
+msgid "Is there an entrance exam?"
+msgstr "Kirish imtihoni bormi?"
+
+#: templates/pages
+msgid "For most programmes, admission is based on your academic record and English proficiency. Some programmes may include an interview or written assessment. If you don't have an IELTS/TOEFL score, you can take TIU's internal English placement test on campus."
+msgstr "Ko'pgina dasturlar uchun qabul akademik natijalar va ingliz tili bilimiga asoslanadi. Ba'zi dasturlarga intervyu yoki yozma baholash kirishi mumkin. Agar IELTS/TOEFL balingiz bo'lmasa, kampusda TIU ichki ingliz tili testini topshirishingiz mumkin."
+
+#: templates/pages
+msgid "How long does it take to receive a decision?"
+msgstr "Qaror olish qancha vaqt oladi?"
+
+#: templates/pages
+msgid "Most applicants receive a decision within 5–10 business days after submitting a complete application. During peak periods, it may take up to two weeks. You'll be notified by email and can track your application status online."
+msgstr "Ko'pgina abituriyentlar to'liq ariza topshirilgandan so'ng 5-10 ish kuni ichida qaror oladi. Eng band davrda ikki haftagacha vaqt ketishi mumkin. Sizga elektron pochta orqali xabar beriladi."
+
+#: templates/pages
+msgid "Can I defer my offer to the next intake?"
+msgstr "Taklifni keyingi qabulga qoldira olamanmi?"
+
+#: templates/pages
+msgid "Yes, in most cases you can defer your offer by one academic year. Contact the admissions office to request a deferral. Please note that some scholarship offers may not carry over to the next intake."
+msgstr "Ha, ko'p hollarda taklifingizni bir o'quv yiliga qoldirish mumkin. Kechiktirish so'rash uchun qabul bo'limi bilan bog'laning. Eslatib o'tamiz, ba'zi stipendiya takliflari keyingi qabulga o'tmasligi mumkin."
+
+#: templates/pages
+msgid "What programmes does TIU offer?"
+msgstr "TIU qanday dasturlar taklif etadi?"
+
+#: templates/pages
+msgid "TIU offers Bachelor's, Master's, and PhD programmes across five departments: Business & Economics, Information Technology, Education, Foreign Languages, and Jurisprudence. We also offer a unique 2+2 dual degree programme with international partner universities."
+msgstr "TIU beshta fakultet bo'yicha bakalavr, magistratura va PhD dasturlarini taklif etadi: Biznes va iqtisodiyot, Axborot texnologiyalari, Ta'lim, Chet tillari va Huquqshunoslik. Shuningdek, xalqaro hamkor universitetlar bilan 2+2 qo'shma diplom dasturini taklif etamiz."
+
+#: templates/pages
+msgid "What is the language of instruction?"
+msgstr "O'qitish tili qanday?"
+
+#: templates/pages
+msgid "The primary language of instruction at TIU is English. Some programmes may include components in Uzbek or Russian. All students are expected to have a working level of English by the start of their studies."
+msgstr "TIUda asosiy o'qitish tili ingliz tili. Ba'zi dasturlarda o'zbek yoki rus tilidagi komponentlar bo'lishi mumkin. Barcha talabalar o'qishni boshlaganda ingliz tilining ishchi darajasiga ega bo'lishi kutiladi."
+
+#: templates/pages
+msgid "How long are the degree programmes?"
+msgstr "Dasturlar qancha davom etadi?"
+
+#: templates/pages
+msgid "Bachelor's programmes are typically 4 years (or 2+2 with the dual degree option). Master's programmes are 2 years. PhD programmes are 3 years. Part-time options may have different durations depending on the programme."
+msgstr "Bakalavr dasturlari odatda 4 yil (yoki qo'shma diplom varianti bilan 2+2). Magistratura — 2 yil. PhD — 3 yil."
+
+#: templates/pages
+msgid "Can I transfer from another university?"
+msgstr "Boshqa universitetdan o'tkazila olamanmi?"
+
+#: templates/pages
+msgid "Yes, TIU accepts transfer students. Credit transfer is evaluated on a case-by-case basis depending on the courses completed and grades achieved. Contact our admissions office with your transcript for a preliminary assessment."
+msgstr "Ha, TIU transfer talabalarni qabul qiladi. Kreditlarni o'tkazish o'tilgan fanlar va baholar asosida individual ko'rib chiqiladi."
+
+#: templates/pages
+msgid "Are TIU degrees internationally recognized?"
+msgstr "TIU diplomlari xalqaro miqyosda tan olinadimi?"
+
+#: templates/pages
+msgid "Yes. TIU is licensed by the Ministry of Higher Education of Uzbekistan, and our degrees are recognized both nationally and internationally. Our 2+2 dual degree programme means graduates also receive a degree from our partner university abroad."
+msgstr "Ha. TIU O'zbekiston Oliy ta'lim vazirligi tomonidan litsenziyalangan va diplomlarimiz milliy va xalqaro miqyosda tan olinadi. 2+2 qo'shma diplom dasturimiz bitiruvchilar xorijdagi hamkor universitetdan ham diplom olishini anglatadi."
+
+#: templates/pages
+msgid "Does TIU offer joint or dual degree programmes?"
+msgstr "TIU qo'shma yoki ikki tomonlama diplom dasturlarini taklif etadimi?"
+
+#: templates/pages
+msgid "Yes, our flagship 2+2 programme allows you to study two years at TIU and two years at a partner university abroad. You graduate with two degrees — one from TIU and one from the partner institution. This is available for select Bachelor's programmes."
+msgstr "Ha, bizning asosiy 2+2 dasturimiz TIUda ikki yil va xorijdagi hamkor universitetda ikki yil o'qish imkonini beradi. Ikkita diplom bilan bitiruvchi bo'lasiz. Bu tanlangan bakalavr dasturlari uchun mavjud."

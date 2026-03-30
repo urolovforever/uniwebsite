@@ -3075,3 +3075,391 @@ msgstr "Вдохновение студентов"
 #: templates/pages/about/mission-vision.html
 msgid "Progressive thinking"
 msgstr "Прогрессивное мышление"
+
+#: templates/pages
+msgid "Your one-stop destination for career guidance, job search support, and professional development resources at TIU."
+msgstr "Единый центр карьерного консультирования, помощи в поиске работы и профессионального развития в TIU."
+
+#: templates/pages
+msgid "Get job ready from day one"
+msgstr "Будьте готовы к работе с первого дня"
+
+#: templates/pages
+msgid "Whatever your goals, we're here to help you take the next step with confidence."
+msgstr "Какими бы ни были ваши цели, мы здесь, чтобы помочь вам уверенно сделать следующий шаг."
+
+#: templates/pages
+msgid "At TIU, you'll receive personalised career advice, hands-on experience through our partner network, and dedicated support to boost your employability across Uzbekistan and beyond."
+msgstr "В TIU вы получите персональные карьерные консультации, практический опыт через нашу партнёрскую сеть и поддержку для повышения трудоустройства в Узбекистане и за его пределами."
+
+#: templates/pages
+msgid "Employability is embedded in every programme — from internships with leading companies to skills workshops, employer events, and one-to-one guidance with our career advisors."
+msgstr "Трудоустройство встроено в каждую программу — от стажировок в ведущих компаниях до семинаров, мероприятий с работодателями и индивидуальных консультаций."
+
+#: templates/pages
+msgid "Whether you're looking for part-time work, your first graduate role, or exploring career paths, we're with you every step of the way."
+msgstr "Ищете ли вы подработку, первую работу после выпуска или изучаете карьерные пути — мы с вами на каждом шагу."
+
+#: templates/pages
+msgid "Career mentoring"
+msgstr "Карьерное менторство"
+
+#: templates/pages
+msgid "Get advice from professionals who've been there. Our mentoring programme connects you with TIU alumni and industry leaders in Uzbekistan and abroad for guidance as you explore your career options."
+msgstr "Получите советы от профессионалов. Наша программа менторства связывает вас с выпускниками TIU и лидерами индустрии в Узбекистане и за рубежом."
+
+#: templates/pages
+msgid "Skills workshops"
+msgstr "Семинары по навыкам"
+
+#: templates/pages
+msgid "Get practical support to feel career ready. From writing strong CVs and cover letters to interview preparation and LinkedIn optimization, our workshops give you the tools to succeed."
+msgstr "Получите практическую поддержку для карьерной готовности. От написания сильного резюме до подготовки к собеседованиям и оптимизации LinkedIn — наши семинары дают инструменты для успеха."
+
+#: templates/pages
+msgid "Work placements"
+msgstr "Рабочая практика"
+
+#: templates/pages
+msgid "Gain hands-on experience with structured placements at companies across Tashkent and partner organisations internationally. Build your professional network and develop the skills employers value most."
+msgstr "Получите практический опыт на структурированных стажировках в компаниях Ташкента и международных партнёрских организациях. Расширяйте профессиональную сеть и развивайте навыки."
+
+#: templates/pages
+msgid "Employer connections"
+msgstr "Связи с работодателями"
+
+#: templates/pages
+msgid "Meet employers at careers fairs, networking events, and on-campus talks. Build relationships with organisations in Uzbekistan and internationally that are looking to recruit talented TIU graduates."
+msgstr "Встречайтесь с работодателями на ярмарках вакансий и мероприятиях. Стройте отношения с организациями, которые ищут талантливых выпускников TIU."
+
+#: templates/pages
+msgid "Find work and build experience"
+msgstr "Найдите работу и получите опыт"
+
+#: templates/pages
+msgid "Our Career Center team helps you find part-time work, paid placements, and summer internships with top employers in Uzbekistan and abroad."
+msgstr "Наша команда карьерного центра поможет найти подработку, оплачиваемую практику и летние стажировки у ведущих работодателей."
+
+#: templates/pages
+msgid "Browse job and internship listings"
+msgstr "Просмотр вакансий и стажировок"
+
+#: templates/pages
+msgid "on the TIU Career Portal"
+msgstr "на Карьерном портале TIU"
+
+#: templates/pages
+msgid "Meet employers"
+msgstr "Встречайтесь с работодателями"
+
+#: templates/pages
+msgid "at our dedicated career fairs and networking events"
+msgstr "на наших карьерных ярмарках и мероприятиях"
+
+#: templates/pages
+msgid "Become a Student Ambassador"
+msgstr "Станьте студенческим послом"
+
+#: templates/pages
+msgid "to support events, lead campus tours, and represent TIU"
+msgstr "для поддержки мероприятий, проведения экскурсий и представления TIU"
+
+#: templates/pages
+msgid "Join student-led projects"
+msgstr "Присоединяйтесь к студенческим проектам"
+
+#: templates/pages
+msgid "from hackathons to startup incubators and community initiatives"
+msgstr "от хакатонов до стартап-инкубаторов и общественных инициатив"
+
+#: templates/pages
+msgid "Explore paid placements"
+msgstr "Изучите оплачиваемые стажировки"
+
+#: templates/pages
+msgid "to gain real-world experience at partner companies"
+msgstr "для получения реального опыта в компаниях-партнёрах"
+
+#: templates/pages
+msgid "Students at work"
+msgstr "Студенты за работой"
+
+#: templates/pages
+msgid "Gain real-world experience and jumpstart your career with internship opportunities at leading organisations partnered with TIU."
+msgstr "Получите реальный опыт и начните карьеру со стажировками в ведущих организациях-партнёрах TIU."
+
+#: templates/pages
+msgid "Why work with our students?"
+msgstr "Почему стоит работать с нашими студентами?"
+
+#: templates/pages
+msgid "At TIU, we go beyond sharing knowledge. Our students study across five dynamic departments — Business & Economics, IT, Education, Foreign Languages, and Jurisprudence — each programme designed to build the skills and experience they need to thrive in the real world."
+msgstr "В TIU мы идём дальше простой передачи знаний. Наши студенты учатся на пяти факультетах — Бизнес и экономика, IT, Образование, Иностранные языки и Юриспруденция — каждая программа формирует навыки для успеха в реальном мире."
+
+#: templates/pages
+msgid "That creates outstanding opportunities for our employer partners to engage with motivated, multilingual students and tap into a pipeline of career-ready graduates every year."
+msgstr "Это создаёт отличные возможности для работодателей-партнёров взаимодействовать с мотивированными, многоязычными студентами и ежегодно привлекать готовых к карьере выпускников."
+
+#: templates/pages
+msgid "That's where you come in."
+msgstr "Вот тут появляетесь вы."
+
+#: templates/pages
+msgid "HOW YOU CAN GET INVOLVED"
+msgstr "КАК ВЫ МОЖЕТЕ УЧАСТВОВАТЬ"
+
+#: templates/pages
+msgid "Promote your job opportunities"
+msgstr "Продвигайте свои вакансии"
+
+#: templates/pages
+msgid "directly to our students free of charge through the TIU Career Portal"
+msgstr "напрямую нашим студентам бесплатно через Карьерный портал TIU"
+
+#: templates/pages
+msgid "Access Central Asia's top emerging talent"
+msgstr "Доступ к лучшим молодым талантам Центральной Азии"
+
+#: templates/pages
+msgid "during their studies through internships, placements, and student projects"
+msgstr "во время учёбы через стажировки, практику и студенческие проекты"
+
+#: templates/pages
+msgid "Receive tailored support"
+msgstr "Получите индивидуальную поддержку"
+
+#: templates/pages
+msgid "from our Career Center to find the right fit for your organisation"
+msgstr "от нашего Карьерного центра для поиска подходящих кандидатов"
+
+#: templates/pages
+msgid "Attend job fairs and events on campus"
+msgstr "Посещайте ярмарки вакансий и мероприятия на кампусе"
+
+#: templates/pages
+msgid "to build brand awareness and create a talent pipeline of future graduates ready to join your team"
+msgstr "для повышения узнаваемости бренда и создания потока талантливых выпускников"
+
+#: templates/pages
+msgid "Bring in fresh ideas and insight"
+msgstr "Привнесите свежие идеи и взгляды"
+
+#: templates/pages
+msgid "from students equipped with the latest knowledge in their field"
+msgstr "от студентов, вооружённых новейшими знаниями в своей области"
+
+#: templates/pages
+msgid "How to recruit one of our students or graduates"
+msgstr "Как нанять наших студентов или выпускников"
+
+#: templates/pages
+msgid "We offer local, regional, and international employers the opportunity to advertise full-time and part-time jobs, internships, and placements through the TIU Career Portal."
+msgstr "Мы предлагаем местным, региональным и международным работодателям размещать вакансии, стажировки и практику через Карьерный портал TIU."
+
+#: templates/pages
+msgid "Maintaining an active profile on our portal is quick, easy, and completely free of charge. It allows you to:"
+msgstr "Поддержание активного профиля на нашем портале быстро, легко и абсолютно бесплатно. Это позволяет вам:"
+
+#: templates/pages
+msgid "Advertise unlimited vacancies to TIU students and graduates across all departments."
+msgstr "Размещать неограниченное количество вакансий для студентов и выпускников TIU всех факультетов."
+
+#: templates/pages
+msgid "Increase your brand awareness among our multilingual, internationally-minded student body."
+msgstr "Повышать узнаваемость бренда среди наших многоязычных студентов с международным мышлением."
+
+#: templates/pages
+msgid "Send targeted communications to students and graduates matching your hiring needs."
+msgstr "Отправлять целевые сообщения студентам и выпускникам, соответствующим вашим потребностям."
+
+#: templates/pages
+msgid "Post details of online or in-person recruitment events and career talks."
+msgstr "Публиковать информацию о мероприятиях по набору и карьерных встречах."
+
+#: templates/pages
+msgid "Our Career Center team works closely with you to maximise engagement and advise on which students or programmes are best suited to your needs."
+msgstr "Наша команда Карьерного центра тесно сотрудничает с вами для максимального вовлечения и консультирует, какие студенты или программы лучше всего подходят."
+
+#: templates/pages
+msgid "Student ready for career"
+msgstr "Студент, готовый к карьере"
+
+#: templates/pages
+msgid "Other opportunities to speak to us about"
+msgstr "Другие возможности для сотрудничества"
+
+#: templates/pages
+msgid "Across all five departments, TIU students are offered the chance to take part in shorter placement programmes and live projects. We are always interested in hearing from employers who want to get involved — please don't hesitate to get in touch."
+msgstr "На всех пяти факультетах студенты TIU участвуют в краткосрочных стажировках и реальных проектах. Мы всегда рады работодателям, желающим сотрудничать — свяжитесь с нами."
+
+#: templates/pages
+msgid "Mentoring"
+msgstr "Менторство"
+
+#: templates/pages
+msgid "Share your industry experience by becoming a mentor to TIU students. Our mentoring programme connects professionals with students to provide guidance on career development, industry insights, and professional skills."
+msgstr "Поделитесь профессиональным опытом, став ментором студентов TIU. Наша программа менторства связывает профессионалов со студентами для карьерного руководства."
+
+#: templates/pages
+msgid "Events and careers fairs"
+msgstr "Мероприятия и ярмарки карьеры"
+
+#: templates/pages
+msgid "Attend our regular careers fairs and employer events to meet students face-to-face, showcase your organisation, and identify potential talent for your business."
+msgstr "Посещайте наши регулярные ярмарки карьеры для встреч со студентами и поиска талантов для вашего бизнеса."
+
+#: templates/pages
+msgid "Part-time jobs and seasonal work"
+msgstr "Подработка и сезонная работа"
+
+#: templates/pages
+msgid "Advertise part-time, casual, and seasonal work opportunities to our students. Many TIU students are looking for flexible work that fits around their studies."
+msgstr "Размещайте вакансии подработки и сезонной работы. Многие студенты TIU ищут гибкую работу, совместимую с учёбой."
+
+#: templates/pages
+msgid "Student academic projects"
+msgstr "Студенческие академические проекты"
+
+#: templates/pages
+msgid "Collaborate with TIU students on real-world academic projects. Provide a brief or challenge and benefit from fresh perspectives while students gain valuable practical experience."
+msgstr "Сотрудничайте со студентами TIU над реальными проектами. Предложите задачу и получите свежие идеи, а студенты приобретут ценный практический опыт."
+
+#: templates/pages
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+#: templates/pages
+msgid "Find answers to the most common questions about admissions, programmes, fees, and student life at TIU."
+msgstr "Найдите ответы на самые частые вопросы о поступлении, программах, оплате и студенческой жизни в TIU."
+
+#: templates/pages
+msgid "Table of contents"
+msgstr "Содержание"
+
+#: templates/pages
+msgid "Programmes & Study"
+msgstr "Программы и обучение"
+
+#: templates/pages
+msgid "International Students"
+msgstr "Иностранные студенты"
+
+#: templates/pages
+msgid "Campus & Student Life"
+msgstr "Кампус и студенческая жизнь"
+
+#: templates/pages
+msgid "After Graduation"
+msgstr "После выпуска"
+
+#: templates/pages
+msgid "How do I apply to TIU?"
+msgstr "Как подать заявку в TIU?"
+
+#: templates/pages
+msgid "You can apply online through our admissions portal. Visit the Apply Now page, select your programme (Bachelor's, Master's, or PhD), fill in the application form, and upload the required documents. Our admissions team will review your application and contact you within 5–10 business days."
+msgstr "Вы можете подать заявку онлайн через наш портал. Посетите страницу подачи заявки, выберите программу, заполните форму и загрузите документы. Приёмная комиссия рассмотрит заявку в течение 5–10 рабочих дней."
+
+#: templates/pages
+msgid "What are the entry requirements?"
+msgstr "Каковы вступительные требования?"
+
+#: templates/pages
+msgid "Requirements vary by programme. For Bachelor's programmes, you need a secondary school diploma (attestat) with competitive grades. For Master's programmes, a Bachelor's degree is required. All applicants must demonstrate English proficiency (IELTS 5.5+ or equivalent). Specific programme requirements are listed on each programme page."
+msgstr "Требования зависят от программы. Для бакалавриата нужен аттестат с конкурентными оценками. Для магистратуры — диплом бакалавра. Все абитуриенты должны подтвердить уровень английского (IELTS 5.5+ или эквивалент)."
+
+#: templates/pages
+msgid "What documents do I need to submit?"
+msgstr "Какие документы нужно подать?"
+
+#: templates/pages
+msgid "Typically you'll need: a copy of your passport or ID, your most recent diploma/certificate with transcript, an English language proficiency certificate (IELTS, TOEFL, or TIU internal test), a personal statement, and a passport-sized photo. Some programmes may require additional documents such as a portfolio or letters of recommendation."
+msgstr "Обычно нужны: копия паспорта, последний диплом/аттестат с транскриптом, сертификат по английскому (IELTS, TOEFL или внутренний тест TIU), мотивационное письмо и фото. Некоторые программы могут требовать портфолио или рекомендательные письма."
+
+#: templates/pages
+msgid "When is the application deadline?"
+msgstr "Когда крайний срок подачи?"
+
+#: templates/pages
+msgid "TIU accepts applications on a rolling basis. The main intake is in September, with applications typically closing in late August. An early application is recommended as popular programmes may fill up. Check the Admissions page for the exact deadlines for the current academic year."
+msgstr "TIU принимает заявки на постоянной основе. Основной набор в сентябре, приём заявок обычно закрывается в конце августа. Рекомендуется подавать заявку заранее."
+
+#: templates/pages
+msgid "Can I apply for more than one programme?"
+msgstr "Можно подать заявку на несколько программ?"
+
+#: templates/pages
+msgid "Yes, you can apply to up to two programmes simultaneously. If accepted to both, you will choose which offer to accept. There is no additional fee for a second application."
+msgstr "Да, вы можете подать заявку на две программы одновременно. При зачислении на обе вы выберете, какое предложение принять. Дополнительной платы нет."
+
+#: templates/pages
+msgid "Is there an entrance exam?"
+msgstr "Есть ли вступительный экзамен?"
+
+#: templates/pages
+msgid "For most programmes, admission is based on your academic record and English proficiency. Some programmes may include an interview or written assessment. If you don't have an IELTS/TOEFL score, you can take TIU's internal English placement test on campus."
+msgstr "Для большинства программ зачисление основано на академической успеваемости и уровне английского. Если у вас нет IELTS/TOEFL, можно сдать внутренний тест TIU."
+
+#: templates/pages
+msgid "How long does it take to receive a decision?"
+msgstr "Сколько времени занимает получение решения?"
+
+#: templates/pages
+msgid "Most applicants receive a decision within 5–10 business days after submitting a complete application. During peak periods, it may take up to two weeks. You'll be notified by email and can track your application status online."
+msgstr "Большинство абитуриентов получают решение в течение 5–10 рабочих дней. В пиковые периоды — до двух недель. Уведомление приходит по email."
+
+#: templates/pages
+msgid "Can I defer my offer to the next intake?"
+msgstr "Можно отложить зачисление на следующий набор?"
+
+#: templates/pages
+msgid "Yes, in most cases you can defer your offer by one academic year. Contact the admissions office to request a deferral. Please note that some scholarship offers may not carry over to the next intake."
+msgstr "Да, в большинстве случаев можно отложить на один учебный год. Свяжитесь с приёмной комиссией. Обратите внимание, что некоторые стипендии могут не сохраниться."
+
+#: templates/pages
+msgid "What programmes does TIU offer?"
+msgstr "Какие программы предлагает TIU?"
+
+#: templates/pages
+msgid "TIU offers Bachelor's, Master's, and PhD programmes across five departments: Business & Economics, Information Technology, Education, Foreign Languages, and Jurisprudence. We also offer a unique 2+2 dual degree programme with international partner universities."
+msgstr "TIU предлагает программы бакалавриата, магистратуры и PhD на пяти факультетах. Также доступна уникальная программа двойного диплома 2+2 с международными университетами-партнёрами."
+
+#: templates/pages
+msgid "What is the language of instruction?"
+msgstr "На каком языке ведётся обучение?"
+
+#: templates/pages
+msgid "The primary language of instruction at TIU is English. Some programmes may include components in Uzbek or Russian. All students are expected to have a working level of English by the start of their studies."
+msgstr "Основной язык обучения в TIU — английский. Некоторые программы могут включать компоненты на узбекском или русском языках."
+
+#: templates/pages
+msgid "How long are the degree programmes?"
+msgstr "Какова продолжительность программ?"
+
+#: templates/pages
+msgid "Bachelor's programmes are typically 4 years (or 2+2 with the dual degree option). Master's programmes are 2 years. PhD programmes are 3 years. Part-time options may have different durations depending on the programme."
+msgstr "Бакалавриат — 4 года (или 2+2 с двойным дипломом). Магистратура — 2 года. PhD — 3 года."
+
+#: templates/pages
+msgid "Can I transfer from another university?"
+msgstr "Можно перевестись из другого университета?"
+
+#: templates/pages
+msgid "Yes, TIU accepts transfer students. Credit transfer is evaluated on a case-by-case basis depending on the courses completed and grades achieved. Contact our admissions office with your transcript for a preliminary assessment."
+msgstr "Да, TIU принимает переводных студентов. Перезачёт кредитов оценивается индивидуально на основе пройденных курсов и оценок."
+
+#: templates/pages
+msgid "Are TIU degrees internationally recognized?"
+msgstr "Признаются ли дипломы TIU за рубежом?"
+
+#: templates/pages
+msgid "Yes. TIU is licensed by the Ministry of Higher Education of Uzbekistan, and our degrees are recognized both nationally and internationally. Our 2+2 dual degree programme means graduates also receive a degree from our partner university abroad."
+msgstr "Да. TIU лицензирован Министерством высшего образования Узбекистана, дипломы признаются на национальном и международном уровне. Программа 2+2 означает получение двух дипломов."
+
+#: templates/pages
+msgid "Does TIU offer joint or dual degree programmes?"
+msgstr "Предлагает ли TIU совместные программы с двойным дипломом?"
+
+#: templates/pages
+msgid "Yes, our flagship 2+2 programme allows you to study two years at TIU and two years at a partner university abroad. You graduate with two degrees — one from TIU and one from the partner institution. This is available for select Bachelor's programmes."
+msgstr "Да, наша флагманская программа 2+2 позволяет учиться два года в TIU и два года в партнёрском университете. Вы получаете два диплома."

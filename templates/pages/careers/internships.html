@@ -1,28 +1,28 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 <link rel="stylesheet" href="{% static 'css/careers.css' %}">
 {% endblock %}
 
-{% block title %}Internships - TIU{% endblock %}
+{% block title %}{% trans "Internships" %} - TIU{% endblock %}
 
 {% block content %}
 <!-- Page Hero -->
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Careers</span>
+            <span>{% trans "Careers" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Internships</span>
+            <span class="current">{% trans "Internships" %}</span>
         </nav>
-        <div class="page-hero-category">Careers</div>
-        <h1 class="page-hero-title">Internships</h1>
+        <div class="page-hero-category">{% trans "Careers" %}</div>
+        <h1 class="page-hero-title">{% trans "Internships" %}</h1>
         <div class="page-hero-description">
-            <p>Gain real-world experience and jumpstart your career with internship opportunities at leading organisations partnered with TIU.</p>
+            <p>{% trans "Gain real-world experience and jumpstart your career with internship opportunities at leading organisations partnered with TIU." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -34,23 +34,23 @@
         <div class="why-students-grid">
             <!-- Left Column — Text -->
             <div class="why-students-text">
-                <h2>Why work with our students?</h2>
-                <p>At Hull, we don't just focus on sharing knowledge. Our 15,000 students study a range of degrees, each one focusing on also providing the skills and experience they need to thrive.</p>
-                <p>That creates unrivalled opportunities for our business partners to engage with students and generates over 4,000 career-ready graduates each year.</p>
-                <p>That's where you come in.</p>
+                <h2>{% trans "Why work with our students?" %}</h2>
+                <p>{% trans "At TIU, we go beyond sharing knowledge. Our students study across five dynamic departments — Business & Economics, IT, Education, Foreign Languages, and Jurisprudence — each programme designed to build the skills and experience they need to thrive in the real world." %}</p>
+                <p>{% trans "That creates outstanding opportunities for our employer partners to engage with motivated, multilingual students and tap into a pipeline of career-ready graduates every year." %}</p>
+                <p>{% trans "That's where you come in." %}</p>
             </div>
 
             <!-- Right Column — How You Can Get Involved -->
             <div class="why-students-involved">
-                <span class="involved-label">HOW YOU CAN GET INVOLVED</span>
+                <span class="involved-label">{% trans "HOW YOU CAN GET INVOLVED" %}</span>
 
                 <div class="involved-item">
                     <div class="involved-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <div class="involved-content">
-                        <h4>Promote your job opportunities</h4>
-                        <p>directly to our students free of charge</p>
+                        <h4>{% trans "Promote your job opportunities" %}</h4>
+                        <p>{% trans "directly to our students free of charge through the TIU Career Portal" %}</p>
                     </div>
                 </div>
 
@@ -59,8 +59,8 @@
                         <i class="fas fa-gem"></i>
                     </div>
                     <div class="involved-content">
-                        <h4>Access the best of the region's talent</h4>
-                        <p>during their studies through internships, placements and student projects</p>
+                        <h4>{% trans "Access Central Asia's top emerging talent" %}</h4>
+                        <p>{% trans "during their studies through internships, placements, and student projects" %}</p>
                     </div>
                 </div>
 
@@ -69,8 +69,8 @@
                         <i class="fas fa-people-arrows"></i>
                     </div>
                     <div class="involved-content">
-                        <h4>Receive tailored support</h4>
-                        <p>to find the right fit for your business</p>
+                        <h4>{% trans "Receive tailored support" %}</h4>
+                        <p>{% trans "from our Career Center to find the right fit for your organisation" %}</p>
                     </div>
                 </div>
 
@@ -79,8 +79,8 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="involved-content">
-                        <h4>Attend job fairs and other events on campus</h4>
-                        <p>to build awareness of your business and create a pipeline of talent ready to join you when they graduate</p>
+                        <h4>{% trans "Attend job fairs and events on campus" %}</h4>
+                        <p>{% trans "to build brand awareness and create a talent pipeline of future graduates ready to join your team" %}</p>
                     </div>
                 </div>
 
@@ -89,8 +89,8 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <div class="involved-content">
-                        <h4>Bring in fresh ideas and insight</h4>
-                        <p>supported by the latest up-to-date knowledge for your industry</p>
+                        <h4>{% trans "Bring in fresh ideas and insight" %}</h4>
+                        <p>{% trans "from students equipped with the latest knowledge in their field" %}</p>
                     </div>
                 </div>
             </div>
@@ -104,23 +104,22 @@
         <div class="recruit-grid">
             <!-- Left Column — Text -->
             <div class="recruit-text">
-                <h2>How to recruit one of our students or graduates</h2>
-                <p>We offer local, regional and national employers the opportunity to advertise full or part-time jobs, casual work, internships and placements through the Handshake platform.</p>
-                <p>Maintaining an active profile on Handshake is quick and easy and will enhance your visibility as an employer of choice for our students and graduates. It is also completely free of charge and allows you to:</p>
+                <h2>{% trans "How to recruit one of our students or graduates" %}</h2>
+                <p>{% trans "We offer local, regional, and international employers the opportunity to advertise full-time and part-time jobs, internships, and placements through the TIU Career Portal." %}</p>
+                <p>{% trans "Maintaining an active profile on our portal is quick, easy, and completely free of charge. It allows you to:" %}</p>
                 <ul class="recruit-list">
-                    <li>Advertise unlimited vacancies to students and graduates from the University of Hull.</li>
-                    <li>Increase brand awareness amongst our student body through your digital employer profile.</li>
-                    <li>Send targeted communications to our students and graduates to promote your opportunities.</li>
-                    <li>Add details of online or in person careers events.</li>
+                    <li>{% trans "Advertise unlimited vacancies to TIU students and graduates across all departments." %}</li>
+                    <li>{% trans "Increase your brand awareness among our multilingual, internationally-minded student body." %}</li>
+                    <li>{% trans "Send targeted communications to students and graduates matching your hiring needs." %}</li>
+                    <li>{% trans "Post details of online or in-person recruitment events and career talks." %}</li>
                 </ul>
-                <p>You can create a <a href="#" class="recruit-link">Handshake user account online</a>, with useful information on using the system <a href="#" class="recruit-link">also available here</a>.</p>
-                <p>Our students and graduates actively use the system but our Employer Engagement Team can work closely with you to maximise engagement and advise on which of our students or courses might be most suited to your needs.</p>
-                <a href="#" class="split-link">Create a Handshake account <i class="fas fa-arrow-right"></i></a>
+                <p>{% trans "Our Career Center team works closely with you to maximise engagement and advise on which students or programmes are best suited to your needs." %}</p>
+                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="split-link">{% trans "Get in touch" %} <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <!-- Right Column — Image -->
             <div class="recruit-image">
-                <img src="{% static 'img/hero/back1.jpg' %}" alt="Student ready for career" loading="lazy">
+                <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "Student ready for career" %}" loading="lazy">
             </div>
         </div>
     </div>
@@ -130,47 +129,47 @@
 <section class="opportunities-section">
     <div class="container">
         <div class="opportunities-content">
-            <h2>Other opportunities to speak to us about</h2>
-            <p class="opportunities-intro">Across the University, students from a wide range of courses are offered the chance to take part in shorter placement programmes and live projects. We are always interested in hearing from employers interested in getting involved so please don't hesitate to get in touch.</p>
+            <h2>{% trans "Other opportunities to speak to us about" %}</h2>
+            <p class="opportunities-intro">{% trans "Across all five departments, TIU students are offered the chance to take part in shorter placement programmes and live projects. We are always interested in hearing from employers who want to get involved — please don't hesitate to get in touch." %}</p>
 
             <div class="opportunities-accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span>Mentoring</span>
+                        <span>{% trans "Mentoring" %}</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="accordion-body">
-                        <p>Share your industry experience by becoming a mentor to our students. Our mentoring programmes connect professionals with students to provide guidance on career development, industry insights, and professional skills.</p>
+                        <p>{% trans "Share your industry experience by becoming a mentor to TIU students. Our mentoring programme connects professionals with students to provide guidance on career development, industry insights, and professional skills." %}</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span>Events and careers fairs</span>
+                        <span>{% trans "Events and careers fairs" %}</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="accordion-body">
-                        <p>Attend our regular careers fairs and employer events to meet students face-to-face, showcase your organisation, and identify potential talent for your business.</p>
+                        <p>{% trans "Attend our regular careers fairs and employer events to meet students face-to-face, showcase your organisation, and identify potential talent for your business." %}</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span>Part-time jobs and seasonal work</span>
+                        <span>{% trans "Part-time jobs and seasonal work" %}</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="accordion-body">
-                        <p>Advertise part-time, casual and seasonal work opportunities to our students. Many students are looking for flexible work that fits around their studies.</p>
+                        <p>{% trans "Advertise part-time, casual, and seasonal work opportunities to our students. Many TIU students are looking for flexible work that fits around their studies." %}</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span>Student academic projects</span>
+                        <span>{% trans "Student academic projects" %}</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="accordion-body">
-                        <p>Collaborate with our students on real-world academic projects. Provide a brief or challenge and benefit from fresh perspectives while students gain valuable practical experience.</p>
+                        <p>{% trans "Collaborate with TIU students on real-world academic projects. Provide a brief or challenge and benefit from fresh perspectives while students gain valuable practical experience." %}</p>
                     </div>
                 </div>
             </div>
@@ -228,12 +227,12 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="/careers/career-center/" class="explore-more-link">Career Center <i class="fas fa-arrow-right"></i></a>
-            <a href="/careers/employer-partnerships/" class="explore-more-link">Employer Partnerships <i class="fas fa-arrow-right"></i></a>
-            <a href="/careers/alumni-network/" class="explore-more-link">Alumni Network <i class="fas fa-arrow-right"></i></a>
-            <a href="/careers/hiring/" class="explore-more-link">Hiring <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/career-center/" class="explore-more-link">{% trans "Career Center" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/employer-partnerships/" class="explore-more-link">{% trans "Employer Partnerships" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/alumni-network/" class="explore-more-link">{% trans "Alumni Network" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/careers/hiring/" class="explore-more-link">{% trans "Open Positions" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
