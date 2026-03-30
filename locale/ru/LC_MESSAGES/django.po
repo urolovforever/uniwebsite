@@ -2812,3 +2812,12 @@ msgstr "МАГИСТРАТУРА"
 #: templates/home/index.html
 msgid "PhD & DOCTORAL"
 msgstr "PhD и ДОКТОРАНТУРА"
+
+msgid "NEWS"
+msgstr "НОВОСТИ"
+
+msgid "Admissions & International"
+msgstr "Приём и Международный"
+
+msgid "Clubs & Sports"
+msgstr "Клубы и Спорт"

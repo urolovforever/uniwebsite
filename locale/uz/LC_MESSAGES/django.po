@@ -2790,3 +2790,12 @@ msgstr "MAGISTR DARAJASI"
 #: templates/home/index.html
 msgid "PhD & DOCTORAL"
 msgstr "PhD va DOKTORANTURA"
+
+msgid "NEWS"
+msgstr "YANGILIKLAR"
+
+msgid "Admissions & International"
+msgstr "Qabul va Xalqaro"
+
+msgid "Clubs & Sports"
+msgstr "Klublar va Sport"

@@ -225,7 +225,7 @@ ul { list-style: none; }
 }
 .search-backdrop.active { opacity: 1; visibility: visible; }
 .search-panel {
-    position: fixed; top: 0; right: 0; width: 520px; height: 100vh;
+    position: fixed; top: 0; right: 0; width: 680px; height: 100vh;
     background: #fff; z-index: 9999; box-shadow: -4px 0 24px rgba(0,0,0,0.15);
     transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
