@@ -2877,3 +2877,179 @@ msgstr "Haqiqiy voqeani bilmoqchimisiz? Hozirgi TIU talabalari bilan hayot qanda
 
 msgid "Get in touch"
 msgstr "Bog'lanish"
+
+#: templates/pages/about/mission-vision.html
+msgid "Shaping the future through education, innovation, and global partnerships that empower the next generation of leaders."
+msgstr "Ta'lim, innovatsiya va global hamkorliklar orqali kelajakni shakllantiramiz — yangi avlod yetakchilarini tayyorlaymiz."
+
+#: templates/pages/about/mission-vision.html
+msgid "Together on the frontier of education's future"
+msgstr "Ta'lim kelajagining chegarasida — birga"
+
+#: templates/pages/about/mission-vision.html
+msgid "TIU Strategy 2030 is our roadmap for the next decade — a bold plan to become Central Asia's most internationally connected university. It sets out how we will expand global partnerships, pioneer dual-degree pathways, and empower every student to build a career without borders."
+msgstr "TIU Strategiya 2030 — kelgusi o'n yillik uchun yo'l xaritamiz. Markaziy Osiyoning eng xalqaro universitetiga aylanish bo'yicha jasur reja. U global hamkorliklarni kengaytirish, qo'shma diplom yo'nalishlarini rivojlantirish va har bir talabaga chegarasiz karyera qurish imkoniyatini berishni belgilaydi."
+
+#: templates/pages/about/mission-vision.html
+msgid "From strengthening research and innovation to deepening our ties with industry and communities, Strategy 2030 defines who we are, where we're heading, and how we'll get there — together."
+msgstr "Tadqiqot va innovatsiyalarni mustahkamlashdan tortib sanoat va jamiyat bilan aloqalarimizni chuqurlashtirishgacha — Strategiya 2030 biz kim ekanligimizni, qayerga yo'l olayotganimizni va qanday erishishimizni belgilaydi — birga."
+
+#: templates/pages/about/mission-vision.html
+msgid "Download Strategy 2030"
+msgstr "Strategiya 2030 ni yuklab olish"
+
+#: templates/pages/about/mission-vision.html
+msgid "Our Mission"
+msgstr "Bizning missiyamiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "An exceptional education for the"
+msgstr "Barchaga ajoyib ta'lim —"
+
+#: templates/pages/about/mission-vision.html
+msgid "many"
+msgstr "ko'pchilik uchun"
+
+#: templates/pages/about/mission-vision.html
+msgid "Our mission, as established in our founding charter, is to:"
+msgstr "Ta'sis yoziqlashuvimizda belgilangan missiyamiz:"
+
+#: templates/pages/about/mission-vision.html
+msgid "...advance education, bridge cultures, and empower students through world-class teaching and global partnerships, for the benefit of individuals, Uzbekistan, and the world."
+msgstr "...ta'limni rivojlantirish, madaniyatlarni bog'lash va jahon darajasidagi ta'lim va global hamkorliklar orqali talabalarni kuchaytirish — shaxslar, O'zbekiston va butun dunyo manfaati uchun."
+
+#: templates/pages/about/mission-vision.html
+msgid "We believe where you're from shouldn't decide how far you can go. At TIU, it's more about what you know than who you know. And everyone is empowered to achieve in their own way."
+msgstr "Biz qayerdan kelganingiz qanchalik uzoqqa borishingizni belgilamasligi kerak deb ishonamiz. TIUda kimni tanishingizdan ko'ra nimani bilishingiz muhimroq. Har bir inson o'z yo'lida muvaffaqiyatga erishishga qodir."
+
+#: templates/pages/about/mission-vision.html
+msgid "As one of Uzbekistan's pioneering international universities, we have a bold commitment to academic excellence and a vision of creating life-changing opportunities through education. We'll build on this foundation to fulfil our strategy."
+msgstr "O'zbekistonning yetakchi xalqaro universitetlaridan biri sifatida biz akademik mukammallikka sodiqmiz va ta'lim orqali hayotni o'zgartiruvchi imkoniyatlar yaratish haqidagi tasavvurimiz bor. Strategiyamizni amalga oshirish uchun shu poydevorni mustahkamlaymiz."
+
+#: templates/pages/about/mission-vision.html
+msgid "Our Vision"
+msgstr "Bizning ko'zlagan maqsadimiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "Shaping a brighter, bolder future"
+msgstr "Yorqinroq va jasurroq kelajakni shakllantiramiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "for all"
+msgstr "barcha uchun"
+
+#: templates/pages/about/mission-vision.html
+msgid "The world is more connected than ever, yet access to quality education remains unequal. Think of the barriers facing young people across Central Asia. The gap between potential and opportunity. Motivated by these challenges and inspired by the power of international collaboration, we're building a fairer, brighter future."
+msgstr "Dunyo har qachongidan ham ko'proq bog'langan, ammo sifatli ta'limga kirish hali ham teng emas. Markaziy Osiyo yoshlari duch keladigan to'siqlarni o'ylang. Salohiyat va imkoniyat o'rtasidagi farq. Ushbu qiyinchiliklardan ilhomlangan va xalqaro hamkorlik kuchidan ruhlangan holda biz adolatli va yorqin kelajakni quryapmiz."
+
+#: templates/pages/about/mission-vision.html
+msgid "Founded as Uzbekistan's first truly international university, TIU has been pioneering dual-degree education and cross-border learning from the start. Contributing to education, research, and the social, economic, and cultural growth of our region. We'll continue this work into the next decade and beyond."
+msgstr "O'zbekistonning birinchi chinakam xalqaro universiteti sifatida tashkil etilgan TIU boshidanoq qo'shma diplom ta'limi va transchegaraviy o'qitishni boshlab berdi. Ta'lim, tadqiqot va mintaqamizning ijtimoiy, iqtisodiy va madaniy rivojlanishiga hissa qo'shib kelmoqda. Kelgusi o'n yillikda ham bu ishni davom ettiramiz."
+
+#: templates/pages/about/mission-vision.html
+msgid "As an internationally engaged university, we address the challenges facing our society. Sharing solutions across borders in an increasingly connected world. And guided at every turn by the dedication of our people, our strong sense of place, and the vitality of our partnerships."
+msgstr "Xalqaro miqyosda faol universitet sifatida biz jamiyatimiz duch keladigan muammolarga javob beramiz. Tobora bog'langan dunyoda chegaralar oshib yechimlarni almashmoqdamiz. Har bir qadamda xodimlarimiz sadoqati, o'z o'rnimizni his etish va hamkorliklarimiz hayotiyligi bizga yo'l ko'rsatadi."
+
+#: templates/pages/about/mission-vision.html
+msgid "Our Values"
+msgstr "Bizning qadriyatlarimiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We're"
+msgstr "Biz"
+
+#: templates/pages/about/mission-vision.html
+msgid "inclusive"
+msgstr "inklyuzivmiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "A supportive, global community of students, scholars, and partners. The true spirit of international friendship. Where everyone can grow into who, what, and where they want to be in the world."
+msgstr "Talabalar, olimlar va hamkorlarning qo'llab-quvvatlovchi, global jamoasi. Xalqaro do'stlikning chinakam ruhi. Har kim dunyoda bo'lishni xohlagan shaxsga aylana oladigan muhit."
+
+#: templates/pages/about/mission-vision.html
+msgid "A welcoming community to discover your true potential"
+msgstr "Haqiqiy salohiyatingizni ochish uchun mehribon jamoa"
+
+#: templates/pages/about/mission-vision.html
+msgid "We provide a safe, friendly, and welcoming environment for all, where our differences are celebrated"
+msgstr "Biz barcha uchun xavfsiz, do'stona va mehmondo'st muhit yaratamiz, bu yerda farqlarimiz qadrlanadi"
+
+#: templates/pages/about/mission-vision.html
+msgid "We help each and every one of our students, staff, and partners to achieve their full potential with a personal, supportive approach"
+msgstr "Biz har bir talaba, xodim va hamkorimizga shaxsiy, qo'llab-quvvatlovchi yondashuv bilan to'liq salohiyatiga erishishda yordam beramiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We celebrate individual and collective success"
+msgstr "Biz individual va jamoaviy muvaffaqiyatlarni nishonlaymiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We're mindful of the positive impact of what we each do, every day, on other individuals and communities both near and far"
+msgstr "Har birimiz har kuni boshqa shaxslar va jamoalarga — yaqin va uzoqdagilarga — ko'rsatadigan ijobiy ta'sirni anglaymiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "empowering"
+msgstr "kuchaytiruvchimiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "A civic university equipping people to understand the defining issues of our time. And empowering them to act and shape their personal and collective future for the better."
+msgstr "Insonlarni zamonamizning muhim muammolarini tushunishga tayyorlaydigan fuqarolik universiteti. Ularni o'z shaxsiy va jamoaviy kelajaklarini yaxshiroq tomonga shakllantirish uchun harakatga undaydigan kuch."
+
+#: templates/pages/about/mission-vision.html
+msgid "Defying convention to break new ground"
+msgstr "Yangi yo'llar ochish uchun an'analarga qarshi borish"
+
+#: templates/pages/about/mission-vision.html
+msgid "We empower people to succeed, recognizing that with empowerment comes responsibility and accountability"
+msgstr "Biz insonlarni muvaffaqiyatga erishishga kuchlaytiramiz, kuch bilan birga mas'uliyat va javobgarlik kelishini tan olib"
+
+#: templates/pages/about/mission-vision.html
+msgid "We build people's confidence through understanding, knowledge, skills, and experience"
+msgstr "Biz tushunish, bilim, ko'nikma va tajriba orqali insonlarga ishonch bag'ishlaymiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We stretch people's minds and help them develop new ways of thinking that will help shape a fairer, brighter future"
+msgstr "Biz insonlarning tafakkurini kengaytiramiz va adolatliroq, yorqinroq kelajakni shakllantirishga yordam beradigan yangi fikrlash usullarini rivojlantirishga ko'maklashamiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "Through equal opportunity, we ensure everyone has the opportunity to shine"
+msgstr "Teng imkoniyatlar orqali har kimga o'z iste'dodini namoyon qilish imkonini beramiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "progressive"
+msgstr "progressivmiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "A living laboratory. A place where all students, scholars, and partners from every faculty collaborate hands-on. Where we generate new thinking in defiance of traditional academic barriers and conventions."
+msgstr "Tirik laboratoriya. Barcha fakultetlardan talabalar, olimlar va hamkorlar amaliy hamkorlik qiladigan joy. An'anaviy akademik to'siqlarga qarshi yangi fikrlarni yaratadigan muhit."
+
+#: templates/pages/about/mission-vision.html
+msgid "Driven by an unwavering desire for progress"
+msgstr "Taraqqiyotga bo'lgan doimiy intilish bilan harakatda"
+
+#: templates/pages/about/mission-vision.html
+msgid "We set high standards and challenge ourselves and others to deliver meaningful progress with tangible outcomes"
+msgstr "Biz yuqori standartlarni belgilaymiz va o'zimizni hamda boshqalarni aniq natijalarga ega mazmunli taraqqiyotga erishishga undaymiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We follow and develop best practice across all areas of our activity"
+msgstr "Biz faoliyatimizning barcha sohalarida eng yaxshi amaliyotlarni qo'llaymiz va rivojlantiramiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We work at pace and are always future-facing and, with agility, ready to adapt"
+msgstr "Biz tezkorlik bilan ishlaymiz, har doim kelajakka qaraymiz va moslashuvchanlik bilan o'zgarishlarga tayyormiz"
+
+#: templates/pages/about/mission-vision.html
+msgid "We learn to be self-reflective so we can seek improvement, make an even bigger difference, and embrace a different future"
+msgstr "Biz o'z-o'zimizni tahlil qilishni o'rganamiz — yaxshilanishga intilish, kattaroq o'zgarish qilish va yangi kelajakni qabul qilish uchun"
+
+#: templates/pages/about/mission-vision.html
+msgid "Inclusive community"
+msgstr "Inklyuziv jamoa"
+
+#: templates/pages/about/mission-vision.html
+msgid "Empowering students"
+msgstr "Talabalarni kuchaytirish"
+
+#: templates/pages/about/mission-vision.html
+msgid "Progressive thinking"
+msgstr "Progressiv tafakkur"

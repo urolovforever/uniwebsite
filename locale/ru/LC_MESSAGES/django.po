@@ -2899,3 +2899,179 @@ msgstr "Хотите узнать правду? Пообщайтесь с нын
 
 msgid "Get in touch"
 msgstr "Связаться"
+
+#: templates/pages/about/mission-vision.html
+msgid "Shaping the future through education, innovation, and global partnerships that empower the next generation of leaders."
+msgstr "Формируя будущее через образование, инновации и глобальные партнёрства, которые готовят лидеров нового поколения."
+
+#: templates/pages/about/mission-vision.html
+msgid "Together on the frontier of education's future"
+msgstr "Вместе на переднем крае будущего образования"
+
+#: templates/pages/about/mission-vision.html
+msgid "TIU Strategy 2030 is our roadmap for the next decade — a bold plan to become Central Asia's most internationally connected university. It sets out how we will expand global partnerships, pioneer dual-degree pathways, and empower every student to build a career without borders."
+msgstr "Стратегия TIU 2030 — наша дорожная карта на следующее десятилетие. Смелый план стать самым международным университетом Центральной Азии. Она определяет, как мы будем расширять глобальные партнёрства, развивать программы двойных дипломов и давать каждому студенту возможность строить карьеру без границ."
+
+#: templates/pages/about/mission-vision.html
+msgid "From strengthening research and innovation to deepening our ties with industry and communities, Strategy 2030 defines who we are, where we're heading, and how we'll get there — together."
+msgstr "От укрепления исследований и инноваций до углубления связей с промышленностью и обществом — Стратегия 2030 определяет, кто мы, куда движемся и как достигнем цели — вместе."
+
+#: templates/pages/about/mission-vision.html
+msgid "Download Strategy 2030"
+msgstr "Скачать Стратегию 2030"
+
+#: templates/pages/about/mission-vision.html
+msgid "Our Mission"
+msgstr "Наша миссия"
+
+#: templates/pages/about/mission-vision.html
+msgid "An exceptional education for the"
+msgstr "Исключительное образование для"
+
+#: templates/pages/about/mission-vision.html
+msgid "many"
+msgstr "многих"
+
+#: templates/pages/about/mission-vision.html
+msgid "Our mission, as established in our founding charter, is to:"
+msgstr "Наша миссия, закреплённая в учредительном уставе:"
+
+#: templates/pages/about/mission-vision.html
+msgid "...advance education, bridge cultures, and empower students through world-class teaching and global partnerships, for the benefit of individuals, Uzbekistan, and the world."
+msgstr "...продвигать образование, объединять культуры и расширять возможности студентов через преподавание мирового класса и глобальные партнёрства на благо каждого, Узбекистана и всего мира."
+
+#: templates/pages/about/mission-vision.html
+msgid "We believe where you're from shouldn't decide how far you can go. At TIU, it's more about what you know than who you know. And everyone is empowered to achieve in their own way."
+msgstr "Мы верим, что ваше происхождение не должно определять, как далеко вы можете пойти. В TIU важнее то, что вы знаете, а не кого вы знаете. Каждый имеет возможность достичь успеха по-своему."
+
+#: templates/pages/about/mission-vision.html
+msgid "As one of Uzbekistan's pioneering international universities, we have a bold commitment to academic excellence and a vision of creating life-changing opportunities through education. We'll build on this foundation to fulfil our strategy."
+msgstr "Как один из первых международных университетов Узбекистана, мы твёрдо привержены академическому превосходству и видим свою цель в создании возможностей, меняющих жизнь, через образование. Мы будем опираться на этот фундамент для реализации нашей стратегии."
+
+#: templates/pages/about/mission-vision.html
+msgid "Our Vision"
+msgstr "Наше видение"
+
+#: templates/pages/about/mission-vision.html
+msgid "Shaping a brighter, bolder future"
+msgstr "Формируем более яркое и смелое будущее"
+
+#: templates/pages/about/mission-vision.html
+msgid "for all"
+msgstr "для всех"
+
+#: templates/pages/about/mission-vision.html
+msgid "The world is more connected than ever, yet access to quality education remains unequal. Think of the barriers facing young people across Central Asia. The gap between potential and opportunity. Motivated by these challenges and inspired by the power of international collaboration, we're building a fairer, brighter future."
+msgstr "Мир связан как никогда, но доступ к качественному образованию остаётся неравным. Подумайте о барьерах, с которыми сталкивается молодёжь Центральной Азии. О разрыве между потенциалом и возможностями. Движимые этими вызовами и вдохновлённые силой международного сотрудничества, мы строим более справедливое и светлое будущее."
+
+#: templates/pages/about/mission-vision.html
+msgid "Founded as Uzbekistan's first truly international university, TIU has been pioneering dual-degree education and cross-border learning from the start. Contributing to education, research, and the social, economic, and cultural growth of our region. We'll continue this work into the next decade and beyond."
+msgstr "Основанный как первый по-настоящему международный университет Узбекистана, TIU с самого начала развивал образование с двойными дипломами и трансграничное обучение. Мы вносим вклад в образование, исследования, социальный, экономический и культурный рост нашего региона. Мы продолжим эту работу в следующем десятилетии и далее."
+
+#: templates/pages/about/mission-vision.html
+msgid "As an internationally engaged university, we address the challenges facing our society. Sharing solutions across borders in an increasingly connected world. And guided at every turn by the dedication of our people, our strong sense of place, and the vitality of our partnerships."
+msgstr "Как международно ориентированный университет, мы решаем проблемы, стоящие перед нашим обществом. Мы делимся решениями через границы во всё более связанном мире. И на каждом шагу нас направляет преданность наших людей, глубокое чувство места и жизненная сила наших партнёрств."
+
+#: templates/pages/about/mission-vision.html
+msgid "Our Values"
+msgstr "Наши ценности"
+
+#: templates/pages/about/mission-vision.html
+msgid "We're"
+msgstr "Мы"
+
+#: templates/pages/about/mission-vision.html
+msgid "inclusive"
+msgstr "инклюзивны"
+
+#: templates/pages/about/mission-vision.html
+msgid "A supportive, global community of students, scholars, and partners. The true spirit of international friendship. Where everyone can grow into who, what, and where they want to be in the world."
+msgstr "Поддерживающее глобальное сообщество студентов, учёных и партнёров. Истинный дух международной дружбы. Место, где каждый может стать тем, кем хочет быть."
+
+#: templates/pages/about/mission-vision.html
+msgid "A welcoming community to discover your true potential"
+msgstr "Гостеприимное сообщество для раскрытия вашего истинного потенциала"
+
+#: templates/pages/about/mission-vision.html
+msgid "We provide a safe, friendly, and welcoming environment for all, where our differences are celebrated"
+msgstr "Мы создаём безопасную, дружелюбную и гостеприимную среду для всех, где наши различия ценятся"
+
+#: templates/pages/about/mission-vision.html
+msgid "We help each and every one of our students, staff, and partners to achieve their full potential with a personal, supportive approach"
+msgstr "Мы помогаем каждому студенту, сотруднику и партнёру раскрыть свой потенциал с помощью персонального подхода"
+
+#: templates/pages/about/mission-vision.html
+msgid "We celebrate individual and collective success"
+msgstr "Мы отмечаем индивидуальные и коллективные успехи"
+
+#: templates/pages/about/mission-vision.html
+msgid "We're mindful of the positive impact of what we each do, every day, on other individuals and communities both near and far"
+msgstr "Мы помним о положительном влиянии наших ежедневных действий на людей и сообщества — близкие и далёкие"
+
+#: templates/pages/about/mission-vision.html
+msgid "empowering"
+msgstr "вдохновляющие"
+
+#: templates/pages/about/mission-vision.html
+msgid "A civic university equipping people to understand the defining issues of our time. And empowering them to act and shape their personal and collective future for the better."
+msgstr "Гражданский университет, который готовит людей понимать определяющие проблемы нашего времени и вдохновляет их действовать и формировать своё будущее к лучшему."
+
+#: templates/pages/about/mission-vision.html
+msgid "Defying convention to break new ground"
+msgstr "Бросая вызов условностям, чтобы прокладывать новые пути"
+
+#: templates/pages/about/mission-vision.html
+msgid "We empower people to succeed, recognizing that with empowerment comes responsibility and accountability"
+msgstr "Мы наделяем людей силой для успеха, признавая, что с возможностями приходит ответственность"
+
+#: templates/pages/about/mission-vision.html
+msgid "We build people's confidence through understanding, knowledge, skills, and experience"
+msgstr "Мы укрепляем уверенность людей через понимание, знания, навыки и опыт"
+
+#: templates/pages/about/mission-vision.html
+msgid "We stretch people's minds and help them develop new ways of thinking that will help shape a fairer, brighter future"
+msgstr "Мы расширяем мышление людей и помогаем развивать новые способы мышления для более справедливого и светлого будущего"
+
+#: templates/pages/about/mission-vision.html
+msgid "Through equal opportunity, we ensure everyone has the opportunity to shine"
+msgstr "Через равные возможности мы обеспечиваем каждому шанс проявить себя"
+
+#: templates/pages/about/mission-vision.html
+msgid "progressive"
+msgstr "прогрессивны"
+
+#: templates/pages/about/mission-vision.html
+msgid "A living laboratory. A place where all students, scholars, and partners from every faculty collaborate hands-on. Where we generate new thinking in defiance of traditional academic barriers and conventions."
+msgstr "Живая лаборатория. Место, где студенты, учёные и партнёры всех факультетов сотрудничают на практике. Где мы создаём новое мышление, бросая вызов традиционным академическим барьерам."
+
+#: templates/pages/about/mission-vision.html
+msgid "Driven by an unwavering desire for progress"
+msgstr "Движимые неуклонным стремлением к прогрессу"
+
+#: templates/pages/about/mission-vision.html
+msgid "We set high standards and challenge ourselves and others to deliver meaningful progress with tangible outcomes"
+msgstr "Мы устанавливаем высокие стандарты и ставим перед собой и другими задачу достигать значимого прогресса с ощутимыми результатами"
+
+#: templates/pages/about/mission-vision.html
+msgid "We follow and develop best practice across all areas of our activity"
+msgstr "Мы следуем лучшим практикам и развиваем их во всех сферах нашей деятельности"
+
+#: templates/pages/about/mission-vision.html
+msgid "We work at pace and are always future-facing and, with agility, ready to adapt"
+msgstr "Мы работаем быстро, всегда смотрим в будущее и гибко адаптируемся к изменениям"
+
+#: templates/pages/about/mission-vision.html
+msgid "We learn to be self-reflective so we can seek improvement, make an even bigger difference, and embrace a different future"
+msgstr "Мы учимся самоанализу, чтобы стремиться к улучшению, вносить ещё больший вклад и принимать иное будущее"
+
+#: templates/pages/about/mission-vision.html
+msgid "Inclusive community"
+msgstr "Инклюзивное сообщество"
+
+#: templates/pages/about/mission-vision.html
+msgid "Empowering students"
+msgstr "Вдохновение студентов"
+
+#: templates/pages/about/mission-vision.html
+msgid "Progressive thinking"
+msgstr "Прогрессивное мышление"
