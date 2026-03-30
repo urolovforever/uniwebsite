@@ -26,9 +26,9 @@
         </nav>
 
         <div class="nav-actions">
-            <button class="nav-search-btn" id="searchToggle" aria-label="{% trans 'Search' %}">
+            <a href="{% url 'core:search' %}" class="nav-search-btn" aria-label="{% trans 'Search' %}">
                 <i class="fas fa-search"></i>
-            </button>
+            </a>
             <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
                 <span></span>
                 <span></span>
@@ -38,38 +38,3 @@
     </div>
 </header>
 
-<!-- Search Panel (card layout) -->
-<div class="search-backdrop" id="searchBackdrop"></div>
-<div class="search-panel" id="searchPanel"
-    data-no-results="{% trans 'No results found' %}"
-    data-error="{% trans 'Something went wrong' %}"
-    data-view-all="{% trans 'View all search results' %}"
-    data-min-chars="{% trans 'Type at least 2 characters to search' %}"
-    <div class="search-panel-inner">
-        <div class="search-panel-left">
-            <h2 class="search-panel-title">{% trans "Search" %}</h2>
-            <div class="search-tabs">
-                <button class="search-tab" data-type="program">{% trans "PROGRAMS" %}</button>
-                <button class="search-tab" data-type="news">{% trans "NEWS" %}</button>
-                <button class="search-tab" data-type="event">{% trans "EVENTS" %}</button>
-                <button class="search-tab active" data-type="all">{% trans "ALL" %}</button>
-            </div>
-            <div class="search-field">
-                <i class="fas fa-search search-field-icon"></i>
-                <input type="text" id="searchInput" class="search-field-input" placeholder="{% trans 'Site search' %}" autocomplete="off">
-            </div>
-            <div class="search-quick-links">
-                <h3 class="search-quick-title">{% trans "FREQUENTLY SEARCHED" %}</h3>
-                <div class="search-quick-grid">
-                    <a href="{% url 'programs:bachelor_list' %}" class="search-quick-link">{% trans "Bachelor Programs" %} <i class="fas fa-arrow-right"></i></a>
-                    <a href="{% url 'programs:master_list' %}" class="search-quick-link">{% trans "Master Programs" %} <i class="fas fa-arrow-right"></i></a>
-                    <a href="{% url 'core:scholarships' %}" class="search-quick-link">{% trans "Scholarships" %} <i class="fas fa-arrow-right"></i></a>
-                    <a href="{% url 'core:tuition_fees' %}" class="search-quick-link">{% trans "Tuition & Fees" %} <i class="fas fa-arrow-right"></i></a>
-                    <a href="{% url 'core:static_page' url_path='international/admission-process' %}" class="search-quick-link">{% trans "International Admissions" %} <i class="fas fa-arrow-right"></i></a>
-                    <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="search-quick-link">{% trans "Campus Map" %} <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="search-panel-results" id="searchResults"></div>
-    </div>
-</div>
