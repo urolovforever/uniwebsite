@@ -2821,3 +2821,102 @@ msgstr "Приём и Международный"
 
 msgid "Clubs & Sports"
 msgstr "Клубы и Спорт"
+
+msgid "Tashkent International University is a modern university founded in 2023 with a mission to provide world-class education in the heart of Uzbekistan. With international partnerships, a unique 2+2 dual degree program, and a campus built for the future — TIU gives you the tools and environment to succeed. Whether you're starting your bachelor's or advancing through a master's or PhD, your journey to a global career begins here."
+msgstr "Ташкентский Международный Университет — современный вуз, основанный в 2023 году с миссией предоставлять образование мирового уровня в сердце Узбекистана. Международные партнёрства, уникальная программа двойного диплома 2+2 и кампус, построенный для будущего — TIU даёт вам все инструменты для успеха. Бакалавриат, магистратура или докторантура — ваш путь к глобальной карьере начинается здесь."
+
+msgid "Our campus on Little Ring Road is right in the center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. You'll find modern lecture halls, coworking spaces, a fully equipped library, and comfortable study areas all in one place. The surrounding cafes, parks, and cultural landmarks make campus life both convenient and inspiring."
+msgstr "Наш кампус на Малой кольцевой дороге расположен в самом центре Ташкента — в нескольких минутах от площади Амира Темура, Национальной библиотеки и основных станций метро. Современные аудитории, коворкинги, полностью оснащённая библиотека и комфортные учебные зоны — всё в одном месте. Окружающие кафе, парки и культурные достопримечательности делают студенческую жизнь удобной и вдохновляющей."
+
+msgid "About TIU"
+msgstr "О TIU"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Discover Tashkent International University — a young, ambitious university in the heart of Uzbekistan, built for the next generation of global professionals."
+msgstr "Откройте Ташкентский Международный Университет — молодой, амбициозный вуз в сердце Узбекистана, созданный для нового поколения глобальных профессионалов."
+
+msgid "One campus. One city. A world of opportunity."
+msgstr "Один кампус. Один город. Мир возможностей."
+
+msgid "Founded in 2023, Tashkent International University brings together students from across Uzbekistan and beyond. From your very first day, you become part of a supportive academic community where you can challenge yourself, discover new interests, and prepare for a career without borders. At TIU, your potential has no limits."
+msgstr "Основанный в 2023 году, Ташкентский Международный Университет объединяет студентов со всего Узбекистана и других стран. С первого дня вы становитесь частью поддерживающего академического сообщества, где можете бросить вызов себе, открыть новые интересы и подготовиться к карьере без границ."
+
+msgid "A modern campus designed for your success"
+msgstr "Современный кампус, созданный для вашего успеха"
+
+msgid "Located on Little Ring Road in central Tashkent, our campus features modern lecture halls, coworking spaces, a fully equipped library, computer labs, and comfortable rest areas. Everything you need for productive learning and a vibrant student life — all in one place."
+msgstr "Расположенный на Малой кольцевой дороге в центре Ташкента, наш кампус включает современные аудитории, коворкинги, полностью оснащённую библиотеку, компьютерные лаборатории и комфортные зоны отдыха. Всё для продуктивного обучения и яркой студенческой жизни — в одном месте."
+
+msgid "Live close to where you learn."
+msgstr "Живите рядом с местом учёбы."
+
+msgid "TIU helps students find comfortable accommodation near campus. Whether it's a university-recommended hostel or a shared apartment nearby, you'll never be far from your lectures, the library, or your friends. We're here to help you settle in quickly so you can focus on what matters — your studies."
+msgstr "TIU помогает студентам найти комфортное жильё рядом с кампусом. Будь то рекомендованное университетом общежитие или съёмная квартира поблизости — вы всегда будете рядом с лекциями, библиотекой и друзьями."
+
+msgid "A city that feels like home from day one"
+msgstr "Город, который становится домом с первого дня"
+
+msgid "Tashkent is one of the most affordable and welcoming capital cities in Central Asia. Safe streets, excellent public transport, diverse food, and a growing international community make it easy to settle in. From the Old City bazaars to modern shopping centers, Tashkent offers something for everyone."
+msgstr "Ташкент — одна из самых доступных и гостеприимных столиц Центральной Азии. Безопасные улицы, отличный общественный транспорт, разнообразная кухня и растущее международное сообщество — здесь легко почувствовать себя как дома."
+
+msgid "Your voice matters — let's make it heard."
+msgstr "Ваш голос важен — давайте сделаем его услышанным."
+
+msgid "Every TIU student is automatically a member of the Student Union. It's your platform to propose ideas, organize events, and represent student interests. From academic feedback to social initiatives, the Union is where your voice shapes university life."
+msgstr "Каждый студент TIU автоматически становится членом Студенческого союза. Это ваша платформа для предложения идей, организации мероприятий и представления интересов студентов."
+
+msgid "Stay active, stay sharp."
+msgstr "Будьте активны, будьте в форме."
+
+msgid "Our sports facilities include a modern gym, a multi-court sports hall, and outdoor pitches. Join university sports teams, take part in inter-university tournaments, or simply stay fit between lectures. Sport at TIU is for everyone."
+msgstr "Наши спортивные объекты включают современный зал, многофункциональный спортзал и открытые площадки. Присоединяйтесь к спортивным командам, участвуйте в межвузовских турнирах или просто поддерживайте форму между лекциями."
+
+msgid "Find your people, find your passion."
+msgstr "Найдите своих людей, найдите своё увлечение."
+
+msgid "With 50+ clubs — from debate and photography to coding and chess — there's something for everyone. Clubs are student-led and open to all. It's where friendships form, skills develop, and university memories are made."
+msgstr "50+ клубов — от дебатов и фотографии до программирования и шахмат — здесь найдётся что-то для каждого. Клубы управляются студентами и открыты для всех."
+
+msgid "One day that launches a lifetime."
+msgstr "Один день, который открывает целую жизнь."
+
+msgid "Your graduation from TIU marks the beginning of a new chapter. It's a celebration of your hard work, dedication, and growth. As a TIU graduate, you join a growing network of alumni making an impact in Uzbekistan and around the world."
+msgstr "Выпуск из TIU — начало новой главы. Это праздник вашего труда, преданности и роста. Как выпускник TIU, вы присоединяетесь к растущей сети алюмни, оказывающих влияние в Узбекистане и по всему миру."
+
+msgid "Alumni Network"
+msgstr "Сеть выпускников"
+
+msgid "See TIU before you get here."
+msgstr "Посмотрите TIU до приезда."
+
+msgid "Curious about TIU but can't visit in person? Take our virtual campus tour — explore the lecture halls, library, student spaces, and surroundings from the comfort of your home. It's the next best thing to being here."
+msgstr "Интересуетесь TIU, но не можете приехать лично? Пройдите виртуальный тур по кампусу — осмотрите аудитории, библиотеку, студенческие пространства и окрестности из дома."
+
+msgid "Start your virtual tour"
+msgstr "Начать виртуальный тур"
+
+msgid "Talk to Students"
+msgstr "Поговорить со студентами"
+
+msgid "Hear it from those who know."
+msgstr "Услышьте от тех, кто знает."
+
+msgid "Want the real story? Chat with current TIU students about what life is actually like — from academics and social life to settling in and finding your way around Tashkent. They've been where you are."
+msgstr "Хотите узнать правду? Пообщайтесь с нынешними студентами TIU о том, какова жизнь на самом деле — от учёбы и социальной жизни до адаптации и знакомства с Ташкентом."
+
+msgid "Get in touch"
+msgstr "Связаться"
+
+msgid "EXPLORE MORE"
+msgstr "УЗНАТЬ БОЛЬШЕ"
+
+msgid "Why TIU"
+msgstr "Почему TIU"
+
+msgid "Mission & Vision"
+msgstr "Миссия и Видение"
+
+msgid "Sustainability"
+msgstr "Устойчивое развитие"

@@ -2697,13 +2697,13 @@ msgid "No programmes match your search. Try a different keyword."
 msgstr ""
 
 msgid "Build a strong foundation for your future career"
-msgstr "Kelajak karerangiz uchun mustahkam poydevor yarating"
+msgstr "Kelajak karyerangiz uchun mustahkam poydevor yarating"
 
 msgid "Choose from programs in Business & Economics, IT, Education, Foreign Languages, and Jurisprudence. Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market."
 msgstr "Biznes va Iqtisodiyot, IT, Pedagogika, Xorijiy tillar va Huquqshunoslik dasturlaridan tanlang. Bakalavr dasturlarimiz xalqaro standartlarni amaliy ko'nikmalar bilan birlashtiradi."
 
 msgid "Deepen your expertise and advance your career"
-msgstr "Bilimingizni chuqurlashtiring va karerangizni rivojlantiring"
+msgstr "Bilimingizni chuqurlashtiring va karyerangizni rivojlantiring"
 
 msgid "Our master's programs in Public Finance, International Finance, and Economics offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey."
 msgstr "Davlat moliyasi, Xalqaro moliya va Iqtisodiyot bo'yicha magistratura dasturlarimiz ilg'or tadqiqot imkoniyatlari va tajribali professor-o'qituvchilarni taklif etadi."
@@ -2712,7 +2712,7 @@ msgid "Lead research and shape the future of your field"
 msgstr "Tadqiqotlarga rahbarlik qiling va soha kelajagini shakllantiring"
 
 msgid "Our doctoral programs in Finance, Economics, and Management prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects."
-msgstr "Moliya, Iqtisodiyot va Menejment bo'yicha doktorantura dasturlarimiz akademik va ilmiy rahbarlik karerasiga tayyorlaydi."
+msgstr "Moliya, Iqtisodiyot va Menejment bo'yicha doktorantura dasturlarimiz akademik va ilmiy rahbarlik karyerasiga tayyorlaydi."
 
 msgid "program — study here,"
 msgstr "dasturi — bu yerda o'qing,"
@@ -2799,3 +2799,102 @@ msgstr "Qabul va Xalqaro"
 
 msgid "Clubs & Sports"
 msgstr "Klublar va Sport"
+
+msgid "Tashkent International University is a modern university founded in 2023 with a mission to provide world-class education in the heart of Uzbekistan. With international partnerships, a unique 2+2 dual degree program, and a campus built for the future — TIU gives you the tools and environment to succeed. Whether you're starting your bachelor's or advancing through a master's or PhD, your journey to a global career begins here."
+msgstr "Toshkent Xalqaro Universiteti — 2023-yilda O'zbekiston poytaxtida jahon darajasidagi ta'lim berish maqsadida tashkil etilgan zamonaviy universitet. Xalqaro hamkorliklar, noyob 2+2 qo'shma diplom dasturi va kelajak uchun qurilgan kampus — TIU sizga muvaffaqiyatga erishish uchun barcha imkoniyatlarni beradi. Bakalavr, magistratura yoki doktorantura — global karyerangiz shu yerdan boshlanadi."
+
+msgid "Our campus on Little Ring Road is right in the center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. You'll find modern lecture halls, coworking spaces, a fully equipped library, and comfortable study areas all in one place. The surrounding cafes, parks, and cultural landmarks make campus life both convenient and inspiring."
+msgstr "Kichik Halqa yo'lidagi kampusimiz Toshkent markazida joylashgan — Amir Temur maydonidan, Milliy kutubxonadan va asosiy metro bekatlaridan bir necha daqiqa masofada. Zamonaviy auditoriyalar, kovorking maydonchalar, to'liq jihozlangan kutubxona va qulay o'quv xonalari — barchasi bir joyda. Atrofdagi kafelar, bog'lar va madaniy diqqatga sazovor joylar talaba hayotini qulaylashtiradi."
+
+msgid "About TIU"
+msgstr "TIU haqida"
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "Discover Tashkent International University — a young, ambitious university in the heart of Uzbekistan, built for the next generation of global professionals."
+msgstr "Toshkent Xalqaro Universitetini kashf eting — O'zbekiston qalbida qurilgan, global mutaxassislarning yangi avlodi uchun mo'ljallangan yosh va shijoatli universitet."
+
+msgid "One campus. One city. A world of opportunity."
+msgstr "Bitta kampus. Bitta shahar. Imkoniyatlar dunyosi."
+
+msgid "Founded in 2023, Tashkent International University brings together students from across Uzbekistan and beyond. From your very first day, you become part of a supportive academic community where you can challenge yourself, discover new interests, and prepare for a career without borders. At TIU, your potential has no limits."
+msgstr "2023-yilda tashkil etilgan Toshkent Xalqaro Universiteti butun O'zbekiston va undan tashqaridan talabalarni birlashtiradi. Birinchi kuningizdan boshlab siz o'zingizni sinab ko'rish, yangi qiziqishlarni kashf etish va chegaralarsiz karyeraga tayyorlanish mumkin bo'lgan qo'llab-quvvatlovchi akademik jamoaning a'zosiga aylanasiz."
+
+msgid "A modern campus designed for your success"
+msgstr "Muvaffaqiyatingiz uchun yaratilgan zamonaviy kampus"
+
+msgid "Located on Little Ring Road in central Tashkent, our campus features modern lecture halls, coworking spaces, a fully equipped library, computer labs, and comfortable rest areas. Everything you need for productive learning and a vibrant student life — all in one place."
+msgstr "Toshkent markazidagi Kichik Halqa yo'lida joylashgan kampusimizda zamonaviy auditoriyalar, kovorking maydonchalar, to'liq jihozlangan kutubxona, kompyuter laboratoriyalari va qulay dam olish zonalari mavjud. Samarali o'qish va yorqin talaba hayoti uchun zarur bo'lgan hamma narsa — bir joyda."
+
+msgid "Live close to where you learn."
+msgstr "O'qiydigan joyingizga yaqin yashang."
+
+msgid "TIU helps students find comfortable accommodation near campus. Whether it's a university-recommended hostel or a shared apartment nearby, you'll never be far from your lectures, the library, or your friends. We're here to help you settle in quickly so you can focus on what matters — your studies."
+msgstr "TIU talabalarga kampus yaqinida qulay turar joy topishga yordam beradi. Universitet tavsiya etgan yotoqxona yoki yaqin atrofdagi umumiy kvartira bo'lsin — siz hech qachon darslar, kutubxona yoki do'stlaringizdan uzoqda bo'lmaysiz."
+
+msgid "A city that feels like home from day one"
+msgstr "Birinchi kundan uyingiz kabi his qilinadigan shahar"
+
+msgid "Tashkent is one of the most affordable and welcoming capital cities in Central Asia. Safe streets, excellent public transport, diverse food, and a growing international community make it easy to settle in. From the Old City bazaars to modern shopping centers, Tashkent offers something for everyone."
+msgstr "Toshkent Markaziy Osiyodagi eng qulay va mehmondo'st poytaxtlardan biridir. Xavfsiz ko'chalar, ajoyib jamoat transporti, xilma-xil taomlar va o'sib borayotgan xalqaro jamoa — barchasi joylashishni osonlashtiradi."
+
+msgid "Your voice matters — let's make it heard."
+msgstr "Sizning ovozingiz muhim — uni eshittiramiz."
+
+msgid "Every TIU student is automatically a member of the Student Union. It's your platform to propose ideas, organize events, and represent student interests. From academic feedback to social initiatives, the Union is where your voice shapes university life."
+msgstr "Har bir TIU talabasi avtomatik ravishda Talabalar ittifoqining a'zosi hisoblanadi. Bu sizning g'oyalarni taklif qilish, tadbirlar tashkil etish va talabalar manfaatlarini himoya qilish platformangiz."
+
+msgid "Stay active, stay sharp."
+msgstr "Faol bo'ling, doim tayyor bo'ling."
+
+msgid "Our sports facilities include a modern gym, a multi-court sports hall, and outdoor pitches. Join university sports teams, take part in inter-university tournaments, or simply stay fit between lectures. Sport at TIU is for everyone."
+msgstr "Sport inshootlarimiz zamonaviy sport zali, ko'p maydonli sport zali va ochiq maydonchalarnio'z ichiga oladi. Universitet sport jamoalariga qo'shiling, universitetlararo musobaqalarda ishtirok eting yoki darslar orasida sog'lom bo'ling."
+
+msgid "Find your people, find your passion."
+msgstr "O'z odamlaringizni toping, ehtimosingizni toping."
+
+msgid "With 50+ clubs — from debate and photography to coding and chess — there's something for everyone. Clubs are student-led and open to all. It's where friendships form, skills develop, and university memories are made."
+msgstr "50+ klublar — munozara va fotografiyadan kodlash va shaxmatgacha — har bir kishi uchun biror narsa bor. Klublar talabalar tomonidan boshqariladi va hamma uchun ochiq."
+
+msgid "One day that launches a lifetime."
+msgstr "Umrni boshlaydigan bir kun."
+
+msgid "Your graduation from TIU marks the beginning of a new chapter. It's a celebration of your hard work, dedication, and growth. As a TIU graduate, you join a growing network of alumni making an impact in Uzbekistan and around the world."
+msgstr "TIU dan bitiruv yangi bobning boshlanishini anglatadi. Bu sizning mehnatingiz, fidoyiligingiz va o'sishingizning bayramidir. TIU bitiruvchisi sifatida siz O'zbekiston va butun dunyoda iz qoldirayotgan bitiruvchilar tarmog'iga qo'shilasiz."
+
+msgid "Alumni Network"
+msgstr "Bitiruvchilar tarmog'i"
+
+msgid "See TIU before you get here."
+msgstr "TIU ga kelishdan oldin ko'ring."
+
+msgid "Curious about TIU but can't visit in person? Take our virtual campus tour — explore the lecture halls, library, student spaces, and surroundings from the comfort of your home. It's the next best thing to being here."
+msgstr "TIU haqida qiziqyapsiz, lekin shaxsan tashrif buyura olmaysizmi? Virtual kampus sayridan foydalaning — auditoriyalar, kutubxona, talabalar maydonlari va atrofni uyingizdan turib ko'ring."
+
+msgid "Start your virtual tour"
+msgstr "Virtual sayrni boshlang"
+
+msgid "Talk to Students"
+msgstr "Talabalar bilan suhbatlashing"
+
+msgid "Hear it from those who know."
+msgstr "Biladiganlardan eshiting."
+
+msgid "Want the real story? Chat with current TIU students about what life is actually like — from academics and social life to settling in and finding your way around Tashkent. They've been where you are."
+msgstr "Haqiqiy voqeani bilmoqchimisiz? Hozirgi TIU talabalari bilan hayot qanday ekanligini — o'qish va ijtimoiy hayotdan tortib, joylashish va Toshkentda yo'l topishgacha suhbatlashing."
+
+msgid "Get in touch"
+msgstr "Bog'lanish"
+
+msgid "EXPLORE MORE"
+msgstr "KO'PROQ O'RGANING"
+
+msgid "Why TIU"
+msgstr "Nega TIU"
+
+msgid "Mission & Vision"
+msgstr "Missiya va Maqsad"
+
+msgid "Sustainability"
+msgstr "Barqarorlik"
