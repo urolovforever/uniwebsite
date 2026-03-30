@@ -26,9 +26,9 @@
         </nav>
 
         <div class="nav-actions">
-            <a href="{% url 'core:search' %}" class="nav-search-btn" aria-label="Search">
+            <button class="nav-search-btn" id="searchToggle" aria-label="{% trans 'Search' %}">
                 <i class="fas fa-search"></i>
-            </a>
+            </button>
             <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
                 <span></span>
                 <span></span>
@@ -37,3 +37,19 @@
         </div>
     </div>
 </header>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-inner">
+        <div class="search-overlay-header">
+            <div class="search-input-wrap">
+                <i class="fas fa-search search-input-icon"></i>
+                <input type="text" id="searchInput" class="search-overlay-input" placeholder="{% trans 'Search programs, news, events...' %}" autocomplete="off">
+                <button class="search-close-btn" id="searchClose" aria-label="{% trans 'Close search' %}">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="search-overlay-results" id="searchResults"></div>
+    </div>
+</div>

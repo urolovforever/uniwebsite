@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import Http404
+from django.http import Http404, JsonResponse
 from django.template.loader import get_template
 from django.template import TemplateDoesNotExist
 from django.contrib import messages
@@ -109,6 +109,39 @@ def site_search(request):
         'hero_description': _('Found %(total)d results for "%(query)s"') % {'total': total, 'query': query} if query else _('Search across TIU'),
         'breadcrumbs': [{'title': _('Search'), 'url': None}],
     })
+
+
+def search_api(request):
+    """JSON search endpoint for real-time header search."""
+    query = request.GET.get('q', '').strip()
+    items = []
+
+    if query and len(query) >= 2:
+        for article in NewsArticle.objects.filter(
+            Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
+            is_published=True,
+        )[:5]:
+            items.append({'title': article.t('title'), 'url': article.get_absolute_url(), 'type': 'news'})
+
+        for event in Event.objects.filter(
+            Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
+            is_published=True,
+        )[:5]:
+            items.append({'title': event.t('title'), 'url': event.get_absolute_url(), 'type': 'event'})
+
+        for press in PressRelease.objects.filter(
+            Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
+            is_published=True,
+        )[:5]:
+            items.append({'title': press.t('title'), 'url': press.get_absolute_url(), 'type': 'press'})
+
+        for program in Program.objects.filter(
+            Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
+            is_published=True,
+        ).select_related('department')[:5]:
+            items.append({'title': program.t('title'), 'url': program.get_absolute_url(), 'type': 'program'})
+
+    return JsonResponse({'results': items, 'total': len(items)})
 
 
 def scholarships_page(request):

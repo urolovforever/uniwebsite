@@ -373,3 +373,80 @@ function animateCards(selector, options = {}) {
 
     cards.forEach(card => cardObserver.observe(card));
 }
+
+// ================================================
+// Header Search Overlay
+// ================================================
+(function() {
+    const toggle = document.getElementById('searchToggle');
+    const overlay = document.getElementById('searchOverlay');
+    const input = document.getElementById('searchInput');
+    const closeBtn = document.getElementById('searchClose');
+    const resultsEl = document.getElementById('searchResults');
+    if (!toggle || !overlay) return;
+
+    const TYPE_ICONS = {
+        news: 'far fa-newspaper',
+        event: 'far fa-calendar-alt',
+        press: 'far fa-file-alt',
+        program: 'fas fa-graduation-cap',
+    };
+    const TYPE_LABELS = { news: 'News', event: 'Events', press: 'Press Releases', program: 'Programs' };
+
+    function open() {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => input.focus(), 100);
+    }
+
+    function close() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        input.value = '';
+        resultsEl.innerHTML = '';
+    }
+
+    toggle.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) close();
+    });
+
+    input.addEventListener('input', debounce(function() {
+        const q = input.value.trim();
+        if (q.length < 2) {
+            resultsEl.innerHTML = '<div class="search-hint">Type at least 2 characters to search</div>';
+            return;
+        }
+        fetch('/api/search/?q=' + encodeURIComponent(q))
+            .then(r => r.json())
+            .then(data => {
+                if (!data.results.length) {
+                    resultsEl.innerHTML = '<div class="search-no-results"><i class="fas fa-search" style="font-size:1.5rem;display:block;margin-bottom:0.5rem;"></i>No results found</div>';
+                    return;
+                }
+                var grouped = {};
+                data.results.forEach(function(item) {
+                    if (!grouped[item.type]) grouped[item.type] = [];
+                    grouped[item.type].push(item);
+                });
+                var html = '';
+                for (var type in grouped) {
+                    html += '<div class="search-result-group">';
+                    html += '<div class="search-result-group-title">' + (TYPE_LABELS[type] || type) + '</div>';
+                    grouped[type].forEach(function(item) {
+                        html += '<a href="' + item.url + '" class="search-result-item">';
+                        html += '<i class="search-result-icon ' + (TYPE_ICONS[type] || 'fas fa-link') + '"></i>';
+                        html += '<span class="search-result-title">' + item.title + '</span>';
+                        html += '</a>';
+                    });
+                    html += '</div>';
+                }
+                resultsEl.innerHTML = html;
+            })
+            .catch(function() {
+                resultsEl.innerHTML = '<div class="search-no-results">Something went wrong</div>';
+            });
+    }, 300));
+})();
