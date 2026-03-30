@@ -432,6 +432,10 @@ function animateCards(selector, options = {}) {
     };
     const TYPE_LABELS = { news: 'News', event: 'Events', press: 'Press Releases', program: 'Programs' };
     var activeType = 'all';
+    var noResultsText = panel.dataset.noResults || 'No results found';
+    var errorText = panel.dataset.error || 'Something went wrong';
+    var viewAllText = panel.dataset.viewAll || 'View all search results';
+    var minCharsText = panel.dataset.minChars || 'Type at least 2 characters to search';
 
     function open() {
         panel.classList.add('active');
@@ -482,7 +486,7 @@ function animateCards(selector, options = {}) {
                     items = items.filter(function(item) { return item.type === activeType; });
                 }
                 if (!items.length) {
-                    resultsEl.innerHTML = '<div class="search-no-results"><i class="fas fa-search" style="font-size:1.25rem;display:block;margin-bottom:0.5rem;color:#ccc;"></i>No results found</div>';
+                    resultsEl.innerHTML = '<div class="search-no-results"><i class="fas fa-search" style="font-size:1.25rem;display:block;margin-bottom:0.5rem;color:#ccc;"></i>' + noResultsText + '</div>';
                     return;
                 }
                 var grouped = {};
@@ -499,11 +503,11 @@ function animateCards(selector, options = {}) {
                     }
                     html += '</a>';
                 });
-                html += '<a href="/search/?q=' + encodeURIComponent(q) + '" class="search-view-all">View all search results <i class="fas fa-arrow-right"></i></a>';
+                html += '<a href="/search/?q=' + encodeURIComponent(q) + '" class="search-view-all">' + viewAllText + ' <i class="fas fa-arrow-right"></i></a>';
                 resultsEl.innerHTML = html;
             })
             .catch(function() {
-                resultsEl.innerHTML = '<div class="search-no-results">Something went wrong</div>';
+                resultsEl.innerHTML = '<div class="search-no-results">' + errorText + '</div>';
             });
     }
 

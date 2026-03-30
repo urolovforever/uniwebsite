@@ -32,24 +32,24 @@
 
                 <div class="pathway-card">
                     <div class="pathway-content">
-                        <span class="pathway-label" style="color: var(--accent-green);">{% trans "MASTER'S DEGREE" %}</span>
+                        <span class="pathway-label" style="color: var(--accent-cyan);">{% trans "MASTER'S DEGREE" %}</span>
                         <h3>{% trans "Deepen your expertise and advance your career" %}</h3>
                         <p>{% trans "Our master's programs in Public Finance, International Finance, and Economics offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey." %}</p>
                         <a href="{% url 'programs:master_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="pathway-image" style="--card-accent: var(--accent-green);">
+                    <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
                         <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
                     </div>
                 </div>
 
                 <div class="pathway-card">
                     <div class="pathway-content">
-                        <span class="pathway-label" style="color: var(--accent-orange);">{% trans "PhD & DOCTORAL" %}</span>
+                        <span class="pathway-label" style="color: var(--accent-cyan);">{% trans "PhD & DOCTORAL" %}</span>
                         <h3>{% trans "Lead research and shape the future of your field" %}</h3>
                         <p>{% trans "Our doctoral programs in Finance, Economics, and Management prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects." %}</p>
                         <a href="{% url 'programs:phd_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="pathway-image" style="--card-accent: var(--accent-orange);">
+                    <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
                         <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
                     </div>
                 </div>
@@ -255,12 +255,12 @@
             <div class="exp-box exp-box--reverse">
                 <div class="exp-grid">
                     <div class="exp-content">
-                        <div class="exp-category" style="color: var(--accent-green);">{% trans "Departments" %}</div>
+                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Departments" %}</div>
                         <h2>{% trans "Five dynamic faculties," %} <em>{% trans "one bold vision." %}</em></h2>
                         <p>{% trans "Choose from cutting-edge departments: Business for future entrepreneurs, Education for tomorrow's teachers, IT for tech innovators, Foreign Languages for global communicators, and Jurisprudence for legal minds. Each offers programs taught by international faculty." %}</p>
                         <a href="{% url 'people:departments' %}" class="exp-link">{% trans "View Departments" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="exp-image" style="--accent: var(--accent-green);">
+                    <div class="exp-image" style="--accent: var(--accent-cyan);">
                         <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Departments" loading="lazy">
                     </div>
                 </div>
@@ -270,12 +270,12 @@
             <div class="exp-box">
                 <div class="exp-grid">
                     <div class="exp-content">
-                        <div class="exp-category" style="color: var(--accent-orange);">{% trans "Student Life" %}</div>
+                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Student Life" %}</div>
                         <h2>{% trans "More than lectures —" %} <em>{% trans "this is where you grow." %}</em></h2>
                         <p>{% trans "Join 50+ student clubs, participate in sports tournaments, cultural festivals, and hackathons. Our students organize TEDx events, volunteer projects, and international exchange programs. TIU is not just a university — it's a community where you build lifelong friendships." %}</p>
                         <a href="{% url 'core:static_page' url_path='current-students/clubs' %}" class="exp-link">{% trans "Discover Student Life" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="exp-image" style="--accent: var(--accent-orange);">
+                    <div class="exp-image" style="--accent: var(--accent-cyan);">
                         <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU Campus" loading="lazy">
                     </div>
                 </div>
@@ -283,22 +283,19 @@
         </div>
     </section>
 
-    <!-- LOVE WHERE YOU LEARN SECTION (Accommodation-style) -->
-    <section class="experience-section" style="background: var(--light-gray);">
-        <div class="container">
-            <div class="exp-box exp-box--reverse">
-                <div class="exp-grid">
-                    <div class="exp-content">
-                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Our Campus" %}</div>
-                        <h2>{% trans "Study in the heart of" %} <em>{% trans "Tashkent." %}</em></h2>
-                        <p>{% trans "Our campus is in the center of Tashkent — minutes from Amir Temur Square and major metro stations. Modern lecture halls, coworking spaces, and a well-equipped library create the perfect environment for learning." %}</p>
-                        <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="exp-link">{% trans "Explore Campus" %} <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="exp-image" style="--accent: var(--accent-cyan);">
-                        <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus" loading="lazy">
-                    </div>
-                </div>
+    <!-- LOVE WHERE YOU LEARN SECTION -->
+    <section class="welcome-section reverse">
+        <div class="welcome-content">
+            <div class="welcome-accent"></div>
+            <h2>{% trans "Study in the Heart of Tashkent." %}</h2>
+            <p>{% trans "Our campus is in the center of Tashkent — minutes from Amir Temur Square and major metro stations. Modern lecture halls, coworking spaces, and a well-equipped library create the perfect environment for learning." %}</p>
+            <div class="welcome-buttons">
+                <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
+                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
             </div>
+        </div>
+        <div class="welcome-image">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus" loading="lazy">
         </div>
     </section>
 
