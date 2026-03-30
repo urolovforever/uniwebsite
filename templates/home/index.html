@@ -284,7 +284,10 @@
     </section>
 
     <!-- LOVE WHERE YOU LEARN SECTION -->
-    <section class="welcome-section reverse">
+    <section class="welcome-section">
+        <div class="welcome-image">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus" loading="lazy">
+        </div>
         <div class="welcome-content">
             <div class="welcome-accent"></div>
             <h2>{% trans "Study in the Heart of Tashkent." %}</h2>
@@ -293,9 +296,6 @@
                 <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
                 <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
             </div>
-        </div>
-        <div class="welcome-image">
-            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus" loading="lazy">
         </div>
     </section>
 

@@ -2787,3 +2787,108 @@ msgstr ""
 #: templates/programs/program_list.html:93
 msgid "No programmes match your search. Try a different keyword."
 msgstr ""
+
+msgid "Build a strong foundation for your future career"
+msgstr "Постройте прочный фундамент для вашей будущей карьеры"
+
+msgid "Choose from programs in Business & Economics, IT, Education, Foreign Languages, and Jurisprudence. Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market."
+msgstr "Выбирайте из программ по бизнесу и экономике, ИТ, педагогике, иностранным языкам и юриспруденции. Наши программы бакалавриата сочетают международные стандарты с практическими навыками."
+
+msgid "Deepen your expertise and advance your career"
+msgstr "Углубите свои знания и продвиньте карьеру"
+
+msgid "Our master's programs in Public Finance, International Finance, and Economics offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey."
+msgstr "Наши магистерские программы по государственным финансам, международным финансам и экономике предлагают передовые исследовательские возможности и экспертный преподавательский состав."
+
+msgid "Lead research and shape the future of your field"
+msgstr "Возглавляйте исследования и формируйте будущее вашей области"
+
+msgid "Our doctoral programs in Finance, Economics, and Management prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects."
+msgstr "Наши докторские программы по финансам, экономике и менеджменту готовят к карьере в академической и исследовательской сфере."
+
+msgid "program — study here,"
+msgstr "программа — учитесь здесь,"
+
+msgid "graduate there."
+msgstr "выпускайтесь там."
+
+msgid "Our unique dual degree program offers you the best of both worlds. Spend your first two years at TIU in Tashkent, then complete your studies at one of our prestigious partner universities abroad. Graduate with two internationally recognized degrees that open doors to global career opportunities."
+msgstr "Наша уникальная программа двойного диплома предлагает лучшее из двух миров. Проведите первые два года в TIU в Ташкенте, затем завершите обучение в одном из престижных университетов-партнёров за рубежом."
+
+msgid "Five dynamic faculties,"
+msgstr "Пять динамичных факультетов,"
+
+msgid "one bold vision."
+msgstr "одно смелое видение."
+
+msgid "Choose from cutting-edge departments: Business for future entrepreneurs, Education for tomorrow's teachers, IT for tech innovators, Foreign Languages for global communicators, and Jurisprudence for legal minds. Each offers programs taught by international faculty."
+msgstr "Выбирайте из передовых факультетов: бизнес для будущих предпринимателей, педагогика для учителей будущего, ИТ для технологических инноваторов, иностранные языки для глобальных коммуникаторов и юриспруденция."
+
+msgid "More than lectures —"
+msgstr "Больше чем лекции —"
+
+msgid "this is where you grow."
+msgstr "здесь вы растёте."
+
+msgid "Join 50+ student clubs, participate in sports tournaments, cultural festivals, and hackathons. Our students organize TEDx events, volunteer projects, and international exchange programs. TIU is not just a university — it's a community where you build lifelong friendships."
+msgstr "Присоединяйтесь к 50+ студенческим клубам, участвуйте в спортивных турнирах, культурных фестивалях и хакатонах. TIU — это не просто университет, это сообщество, где вы строите дружбу на всю жизнь."
+
+msgid "Study in the Heart of Tashkent."
+msgstr "Учитесь в сердце Ташкента."
+
+msgid "Our campus is in the center of Tashkent — minutes from Amir Temur Square and major metro stations. Modern lecture halls, coworking spaces, and a well-equipped library create the perfect environment for learning."
+msgstr "Наш кампус в центре Ташкента — в нескольких минутах от площади Амира Темура и основных станций метро. Современные аудитории, коворкинги и оснащённая библиотека создают идеальную среду для обучения."
+
+msgid "Explore Campus"
+msgstr "Изучить кампус"
+
+msgid "Book a Visit"
+msgstr "Запланировать визит"
+
+msgid "No results found"
+msgstr "Результаты не найдены"
+
+msgid "View all search results"
+msgstr "Показать все результаты"
+
+msgid "Something went wrong"
+msgstr "Что-то пошло не так"
+
+msgid "Type at least 2 characters to search"
+msgstr "Введите минимум 2 символа для поиска"
+
+msgid "FREQUENTLY SEARCHED"
+msgstr "ЧАСТО ИЩУТ"
+
+msgid "Site search"
+msgstr "Поиск по сайту"
+
+msgid "PROGRAMS"
+msgstr "ПРОГРАММЫ"
+
+msgid "EVENTS"
+msgstr "МЕРОПРИЯТИЯ"
+
+msgid "ALL"
+msgstr "ВСЕ"
+
+msgid "International Admissions"
+msgstr "Международный приём"
+
+msgid "Campus Map"
+msgstr "Карта кампуса"
+
+msgid "Our Campus"
+msgstr "Наш кампус"
+
+msgid "Dual Degree"
+msgstr "Двойной диплом"
+
+msgid "Discover Student Life"
+msgstr "Откройте студенческую жизнь"
+
+msgid "Explore Programs"
+msgstr "Изучить программы"
+
+msgid "View Departments"
+msgstr "Смотреть факультеты"
