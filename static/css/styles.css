@@ -574,7 +574,12 @@ ul { list-style: none; }
 .pathway-link:hover { color: var(--primary-blue); border-bottom-color: var(--primary-blue); }
 .pathway-link i { font-size: 0.75rem; transition: transform 0.2s; }
 .pathway-link:hover i { transform: translateX(3px); }
-.pathway-image { width: 100%; height: 220px; overflow: hidden; }
+.pathway-image { width: 100%; height: 220px; overflow: hidden; position: relative; }
+.pathway-image::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100%; height: 6px; z-index: 2;
+    background: var(--card-accent, var(--accent-cyan));
+}
 .pathway-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
 .pathway-card:hover .pathway-image img { transform: scale(1.05); }
 .pathway-buttons { display: flex; flex-direction: column; gap: 0.5rem; margin-top: auto; }

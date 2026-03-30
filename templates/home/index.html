@@ -25,7 +25,7 @@
                         <p>{% trans "Choose from programs in Business & Economics, IT, Education, Foreign Languages, and Jurisprudence. Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market." %}</p>
                         <a href="{% url 'programs:bachelor_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="pathway-image">
+                    <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
                         <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Bachelor Programs" %}" loading="lazy">
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <p>{% trans "Our master's programs in Public Finance, International Finance, and Economics offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey." %}</p>
                         <a href="{% url 'programs:master_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="pathway-image">
+                    <div class="pathway-image" style="--card-accent: var(--accent-green);">
                         <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <p>{% trans "Our doctoral programs in Finance, Economics, and Management prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects." %}</p>
                         <a href="{% url 'programs:phd_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="pathway-image">
+                    <div class="pathway-image" style="--card-accent: var(--accent-orange);">
                         <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
                     </div>
                 </div>
@@ -283,18 +283,21 @@
         </div>
     </section>
 
-    <!-- LOVE WHERE YOU LEARN SECTION -->
-    <section class="welcome-section reverse">
-        <div class="welcome-image">
-            <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus Life" loading="lazy">
-        </div>
-        <div class="welcome-content">
-            <div class="welcome-accent"></div>
-            <h2>{% trans "Study in the Heart of Tashkent." %}</h2>
-            <p>{% trans "Our campus at Little Ring Road 7 is located in the very center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. Modern lecture halls, coworking spaces, a well-equipped library, and comfortable rest areas create the perfect environment for productive learning. Cafes, parks, and cultural landmarks surround the campus, making student life convenient and inspiring." %}</p>
-            <div class="welcome-buttons">
-                <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
-                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
+    <!-- LOVE WHERE YOU LEARN SECTION (Accommodation-style) -->
+    <section class="experience-section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="exp-box exp-box--reverse">
+                <div class="exp-grid">
+                    <div class="exp-content">
+                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Our Campus" %}</div>
+                        <h2>{% trans "Study in the heart of" %} <em>{% trans "Tashkent." %}</em></h2>
+                        <p>{% trans "Our campus is in the center of Tashkent — minutes from Amir Temur Square and major metro stations. Modern lecture halls, coworking spaces, and a well-equipped library create the perfect environment for learning." %}</p>
+                        <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="exp-link">{% trans "Explore Campus" %} <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="exp-image" style="--accent: var(--accent-cyan);">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Campus" loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
