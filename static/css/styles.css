@@ -231,7 +231,7 @@ ul { list-style: none; }
     overflow-y: auto;
 }
 .search-panel.active { transform: translateX(0); }
-.search-panel-inner { padding: 2.5rem 2.5rem 2rem; }
+.search-panel-inner { padding: 2.5rem 3rem 2rem; }
 .search-panel-title {
     font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 800;
     color: var(--primary-blue); margin-bottom: 1.75rem;
