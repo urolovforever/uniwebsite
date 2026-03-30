@@ -2828,12 +2828,6 @@ msgstr "Ташкентский Международный Университет
 msgid "Our campus on Little Ring Road is right in the center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. You'll find modern lecture halls, coworking spaces, a fully equipped library, and comfortable study areas all in one place. The surrounding cafes, parks, and cultural landmarks make campus life both convenient and inspiring."
 msgstr "Наш кампус на Малой кольцевой дороге расположен в самом центре Ташкента — в нескольких минутах от площади Амира Темура, Национальной библиотеки и основных станций метро. Современные аудитории, коворкинги, полностью оснащённая библиотека и комфортные учебные зоны — всё в одном месте. Окружающие кафе, парки и культурные достопримечательности делают студенческую жизнь удобной и вдохновляющей."
 
-msgid "About TIU"
-msgstr "О TIU"
-
-msgid "Home"
-msgstr "Главная"
-
 msgid "Discover Tashkent International University — a young, ambitious university in the heart of Uzbekistan, built for the next generation of global professionals."
 msgstr "Откройте Ташкентский Международный Университет — молодой, амбициозный вуз в сердце Узбекистана, созданный для нового поколения глобальных профессионалов."
 
@@ -2885,9 +2879,6 @@ msgstr "Один день, который открывает целую жизн
 msgid "Your graduation from TIU marks the beginning of a new chapter. It's a celebration of your hard work, dedication, and growth. As a TIU graduate, you join a growing network of alumni making an impact in Uzbekistan and around the world."
 msgstr "Выпуск из TIU — начало новой главы. Это праздник вашего труда, преданности и роста. Как выпускник TIU, вы присоединяетесь к растущей сети алюмни, оказывающих влияние в Узбекистане и по всему миру."
 
-msgid "Alumni Network"
-msgstr "Сеть выпускников"
-
 msgid "See TIU before you get here."
 msgstr "Посмотрите TIU до приезда."
 
@@ -2908,15 +2899,3 @@ msgstr "Хотите узнать правду? Пообщайтесь с нын
 
 msgid "Get in touch"
 msgstr "Связаться"
-
-msgid "EXPLORE MORE"
-msgstr "УЗНАТЬ БОЛЬШЕ"
-
-msgid "Why TIU"
-msgstr "Почему TIU"
-
-msgid "Mission & Vision"
-msgstr "Миссия и Видение"
-
-msgid "Sustainability"
-msgstr "Устойчивое развитие"

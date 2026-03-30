@@ -2806,12 +2806,6 @@ msgstr "Toshkent Xalqaro Universiteti — 2023-yilda O'zbekiston poytaxtida jaho
 msgid "Our campus on Little Ring Road is right in the center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. You'll find modern lecture halls, coworking spaces, a fully equipped library, and comfortable study areas all in one place. The surrounding cafes, parks, and cultural landmarks make campus life both convenient and inspiring."
 msgstr "Kichik Halqa yo'lidagi kampusimiz Toshkent markazida joylashgan — Amir Temur maydonidan, Milliy kutubxonadan va asosiy metro bekatlaridan bir necha daqiqa masofada. Zamonaviy auditoriyalar, kovorking maydonchalar, to'liq jihozlangan kutubxona va qulay o'quv xonalari — barchasi bir joyda. Atrofdagi kafelar, bog'lar va madaniy diqqatga sazovor joylar talaba hayotini qulaylashtiradi."
 
-msgid "About TIU"
-msgstr "TIU haqida"
-
-msgid "Home"
-msgstr "Bosh sahifa"
-
 msgid "Discover Tashkent International University — a young, ambitious university in the heart of Uzbekistan, built for the next generation of global professionals."
 msgstr "Toshkent Xalqaro Universitetini kashf eting — O'zbekiston qalbida qurilgan, global mutaxassislarning yangi avlodi uchun mo'ljallangan yosh va shijoatli universitet."
 
@@ -2863,9 +2857,6 @@ msgstr "Umrni boshlaydigan bir kun."
 msgid "Your graduation from TIU marks the beginning of a new chapter. It's a celebration of your hard work, dedication, and growth. As a TIU graduate, you join a growing network of alumni making an impact in Uzbekistan and around the world."
 msgstr "TIU dan bitiruv yangi bobning boshlanishini anglatadi. Bu sizning mehnatingiz, fidoyiligingiz va o'sishingizning bayramidir. TIU bitiruvchisi sifatida siz O'zbekiston va butun dunyoda iz qoldirayotgan bitiruvchilar tarmog'iga qo'shilasiz."
 
-msgid "Alumni Network"
-msgstr "Bitiruvchilar tarmog'i"
-
 msgid "See TIU before you get here."
 msgstr "TIU ga kelishdan oldin ko'ring."
 
@@ -2886,15 +2877,3 @@ msgstr "Haqiqiy voqeani bilmoqchimisiz? Hozirgi TIU talabalari bilan hayot qanda
 
 msgid "Get in touch"
 msgstr "Bog'lanish"
-
-msgid "EXPLORE MORE"
-msgstr "KO'PROQ O'RGANING"
-
-msgid "Why TIU"
-msgstr "Nega TIU"
-
-msgid "Mission & Vision"
-msgstr "Missiya va Maqsad"
-
-msgid "Sustainability"
-msgstr "Barqarorlik"
