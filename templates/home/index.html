@@ -254,14 +254,14 @@
             <!-- Block 2: Departments (image left, content right — reverse) -->
             <div class="exp-box exp-box--reverse">
                 <div class="exp-grid">
-                    <div class="exp-image" style="--accent: var(--accent-green);">
-                        <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Departments" loading="lazy">
-                    </div>
                     <div class="exp-content">
                         <div class="exp-category" style="color: var(--accent-green);">{% trans "Departments" %}</div>
                         <h2>{% trans "Five dynamic faculties," %} <em>{% trans "one bold vision." %}</em></h2>
                         <p>{% trans "Choose from cutting-edge departments: Business for future entrepreneurs, Education for tomorrow's teachers, IT for tech innovators, Foreign Languages for global communicators, and Jurisprudence for legal minds. Each offers programs taught by international faculty." %}</p>
                         <a href="{% url 'people:departments' %}" class="exp-link">{% trans "View Departments" %} <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="exp-image" style="--accent: var(--accent-green);">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Departments" loading="lazy">
                     </div>
                 </div>
             </div>
