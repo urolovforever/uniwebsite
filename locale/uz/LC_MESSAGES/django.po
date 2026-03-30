@@ -935,12 +935,6 @@ msgstr "Klublar"
 msgid "Sports"
 msgstr "Sport"
 
-#: templates/includes/mega_menu.html:191
-#, fuzzy
-#| msgid "Research"
-msgid "Research Centers"
-msgstr "Tadqiqot"
-
 #: templates/includes/mega_menu.html:192
 msgid "Publications"
 msgstr "Nashrlar"
@@ -948,12 +942,6 @@ msgstr "Nashrlar"
 #: templates/includes/mega_menu.html:193
 msgid "Conferences"
 msgstr "Konferensiyalar"
-
-#: templates/includes/mega_menu.html:194
-#, fuzzy
-#| msgid "International"
-msgid "Innovation"
-msgstr "Xalqaro"
 
 #: templates/includes/mega_menu.html:212
 msgid "Faculty Directory"
@@ -1459,13 +1447,6 @@ msgstr ""
 msgid "Students in class at TIU"
 msgstr ""
 
-#: templates/pages/admissions/apply-bachelor.html:157
-#: templates/pages/admissions/apply-master.html:164
-#, fuzzy
-#| msgid "Academic Programs"
-msgid "Available Programmes"
-msgstr "Akademik dasturlar"
-
 #: templates/pages/admissions/apply-bachelor.html:158
 msgid "Bachelor's degrees at TIU"
 msgstr ""
@@ -1877,12 +1858,6 @@ msgstr ""
 msgid "Domestic"
 msgstr ""
 
-#: templates/pages/admissions/scholarships.html:90
-#, fuzzy
-#| msgid "International"
-msgid "International Only"
-msgstr "Xalqaro"
-
 #: templates/pages/admissions/scholarships.html:95
 msgid "No scholarships available at the moment. Please check back later."
 msgstr ""
@@ -2112,13 +2087,6 @@ msgstr ""
 msgid "Annual Tuition Fee"
 msgstr ""
 
-#: templates/pages/admissions/tuition-fees.html:138
-#: templates/pages/programs/by-level.html:83
-#, fuzzy
-#| msgid "Academic Programs"
-msgid "Master's Programmes"
-msgstr "Akademik dasturlar"
-
 #: templates/pages/admissions/tuition-fees.html:168
 #: templates/pages/programs/by-level.html:109
 msgid "PhD Programmes"
@@ -2134,12 +2102,6 @@ msgid ""
 "above apply to the 2025/26 academic year. For the most up-to-date "
 "information, please contact the"
 msgstr ""
-
-#: templates/pages/admissions/tuition-fees.html:195
-#, fuzzy
-#| msgid "Admissions"
-msgid "Admissions Office"
-msgstr "Qabul"
 
 #: templates/pages/careers/hiring.html:27
 msgid ""
@@ -2200,12 +2162,6 @@ msgstr ""
 #: templates/pages/careers/hiring.html:53
 msgid "Gold"
 msgstr ""
-
-#: templates/pages/careers/hiring.html:53
-#, fuzzy
-#| msgid "Tashkent International University"
-msgid "-standard University"
-msgstr "Toshkent Xalqaro Universiteti"
 
 #: templates/pages/careers/hiring.html:54
 msgid ""
@@ -2349,12 +2305,6 @@ msgstr ""
 #: templates/pages/careers/hiring.html:140
 msgid "Staff"
 msgstr ""
-
-#: templates/pages/careers/hiring.html:143
-#, fuzzy
-#| msgid "Research"
-msgid "Reset"
-msgstr "Tadqiqot"
 
 #: templates/pages/careers/hiring.html:146
 msgid "Showing"
@@ -2586,19 +2536,6 @@ msgid ""
 "team will help you choose."
 msgstr ""
 
-#: templates/pages/programs/by-faculty.html:100
-#, fuzzy
-#| msgid "Admissions"
-msgid "Contact Admissions"
-msgstr "Qabul"
-
-#: templates/pages/programs/by-faculty.html:111
-#: templates/pages/programs/by-level.html:146
-#, fuzzy
-#| msgid "International"
-msgid "International Programs"
-msgstr "Xalqaro"
-
 #: templates/pages/programs/by-level.html:24
 msgid ""
 "Browse our academic programmes by degree level — bachelor's, master's, or "
@@ -2729,13 +2666,6 @@ msgstr ""
 msgid "Apply now"
 msgstr ""
 
-#: templates/programs/program_detail.html:132
-#: templates/programs/program_list.html:43
-#, fuzzy
-#| msgid "Academic Programs"
-msgid "All Programmes"
-msgstr "Akademik dasturlar"
-
 #: templates/programs/program_list.html:27
 msgid ""
 "Explore our range of internationally recognized programmes designed to "
@@ -2811,20 +2741,8 @@ msgstr "bu siz o'sadigan joy."
 msgid "Join 50+ student clubs, participate in sports tournaments, cultural festivals, and hackathons. Our students organize TEDx events, volunteer projects, and international exchange programs. TIU is not just a university — it's a community where you build lifelong friendships."
 msgstr "50+ talabalar klublariga qo'shiling, sport musobaqalari, madaniy festivallar va hakatonlarda ishtirok eting. TIU nafaqat universitet — bu umrbod do'stlik qurish jamoasi."
 
-msgid "Study in the Heart of Tashkent."
-msgstr "Toshkent markazida o'qing."
-
 msgid "Our campus is in the center of Tashkent — minutes from Amir Temur Square and major metro stations. Modern lecture halls, coworking spaces, and a well-equipped library create the perfect environment for learning."
 msgstr "Kampusimiz Toshkent markazida — Amir Temur maydonidan bir necha daqiqa masofada. Zamonaviy auditoriyalar, kovorking va jihozlangan kutubxona o'qish uchun mukammal muhit yaratadi."
-
-msgid "Explore Campus"
-msgstr "Kampusni ko'rish"
-
-msgid "Book a Visit"
-msgstr "Tashrif rejalashtirish"
-
-msgid "No results found"
-msgstr "Natija topilmadi"
 
 msgid "View all search results"
 msgstr "Barcha natijalarni ko'rish"
@@ -2853,20 +2771,22 @@ msgstr "HAMMASI"
 msgid "International Admissions"
 msgstr "Xalqaro qabul"
 
-msgid "Campus Map"
-msgstr "Kampus xaritasi"
-
 msgid "Our Campus"
 msgstr "Bizning kampus"
 
 msgid "Dual Degree"
 msgstr "Qo'shma diplom"
 
-msgid "Discover Student Life"
-msgstr "Talaba hayotini kashf eting"
+#: templates/home/index.html
+msgid "BACHELOR'S DEGREE"
+msgstr "BAKALAVR DARAJASI"
 
-msgid "Explore Programs"
-msgstr "Dasturlarni ko'rish"
 
-msgid "View Departments"
-msgstr "Fakultetlarni ko'rish"
+#: templates/home/index.html
+msgid "MASTER'S DEGREE"
+msgstr "MAGISTR DARAJASI"
+
+
+#: templates/home/index.html
+msgid "PhD & DOCTORAL"
+msgstr "PhD va DOKTORANTURA"
