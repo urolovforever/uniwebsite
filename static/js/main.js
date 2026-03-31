@@ -45,31 +45,42 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.paddingTop = '85px';
         }
 
+        let lastScroll = 0;
+        let ticking = false;
+
         function handleScroll() {
             // Only handle scroll for home page (transparent header)
             if (!isSubpage) {
                 const scrollPosition = window.pageYOffset;
 
-                // Masofani 150 yoki 200 qilsangiz, header darhol almashib qolmaydi
-                if (scrollPosition > 150) {
-                    mainHeader.classList.remove('transparent');
-                    mainHeader.classList.add('scrolled');
-                    if (utilityBar) {
-                        utilityBar.style.transform = 'translateY(-100%)'; // Hidden o'rniga transform ishlating
-                        utilityBar.style.transition = '0.4s';
+                if (scrollPosition > 100) {
+                    if (!mainHeader.classList.contains('scrolled')) {
+                        mainHeader.classList.remove('transparent');
+                        mainHeader.classList.add('scrolled');
+                        if (utilityBar) {
+                            utilityBar.style.transform = 'translateY(-100%)';
+                        }
                     }
                 } else {
-                    mainHeader.classList.add('transparent');
-                    mainHeader.classList.remove('scrolled');
-                    if (utilityBar) {
-                        utilityBar.style.transform = 'translateY(0)';
+                    if (!mainHeader.classList.contains('transparent')) {
+                        mainHeader.classList.remove('scrolled');
+                        mainHeader.classList.add('transparent');
+                        if (utilityBar) {
+                            utilityBar.style.transform = 'translateY(0)';
+                        }
                     }
                 }
+                lastScroll = scrollPosition;
             }
-            // Subpages with scrolled class don't need scroll handling - they stay fixed
+            ticking = false;
         }
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(handleScroll);
+                ticking = true;
+            }
+        });
         handleScroll();
     }
 

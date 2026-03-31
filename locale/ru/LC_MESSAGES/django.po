@@ -3463,3 +3463,105 @@ msgstr "Предлагает ли TIU совместные программы с
 #: templates/pages
 msgid "Yes, our flagship 2+2 programme allows you to study two years at TIU and two years at a partner university abroad. You graduate with two degrees — one from TIU and one from the partner institution. This is available for select Bachelor's programmes."
 msgstr "Да, наша флагманская программа 2+2 позволяет учиться два года в TIU и два года в партнёрском университете. Вы получаете два диплома."
+
+msgid "Choose from programs in"
+msgstr "Выбирайте из программ по направлениям:"
+
+msgid "and"
+msgstr "и"
+
+msgid "Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market."
+msgstr "Наши программы бакалавриата сочетают международные стандарты с практическими навыками, готовя вас к глобальному рынку труда."
+
+msgid "Public Finance"
+msgstr "Государственные финансы"
+
+msgid "International Finance"
+msgstr "Международные финансы"
+
+msgid "Finance"
+msgstr "Финансы"
+
+msgid "Our master's programs in"
+msgstr "Наши магистерские программы по направлениям"
+
+msgid "offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey."
+msgstr "предлагают передовые исследовательские возможности и экспертный преподавательский состав. Сделайте следующий шаг в вашем академическом и профессиональном пути."
+
+msgid "Our doctoral programs in"
+msgstr "Наши докторские программы по направлениям"
+
+msgid "prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects."
+msgstr "готовят к карьере в академической и исследовательской сфере. Работайте бок о бок с международно признанными учёными над передовыми проектами."
+
+msgid "Business and Economics"
+msgstr "Бизнес и экономика"
+
+msgid "Education"
+msgstr "Образование"
+
+msgid "Foreign Languages and Literature"
+msgstr "Иностранные языки и литература"
+
+msgid "Law"
+msgstr "Юриспруденция"
+
+msgid "Details"
+msgstr "Подробнее"
+
+msgid "Public Finance and International Finance"
+msgstr "Государственные финансы и международные финансы"
+
+msgid "PhD and DCS Programs"
+msgstr "PhD и DCS программы"
+
+msgid "Tashkent International University — a modern private university providing world-class education in the heart of Uzbekistan."
+msgstr "Tashkent International University — современный частный университет, предоставляющий образование мирового уровня в сердце Узбекистана."
+
+msgid "Join Tashkent International University and step into a world of academic excellence, personal growth, and limitless opportunities."
+msgstr "Присоединяйтесь к Ташкентскому Международному Университету и откройте для себя мир академического совершенства, личностного роста и безграничных возможностей."
+
+msgid "University"
+msgstr "Университет"
+
+msgid "Modern Campus Life"
+msgstr "Современная жизнь кампуса"
+
+msgid "Our modern campus, located on the Small Ring Road in the center of Tashkent, offers everything needed for academic success and personal development. Modern classrooms, healthcare facilities, student clubs, a contemporary dormitory, and a vibrant community are waiting for you. At TIU, you will find the perfect environment for learning, networking, and growth."
+msgstr "Наш современный кампус, расположенный на Малой кольцевой дороге в центре Ташкента, предоставляет всё необходимое для академических успехов и личного развития. Современные аудитории, медицинские учреждения, студенческие клубы, современное общежитие и активное студенческое сообщество ждут вас. В TIU вы найдете идеальную среду для учебы, общения и личного роста."
+
+msgid "International Programs"
+msgstr "Иностранные программы"
+
+msgid "2+2 Program"
+msgstr "Программа 2+2"
+
+msgid "Students studying under the 2+2 program at TIU and prestigious international partner universities earn two diplomas. The program provides a wide range of skills, global experience, and competitive advantage in a short period."
+msgstr "Студенты TIU и престижных зарубежных партнерских университетов, обучаясь по программе 2+2, получают два диплома. Программа обеспечивает широкий набор навыков, международный опыт и конкурентное преимущество за короткий срок."
+
+msgid "TIU's academic exchange program is organized in partnership with international universities. It allows students to study abroad, gain international experience, and expand their academic and cultural skills."
+msgstr "Академическая программа обмена TIU организована в сотрудничестве с международными университетами. Она дает студентам возможность учиться за границей, получать международный опыт и расширять свои академические и культурные навыки."
+
+msgid "TIU students have the opportunity to participate in internships at partner universities and organizations abroad. The program enables students to develop professional, language, and cultural skills while building a global professional network. The university's International Relations Office supports students in finding internship placements and managing all organizational matters."
+msgstr "Студенты TIU имеют возможность проходить стажировку в зарубежных университетах и организациях. Программа позволяет развивать профессиональные навыки, языковые и культурные компетенции, а также создавать глобальную профессиональную сеть. Международный отдел университета оказывает поддержку студентам в поиске мест стажировок и в организации всех связанных вопросов."
+
+msgid "WHERE KNOWLEDGE MEETS OPPORTUNITY"
+msgstr "Место, где объединяются знания и возможности!"
+
+msgid "Tashkent International University (TIU) is a modern private university located in Tashkent, established in October 2023. TIU develops partnerships with prestigious international universities and organizations, offering students wide-ranging academic opportunities. Our main goal is to provide students with a solid foundation for success in their chosen careers and life. Start building your future today — join TIU."
+msgstr "Tashkent International University (TIU) — это современный частный университет, расположенный в Ташкенте, основанный в октябре 2023 года. TIU развивает сотрудничество с престижными зарубежными университетами и организациями, предоставляя студентам широкие академические возможности. Наша основная цель — обеспечить студентов прочной основой для успешной карьеры и жизни. Начните строить своё будущее уже сегодня — присоединяйтесь к TIU."
+
+msgid "2+2 DUAL DEGREE"
+msgstr "2+2 ДВОЙНОЙ ДИПЛОМ"
+
+msgid "STUDENT EXCHANGE"
+msgstr "ОБМЕН СТУДЕНТАМИ"
+
+msgid "Student Exchange Program"
+msgstr "Программа обмена студентами"
+
+msgid "INTERNSHIP"
+msgstr "СТАЖИРОВКА"
+
+msgid "Internship Program"
+msgstr "Программа стажировок"

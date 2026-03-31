@@ -3441,3 +3441,105 @@ msgstr "TIU qo'shma yoki ikki tomonlama diplom dasturlarini taklif etadimi?"
 #: templates/pages
 msgid "Yes, our flagship 2+2 programme allows you to study two years at TIU and two years at a partner university abroad. You graduate with two degrees — one from TIU and one from the partner institution. This is available for select Bachelor's programmes."
 msgstr "Ha, bizning asosiy 2+2 dasturimiz TIUda ikki yil va xorijdagi hamkor universitetda ikki yil o'qish imkonini beradi. Ikkita diplom bilan bitiruvchi bo'lasiz. Bu tanlangan bakalavr dasturlari uchun mavjud."
+
+msgid "Choose from programs in"
+msgstr "Quyidagi yo'nalishlar bo'yicha dasturlardan tanlang:"
+
+msgid "and"
+msgstr "va"
+
+msgid "Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market."
+msgstr "Bakalavr dasturlarimiz xalqaro standartlarni amaliy ko'nikmalar bilan uyg'unlashtiradi va sizni global mehnat bozoriga tayyorlaydi."
+
+msgid "Public Finance"
+msgstr "Davlat moliyasi"
+
+msgid "International Finance"
+msgstr "Xalqaro moliya"
+
+msgid "Finance"
+msgstr "Moliya"
+
+msgid "Our master's programs in"
+msgstr "Magistratura dasturlarimiz"
+
+msgid "offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey."
+msgstr "yo'nalishlarida ilg'or tadqiqot imkoniyatlari va tajribali professor-o'qituvchilarni taklif etadi. Akademik va kasbiy yo'lingizda keyingi qadamni tashlang."
+
+msgid "Our doctoral programs in"
+msgstr "Doktorantura dasturlarimiz"
+
+msgid "prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects."
+msgstr "yo'nalishlarida akademik va ilmiy rahbarlik karyerasiga tayyorlaydi. Xalqaro miqyosda tan olingan olimlar bilan ilg'or loyihalarda ishlang."
+
+msgid "Business and Economics"
+msgstr "Biznes va iqtisodiyot"
+
+msgid "Education"
+msgstr "Ta'lim"
+
+msgid "Foreign Languages and Literature"
+msgstr "Chet til va adabiyot"
+
+msgid "Law"
+msgstr "Yurisprudensiya"
+
+msgid "Details"
+msgstr "Batafsil"
+
+msgid "Public Finance and International Finance"
+msgstr "Davlat moliyasi va xalqaro moliya"
+
+msgid "PhD and DCS Programs"
+msgstr "PhD va DCs dasturlari"
+
+msgid "Tashkent International University — a modern private university providing world-class education in the heart of Uzbekistan."
+msgstr "Tashkent International University — O'zbekiston qalbida jahon darajasidagi ta'lim beruvchi zamonaviy xususiy universitet."
+
+msgid "Join Tashkent International University and step into a world of academic excellence, personal growth, and limitless opportunities."
+msgstr "TIUga qo'shiling — akademik mukammallik, shaxsiy o'sish va cheksiz imkoniyatlar dunyosiga qadam qo'ying."
+
+msgid "University"
+msgstr "Universitet"
+
+msgid "Modern Campus Life"
+msgstr "Zamonaviy kampus muhiti"
+
+msgid "Our modern campus, located on the Small Ring Road in the center of Tashkent, offers everything needed for academic success and personal development. Modern classrooms, healthcare facilities, student clubs, a contemporary dormitory, and a vibrant community are waiting for you. At TIU, you will find the perfect environment for learning, networking, and growth."
+msgstr "Toshkentning markazidagi Kichik Halqa Yo'lda joylashgan zamonaviy kampusimiz akademik muvaffaqiyat va shaxsiy rivojlanish uchun zarur bo'lgan hamma narsani taqdim etadi. Zamonaviy sinflar, sog'liqni saqlash inshootlari, talabalar klublari, zamonaviy talabalar yotoqxonasi va jonli hamjamiyat sizni kutmoqda. TIUda siz o'rganish, aloqalarni o'rnatish va taraqqiyot uchun mukammal muhit topasiz."
+
+msgid "International Programs"
+msgstr "Xalqaro dasturlar"
+
+msgid "2+2 Program"
+msgstr "2+2 programa dasturi"
+
+msgid "Students studying under the 2+2 program at TIU and prestigious international partner universities earn two diplomas. The program provides a wide range of skills, global experience, and competitive advantage in a short period."
+msgstr "TIU va nufuzli xorijiy hamkor universitetlarda 2+2 dasturida o'qib, talabalar ikki diplomga ega bo'lishadi. Dastur qisqa vaqt ichida keng ko'nikmalar, global tajriba va raqobatbardosh ustunlik beradi."
+
+msgid "TIU's academic exchange program is organized in partnership with international universities. It allows students to study abroad, gain international experience, and expand their academic and cultural skills."
+msgstr "Tashkent International University (TIU) talabalari uchun xalqaro universitetlar bilan hamkorlik asosida tashkil etilgan akademik almashinuv dasturidir. Ushbu dastur talabalarga chet el universitetlarida o'qish, xalqaro tajriba olish va o'z bilim hamda madaniy ko'nikmalarini kengaytirish imkonini beradi."
+
+msgid "TIU students have the opportunity to participate in internships at partner universities and organizations abroad. The program enables students to develop professional, language, and cultural skills while building a global professional network. The university's International Relations Office supports students in finding internship placements and managing all organizational matters."
+msgstr "TIU talabalari amaliyot (internship) dasturini chetdagi hamkor universitetlar va tashkilotlarda o'tkazish imkoniga ega. Bu dastur orqali talabalar xorijiy ish muhitida kasbiy tajriba, til va madaniy ko'nikmalarni rivojlantirish hamda global professional tarmoq yaratish imkoniyatiga ega bo'ladilar. Universitet Xalqaro aloqalar bo'limi talabalarni amaliyot joylarini topishda va barcha tashkilotchilik masalalarida qo'llab-quvvatlaydi."
+
+msgid "WHERE KNOWLEDGE MEETS OPPORTUNITY"
+msgstr "BILIM VA IMKONIYATLAR BIRLASHGAN MASKAN"
+
+msgid "Tashkent International University (TIU) is a modern private university located in Tashkent, established in October 2023. TIU develops partnerships with prestigious international universities and organizations, offering students wide-ranging academic opportunities. Our main goal is to provide students with a solid foundation for success in their chosen careers and life. Start building your future today — join TIU."
+msgstr "Tashkent International University (TIU) — Toshkent shahrida joylashgan zamonaviy xususiy universitet bo'lib, 2023-yil oktyabr oyida tashkil etilgan. TIU nufuzli xorijiy universitetlar va tashkilotlar bilan hamkorlikni rivojlantirib, talabalarga keng akademik imkoniyatlar yaratadi. Bizning asosiy maqsadimiz — talabalarimizni tanlagan kasbi va hayot yo'lida muvaffaqiyatga erishishlari uchun mustahkam poydevor bilan ta'minlash. Kelajagingizni bugundan boshlang — TIUga qo'shiling."
+
+msgid "2+2 DUAL DEGREE"
+msgstr "2+2 QO'SHMA DIPLOM"
+
+msgid "STUDENT EXCHANGE"
+msgstr "TALABA ALMASHUVI"
+
+msgid "Student Exchange Program"
+msgstr "Talaba almashuv dasturi"
+
+msgid "INTERNSHIP"
+msgstr "AMALIYOT"
+
+msgid "Internship Program"
+msgstr "Amaliyot dasturi"

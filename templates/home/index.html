@@ -22,7 +22,7 @@
                     <div class="pathway-content">
                         <span class="pathway-label" style="color: var(--accent-cyan);">{% trans "BACHELOR'S DEGREE" %}</span>
                         <h3>{% trans "Build a strong foundation for your future career" %}</h3>
-                        <p>{% trans "Choose from programs in Business & Economics, IT, Education, Foreign Languages, and Jurisprudence. Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market." %}</p>
+                        <p>{% trans "Choose from programs in" %} <em class="program-name">{% trans "Business & Economics" %}</em>, <em class="program-name">{% trans "IT" %}</em>, <em class="program-name">{% trans "Education" %}</em>, <em class="program-name">{% trans "Foreign Languages & Literature" %}</em> {% trans "and" %} <em class="program-name">{% trans "Jurisprudence" %}</em>. {% trans "Our bachelor's degrees combine international standards with practical skills, preparing you for the global job market." %}</p>
                         <a href="{% url 'programs:bachelor_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
@@ -34,7 +34,7 @@
                     <div class="pathway-content">
                         <span class="pathway-label" style="color: var(--accent-cyan);">{% trans "MASTER'S DEGREE" %}</span>
                         <h3>{% trans "Deepen your expertise and advance your career" %}</h3>
-                        <p>{% trans "Our master's programs in Public Finance, International Finance, and Economics offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey." %}</p>
+                        <p>{% trans "Our master's programs in" %} <em class="program-name">{% trans "Public Finance and International Finance" %}</em> {% trans "and" %} <em class="program-name">{% trans "Economics" %}</em> {% trans "offer advanced research opportunities and expert faculty. Take the next step in your academic and professional journey." %}</p>
                         <a href="{% url 'programs:master_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
@@ -46,7 +46,7 @@
                     <div class="pathway-content">
                         <span class="pathway-label" style="color: var(--accent-cyan);">{% trans "PhD & DOCTORAL" %}</span>
                         <h3>{% trans "Lead research and shape the future of your field" %}</h3>
-                        <p>{% trans "Our doctoral programs in Finance, Economics, and Management prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects." %}</p>
+                        <p>{% trans "Our doctoral programs in" %} <em class="program-name">{% trans "Public Finance and International Finance" %}</em>, <em class="program-name">{% trans "Economics" %}</em> {% trans "and" %} <em class="program-name">{% trans "Management" %}</em> {% trans "prepare you for careers in academia and research leadership. Work alongside internationally recognized scholars on cutting-edge projects." %}</p>
                         <a href="{% url 'programs:phd_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
@@ -61,19 +61,19 @@
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">{% trans "Departments" %}</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">2+2</div>
-                <div class="stat-label">{% trans "Dual Degree Program" %}</div>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">{% trans "Programs" %}</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">10+</div>
+                <div class="stat-label">{% trans "Dual Degree Programs" %}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">40+</div>
                 <div class="stat-label">{% trans "Partner Universities" %}</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">10000+</div>
+                <div class="stat-number">10,000+</div>
                 <div class="stat-label">{% trans "Students" %}</div>
             </div>
         </div>
@@ -222,9 +222,9 @@
         </div>
         <div class="welcome-content">
             <div class="welcome-accent"></div>
-            <h2>{% trans "Your Gateway to Global Education." %}</h2>
+            <h2>{% trans "WHERE KNOWLEDGE MEETS OPPORTUNITY" %}</h2>
             <p>
-                {% trans "Tashkent International University is a modern university founded in 2023 with a mission to provide world-class education in the heart of Uzbekistan. With international partnerships, a unique 2+2 dual degree program, and a campus built for the future — TIU gives you the tools and environment to succeed. Whether you're starting your bachelor's or advancing through a master's or PhD, your journey to a global career begins here." %}
+                {% trans "Tashkent International University (TIU) is a modern private university located in Tashkent, established in October 2023. TIU develops partnerships with prestigious international universities and organizations, offering students wide-ranging academic opportunities. Our main goal is to provide students with a solid foundation for success in their chosen careers and life. Start building your future today — join TIU." %}
             </p>
             <div class="welcome-buttons">
                 <a href="https://urolovforever.github.io/landingpage/" class="btn-welcome">{% trans "Apply Now" %}</a>
@@ -233,50 +233,54 @@
         </div>
     </section>
 
-    <!-- 6. EXPERIENCE TIU SECTION (Accommodation-style) -->
+    <!-- 6. INTERNATIONAL PROGRAMS SECTION (Accommodation-style) -->
     <section class="experience-section">
         <div class="container">
-            <!-- Block 1: Dual Degree (content left, image right) -->
+            <div class="exp-section-header">
+                <h2>{% trans "International Programs" %}</h2>
+            </div>
+
+            <!-- Block 1: 2+2 Program (content left, image right) -->
             <div class="exp-box">
                 <div class="exp-grid">
                     <div class="exp-content">
-                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Dual Degree" %}</div>
-                        <h2>2+2 {% trans "program — study here," %} <em>{% trans "graduate there." %}</em></h2>
-                        <p>{% trans "Our unique dual degree program offers you the best of both worlds. Spend your first two years at TIU in Tashkent, then complete your studies at one of our prestigious partner universities abroad. Graduate with two internationally recognized degrees that open doors to global career opportunities." %}</p>
-                        <a href="{% url 'programs:program_list' %}" class="exp-link">{% trans "Explore Programs" %} <i class="fas fa-arrow-right"></i></a>
+                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "2+2 DUAL DEGREE" %}</div>
+                        <h2>{% trans "2+2 Program" %}</h2>
+                        <p>{% trans "Students studying under the 2+2 program at TIU and prestigious international partner universities earn two diplomas. The program provides a wide range of skills, global experience, and competitive advantage in a short period." %}</p>
+                        <a href="{% url 'programs:program_list' %}" class="exp-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="exp-image" style="--accent: var(--accent-cyan);">
-                        <img src="{% static 'img/campus/c1.jpg' %}" alt="TIU Students" loading="lazy">
+                        <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans '2+2 Program' %}" loading="lazy">
                     </div>
                 </div>
             </div>
 
-            <!-- Block 2: Departments (image left, content right — reverse) -->
+            <!-- Block 2: Student Exchange (image left, content right — reverse) -->
             <div class="exp-box exp-box--reverse">
                 <div class="exp-grid">
                     <div class="exp-content">
-                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Departments" %}</div>
-                        <h2>{% trans "Five dynamic faculties," %} <em>{% trans "one bold vision." %}</em></h2>
-                        <p>{% trans "Choose from cutting-edge departments: Business for future entrepreneurs, Education for tomorrow's teachers, IT for tech innovators, Foreign Languages for global communicators, and Jurisprudence for legal minds. Each offers programs taught by international faculty." %}</p>
-                        <a href="{% url 'people:departments' %}" class="exp-link">{% trans "View Departments" %} <i class="fas fa-arrow-right"></i></a>
+                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "STUDENT EXCHANGE" %}</div>
+                        <h2>{% trans "Student Exchange Program" %}</h2>
+                        <p>{% trans "TIU's academic exchange program is organized in partnership with international universities. It allows students to study abroad, gain international experience, and expand their academic and cultural skills." %}</p>
+                        <a href="{% url 'core:static_page' url_path='international/exchange-opportunities' %}" class="exp-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="exp-image" style="--accent: var(--accent-cyan);">
-                        <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Departments" loading="lazy">
+                        <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans 'Student Exchange Program' %}" loading="lazy">
                     </div>
                 </div>
             </div>
 
-            <!-- Block 3: Student Life (content left, image right) -->
+            <!-- Block 3: Internship (content left, image right) -->
             <div class="exp-box">
                 <div class="exp-grid">
                     <div class="exp-content">
-                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "Student Life" %}</div>
-                        <h2>{% trans "More than lectures —" %} <em>{% trans "this is where you grow." %}</em></h2>
-                        <p>{% trans "Join 50+ student clubs, participate in sports tournaments, cultural festivals, and hackathons. Our students organize TEDx events, volunteer projects, and international exchange programs. TIU is not just a university — it's a community where you build lifelong friendships." %}</p>
-                        <a href="{% url 'core:static_page' url_path='current-students/clubs' %}" class="exp-link">{% trans "Discover Student Life" %} <i class="fas fa-arrow-right"></i></a>
+                        <div class="exp-category" style="color: var(--accent-cyan);">{% trans "INTERNSHIP" %}</div>
+                        <h2>{% trans "Internship Program" %}</h2>
+                        <p>{% trans "TIU students have the opportunity to participate in internships at partner universities and organizations abroad. The program enables students to develop professional, language, and cultural skills while building a global professional network. The university's International Relations Office supports students in finding internship placements and managing all organizational matters." %}</p>
+                        <a href="{% url 'core:static_page' url_path='careers/internships' %}" class="exp-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="exp-image" style="--accent: var(--accent-cyan);">
-                        <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU Campus" loading="lazy">
+                        <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans 'Internship Program' %}" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -290,8 +294,8 @@
         </div>
         <div class="welcome-content">
             <div class="welcome-accent"></div>
-            <h2>{% trans "Study in the Heart of Tashkent." %}</h2>
-            <p>{% trans "Our campus on Little Ring Road is right in the center of Tashkent — just minutes from Amir Temur Square, the National Library, and major metro stations. You'll find modern lecture halls, coworking spaces, a fully equipped library, and comfortable study areas all in one place. The surrounding cafes, parks, and cultural landmarks make campus life both convenient and inspiring." %}</p>
+            <h2>{% trans "Modern Campus Life" %}</h2>
+            <p>{% trans "Our modern campus, located on the Small Ring Road in the center of Tashkent, offers everything needed for academic success and personal development. Modern classrooms, healthcare facilities, student clubs, a contemporary dormitory, and a vibrant community are waiting for you. At TIU, you will find the perfect environment for learning, networking, and growth." %}</p>
             <div class="welcome-buttons">
                 <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
                 <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
@@ -469,30 +473,19 @@
         </div>
         <div class="partners-fullwidth-carousel">
             <div class="partners-fullwidth-track">
+                {% for i in "1234" %}
                 {% for partner in partners %}
                 <div class="partner-logo">
                     <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" loading="lazy">
                 </div>
                 {% empty %}
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-1.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-2.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-3.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-4.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-5.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-6.png' %}" alt="Partner University" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-1.png' %}" alt="Partner" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-2.png' %}" alt="Partner" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-3.png' %}" alt="Partner" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-4.png' %}" alt="Partner" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-5.png' %}" alt="Partner" loading="lazy"></div>
+                <div class="partner-logo"><img src="{% static 'img/partners/partner-6.png' %}" alt="Partner" loading="lazy"></div>
                 {% endfor %}
-                <!-- Duplicate for seamless loop -->
-                {% for partner in partners %}
-                <div class="partner-logo">
-                    <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" loading="lazy">
-                </div>
-                {% empty %}
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-1.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-2.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-3.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-4.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-5.png' %}" alt="Partner University" loading="lazy"></div>
-                <div class="partner-logo"><img src="{% static 'img/partners/partner-6.png' %}" alt="Partner University" loading="lazy"></div>
                 {% endfor %}
             </div>
         </div>
