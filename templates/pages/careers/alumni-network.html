@@ -3,10 +3,9 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
-<link rel="stylesheet" href="{% static 'css/careers.css' %}">
 {% endblock %}
 
-{% block title %}{% trans "Alumni Network - TIU" %}{% endblock %}
+{% block title %}{% trans "Alumni Network" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
@@ -21,144 +20,26 @@
         <div class="page-hero-category">{% trans "Careers" %}</div>
         <h1 class="page-hero-title">{% trans "Alumni Network" %}</h1>
         <div class="page-hero-description">
-            <p>{% trans "Stay connected after graduation — join a growing community of TIU alumni making an impact across the globe." %}</p>
+            <p>{% trans "The TIU alumni community is being built — be among the first graduates to shape this network." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
 </section>
 
-<!-- Intro -->
-<section class="abroad-intro-section">
-    <div class="container">
-        <div class="abroad-intro-grid">
-            <div class="abroad-intro-text">
-                <h2>{% trans "Once a TIU student," %} <em>{% trans "always part of the family." %}</em></h2>
-                <p>{% trans "Graduation doesn't mean goodbye. TIU's Alumni Network connects thousands of graduates working in Uzbekistan and internationally — in technology, business, law, education, government, and beyond." %}</p>
-                <p>{% trans "As an alumnus, you gain access to career resources, networking events, mentorship opportunities, and exclusive job postings. You also have the chance to give back by mentoring current students, speaking at campus events, or supporting scholarships." %}</p>
-                <p>{% trans "The network grows stronger every year, and so do the opportunities it creates for every member." %}</p>
-            </div>
-            <div class="abroad-intro-sidebar">
-                <div class="abroad-sidebar-card">
-                    <h3>{% trans "Current student?" %}</h3>
-                    <p>{% trans "Visit the Career Center for internship listings, CV workshops, and career counselling." %}</p>
-                    <a href="/careers/career-center/" class="abroad-sidebar-link">{% trans "Career Center" %} <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+<section style="padding: 5rem 0; background: #fff;">
+    <div style="max-width: 700px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+        <div style="width: 100px; height: 100px; background: #e8f0fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+            <i class="fas fa-user-graduate" style="font-size: 2.5rem; color: #003366;"></i>
         </div>
-    </div>
-</section>
-
-<!-- Benefits -->
-<section class="section--muted">
-    <div class="container">
-        <h2 class="section-heading">{% trans "Alumni benefits" %}</h2>
-        <p class="section-subtitle">{% trans "Your TIU connection keeps working for you long after you graduate." %}</p>
-        <div class="grid grid--3col mid-container">
-            <div class="accent-card accent-card--cyan">
-                <div class="icon-block"><i class="fas fa-briefcase"></i></div>
-                <h3 class="card-title">{% trans "Job board access" %}</h3>
-                <p class="card-text">{% trans "Browse exclusive job listings from TIU employer partners, posted directly to our alumni portal." %}</p>
-            </div>
-            <div class="accent-card accent-card--green">
-                <div class="icon-block"><i class="fas fa-calendar-check"></i></div>
-                <h3 class="card-title">{% trans "Networking events" %}</h3>
-                <p class="card-text">{% trans "Attend alumni mixers, industry panels, and homecoming events to reconnect and expand your professional circle." %}</p>
-            </div>
-            <div class="accent-card accent-card--orange">
-                <div class="icon-block"><i class="fas fa-user-tie"></i></div>
-                <h3 class="card-title">{% trans "Mentorship programme" %}</h3>
-                <p class="card-text">{% trans "Mentor current students or be mentored by senior alumni — building bridges across generations of TIU graduates." %}</p>
-            </div>
-            <div class="accent-card accent-card--pink">
-                <div class="icon-block"><i class="fas fa-book-reader"></i></div>
-                <h3 class="card-title">{% trans "Lifelong learning" %}</h3>
-                <p class="card-text">{% trans "Access discounted professional development courses, workshops, and certificate programmes at TIU." %}</p>
-            </div>
-            <div class="accent-card accent-card--purple">
-                <div class="icon-block"><i class="fas fa-id-card"></i></div>
-                <h3 class="card-title">{% trans "Alumni card" %}</h3>
-                <p class="card-text">{% trans "Receive a TIU Alumni Card granting access to campus facilities, the library, sports center, and partner discounts." %}</p>
-            </div>
-            <div class="accent-card accent-card--navy">
-                <div class="icon-block"><i class="fas fa-globe"></i></div>
-                <h3 class="card-title">{% trans "Global chapters" %}</h3>
-                <p class="card-text">{% trans "Connect with TIU alumni in your city through regional chapters in South Korea, Turkey, Europe, and across Uzbekistan." %}</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How to get involved -->
-<section class="section--white">
-    <div class="container">
-        <div class="grid grid--2col-equal wide-container">
-            <div>
-                <h2 class="section-heading--left" style="font-size: 2.25rem;">{% trans "Get involved" %}</h2>
-                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">{% trans "There are many ways to stay connected and give back to the TIU community:" %}</p>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span><strong>{% trans "Become a mentor" %}</strong> — {% trans "guide current students through career decisions and professional development" %}</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span><strong>{% trans "Guest lecture" %}</strong> — {% trans "share your industry expertise with students in your former faculty" %}</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span><strong>{% trans "Refer talent" %}</strong> — {% trans "post job opportunities and internships from your company on the alumni portal" %}</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span><strong>{% trans "Support scholarships" %}</strong> — {% trans "contribute to the Alumni Scholarship Fund that supports the next generation of TIU students" %}</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="info-panel">
-                <h3>{% trans "Network at a glance" %}</h3>
-                <div class="detail-row">
-                    <div class="stat-value">{% trans "Growing" %}</div>
-                    <p>{% trans "Alumni worldwide" %}</p>
-                </div>
-                <div class="detail-row">
-                    <div class="stat-value">{% trans "5+" %}</div>
-                    <p>{% trans "Regional chapters" %}</p>
-                </div>
-                <div class="detail-row">
-                    <div class="stat-value">{% trans "92%" %}</div>
-                    <p>{% trans "Employed within 6 months of graduation" %}</p>
-                </div>
-                <div class="detail-row">
-                    <div class="stat-value">{% trans "20+" %}</div>
-                    <p>{% trans "Alumni events per year" %}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-banner">
-    <div class="container">
-        <h2>{% trans "Join the alumni community" %}</h2>
-        <p>{% trans "Register on the alumni portal or get in touch with the Alumni Relations Office to stay connected." %}</p>
-        <div class="cta-banner__buttons">
-            <a href="/contact/contact-info/" class="cta-btn cta-btn--primary">{% trans "Contact Us" %}</a>
-            <a href="/careers/career-center/" class="cta-btn cta-btn--outline">{% trans "Career Center" %}</a>
-        </div>
-    </div>
-</section>
-
-<!-- Explore More -->
-<section class="explore-more-section">
-    <div class="container">
-        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
-        <div class="explore-more-links">
-            <a href="/careers/career-center/" class="explore-more-link">{% trans "Career Center" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="/careers/internships/" class="explore-more-link">{% trans "Internships" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="/careers/employer-partnerships/" class="explore-more-link">{% trans "Employer Partnerships" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="/careers/hiring/" class="explore-more-link">{% trans "Hiring" %} <i class="fas fa-arrow-right"></i></a>
-        </div>
+        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: #003366; margin-bottom: 1rem;">
+            {% trans "Our First Graduates Are on Their Way" %}
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 1.5rem;">
+            {% trans "Tashkent International University was founded in 2023 and has not yet produced its first graduating class. But that milestone is approaching, and we are already building the foundation for a strong, connected alumni network." %}
+        </p>
+        <p style="font-size: 1rem; line-height: 1.8; color: #666;">
+            {% trans "When our students graduate, they will join a community dedicated to lifelong learning, professional growth, and giving back to the university that shaped their careers." %}
+        </p>
     </div>
 </section>
 {% endblock %}

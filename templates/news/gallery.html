@@ -51,6 +51,22 @@
 </div>
 {% endif %}
 
+{% if images.has_other_pages %}
+<div class="container" style="padding: 2rem 0;">
+    <div class="pagination">
+        {% if images.has_previous %}
+        <a href="?page={{ images.previous_page_number }}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+        {% endif %}
+        {% for num in images.paginator.page_range %}
+        <a href="?page={{ num }}" class="pagination-btn{% if images.number == num %} active{% endif %}">{{ num }}</a>
+        {% endfor %}
+        {% if images.has_next %}
+        <a href="?page={{ images.next_page_number }}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
@@ -58,7 +74,7 @@
         <div class="explore-more-links">
             <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:publications' %}" class="explore-more-link">{% trans "Publications" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>

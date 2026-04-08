@@ -56,28 +56,27 @@
     </div>
 </section>
 
-<!-- Schools and Disciplines — Dynamic from Programs -->
+<!-- Departments Carousel -->
 <section class="schools-section">
     <div class="container">
-        <h2>Schools and disciplines</h2>
-        <p class="schools-desc">Together, our Schools conduct industry-leading research tackling national and global challenges. We bring this passion and experience back to our students through a thriving portfolio of undergraduate, postgraduate, and professional programmes.</p>
+        <h2>{% trans "Departments" %}</h2>
     </div>
     <div class="schools-carousel-wrap">
         <div class="schools-carousel" id="schoolsCarousel">
-            {% for prog in programs %}
-            <a href="{{ prog.get_absolute_url }}" class="school-card">
-                {% if prog.image %}
-                <img src="{{ prog.image.url }}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
+            {% for dept in departments %}
+            <a href="{% url 'programs:department_detail' dept.slug %}" class="school-card">
+                {% if dept.image %}
+                <img src="{{ dept.image.url }}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
                 {% else %}
-                <img src="{% static 'img/campus/c1.jpg' %}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
+                <img src="{% static 'img/campus/c1.jpg' %}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
                 {% endif %}
                 <div class="school-card-overlay">
-                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {{ prog.get_level_display }} · {{ prog.get_study_type_display }}{% if prog.duration %} · {{ prog.duration }}{% endif %}</p>
+                    <p><strong>{{ dept|trans_field:"name" }}</strong>{% if dept.excerpt %} — {{ dept|trans_field:"excerpt" }}{% endif %}</p>
                     <span class="school-card-btn"><i class="fas fa-plus"></i></span>
                 </div>
             </a>
             {% empty %}
-            <div style="padding: 2rem; color: #aaa; text-align: center;">No programmes available yet.</div>
+            <div style="padding: 2rem; color: #aaa; text-align: center;">{% trans "No departments available yet." %}</div>
             {% endfor %}
         </div>
         <div class="schools-nav">
@@ -86,19 +85,6 @@
                 <button class="schools-arrow" onclick="slideSchools(-1)"><i class="fas fa-arrow-left"></i></button>
                 <button class="schools-arrow" onclick="slideSchools(1)"><i class="fas fa-arrow-right"></i></button>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Research -->
-<section class="faculty-research-section">
-    <div class="container">
-        <div class="faculty-research-content">
-            <h2>Research</h2>
-            <p>Research in the Faculty of Business and Innovative Education is driving innovation across Central Asia. We're developing next-generation business models, advancing educational methodologies, and building sustainable solutions for emerging economies.</p>
-            <p>Our research community is pioneering work in fintech, management science, educational technology, and smart infrastructure. We're collaborating with international partners to solve real-world challenges and translate academic insight into industry impact.</p>
-            <p>Learn more about our research and our interdisciplinary centres and institutes here:</p>
-            <a href="/research/" class="faculty-research-link">Our research <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -134,7 +120,7 @@
     <div class="container">
         <div class="explore-more-label">EXPLORE MORE</div>
         <div class="explore-more-links">
-            <a href="{% url 'people:departments' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'people:person_directory' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'people:dept_jurisprudence' %}" class="explore-more-link">{% trans "Faculty of Jurisprudence" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>

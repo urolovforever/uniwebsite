@@ -222,7 +222,7 @@
         </div>
         <div class="welcome-content">
             <div class="welcome-accent"></div>
-            <h2>{% trans "WHERE KNOWLEDGE MEETS OPPORTUNITY" %}</h2>
+            <h2>{% trans "Where Knowledge Meets Opportunity" %}</h2>
             <p>
                 {% trans "Tashkent International University (TIU) is a modern private university located in Tashkent, established in October 2023. TIU develops partnerships with prestigious international universities and organizations, offering students wide-ranging academic opportunities. Our main goal is to provide students with a solid foundation for success in their chosen careers and life. Start building your future today — join TIU." %}
             </p>
@@ -324,7 +324,7 @@
                                 </span>
                                 <div class="event-featured-meta">
                                     {% if event.category %}<span class="event-featured-category">{{ event.category|upper }}</span>{% endif %}
-                                    {% if event.event_time %}<span class="event-featured-time"><i class="far fa-clock"></i> {{ event.event_time|time:"h:i A" }}</span>{% endif %}
+                                    {% if event.event_time %}<span class="event-featured-time"><i class="far fa-clock"></i> {{ event.event_time|time:"H:i" }}</span>{% endif %}
                                 </div>
                             </div>
                             <h3><a href="{% url 'news:event_detail' event.slug %}">{{ event|trans_field:"title" }}</a></h3>
@@ -363,7 +363,8 @@
                                 <div class="events-list-info">
                                     {% if event.category %}<span class="events-list-category">{{ event.category|upper }}</span>{% endif %}
                                     <h4>{{ event|trans_field:"title" }}</h4>
-                                    {% if event.event_time %}<span class="events-list-time"><i class="far fa-clock"></i> {{ event.event_time|time:"h:i A" }}</span>{% endif %}
+                                    {% if event.description %}<p class="events-list-excerpt">{{ event|trans_field:"description"|truncatewords:15 }}</p>{% endif %}
+                                    {% if event.event_time %}<span class="events-list-time"><i class="far fa-clock"></i> {{ event.event_time|time:"H:i" }}</span>{% endif %}
                                 </div>
                             </a>
                         </article>
@@ -476,7 +477,11 @@
                 {% for i in "1234" %}
                 {% for partner in partners %}
                 <div class="partner-logo">
+                    {% if partner.logo %}
                     <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" loading="lazy">
+                    {% else %}
+                    <img src="{% static 'img/partners/partner-1.png' %}" alt="{{ partner.name }}" loading="lazy">
+                    {% endif %}
                 </div>
                 {% empty %}
                 <div class="partner-logo"><img src="{% static 'img/partners/partner-1.png' %}" alt="Partner" loading="lazy"></div>

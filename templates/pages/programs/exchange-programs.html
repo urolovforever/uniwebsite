@@ -1,5 +1,5 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -7,22 +7,22 @@
 <link rel="stylesheet" href="{% static 'css/international.css' %}">
 {% endblock %}
 
-{% block title %}Exchange Programs - TIU{% endblock %}
+{% block title %}{% trans "Exchange Programs" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Programs</span>
+            <span>{% trans "Programs" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Exchange Programs</span>
+            <span class="current">{% trans "Exchange Programs" %}</span>
         </nav>
-        <div class="page-hero-category">Programs</div>
-        <h1 class="page-hero-title">Exchange Programs</h1>
+        <div class="page-hero-category">{% trans "Programs" %}</div>
+        <h1 class="page-hero-title">{% trans "Exchange Programs" %}</h1>
         <div class="page-hero-description">
-            <p>Spend a semester or year abroad at one of our partner universities — broaden your perspective and enrich your degree.</p>
+            <p>{% trans "Study at an international partner university for a semester or academic year — expand your horizons without extending your studies." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -33,105 +33,100 @@
     <div class="container">
         <div class="abroad-intro-grid">
             <div class="abroad-intro-text">
-                <h2>Experience the world <em>while you study.</em></h2>
-                <p>TIU's exchange programmes give you the opportunity to study at a partner university for one or two semesters while remaining enrolled at TIU. Your credits transfer back to your TIU degree, so you don't lose any time.</p>
-                <p>Exchange students immerse themselves in a different academic culture, improve their language skills, and gain independence — all qualities that employers value highly. Many of our students describe their exchange semester as the highlight of their university experience.</p>
-                <p>Our International Office supports you at every step, from choosing a destination to arranging accommodation and visa documents.</p>
+                <h2>{% trans "Discover the world" %} <em>{% trans "while you study." %}</em></h2>
+                <p>{% trans "TIU's academic exchange program is organized in partnership with international universities. It gives students the opportunity to study abroad, gain international experience, and broaden their academic and cultural skills — all while remaining enrolled at TIU." %}</p>
+                <p>{% trans "Exchange students immerse themselves in a different academic environment, improve their language abilities, and develop the independence and adaptability that employers highly value. Credits earned at the partner university transfer directly back to your TIU degree." %}</p>
+                <p>{% trans "The International Relations Department supports you at every step — from choosing a destination and preparing documents to arranging accommodation and visa support." %}</p>
             </div>
             <div class="abroad-intro-sidebar">
                 <div class="abroad-sidebar-card">
-                    <h3>Interested in a full joint degree?</h3>
-                    <p>If you want to graduate with two diplomas rather than doing a semester exchange, explore our joint degree programmes.</p>
-                    <a href="/programs/joint-degrees/" class="abroad-sidebar-link">Joint Degrees <i class="fas fa-arrow-right"></i></a>
+                    <h3>{% trans "Want two full degrees instead?" %}</h3>
+                    <p>{% trans "If you're looking to graduate with diplomas from two universities, explore our Joint Degrees program." %}</p>
+                    <a href="/programs/joint-degrees/" class="abroad-sidebar-link">{% trans "Joint Degrees" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- What you get -->
+<!-- Benefits -->
 <section style="padding: 5rem 0; background: #f8f8f8;">
     <div class="container">
-        <h2 class="section-heading">What you get</h2>
-        <p class="section-subtitle" style="color: #003366;">An exchange at TIU is more than just studying abroad — it's a complete international experience.</p>
-        <div class="grid grid--3col mid-container">
-            <div class="accent-card">
-                <div class="icon-block"><i class="fas fa-exchange-alt"></i></div>
-                <h3 class="card-title">Credit transfer</h3>
-                <p class="card-text">All credits earned at the partner university transfer directly to your TIU degree. No time lost, no repeated courses.</p>
+        <h2 class="section-heading">{% trans "What you gain" %}</h2>
+        <p class="section-subtitle" style="color: #003366;">{% trans "An exchange at TIU is more than studying abroad — it's a complete international experience." %}</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-exchange-alt"></i></span> {% trans "Seamless Credit Transfer" %}</h3>
+                <p>{% trans "All credits earned at the partner university transfer directly to your TIU degree. No repeated courses, no time lost." %}</p>
             </div>
-            <div class="accent-card">
-                <div class="icon-block"><i class="fas fa-wallet"></i></div>
-                <h3 class="card-title">No extra tuition</h3>
-                <p class="card-text">You continue paying TIU tuition fees during your exchange. Partner university tuition is waived under our agreements.</p>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-wallet"></i></span> {% trans "No Extra Tuition" %}</h3>
+                <p>{% trans "You continue paying TIU fees during your exchange. Partner university tuition is waived under our agreements." %}</p>
             </div>
-            <div class="accent-card">
-                <div class="icon-block"><i class="fas fa-hands-helping"></i></div>
-                <h3 class="card-title">Full support</h3>
-                <p class="card-text">Our International Office helps with visa applications, accommodation, travel logistics, and pre-departure orientation.</p>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-globe-asia"></i></span> {% trans "Cultural Immersion" %}</h3>
+                <p>{% trans "Live in a new country, experience a different academic culture first-hand, and develop cross-cultural skills valued by employers worldwide." %}</p>
             </div>
-            <div class="accent-card">
-                <div class="icon-block"><i class="fas fa-globe-asia"></i></div>
-                <h3 class="card-title">Cultural immersion</h3>
-                <p class="card-text">Live in a new country, learn about different cultures first-hand, and develop the intercultural skills employers value.</p>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-user-friends"></i></span> {% trans "International Network" %}</h3>
+                <p>{% trans "Build lasting friendships and professional connections with students from around the world." %}</p>
             </div>
-            <div class="accent-card">
-                <div class="icon-block"><i class="fas fa-user-friends"></i></div>
-                <h3 class="card-title">International network</h3>
-                <p class="card-text">Build friendships and professional connections with students from around the world that last well beyond graduation.</p>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-hands-helping"></i></span> {% trans "Full Support" %}</h3>
+                <p>{% trans "The International Relations Department helps with visa applications, accommodation, travel logistics, and pre-departure orientation." %}</p>
             </div>
-            <div class="accent-card">
-                <div class="icon-block"><i class="fas fa-briefcase"></i></div>
-                <h3 class="card-title">Career advantage</h3>
-                <p class="card-text">International experience on your CV sets you apart. Exchange alumni consistently report stronger career outcomes.</p>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-briefcase"></i></span> {% trans "Career Advantage" %}</h3>
+                <p>{% trans "International experience on your CV makes you stand out. Exchange alumni consistently report stronger career outcomes after graduation." %}</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Eligibility -->
+<!-- How to Apply -->
 <section style="padding: 5rem 0; background: #fff;">
     <div class="container">
-        <div class="grid grid--2col-equal wide-container">
-            <div>
-                <h2 class="section-heading--left" style="font-size: 2.25rem; color: #003366;">Who can apply?</h2>
-                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">Exchange programmes are open to all TIU students who meet the following criteria:</p>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span>Completed at least one full academic year at TIU</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span>Minimum GPA of 3.0 (on a 4.0 scale)</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span>English language proficiency (IELTS 6.0+ or equivalent)</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span>No outstanding disciplinary issues</span>
-                    </li>
-                    <li class="checklist-item">
-                        <i class="fas fa-check"></i>
-                        <span>Approval from your department head</span>
-                    </li>
-                </ul>
+        <h2 class="section-heading">{% trans "How to apply" %}</h2>
+        <p class="section-subtitle" style="color: #003366;">{% trans "Follow these steps to start your exchange journey." %}</p>
+        <div class="grid grid--4col wide-container">
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">1</div>
+                <h3 class="card-title">{% trans "Choose a destination" %}</h3>
+                <p class="card-text">{% trans "Browse available partner universities and select the one that matches your academic interests and goals." %}</p>
             </div>
-            <div class="info-panel" style="background: #f8f8f8;">
-                <h3>Application timeline</h3>
-                <div class="detail-row">
-                    <strong>FALL SEMESTER EXCHANGE</strong>
-                    <p>Apply by 1 March — depart in September</p>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">2</div>
+                <h3 class="card-title">{% trans "Submit your application" %}</h3>
+                <p class="card-text">{% trans "Apply through the International Relations Department with your transcript, motivation letter, and language certificate." %}</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">3</div>
+                <h3 class="card-title">{% trans "Get approved" %}</h3>
+                <p class="card-text">{% trans "After review by TIU and the partner university, you'll receive your acceptance and start preparing for departure." %}</p>
+            </div>
+            <div class="step-card">
+                <div class="icon-circle icon-circle--lg icon-circle--centered">4</div>
+                <h3 class="card-title">{% trans "Study abroad" %}</h3>
+                <p class="card-text">{% trans "Spend one or two semesters at the partner university. Your credits transfer back to TIU upon your return." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Financial Info -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "Important Information" %}</div>
+                    <h2>{% trans "Fees during exchange" %}</h2>
+                    <p>{% trans "During your exchange semester, you continue paying your regular TIU tuition. Partner university tuition fees are waived under our bilateral agreements. However, students are responsible for their own travel, accommodation, and living expenses abroad." %}</p>
+                    <p>{% trans "Students are advised to consult with the International Relations Department for detailed information about costs and available financial support before applying." %}</p>
+                    <a href="{% url 'core:contact' %}" class="accommodation-link">{% trans "Contact International Relations" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="detail-row">
-                    <strong>SPRING SEMESTER EXCHANGE</strong>
-                    <p>Apply by 1 October — depart in February</p>
-                </div>
-                <div class="detail-row">
-                    <strong>FULL YEAR EXCHANGE</strong>
-                    <p>Apply by 1 March — depart in September</p>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans 'Exchange Programs' %}" loading="lazy">
                 </div>
             </div>
         </div>
@@ -141,13 +136,11 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="/programs/by-level/" class="explore-more-link">By Level <i class="fas fa-arrow-right"></i></a>
-            <a href="/programs/by-faculty/" class="explore-more-link">By Faculty <i class="fas fa-arrow-right"></i></a>
-            <a href="/programs/international-programs/" class="explore-more-link">International Programs <i class="fas fa-arrow-right"></i></a>
-            <a href="/programs/joint-degrees/" class="explore-more-link">Joint Degrees <i class="fas fa-arrow-right"></i></a>
-            <a href="/programs/dual-diploma/" class="explore-more-link">Dual Diploma <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'programs:program_list' %}" class="explore-more-link">{% trans "All Programs" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/programs/joint-degrees/" class="explore-more-link">{% trans "Joint Degrees" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/international/partner-universities/" class="explore-more-link">{% trans "Partner Universities" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>

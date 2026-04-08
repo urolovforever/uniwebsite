@@ -1,5 +1,5 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -7,22 +7,22 @@
 <link rel="stylesheet" href="{% static 'css/current-students.css' %}">
 {% endblock %}
 
-{% block title %}Housing - TIU{% endblock %}
+{% block title %}{% trans "Student Housing" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Current Students</span>
+            <span>{% trans "Current Students" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Housing</span>
+            <span class="current">{% trans "Student Housing" %}</span>
         </nav>
-        <div class="page-hero-category">Students</div>
-        <h1 class="page-hero-title">Housing</h1>
+        <div class="page-hero-category">{% trans "Students" %}</div>
+        <h1 class="page-hero-title">{% trans "Student Housing" %}</h1>
         <div class="page-hero-description">
-            <p>Find your home near campus — explore student housing options and support services.</p>
+            <p>{% trans "TIU dormitory — a comfortable and affordable place to live while you study." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -31,71 +31,33 @@
 <!-- Centered Statement -->
 <section class="housing-statement">
     <div class="container">
-        <h2>A comfortable home is the foundation<br>of a successful student life</h2>
-        <p>At TIU, we want every student to feel at home. Whether you prefer the convenience of on-campus living, the independence of a private apartment, or the community feel of a shared flat — Tashkent has options to suit every budget and lifestyle. And with some of the lowest living costs in Central Asia, your money goes further here.</p>
+        <h2>{% trans "A comfortable home is the foundation of a successful student life" %}</h2>
+        <p>{% trans "Tashkent International University provides a dormitory for its students at Minor 76, Tashkent. The dormitory has 282 places and is allocated on a contract basis. With a monthly rent of 3,000,000 UZS, it offers a practical and affordable housing solution close to the university." %}</p>
     </div>
 </section>
 
-<!-- Room Types - Comparison Cards -->
-<section class="housing-types-section">
+<!-- Dormitory Overview — Accommodation style -->
+<section class="accommodation-section">
     <div class="container">
-        <div class="housing-types-header">
-            <span class="housing-types-label">Accommodation Options</span>
-            <h2>Choose the option that suits you</h2>
-        </div>
-        <div class="housing-types-grid">
-            <div class="housing-type-card">
-                <div class="housing-type-top">
-                    <div class="housing-type-icon"><i class="fas fa-building"></i></div>
-                    <h3>University Dormitory</h3>
-                    <div class="housing-type-price">From 800,000 UZS<span>/month</span></div>
-                </div>
-                <div class="housing-type-body">
-                    <ul>
-                        <li><i class="fas fa-check"></i> Shared or twin rooms available</li>
-                        <li><i class="fas fa-check"></i> On-campus location — 2 min walk to classes</li>
-                        <li><i class="fas fa-check"></i> Furnished with bed, desk, wardrobe</li>
-                        <li><i class="fas fa-check"></i> Shared kitchen and bathroom facilities</li>
-                        <li><i class="fas fa-check"></i> 24/7 security and reception</li>
-                        <li><i class="fas fa-check"></i> Free Wi-Fi included</li>
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "Our Dormitory" %}</div>
+                    <h2>{% trans "TIU Student Dormitory" %}</h2>
+                    <p style="font-size: 1.75rem; font-weight: 800; color: #00bcd4; margin-bottom: 1.5rem;">3,000,000 {% trans "UZS" %}<span style="font-size: 1rem; font-weight: 400; color: #666;">/{% trans "month" %}</span></p>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "282 places available" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Address: Minor 76, Tashkent" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Contract-based allocation" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Furnished rooms with bed, desk, and wardrobe" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Shared kitchen and bathroom facilities" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "24/7 security and reception" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Free Wi-Fi included" %}</span></li>
                     </ul>
-                    <div class="housing-type-tag best">Most popular</div>
+                    <p style="color: #666; font-size: 0.9rem;"><i class="fas fa-phone" style="color: #004080; margin-right: 0.5rem;"></i> +998 91 798 28 85</p>
                 </div>
-            </div>
-            <div class="housing-type-card">
-                <div class="housing-type-top">
-                    <div class="housing-type-icon"><i class="fas fa-home"></i></div>
-                    <h3>Private Apartment</h3>
-                    <div class="housing-type-price">From 2,500,000 UZS<span>/month</span></div>
-                </div>
-                <div class="housing-type-body">
-                    <ul>
-                        <li><i class="fas fa-check"></i> Studio or 1-bedroom apartments</li>
-                        <li><i class="fas fa-check"></i> Full privacy and independence</li>
-                        <li><i class="fas fa-check"></i> Own kitchen and bathroom</li>
-                        <li><i class="fas fa-check"></i> Typically 10-20 min from campus</li>
-                        <li><i class="fas fa-check"></i> Flexible lease terms available</li>
-                        <li><i class="fas fa-check"></i> Utilities may be extra</li>
-                    </ul>
-                    <div class="housing-type-tag">Best for independence</div>
-                </div>
-            </div>
-            <div class="housing-type-card">
-                <div class="housing-type-top">
-                    <div class="housing-type-icon"><i class="fas fa-users"></i></div>
-                    <h3>Shared Flat</h3>
-                    <div class="housing-type-price">From 1,500,000 UZS<span>/month</span></div>
-                </div>
-                <div class="housing-type-body">
-                    <ul>
-                        <li><i class="fas fa-check"></i> Share with 2-3 other students</li>
-                        <li><i class="fas fa-check"></i> Private bedroom, shared living areas</li>
-                        <li><i class="fas fa-check"></i> Split bills and save money</li>
-                        <li><i class="fas fa-check"></i> Great social environment</li>
-                        <li><i class="fas fa-check"></i> Close to campus locations available</li>
-                        <li><i class="fas fa-check"></i> Utilities usually included in rent</li>
-                    </ul>
-                    <div class="housing-type-tag">Best value</div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans 'TIU Student Dormitory' %}" loading="lazy">
                 </div>
             </div>
         </div>
@@ -107,45 +69,45 @@
     <div class="container">
         <div class="housing-included-grid">
             <div class="housing-included-image">
-                <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU student dormitory" loading="lazy">
+                <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "TIU student dormitory" %}" loading="lazy">
             </div>
             <div class="housing-included-text">
-                <h2>What's included in the dormitory</h2>
-                <p>Our on-campus dormitory is designed to give you everything you need to focus on your studies and enjoy student life.</p>
+                <h2>{% trans "What's included in the dormitory" %}</h2>
+                <p>{% trans "Our dormitory is designed to give you everything you need to focus on your studies and enjoy student life." %}</p>
                 <div class="housing-included-items">
                     <div class="housing-included-item">
                         <div class="housing-included-icon"><i class="fas fa-wifi"></i></div>
                         <div>
-                            <h4>Free high-speed Wi-Fi</h4>
-                            <p>across all floors and common areas</p>
+                            <h4>{% trans "Free Wi-Fi" %}</h4>
+                            <p>{% trans "Available across all floors and common areas" %}</p>
                         </div>
                     </div>
                     <div class="housing-included-item">
                         <div class="housing-included-icon"><i class="fas fa-utensils"></i></div>
                         <div>
-                            <h4>Shared kitchen</h4>
-                            <p>fully equipped on every floor</p>
+                            <h4>{% trans "Shared kitchen" %}</h4>
+                            <p>{% trans "Equipped kitchen facilities on each floor" %}</p>
                         </div>
                     </div>
                     <div class="housing-included-item">
                         <div class="housing-included-icon"><i class="fas fa-tshirt"></i></div>
                         <div>
-                            <h4>Laundry room</h4>
-                            <p>washing machines and dryers available</p>
+                            <h4>{% trans "Laundry room" %}</h4>
+                            <p>{% trans "Washing machines available for residents" %}</p>
                         </div>
                     </div>
                     <div class="housing-included-item">
                         <div class="housing-included-icon"><i class="fas fa-shield-alt"></i></div>
                         <div>
-                            <h4>24/7 security</h4>
-                            <p>CCTV, key card access, reception desk</p>
+                            <h4>{% trans "24/7 security" %}</h4>
+                            <p>{% trans "CCTV, access control, and reception desk" %}</p>
                         </div>
                     </div>
                     <div class="housing-included-item">
                         <div class="housing-included-icon"><i class="fas fa-couch"></i></div>
                         <div>
-                            <h4>Common room</h4>
-                            <p>lounge area with TV and study desks</p>
+                            <h4>{% trans "Common room" %}</h4>
+                            <p>{% trans "Lounge area with TV and study desks" %}</p>
                         </div>
                     </div>
                 </div>
@@ -157,28 +119,28 @@
 <!-- How to Apply - Steps -->
 <section class="housing-steps-section">
     <div class="container">
-        <h2>How to apply for dormitory housing</h2>
-        <p class="housing-steps-intro">Follow these simple steps to secure your room. Applications open each year in July for the autumn semester.</p>
+        <h2>{% trans "How to apply for dormitory housing" %}</h2>
+        <p class="housing-steps-intro">{% trans "Dormitory places are allocated on a contract basis. Follow these steps to secure your room." %}</p>
         <div class="housing-steps-grid">
             <div class="housing-step">
                 <div class="housing-step-number">01</div>
-                <h3>Check eligibility</h3>
-                <p>All enrolled TIU students are eligible. First-year and international students are given priority in the allocation process.</p>
+                <h3>{% trans "Check eligibility" %}</h3>
+                <p>{% trans "All enrolled TIU students are eligible to apply. Priority is given to first-year and international students." %}</p>
             </div>
             <div class="housing-step">
                 <div class="housing-step-number">02</div>
-                <h3>Submit application</h3>
-                <p>Complete the online housing application form through your LMS student portal. You'll need your student ID and programme details.</p>
+                <h3>{% trans "Submit application" %}</h3>
+                <p>{% trans "Contact the housing office or submit your application through the student portal. You will need your student ID and enrolment details." %}</p>
             </div>
             <div class="housing-step">
                 <div class="housing-step-number">03</div>
-                <h3>Receive offer</h3>
-                <p>Allocation results are sent by email within 2 weeks. You'll receive your room assignment, move-in date, and payment instructions.</p>
+                <h3>{% trans "Sign the contract" %}</h3>
+                <p>{% trans "Once approved, you will sign a housing contract and make the first monthly payment of 3,000,000 UZS." %}</p>
             </div>
             <div class="housing-step">
                 <div class="housing-step-number">04</div>
-                <h3>Move in</h3>
-                <p>Arrive on your assigned move-in date. Our housing team will greet you, hand over your key, and give you a quick tour of the building.</p>
+                <h3>{% trans "Move in" %}</h3>
+                <p>{% trans "Arrive on your assigned move-in day. The housing team will hand over your key and give you a tour of the building." %}</p>
             </div>
         </div>
     </div>
@@ -189,88 +151,96 @@
     <div class="container">
         <div class="housing-costs-grid">
             <div class="housing-costs-text">
-                <span class="housing-costs-label">Living in Tashkent</span>
-                <h2>How far does your money go?</h2>
-                <p>Tashkent is one of the most affordable student cities in Central Asia. Here's what typical monthly costs look like for a TIU student.</p>
+                <span class="housing-costs-label">{% trans "Living in Tashkent" %}</span>
+                <h2>{% trans "How far does your money go?" %}</h2>
+                <p>{% trans "Tashkent is one of the most affordable student cities in Central Asia. Here are typical monthly costs for a TIU student." %}</p>
             </div>
             <div class="housing-costs-table">
                 <div class="housing-cost-row">
-                    <span class="housing-cost-item"><i class="fas fa-bed"></i> Dormitory room</span>
-                    <span class="housing-cost-value">800,000 – 1,200,000 UZS</span>
+                    <span class="housing-cost-item"><i class="fas fa-bed"></i> {% trans "Dormitory room" %}</span>
+                    <span class="housing-cost-value">{% trans "3,000,000 UZS" %}</span>
                 </div>
                 <div class="housing-cost-row">
-                    <span class="housing-cost-item"><i class="fas fa-hamburger"></i> Food & groceries</span>
-                    <span class="housing-cost-value">1,000,000 – 1,500,000 UZS</span>
+                    <span class="housing-cost-item"><i class="fas fa-hamburger"></i> {% trans "Food and groceries" %}</span>
+                    <span class="housing-cost-value">{% trans "1,000,000 – 1,500,000 UZS" %}</span>
                 </div>
                 <div class="housing-cost-row">
-                    <span class="housing-cost-item"><i class="fas fa-bus"></i> Transport (metro pass)</span>
-                    <span class="housing-cost-value">150,000 UZS</span>
+                    <span class="housing-cost-item"><i class="fas fa-bus"></i> {% trans "Transport (metro pass)" %}</span>
+                    <span class="housing-cost-value">{% trans "150,000 UZS" %}</span>
                 </div>
                 <div class="housing-cost-row">
-                    <span class="housing-cost-item"><i class="fas fa-mobile-alt"></i> Phone & internet</span>
-                    <span class="housing-cost-value">100,000 – 200,000 UZS</span>
+                    <span class="housing-cost-item"><i class="fas fa-mobile-alt"></i> {% trans "Phone and internet" %}</span>
+                    <span class="housing-cost-value">{% trans "100,000 – 200,000 UZS" %}</span>
                 </div>
                 <div class="housing-cost-row">
-                    <span class="housing-cost-item"><i class="fas fa-coffee"></i> Social & entertainment</span>
-                    <span class="housing-cost-value">500,000 – 1,000,000 UZS</span>
+                    <span class="housing-cost-item"><i class="fas fa-coffee"></i> {% trans "Social and entertainment" %}</span>
+                    <span class="housing-cost-value">{% trans "500,000 – 1,000,000 UZS" %}</span>
                 </div>
                 <div class="housing-cost-row total">
-                    <span class="housing-cost-item"><strong>Estimated total</strong></span>
-                    <span class="housing-cost-value"><strong>2,550,000 – 4,050,000 UZS</strong></span>
+                    <span class="housing-cost-item"><strong>{% trans "Estimated total" %}</strong></span>
+                    <span class="housing-cost-value"><strong>{% trans "4,750,000 – 5,850,000 UZS" %}</strong></span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- House Rules -->
+<section class="housing-statement">
+    <div class="container">
+        <h2>{% trans "House rules" %}</h2>
+        <p>{% trans "To ensure a safe and comfortable environment for all residents, the following rules apply in the TIU dormitory. Violation of these rules may result in termination of your housing contract." %}</p>
+    </div>
+</section>
+
 <!-- FAQs -->
 <section class="travel-faqs">
     <div class="container">
-        <h2>Housing FAQs</h2>
+        <h2>{% trans "Housing FAQs" %}</h2>
         <div class="travel-faq-list">
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Can I stay in the dormitory over the summer?</span>
+                    <span>{% trans "Can I stay in the dormitory over the summer?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Yes. Students enrolled in summer school or resit exams can request to stay during the summer period (June–August). A reduced summer rate applies. Contact the Housing Office by 1 May to secure your place.</p>
+                    <p>{% trans "Students enrolled in summer courses may request to stay during the summer period. Contact the housing office for details and availability." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Can I choose my roommate?</span>
+                    <span>{% trans "Can I choose my roommate?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Yes. If you and another student both request to share a room, we'll do our best to accommodate that. Simply note your preferred roommate's name and student ID on the application form.</p>
+                    <p>{% trans "Yes. If you and another student both request to share a room, we will do our best to accommodate that. Note your preferred roommate's name on the application form." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Is the dormitory safe?</span>
+                    <span>{% trans "Is the dormitory safe?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Absolutely. The dormitory has 24/7 security, CCTV coverage, key card access to all floors, and a staffed reception desk. Visitors must sign in and be accompanied by a resident at all times.</p>
+                    <p>{% trans "Yes. The dormitory has 24/7 security, CCTV coverage, access control, and a staffed reception desk. Visitors must sign in and be accompanied by a resident." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>What if I want to move out mid-semester?</span>
+                    <span>{% trans "How do I contact the housing office?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>You can terminate your housing agreement with 30 days' written notice. Refunds are calculated on a pro-rata basis. Contact the Housing Office to discuss your situation before making a decision.</p>
+                    <p>{% trans "You can reach the housing office by phone at +998 91 798 28 85 or visit us at Minor 76, Tashkent." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Can I bring my own furniture?</span>
+                    <span>{% trans "Can I bring my own furniture?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Rooms are fully furnished, so there's no need to bring large items. However, you're welcome to bring personal items like a desk lamp, bedding, or small storage. Large furniture is not permitted due to space limitations.</p>
+                    <p>{% trans "Rooms are fully furnished with a bed, desk, and wardrobe. You are welcome to bring personal items like a desk lamp or bedding. Large furniture is not permitted due to space limitations." %}</p>
                 </div>
             </div>
         </div>
@@ -280,11 +250,11 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/clubs/" class="explore-more-link">{% trans "Clubs & Societies" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">{% trans "Sports & Fitness" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">{% trans "Library" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>

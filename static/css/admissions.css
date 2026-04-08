@@ -205,8 +205,16 @@
     display: none;
 }
 
-.faq-answer.active {
+.faq-item.active .faq-answer {
     display: block;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
 }
 
 /* =============================================

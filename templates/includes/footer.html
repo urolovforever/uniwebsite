@@ -8,11 +8,11 @@
             </a>
             <p>{% trans "Join Tashkent International University and step into a world of academic excellence, personal growth, and limitless opportunities." %}</p>
             <div class="social-links">
-                <a href="{{ site_settings.facebook_url|default:'#' }}" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="{{ site_settings.instagram_url|default:'#' }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="{{ site_settings.telegram_url|default:'#' }}" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="{{ site_settings.linkedin_url|default:'#' }}" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="{{ site_settings.youtube_url|default:'#' }}" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/tiu.uz" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/tiu.uz" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/tiu_uz" aria-label="Telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://linkedin.com/school/tiu-uz" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@tiu_uz" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
 
@@ -41,9 +41,9 @@
         <div class="footer-section">
             <h3>{% trans "Contact" %}</h3>
             <ul>
-                <li><i class="fas fa-map-marker-alt"></i> {{ site_settings|trans_field:"address"|default:"Tashkent, Uzbekistan" }}</li>
-                <li><i class="fas fa-phone"></i> {{ site_settings.phone|default:"+998 71 XXX XX XX" }}</li>
-                <li><i class="fas fa-envelope"></i> {{ site_settings.email|default:"info@tiu.uz" }}</li>
+                <li><i class="fas fa-map-marker-alt"></i> {% trans "Little Ring Road 7, Tashkent, Uzbekistan" %}</li>
+                <li><i class="fas fa-phone"></i> +998 95 131 55 55</li>
+                <li><i class="fas fa-envelope"></i> info@tiu.uz</li>
                 <li><i class="fas fa-clock"></i> {% trans "Mon-Fri: 9:00 AM - 6:00 PM" %}</li>
             </ul>
         </div>

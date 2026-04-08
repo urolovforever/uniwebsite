@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.paginator import Paginator
 from django.urls import reverse
 from django.utils.translation import gettext as _
 from .models import Department, Program
@@ -51,15 +52,21 @@ def program_detail(request, slug):
 
 
 def department_detail(request, slug):
+    from apps.people.models import Person
     department = get_object_or_404(Department, slug=slug)
     programs = department.programs.filter(is_published=True)
+    people_qs = Person.objects.filter(department=department)
+    paginator = Paginator(people_qs, 6)
+    people_page = paginator.get_page(request.GET.get('page'))
     return render(request, 'programs/department_detail.html', {
         'department': department,
         'programs': programs,
+        'people': people_page,
         'hero_title': department.t('name'),
         'hero_category': _('Departments'),
+        'hero_description': department.t('excerpt') or '',
         'breadcrumbs': [
-            {'title': _('Programs'), 'url': reverse('programs:program_list')},
+            {'title': _('Faculty'), 'url': reverse('people:person_list')},
             {'title': department.t('name'), 'url': None},
         ],
     })

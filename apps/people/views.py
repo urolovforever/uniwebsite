@@ -1,12 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.utils.translation import gettext as _
-from .models import Person
+from .models import Leader, Person
 from apps.programs.models import Department, Program
+from apps.news.models import NewsArticle, Event
 
 
 def person_list(request):
     return render(request, 'pages/faculty/index.html')
+
+
+def leadership(request):
+    leaders = Leader.objects.all()
+    return render(request, 'pages/about/leadership.html', {
+        'leaders': leaders,
+    })
 
 
 def person_directory(request):
@@ -24,7 +32,7 @@ def person_detail(request, slug):
     return render(request, 'people/person_detail.html', {
         'person': person,
         'hero_title': person.full_name,
-        'hero_category': person.get_role_display(),
+        'hero_category': person.t('job_title'),
         'breadcrumbs': [
             {'title': _('Faculty'), 'url': reverse('people:person_list')},
             {'title': person.full_name, 'url': None},
@@ -33,22 +41,26 @@ def person_detail(request, slug):
 
 
 def dept_jurisprudence(request):
-    """Faculty of Jurisprudence detail page."""
-    programs = Program.objects.filter(
-        is_published=True,
-        department__slug='jurisprudence',
-    ).select_related('department')
+    departments = Department.objects.filter(faculty='jurisprudence')
+    programs = Program.objects.filter(is_published=True, faculty='jurisprudence').select_related('department')
+    news = NewsArticle.objects.filter(is_published=True, faculty='jurisprudence')[:3]
+    events = Event.objects.filter(is_published=True, faculty='jurisprudence')[:3]
     return render(request, 'pages/faculty/jurisprudence.html', {
+        'departments': departments,
         'programs': programs,
+        'news': news,
+        'events': events,
     })
 
 
 def dept_business_innovative(request):
-    """Faculty of Business and Innovative Education detail page."""
-    programs = Program.objects.filter(
-        is_published=True,
-        department__slug='business-innovative-education',
-    ).select_related('department')
+    departments = Department.objects.filter(faculty='business')
+    programs = Program.objects.filter(is_published=True, faculty='business').select_related('department')
+    news = NewsArticle.objects.filter(is_published=True, faculty='business')[:3]
+    events = Event.objects.filter(is_published=True, faculty='business')[:3]
     return render(request, 'pages/faculty/business-innovative-education.html', {
+        'departments': departments,
         'programs': programs,
+        'news': news,
+        'events': events,
     })

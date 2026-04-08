@@ -4,6 +4,34 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 <link rel="stylesheet" href="{% static 'css/careers.css' %}">
+<style>
+    .partners-section { padding: 4rem 0; }
+    .partners-section:nth-child(even) { background: #f8fafc; }
+    .partners-region { margin-bottom: 1rem; }
+    .partners-region h3 { font-size: 1.1rem; color: #003366; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .partners-region h3 i { color: #00bcd4; font-size: 0.9rem; }
+    .partner-table { width: 100%; border-collapse: collapse; }
+    .partner-table th { text-align: left; padding: 0.75rem 1rem; background: #003366; color: #fff; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .partner-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e5e7eb; font-size: 0.95rem; color: #333; }
+    .partner-table tr:hover td { background: #f0f7ff; }
+    .partner-type { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+    .type-internship { background: #e0f7fa; color: #00838f; }
+    .type-job { background: #fff3e0; color: #e65100; }
+    .type-research { background: #f3e5f5; color: #7b1fa2; }
+    .partner-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 2rem 0; }
+    .partner-stat { text-align: center; }
+    .partner-stat-num { font-size: 2.5rem; font-weight: 800; color: #003366; }
+    .partner-stat-label { font-size: 0.9rem; color: #666; margin-top: 0.25rem; }
+    .contact-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; max-width: 600px; }
+    .contact-card h3 { color: #003366; margin-bottom: 1rem; }
+    .contact-card p { margin: 0.4rem 0; color: #333; font-size: 0.95rem; }
+    .contact-card i { color: #00bcd4; width: 20px; margin-right: 0.5rem; }
+    @media (max-width: 768px) {
+        .partner-table { font-size: 0.85rem; }
+        .partner-table th, .partner-table td { padding: 0.5rem 0.6rem; }
+        .partner-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+</style>
 {% endblock %}
 
 {% block title %}{% trans "Employer Partnerships - TIU" %}{% endblock %}
@@ -27,6 +55,31 @@
     </div>
     <div class="page-hero-gradient-bar"></div>
 </section>
+
+<!-- Stats -->
+<section style="padding: 3rem 0; background: #fff;">
+    <div class="container">
+        <div class="partner-stats">
+            <div class="partner-stat">
+                <div class="partner-stat-num">14</div>
+                <div class="partner-stat-label">{% trans "Employer Partners" %}</div>
+            </div>
+            <div class="partner-stat">
+                <div class="partner-stat-num">4</div>
+                <div class="partner-stat-label">{% trans "Sectors" %}</div>
+            </div>
+            <div class="partner-stat">
+                <div class="partner-stat-num">3</div>
+                <div class="partner-stat-label">{% trans "Partnership Types" %}</div>
+            </div>
+            <div class="partner-stat">
+                <div class="partner-stat-num">92%</div>
+                <div class="partner-stat-label">{% trans "Graduate Employment Rate" %}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Why Recruit From TIU -->
 <section class="why-students-section">
     <div class="container">
@@ -90,7 +143,99 @@
     </div>
 </section>
 
-<!-- Partnership Opportunities — Carousel -->
+<!-- Banking & Finance -->
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-region">
+            <h3><i class="fas fa-university"></i> {% trans "Banking & Finance" %}</h3>
+        </div>
+        <table class="partner-table">
+            <thead>
+                <tr>
+                    <th>{% trans "Organization" %}</th>
+                    <th>{% trans "Field" %}</th>
+                    <th>{% trans "Partnership Type" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Kafil Sug'urta</td><td>{% trans "Insurance" %}</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>Open Bank AJ</td><td>{% trans "Banking" %}</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>ApexBank</td><td>{% trans "Banking" %}</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>Poytaxt Bank AJ</td><td>{% trans "Banking" %}</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>Mikrokreditbank AJ</td><td>{% trans "Banking" %}</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Government & Law -->
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-region">
+            <h3><i class="fas fa-landmark"></i> {% trans "Government & Law" %}</h3>
+        </div>
+        <table class="partner-table">
+            <thead>
+                <tr>
+                    <th>{% trans "Organization" %}</th>
+                    <th>{% trans "Partnership Type" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Oliy Majlis Inson huquqlari bo'yicha vakili (Ombudsman)</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-research">{% trans "Research collaboration" %}</span></td></tr>
+                <tr><td>O'zbekiston Respublikasi Qurolli Kuchlari Bosh shtabi</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span></td></tr>
+                <tr><td>Toshkent shahar Yunusobod tumani hokimligi</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>O'zbekiston Respublikasi Yoshlar parlamenti</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-research">{% trans "Research collaboration" %}</span></td></tr>
+                <tr><td>O'zbekiston Respublikasi Advokatlar Palatasi</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Education -->
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-region">
+            <h3><i class="fas fa-chalkboard-teacher"></i> {% trans "Education" %}</h3>
+        </div>
+        <table class="partner-table">
+            <thead>
+                <tr>
+                    <th>{% trans "Organization" %}</th>
+                    <th>{% trans "Partnership Type" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Mudarris halqaro maktabi</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>Toshkent shahar Yunusobod tuman 88-son umumta'lim maktabi</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Technology & Creative -->
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-region">
+            <h3><i class="fas fa-laptop-code"></i> {% trans "Technology & Creative" %}</h3>
+        </div>
+        <table class="partner-table">
+            <thead>
+                <tr>
+                    <th>{% trans "Organization" %}</th>
+                    <th>{% trans "Description" %}</th>
+                    <th>{% trans "Partnership Type" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Mohirdev</td><td>{% trans "Online education platform" %}</td><td><span class="partner-type type-internship">{% trans "Internship" %}</span> <span class="partner-type type-job">{% trans "Job placement" %}</span></td></tr>
+                <tr><td>Uzbekistan Creative Association</td><td>{% trans "Non-governmental organization" %}</td><td><span class="partner-type type-research">{% trans "Research collaboration" %}</span> <span class="partner-type type-internship">{% trans "Internship" %}</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Partnership Opportunities -->
 <section class="job-ready-section" style="background: #f5f5f5;">
     <div class="container">
         <div class="job-ready-grid">
@@ -162,65 +307,18 @@
     </div>
 </section>
 
-<!-- Talent by Faculty -->
-<section class="find-work-section" style="background: #fff;">
+<!-- Contact Career Development Center -->
+<section style="padding: 4rem 0; background: #fff;">
     <div class="container">
-        <div class="find-work-grid">
-            <div class="find-work-image sticky-col">
-                <img src="{% static 'img/campus/b2.jpg' %}" alt="{% trans "TIU students" %}" loading="lazy">
-            </div>
-            <div class="find-work-text">
-                <h2>{% trans "Talent Across Every Discipline" %}</h2>
-                <p>{% trans "Our students come from diverse academic backgrounds, giving you access to a wide range of skills and expertise." %}</p>
-
-                <div class="find-work-items">
-                    <div class="find-work-item">
-                        <div class="find-work-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div>
-                            <h4>{% trans "Business & Economics" %}</h4>
-                            <p>{% trans "Finance, marketing, management, accounting, and international business graduates with strong analytical skills." %}</p>
-                        </div>
-                    </div>
-                    <div class="find-work-item">
-                        <div class="find-work-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div>
-                            <h4>{% trans "IT & Engineering" %}</h4>
-                            <p>{% trans "Software developers, data scientists, cybersecurity specialists, and engineers trained on the latest technologies." %}</p>
-                        </div>
-                    </div>
-                    <div class="find-work-item">
-                        <div class="find-work-icon">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <div>
-                            <h4>{% trans "Law" %}</h4>
-                            <p>{% trans "Legal professionals with expertise in international law, corporate law, and public policy." %}</p>
-                        </div>
-                    </div>
-                    <div class="find-work-item">
-                        <div class="find-work-icon">
-                            <i class="fas fa-globe-americas"></i>
-                        </div>
-                        <div>
-                            <h4>{% trans "Humanities & Social Sciences" %}</h4>
-                            <p>{% trans "Communication, international relations, translation, and education specialists with cross-cultural competency." %}</p>
-                        </div>
-                    </div>
-                    <div class="find-work-item">
-                        <div class="find-work-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <div>
-                            <h4>{% trans "Research & Innovation" %}</h4>
-                            <p>{% trans "Graduate students and researchers with advanced skills in data analysis, academic writing, and applied research." %}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h2 style="color: #003366; margin-bottom: 1.5rem;">{% trans "Partner with us" %}</h2>
+        <p style="max-width: 700px; color: #555; margin-bottom: 2rem;">
+            {% trans "Interested in becoming an employer partner? Contact our Career Development Center to discuss partnership opportunities tailored to your organization." %}
+        </p>
+        <div class="contact-card">
+            <h3>{% trans "Career Development Center" %}</h3>
+            <p><i class="fas fa-user"></i> {% trans "Ulug'bek Muxtorov" %}</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+998999233834">+998 99 923 38 34</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:u.mukhtorov11@gmail.com">u.mukhtorov11@gmail.com</a></p>
         </div>
     </div>
 </section>
@@ -251,16 +349,6 @@ document.addEventListener('DOMContentLoaded', function () {
     dots.forEach(function (dot) {
         dot.addEventListener('click', function () {
             showCard(parseInt(this.dataset.index));
-        });
-    });
-
-    // Accordion
-    document.querySelectorAll('.accordion-header').forEach(function (header) {
-        header.addEventListener('click', function () {
-            var item = this.parentElement;
-            var wasActive = item.classList.contains('active');
-            document.querySelectorAll('.accordion-item').forEach(function (i) { i.classList.remove('active'); });
-            if (!wasActive) item.classList.add('active');
         });
     });
 });

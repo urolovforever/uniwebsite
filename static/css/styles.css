@@ -557,6 +557,17 @@ ul { list-style: none; }
 .stat-number { font-size: 3rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; font-family: var(--font-heading); }
 .stat-label { font-size: 1.1rem; color: var(--white); font-weight: 500; opacity: 0.95; }
 
+/* Program Level Filters */
+.prog-level-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.prog-filter-btn {
+    display: inline-block; padding: 0.5rem 1.5rem; border-radius: 50px;
+    font-size: 0.9rem; font-weight: 600; text-decoration: none;
+    border: 2px solid #e0e0e0; color: #555; background: #fff;
+    transition: all 0.2s;
+}
+.prog-filter-btn:hover { border-color: var(--primary-blue); color: var(--primary-blue); }
+.prog-filter-btn.active { background: var(--primary-blue); border-color: var(--primary-blue); color: #fff; }
+
 /* ================================================
    Programs Pathway Section - DU Style
    ================================================ */
@@ -989,6 +1000,7 @@ ul { list-style: none; }
     transition: color 0.3s ease;
 }
 .events-list-item:hover h4 { color: var(--primary-blue); text-decoration: underline; }
+.events-list-excerpt { font-size: 0.85rem; color: var(--text-gray); line-height: 1.5; margin: 0.25rem 0 0.4rem; }
 .events-list-time { font-size: 0.8rem; color: var(--text-gray); display: flex; align-items: center; gap: 0.35rem; }
 
 /* ================================================

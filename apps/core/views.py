@@ -8,38 +8,20 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext as _
 
-from apps.news.models import NewsArticle, Event, PressRelease
+from apps.news.models import NewsArticle, Event, Publication
 from apps.programs.models import Program, Department
-from apps.core.models import Partner, ContactMessage, JobPosition, Scholarship
+from apps.core.models import Partner, ContactMessage, Scholarship
+from apps.jobs.models import JobPosition
 from apps.core.forms import ContactForm
 
 
 def homepage(request):
-    # Top story: first article marked is_top
-    top_story = NewsArticle.objects.filter(is_published=True, is_top=True).first()
-    # Featured news: articles marked is_featured, excluding top story
-    featured_qs = NewsArticle.objects.filter(is_published=True, is_featured=True)
-    if top_story:
-        featured_qs = featured_qs.exclude(pk=top_story.pk)
-    featured_news = list(featured_qs[:4])
-    # Build combined list: top story first, then featured
-    news_articles = ([top_story] + featured_news) if top_story else featured_news
-    # Fallback: if no is_top/is_featured articles, show latest
-    if not news_articles:
-        news_articles = list(NewsArticle.objects.filter(is_published=True)[:5])
+    # Latest 6 news: first one is the top story, rest are side list
+    news_articles = list(NewsArticle.objects.filter(is_published=True).order_by('-published_date')[:7])
 
     today = timezone.now().date()
-    # Top event: first event marked is_top with future date
-    top_event = Event.objects.filter(is_published=True, is_top=True, event_date__gte=today).first()
-    # Featured events: future events marked is_featured, excluding top event
-    featured_events_qs = Event.objects.filter(is_published=True, is_featured=True, event_date__gte=today)
-    if top_event:
-        featured_events_qs = featured_events_qs.exclude(pk=top_event.pk)
-    featured_events = list(featured_events_qs[:3])
-    upcoming_events = ([top_event] + featured_events) if top_event else featured_events
-    # Fallback: if no is_top/is_featured events, show nearest upcoming
-    if not upcoming_events:
-        upcoming_events = list(Event.objects.filter(is_published=True, event_date__gte=today)[:4])
+    # Latest 7 events: first one is featured, rest are side list
+    upcoming_events = list(Event.objects.filter(is_published=True, event_date__gte=today).order_by('event_date')[:7])
 
     context = {
         'news_articles': news_articles,
@@ -65,13 +47,13 @@ def contact_page(request):
     else:
         form = ContactForm()
 
-    return render(request, 'pages/contact/contact-form.html', {'form': form})
+    return render(request, 'pages/contact/contact.html', {'form': form})
 
 
 def site_search(request):
-    """Global search across news, events, press releases, and programs."""
+    """Global search across news, events, publications, and programs."""
     query = request.GET.get('q', '').strip()
-    results = {'news': [], 'events': [], 'press': [], 'programs': []}
+    results = {'news': [], 'events': [], 'publications': [], 'programs': []}
     total = 0
 
     if query and len(query) >= 2:
@@ -86,8 +68,8 @@ def site_search(request):
             Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
             is_published=True,
         )[:10])
-        results['press'] = list(PressRelease.objects.filter(
-            Q(title__icontains=query) | Q(excerpt__icontains=query) |
+        results['publications'] = list(Publication.objects.filter(
+            Q(title__icontains=query) | Q(excerpt__icontains=query) | Q(author__icontains=query) |
             Q(title_uz__icontains=query) | Q(title_ru__icontains=query) |
             Q(excerpt_uz__icontains=query) | Q(excerpt_ru__icontains=query),
             is_published=True,
@@ -134,11 +116,11 @@ def search_api(request):
                     desc += ' · ' + event.location
             items.append({'title': event.t('title'), 'desc': desc, 'url': event.get_absolute_url(), 'type': 'event'})
 
-        for press in PressRelease.objects.filter(
-            Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
+        for pub in Publication.objects.filter(
+            Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query) | Q(author__icontains=query),
             is_published=True,
         )[:5]:
-            items.append({'title': press.t('title'), 'desc': press.t('excerpt')[:120] if press.t('excerpt') else '', 'url': press.get_absolute_url(), 'type': 'press'})
+            items.append({'title': pub.t('title'), 'desc': pub.author + ' · ' + (pub.t('excerpt')[:100] if pub.t('excerpt') else ''), 'url': pub.get_absolute_url(), 'type': 'publication'})
 
         for program in Program.objects.filter(
             Q(title__icontains=query) | Q(title_uz__icontains=query) | Q(title_ru__icontains=query),
@@ -237,7 +219,7 @@ def job_detail(request, slug):
         'other_positions': other_positions,
         'hero_title': job.t('title'),
         'hero_category': _('Careers'),
-        'hero_description': f'{job.display_department} · {job.get_job_type_display()}',
+        'hero_description': f'{job.department.t("name") if job.department else ""} · {job.job_type.t("name") if job.job_type else ""}',
         'breadcrumbs': [
             {'title': _('Careers'), 'url': reverse('core:static_page', kwargs={'url_path': 'careers'})},
             {'title': _('Open Positions'), 'url': reverse('core:hiring')},

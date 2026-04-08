@@ -26,21 +26,24 @@
                                 <i class="fas fa-building"></i>
                                 <div>
                                     <span class="evdetail-info-label">{% trans "Department" %}</span>
-                                    <span class="evdetail-info-value">{{ job.display_department }}</span>
+                                    <span class="evdetail-info-value">{{ job.department|trans_field:"name" }}</span>
                                 </div>
                             </div>
+                            {% if job.job_type %}
                             <div class="evdetail-info-row">
                                 <i class="fas fa-briefcase"></i>
                                 <div>
                                     <span class="evdetail-info-label">{% trans "Type" %}</span>
-                                    <span class="evdetail-info-value">{{ job.get_job_type_display }}</span>
+                                    <span class="evdetail-info-value">{{ job.job_type|trans_field:"name" }}</span>
                                 </div>
                             </div>
+                            {% endif %}
+                            {% if job.role %}
                             <div class="evdetail-info-row">
                                 <i class="fas fa-user-tie"></i>
                                 <div>
                                     <span class="evdetail-info-label">{% trans "Role" %}</span>
-                                    <span class="evdetail-info-value">{{ job.get_role_display }}</span>
+                                    <span class="evdetail-info-value">{{ job.role|trans_field:"name" }}</span>
                                 </div>
                             </div>
                             <div class="evdetail-info-row">
@@ -50,6 +53,15 @@
                                     <span class="evdetail-info-value">{{ job.deadline|date:"d M Y" }}</span>
                                 </div>
                             </div>
+                            {% if job.salary %}
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Salary" %}</span>
+                                    <span class="evdetail-info-value">{{ job|trans_field:"salary" }}</span>
+                                </div>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
 
@@ -71,7 +83,7 @@
                         <div class="newsdetail-related-list">
                             {% for pos in other_positions %}
                             <a href="{{ pos.get_absolute_url }}" class="newsdetail-related-item">
-                                <span class="newsdetail-related-date">{{ pos.get_job_type_display|upper }} · {{ pos.get_role_display|upper }}</span>
+                                <span class="newsdetail-related-date">{% if pos.job_type %}{{ pos.job_type }}{% endif %}</span>
                                 <span class="newsdetail-related-title">{{ pos|trans_field:"title" }}</span>
                             </a>
                             {% endfor %}

@@ -282,6 +282,38 @@
 /* ================================================
    Event List Page — Hull-inspired layout
    ================================================ */
+/* Category hashtag tags */
+.category-tags-section { padding: 1.5rem 0 0; background: #fff; }
+.category-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.category-tag {
+    display: inline-block; padding: 0.4rem 1rem; border-radius: 50px;
+    font-size: 0.85rem; font-weight: 600; text-decoration: none;
+    border: 2px solid #e0e0e0; color: #555; background: #fff;
+    transition: all 0.2s;
+}
+.category-tag:hover { border-color: #004080; color: #004080; }
+.category-tag.active { background: #004080; border-color: #004080; color: #fff; }
+
+/* Date range inputs */
+.evlist-date-range { display: flex; align-items: center; gap: 0.5rem; }
+.evlist-date-input {
+    flex: 1; padding: 0.5rem 0.6rem; border: 1px solid #ddd; border-radius: 6px;
+    font-size: 0.85rem; font-family: inherit; color: #333;
+}
+.evlist-date-input:focus { border-color: #004080; outline: none; }
+.evlist-date-sep { color: #999; font-size: 0.85rem; }
+.evlist-filter-actions { display: flex; gap: 0.5rem; }
+.evlist-apply-btn {
+    flex: 1; padding: 0.6rem; border: none; border-radius: 6px;
+    background: #004080; color: #fff; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; font-family: inherit; transition: background 0.2s;
+}
+.evlist-apply-btn:hover { background: #003366; }
+.evlist-item-category {
+    display: inline-block; font-size: 0.75rem; font-weight: 700;
+    color: #00bcd4; margin-bottom: 0.25rem;
+}
+
 .evlist-section {
     padding: 4rem 0 5rem;
     background: #fff;
@@ -615,8 +647,14 @@
     font-family: inherit;
     color: var(--text-dark, #333);
     border: none;
-    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
     background: #fff;
+    -webkit-appearance: none;
+}
+.evlist-search-input:focus, .evlist-search-input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .evlist-search-input::placeholder {
@@ -870,6 +908,18 @@
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--dark-blue, #003366);
+}
+.newsdetail-category-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-blue, #004080);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+.newsdetail-category-link:hover {
+    border-bottom-color: var(--primary-blue, #004080);
 }
 
 /* Share buttons */

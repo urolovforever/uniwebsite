@@ -438,10 +438,10 @@ function animateCards(selector, options = {}) {
     const TYPE_ICONS = {
         news: 'far fa-newspaper',
         event: 'far fa-calendar-alt',
-        press: 'far fa-file-alt',
+        publication: 'fas fa-book',
         program: 'fas fa-graduation-cap',
     };
-    const TYPE_LABELS = { news: 'News', event: 'Events', press: 'Press Releases', program: 'Programs' };
+    const TYPE_LABELS = { news: 'News', event: 'Events', publication: 'Publications', program: 'Programs' };
     var activeType = 'all';
     var noResultsText = panel.dataset.noResults || 'No results found';
     var errorText = panel.dataset.error || 'Something went wrong';

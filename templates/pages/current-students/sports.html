@@ -1,5 +1,5 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -7,22 +7,22 @@
 <link rel="stylesheet" href="{% static 'css/current-students.css' %}">
 {% endblock %}
 
-{% block title %}Sports & Fitness - TIU{% endblock %}
+{% block title %}{% trans "Sports & Fitness" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Current Students</span>
+            <span>{% trans "Current Students" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Sports & Fitness</span>
+            <span class="current">{% trans "Sports & Fitness" %}</span>
         </nav>
-        <div class="page-hero-category">Students</div>
-        <h1 class="page-hero-title">Sports & Fitness</h1>
+        <div class="page-hero-category">{% trans "Students" %}</div>
+        <h1 class="page-hero-title">{% trans "Sports & Fitness" %}</h1>
         <div class="page-hero-description">
-            <p>Stay active and competitive with TIU's sports facilities, teams, and fitness programmes.</p>
+            <p>{% trans "Stay active and healthy with TIU's growing sports facilities, fitness classes, and inter-faculty competitions." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -33,9 +33,9 @@
     <div class="container">
         <div class="sports-intro-grid">
             <div class="sports-intro-text">
-                <h2>Move more, achieve more</h2>
-                <p>Whether you're a competitive athlete or just want to stay active, TIU has something for you. Our sports programme is open to all students — no experience required. Just bring your energy.</p>
-                <p>From football and basketball to table tennis and chess, our teams compete in inter-university leagues across Tashkent. And if competition isn't your thing, our fitness sessions and recreational clubs are the perfect way to unwind after lectures.</p>
+                <h2>{% trans "Move more, achieve more" %}</h2>
+                <p>{% trans "TIU is a young university, founded in 2023, and our sports programme is growing every semester. Whether you are a seasoned athlete or just looking to stay fit between lectures, there is a place for you here." %}</p>
+                <p>{% trans "We offer football, basketball, volleyball, table tennis, and regular fitness classes. Our students take part in inter-faculty tournaments and friendly matches with other Tashkent universities. No experience required — just bring your energy." %}</p>
             </div>
             <div class="sports-intro-image">
                 <img src="{% static 'img/campus/c4.jpg' %}" alt="TIU Sports" loading="lazy">
@@ -49,10 +49,10 @@
     <div class="container">
         <div class="campus-grid clubs-gallery-reversed">
             <div class="campus-content">
-                <div class="campus-category">Our Teams</div>
-                <h2>World-class sports facilities, open to all</h2>
-                <p>At TIU, sport is for everyone — not just the few. Whether you're here to train, compete, or simply stay active, our facilities are ready for you. From football and basketball to table tennis and chess, our teams compete in inter-university leagues across Tashkent.</p>
-                <a href="/current-students/clubs/" class="campus-link">Explore Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+                <div class="campus-category">{% trans "Our Teams" %}</div>
+                <h2>{% trans "Sport is for everyone at TIU" %}</h2>
+                <p>{% trans "You do not need to be a professional to join. Our teams train regularly in the multi-court hall and outdoor pitches. From inter-faculty football tournaments to table tennis leagues, there are plenty of ways to compete and have fun." %}</p>
+                <a href="/current-students/clubs/" class="campus-link">{% trans "Explore Clubs & Societies" %} <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="campus-gallery">
                 <div class="campus-main-image" id="sportsMainImage">
@@ -94,28 +94,28 @@
                 <img src="{% static 'img/campus/c3.jpg' %}" alt="TIU sports hall" loading="lazy">
             </div>
             <div class="sports-facilities-text">
-                <h2>Our facilities</h2>
-                <p>TIU's sports facilities are available to all students free of charge. Whether you want a quick workout or a full training session, everything is on campus and easy to access.</p>
+                <h2>{% trans "Our facilities" %}</h2>
+                <p>{% trans "As a growing university, we are steadily expanding our sports infrastructure. All facilities are available to TIU students free of charge." %}</p>
                 <div class="sports-facility-list">
                     <div class="sports-facility-item">
                         <i class="fas fa-check"></i>
-                        <span>Indoor sports hall for basketball, volleyball, and futsal</span>
+                        <span>{% trans "Gym with cardio equipment and free weights" %}</span>
                     </div>
                     <div class="sports-facility-item">
                         <i class="fas fa-check"></i>
-                        <span>Outdoor football pitch</span>
+                        <span>{% trans "Multi-court hall for basketball, volleyball, and futsal" %}</span>
                     </div>
                     <div class="sports-facility-item">
                         <i class="fas fa-check"></i>
-                        <span>Table tennis room with 4 tables</span>
+                        <span>{% trans "Outdoor football and mini-football pitches" %}</span>
                     </div>
                     <div class="sports-facility-item">
                         <i class="fas fa-check"></i>
-                        <span>Fitness area with cardio and weights</span>
+                        <span>{% trans "Table tennis room" %}</span>
                     </div>
                     <div class="sports-facility-item">
                         <i class="fas fa-check"></i>
-                        <span>Changing rooms and showers</span>
+                        <span>{% trans "Changing rooms and showers" %}</span>
                     </div>
                 </div>
             </div>
@@ -126,23 +126,23 @@
 <!-- How to Join -->
 <section class="sports-join-section">
     <div class="container">
-        <h2>How to get involved</h2>
-        <p class="sports-join-intro">Getting started is easy — no tryouts, no pressure. Just show up.</p>
+        <h2>{% trans "How to get involved" %}</h2>
+        <p class="sports-join-intro">{% trans "Getting started is easy — no tryouts, no pressure. Just show up." %}</p>
         <div class="sports-join-grid">
             <div class="sports-join-step">
                 <div class="sports-join-number">01</div>
-                <h3>Check the schedule</h3>
-                <p>Training times and sessions are posted on the LMS portal and the sports noticeboard in Building B.</p>
+                <h3>{% trans "Check the schedule" %}</h3>
+                <p>{% trans "Training times and fitness class schedules are posted on the LMS portal and the sports noticeboard in Building B." %}</p>
             </div>
             <div class="sports-join-step">
                 <div class="sports-join-number">02</div>
-                <h3>Turn up</h3>
-                <p>Most sessions are open to everyone. Just come to the sports hall at the listed time — no registration needed.</p>
+                <h3>{% trans "Turn up" %}</h3>
+                <p>{% trans "Most sessions are open to everyone. Just come to the sports hall or gym at the listed time — no registration needed." %}</p>
             </div>
             <div class="sports-join-step">
                 <div class="sports-join-number">03</div>
-                <h3>Join a team</h3>
-                <p>If you want to compete, speak to the team captain or the Sports Coordinator to join the official squad.</p>
+                <h3>{% trans "Join a team" %}</h3>
+                <p>{% trans "If you want to compete in inter-faculty tournaments, speak to the team captain or the Sports Coordinator to join the squad." %}</p>
             </div>
         </div>
     </div>
@@ -151,42 +151,42 @@
 <!-- FAQs -->
 <section class="travel-faqs">
     <div class="container">
-        <h2>Sports FAQs</h2>
+        <h2>{% trans "Sports FAQs" %}</h2>
         <div class="travel-faq-list">
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Do I need to be experienced to join a team?</span>
+                    <span>{% trans "Do I need experience to join a sports team?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Not at all. Our sports teams welcome all skill levels. Recreational sessions are open to complete beginners, and competitive squads hold regular training to help you improve.</p>
+                    <p>{% trans "Not at all. Our teams welcome all skill levels. Recreational sessions are open to complete beginners, and regular training sessions will help you improve quickly." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Are sports facilities free for students?</span>
+                    <span>{% trans "Are sports facilities free for students?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Yes. All on-campus sports facilities are free for enrolled TIU students. Just bring your student ID card to access the sports hall and fitness area.</p>
+                    <p>{% trans "Yes. All on-campus sports facilities are free for enrolled TIU students. Just bring your student ID card." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>When are training sessions?</span>
+                    <span>{% trans "What are the opening hours?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Most team training sessions are held in the evenings (17:00–20:00) on weekdays. The fitness area is open Monday–Saturday, 08:00–21:00. Check the LMS portal for the latest schedule.</p>
+                    <p>{% trans "The gym and sports hall are open Monday to Saturday, 08:00–21:00. Team training sessions are usually held in the evenings, 17:00–20:00. Morning exercise sessions start at 07:30 on weekdays." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Can I start a new sports team?</span>
+                    <span>{% trans "Can I start a new sports team?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Yes. If you have at least 5 interested students, you can propose a new team through the Student Union. The Sports Coordinator will help you get set up with training slots and equipment.</p>
+                    <p>{% trans "Yes. If you have at least 5 interested students, you can propose a new team through the Student Union. The Sports Coordinator will help you arrange training slots and equipment." %}</p>
                 </div>
             </div>
         </div>
@@ -218,10 +218,10 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/clubs/" class="explore-more-link">{% trans "Clubs & Societies" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">{% trans "Library" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>

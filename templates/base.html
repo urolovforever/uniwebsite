@@ -56,25 +56,16 @@
             "addressCountry": "UZ"
         },
         "sameAs": [
-            "{{ site_settings.facebook_url|default:'' }}",
-            "{{ site_settings.instagram_url|default:'' }}",
-            "{{ site_settings.telegram_url|default:'' }}",
-            "{{ site_settings.linkedin_url|default:'' }}",
-            "{{ site_settings.youtube_url|default:'' }}"
+            "https://facebook.com/tiu.uz",
+            "https://instagram.com/tiu.uz",
+            "https://t.me/tiu_uz",
+            "https://linkedin.com/school/tiu-uz",
+            "https://youtube.com/@tiu_uz"
         ]
     }
     </script>
 
-    <!-- Analytics -->
-    {% if site_settings.google_analytics_id %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site_settings.google_analytics_id }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site_settings.google_analytics_id }}');
-    </script>
-    {% endif %}
+    <!-- Analytics — add Google Analytics ID here when ready -->
 
     <!-- Main CSS -->
     {% compress css %}

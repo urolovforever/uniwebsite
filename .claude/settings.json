@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(msguniq /home/tiu/PyCharmMiscProject/uniwebsite/locale/uz/LC_MESSAGES/django.po -o /home/tiu/PyCharmMiscProject/uniwebsite/locale/uz/LC_MESSAGES/django.po)"
+    ]
+  }
+}

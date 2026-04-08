@@ -90,55 +90,6 @@ class Partner(models.Model):
         return self.name
 
 
-class JobPosition(TranslatedMixin, models.Model):
-    """Open job positions displayed on the careers/hiring page."""
-    DEPARTMENT_CHOICES = [
-        ('it', 'School of IT & Engineering'),
-        ('business', 'School of Business & Economics'),
-        ('law', 'School of Law'),
-        ('humanities', 'School of Humanities & Social Sciences'),
-        ('foundation', 'Foundation Programme'),
-        ('admin', 'Administrative'),
-    ]
-    JOB_TYPE_CHOICES = [
-        ('full-time', 'Full-time'),
-        ('part-time', 'Part-time'),
-    ]
-    ROLE_CHOICES = [
-        ('academic', 'Academic'),
-        ('staff', 'Staff'),
-    ]
-
-    title = models.CharField(max_length=200)
-    title_uz = models.CharField(max_length=200, blank=True)
-    title_ru = models.CharField(max_length=200, blank=True)
-    slug = models.SlugField(max_length=250, unique=True)
-    department = models.CharField(max_length=20, choices=DEPARTMENT_CHOICES)
-    department_label = models.CharField(
-        max_length=100, blank=True,
-        help_text='Display name for the department (e.g. "Information Technology Department"). Leave blank to use default.',
-    )
-    job_type = models.CharField(max_length=20, choices=JOB_TYPE_CHOICES)
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES)
-    deadline = models.DateField()
-    description = CKEditor5Field(blank=True, config_name='default')
-    description_uz = CKEditor5Field(blank=True, config_name='default')
-    description_ru = CKEditor5Field(blank=True, config_name='default')
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['deadline']
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse('core:job_detail', kwargs={'slug': self.slug})
-
-    @property
-    def display_department(self):
-        return self.department_label or self.get_department_display()
 
 
 class Scholarship(TranslatedMixin, models.Model):

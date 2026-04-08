@@ -30,11 +30,16 @@
                     </div>
 
                     <div class="evlist-filter-group">
-                        <label class="evlist-toggle-row">
-                            <span class="evlist-toggle-label">{% trans "Featured only" %}</span>
-                            <input type="checkbox" id="newslist-featured-toggle" {% if featured_only %}checked{% endif %} onchange="applyNewsFilters()">
-                            <span class="evlist-toggle-switch"></span>
-                        </label>
+                        <label class="evlist-filter-label">{% trans "Category" %}</label>
+                        <div class="evlist-select-wrapper">
+                            <select id="newslist-category" class="evlist-select" onchange="applyNewsFilters()">
+                                <option value="">{% trans "All categories" %}</option>
+                                {% for cat in categories %}
+                                <option value="{{ cat.slug }}" {% if selected_category == cat.slug %}selected{% endif %}>{{ cat|trans_field:"name" }}</option>
+                                {% endfor %}
+                            </select>
+                            <i class="fas fa-chevron-down evlist-select-icon"></i>
+                        </div>
                     </div>
 
                     <div class="evlist-filter-group">
@@ -77,13 +82,13 @@
                 {% if articles.has_other_pages %}
                 <div class="pagination">
                     {% if articles.has_previous %}
-                    <a href="?page={{ articles.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if featured_only %}&featured=1{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+                    <a href="?page={{ articles.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
                     {% endif %}
                     {% for num in articles.paginator.page_range %}
-                    <a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}{% if featured_only %}&featured=1{% endif %}" class="pagination-btn{% if articles.number == num %} active{% endif %}">{{ num }}</a>
+                    <a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" class="pagination-btn{% if articles.number == num %} active{% endif %}">{{ num }}</a>
                     {% endfor %}
                     {% if articles.has_next %}
-                    <a href="?page={{ articles.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if featured_only %}&featured=1{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+                    <a href="?page={{ articles.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
                     {% endif %}
                 </div>
                 {% endif %}
@@ -97,9 +102,8 @@
     <div class="container">
         <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:publications' %}" class="explore-more-link">{% trans "Publications" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
@@ -110,15 +114,13 @@
 <script>
 function applyNewsFilters() {
     var q = document.getElementById('newslist-search').value.trim();
-    var featured = document.getElementById('newslist-featured-toggle').checked;
+    var cat = document.getElementById('newslist-category').value;
     var params = new URLSearchParams();
     if (q) params.set('q', q);
-    if (featured) params.set('featured', '1');
+    if (cat) params.set('category', cat);
     window.location.href = window.location.pathname + '?' + params.toString();
 }
 function clearNewsFilters() {
-    document.getElementById('newslist-search').value = '';
-    document.getElementById('newslist-featured-toggle').checked = false;
     window.location.href = window.location.pathname;
 }
 </script>

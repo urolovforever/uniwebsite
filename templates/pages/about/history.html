@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 {% endblock %}
 
-{% block title %}{% trans "Our History - TIU" %}{% endblock %}
+{% block title %}{% trans "Our History" %} - TIU{% endblock %}
 
 {% block content %}
 <!-- Page Hero -->
@@ -21,7 +21,7 @@
         <div class="page-hero-category">{% trans "About TIU" %}</div>
         <h1 class="page-hero-title">{% trans "Our History" %}</h1>
         <div class="page-hero-description">
-            <p>{% trans "From a bold idea to a thriving institution — the story of how Tashkent International University came to be." %}</p>
+            <p>{% trans "The story of Tashkent International University — from its founding to today." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -30,33 +30,57 @@
 <!-- History Intro -->
 <section class="history-intro">
     <div class="container">
-        <h2>{% trans "We didn't come this far by holding back" %}</h2>
-        <p>{% trans "Since 2023 we've been building something extraordinary — a university that prepares the next wave of global leaders. People who will leave their mark on their fields, their profession and the world. How have we grown so fast? Because ambition is in our DNA. Yes, we're proud of what we've achieved in a short time. But we're always looking ahead with renewed energy, purpose and determination." %}</p>
+        <h2>{% trans "University History" %}</h2>
+        <p>{% trans "Tashkent International University is a private university located in Tashkent, the capital of Uzbekistan. It opened its doors to students in October 2023." %}</p>
+        <p>{% trans "The university has four departments: Business, Education, IT, and Foreign Languages. We offer bachelor's and master's programs in these fields." %}</p>
     </div>
 </section>
 
-<!-- History Feature -->
+<!-- Departments Feature -->
 <section class="history-feature">
     <div class="history-feature-inner">
         <div class="history-feature-text">
-            <h2>{% trans "It takes one person to change countless lives" %}</h2>
-            <p>{% trans "Tashkent International University was founded in 2023 — born from a bold vision to bring world-class, English-medium education to Central Asia." %}</p>
-            <p>{% trans "From the very beginning, TIU opened its doors with five departments, an international faculty, and a promise: that education here would lead somewhere far beyond the classroom walls." %}</p>
-            <p>{% trans "Our mission — connecting students to the world through the 2+2 dual degree pathway — honours the ambition of our founding vision. And we're still driven by an unwavering desire for progress." %}</p>
-            <a href="/about/overview/" class="history-feature-link">{% trans "Here's where it all began..." %} <i class="fas fa-external-link-alt"></i></a>
+            <h2>{% trans "Our Departments" %}</h2>
+            <p>{% trans "The TIU Business Department offers programs in economics, finance, marketing, management, world economy, and international economic relations. Graduates of this program become business professionals with strong analytical and critical thinking skills." %}</p>
+            <p>{% trans "TIU's Education Department prepares students to become teachers and educators in various fields such as preschool education, primary education, and psychology. Graduates become effective teachers who can inspire and motivate their students." %}</p>
+            <p>{% trans "The TIU IT Department offers specializations in computer engineering, software engineering, information technology, and cybersecurity, helping students become experts in the latest technologies and preparing them for careers in software development, cybersecurity, and data analysis." %}</p>
+            <p>{% trans "TIU's Foreign Languages Department offers specializations in translation, interpretation, and language teaching. Students of this program become communication specialists through learning various languages in written and oral forms." %}</p>
         </div>
         <div class="history-feature-img">
-            <img src="{% static 'img/campus/b1.jpg' %}" alt="{% trans "TIU founding moment" %}" loading="lazy">
-            <div class="history-feature-caption">{% trans "The founding of Tashkent International University in 2023." %}</div>
+            <img src="{% static 'img/campus/b1.jpg' %}" alt="{% trans 'TIU Campus' %}" loading="lazy">
+            <div class="history-feature-caption">{% trans "Tashkent International University, founded in 2023." %}</div>
         </div>
     </div>
 </section>
 
-<!-- Horizontal Timeline Carousel -->
+<!-- Faculty & Research -->
+<section class="history-quote">
+    <div class="history-quote-inner">
+        <h2>{% trans "Faculty and Research" %}</h2>
+        <p>{% trans "TIU is staffed by highly qualified professors and experienced teachers who are experts in their fields. Their extensive teaching and research experience sets a high standard for academic excellence." %}</p>
+        <p>{% trans "TIU places great emphasis on research and innovation, supporting students' involvement in research activities and collaboration with industry organizations." %}</p>
+    </div>
+</section>
+
+<!-- International Partnerships -->
+<section class="feature-block">
+    <div class="feature-block-inner">
+        <div class="feature-block-text">
+            <h2>{% trans "International Partnerships" %}</h2>
+            <p>{% trans "TIU establishes partnerships with prestigious universities and organizations around the world, creating broad opportunities for students to study abroad and gain international experience." %}</p>
+            <p>{% trans "In conclusion, we provide comprehensive support to our students, contributing to their success in their chosen profession and personal life." %}</p>
+            <a href="/international/partner-universities/" class="history-feature-link">{% trans "Partner Universities" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="feature-block-img">
+            <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans 'TIU International' %}" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Timeline -->
 <section class="htimeline">
     <div class="htimeline-header">
-        <h2>{% trans "Where do we start? In the" %} <em>{% trans "future." %}</em></h2>
-        <p>{% trans "From its founding to today's generation of changemakers, TIU has a bold and rapidly evolving story. Here are just some of our key milestones — from international partnerships and campus expansions to moments of impact — that have defined TIU's journey since 2023." %}</p>
+        <h2>{% trans "Key Milestones" %}</h2>
     </div>
     <div class="htimeline-overflow">
         <div class="htimeline-track" id="htimelineTrack">
@@ -65,7 +89,7 @@
                 <div class="htimeline-bar"></div>
                 <div class="htimeline-card-body">
                     <div class="htimeline-year">2023</div>
-                    <p>{% trans "TIU is officially founded in Tashkent. Five departments open simultaneously with 100% English-medium instruction and an international faculty team." %}</p>
+                    <p>{% trans "TIU is officially founded in Tashkent with four departments and English-medium instruction." %}</p>
                 </div>
             </div>
             <div class="htimeline-card">
@@ -73,8 +97,7 @@
                 <div class="htimeline-bar"></div>
                 <div class="htimeline-card-body">
                     <div class="htimeline-year">2024</div>
-                    <p>{% trans "International partnerships expand across South Korea, Malaysia, Latvia, and beyond. The first exchange students arrive. The 2+2 dual degree pathway becomes reality." %}</p>
-                    <a href="/international/partner-universities/" class="htimeline-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                    <p>{% trans "International partnerships expand. The 2+2 dual degree pathway becomes reality." %}</p>
                 </div>
             </div>
             <div class="htimeline-card">
@@ -82,25 +105,15 @@
                 <div class="htimeline-bar"></div>
                 <div class="htimeline-card-body">
                     <div class="htimeline-year">2025</div>
-                    <p>{% trans "New programs and research initiatives launch. Campus facilities expand with modern labs and collaborative workspaces. TIU's reputation continues to grow." %}</p>
-                    <a href="/research/" class="htimeline-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
+                    <p>{% trans "New programs and research initiatives launch. Campus facilities continue to expand." %}</p>
                 </div>
             </div>
             <div class="htimeline-card">
-                <div class="htimeline-card-img"><img src="{% static 'img/campus/c5.jpg' %}" alt="2026" loading="lazy"></div>
-                <div class="htimeline-bar"></div>
-                <div class="htimeline-card-body">
-                    <div class="htimeline-year">2026</div>
-                    <p>{% trans "First cohort of 2+2 students transfer to partner universities abroad. New campus developments and student housing projects begin." %}</p>
-                    <a href="/programs/joint-degrees/" class="htimeline-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="htimeline-card">
-                <div class="htimeline-card-img"><img src="{% static 'img/hero/back2.jpg' %}" alt="{% trans "The Future" %}" loading="lazy"></div>
+                <div class="htimeline-card-img"><img src="{% static 'img/hero/back2.jpg' %}" alt="{% trans 'The Future' %}" loading="lazy"></div>
                 <div class="htimeline-bar"></div>
                 <div class="htimeline-card-body">
                     <div class="htimeline-year">{% trans "The Future" %}</div>
-                    <p>{% trans "The best chapters of TIU's story are still being written — and you could be part of them. More programs, deeper research, new partnerships, and a campus that keeps evolving." %}</p>
+                    <p>{% trans "The best chapters of TIU's story are still being written — and you could be part of them." %}</p>
                 </div>
             </div>
         </div>
@@ -114,34 +127,6 @@
     </div>
 </section>
 
-<!-- Mission Quote -->
-<section class="history-quote">
-    <div class="history-quote-inner">
-        <h2>{% trans "An exceptional education for the" %} <em>{% trans "many" %}</em></h2>
-        <p class="history-quote-subtitle">{% trans "Our founding charter says our mission is to:" %}</p>
-        <blockquote>
-            <p>"{% trans "...advance education, bridge cultures, and empower students through world-class teaching and global partnerships, for the benefit of individuals, Uzbekistan, and the world." %}"</p>
-        </blockquote>
-        <p>{% trans "We believe that your background should never limit your future. At TIU, it's" %} <em>{% trans "what" %}</em> {% trans "you know — not" %} <em>{% trans "who" %}</em> {% trans "you know — that matters. Here, everyone is empowered to succeed in their own way." %}</p>
-    </div>
-</section>
-
-<!-- Our Work Feature -->
-<section class="feature-block">
-    <div class="feature-block-inner">
-        <div class="feature-block-text">
-            <h2>{% trans "Our work here is" %} <em>{% trans "never" %}</em> {% trans "done" %}</h2>
-            <p>{% trans "Since day one, we've been working hard to make education more accessible, more international, and more impactful. But we're just getting started." %}</p>
-            <p>{% trans "We believe in a future where every student in Central Asia has access to world-class education. Where borders don't limit ambition. Where innovation in teaching transforms lives — not just careers." %}</p>
-            <p>{% trans "It won't be easy. And there will be new challenges to overcome along the way. But that's never stopped us before. Because we know that every step — and misstep — will take us closer towards the university we want to be." %}</p>
-            <a href="/research/" class="history-feature-link">{% trans "Our research" %} <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="feature-block-img">
-            <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "TIU Students" %}" loading="lazy">
-        </div>
-    </div>
-</section>
-
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
@@ -150,8 +135,6 @@
             <a href="/about/overview/" class="explore-more-link">{% trans "Overview" %} <i class="fas fa-arrow-right"></i></a>
             <a href="/about/why-tiu/" class="explore-more-link">{% trans "Why TIU" %} <i class="fas fa-arrow-right"></i></a>
             <a href="/about/mission-vision/" class="explore-more-link">{% trans "Mission & Vision" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="/about/leadership/" class="explore-more-link">{% trans "Leadership" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="/about/campus-map/" class="explore-more-link">{% trans "Campus Map" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -175,7 +158,6 @@
         return cards[0].getBoundingClientRect().width + gap;
     }
 
-    // Build dots
     for (let i = 0; i < totalCards; i++) {
         var dot = document.createElement('span');
         dot.className = 'htimeline-dot' + (i === 0 ? ' active' : '');

@@ -1,0 +1,37 @@
+{% load static i18n i18n_fields %}
+{% if programs %}
+<section class="prog-grid-section">
+    <div class="container">
+        <h2 class="section-heading" style="margin-bottom: 2rem;">{% trans "Programs" %}</h2>
+        <div class="prog-cards-grid">
+            {% for program in programs %}
+            <a href="{% url 'programs:program_detail' program.slug %}" class="prog-card">
+                <div class="prog-card-image">
+                    {% if program.image %}
+                    <img src="{{ program.image.url }}" alt="{{ program|trans_field:"title" }}" loading="lazy">
+                    {% else %}
+                    <div class="prog-card-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    {% endif %}
+                    <span class="prog-card-level">{{ program.get_level_display }}</span>
+                </div>
+                <div class="prog-card-body">
+                    {% if program.department %}
+                    <span class="prog-card-school">{{ program.department|trans_field:"name" }}</span>
+                    {% endif %}
+                    <h3>{{ program|trans_field:"title" }}</h3>
+                    {% if program.duration %}
+                    <div class="prog-card-meta">
+                        <span><i class="fas fa-clock"></i> {{ program.duration }}</span>
+                        <span><i class="fas fa-language"></i> {% trans "English" %}</span>
+                    </div>
+                    {% endif %}
+                    <span class="prog-card-link">{% trans "Learn more" %} <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

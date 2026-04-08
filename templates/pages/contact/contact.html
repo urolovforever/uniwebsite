@@ -1,0 +1,140 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<style>
+    .contact-form-section { padding: 4rem 0 5rem; background: #f8fafc; }
+    .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .contact-form-info { position: sticky; top: 120px; }
+    .contact-form-info h2 { font-size: 2.25rem; color: #003366; margin-bottom: 1rem; }
+    .contact-form-info h2 em { font-style: italic; color: #004080; }
+    .contact-form-info > p { color: #666; font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
+    .contact-detail { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .contact-detail i { font-size: 1.1rem; color: #004080; margin-top: 0.2rem; width: 20px; text-align: center; flex-shrink: 0; }
+    .contact-detail div strong { display: block; color: #003366; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .contact-detail div p { color: #666; font-size: 0.95rem; margin: 0; line-height: 1.5; }
+    .contact-card { background: #fff; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .contact-card h3 { font-size: 1.5rem; color: #003366; margin-bottom: 0.5rem; }
+    .contact-card > p { color: #666; font-size: 0.95rem; margin-bottom: 2rem; }
+    .contact-field { margin-bottom: 1.25rem; }
+    .contact-field label { display: block; font-size: 0.85rem; font-weight: 700; color: #003366; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-input { width: 100%; padding: 0.85rem 1rem; font-size: 1rem; font-family: inherit; border: 1px solid #ccc; background: #fff; color: #333; transition: border-color 0.3s ease; }
+    .contact-input:focus { outline: none; border-color: #004080; }
+    .contact-textarea { resize: vertical; min-height: 120px; }
+    .contact-input.error { border-color: #e53e3e; }
+    .field-error { color: #e53e3e; font-size: 0.8rem; margin-top: 0.3rem; }
+    .contact-submit { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: #004080; color: #fff; font-size: 1rem; font-weight: 600; font-family: inherit; border: none; cursor: pointer; transition: background 0.3s ease; }
+    .contact-submit:hover { background: #003366; }
+    .contact-success { background: #ecfdf5; border: 1px solid #6ee7b7; padding: 1.25rem 1.5rem; margin-bottom: 2rem; color: #065f46; font-size: 0.95rem; display: flex; align-items: center; gap: 0.75rem; }
+    .contact-success i { font-size: 1.2rem; color: #10b981; }
+    @media (max-width: 1024px) {
+        .contact-form-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .contact-form-info { position: static; }
+    }
+    @media (max-width: 768px) {
+        .contact-card { padding: 1.75rem; }
+    }
+</style>
+{% endblock %}
+
+{% block title %}{% trans "Contact Us" %} - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Contact Us" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Contact" %}</div>
+        <h1 class="page-hero-title">{% trans "Contact Us" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "Get in touch with Tashkent International University. We're here to help with admissions, academics, student life, and more." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<section class="contact-form-section">
+    <div class="container">
+        <div class="contact-form-grid">
+            <div class="contact-form-info">
+                <h2>{% trans "Get in" %} <em>{% trans "touch" %}</em></h2>
+                <p>{% trans "Whether you're a prospective student, parent, employer, or just curious about TIU — we'd love to hear from you." %}</p>
+
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>{% trans "Address" %}</strong>
+                        <p>{% trans "Little Ring Road 7, Tashkent, Uzbekistan" %}</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>{% trans "Phone" %}</strong>
+                        <p>+998 95 131 55 55</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>{% trans "Email" %}</strong>
+                        <p>info@tiu.uz</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>{% trans "Office Hours" %}</strong>
+                        <p>{% trans "Monday - Friday: 9:00 AM - 6:00 PM" %}<br>{% trans "Saturday: 9:00 AM - 1:00 PM" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>{% trans "Send a message" %}</h3>
+                <p>{% trans "All fields are required. We typically respond within 1-2 business days." %}</p>
+
+                {% if messages %}
+                {% for message in messages %}
+                <div class="contact-success">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ message }}</span>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                <form method="post" action="{% url 'core:contact' %}">
+                    {% csrf_token %}
+                    <div class="contact-field">
+                        <label for="id_name">{% trans "Full Name" %}</label>
+                        {{ form.name }}
+                        {% if form.name.errors %}<div class="field-error">{{ form.name.errors.0 }}</div>{% endif %}
+                    </div>
+                    <div class="contact-field">
+                        <label for="id_email">{% trans "Email Address" %}</label>
+                        {{ form.email }}
+                        {% if form.email.errors %}<div class="field-error">{{ form.email.errors.0 }}</div>{% endif %}
+                    </div>
+                    <div class="contact-field">
+                        <label for="id_topic">{% trans "Topic" %}</label>
+                        {{ form.topic }}
+                        {% if form.topic.errors %}<div class="field-error">{{ form.topic.errors.0 }}</div>{% endif %}
+                    </div>
+                    <div class="contact-field">
+                        <label for="id_message">{% trans "Message" %}</label>
+                        {{ form.message }}
+                        {% if form.message.errors %}<div class="field-error">{{ form.message.errors.0 }}</div>{% endif %}
+                    </div>
+                    <button type="submit" class="contact-submit">
+                        {% trans "Send Message" %} <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

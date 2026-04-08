@@ -2,7 +2,9 @@
 {% load static i18n i18n_fields %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/programs.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
 {% endblock %}
 
 {% block title %}{{ department|trans_field:"name" }} - {% trans "TIU" %}{% endblock %}
@@ -10,32 +12,112 @@
 {% block content %}
 {% include "includes/page_hero.html" %}
 
-<section class="content-section">
-    <div class="container">
+<!-- About Department -->
+{% if department.excerpt or department.description %}
+<section style="padding: 3rem 0; background: #fff;">
+    <div class="container" style="max-width: 900px;">
+        {% if department.excerpt %}
+        <p style="font-size: 1.15rem; line-height: 1.8; color: #555; margin-bottom: 1.5rem;">{{ department|trans_field:"excerpt" }}</p>
+        {% endif %}
         {% if department.description %}
         <div class="article-body">
             {{ department|trans_field:"description"|safe }}
         </div>
         {% endif %}
+    </div>
+</section>
+{% endif %}
 
-        <h2>{% trans "Programs" %}</h2>
-        <div class="programs-grid">
+<!-- Programs (Admissions list style) -->
+{% if programs %}
+<section class="bachelor-programmes-section">
+    <div class="container">
+        <div class="bachelor-programmes-header">
+            <span class="bachelor-programmes-label">{% trans "Available Programmes" %}</span>
+            <h2>{% trans "Programs" %}</h2>
+        </div>
+        <div class="bachelor-programmes-list">
             {% for program in programs %}
-            <div class="program-card">
-                <a href="{% url 'programs:program_detail' program.slug %}">
-                    <div class="program-card-content">
-                        <span class="program-level">{{ program.get_level_display }}</span>
-                        <h3>{{ program|trans_field:"title" }}</h3>
-                        {% if program.duration %}
-                        <span class="program-duration">{{ program.duration }}</span>
-                        {% endif %}
-                    </div>
-                </a>
-            </div>
-            {% empty %}
-            <p>{% trans "No programs in this department yet." %}</p>
+            <a href="{% url 'programs:program_detail' program.slug %}" class="bachelor-prog-link">
+                <span>{{ program|trans_field:"title" }} <small style="color: #999; font-weight: 400;">· {{ program.get_level_display }}{% if program.duration %} · {{ program.duration }}{% endif %}</small></span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
             {% endfor %}
         </div>
     </div>
 </section>
+{% endif %}
+
+<!-- Faculty & Staff (Leadership style with pagination) -->
+{% if people %}
+<section class="leadership-section" style="background: #f8fafc; padding: 4rem 0;">
+    <div class="container">
+        <h2 style="font-size: 2rem; color: #003366; font-weight: 800; margin-bottom: 2.5rem;">{% trans "Faculty & Staff" %}</h2>
+        {% for person in people %}
+        <div class="leader-profile">
+            <div class="leader-text">
+                <h2>{{ person.full_name }}</h2>
+                <p style="color: #00bcd4; font-weight: 600; margin-bottom: 1rem;">{{ person|trans_field:"job_title" }}</p>
+                {% if person.email %}
+                <p><i class="fas fa-envelope" style="color: #004080; margin-right: 0.5rem;"></i> {{ person.email }}</p>
+                {% endif %}
+                {% if person.bio %}
+                <div class="leader-accordion">
+                    <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
+                        {% trans "Find out more" %} <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="leader-accordion-content">
+                        {{ person|trans_field:"bio"|safe }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="leader-photo">
+                {% if person.photo %}
+                <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" loading="lazy">
+                {% else %}
+                <img src="{% static 'img/campus/b2.jpg' %}" alt="{{ person.full_name }}" loading="lazy">
+                {% endif %}
+                <div class="leader-photo-overlay">
+                    <div class="leader-photo-name">{{ person.full_name }}</div>
+                    <div class="leader-photo-title">{{ person|trans_field:"job_title" }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% if people.has_other_pages %}
+        <div class="pagination" style="margin-top: 2rem;">
+            {% if people.has_previous %}
+            <a href="?page={{ people.previous_page_number }}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+            {% endif %}
+            {% for num in people.paginator.page_range %}
+            <a href="?page={{ num }}" class="pagination-btn{% if people.number == num %} active{% endif %}">{{ num }}</a>
+            {% endfor %}
+            {% if people.has_next %}
+            <a href="?page={{ people.next_page_number }}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleLeaderBio(btn) {
+    var content = btn.parentElement.querySelector('.leader-accordion-content');
+    var icon = btn.querySelector('i');
+    btn.classList.toggle('active');
+    content.classList.toggle('show');
+    if (content.classList.contains('show')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        content.style.maxHeight = '0';
+        icon.style.transform = 'rotate(0)';
+    }
+}
+</script>
 {% endblock %}

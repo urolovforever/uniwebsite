@@ -88,123 +88,7 @@
     </div>
 </section>
 
-<!-- Welcome Section (teal background, text + video) -->
-<section class="campus-welcome">
-    <div class="container">
-        <div class="campus-welcome-grid">
-            <div class="campus-welcome-content">
-                <h2>{% trans "Looking for next? Welcome to" %} <em>{% trans "TIU." %}</em></h2>
-                <p>{% trans "Step onto a campus designed for the future. From smart classrooms and collaborative study spaces to a vibrant student community — discover why TIU feels like home from the moment you arrive." %}</p>
-            </div>
-            <div class="campus-welcome-video">
-                <img src="{% static 'img/campus/c2.jpg' %}" alt="Campus Video Preview" loading="lazy">
-                <div class="campus-welcome-video-caption">
-                    <div class="caption-title">{% trans "A day in the life at TIU" %}</div>
-                    <div class="caption-duration">{% trans "2 mins" %}</div>
-                </div>
-                <div class="video-play-btn"><i class="fas fa-play"></i> {% trans "Watch" %}</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Stats Section (heading + dark navy card carousel) -->
-<section class="campus-stats-section">
-    <div class="campus-stats-heading">
-        <h2>{% trans "Up-to-the-minute facilities to live" %} <em>{% trans "and" %}</em> {% trans "learn" %}</h2>
-        <p>{% trans "Our campus is home to modern teaching spaces, a well-equipped library, sports facilities, and comfortable student accommodation. Alongside these, you'll find collaborative study areas, green outdoor spaces, and everything you need for university life — all in one place." %}</p>
-    </div>
-    <div class="campus-stats-carousel">
-        <div class="campus-stats-track" id="statsTrack">
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-building"></i></div>
-                <div class="campus-stat-number">{% trans "4" %}</div>
-                <div class="campus-stat-text">{% trans "Academic departments under one roof" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-language"></i></div>
-                <div class="campus-stat-number">{% trans "100%" %}</div>
-                <div class="campus-stat-text">{% trans "English-medium instruction in every classroom" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-book-open"></i></div>
-                <div class="campus-stat-number">{% trans "10+" %}</div>
-                <div class="campus-stat-text">{% trans "Study spaces across campus" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-dumbbell"></i></div>
-                <div class="campus-stat-number">{% trans "Modern" %}</div>
-                <div class="campus-stat-text">{% trans "Sports hall, gym, and outdoor pitches" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-wifi"></i></div>
-                <div class="campus-stat-number">{% trans "24/7" %}</div>
-                <div class="campus-stat-text">{% trans "Wi-Fi across the entire campus" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-utensils"></i></div>
-                <div class="campus-stat-number">{% trans "On-site" %}</div>
-                <div class="campus-stat-text">{% trans "Cafeteria serving fresh meals daily" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-globe-americas"></i></div>
-                <div class="campus-stat-number">{% trans "10+" %}</div>
-                <div class="campus-stat-text">{% trans "Partner universities worldwide" %}</div>
-            </div>
-            <div class="campus-stat-card">
-                <div class="campus-stat-icon"><i class="fas fa-home"></i></div>
-                <div class="campus-stat-number">{% trans "On-campus" %}</div>
-                <div class="campus-stat-text">{% trans "Student accommodation available" %}</div>
-            </div>
-        </div>
-    </div>
-    <div class="campus-stats-nav">
-        <div class="campus-stats-counter">
-            <span class="current-stat">01</span>/<span class="total-stat">08</span>
-        </div>
-        <button class="campus-stats-arrow" id="statsPrev" aria-label="Previous">
-            <i class="fas fa-arrow-left"></i>
-        </button>
-        <button class="campus-stats-arrow" id="statsNext" aria-label="Next">
-            <i class="fas fa-arrow-right"></i>
-        </button>
-    </div>
-</section>
-
-<!-- Facility Showcase (stacked full-viewport slides) -->
-<div class="facility-showcase">
-    <section class="facility-slide" style="background-image: url('{% static 'img/campus/c3.jpg' %}');">
-        <div class="facility-slide-content">
-            <div class="facility-slide-label">{% trans "Accommodation" %}</div>
-            <h2>{% trans "Start a city break that" %} <strong>{% trans "never ends" %}</strong></h2>
-            <p>{% trans "Our on-campus housing puts you steps away from lectures, the library, and your friends. Roll out of bed and into your studies — no commute, no stress." %}</p>
-            <a href="/current-students/housing/" class="facility-slide-link">{% trans "Accommodation" %} <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <button class="facility-pause"><i class="fas fa-pause"></i></button>
-    </section>
-
-    <section class="facility-slide" style="background-image: url('{% static 'img/campus/c5.jpg' %}');">
-        <div class="facility-slide-content">
-            <div class="facility-slide-label">{% trans "Library" %}</div>
-            <h2>{% trans "Travel the world from your" %} <strong>{% trans "reading chair" %}</strong></h2>
-            <p>{% trans "Physical and digital resources, international databases, quiet study rooms, and collaborative group spaces. Whether you need silence or teamwork, there's a corner for you." %}</p>
-            <a href="/current-students/library/" class="facility-slide-link">{% trans "E-Library" %} <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <button class="facility-pause"><i class="fas fa-pause"></i></button>
-    </section>
-
-    <section class="facility-slide" style="background-image: url('{% static 'img/campus/c6.jpg' %}');">
-        <div class="facility-slide-content">
-            <div class="facility-slide-label">{% trans "Sports" %}</div>
-            <h2>{% trans "Sports facilities fit for" %} <strong>{% trans "every body" %}</strong></h2>
-            <p>{% trans "From the gym and multi-court sports hall to outdoor pitches and fitness classes — stay active, competitive, or just have fun. All on campus, all for you." %}</p>
-            <a href="/current-students/sports/" class="facility-slide-link">{% trans "Sports & Fitness" %} <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <button class="facility-pause"><i class="fas fa-pause"></i></button>
-    </section>
-</div>
-
-<!-- More to Explore (accordion left + paired image right) -->
+<!-- More to Explore (accordion left + paired image right) — kept unique items only -->
 <section class="explore-list">
     <div class="container">
         <div class="explore-list-header">
@@ -226,30 +110,6 @@
                 </div>
 
                 <div class="explore-item">
-                    <button class="explore-item-header" data-image="{% static 'img/campus/c4.jpg' %}" onclick="toggleExploreWithImage(this)">
-                        <div class="explore-item-left">
-                            <div class="explore-item-title">{% trans "IT Labs & Digital Resources" %}</div>
-                        </div>
-                        <i class="fas fa-chevron-right explore-item-chevron"></i>
-                    </button>
-                    <div class="explore-item-body">
-                        <p>{% trans "Computer labs with high-speed internet, licensed software, and printing facilities. Our IT services team provides technical support and ensures all digital infrastructure runs smoothly." %}</p>
-                    </div>
-                </div>
-
-                <div class="explore-item">
-                    <button class="explore-item-header" data-image="{% static 'img/campus/c7.jpeg' %}" onclick="toggleExploreWithImage(this)">
-                        <div class="explore-item-left">
-                            <div class="explore-item-title">{% trans "Cafeteria & Food Options" %}</div>
-                        </div>
-                        <i class="fas fa-chevron-right explore-item-chevron"></i>
-                    </button>
-                    <div class="explore-item-body">
-                        <p>{% trans "The campus cafeteria serves fresh, affordable meals throughout the day — from hearty lunches to quick snacks and coffee between classes. Vegetarian and dietary options are always available." %}</p>
-                    </div>
-                </div>
-
-                <div class="explore-item">
                     <button class="explore-item-header" data-image="{% static 'img/campus/b3.jpg' %}" onclick="toggleExploreWithImage(this)">
                         <div class="explore-item-left">
                             <div class="explore-item-title">{% trans "Green Spaces & Outdoor Areas" %}</div>
@@ -258,18 +118,6 @@
                     </button>
                     <div class="explore-item-body">
                         <p>{% trans "Landscaped gardens, tree-lined walkways, and outdoor seating areas give you places to relax, study, or meet friends between lectures. Fresh air and green views are never far away." %}</p>
-                    </div>
-                </div>
-
-                <div class="explore-item">
-                    <button class="explore-item-header" data-image="{% static 'img/campus/c2.jpg' %}" onclick="toggleExploreWithImage(this)">
-                        <div class="explore-item-left">
-                            <div class="explore-item-title">{% trans "Health & Wellbeing" %}</div>
-                        </div>
-                        <i class="fas fa-chevron-right explore-item-chevron"></i>
-                    </button>
-                    <div class="explore-item-body">
-                        <p>{% trans "Your wellbeing matters. Campus support services include counseling, health advice, and wellness programs designed to keep you physically and mentally healthy throughout your studies." %}</p>
                     </div>
                 </div>
 
@@ -337,45 +185,6 @@ document.addEventListener('click', function(e) {
         document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('active'));
     }
 });
-
-// === Stats Carousel ===
-(function() {
-    const track = document.getElementById('statsTrack');
-    const prevBtn = document.getElementById('statsPrev');
-    const nextBtn = document.getElementById('statsNext');
-    const counter = document.querySelector('.campus-stats-counter');
-    if (!track || !prevBtn || !nextBtn) return;
-
-    const cards = track.querySelectorAll('.campus-stat-card');
-    const totalCards = cards.length;
-    let currentIndex = 0;
-    const cardWidth = 286; // 270px card + 16px gap
-
-    function updateStats() {
-        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        if (counter) {
-            counter.querySelector('.current-stat').textContent = String(currentIndex + 1).padStart(2, '0');
-            counter.querySelector('.total-stat').textContent = String(totalCards).padStart(2, '0');
-        }
-    }
-
-    prevBtn.addEventListener('click', function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateStats();
-        }
-    });
-
-    nextBtn.addEventListener('click', function() {
-        const containerWidth = track.parentElement.offsetWidth;
-        const visibleCards = Math.floor(containerWidth / cardWidth);
-        const maxScroll = Math.max(0, totalCards - visibleCards);
-        if (currentIndex < maxScroll) {
-            currentIndex++;
-            updateStats();
-        }
-    });
-})();
 
 // === Accordion with paired image ===
 function toggleExploreWithImage(btn) {

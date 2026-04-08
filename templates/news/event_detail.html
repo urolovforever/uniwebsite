@@ -51,7 +51,7 @@
                                 <i class="far fa-clock"></i>
                                 <div>
                                     <span class="evdetail-info-label">{% trans "Time" %}</span>
-                                    <span class="evdetail-info-value">{{ event.event_time|time:"h:i A" }}</span>
+                                    <span class="evdetail-info-value">{{ event.event_time|time:"H:i" }}</span>
                                 </div>
                             </div>
                             {% endif %}
@@ -64,12 +64,16 @@
                                 </div>
                             </div>
                             {% endif %}
-                            {% if event.category %}
+                            {% if event.categories.exists %}
                             <div class="evdetail-info-row">
-                                <i class="fas fa-tag"></i>
+                                <i class="fas fa-tags"></i>
                                 <div>
-                                    <span class="evdetail-info-label">{% trans "Category" %}</span>
-                                    <span class="evdetail-info-value">{{ event.category }}</span>
+                                    <span class="evdetail-info-label">{% trans "Categories" %}</span>
+                                    <div class="newsdetail-categories">
+                                        {% for cat in event.categories.all %}
+                                        <a href="{% url 'news:event_list' %}?category={{ cat.slug }}" class="newsdetail-category-link">{{ cat|trans_field:"name" }}</a>{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                    </div>
                                 </div>
                             </div>
                             {% endif %}
@@ -129,7 +133,7 @@
         <div class="explore-more-links">
             <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:publications' %}" class="explore-more-link">{% trans "Publications" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>

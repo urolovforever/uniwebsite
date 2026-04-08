@@ -22,12 +22,20 @@
                     </div>
 
                     <div class="evlist-filter-group">
-                        <label class="evlist-filter-label">{% trans "Categories" %}</label>
+                        <label class="evlist-filter-label">{% trans "Search" %}</label>
+                        <div class="evlist-search-wrapper">
+                            <input type="text" id="evlist-search" class="evlist-search-input" placeholder="{% trans "Search events..." %}" value="{{ search_query }}" onkeydown="if(event.key==='Enter')applyFilters()">
+                            <button class="evlist-search-btn" onclick="applyFilters()"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Category" %}</label>
                         <div class="evlist-select-wrapper">
                             <select id="evlist-category-select" class="evlist-select" onchange="applyFilters()">
-                                <option value="">{% trans "Select an option" %}</option>
+                                <option value="">{% trans "All categories" %}</option>
                                 {% for cat in categories %}
-                                <option value="{{ cat }}" {% if selected_category == cat %}selected{% endif %}>{{ cat }}</option>
+                                <option value="{{ cat.slug }}" {% if selected_category == cat.slug %}selected{% endif %}>{{ cat|trans_field:"name" }}</option>
                                 {% endfor %}
                             </select>
                             <i class="fas fa-chevron-down evlist-select-icon"></i>
@@ -65,12 +73,14 @@
                         <div class="evlist-item-info">
                             <h3 class="evlist-item-title">{{ event|trans_field:"title" }}</h3>
                             <span class="evlist-item-date">{{ event.event_date|date:"d M Y"|upper }}</span>
-                            {% if event.description %}
+                            {% if event.excerpt %}
+                            <p class="evlist-item-desc">{{ event|trans_field:"excerpt"|truncatewords:25 }}</p>
+                            {% elif event.description %}
                             <p class="evlist-item-desc">{{ event|trans_field:"description"|striptags|truncatewords:25 }}</p>
                             {% endif %}
                             {% if event.event_time or event.location %}
                             <div class="evlist-item-meta">
-                                {% if event.event_time %}<span><i class="far fa-clock"></i> {{ event.event_time|time:"h:i A" }}</span>{% endif %}
+                                {% if event.event_time %}<span><i class="far fa-clock"></i> {{ event.event_time|time:"H:i" }}</span>{% endif %}
                                 {% if event.location %}<span><i class="fas fa-map-marker-alt"></i> {{ event.location }}</span>{% endif %}
                             </div>
                             {% endif %}
@@ -88,13 +98,13 @@
                 {% if events.has_other_pages %}
                 <div class="pagination">
                     {% if events.has_previous %}
-                    <a href="?page={{ events.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+                    <a href="?page={{ events.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
                     {% endif %}
                     {% for num in events.paginator.page_range %}
-                    <a href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}" class="pagination-btn{% if events.number == num %} active{% endif %}">{{ num }}</a>
+                    <a href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn{% if events.number == num %} active{% endif %}">{{ num }}</a>
                     {% endfor %}
                     {% if events.has_next %}
-                    <a href="?page={{ events.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+                    <a href="?page={{ events.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
                     {% endif %}
                 </div>
                 {% endif %}
@@ -109,8 +119,7 @@
         <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
             <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
-            <a href="{% url 'news:press_releases' %}" class="explore-more-link">{% trans "Press Releases" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:publications' %}" class="explore-more-link">{% trans "Publications" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
@@ -120,16 +129,16 @@
 {% block extra_js %}
 <script>
 function applyFilters() {
+    var q = document.getElementById('evlist-search').value.trim();
     var cat = document.getElementById('evlist-category-select').value;
     var past = document.getElementById('evlist-past-toggle').checked;
     var params = new URLSearchParams();
+    if (q) params.set('q', q);
     if (cat) params.set('category', cat);
     if (past) params.set('past', '1');
     window.location.href = window.location.pathname + '?' + params.toString();
 }
 function clearFilters() {
-    document.getElementById('evlist-category-select').value = '';
-    document.getElementById('evlist-past-toggle').checked = false;
     window.location.href = window.location.pathname;
 }
 </script>

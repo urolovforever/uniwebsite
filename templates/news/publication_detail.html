@@ -1,0 +1,122 @@
+{% extends "base_subpage.html" %}
+{% load static i18n i18n_fields %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block title %}{{ publication|trans_field:"title" }} - {% trans "TIU Publications" %}{% endblock %}
+
+{% block content %}
+{% include "includes/page_hero.html" %}
+
+<section class="evlist-section">
+    <div class="container">
+        <div class="newsdetail-layout">
+            <aside class="evlist-sidebar">
+                <div class="evlist-sidebar-inner">
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Publication details" %}</label>
+                        <div class="evdetail-info-list">
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Author" %}</span>
+                                    <span class="evdetail-info-value">{{ publication.author }}</span>
+                                </div>
+                            </div>
+                            <div class="evdetail-info-row">
+                                <i class="far fa-calendar-alt"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Published" %}</span>
+                                    <span class="evdetail-info-value">{{ publication.published_date|date:"d M Y" }}</span>
+                                </div>
+                            </div>
+                            {% if publication.author_type %}
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-id-badge"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Type" %}</span>
+                                    <span class="evdetail-info-value">{{ publication.author_type|trans_field:"name" }}</span>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if publication.categories.exists %}
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-tags"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "Categories" %}</span>
+                                    <div class="newsdetail-categories">
+                                        {% for cat in publication.categories.all %}
+                                        <a href="{% url 'news:publications' %}?category={{ cat.slug }}" class="newsdetail-category-link">{{ cat|trans_field:"name" }}</a>{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if publication.external_url %}
+                            <div class="evdetail-info-row">
+                                <i class="fas fa-external-link-alt"></i>
+                                <div>
+                                    <span class="evdetail-info-label">{% trans "External link" %}</span>
+                                    <a href="{{ publication.external_url }}" target="_blank" rel="noopener" class="newsdetail-category-link">{% trans "View original" %} <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Share" %}</label>
+                        <div class="newsdetail-share-links">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ publication.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tw" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ publication.title|urlencode }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" rel="noopener" class="newsdetail-share-btn newsdetail-share-li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    {% if related_publications %}
+                    <div class="evlist-filter-group" style="border-bottom: none;">
+                        <label class="evlist-filter-label">{% trans "Related publications" %}</label>
+                        <div class="newsdetail-related-list">
+                            {% for rel in related_publications %}
+                            <a href="{% url 'news:publication_detail' rel.slug %}" class="newsdetail-related-item">
+                                <span class="newsdetail-related-date">{{ rel.author }} · {{ rel.published_date|date:"d M Y"|upper }}</span>
+                                <span class="newsdetail-related-title">{{ rel|trans_field:"title" }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <a href="{% url 'news:publications' %}" class="newsdetail-back-link"><i class="fas fa-arrow-left"></i> {% trans "All publications" %}</a>
+                </div>
+            </aside>
+
+            <article class="newsdetail-content">
+                {% if publication.featured_image %}
+                <div class="newsdetail-hero-img">
+                    <img src="{{ publication.featured_image.url }}" alt="{{ publication|trans_field:"title" }}" loading="lazy">
+                </div>
+                {% endif %}
+
+                <div class="newsdetail-body">
+                    {{ publication|trans_field:"body"|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="{% url 'news:news_list' %}" class="explore-more-link">{% trans "Latest News" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:event_list' %}" class="explore-more-link">{% trans "Events" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'news:gallery' %}" class="explore-more-link">{% trans "Gallery" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

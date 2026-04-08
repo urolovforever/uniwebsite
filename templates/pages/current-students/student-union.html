@@ -1,5 +1,5 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -7,22 +7,22 @@
 <link rel="stylesheet" href="{% static 'css/current-students.css' %}">
 {% endblock %}
 
-{% block title %}Student Union - TIU{% endblock %}
+{% block title %}{% trans "Student Union" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Current Students</span>
+            <span>{% trans "Current Students" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Student Union</span>
+            <span class="current">{% trans "Student Union" %}</span>
         </nav>
-        <div class="page-hero-category">Students</div>
-        <h1 class="page-hero-title">Student Union</h1>
+        <div class="page-hero-category">{% trans "Students" %}</div>
+        <h1 class="page-hero-title">{% trans "Student Union" %}</h1>
         <div class="page-hero-description">
-            <p>Your voice on campus — learn about the Student Union and how to get involved.</p>
+            <p>{% trans "Your voice on campus — learn about the Student Union and how to get involved." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -33,23 +33,23 @@
     <div class="container">
         <div class="su-intro-grid">
             <div class="su-intro-text">
-                <h2>What is the Student Union?</h2>
-                <p>When you join TIU, you automatically become a member of the TIU Student Union (TIUSU).</p>
-                <p>TIUSU is here to ensure you feel part of the student community and help you look forward to a bright future. We do this by representing your academic interests and giving you a voice to speak out about the issues that matter to you most.</p>
+                <h2>{% trans "What is the Student Union?" %}</h2>
+                <p>{% trans "Tashkent International University's Student Union — Talabalar Kengashi — is the student-led body that represents all TIU students. Founded alongside the university in 2023, the Student Union is still young and growing, just like TIU itself." %}</p>
+                <p>{% trans "Our mission is simple: represent student interests, organize memorable events, and serve as a bridge between students and the university administration. Every enrolled student is automatically a member." %}</p>
 
                 <blockquote class="su-quote">
-                    <p>Getting involved in TIUSU is the best way to make friends, try new things, find your people and become part of something bigger.</p>
+                    <p>{% trans "The Student Union is where your ideas turn into real campus life. We are a small but active team, and every student voice matters." %}</p>
                     <footer>
-                        <strong>Sardor Alimov</strong>
-                        President of Student Union 2025/26
+                        <strong>{% trans "Sardor Alimov" %}</strong>
+                        {% trans "President of Student Union 2025/26" %}
                     </footer>
                 </blockquote>
 
-                <h3><em>For</em> students, <em>by</em> students</h3>
-                <p>TIUSU is independent from the University. It's led by a team of elected full- and part-time Student Leaders who work to represent students' views and improve university life for all. Students from any year and studying at any level can run for a Student Leader role.</p>
+                <h3><em>{% trans "For" %}</em> {% trans "students," %} <em>{% trans "by" %}</em> {% trans "students" %}</h3>
+                <p>{% trans "The Student Union is run entirely by students. Our elected leaders work closely with the university administration to voice your concerns, improve campus life, and make sure every student feels heard. Anyone can run for a leadership role — no experience required, just passion." %}</p>
             </div>
             <div class="su-intro-image">
-                <img src="{% static 'img/campus/c6.jpg' %}" alt="TIU Student Union members" loading="lazy">
+                <img src="{% static 'img/campus/c6.jpg' %}" alt="{% trans "TIU Student Union members" %}" loading="lazy">
             </div>
         </div>
     </div>
@@ -68,33 +68,33 @@
                 <div class="carousel-card active">
                     <div class="carousel-card-icon"><i class="fas fa-users"></i></div>
                     <div class="carousel-card-body">
-                        <h4>Meet new people, become old friends</h4>
-                        <p>Joining a club, playing sports, or volunteering are the best ways to find your people. Choose from 15+ student clubs, sports teams, and creative societies — or start your own.</p>
-                        <a href="/current-students/clubs/" class="split-link" style="margin-top: 1rem;">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
+                        <h4>{% trans "Meet new people, make lasting friendships" %}</h4>
+                        <p>{% trans "Join a club, play sports, or volunteer — these are the best ways to find your people at TIU. We have a growing number of student clubs, sports teams, and creative groups. You can also start your own." %}</p>
+                        <a href="/current-students/clubs/" class="split-link" style="margin-top: 1rem;">{% trans "Clubs & Societies" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="carousel-card">
                     <div class="carousel-card-icon"><i class="fas fa-bullhorn"></i></div>
                     <div class="carousel-card-body">
-                        <h4>Make your voice heard</h4>
-                        <p>TIUSU represents your interests at every level — from course feedback to university policy. Attend Student Council meetings, vote in elections, or run for a leadership position.</p>
-                        <a href="/current-students/student-union/" class="split-link" style="margin-top: 1rem;">Get involved <i class="fas fa-arrow-right"></i></a>
+                        <h4>{% trans "Make your voice heard" %}</h4>
+                        <p>{% trans "The Student Union represents your interests — from course feedback to university decisions. Attend Student Council meetings, vote in elections, or run for a leadership position yourself." %}</p>
+                        <a href="/current-students/student-union/" class="split-link" style="margin-top: 1rem;">{% trans "Get involved" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="carousel-card">
                     <div class="carousel-card-icon"><i class="fas fa-calendar-alt"></i></div>
                     <div class="carousel-card-body">
-                        <h4>Events that bring campus to life</h4>
-                        <p>From welcome week and cultural nights to charity fundraisers and end-of-year celebrations — TIUSU organises events throughout the year that make student life unforgettable.</p>
-                        <a href="/current-students/events/" class="split-link" style="margin-top: 1rem;">View events <i class="fas fa-arrow-right"></i></a>
+                        <h4>{% trans "Events that bring campus to life" %}</h4>
+                        <p>{% trans "From Navro'z celebrations and sport tournaments to cultural evenings and end-of-year festivities — the Student Union organizes events throughout the year that make student life unforgettable." %}</p>
+                        <a href="/current-students/events/" class="split-link" style="margin-top: 1rem;">{% trans "View events" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="carousel-card">
                     <div class="carousel-card-icon"><i class="fas fa-hand-holding-heart"></i></div>
                     <div class="carousel-card-body">
-                        <h4>Support when you need it</h4>
-                        <p>TIUSU offers independent advice on academic issues, housing concerns, and personal wellbeing. Our student advisors are here to help — confidentially and free of charge.</p>
-                        <a href="/contact/support/" class="split-link" style="margin-top: 1rem;">Get support <i class="fas fa-arrow-right"></i></a>
+                        <h4>{% trans "Connect with university administration" %}</h4>
+                        <p>{% trans "The Student Union serves as your direct link to the university administration. If you have questions, concerns, or ideas — we bring them to the table on your behalf." %}</p>
+                        <a href="/contact/support/" class="split-link" style="margin-top: 1rem;">{% trans "Get support" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -119,11 +119,11 @@
     <div class="container">
         <div class="su-find-grid">
             <div class="su-find-text">
-                <h2>Where can I find TIUSU on campus?</h2>
-                <p>You can't miss us. We're based in Building B, ground floor — but we run activities right across campus. You'll find the Student Union office just opposite the main cafeteria and next to the student lounge.</p>
-                <a href="/about/campus-map/" class="split-link">Visit TIU Student Union <i class="fas fa-arrow-right"></i></a>
+                <h2>{% trans "Where to find the Student Union on campus?" %}</h2>
+                <p>{% trans "The Student Union office is located in the main building. Drop by during working hours — our team is always happy to chat, answer questions, or hear your ideas for campus life." %}</p>
+                <a href="/about/campus-map/" class="split-link">{% trans "Visit TIU Student Union" %} <i class="fas fa-arrow-right"></i></a>
                 <div class="su-find-social">
-                    <span>FOLLOW TIUSU</span>
+                    <span>{% trans "FOLLOW TIUSU" %}</span>
                     <div class="su-find-social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div class="su-find-image">
-                <img src="{% static 'img/campus/c2.jpg' %}" alt="TIU Student Union building" loading="lazy">
+                <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "TIU Student Union building" %}" loading="lazy">
             </div>
         </div>
     </div>
@@ -144,13 +144,13 @@
         <div class="accommodation-box">
             <div class="accommodation-grid">
                 <div class="accommodation-content">
-                    <div class="accommodation-category">Virtual Tour</div>
-                    <h2>Visit TIU <em>before</em> you get here</h2>
-                    <p>Take a virtual tour of our modern campus, student spaces, and Tashkent itself: a city that combines rich history with a vibrant student scene. There's lots to see and loads to do. So, let's get going...</p>
-                    <a href="/about/campus-map/" class="accommodation-link">Start your virtual tour now <i class="fas fa-arrow-right"></i></a>
+                    <div class="accommodation-category">{% trans "Virtual Tour" %}</div>
+                    <h2>{% trans "Visit TIU" %} <em>{% trans "before" %}</em> {% trans "you get here" %}</h2>
+                    <p>{% trans "Take a virtual tour of our modern campus, student spaces, and Tashkent itself: a city that combines rich history with a vibrant student scene. There's lots to see and loads to do. So, let's get going..." %}</p>
+                    <a href="/about/campus-map/" class="accommodation-link">{% trans "Start your virtual tour now" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="accommodation-image">
-                    <img src="{% static 'img/campus/c7.jpeg' %}" alt="TIU campus life" loading="lazy">
+                    <img src="{% static 'img/campus/c7.jpeg' %}" alt="{% trans "TIU campus life" %}" loading="lazy">
                 </div>
             </div>
         </div>
@@ -159,11 +159,11 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/clubs/" class="explore-more-link">{% trans "Clubs & Societies" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/sports/" class="explore-more-link">{% trans "Sports & Fitness" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">{% trans "Library" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>

@@ -147,13 +147,13 @@
 
         <div class="openings-list" id="openingsList">
             {% for pos in positions %}
-            <a href="{{ pos.get_absolute_url }}" class="opening-item" data-dept="{{ pos.department }}" data-type="{{ pos.job_type }}" data-role="{{ pos.role }}">
+            <a href="{{ pos.get_absolute_url }}" class="opening-item">
                 <div class="opening-info">
                     <h3>{{ pos|trans_field:"title" }}</h3>
-                    <span class="opening-dept">{{ pos.display_department }}</span>
+                    <span class="opening-dept">{% if pos.department %}{{ pos.department|trans_field:"name" }}{% endif %}</span>
                 </div>
                 <div class="opening-meta">
-                    <span class="opening-type{% if pos.job_type == 'part-time' %} part-time{% endif %}">{{ pos.get_job_type_display }}</span>
+                    <span class="opening-type">{% if pos.job_type %}{{ pos.job_type|trans_field:"name" }}{% endif %}</span>
                     <span class="opening-deadline"><i class="fas fa-clock"></i> {% trans "Deadline:" %} {{ pos.deadline|date:"j F Y" }}</span>
                 </div>
                 <i class="fas fa-arrow-right opening-arrow"></i>

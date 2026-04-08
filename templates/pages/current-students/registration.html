@@ -1,5 +1,5 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -8,22 +8,22 @@
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock %}
 
-{% block title %}Registration - TIU{% endblock %}
+{% block title %}{% trans "Exam Rules" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Current Students</span>
+            <span>{% trans "Students" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Registration</span>
+            <span class="current">{% trans "Exam Rules" %}</span>
         </nav>
-        <div class="page-hero-category">Students</div>
-        <h1 class="page-hero-title">Registration</h1>
+        <div class="page-hero-category">{% trans "Students" %}</div>
+        <h1 class="page-hero-title">{% trans "Exam Rules" %}</h1>
         <div class="page-hero-description">
-            <p>Step-by-step guide to course registration, enrolment, and module selection.</p>
+            <p>{% trans "Everything you need to know about the examination process — rules, schedule, grading, and what to do if something goes wrong." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -34,141 +34,143 @@
     <div class="container">
         <div class="abroad-intro-grid">
             <div class="abroad-intro-text">
-                <h2>Register on time. <em>Stay on track.</em></h2>
-                <p>Course registration is your opportunity to build your semester schedule. Each registration period, you select the modules you want to study, confirm your enrolment, and secure your place in classes.</p>
-                <p>Registration opens twice a year — before the fall and spring semesters. Late registration is possible within the first week of classes but is subject to availability and a late fee. We strongly recommend registering during the main registration window.</p>
-                <p>If you need help choosing modules, speak to your academic advisor or visit the Registrar's Office.</p>
+                <h2>{% trans "Know the rules." %} <em>{% trans "Be prepared." %}</em></h2>
+                <p>{% trans "Examinations at TIU are conducted in strict accordance with university regulations. Every student is expected to follow the rules of academic integrity and be familiar with the exam procedures before the examination period begins." %}</p>
+                <p>{% trans "Exams are held twice per semester — midterm exams during the semester and final exams at the end. The exam schedule is published at least two weeks before the examination period starts." %}</p>
             </div>
             <div class="abroad-intro-sidebar">
                 <div class="abroad-sidebar-card" style="background: #f8f8f8; padding: 3rem 2rem;">
-                    <h3>Need help registering?</h3>
-                    <p>Visit the Registrar's Office or contact your academic advisor for guidance on module selection.</p>
+                    <h3>{% trans "Questions about exams?" %}</h3>
+                    <p>{% trans "Contact the Academic Affairs office or your department head for any exam-related questions." %}</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- How to register -->
-<section style="padding: 5rem 0; background: #f8f8f8;">
-    <div class="container">
-        <h2 class="section-heading">How to register</h2>
-        <p class="section-subtitle" style="color: #003366;">Follow these steps to complete your course registration each semester.</p>
-        <div class="grid grid--4col wide-container">
-            <div class="step-card">
-                <div class="icon-circle icon-circle--lg icon-circle--centered">1</div>
-                <h3 class="card-title" style="margin-bottom: 0.5rem;">Check your status</h3>
-                <p class="card-text">Log in to the student portal and confirm that you have no outstanding financial or academic holds on your account.</p>
-            </div>
-            <div class="step-card">
-                <div class="icon-circle icon-circle--lg icon-circle--centered">2</div>
-                <h3 class="card-title" style="margin-bottom: 0.5rem;">Choose modules</h3>
-                <p class="card-text">Browse available modules for your programme and year. Check prerequisites and timetable conflicts before selecting.</p>
-            </div>
-            <div class="step-card">
-                <div class="icon-circle icon-circle--lg icon-circle--centered">3</div>
-                <h3 class="card-title" style="margin-bottom: 0.5rem;">Submit registration</h3>
-                <p class="card-text">Add your chosen modules to the registration form and submit. You'll receive a confirmation email within 24 hours.</p>
-            </div>
-            <div class="step-card">
-                <div class="icon-circle icon-circle--lg icon-circle--centered">4</div>
-                <h3 class="card-title" style="margin-bottom: 0.5rem;">Attend classes</h3>
-                <p class="card-text">Once confirmed, your timetable is finalized. Attend all registered classes from the first day of the semester.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Key dates & Important info -->
+<!-- General Rules -->
 <section style="padding: 5rem 0; background: #fff;">
     <div class="container">
         <div class="grid grid--2col-equal wide-container">
             <div>
-                <h2 class="section-heading--left" style="font-size: 2.25rem; color: #003366;">Important information</h2>
-                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">Keep these points in mind during the registration process:</p>
+                <h2 class="section-heading--left" style="font-size: 2.25rem; color: #003366;">{% trans "General Exam Rules" %}</h2>
+                <p class="section-subtitle--left text-body--intro" style="margin-bottom: 1.5rem;">{% trans "All students must follow these rules during examinations:" %}</p>
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li class="checklist-item">
                         <i class="fas fa-check"></i>
-                        <span>You must clear all tuition balances before registration opens</span>
+                        <span>{% trans "Arrive at least 15 minutes before the exam starts" %}</span>
                     </li>
                     <li class="checklist-item">
                         <i class="fas fa-check"></i>
-                        <span>Module changes (add/drop) are allowed during the first week of classes only</span>
+                        <span>{% trans "Bring a valid student ID — you will not be admitted without it" %}</span>
                     </li>
                     <li class="checklist-item">
                         <i class="fas fa-check"></i>
-                        <span>Some modules have limited seats — register early to secure your first choices</span>
+                        <span>{% trans "Mobile phones and smart devices must be switched off and left at the front of the room" %}</span>
                     </li>
                     <li class="checklist-item">
                         <i class="fas fa-check"></i>
-                        <span>Check prerequisites — you cannot register for advanced modules without completing required courses</span>
+                        <span>{% trans "No talking, whispering, or any form of communication with other students during the exam" %}</span>
                     </li>
                     <li class="checklist-item">
                         <i class="fas fa-check"></i>
-                        <span>Late registration incurs a fee and is subject to seat availability</span>
+                        <span>{% trans "Only materials approved by the instructor are allowed (calculator, dictionary, etc.)" %}</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>{% trans "Students caught cheating will receive a zero grade and face disciplinary action" %}</span>
+                    </li>
+                    <li class="checklist-item">
+                        <i class="fas fa-check"></i>
+                        <span>{% trans "You may not leave the exam room during the first 30 minutes or the last 15 minutes" %}</span>
                     </li>
                 </ul>
             </div>
             <div class="info-panel" style="background: #f8f8f8;">
-                <h3>Registration dates</h3>
+                <h3>{% trans "Exam Schedule" %}</h3>
                 <div class="detail-row">
-                    <strong>FALL SEMESTER</strong>
-                    <p>Main registration: 15–30 August</p>
-                    <p>Late registration: 1–7 September</p>
+                    <strong>{% trans "MIDTERM EXAMS" %}</strong>
+                    <p>{% trans "Held during weeks 7-8 of each semester" %}</p>
                 </div>
                 <div class="detail-row">
-                    <strong>SPRING SEMESTER</strong>
-                    <p>Main registration: 15–31 January</p>
-                    <p>Late registration: 1–7 February</p>
+                    <strong>{% trans "FINAL EXAMS" %}</strong>
+                    <p>{% trans "Held during the last 2-3 weeks of each semester" %}</p>
                 </div>
                 <div class="detail-row">
-                    <strong>ADD / DROP PERIOD</strong>
-                    <p>First 7 days of each semester</p>
+                    <strong>{% trans "RESIT EXAMS" %}</strong>
+                    <p>{% trans "July — for students who failed or missed exams with valid reason" %}</p>
+                </div>
+                <div class="detail-row">
+                    <strong>{% trans "RESULTS" %}</strong>
+                    <p>{% trans "Published within 5 working days after the exam on the student portal" %}</p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Grading System -->
+<section style="padding: 5rem 0; background: #f8f8f8;">
+    <div class="container">
+        <h2 class="section-heading">{% trans "Grading System" %}</h2>
+        <p class="section-subtitle" style="color: #003366;">{% trans "TIU uses a 100-point grading scale with the following breakdown:" %}</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="goal-item">
+                <h3><span class="goal-num">A</span> {% trans "86-100 points — Excellent" %}</h3>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num">B</span> {% trans "71-85 points — Good" %}</h3>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num">C</span> {% trans "56-70 points — Satisfactory" %}</h3>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num">D</span> {% trans "0-55 points — Unsatisfactory" %}</h3>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; color: #666; font-size: 0.95rem;">{% trans "The final grade consists of: coursework (40%) + midterm exam (20%) + final exam (40%)." %}</p>
     </div>
 </section>
 
 <!-- FAQs -->
 <section class="travel-faqs">
     <div class="container">
-        <h2>Registration FAQs</h2>
+        <h2>{% trans "Exam FAQs" %}</h2>
         <div class="travel-faq-list">
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>What if I miss the registration deadline?</span>
+                    <span>{% trans "What happens if I miss an exam?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>You can still register during the late registration period (first week of classes), but a late fee applies and popular modules may already be full. Contact the Registrar's Office as soon as possible.</p>
+                    <p>{% trans "If you miss an exam due to illness or emergency, you must submit a valid document (medical certificate or official letter) to the Academic Affairs office within 3 working days. If approved, you will be allowed to take the exam during the resit period in July." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>Can I change my modules after registration?</span>
+                    <span>{% trans "Can I appeal my exam grade?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Yes, during the add/drop period (first 7 days of the semester). After that, dropping a module requires your academic advisor's approval and may appear as a withdrawal on your transcript.</p>
+                    <p>{% trans "Yes. You can submit a written appeal to the Academic Affairs office within 3 days of the results being published. A review committee will re-evaluate your exam paper and notify you of the outcome within 5 working days." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>How many credits should I take per semester?</span>
+                    <span>{% trans "What counts as cheating?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>A standard full-time load is 30 ECTS credits per semester (typically 5–6 modules). The minimum is 15 credits to maintain full-time status. Exceeding 36 credits requires special permission.</p>
+                    <p>{% trans "Cheating includes: using unauthorized notes or devices, copying from another student, sharing answers, submitting someone else's work as your own, or any attempt to gain an unfair advantage. All cases are investigated by the Disciplinary Committee." %}</p>
                 </div>
             </div>
             <div class="travel-faq-item">
                 <button class="travel-faq-question" onclick="toggleFaq(this)">
-                    <span>I have a financial hold on my account — what do I do?</span>
+                    <span>{% trans "How does the resit exam work?" %}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="travel-faq-answer">
-                    <p>Visit the Finance Office to settle any outstanding balances. Once cleared, the hold will be removed within 1–2 business days and you can proceed with registration.</p>
+                    <p>{% trans "Resit exams are held in July for students who received an unsatisfactory grade (D) or missed the original exam with a valid reason. You can retake up to 3 exams during the resit period. The resit grade replaces the original grade." %}</p>
                 </div>
             </div>
         </div>
@@ -178,11 +180,11 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="/current-students/clubs/" class="explore-more-link">Clubs & Societies <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/sports/" class="explore-more-link">Sports & Fitness <i class="fas fa-arrow-right"></i></a>
-            <a href="/current-students/library/" class="explore-more-link">Library <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/academic-calendar/" class="explore-more-link">{% trans "Academic Calendar" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/library/" class="explore-more-link">{% trans "Library" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:contact' %}" class="explore-more-link">{% trans "Contact Us" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -193,11 +195,9 @@
 function toggleFaq(btn) {
     var item = btn.parentElement;
     var isOpen = item.classList.contains('open');
-
     document.querySelectorAll('.travel-faq-item').forEach(function(el) {
         el.classList.remove('open');
     });
-
     if (!isOpen) {
         item.classList.add('open');
     }

@@ -1,0 +1,228 @@
+{% extends "base_subpage.html" %}
+{% load static i18n %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Student Handbook" %} - TIU{% endblock %}
+
+{% block content %}
+<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+    <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb">
+            <a href="/">{% trans "Home" %}</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span>{% trans "Students" %}</span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="current">{% trans "Student Handbook" %}</span>
+        </nav>
+        <div class="page-hero-category">{% trans "Students" %}</div>
+        <h1 class="page-hero-title">{% trans "Student Handbook" %}</h1>
+        <div class="page-hero-description">
+            <p>{% trans "University rules, code of conduct, dress code, and everything you need to know as a TIU student." %}</p>
+        </div>
+    </div>
+    <div class="page-hero-gradient-bar"></div>
+</section>
+
+<!-- Intro -->
+<section class="strategy-intro">
+    <div class="container">
+        <h2><em>{% trans "Your guide to campus life" %}</em></h2>
+        <p>{% trans "This handbook is based on the TIU" %} <a href="{% static 'docs/odob-axloq-kodeksi.pdf' %}" target="_blank" style="color: #00bcd4; font-weight: 600; border-bottom: 1px solid #00bcd4;">{% trans "Code of Conduct" %} <i class="fas fa-download" style="font-size: 0.8rem;"></i></a>, {% trans "approved by the University Council on September 5, 2024. Every student is expected to be familiar with these rules and follow them throughout their studies." %}</p>
+    </div>
+</section>
+
+<!-- Core Principles -->
+<section class="values-section">
+    <div class="container">
+        <span class="values-label">{% trans "Core Principles" %}</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-balance-scale"></i></span> {% trans "Lawfulness" %}</h3>
+                <p>{% trans "All students must follow the laws of the Republic of Uzbekistan and the internal regulations of the university." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-handshake"></i></span> {% trans "Fairness and Integrity" %}</h3>
+                <p>{% trans "Students are expected to act with honesty, fairness, and impartiality in all academic and personal interactions." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-flag"></i></span> {% trans "Patriotism and Responsibility" %}</h3>
+                <p>{% trans "Students carry out their academic duties based on moral values, loyalty to the country, and a commitment to their education." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-lightbulb"></i></span> {% trans "Efficiency and Innovation" %}</h3>
+                <p>{% trans "Students are encouraged to continuously improve through innovative approaches and responsible use of university resources." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dress Code -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+            <div>
+                <h2 style="font-size: 2rem; color: #003366; font-weight: 800; margin-bottom: 1.5rem;">{% trans "Dress Code" %}</h2>
+                <p style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;">{% trans "All students must dress in a manner appropriate to the academic environment. The university requires a clean, modest, and professional appearance." %}</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Female students: light-colored blouses, knee-length skirts or classic trousers, dark shoes" %}</span></li>
+                    <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Male students: white, light blue, or light gray shirts, classic trousers, dark shoes" %}</span></li>
+                    <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Outerwear (coats, jackets, hats) must not be worn inside classrooms" %}</span></li>
+                    <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Clothing must not display religious or subculture symbols" %}</span></li>
+                    <li class="checklist-item"><i class="fas fa-check"></i><span>{% trans "Weekends: casual dress is allowed (with exceptions for official events)" %}</span></li>
+                </ul>
+            </div>
+            <div class="info-panel" style="background: #f8f8f8;">
+                <h3>{% trans "Not Allowed" %}</h3>
+                <div class="detail-row"><p><i class="fas fa-times" style="color: #dc2626; margin-right: 0.5rem;"></i> {% trans "Transparent, revealing, or overly tight clothing" %}</p></div>
+                <div class="detail-row"><p><i class="fas fa-times" style="color: #dc2626; margin-right: 0.5rem;"></i> {% trans "Visible piercings or tattoos (except ears and fingers)" %}</p></div>
+                <div class="detail-row"><p><i class="fas fa-times" style="color: #dc2626; margin-right: 0.5rem;"></i> {% trans "Unusual hair colors or unkempt appearance" %}</p></div>
+                <div class="detail-row"><p><i class="fas fa-times" style="color: #dc2626; margin-right: 0.5rem;"></i> {% trans "Headphones worn in classrooms or hallways" %}</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Behavior Rules -->
+<section style="padding: 5rem 0; background: #f8fafc;">
+    <div class="container">
+        <h2 class="section-heading">{% trans "Campus Behavior" %}</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-clock"></i></span> {% trans "Punctuality" %}</h3>
+                <p>{% trans "Arrive to classes on time. Late arrival is not allowed without a valid reason and the instructor's permission." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-mobile-alt"></i></span> {% trans "Mobile Phones" %}</h3>
+                <p>{% trans "Mobile phones must be switched off during classes. Use is only allowed with the instructor's explicit permission." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-id-card"></i></span> {% trans "Student ID" %}</h3>
+                <p>{% trans "Show your student ID when entering campus. Access is not granted without valid identification." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-door-open"></i></span> {% trans "Classroom Etiquette" %}</h3>
+                <p>{% trans "Stand when the instructor enters. Do not eat, chew gum, or engage in activities unrelated to the lesson during class." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-walking"></i></span> {% trans "Hallway Conduct" %}</h3>
+                <p>{% trans "Walk on the right side, greet staff and faculty, do not speak loudly on the phone in corridors." %}</p>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num"><i class="fas fa-users"></i></span> {% trans "Meetings and Events" %}</h3>
+                <p>{% trans "Show respect to speakers, maintain order, and do not interrupt without the moderator's permission." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Prohibited Actions -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "Strictly Prohibited" %}</div>
+                    <h2>{% trans "Zero tolerance policy" %}</h2>
+                    <p>{% trans "The following actions are strictly prohibited on campus and may result in disciplinary action, including expulsion:" %}</p>
+                    <ul style="list-style: none; padding: 0; margin: 1rem 0 0;">
+                        <li class="checklist-item"><i class="fas fa-ban" style="color: #dc2626;"></i><span>{% trans "Any form of violence, bullying, or harassment" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-ban" style="color: #dc2626;"></i><span>{% trans "Alcohol, tobacco, vaping, and any substance use on campus" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-ban" style="color: #dc2626;"></i><span>{% trans "Cheating, plagiarism, or submitting false documents" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-ban" style="color: #dc2626;"></i><span>{% trans "Damage to university property or the environment" %}</span></li>
+                        <li class="checklist-item"><i class="fas fa-ban" style="color: #dc2626;"></i><span>{% trans "Spreading false information about the university or its members" %}</span></li>
+                    </ul>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/b2.jpg' %}" alt="{% trans 'TIU Campus' %}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Discipline -->
+<section style="padding: 5rem 0; background: #fff;">
+    <div class="container" style="max-width: 800px;">
+        <h2 class="section-heading">{% trans "Discipline and Accountability" %}</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 2rem;">{% trans "Violations of the Code of Conduct are reviewed by the Ethics Committee (Odob-axloq komissiyasi). Depending on the severity, consequences may include:" %}</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="goal-item">
+                <h3><span class="goal-num">1</span> {% trans "Verbal warning" %}</h3>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num">2</span> {% trans "Written reprimand" %}</h3>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num">3</span> {% trans "Probation" %}</h3>
+            </div>
+            <div class="goal-item">
+                <h3><span class="goal-num">4</span> {% trans "Expulsion" %}</h3>
+            </div>
+        </div>
+        <p style="text-align: center; color: #666; margin-top: 2rem; font-size: 0.9rem;">{% trans "Students have the right to receive information about their case, present evidence in their defense, and appeal university decisions through the established procedure." %}</p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>{% trans "Handbook FAQs" %}</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Where can I read the full Code of Conduct?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "The full text of the TIU Code of Conduct is available at the Academic Affairs office and the university website. Every student signs a copy upon enrollment." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What should I do if I witness a violation?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Report it to your tutor (murabbiy), faculty dean, Student Union, or the Ma'naviyat va ma'rifat markazi. You can also submit information through the university's official channels." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I appeal a disciplinary decision?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes. You have the right to present your defense and appeal decisions through the established university procedure. Contact the Academic Affairs office for guidance." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore More -->
+<section class="explore-more-section">
+    <div class="container">
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
+        <div class="explore-more-links">
+            <a href="/current-students/registration/" class="explore-more-link">{% trans "Exam Rules" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="/current-students/academic-calendar/" class="explore-more-link">{% trans "Academic Calendar" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'core:contact' %}" class="explore-more-link">{% trans "Contact Us" %} <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+}
+</script>
+{% endblock %}
