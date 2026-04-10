@@ -18,12 +18,18 @@ def leadership(request):
 
 
 def person_directory(request):
-    people = Person.objects.select_related('department').all()
+    people = Person.objects.select_related('department').prefetch_related('publications').all()
     departments = Department.objects.all()
+    job_titles = (
+        Person.objects.values_list('job_title', flat=True)
+        .distinct()
+        .order_by('job_title')
+    )
 
     return render(request, 'pages/faculty/directory.html', {
         'people': people,
         'departments': departments,
+        'job_titles': job_titles,
     })
 
 

@@ -76,7 +76,7 @@
                 {% if person.photo %}
                 <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" loading="lazy">
                 {% else %}
-                <img src="{% static 'img/campus/b2.jpg' %}" alt="{{ person.full_name }}" loading="lazy">
+                <img src="{% static 'img/campus/lobby.jpg' %}" alt="{{ person.full_name }}" loading="lazy">
                 {% endif %}
                 <div class="leader-photo-overlay">
                     <div class="leader-photo-name">{{ person.full_name }}</div>

@@ -6,63 +6,57 @@
 <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
 {% endblock %}
 
-{% block title %}Faculty Directory - TIU{% endblock %}
+{% block title %}{% trans "Faculty Directory" %} - TIU{% endblock %}
 
 {% block content %}
 <!-- Page Hero -->
-<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/professor-economics.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>Faculty</span>
+            <span>{% trans "Faculty" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Directory</span>
+            <span class="current">{% trans "Directory" %}</span>
         </nav>
-        <div class="page-hero-category">Faculty</div>
-        <h1 class="page-hero-title">Faculty Directory</h1>
+        <div class="page-hero-category">{% trans "Faculty" %}</div>
+        <h1 class="page-hero-title">{% trans "Faculty Directory" %}</h1>
         <div class="page-hero-description">
-            <p>Browse our internationally recruited academics and professionals. Search by name, filter by department or role.</p>
+            <p>{% trans "Browse our internationally recruited academics and professionals. Search by name, filter by department or role." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
 </section>
 
-<!-- Search & Filter -->
-<section class="faculty-search-section">
+<!-- Filters (top bar) -->
+<section class="fdir-filters-bar">
     <div class="container">
-        <div class="faculty-search-bar">
-            <div class="faculty-search-input-wrap">
+        <div class="fdir-filters-row">
+            <div class="fdir-search-wrap">
                 <i class="fas fa-search"></i>
-                <input type="text" id="faculty-search" placeholder="Search by name, title, or department...">
+                <input type="text" id="faculty-search" placeholder="{% trans "Search by name..." %}">
             </div>
-        </div>
-        <div class="faculty-filters">
-            <div class="faculty-filter-group">
-                <label for="dept-filter">Department</label>
+            <div class="fdir-filter-group">
                 <select id="dept-filter">
-                    <option value="all">All Departments</option>
+                    <option value="all">{% trans "All Departments" %}</option>
                     {% for dept in departments %}
                     <option value="{{ dept.name }}">{{ dept|trans_field:"name" }}</option>
                     {% endfor %}
                 </select>
             </div>
-            <div class="faculty-filter-group">
-                <label for="role-filter">Role</label>
+            <div class="fdir-filter-group">
                 <select id="role-filter">
-                    <option value="all">All Roles</option>
-                    <option value="leadership">Leadership</option>
-                    <option value="faculty">Faculty</option>
-                    <option value="staff">Staff</option>
+                    <option value="all">{% trans "All Positions" %}</option>
+                    {% for jt in job_titles %}
+                    <option value="{{ jt }}">{{ jt }}</option>
+                    {% endfor %}
                 </select>
             </div>
-            <button class="faculty-reset-btn" id="reset-filters">
-                <i class="fas fa-undo"></i> Reset
+            <button class="fdir-reset-btn" id="reset-filters">
+                <i class="fas fa-undo"></i> {% trans "Clear filters" %}
             </button>
         </div>
-        <div class="faculty-results-count" id="results-count">
-            Showing {{ people|length }} member{{ people|length|pluralize }}
-        </div>
+        <div class="fdir-results-count" id="results-count"></div>
     </div>
 </section>
 
@@ -71,73 +65,86 @@
     <div class="container">
         <div id="faculty-list">
             {% for person in people %}
-            <div class="leader-profile faculty-profile-item"
+            <div class="leader-profile faculty-item"
                  data-name="{{ person.full_name|lower }}"
                  data-title="{{ person.job_title|lower }}{{ person.job_title_uz|lower }}{{ person.job_title_ru|lower }}"
                  data-department="{{ person.department.name|default:'' }}"
-                 data-role="{{ person.role }}">
+                 data-jobtitle="{{ person.job_title }}">
                 <div class="leader-text">
-                    <h2>{{ person.full_name }}</h2>
-                    <div class="faculty-meta">
-                        <span class="faculty-meta-role">{{ person.get_role_display }}</span>
-                        {% if person.department %}
-                        <span class="faculty-meta-dept">{{ person.department|trans_field:"name" }}</span>
-                        {% endif %}
-                    </div>
-                    <p>{{ person|trans_field:"job_title" }}</p>
-                    {% if person.email %}
-                    <p><a href="mailto:{{ person.email }}" style="color: #003366; text-decoration: none;"><i class="fas fa-envelope" style="margin-right: 0.4rem;"></i>{{ person.email }}</a></p>
+                    <h2>{{ person|trans_field:"job_title" }}</h2>
+                    {% if person.excerpt %}
+                    <div class="leader-excerpt">{{ person|trans_field:"excerpt" }}</div>
                     {% endif %}
-                    {% if person.bio %}
+                    {% if person.bio or person.publications.all %}
                     <div class="leader-accordion">
                         <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
-                            Find out more <i class="fas fa-chevron-down"></i>
+                            {% trans "Find out more" %} <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="leader-accordion-content">
+                            {% if person.bio %}
                             {{ person|trans_field:"bio"|safe }}
+                            {% endif %}
+                            {% with pubs=person.publications.all %}
+                            {% if pubs %}
+                            <div class="fdir-publications">
+                                <h4>{% trans "Publications" %}</h4>
+                                <ul>
+                                    {% for pub in pubs %}
+                                    <li>
+                                        {% if pub.external_url %}
+                                        <a href="{{ pub.external_url }}" target="_blank" rel="noopener">{{ pub|trans_field:"title" }} <i class="fas fa-external-link-alt"></i></a>
+                                        {% else %}
+                                        <a href="{{ pub.get_absolute_url }}">{{ pub|trans_field:"title" }}</a>
+                                        {% endif %}
+                                        <span class="fdir-pub-meta">{{ pub.published_date|date:"Y" }}{% if pub.author %} — {{ pub.author }}{% endif %}</span>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                            {% endwith %}
                         </div>
                     </div>
                     {% endif %}
-                    <a href="{{ person.get_absolute_url }}" class="faculty-card-link" style="margin-top: 1.25rem;">
-                        View Profile <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
                 <div class="leader-photo">
                     {% if person.photo %}
                     <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" loading="lazy">
                     {% else %}
-                    <div class="faculty-card-placeholder" style="aspect-ratio: 3 / 3.5;">
+                    <div class="fdir-card-placeholder" style="aspect-ratio: 3 / 3.5;">
                         <i class="fas fa-user"></i>
                     </div>
                     {% endif %}
                     <div class="leader-photo-overlay">
                         <div class="leader-photo-name">{{ person.full_name }}</div>
-                        <div class="leader-photo-title">{{ person|trans_field:"job_title" }}</div>
+                        {% if person.email %}
+                        <a href="mailto:{{ person.email }}" class="leader-photo-email">{{ person.email }}</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
             {% empty %}
-            <p style="text-align: center; color: #666; padding: 3rem 0;">No faculty members found.</p>
+            <p style="text-align: center; color: #666; padding: 3rem 0;">{% trans "No faculty members found." %}</p>
             {% endfor %}
         </div>
 
-        <!-- No Results State -->
-        <div class="faculty-no-results" id="no-results" style="display: none;">
+        <!-- No Results -->
+        <div class="fdir-no-results" id="no-results" style="display: none;">
             <i class="fas fa-search"></i>
-            <h3>No results found</h3>
-            <p>Try adjusting your search or filter criteria.</p>
-            <button class="faculty-reset-link" id="reset-filters-link">Clear all filters</button>
+            <h3>{% trans "No results found" %}</h3>
+            <p>{% trans "Try adjusting your search or filter criteria." %}</p>
+            <button class="fdir-reset-link" id="reset-filters-link">{% trans "Clear filters" %}</button>
         </div>
 
         <!-- Pagination -->
-        <div class="faculty-pagination" id="pagination"></div>
+        <div class="fdir-pagination" id="pagination"></div>
     </div>
 </section>
 
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
             <a href="{% url 'people:person_directory' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'programs:program_list' %}" class="explore-more-link">{% trans "Programs" %} <i class="fas fa-arrow-right"></i></a>

@@ -1,10 +1,9 @@
-// Faculty Section Specific JavaScript
+// Faculty Directory JavaScript
 
 var ITEMS_PER_PAGE = 6;
 var currentPage = 1;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Faculty search
     var searchInput = document.getElementById('faculty-search');
     if (searchInput) {
         searchInput.addEventListener('input', debounce(function() {
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300));
     }
 
-    // Department dropdown filter
     var deptSelect = document.getElementById('dept-filter');
     if (deptSelect) {
         deptSelect.addEventListener('change', function() {
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Role dropdown filter
     var roleSelect = document.getElementById('role-filter');
     if (roleSelect) {
         roleSelect.addEventListener('change', function() {
@@ -31,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Reset buttons
     var resetBtn = document.getElementById('reset-filters');
     if (resetBtn) {
         resetBtn.addEventListener('click', resetAllFilters);
@@ -42,22 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
         resetLink.addEventListener('click', resetAllFilters);
     }
 
-    // Initial render with pagination
     if (document.getElementById('faculty-list')) {
         applyFilters();
     }
-
-    // Animate cards (uses shared animateCards from main.js)
-    if (typeof animateCards === 'function') {
-        animateCards('.faculty-card, .department-card, .faculty-profile-item');
-    }
 });
 
-// Accordion toggle for directory page
+// Accordion toggle for leader-style profiles
 function toggleLeaderBio(btn) {
     var content = btn.parentElement.querySelector('.leader-accordion-content');
+    var icon = btn.querySelector('i');
     btn.classList.toggle('active');
     content.classList.toggle('show');
+    if (content.classList.contains('show')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+    } else {
+        content.style.maxHeight = '0';
+        if (icon) icon.style.transform = 'rotate(0)';
+    }
 }
 
 function getFilteredItems() {
@@ -69,18 +67,18 @@ function getFilteredItems() {
     var dept = deptSelect ? deptSelect.value : 'all';
     var role = roleSelect ? roleSelect.value : 'all';
 
-    var allItems = document.querySelectorAll('#faculty-list .faculty-profile-item');
+    var allItems = document.querySelectorAll('#faculty-list .faculty-item');
     var filtered = [];
 
     allItems.forEach(function(item) {
         var name = item.dataset.name || '';
         var title = item.dataset.title || '';
         var itemDept = item.dataset.department || '';
-        var itemRole = item.dataset.role || '';
+        var itemJobtitle = item.dataset.jobtitle || '';
 
         var matchesSearch = !query || name.includes(query) || title.includes(query) || itemDept.toLowerCase().includes(query);
         var matchesDept = dept === 'all' || itemDept === dept;
-        var matchesRole = role === 'all' || itemRole === role;
+        var matchesRole = role === 'all' || itemJobtitle === role;
 
         if (matchesSearch && matchesDept && matchesRole) {
             filtered.push(item);
@@ -91,18 +89,16 @@ function getFilteredItems() {
 }
 
 function applyFilters() {
-    var allItems = document.querySelectorAll('#faculty-list .faculty-profile-item');
+    var allItems = document.querySelectorAll('#faculty-list .faculty-item');
     var filtered = getFilteredItems();
     var noResults = document.getElementById('no-results');
     var resultsCount = document.getElementById('results-count');
     var totalFiltered = filtered.length;
 
-    // Hide all items first
     allItems.forEach(function(item) {
         item.style.display = 'none';
     });
 
-    // Calculate pagination
     var totalPages = Math.ceil(totalFiltered / ITEMS_PER_PAGE);
     if (currentPage > totalPages) currentPage = totalPages;
     if (currentPage < 1) currentPage = 1;
@@ -110,24 +106,24 @@ function applyFilters() {
     var startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     var endIndex = startIndex + ITEMS_PER_PAGE;
 
-    // Show only current page items
     for (var i = startIndex; i < endIndex && i < totalFiltered; i++) {
         filtered[i].style.display = '';
     }
 
-    // No results state
     if (noResults) {
         noResults.style.display = totalFiltered === 0 && allItems.length > 0 ? 'flex' : 'none';
     }
 
-    // Results count
     if (resultsCount) {
-        var showingStart = totalFiltered > 0 ? startIndex + 1 : 0;
-        var showingEnd = Math.min(endIndex, totalFiltered);
-        resultsCount.textContent = 'Showing ' + showingStart + '–' + showingEnd + ' of ' + totalFiltered + ' member' + (totalFiltered !== 1 ? 's' : '');
+        if (totalFiltered > 0) {
+            var showingStart = startIndex + 1;
+            var showingEnd = Math.min(endIndex, totalFiltered);
+            resultsCount.textContent = showingStart + '–' + showingEnd + ' / ' + totalFiltered;
+        } else {
+            resultsCount.textContent = '';
+        }
     }
 
-    // Render pagination
     renderPagination(totalPages);
 }
 
@@ -141,23 +137,18 @@ function renderPagination(totalPages) {
     }
 
     var html = '';
+    html += '<button class="pagination-btn' + (currentPage === 1 ? ' disabled' : '') + '" data-page="prev"' + (currentPage === 1 ? ' disabled' : '') + '><i class="fas fa-chevron-left"></i></button>';
 
-    // Previous button
-    html += '<button class="pagination-btn' + (currentPage === 1 ? ' disabled' : '') + '" data-page="prev"' + (currentPage === 1 ? ' disabled' : '') + '><i class="fas fa-chevron-left"></i> Previous</button>';
-
-    // Page numbers
     html += '<div class="pagination-numbers">';
     for (var i = 1; i <= totalPages; i++) {
         html += '<button class="pagination-num' + (i === currentPage ? ' active' : '') + '" data-page="' + i + '">' + i + '</button>';
     }
     html += '</div>';
 
-    // Next button
-    html += '<button class="pagination-btn' + (currentPage === totalPages ? ' disabled' : '') + '" data-page="next"' + (currentPage === totalPages ? ' disabled' : '') + '>Next <i class="fas fa-chevron-right"></i></button>';
+    html += '<button class="pagination-btn' + (currentPage === totalPages ? ' disabled' : '') + '" data-page="next"' + (currentPage === totalPages ? ' disabled' : '') + '><i class="fas fa-chevron-right"></i></button>';
 
     container.innerHTML = html;
 
-    // Bind click events
     container.querySelectorAll('[data-page]').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var page = this.dataset.page;
@@ -169,8 +160,7 @@ function renderPagination(totalPages) {
                 currentPage = parseInt(page);
             }
             applyFilters();
-            // Scroll to top of list
-            var section = document.querySelector('.faculty-search-section');
+            var section = document.querySelector('.fdir-filters-bar');
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });
             }
@@ -190,9 +180,3 @@ function resetAllFilters() {
     currentPage = 1;
     applyFilters();
 }
-
-// Export functions
-window.FacultyModule = {
-    applyFilters: applyFilters,
-    resetAllFilters: resetAllFilters
-};

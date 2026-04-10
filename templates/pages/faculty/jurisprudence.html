@@ -11,7 +11,7 @@
 
 {% block content %}
 <!-- Page Hero -->
-<section class="page-hero" style="background-image: url('{% static 'img/campus/c3.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/make-it-happen-wall.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="{% url 'core:homepage' %}">{% trans "Home" %}</a>
@@ -45,7 +45,7 @@
                 <div class="dean-quote-marks">&ldquo;</div>
                 <blockquote>Understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</blockquote>
                 <div class="dean-quote-author">
-                    <img src="{% static 'img/campus/c4.jpg' %}" alt="Dean of Faculty" loading="lazy">
+                    <img src="{% static 'img/campus/library-shelves.jpg' %}" alt="Dean of Faculty" loading="lazy">
                     <div class="dean-quote-info">
                         <strong>Dean of Faculty</strong>
                         <span>Faculty of Jurisprudence</span>
@@ -68,7 +68,7 @@
                 {% if dept.image %}
                 <img src="{{ dept.image.url }}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
                 {% else %}
-                <img src="{% static 'img/campus/c3.jpg' %}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
+                <img src="{% static 'img/campus/it-lab-green.jpg' %}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
                 {% endif %}
                 <div class="school-card-overlay">
                     <p><strong>{{ dept|trans_field:"name" }}</strong>{% if dept.excerpt %} — {{ dept|trans_field:"excerpt" }}{% endif %}</p>

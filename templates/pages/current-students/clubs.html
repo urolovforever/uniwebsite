@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="clubs-intro-image">
-                <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "TIU student clubs" %}" loading="lazy">
+                <img src="{% static 'img/campus/students-collaborating.jpg' %}" alt="{% trans "TIU student clubs" %}" loading="lazy">
             </div>
         </div>
     </div>
@@ -63,26 +63,26 @@
             </div>
             <div class="campus-gallery">
                 <div class="campus-main-image" id="clubsMainImage">
-                    <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "TIU Clubs" %}" id="mainClubsImg" loading="lazy">
+                    <img src="{% static 'img/campus/student-portrait-library.jpg' %}" alt="{% trans "TIU Clubs" %}" id="mainClubsImg" loading="lazy">
                 </div>
                 <div class="campus-thumbnails">
-                    <div class="campus-thumb active" onclick="changeClubsImage('{% static 'img/campus/c3.jpg' %}', this)">
-                        <img src="{% static 'img/campus/c3.jpg' %}" alt="{% trans "Debate Club" %}" loading="lazy">
+                    <div class="campus-thumb active" onclick="changeClubsImage('{% static 'img/campus/students-laptop-team.jpg' %}', this)">
+                        <img src="{% static 'img/campus/corridor-busy.jpg' %}" alt="{% trans "Debate Club" %}" loading="lazy">
                     </div>
-                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c4.jpg' %}', this)">
-                        <img src="{% static 'img/campus/c4.jpg' %}" alt="{% trans "IT & Programming" %}" loading="lazy">
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/student-books-portrait.jpg' %}', this)">
+                        <img src="{% static 'img/campus/library-two-students.jpg' %}" alt="{% trans "IT & Programming" %}" loading="lazy">
                     </div>
-                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c5.jpg' %}', this)">
-                        <img src="{% static 'img/campus/c5.jpg' %}" alt="{% trans "Photography" %}" loading="lazy">
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/students-studying-outdoor.jpg' %}', this)">
+                        <img src="{% static 'img/campus/mural-scholars.jpg' %}" alt="{% trans "Photography" %}" loading="lazy">
                     </div>
-                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c6.jpg' %}', this)">
-                        <img src="{% static 'img/campus/c6.jpg' %}" alt="{% trans "English Speaking Club" %}" loading="lazy">
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/student-thinking.jpg' %}', this)">
+                        <img src="{% static 'img/campus/lecture-students.jpg' %}" alt="{% trans "English Speaking Club" %}" loading="lazy">
                     </div>
-                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c1.jpg' %}', this)">
-                        <img src="{% static 'img/campus/c1.jpg' %}" alt="{% trans "Korean Culture Club" %}" loading="lazy">
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/graduation-group.jpg' %}', this)">
+                        <img src="{% static 'img/campus/teacher-presenting.jpg' %}" alt="{% trans "Korean Culture Club" %}" loading="lazy">
                     </div>
-                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/c2.jpg' %}', this)">
-                        <img src="{% static 'img/campus/c2.jpg' %}" alt="{% trans "Volunteer Club" %}" loading="lazy">
+                    <div class="campus-thumb" onclick="changeClubsImage('{% static 'img/campus/students-browsing-books.jpg' %}', this)">
+                        <img src="{% static 'img/campus/student-uniform-closeup.jpg' %}" alt="{% trans "Volunteer Club" %}" loading="lazy">
                     </div>
                     <div class="campus-fullscreen-btn" onclick="openClubsFullscreen()">
                         <i class="fas fa-expand"></i>
@@ -119,7 +119,7 @@
                 <a href="/current-students/student-union/" class="clubs-su-link">{% trans "Visit TIU Student Union" %} <i class="fas fa-external-link-alt"></i></a>
             </div>
             <div class="clubs-su-image">
-                <img src="{% static 'img/campus/c6.jpg' %}" alt="{% trans "TIU Student Union" %}" loading="lazy">
+                <img src="{% static 'img/campus/corridor-colorful.jpg' %}" alt="{% trans "TIU Student Union" %}" loading="lazy">
             </div>
         </div>
     </div>
@@ -162,12 +162,12 @@
 {% block extra_js %}
 <script>
 var clubsImages = [
-    '{% static "img/campus/c3.jpg" %}',
-    '{% static "img/campus/c4.jpg" %}',
-    '{% static "img/campus/c5.jpg" %}',
-    '{% static "img/campus/c6.jpg" %}',
-    '{% static "img/campus/c1.jpg" %}',
-    '{% static "img/campus/c2.jpg" %}'
+    '{% static "img/campus/make-it-happen-wall.jpg" %}',
+    '{% static "img/campus/students-lobby-devices.jpg" %}',
+    '{% static "img/campus/student-reading-library.jpg" %}',
+    '{% static "img/campus/students-laptop-outdoor.jpg" %}',
+    '{% static "img/campus/graduate-portrait.jpg" %}',
+    '{% static "img/campus/student-tiu-backdrop.jpg" %}'
 ];
 var clubsLbIndex = 0;
 

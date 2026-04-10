@@ -125,6 +125,11 @@ class Publication(TranslatedMixin, models.Model):
     slug = models.SlugField(max_length=300, unique=True)
     author = models.CharField(max_length=300)
     author_type = models.ForeignKey(AuthorType, on_delete=models.SET_NULL, null=True, blank=True)
+    person = models.ForeignKey(
+        'people.Person', on_delete=models.SET_NULL,
+        null=True, blank=True, related_name='publications',
+        help_text='Link to a faculty member (optional)'
+    )
     excerpt = models.TextField(blank=True)
     excerpt_uz = models.TextField(blank=True)
     excerpt_ru = models.TextField(blank=True)

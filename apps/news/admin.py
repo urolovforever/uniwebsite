@@ -46,12 +46,13 @@ class AuthorTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Publication)
 class PublicationAdmin(admin.ModelAdmin):
-    list_display = ['title', 'author', 'author_type', 'published_date', 'is_published']
-    list_filter = ['is_published', 'author_type', 'categories']
+    list_display = ['title', 'author', 'person', 'author_type', 'published_date', 'is_published']
+    list_filter = ['is_published', 'author_type', 'categories', 'person']
     search_fields = ['title', 'author', 'excerpt']
     prepopulated_fields = {'slug': ('title',)}
     date_hierarchy = 'published_date'
     filter_horizontal = ['categories']
+    autocomplete_fields = ['person']
 
 
 @admin.register(GalleryImage)
