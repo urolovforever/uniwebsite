@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
 {% endblock %}
 
-{% block title %}Faculty of Business and Innovative Education - TIU{% endblock %}
+{% block title %}{% trans "Faculty of Business and Innovative Education" %} - TIU{% endblock %}
 
 {% block content %}
 <!-- Page Hero -->
@@ -18,14 +18,12 @@
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
             <span>{% trans "Faculty" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>{% trans "Departments" %}</span>
-            <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">{% trans "Business and Innovative Education" %}</span>
+            <span class="current">{% trans "Faculty of Business and Innovative Education" %}</span>
         </nav>
-        <div class="page-hero-category">Faculty</div>
-        <h1 class="page-hero-title">Faculty of Business and Innovative Education</h1>
+        <div class="page-hero-category">{% trans "Faculty" %}</div>
+        <h1 class="page-hero-title">{% trans "Faculty of Business and Innovative Education" %}</h1>
         <div class="page-hero-description">
-            <p>Cutting-edge research. Modern facilities. Industry-driven programmes taught entirely in English by internationally experienced faculty.</p>
+            <p>{% trans "Innovation, digital transformation, and industry-driven programs — taught entirely in English by internationally experienced faculty." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -36,19 +34,19 @@
     <div class="container">
         <div class="dean-welcome-grid">
             <div class="dean-welcome-text">
-                <h2>Welcome from the Dean</h2>
-                <p>At the Faculty of Business and Innovative Education, we live and breathe the principles we believe must guide every modern organisation: innovation, digital transformation, and responsible leadership.</p>
-                <p>Our commitment to industry-relevant education cuts across everything we do. We focus on making a lasting, positive impact on technology, business, and education, and we forge connections with partners who share this goal.</p>
-                <p>I'm proud that our commitment to these values has been recognised through our growing network of international partnerships. The true endorsement of what we do is the impact our colleagues, students and alumni make in the world.</p>
+                <h2>{% trans "Welcome from the Dean" %}</h2>
+                <p>{% trans "At the Faculty of Business and Innovative Education, we live by the principles that guide every modern organization: innovation, digital transformation, and responsible leadership." %}</p>
+                <p>{% trans "Our commitment to industry-relevant education is at the heart of everything we do. We aim to make a lasting impact on technology, business, and education — building connections with partners who share this vision." %}</p>
+                <p>{% trans "I'm proud that our values have been recognized through a growing network of international partnerships. The true measure of what we do is the impact our colleagues, students, and alumni make in the world." %}</p>
             </div>
             <div class="dean-welcome-quote">
                 <div class="dean-quote-marks">&ldquo;</div>
-                <blockquote>We focus on making a lasting impact on technology, business, and education, and we forge connections with partners who share this goal.</blockquote>
+                <blockquote>{% trans "We aim to make a lasting impact on technology, business, and education — building connections with partners who share this vision." %}</blockquote>
                 <div class="dean-quote-author">
-                    <img src="{% static 'img/campus/lecture-students.jpg' %}" alt="Dean of Faculty" loading="lazy">
+                    <img src="{% static 'img/campus/lecture-students.jpg' %}" alt="{% trans "Dean of Faculty" %}" loading="lazy">
                     <div class="dean-quote-info">
-                        <strong>Dean of Faculty</strong>
-                        <span>Faculty of Business and Innovative Education</span>
+                        <strong>{% trans "Dean of Faculty" %}</strong>
+                        <span>{% trans "Faculty of Business and Innovative Education" %}</span>
                     </div>
                 </div>
             </div>
@@ -95,7 +93,7 @@
         <div class="faculty-news-events-grid">
             <div class="faculty-news-col">
                 <div class="faculty-col-header">
-                    <h2>Latest news</h2>
+                    <h2>{% trans "Latest news" %}</h2>
                     <a href="{% url 'news:news_list' %}" class="faculty-see-all">{% trans "See all" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="faculty-news-list">
@@ -118,9 +116,9 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="{% url 'people:person_directory' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'people:person_directory' %}" class="explore-more-link">{% trans "Faculty Directory" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'people:dept_jurisprudence' %}" class="explore-more-link">{% trans "Faculty of Jurisprudence" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
@@ -145,9 +143,7 @@
         return cards[0].offsetWidth + gap;
     }
 
-    function getMaxIndex() {
-        return Math.max(0, total - 1);
-    }
+    function getMaxIndex() { return Math.max(0, total - 1); }
 
     function buildDots() {
         dotsWrap.innerHTML = '';
@@ -160,30 +156,16 @@
     }
 
     function update() {
-        const cardW = getCardWidth();
-        carousel.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+        carousel.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
         dotsWrap.querySelectorAll('.dot').forEach(function(d, i) {
             d.className = 'dot' + (i === current ? ' active' : '');
         });
     }
 
-    function goTo(idx) {
-        current = Math.max(0, Math.min(idx, getMaxIndex()));
-        update();
-    }
-
-    window.slideSchools = function(dir) {
-        goTo(current + dir);
-    };
-
-    buildDots();
-    update();
-
-    window.addEventListener('resize', function() {
-        if (current > getMaxIndex()) current = getMaxIndex();
-        buildDots();
-        update();
-    });
+    function goTo(idx) { current = Math.max(0, Math.min(idx, getMaxIndex())); update(); }
+    window.slideSchools = function(dir) { goTo(current + dir); };
+    buildDots(); update();
+    window.addEventListener('resize', function() { if (current > getMaxIndex()) current = getMaxIndex(); buildDots(); update(); });
 })();
 </script>
 {% endblock %}

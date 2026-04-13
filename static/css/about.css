@@ -2675,6 +2675,22 @@
     align-items: start;
 }
 
+/* Sticky right side: title + image */
+.explore-list-sticky {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.explore-list-sticky h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
 .explore-list-items {
     display: flex;
     flex-direction: column;
@@ -2761,10 +2777,8 @@
 
 /* Paired image that swaps with accordion selection */
 .explore-list-image {
-    position: sticky;
-    top: 120px;
     overflow: hidden;
-    height: 550px;
+    height: 500px;
 }
 
 .explore-list-image img {
@@ -4466,6 +4480,15 @@
     .explore-list-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+    .explore-list-sticky {
+        position: static;
+    }
+    .explore-list-grid .explore-list-items {
+        order: 2;
+    }
+    .explore-list-grid .explore-list-sticky {
+        order: 1;
     }
 
     /* Typography — tablet reductions */

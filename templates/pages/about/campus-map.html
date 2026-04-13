@@ -88,13 +88,9 @@
     </div>
 </section>
 
-<!-- More to Explore (accordion left + paired image right) — kept unique items only -->
+<!-- More to Explore (accordion left scrolls, title+image right sticky) -->
 <section class="explore-list">
     <div class="container">
-        <div class="explore-list-header">
-            <h2>{% trans "More to explore on campus" %}</h2>
-        </div>
-
         <div class="explore-list-grid">
             <div class="explore-list-items">
                 <div class="explore-item">
@@ -134,9 +130,12 @@
                 </div>
             </div>
 
-            <!-- Paired image that changes per accordion item -->
-            <div class="explore-list-image">
-                <img id="exploreImage" src="{% static 'img/campus/classroom-projector.jpg' %}" alt="Campus Feature" loading="lazy">
+            <!-- Sticky right side: title + image -->
+            <div class="explore-list-sticky">
+                <h2>{% trans "More to explore on campus" %}</h2>
+                <div class="explore-list-image">
+                    <img id="exploreImage" src="{% static 'img/campus/classroom-projector.jpg' %}" alt="Campus Feature" loading="lazy">
+                </div>
             </div>
         </div>
     </div>

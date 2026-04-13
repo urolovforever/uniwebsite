@@ -1,23 +1,23 @@
 {% extends "base_subpage.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 {% endblock %}
 
-{% block title %}Terms of Use - TIU{% endblock %}
+{% block title %}{% trans "Terms of Use" %} - TIU{% endblock %}
 
 {% block content %}
 <section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Terms of Use</span>
+            <span class="current">{% trans "Terms of Use" %}</span>
         </nav>
-        <h1 class="page-hero-title">Terms of Use</h1>
+        <h1 class="page-hero-title">{% trans "Terms of Use" %}</h1>
         <div class="page-hero-description">
-            <p>The terms and conditions governing your use of the Tashkent International University website.</p>
+            <p>{% trans "The terms and conditions governing your use of the Tashkent International University website." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -27,98 +27,81 @@
     <div class="container narrow-container">
 
         <div style="margin-bottom: 3rem;">
-            <p class="text-date">Last updated: February 2026</p>
-            <p class="text-body--intro">Welcome to the official website of Tashkent International University ("TIU"). By accessing or using this website, you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, please do not use the website.</p>
+            <p class="text-date">{% trans "Last updated: April 2026" %}</p>
+            <p class="text-body--intro">{% trans "Welcome to the official website of Tashkent International University (TIU). By accessing or using this website (tiu.uz), you agree to these Terms of Use. If you do not agree, please do not use the website." %}</p>
         </div>
 
-        <!-- 1 -->
         <div class="legal-section">
-            <h2>1. Acceptance of terms</h2>
-            <p class="text-body">By using this website you confirm that you have read, understood, and agree to these Terms of Use and our <a href="/privacy-policy/" class="text-link" style="font-weight: 600;">Privacy Policy</a>. These terms apply to all visitors, students, staff, and other users of the website. TIU reserves the right to modify these terms at any time. Changes take effect immediately upon posting, and continued use of the website constitutes acceptance of the revised terms.</p>
+            <h2>{% trans "1. Acceptance of Terms" %}</h2>
+            <p class="text-body">{% trans "By using this website you confirm that you have read, understood, and agree to these Terms of Use and our Privacy Policy. These terms apply to all visitors, students, staff, and other users. TIU reserves the right to modify these terms at any time. Changes take effect immediately upon posting. Continued use of the website after changes constitutes acceptance of the updated terms." %}</p>
         </div>
 
-        <!-- 2 -->
         <div class="legal-section">
-            <h2>2. Use of the website</h2>
-            <p class="text-body" style="margin-bottom: 1rem;">You may use this website for lawful purposes only. You agree not to:</p>
+            <h2>{% trans "2. Use of the Website" %}</h2>
+            <p class="text-body" style="margin-bottom: 1rem;">{% trans "This website is intended for informational and educational purposes. You may use it for lawful purposes only. You agree not to:" %}</p>
             <ul style="list-style: none; padding: 0; margin: 0;">
-                <li class="checklist-item">
-                    <i class="fas fa-times" style="color: #e91e63;"></i>
-                    <span>Use the website in any way that violates applicable local, national, or international law</span>
-                </li>
-                <li class="checklist-item">
-                    <i class="fas fa-times" style="color: #e91e63;"></i>
-                    <span>Attempt to gain unauthorized access to any part of the website, its servers, or connected systems</span>
-                </li>
-                <li class="checklist-item">
-                    <i class="fas fa-times" style="color: #e91e63;"></i>
-                    <span>Use automated tools (bots, scrapers) to extract content without prior written permission</span>
-                </li>
-                <li class="checklist-item">
-                    <i class="fas fa-times" style="color: #e91e63;"></i>
-                    <span>Transmit malicious software, spam, or any material that is harmful, offensive, or misleading</span>
-                </li>
+                <li class="checklist-item"><i class="fas fa-times" style="color: #e91e63;"></i><span>{% trans "Use the website in any way that violates applicable laws of the Republic of Uzbekistan" %}</span></li>
+                <li class="checklist-item"><i class="fas fa-times" style="color: #e91e63;"></i><span>{% trans "Attempt to gain unauthorized access to any part of the website or its systems" %}</span></li>
+                <li class="checklist-item"><i class="fas fa-times" style="color: #e91e63;"></i><span>{% trans "Use automated tools (bots, scrapers) to collect data without written permission" %}</span></li>
+                <li class="checklist-item"><i class="fas fa-times" style="color: #e91e63;"></i><span>{% trans "Transmit malicious software, viruses, or any harmful content" %}</span></li>
+                <li class="checklist-item"><i class="fas fa-times" style="color: #e91e63;"></i><span>{% trans "Copy, reproduce, or redistribute website content without permission" %}</span></li>
+                <li class="checklist-item"><i class="fas fa-times" style="color: #e91e63;"></i><span>{% trans "Impersonate any person or entity, or interfere with website functionality" %}</span></li>
             </ul>
         </div>
 
-        <!-- 3 -->
         <div class="legal-section">
-            <h2>3. Intellectual property</h2>
-            <p class="text-body">All content on this website — including text, graphics, logos, images, photographs, videos, page layouts, and software — is the property of Tashkent International University or its content suppliers and is protected by the copyright laws of the Republic of Uzbekistan and international copyright treaties. You may view, download, and print pages for personal, non-commercial use only. Any reproduction, distribution, modification, or republication of content without prior written consent from TIU is strictly prohibited.</p>
+            <h2>{% trans "3. Intellectual Property" %}</h2>
+            <p class="text-body">{% trans "All content on this website — including text, graphics, logos, images, videos, and software — is the property of TIU or its licensors, protected by the copyright laws of the Republic of Uzbekistan. You may view, download, and print pages for personal, non-commercial use only. Any reproduction, distribution, or modification without prior written consent from TIU is prohibited. The TIU name, logo, and branding are protected trademarks." %}</p>
         </div>
 
-        <!-- 4 -->
         <div class="legal-section">
-            <h2>4. Accuracy of information</h2>
-            <p class="text-body">TIU makes reasonable efforts to ensure that the information published on this website is accurate and up to date. However, we do not warrant or guarantee the completeness, reliability, or accuracy of any content. Programme details, tuition fees, admission requirements, and other information are subject to change without prior notice. For the most current and authoritative information, please contact the relevant university department directly.</p>
+            <h2>{% trans "4. Online Applications & Student Portal" %}</h2>
+            <p class="text-body">{% trans "Users submitting applications must provide accurate and truthful information. Providing false information may result in rejection or cancellation of enrollment. You are responsible for maintaining the confidentiality of your login credentials. TIU is not responsible for unauthorized access resulting from your failure to protect your credentials. Application submission does not guarantee admission." %}</p>
         </div>
 
-        <!-- 5 -->
         <div class="legal-section">
-            <h2>5. Third-party links</h2>
-            <p class="text-body">This website may contain links to external websites operated by third parties. These links are provided for your convenience and informational purposes only. TIU does not endorse, control, or accept responsibility for the content, privacy policies, or practices of any third-party website. Accessing third-party sites is at your own risk.</p>
+            <h2>{% trans "5. Personal Data & Privacy" %}</h2>
+            <p class="text-body">{% trans "TIU collects personal data through the website (application forms, contact forms, analytics) in accordance with the Law on Personal Data of the Republic of Uzbekistan. Data is used for processing applications, communication, and improving the website. TIU does not sell personal data to third parties. Data may be shared with partner universities (with consent), government authorities (when required by law), and service providers (under data processing agreements). Users have the right to access, correct, and request deletion of their personal data." %}</p>
         </div>
 
-        <!-- 6 -->
         <div class="legal-section">
-            <h2>6. User accounts</h2>
-            <p class="text-body">Certain areas of the website (such as the student portal, LMS, or application system) may require you to create an account or log in with credentials provided by TIU. You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account. You must notify TIU immediately if you become aware of any unauthorized use of your account.</p>
+            <h2>{% trans "6. Cookies & Analytics" %}</h2>
+            <p class="text-body">{% trans "The website uses cookies to improve user experience: essential cookies for functionality, analytical cookies for usage statistics, and preference cookies for user settings. You can manage cookies through your browser settings. TIU may use third-party analytics tools to understand website traffic. Analytics data is collected anonymously." %}</p>
         </div>
 
-        <!-- 7 -->
         <div class="legal-section">
-            <h2>7. Limitation of liability</h2>
-            <p class="text-body">To the fullest extent permitted by law, TIU shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of or inability to use this website. This includes, but is not limited to, damages for loss of data, revenue, or business opportunities, even if TIU has been advised of the possibility of such damages. The website and its content are provided on an "as is" and "as available" basis without warranties of any kind.</p>
+            <h2>{% trans "7. Accuracy of Information" %}</h2>
+            <p class="text-body">{% trans "TIU makes reasonable efforts to ensure accuracy of information on the website. However, we do not guarantee that all content is complete, current, or error-free. Programme details, tuition fees, admission requirements, and deadlines are subject to change. For the most current information, contact the relevant university department directly. Official information is confirmed only through direct communication with TIU administration." %}</p>
         </div>
 
-        <!-- 8 -->
         <div class="legal-section">
-            <h2>8. Indemnification</h2>
-            <p class="text-body">You agree to indemnify, defend, and hold harmless Tashkent International University, its officers, directors, employees, and agents from any claims, liabilities, damages, losses, or expenses (including legal fees) arising from your use of the website or violation of these Terms of Use.</p>
+            <h2>{% trans "8. Third-Party Links" %}</h2>
+            <p class="text-body">{% trans "This website may contain links to external websites. TIU does not endorse, control, or accept responsibility for the content or privacy practices of third-party sites. Accessing external links is at your own risk." %}</p>
         </div>
 
-        <!-- 9 -->
         <div class="legal-section">
-            <h2>9. Governing law</h2>
-            <p class="text-body">These Terms of Use are governed by and construed in accordance with the laws of the Republic of Uzbekistan. Any disputes arising from or relating to these terms or your use of the website shall be subject to the exclusive jurisdiction of the courts of the Republic of Uzbekistan.</p>
+            <h2>{% trans "9. Limitation of Liability" %}</h2>
+            <p class="text-body">{% trans "To the maximum extent permitted by the laws of the Republic of Uzbekistan, TIU shall not be liable for any direct, indirect, incidental, or consequential damages arising from use of the website. The website and its content are provided 'as is' without warranties of any kind. TIU is not liable for temporary unavailability due to maintenance or technical issues, errors or omissions in content, or actions taken based on website information without official confirmation." %}</p>
         </div>
 
-        <!-- 10 -->
         <div class="legal-section">
-            <h2>10. Severability</h2>
-            <p class="text-body">If any provision of these Terms of Use is found to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect.</p>
+            <h2>{% trans "10. Governing Law & Disputes" %}</h2>
+            <p class="text-body">{% trans "These Terms of Use are governed by the laws of the Republic of Uzbekistan. Any disputes shall be resolved through negotiation first. If negotiation fails, disputes shall be submitted to the competent courts of the Republic of Uzbekistan located in Tashkent." %}</p>
         </div>
 
-        <!-- Contact -->
+        <div class="legal-section">
+            <h2>{% trans "11. Severability" %}</h2>
+            <p class="text-body">{% trans "If any provision of these terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect." %}</p>
+        </div>
+
         <div class="contact-box">
-            <h2>Contact us</h2>
-            <p class="text-body" style="margin-bottom: 1rem;">If you have questions about these Terms of Use, please contact:</p>
+            <h2>{% trans "Contact Us" %}</h2>
+            <p class="text-body" style="margin-bottom: 1rem;">{% trans "If you have questions about these Terms of Use, please contact:" %}</p>
             <p class="text-body" style="margin: 0;">
-                <strong>Legal Affairs Office</strong><br>
-                Tashkent International University<br>
-                Tashkent, Uzbekistan<br>
-                Email: <a href="mailto:legal@tiu.uz" class="text-link">legal@tiu.uz</a><br>
-                Phone: +998 71 XXX XX XX
+                <strong>{% trans "Tashkent International University" %}</strong><br>
+                {% trans "Little Ring Road 7, Tashkent, Uzbekistan" %}<br>
+                {% trans "Email" %}: <a href="mailto:info@tiu.uz" class="text-link">info@tiu.uz</a><br>
+                {% trans "Website" %}: <a href="https://tiu.uz" class="text-link">tiu.uz</a>
             </p>
         </div>
 

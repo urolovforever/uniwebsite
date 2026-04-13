@@ -4,6 +4,7 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 <link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
 <link rel="stylesheet" href="{% static 'css/international.css' %}">
 {% endblock %}
 
@@ -23,27 +24,228 @@
         <div class="page-hero-category">{% trans "International" %}</div>
         <h1 class="page-hero-title">{% trans "Visa Support for International Students" %}</h1>
         <div class="page-hero-description">
-            <p>{% trans "Tashkent International University welcomes international students and provides guidance during the visa and arrival process." %}</p>
+            <p>{% trans "Everything you need to know about getting your student visa, arriving in Uzbekistan, and staying legally registered during your studies." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
 </section>
 
-<!-- Visa Support Content -->
-<section class="vision-block">
+<!-- Statement -->
+<section class="tuition-statement">
     <div class="container">
-        <h2>{% trans "We can support you with:" %}</h2>
-        <ul class="about-list">
-            <li>{% trans "Admission-related documents" %}</li>
-            <li>{% trans "Invitation and visa guidance" %}</li>
-            <li>{% trans "Arrival information" %}</li>
-            <li>{% trans "Registration support" %}</li>
-            <li>{% trans "Communication with the International Relations Department" %}</li>
-        </ul>
-        <p style="margin-top: 2rem;">{% trans "Applicants are encouraged to check current visa requirements through the official consular authorities of Uzbekistan." %}</p>
-        <p style="margin-top: 1rem;">
-            <a href="/contact/" class="split-link">{% trans "For more information, please contact the International Relations Department" %} <i class="fas fa-arrow-right"></i></a>
-        </p>
+        <h2>{% trans "We handle the paperwork — you focus on your future" %}</h2>
+        <p>{% trans "Getting a student visa to Uzbekistan is straightforward, and TIU's International Relations Department guides you through every step. From your Letter of Invitation to local registration after arrival — we make sure the process is smooth and stress-free." %}</p>
+    </div>
+</section>
+
+<!-- Steps: Visa Process -->
+<section class="steps-section">
+    <div class="container">
+        <div class="steps-header">
+            <h2>{% trans "How to get your student visa" %}</h2>
+            <p>{% trans "A simple process from admission to arrival" %}</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>{% trans "Get admitted" %}</h3>
+                <p>{% trans "Apply to TIU, pass the entrance exams, and receive your official admission letter." %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>{% trans "Receive your Letter of Invitation" %}</h3>
+                <p>{% trans "After you accept your offer and pay the tuition deposit, TIU issues your official Letter of Invitation (LOI) for the visa application." %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>{% trans "Apply for your visa" %}</h3>
+                <p>{% trans "Submit your visa application at the nearest Uzbekistan embassy or consulate with the LOI, passport, photos, medical certificate, and visa fee." %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>{% trans "Travel to Tashkent" %}</h3>
+                <p>{% trans "Once your visa is approved, book your travel. TIU can arrange airport pickup and help you settle into your accommodation." %}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>{% trans "Register on arrival" %}</h3>
+                <p>{% trans "Within the required period after arrival, TIU helps you complete local migration registration. Your student visa is renewed annually through the university." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What you need for visa -->
+<section class="intl-requirements-section">
+    <div class="container">
+        <div class="intl-requirements-grid">
+            <div class="intl-requirements-text">
+                <span class="intl-requirements-label">{% trans "Visa Documents" %}</span>
+                <h2>{% trans "What you need for your visa application" %}</h2>
+                <p>{% trans "After receiving your Letter of Invitation from TIU, submit the following to the Uzbekistan embassy or consulate in your country." %}</p>
+            </div>
+            <div class="intl-requirements-list">
+                <div class="intl-req-item">
+                    <div class="intl-req-num">01</div>
+                    <div>
+                        <strong>{% trans "Letter of Invitation from TIU" %}</strong>
+                        <span>{% trans "Official document issued by TIU after admission confirmation and tuition deposit" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">02</div>
+                    <div>
+                        <strong>{% trans "Valid passport" %}</strong>
+                        <span>{% trans "With at least 12 months validity beyond your intended arrival date" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">03</div>
+                    <div>
+                        <strong>{% trans "Passport-size photos" %}</strong>
+                        <span>{% trans "4 recent photos (3.5 x 4.5 cm) on white background" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">04</div>
+                    <div>
+                        <strong>{% trans "Medical certificate" %}</strong>
+                        <span>{% trans "Including HIV test and TB screening — required by Uzbekistan immigration authorities" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">05</div>
+                    <div>
+                        <strong>{% trans "Completed visa application form" %}</strong>
+                        <span>{% trans "Available at the Uzbekistan embassy or consulate in your country" %}</span>
+                    </div>
+                </div>
+                <div class="intl-req-item">
+                    <div class="intl-req-num">06</div>
+                    <div>
+                        <strong>{% trans "Visa fee payment" %}</strong>
+                        <span>{% trans "Amount varies by country — check with your local Uzbekistan embassy" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Three Cards -->
+<section class="tuition-cards-section">
+    <div class="container">
+        <div class="tuition-cards-grid">
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">{% trans "CIS Citizens" %}</span>
+                    <h3>{% trans "Visa-free entry for many CIS countries" %}</h3>
+                    <p>{% trans "Citizens of several CIS countries can enter Uzbekistan without a visa. You may still need to complete migration registration after arrival. Contact us to check if your country qualifies." %}</p>
+                    <a href="/contact/contact-info/" class="tuition-card-link">{% trans "Check your eligibility" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">{% trans "Processing Time" %}</span>
+                    <h3>{% trans "Visa in 5–10 working days" %}</h3>
+                    <p>{% trans "After submitting your documents, the student visa is typically processed within 5–10 working days. We recommend starting the process at least 4–6 weeks before the semester begins." %}</p>
+                    <a href="/admissions/deadlines/" class="tuition-card-link">{% trans "View deadlines" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="tuition-card">
+                <div class="tuition-card-accent"></div>
+                <div class="tuition-card-content">
+                    <span class="tuition-card-label">{% trans "Annual Renewal" %}</span>
+                    <h3>{% trans "We renew your visa every year" %}</h3>
+                    <p>{% trans "Your student visa is renewed annually through TIU. The International Relations Department handles the paperwork — you just need to provide updated documents." %}</p>
+                    <a href="/contact/support/" class="tuition-card-link">{% trans "Contact support" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- After Arrival -->
+<section class="accommodation-section">
+    <div class="container">
+        <div class="accommodation-box">
+            <div class="accommodation-grid">
+                <div class="accommodation-content">
+                    <div class="accommodation-category">{% trans "After You Arrive" %}</div>
+                    <h2>{% trans "What happens when you land in Tashkent" %}</h2>
+                    <p>{% trans "TIU arranges airport pickup for international students. Within the first days, we help you with migration registration, SIM card setup, bank account opening, and campus orientation. Our International Relations Department is your point of contact for any questions or concerns during your entire stay." %}</p>
+                    <a href="/international/accommodation/" class="accommodation-link">{% trans "Accommodation & settling in" %} <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="accommodation-image">
+                    <img src="{% static 'img/campus/lobby-flags.jpg' %}" alt="{% trans "TIU campus" %}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="travel-faqs">
+    <div class="container">
+        <h2>{% trans "Visa & Immigration FAQs" %}</h2>
+        <div class="travel-faq-list">
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Do I need a visa to study in Uzbekistan?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Most international students need a student visa to study in Uzbekistan. Citizens of some CIS countries may enter visa-free but still need migration registration. TIU's International Relations Department will advise you based on your nationality." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "How long does visa processing take?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Typically 5–10 working days after submitting all documents to the Uzbekistan embassy. Processing times may vary by country. Start the process at least 4–6 weeks before the semester." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What is the Letter of Invitation?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "The Letter of Invitation (LOI) is an official document issued by TIU that you need to apply for a student visa. It confirms your admission and enrollment at the university. TIU sends it to you after you accept your offer and pay the tuition deposit." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Do I need medical insurance?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes. Medical insurance is required for all international students studying in Uzbekistan. You can arrange insurance in your home country or upon arrival in Tashkent. TIU can recommend local insurance providers." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "What is migration registration?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "All foreign nationals in Uzbekistan must register with local migration authorities within a set period after arrival. TIU handles this process for you — just provide your passport and visa, and we take care of the rest." %}</p>
+                </div>
+            </div>
+            <div class="travel-faq-item">
+                <button class="travel-faq-question" onclick="toggleFaq(this)">
+                    <span>{% trans "Can I travel outside Uzbekistan during my studies?" %}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="travel-faq-answer">
+                    <p>{% trans "Yes. You can travel during academic breaks. Make sure your student visa and registration remain valid. If you plan to leave and re-enter Uzbekistan, check with the International Relations Department about re-entry requirements." %}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -60,4 +262,15 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.travel-faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+}
+</script>
 {% endblock %}

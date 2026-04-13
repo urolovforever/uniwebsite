@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
 {% endblock %}
 
-{% block title %}Faculty of Jurisprudence - TIU{% endblock %}
+{% block title %}{% trans "Faculty of Jurisprudence" %} - TIU{% endblock %}
 
 {% block content %}
 <!-- Page Hero -->
@@ -18,14 +18,12 @@
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
             <span>{% trans "Faculty" %}</span>
             <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span>{% trans "Departments" %}</span>
-            <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">{% trans "Jurisprudence" %}</span>
+            <span class="current">{% trans "Faculty of Jurisprudence" %}</span>
         </nav>
-        <div class="page-hero-category">Faculty</div>
-        <h1 class="page-hero-title">Faculty of Jurisprudence</h1>
+        <div class="page-hero-category">{% trans "Faculty" %}</div>
+        <h1 class="page-hero-title">{% trans "Faculty of Jurisprudence" %}</h1>
         <div class="page-hero-description">
-            <p>Critical thinking. Global perspectives. Real-world impact — preparing students for careers in legal practice, diplomacy, policy, and justice.</p>
+            <p>{% trans "Critical thinking, global perspectives, and real-world impact — preparing students for careers in legal practice, diplomacy, policy, and justice." %}</p>
         </div>
     </div>
     <div class="page-hero-gradient-bar"></div>
@@ -36,19 +34,19 @@
     <div class="container">
         <div class="dean-welcome-grid">
             <div class="dean-welcome-text">
-                <h2>Welcome from the Dean</h2>
-                <p>At the Faculty of Jurisprudence, we believe that understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</p>
-                <p>Our scholars bring together expertise in international law, public law, human rights, and constitutional studies — creating an interdisciplinary environment where students learn to think critically, argue persuasively, and act with purpose.</p>
-                <p>I'm proud of the community we've built — one that values diverse perspectives, rigorous inquiry, and a genuine commitment to making Central Asia and the wider world a better, more just place.</p>
+                <h2>{% trans "Welcome from the Dean" %}</h2>
+                <p>{% trans "At the Faculty of Jurisprudence, we believe that understanding people, societies, and systems of justice is the foundation for meaningful change." %}</p>
+                <p>{% trans "Our scholars bring together expertise in international law, public law, human rights, and constitutional studies — creating an environment where students learn to think critically, argue persuasively, and act with purpose." %}</p>
+                <p>{% trans "I'm proud of the community we've built — one that values diverse perspectives, rigorous inquiry, and a genuine commitment to making Central Asia and the wider world a more just place." %}</p>
             </div>
             <div class="dean-welcome-quote">
                 <div class="dean-quote-marks">&ldquo;</div>
-                <blockquote>Understanding people, societies, and systems of justice is the foundation for meaningful change in the world.</blockquote>
+                <blockquote>{% trans "Understanding people, societies, and systems of justice is the foundation for meaningful change." %}</blockquote>
                 <div class="dean-quote-author">
-                    <img src="{% static 'img/campus/library-shelves.jpg' %}" alt="Dean of Faculty" loading="lazy">
+                    <img src="{% static 'img/campus/library-shelves.jpg' %}" alt="{% trans "Dean of Faculty" %}" loading="lazy">
                     <div class="dean-quote-info">
-                        <strong>Dean of Faculty</strong>
-                        <span>Faculty of Jurisprudence</span>
+                        <strong>{% trans "Dean of Faculty" %}</strong>
+                        <span>{% trans "Faculty of Jurisprudence" %}</span>
                     </div>
                 </div>
             </div>
@@ -95,7 +93,7 @@
         <div class="faculty-news-events-grid">
             <div class="faculty-news-col">
                 <div class="faculty-col-header">
-                    <h2>Latest news</h2>
+                    <h2>{% trans "Latest news" %}</h2>
                     <a href="{% url 'news:news_list' %}" class="faculty-see-all">{% trans "See all" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="faculty-news-list">
@@ -118,9 +116,9 @@
 <!-- Explore More -->
 <section class="explore-more-section">
     <div class="container">
-        <div class="explore-more-label">EXPLORE MORE</div>
+        <div class="explore-more-label">{% trans "EXPLORE MORE" %}</div>
         <div class="explore-more-links">
-            <a href="{% url 'people:person_directory' %}" class="explore-more-link">{% trans "Departments" %} <i class="fas fa-arrow-right"></i></a>
+            <a href="{% url 'people:person_directory' %}" class="explore-more-link">{% trans "Faculty Directory" %} <i class="fas fa-arrow-right"></i></a>
             <a href="{% url 'people:dept_business_innovative' %}" class="explore-more-link">{% trans "Faculty of Business and Innovative Education" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>

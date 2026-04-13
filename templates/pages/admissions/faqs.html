@@ -59,95 +59,216 @@
                 <nav class="faq-toc-nav">
                     <a href="#faq-admissions" class="active">{% trans "Admissions" %}</a>
                     <a href="#faq-programmes">{% trans "Programmes & Study" %}</a>
-                    <a href="#faq-tuition">{% trans "Tuition & Fees" %}</a>
+                    <a href="#faq-tuition">{% trans "Tuition & Grants" %}</a>
+                    <a href="#faq-international">{% trans "International Programs" %}</a>
                     <a href="#faq-campus">{% trans "Campus & Student Life" %}</a>
-                    <a href="#faq-career">{% trans "After Graduation" %}</a>
+                    <a href="#faq-career">{% trans "Graduation & Career" %}</a>
                 </nav>
             </aside>
 
             <div>
-                <!-- Admissions -->
+                <!-- ===== ADMISSIONS ===== -->
                 <div class="faq-group" id="faq-admissions">
                     <h2>{% trans "Admissions" %}</h2>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "How do I apply to TIU?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "You can apply online through our admissions portal. Visit the Apply Now page, select your programme (Bachelor's, Master's, or PhD), fill in the application form, and upload the required documents. Our admissions team will review your application and contact you within 5–10 business days." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "You can apply online through our admissions portal. Select your programme (Bachelor's, Master's, or PhD), fill in the application form, and upload the required documents. After document review, you will be invited to take the entrance exam. Our admissions team will contact you within 5–10 business days." %}</p></div>
                     </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What are the entry requirements?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Requirements vary by programme. For Bachelor's programmes, you need a secondary school diploma (attestat) with competitive grades. For Master's programmes, a Bachelor's degree is required. All applicants must demonstrate English proficiency (IELTS 5.5+ or equivalent). Specific programme requirements are listed on each programme page." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "For Bachelor's programmes: a secondary school diploma (attestat) and successful completion of the entrance exam. For Master's: a Bachelor's degree and entrance exam. All applicants must demonstrate English proficiency (IELTS 5.5+ for Bachelor's, IELTS 6.0+ for Master's) or pass TIU's internal English test." %}</p></div>
                     </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What documents do I need to submit?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Typically you'll need: a copy of your passport or ID, your most recent diploma/certificate with transcript, an English language proficiency certificate (IELTS, TOEFL, or TIU internal test), a personal statement, and a passport-sized photo. Some programmes may require additional documents such as a portfolio or letters of recommendation." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "You will need: a copy of your passport or national ID, your diploma/attestat with transcript, an English language certificate (IELTS, TOEFL, or TIU internal test result), a motivation letter, 2 passport-sized photos, and a medical certificate for international students. Some Master's programmes also require a CV and recommendation letters." %}</p></div>
                     </div>
-                    <div class="faq-link-item">
-                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "When is the application deadline?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "TIU accepts applications on a rolling basis. The main intake is in September, with applications typically closing in late August. An early application is recommended as popular programmes may fill up. Check the Admissions page for the exact deadlines for the current academic year." %}</p></div>
-                    </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Is there an entrance exam?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "For most programmes, admission is based on your academic record and English proficiency. Some programmes may include an interview or written assessment. If you don't have an IELTS/TOEFL score, you can take TIU's internal English placement test on campus." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "Yes. Admission to all programmes is based on entrance exam results. Exam subjects are determined according to your chosen programme. If you don't have an IELTS/TOEFL score, you can also take TIU's internal English placement test." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "When is the application deadline?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "The main application deadline for Fall 2026 intake is 15 July 2026 for Bachelor's programmes and 1 August 2026 for Master's. International applicants have an earlier deadline of 1 June 2026. We recommend applying early as popular programmes may fill up." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Can I transfer from another university to TIU?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. Transfer students are welcome. You will need to provide your current transcript for credit evaluation. The number of transferable credits depends on programme compatibility. Contact the Admissions Office at admissions@tiu.uz for individual assessment." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are there age limits for applying?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "There are no strict age limits. Bachelor's programmes are typically for school leavers aged 17+, but mature students are welcome. Master's and PhD programmes are open to applicants of all ages who meet the entry requirements." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Can international students apply to TIU?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU welcomes international students from all countries. The application process is the same, with an earlier deadline to allow time for visa processing. Our International Relations Department provides full support with visas, accommodation, and orientation." %}</p></div>
                     </div>
                 </div>
 
-                <!-- Programmes -->
+                <!-- ===== PROGRAMMES & STUDY ===== -->
                 <div class="faq-group" id="faq-programmes">
                     <h2>{% trans "Programmes & Study" %}</h2>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What programmes does TIU offer?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "TIU offers Bachelor's, Master's, and PhD programmes across five departments: Business & Economics, Information Technology, Education, Foreign Languages, and Jurisprudence. We also offer a unique 2+2 dual degree programme with international partner universities." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "TIU offers Bachelor's (4 years), Master's (2 years), and PhD programmes across five departments: Business & Economics, IT, Education, Foreign Languages & Literature, and Jurisprudence. We also offer a 2+2 dual degree programme with international partner universities." %}</p></div>
                     </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What is the language of instruction?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "The primary language of instruction at TIU is English. Some programmes may include components in Uzbek or Russian. All students are expected to have a working level of English by the start of their studies." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "All programmes at TIU are taught entirely in English by international faculty. You do not need to know Uzbek or Russian to study at TIU, though learning the local language is encouraged." %}</p></div>
                     </div>
+
                     <div class="faq-link-item">
-                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Does TIU offer joint or dual degree programmes?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes, our flagship 2+2 programme allows you to study two years at TIU and two years at a partner university abroad. You graduate with two degrees — one from TIU and one from the partner institution. This is available for select Bachelor's programmes." %}</p></div>
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What is the academic calendar?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "The academic year consists of two semesters. The fall semester runs from September to January, and the spring semester from February to May. The summer period (June–August) includes final exams, graduation ceremonies, and a break before the new academic year." %}</p></div>
                     </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What grading system does TIU use?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "TIU uses a GPA-based grading system on a 4.0 scale, alongside the traditional 5-point scale used in Uzbekistan (5 = excellent, 4 = good, 3 = satisfactory). Your transcript will show both formats for international compatibility." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Can I change my programme after enrolling?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Programme transfers within TIU are possible during the first year, subject to availability and approval from the Academic Office. Speak with your academic advisor to discuss your options." %}</p></div>
+                    </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are TIU degrees internationally recognized?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes. TIU is licensed by the Ministry of Higher Education of Uzbekistan, and our degrees are recognized both nationally and internationally. Our 2+2 dual degree programme means graduates also receive a degree from our partner university abroad." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU is licensed by the Ministry of Higher Education of Uzbekistan. Our degrees are recognized nationally and internationally. The 2+2 dual degree programme additionally grants a diploma from the partner university abroad." %}</p></div>
                     </div>
                 </div>
 
-                <!-- Tuition -->
+                <!-- ===== TUITION & GRANTS ===== -->
                 <div class="faq-group" id="faq-tuition">
-                    <h2>{% trans "Tuition & Fees" %}</h2>
+                    <h2>{% trans "Tuition & Grants" %}</h2>
+
                     <div class="faq-link-item">
-                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are there scholarships available?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes! TIU offers merit-based and need-based scholarships covering up to 100% of tuition fees. Scholarships are awarded based on academic achievement, entrance exam results, and financial need. Visit our Scholarships page for details and application deadlines." %}</p></div>
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "How much is the tuition fee?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Tuition (kontrakt) starts from 25,000,000 UZS per year and varies by programme and study format. Full details are available on our Tuition & Fees page. There are no hidden fees — the published rate covers all standard academic costs." %}</p></div>
                     </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are there grants available?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU offers grants covering up to 100% of tuition based on entrance exam results and academic performance. Grants are awarded automatically during the admissions process — no separate application is needed for most grants." %}</p></div>
+                    </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Can I pay tuition in instalments?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes, TIU offers flexible payment plans. Tuition can be paid per semester or in monthly instalments. Contact the finance office for payment plan options and deadlines." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU offers flexible payment options. Tuition can be paid per academic year or per semester. Contact the Finance Office for instalment plan details and deadlines." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "How are grants renewed each year?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Grants are renewed annually provided you maintain the required GPA (typically 3.0+ on a 4.0 scale) and remain in good academic standing. Renewal conditions are specified in your grant letter." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are there any additional costs beyond tuition?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Tuition covers all standard academic costs. Students should budget separately for accommodation, textbooks, personal expenses, and optional activities. TIU provides access to digital learning resources and the campus library at no extra charge." %}</p></div>
                     </div>
                 </div>
 
-                <!-- Campus -->
+                <!-- ===== INTERNATIONAL PROGRAMS ===== -->
+                <div class="faq-group" id="faq-international">
+                    <h2>{% trans "International Programs" %}</h2>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What is the 2+2 dual degree programme?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "The 2+2 programme allows Bachelor's students to study two years at TIU and two years at a partner university abroad. Upon completion, you graduate with two diplomas — one from TIU and one from the partner institution. Both are fully recognized." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "How does the student exchange programme work?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "TIU students can spend one or two semesters at a partner university abroad. Credits earned transfer directly back to your TIU degree. You continue paying TIU tuition — partner university fees are waived under our bilateral agreements." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Who pays for studying abroad?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "During exchange or 2+2 programmes, tuition at the partner university is covered by our agreements. However, students are responsible for travel, accommodation, and living expenses abroad. The International Relations Department can advise on costs and available support." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Does TIU help with visas for studying abroad?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. The International Relations Department provides full support — from issuing invitation letters and preparing documents to advising on visa applications and travel logistics." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Which partner universities does TIU work with?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "TIU partners with universities across Europe and Asia. The list of partner institutions is available on our International Programs page. New partnerships are regularly added — contact the International Relations Department for the latest information." %}</p></div>
+                    </div>
+                </div>
+
+                <!-- ===== CAMPUS & STUDENT LIFE ===== -->
                 <div class="faq-group" id="faq-campus">
                     <h2>{% trans "Campus & Student Life" %}</h2>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Is there student housing available?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "TIU offers modern student housing near campus. Rooms are furnished and include internet, utilities, and shared common areas. Housing is allocated on a first-come, first-served basis, so early application is recommended." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "TIU helps students find comfortable accommodation near campus — either in university-recommended hostels or shared apartments. International students are given priority. Contact the Student Services Office to arrange housing before arrival." %}</p></div>
                     </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are there student clubs and organizations?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes! TIU has 50+ student clubs covering debate, robotics, entrepreneurship, languages, arts, sports, volunteering, and more. Students also organize TEDx events, hackathons, and cultural festivals throughout the year." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "Yes! TIU has 50+ student clubs — from debate and photography to coding and chess. All clubs are student-led and open to everyone. The Student Union also organizes events, festivals, and social activities throughout the year." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "What sports facilities are available?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Our campus includes a modern gym, a multi-court sports hall, and outdoor pitches. Students can join university teams, take part in inter-university tournaments, or simply stay active between lectures." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Is there medical support on campus?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU has a medical services point on campus providing first aid, basic consultations, and referrals to local healthcare providers. All students have access to campus medical support during working hours." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "How do I get to campus?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "TIU is located on Little Ring Road 7 in central Tashkent. The campus is accessible by bus, metro, and taxi. The nearest metro station is a short walk away, and multiple bus routes stop directly outside campus. Parking is also available on site." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Is there a cafeteria on campus?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. The campus cafeteria serves affordable meals throughout the day, including hot dishes, salads, snacks, and beverages. Vegetarian and dietary options are available." %}</p></div>
                     </div>
                 </div>
 
-                <!-- Career -->
+                <!-- ===== GRADUATION & CAREER ===== -->
                 <div class="faq-group" id="faq-career">
-                    <h2>{% trans "After Graduation" %}</h2>
+                    <h2>{% trans "Graduation & Career" %}</h2>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Does TIU offer career support?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes. Our Career Center provides CV workshops, mock interviews, career fairs, employer networking events, and one-to-one career counselling. Support is available from your first year through graduation and beyond." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "Yes. Our Career Center provides CV workshops, mock interviews, career fairs, employer networking events, and one-to-one counselling. Career support is available from your first year through graduation and beyond." %}</p></div>
                     </div>
+
                     <div class="faq-link-item">
                         <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Are there internship opportunities during my studies?" %}</span> <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-link-answer"><p>{% trans "Yes. TIU partners with companies and organisations across Uzbekistan and internationally to provide internship placements. Many programmes include a mandatory internship component to ensure you graduate with real-world experience." %}</p></div>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU partners with companies and organisations in Uzbekistan and internationally to provide internship placements. Many programmes include a mandatory internship component, ensuring you graduate with real-world experience." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Is there an alumni network?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU graduates join a growing alumni network that provides career support, networking opportunities, and access to exclusive events. As TIU grows, so does the community of graduates making an impact across industries." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Will my TIU degree be recognized by employers?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. TIU is licensed by the Ministry of Higher Education of Uzbekistan, and our degrees are fully recognized nationally and internationally. The 2+2 programme additionally provides a diploma from a partner university abroad, further strengthening your credentials." %}</p></div>
+                    </div>
+
+                    <div class="faq-link-item">
+                        <button class="faq-link-btn" onclick="toggleFaqLink(this)"><span>{% trans "Do I need to submit a report after my internship?" %}</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-link-answer"><p>{% trans "Yes. All students are required to submit an internship report at the end of their placement. Your academic supervisor will provide guidelines on the report format and evaluation criteria." %}</p></div>
                     </div>
                 </div>
             </div>
@@ -176,7 +297,6 @@ function toggleFaqLink(btn) {
     var answer = item.querySelector('.faq-link-answer');
     var isOpen = item.classList.contains('open');
 
-    // Close all
     document.querySelectorAll('.faq-link-item').forEach(function(el) {
         el.classList.remove('open');
         el.querySelector('.faq-link-answer').style.maxHeight = '0';
@@ -188,7 +308,6 @@ function toggleFaqLink(btn) {
     }
 }
 
-// TOC scroll highlight
 (function() {
     var tocLinks = document.querySelectorAll('.faq-toc-nav a');
     var groups = document.querySelectorAll('.faq-group');
