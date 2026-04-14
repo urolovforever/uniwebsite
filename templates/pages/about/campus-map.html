@@ -9,7 +9,7 @@
 
 {% block content %}
 <!-- Page Hero -->
-<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/hovli-entrance-trees.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="/">{% trans "Home" %}</a>
@@ -32,81 +32,65 @@
     <div class="container">
         <h2>{% trans "Cross campus in" %} <strong>{% trans "10 minutes" %}</strong></h2>
         <p>{% trans "Our campus on Little Ring Road 7 in Tashkent puts everything you need within a short walk. Modern classrooms, a well-stocked library, sports center, cafeteria, and green outdoor spaces — all designed to support your studies and social life." %}</p>
-        <a href="#" class="split-link">{% trans "Take a Virtual Tour" %} <i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="split-link">{% trans "Start your virtual tour" %} <i class="fas fa-arrow-right"></i></a>
     </div>
 </section>
 
-<!-- Interactive Campus Map -->
-<section class="campus-map-section">
-    <div class="container">
-        <div class="campus-map-label"><i class="far fa-hand-pointer"></i> {% trans "Tap pins to explore" %}</div>
-        <div class="campus-map-wrapper">
-            <img src="{% static 'img/hero/back1.jpg' %}" alt="TIU Campus Aerial View" loading="lazy">
-            <div class="map-pin" style="top: 35%; left: 30%;" onclick="togglePin(this)">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="pin-tooltip">
-                    <span class="pin-name">{% trans "Main Academic Building" %}</span>
-                    <span class="pin-desc">{% trans "Home to lecture halls, seminar rooms, and faculty offices across all five departments" %}</span>
-                </span>
-            </div>
-            <div class="map-pin" style="top: 45%; left: 55%;" onclick="togglePin(this)">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="pin-tooltip">
-                    <span class="pin-name">{% trans "Library & Study Center" %}</span>
-                    <span class="pin-desc">{% trans "Thousands of books and digital resources, quiet study rooms, and collaborative spaces" %}</span>
-                </span>
-            </div>
-            <div class="map-pin" style="top: 25%; left: 70%;" onclick="togglePin(this)">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="pin-tooltip">
-                    <span class="pin-name">{% trans "Sports Center" %}</span>
-                    <span class="pin-desc">{% trans "Multi-court sports hall, gym, and outdoor pitches for students and staff" %}</span>
-                </span>
-            </div>
-            <div class="map-pin" style="top: 60%; left: 40%;" onclick="togglePin(this)">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="pin-tooltip">
-                    <span class="pin-name">{% trans "Student Cafeteria" %}</span>
-                    <span class="pin-desc">{% trans "Fresh, affordable meals served daily with vegetarian and dietary options" %}</span>
-                </span>
-            </div>
-            <div class="map-pin" style="top: 50%; left: 20%;" onclick="togglePin(this)">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="pin-tooltip">
-                    <span class="pin-name">{% trans "Administration" %}</span>
-                    <span class="pin-desc">{% trans "Admissions, student services, finance, and the Rector's Reception" %}</span>
-                </span>
-            </div>
-            <div class="map-pin" style="top: 70%; left: 65%;" onclick="togglePin(this)">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="pin-tooltip">
-                    <span class="pin-name">{% trans "Student Housing" %}</span>
-                    <span class="pin-desc">{% trans "On-campus accommodation just steps away from classes and facilities" %}</span>
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- More to Explore (accordion left scrolls, title+image right sticky) -->
+<!-- Campus Buildings — accordion left, sticky image right -->
 <section class="explore-list">
     <div class="container">
         <div class="explore-list-grid">
             <div class="explore-list-items">
                 <div class="explore-item">
-                    <button class="explore-item-header active" data-image="{% static 'img/campus/lecture-hall-green.jpg' %}" onclick="toggleExploreWithImage(this)">
+                    <button class="explore-item-header active" data-image="{% static 'img/campus/a-bino-lecture-hall.jpg' %}" onclick="toggleExploreWithImage(this)">
                         <div class="explore-item-left">
-                            <div class="explore-item-title">{% trans "Smart Classrooms & Lecture Halls" %}</div>
+                            <div class="explore-item-title">{% trans "Building A — Main Academic Building" %}</div>
                         </div>
                         <i class="fas fa-chevron-right explore-item-chevron"></i>
                     </button>
                     <div class="explore-item-body show">
-                        <p>{% trans "Our classrooms are equipped with the latest presentation technology, comfortable seating, and layouts designed for collaboration. Whether it's a large lecture or a small seminar, the space adapts to how you learn best." %}</p>
+                        <p>{% trans "The heart of TIU. Building A houses all lecture halls, seminar rooms, faculty offices, computer labs, and the IT Help Desk. Smart classrooms are equipped with projectors, interactive screens, and comfortable seating for up to 100 students." %}</p>
                     </div>
                 </div>
 
                 <div class="explore-item">
-                    <button class="explore-item-header" data-image="{% static 'img/campus/building-dormitory-garden.jpg' %}" onclick="toggleExploreWithImage(this)">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/b-bino-classroom-orange.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">{% trans "Building B — Coworking & Student Spaces" %}</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>{% trans "A modern space for independent study, group projects, and student life. Building B features open coworking areas, the Student Union office, a recreation zone with foosball and lounge seating, and meeting rooms available for booking." %}</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/kutubxona-library-shelves.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">{% trans "Library & Information Resource Center" %}</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>{% trans "Over 5,000 books and journals, access to JSTOR and other digital databases, quiet study zones, group study rooms, computer stations, and printing services. Open Monday–Saturday, with extended hours during exams." %}</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/cafeteria-counter.jpg' %}" onclick="toggleExploreWithImage(this)">
+                        <div class="explore-item-left">
+                            <div class="explore-item-title">{% trans "Cafeteria & Dining" %}</div>
+                        </div>
+                        <i class="fas fa-chevron-right explore-item-chevron"></i>
+                    </button>
+                    <div class="explore-item-body">
+                        <p>{% trans "Fresh, affordable meals throughout the day — hot dishes, salads, snacks, and beverages. Vegetarian and dietary options available. Seating for 150+ students." %}</p>
+                    </div>
+                </div>
+
+                <div class="explore-item">
+                    <button class="explore-item-header" data-image="{% static 'img/campus/hovli-garden.jpg' %}" onclick="toggleExploreWithImage(this)">
                         <div class="explore-item-left">
                             <div class="explore-item-title">{% trans "Green Spaces & Outdoor Areas" %}</div>
                         </div>
@@ -117,37 +101,16 @@
                     </div>
                 </div>
 
-                <div class="explore-item">
-                    <button class="explore-item-header" data-image="{% static 'img/hero/back.jpg' %}" onclick="toggleExploreWithImage(this)">
-                        <div class="explore-item-left">
-                            <div class="explore-item-title">{% trans "Getting Here — Transport & Parking" %}</div>
-                        </div>
-                        <i class="fas fa-chevron-right explore-item-chevron"></i>
-                    </button>
-                    <div class="explore-item-body">
-                        <p>{% trans "TIU is accessible by bus, metro, and taxi from all parts of Tashkent. The nearest metro station is a short walk away, multiple bus routes stop directly outside campus, and parking is available on site." %}</p>
-                    </div>
-                </div>
             </div>
 
             <!-- Sticky right side: title + image -->
             <div class="explore-list-sticky">
-                <h2>{% trans "More to explore on campus" %}</h2>
+                <h2>{% trans "Campus Buildings & Facilities" %}</h2>
                 <div class="explore-list-image">
-                    <img id="exploreImage" src="{% static 'img/campus/classroom-projector.jpg' %}" alt="Campus Feature" loading="lazy">
+                    <img id="exploreImage" src="{% static 'img/campus/a-bino-lecture-hall.jpg' %}" alt="{% trans "Campus" %}" loading="lazy">
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Virtual Tour CTA (full-width bg with teal overlay card) -->
-<section class="virtual-tour-cta" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
-    <div class="virtual-tour-card">
-        <div class="virtual-tour-card-label">{% trans "Virtual Tour" %}</div>
-        <h2>{% trans "Visit our campus" %} <em>{% trans "before" %}</em> {% trans "you arrive" %}</h2>
-        <p>{% trans "Explore every corner of TIU from wherever you are. Our virtual tour lets you walk through classrooms, the library, sports facilities, and student spaces — all from your screen." %}</p>
-        <a href="#" class="split-link">{% trans "Start virtual tour" %} <i class="fas fa-arrow-right"></i></a>
     </div>
 </section>
 
@@ -168,23 +131,6 @@
 
 {% block extra_js %}
 <script>
-// === Map Pin Toggle (click to show/hide tooltip) ===
-function togglePin(pin) {
-    const wasActive = pin.classList.contains('active');
-    // Close all pins
-    document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('active'));
-    // Toggle clicked pin
-    if (!wasActive) {
-        pin.classList.add('active');
-    }
-}
-// Close pins when clicking outside
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.map-pin')) {
-        document.querySelectorAll('.map-pin').forEach(p => p.classList.remove('active'));
-    }
-});
-
 // === Accordion with paired image ===
 function toggleExploreWithImage(btn) {
     const body = btn.parentElement.querySelector('.explore-item-body');

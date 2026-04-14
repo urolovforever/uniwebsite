@@ -10,7 +10,7 @@
 {% block title %}{% trans "Accommodation" %} - {% trans "International Students" %} | TIU{% endblock %}
 
 {% block content %}
-<section class="page-hero" style="background-image: url('{% static 'img/hero/back2.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/yotoqxona-entrance.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="/">{% trans "Home" %}</a>
@@ -46,10 +46,10 @@
 
                 <p>{% trans "Whether you're looking for a shared student apartment or a private studio, TIU's International Office will help you find the right option. Rent in Tashkent starts from just $200/month — making it one of the most affordable student cities in Asia." %}</p>
 
-                <a href="/contact/support/" class="split-link">{% trans "Enquire about housing" %} <i class="fas fa-arrow-right"></i></a>
+                <a href="{% url 'core:contact' %}" class="split-link">{% trans "Enquire about housing" %} <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="accom-intro-image">
-                <img src="{% static 'img/campus/computer-lab-red.jpg' %}" alt="{% trans "Student accommodation in Tashkent" %}" loading="lazy">
+                <img src="{% static 'img/campus/yotoqxona-entrance.jpg' %}" alt="{% trans "Student accommodation in Tashkent" %}" loading="lazy">
             </div>
         </div>
     </div>
@@ -70,17 +70,17 @@
                 <hr>
                 <strong>{% trans "Affordable, social, convenient" %}</strong>
                 <p>{% trans "TIU's partner student residence is the most popular choice for international students. Located just 10 minutes from campus, it offers fully furnished shared rooms, communal kitchens, laundry facilities, and 24/7 security. It's where most friendships start — and where you'll feel at home from day one." %}</p>
-                <a href="/contact/support/" class="accom-card-link">{% trans "Find out more about the residence" %} <i class="fas fa-arrow-right"></i></a>
+                <a href="{% url 'core:contact' %}" class="accom-card-link">{% trans "Find out more about the residence" %} <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="accom-card-image">
-                <img src="{% static 'img/campus/students-on-grass.jpg' %}" alt="{% trans "University Student Residence" %}" loading="lazy">
+                <img src="{% static 'img/campus/yotoqxona-building.jpg' %}" alt="{% trans "University Student Residence" %}" loading="lazy">
             </div>
         </div>
 
         <!-- Card 2 (reversed) -->
         <div class="accom-card accom-card--reversed">
             <div class="accom-card-image">
-                <img src="{% static 'img/campus/library-reading-room.jpg' %}" alt="{% trans "Private Studio Apartments" %}" loading="lazy">
+                <img src="{% static 'img/campus/yotoqxona-corridor.jpg' %}" alt="{% trans "Private Studio Apartments" %}" loading="lazy">
             </div>
             <div class="accom-card-text">
                 <h3>{% trans "Private Studio Apartments" %}</h3>
@@ -91,7 +91,7 @@
                 <hr>
                 <strong>{% trans "Independence and privacy" %}</strong>
                 <p>{% trans "For students who prefer their own space, TIU's International Office can help you find a private studio apartment near campus. These come fully furnished with a kitchen, bathroom, Wi-Fi, and air conditioning. Ideal for postgraduate students or those who value a quieter environment for focused study." %}</p>
-                <a href="/contact/support/" class="accom-card-link">{% trans "Explore private apartments" %} <i class="fas fa-arrow-right"></i></a>
+                <a href="{% url 'core:contact' %}" class="accom-card-link">{% trans "Explore private apartments" %} <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -106,10 +106,10 @@
                 <hr>
                 <strong>{% trans "Budget-friendly, community living" %}</strong>
                 <p>{% trans "Share a flat with fellow international or local students in the neighbourhoods around campus. Each student gets their own bedroom, with shared living room, kitchen, and bathroom. It's the most affordable option and a great way to experience Tashkent life while building lasting friendships." %}</p>
-                <a href="/contact/support/" class="accom-card-link">{% trans "Learn about shared flats" %} <i class="fas fa-arrow-right"></i></a>
+                <a href="{% url 'core:contact' %}" class="accom-card-link">{% trans "Learn about shared flats" %} <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="accom-card-image">
-                <img src="{% static 'img/campus/lecture-hall-green.jpg' %}" alt="{% trans "Shared Student Flat" %}" loading="lazy">
+                <img src="{% static 'img/campus/yotoqxona-study-desk.jpg' %}" alt="{% trans "Shared Student Flat" %}" loading="lazy">
             </div>
         </div>
 

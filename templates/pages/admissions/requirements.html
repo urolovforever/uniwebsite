@@ -11,7 +11,7 @@
 
 {% block content %}
 <!-- Page Hero -->
-<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/a-bino-classroom-teal.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="/">{% trans "Home" %}</a>
@@ -263,7 +263,7 @@
                     <div class="accommodation-category">{% trans "Not sure if you qualify?" %}</div>
                     <h2>{% trans "Talk to our admissions team" %}</h2>
                     <p>{% trans "If you're unsure about whether you meet the requirements, or have questions about specific documents — our team is happy to help. Get in touch and we'll guide you through the process." %}</p>
-                    <a href="/contact/contact-info/" class="accommodation-link">{% trans "Contact admissions" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'core:contact' %}" class="accommodation-link">{% trans "Contact admissions" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="accommodation-image">
                     <img src="{% static 'img/hero/back1.jpg' %}" alt="{% trans "TIU admissions office" %}" loading="lazy">

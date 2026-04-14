@@ -9,7 +9,7 @@
 
 {% block content %}
 <!-- Page Hero Section -->
-<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/hovli-entrance-front.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="/">{% trans "Home" %}</a>
@@ -219,7 +219,7 @@
                     <div class="cta-card-category">{% trans "Talk to Students" %}</div>
                     <h3>{% trans "Hear it from those who know" %}</h3>
                     <p>{% trans "Want the real story? Chat with current TIU students about what life is actually like — from academics and social life to settling in and finding your way around Tashkent. They've been where you are." %}</p>
-                    <a href="/contact/support/" class="cta-card-link">{% trans "Get in touch" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'core:contact' %}" class="cta-card-link">{% trans "Get in touch" %} <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="cta-card-image">
                     <img src="{% static 'img/hero/back.jpg' %}" alt="{% trans 'TIU Students' %}" loading="lazy">

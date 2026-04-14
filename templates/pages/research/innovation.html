@@ -9,7 +9,7 @@
 {% block title %}Innovation & Entrepreneurship - TIU{% endblock %}
 
 {% block content %}
-<section class="page-hero" style="background-image: url('{% static 'img/hero/back1.jpg' %}');">
+<section class="page-hero" style="background-image: url('{% static 'img/campus/a-bino-computer-lab.jpg' %}');">
     <div class="page-hero-content">
         <nav class="page-hero-breadcrumb">
             <a href="/">Home</a>
@@ -124,7 +124,7 @@
         <h2>Have an idea?</h2>
         <p>Visit the Innovation Hub or contact us to discuss how we can help you turn your research into reality.</p>
         <div class="cta-banner__buttons">
-            <a href="/contact/contact-info/" class="cta-btn cta-btn--primary">Contact Us</a>
+            <a href="{% url 'core:contact' %}" class="cta-btn cta-btn--primary">Contact Us</a>
             <a href="/research/centers/" class="cta-btn cta-btn--outline">Research Centers</a>
         </div>
     </div>

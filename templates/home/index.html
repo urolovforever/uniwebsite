@@ -38,7 +38,7 @@
                         <a href="{% url 'programs:master_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
-                        <img src="{% static 'img/campus/lecture-students.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
+                        <img src="{% static 'img/campus/home_magister.jpg' %}" alt="{% trans "Master Programs" %}" loading="lazy">
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                         <a href="{% url 'programs:phd_list' %}" class="pathway-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="pathway-image" style="--card-accent: var(--accent-cyan);">
-                        <img src="{% static 'img/campus/library-student-reading.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
+                        <img src="{% static 'img/campus/home_phd.jpg' %}" alt="{% trans "PhD Programs" %}" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
             </p>
             <div class="welcome-buttons">
                 <a href="https://qabul.tiu.uz" class="btn-welcome">{% trans "Apply Now" %}</a>
-                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Schedule a Visit" %}</a>
+                <a href="{% url 'core:contact' %}" class="btn-welcome-filled">{% trans "Schedule a Visit" %}</a>
             </div>
         </div>
     </section>
@@ -298,7 +298,7 @@
             <p>{% trans "Our modern campus, located on the Small Ring Road in the center of Tashkent, offers everything needed for academic success and personal development. Modern classrooms, healthcare facilities, student clubs, a contemporary dormitory, and a vibrant community are waiting for you. At TIU, you will find the perfect environment for learning, networking, and growth." %}</p>
             <div class="welcome-buttons">
                 <a href="{% url 'core:static_page' url_path='about/campus-map' %}" class="btn-welcome">{% trans "Explore Campus" %}</a>
-                <a href="{% url 'core:static_page' url_path='contact/contact-info' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
+                <a href="{% url 'core:contact' %}" class="btn-welcome-filled">{% trans "Book a Visit" %}</a>
             </div>
         </div>
     </section>
