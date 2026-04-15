@@ -873,7 +873,7 @@ msgstr "Fakultet bo'yicha"
 #: templates/pages/faculty/business-innovative-education.html:138
 #: templates/pages/programs/by-faculty.html:59
 msgid "Faculty of Jurisprudence"
-msgstr "Huquqshunoslik fakulteti"
+msgstr "Yurisprudensiya fakulteti"
 
 #: templates/includes/mega_menu.html:102
 #: templates/pages/faculty/jurisprudence.html:138
@@ -12958,7 +12958,7 @@ msgid ""
 "At the Faculty of Jurisprudence, we believe that understanding people, "
 "societies, and systems of justice is the foundation for meaningful change."
 msgstr ""
-"Huquqshunoslik fakultetida biz insonlarni, jamiyatni va adolat tizimlarini "
+"Yurisprudensiya fakultetida biz insonlarni, jamiyatni va adolat tizimlarini "
 "tushunish — mazmunli o'zgarishlarning poydevori deb bilamiz."
 
 msgid ""
