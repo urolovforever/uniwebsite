@@ -6,6 +6,10 @@
 {% block content %}
     <!-- 1. HERO SECTION -->
     <section class="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline poster="{% static 'img/hero/back1.jpg' %}"
+               data-desktop="{% static 'video/bg_hero.MP4' %}"
+               data-mobile="{% static 'video/bg_mobile.MP4' %}">
+        </video>
         <div class="hero-content">
             <img src="{% static 'img/branding/logo.png' %}" alt="Tashkent International University Logo">
         </div>
@@ -488,4 +492,18 @@
         </div>
     </section>
     {% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function() {
+    var video = document.querySelector('.hero-video');
+    if (!video) return;
+    var src = window.innerWidth <= 768 ? video.dataset.mobile : video.dataset.desktop;
+    if (src) {
+        video.src = src;
+        video.load();
+    }
+})();
+</script>
 {% endblock %}

@@ -1,76 +1,107 @@
 // About Section - Campus Gallery & Lightbox
 
-const campusImages = [
-    { src: '../assets/img/back1.jpg', caption: 'Main entrance to the TIU campus with modern architecture.' },
-    { src: '../assets/img/back2.jpg', caption: 'Beautiful view of the university buildings and surroundings.' },
-    { src: '../assets/img/b1.jpg', caption: 'State-of-the-art facilities for students and faculty.' },
-    { src: '../assets/img/b2.jpg', caption: 'Green spaces and recreational areas on campus.' },
-    { src: '../assets/img/b3.jpg', caption: 'Modern learning environments designed for success.' },
-    { src: '../assets/img/c2.jpg', caption: 'Student life and community at TIU.' }
-];
-let currentImageIndex = 0;
+var campusImages = [];
+var currentImageIndex = 0;
+
+// Build image list from thumbnail elements
+document.addEventListener('DOMContentLoaded', function() {
+    var thumbs = document.querySelectorAll('.campus-thumb');
+    thumbs.forEach(function(thumb) {
+        var img = thumb.querySelector('img');
+        if (img) {
+            campusImages.push({
+                src: thumb.getAttribute('onclick') ? thumb.getAttribute('onclick').match(/'([^']+)'/)[1] : img.src,
+                caption: img.alt || ''
+            });
+        }
+    });
+
+    var lightboxModal = document.getElementById('lightboxModal');
+    if (lightboxModal) {
+        document.addEventListener('keydown', function(e) {
+            if (!lightboxModal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        lightboxModal.addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+    }
+
+    // Also init for why-work gallery (hiring page)
+    var whyWorkThumbs = document.querySelectorAll('.why-work-thumb');
+    if (whyWorkThumbs.length) {
+        initWhyWorkGallery();
+    }
+});
 
 function changeCampusImage(src, thumb) {
-    document.getElementById('mainCampusImg').src = src;
-    document.querySelectorAll('.campus-thumb').forEach(t => t.classList.remove('active'));
+    var img = document.getElementById('mainCampusImg');
+    if (img) {
+        img.style.opacity = '0';
+        setTimeout(function() {
+            img.src = src;
+            img.style.opacity = '1';
+        }, 200);
+    }
+    document.querySelectorAll('.campus-thumb').forEach(function(t) { t.classList.remove('active'); });
     thumb.classList.add('active');
-    currentImageIndex = campusImages.findIndex(img => img.src === src);
+    // Find index
+    for (var i = 0; i < campusImages.length; i++) {
+        if (campusImages[i].src === src) {
+            currentImageIndex = i;
+            break;
+        }
+    }
 }
 
 function openFullscreen() {
-    const modal = document.getElementById('lightboxModal');
+    var modal = document.getElementById('lightboxModal');
+    if (!modal) return;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     updateLightbox();
 }
 
 function closeLightbox() {
-    const modal = document.getElementById('lightboxModal');
+    var modal = document.getElementById('lightboxModal');
+    if (!modal) return;
     modal.classList.remove('active');
     document.body.style.overflow = '';
 }
 
 function updateLightbox() {
-    const mainImg = document.getElementById('lightboxImg');
-    const caption = document.getElementById('lightboxCaption');
-    const prevImg = document.getElementById('lightboxPrev');
-    const nextImg = document.getElementById('lightboxNext');
+    if (!campusImages.length) return;
+    var mainImg = document.getElementById('lightboxImg');
+    var caption = document.getElementById('lightboxCaption');
+    var prevImg = document.getElementById('lightboxPrev');
+    var nextImg = document.getElementById('lightboxNext');
 
-    mainImg.src = campusImages[currentImageIndex].src;
-    caption.textContent = campusImages[currentImageIndex].caption;
+    if (mainImg) mainImg.src = campusImages[currentImageIndex].src;
+    if (caption) caption.textContent = campusImages[currentImageIndex].caption;
 
-    const prevIndex = (currentImageIndex - 1 + campusImages.length) % campusImages.length;
-    const nextIndex = (currentImageIndex + 1) % campusImages.length;
+    var prevIndex = (currentImageIndex - 1 + campusImages.length) % campusImages.length;
+    var nextIndex = (currentImageIndex + 1) % campusImages.length;
 
-    prevImg.src = campusImages[prevIndex].src;
-    nextImg.src = campusImages[nextIndex].src;
+    if (prevImg) prevImg.src = campusImages[prevIndex].src;
+    if (nextImg) nextImg.src = campusImages[nextIndex].src;
 }
 
 function nextImage() {
+    if (!campusImages.length) return;
     currentImageIndex = (currentImageIndex + 1) % campusImages.length;
     updateLightbox();
 }
 
 function prevImage() {
+    if (!campusImages.length) return;
     currentImageIndex = (currentImageIndex - 1 + campusImages.length) % campusImages.length;
     updateLightbox();
 }
 
-// Event listeners
-document.addEventListener('DOMContentLoaded', function() {
-    const lightboxModal = document.getElementById('lightboxModal');
-
-    if (lightboxModal) {
-        // Close on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
-        });
-
-        // Close on background click
-        lightboxModal.addEventListener('click', function(e) {
-            if (e.target === this) closeLightbox();
-        });
-    }
-});
+// === Why Work Here Gallery (hiring page) ===
+function initWhyWorkGallery() {
+    // Auto-handled by hiring page inline JS
+}
