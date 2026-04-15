@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Department, Program
+from .models import Department, StudyType, Program
 
 
 @admin.register(Department)
@@ -7,6 +7,12 @@ class DepartmentAdmin(admin.ModelAdmin):
     list_display = ['name', 'faculty', 'order']
     list_filter = ['faculty']
     list_editable = ['order']
+    prepopulated_fields = {'slug': ('name',)}
+
+
+@admin.register(StudyType)
+class StudyTypeAdmin(admin.ModelAdmin):
+    list_display = ['name', 'name_uz', 'name_ru']
     prepopulated_fields = {'slug': ('name',)}
 
 

@@ -119,8 +119,8 @@
                     <tbody>
                         {% for prog in bachelor_programs %}
                         <tr>
-                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a><br><span class="fee-school">{{ prog.department|trans_field:"name" }}</span></td>
-                            <td><span class="fee-type {{ prog.study_type }}">{{ prog.get_study_type_display }}</span></td>
+                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a></td>
+                            <td><span class="fee-type">{{ prog.study_type|trans_field:"name" }}</span></td>
                             <td class="fee-amount">{{ prog.tuition_fee|default:"Contact us" }}</td>
                         </tr>
                         {% endfor %}
@@ -149,8 +149,8 @@
                     <tbody>
                         {% for prog in master_programs %}
                         <tr>
-                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a><br><span class="fee-school">{{ prog.department|trans_field:"name" }}</span></td>
-                            <td><span class="fee-type {{ prog.study_type }}">{{ prog.get_study_type_display }}</span></td>
+                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a></td>
+                            <td><span class="fee-type">{{ prog.study_type|trans_field:"name" }}</span></td>
                             <td class="fee-amount">{{ prog.tuition_fee|default:"Contact us" }}</td>
                         </tr>
                         {% endfor %}
@@ -179,8 +179,8 @@
                     <tbody>
                         {% for prog in phd_programs %}
                         <tr>
-                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a><br><span class="fee-school">{{ prog.department|trans_field:"name" }}</span></td>
-                            <td><span class="fee-type {{ prog.study_type }}">{{ prog.get_study_type_display }}</span></td>
+                            <td><a href="{{ prog.get_absolute_url }}"><strong>{{ prog|trans_field:"title" }}</strong></a></td>
+                            <td><span class="fee-type">{{ prog.study_type|trans_field:"name" }}</span></td>
                             <td class="fee-amount">{{ prog.tuition_fee|default:"Contact us" }}</td>
                         </tr>
                         {% endfor %}

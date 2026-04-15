@@ -42,7 +42,7 @@ def program_detail(request, slug):
         'related_programs': related_programs,
         'hero_title': program.t('title'),
         'hero_category': f'{program.get_level_display()} {_("Programme")}',
-        'hero_description': f'{program.department.t("name")} · {program.get_study_type_display()}',
+        'hero_description': program.study_type.t('name') if program.study_type else '',
         'breadcrumbs': [
             {'title': _('Programs'), 'url': reverse('programs:program_list')},
             {'title': f"{program.get_level_display()}'s", 'url': reverse('programs:program_list') + f'{program.level}/'},

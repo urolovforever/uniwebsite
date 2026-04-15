@@ -34,15 +34,26 @@ class Department(TranslatedMixin, models.Model):
         return reverse('programs:department_detail', kwargs={'slug': self.slug})
 
 
+class StudyType(TranslatedMixin, models.Model):
+    name = models.CharField(max_length=100)
+    name_uz = models.CharField(max_length=100, blank=True)
+    name_ru = models.CharField(max_length=100, blank=True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    class Meta:
+        ordering = ['name']
+        verbose_name = 'Study Type'
+        verbose_name_plural = 'Study Types'
+
+    def __str__(self):
+        return self.name
+
+
 class Program(TranslatedMixin, models.Model):
     LEVEL_CHOICES = [
         ('bachelor', 'Bachelor'),
         ('master', 'Master'),
         ('phd', 'PhD'),
-    ]
-    STUDY_TYPE_CHOICES = [
-        ('full-time', 'Full-time'),
-        ('part-time', 'Part-time'),
     ]
 
     FACULTY_CHOICES = [
@@ -56,7 +67,7 @@ class Program(TranslatedMixin, models.Model):
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True, related_name='programs')
     faculty = models.CharField(max_length=50, choices=FACULTY_CHOICES, blank=True)
     level = models.CharField(max_length=20, choices=LEVEL_CHOICES)
-    study_type = models.CharField(max_length=20, choices=STUDY_TYPE_CHOICES, default='full-time')
+    study_type = models.ForeignKey(StudyType, on_delete=models.SET_NULL, null=True, blank=True, related_name='programs')
     language = models.CharField(max_length=50, default='English')
     tuition_fee = models.CharField(max_length=100, blank=True, help_text='e.g. "22,000,000 UZS"')
     description = CKEditor5Field(blank=True, config_name='default')

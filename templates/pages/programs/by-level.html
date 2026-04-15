@@ -63,9 +63,9 @@
             <a href="{{ prog.get_absolute_url }}" class="top-card top-card--sm" style="text-decoration: none; color: inherit;">
                 <h3 class="card-title--sm">{{ prog|trans_field:"title" }}</h3>
                 {% if prog.duration %}
-                <p class="card-text card-text--mb" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.get_study_type_display }}</p>
+                <p class="card-text card-text--mb" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.study_type|trans_field:"name" }}</p>
                 {% endif %}
-                <span class="card-sub--colored" style="color: #004080;">{{ prog.department|trans_field:"name" }}</span>
+                
             </a>
             {% endfor %}
         </div>
@@ -89,9 +89,9 @@
             <a href="{{ prog.get_absolute_url }}" class="top-card top-card--sm top-card--muted" style="text-decoration: none; color: inherit;">
                 <h3 class="card-title--sm">{{ prog|trans_field:"title" }}</h3>
                 {% if prog.duration %}
-                <p class="card-text card-text--mb" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.get_study_type_display }}</p>
+                <p class="card-text card-text--mb" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.study_type|trans_field:"name" }}</p>
                 {% endif %}
-                <span class="card-sub--colored" style="color: #004080;">{{ prog.department|trans_field:"name" }}</span>
+                
             </a>
             {% endfor %}
         </div>
@@ -115,9 +115,9 @@
             <a href="{{ prog.get_absolute_url }}" class="top-card top-card--sm top-card--navy" style="text-decoration: none; color: inherit;">
                 <h3 class="card-title--sm">{{ prog|trans_field:"title" }}</h3>
                 {% if prog.duration %}
-                <p class="card-text" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.get_study_type_display }}</p>
+                <p class="card-text" style="font-size: 0.85rem;">{{ prog.duration }} · {{ prog.study_type|trans_field:"name" }}</p>
                 {% endif %}
-                <span class="card-sub--colored" style="color: rgba(255,255,255,0.8);">{{ prog.department|trans_field:"name" }}</span>
+                
             </a>
             {% endfor %}
         </div>
