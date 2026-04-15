@@ -11648,3 +11648,9 @@ msgstr "Связаться со Студенческим союзом"
 
 msgid "Explore campus"
 msgstr "Осмотреть кампус"
+
+msgid "Our Programs"
+msgstr "Наши программы"
+
+msgid "Programs at this faculty"
+msgstr "Программы данного факультета"

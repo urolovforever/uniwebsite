@@ -54,27 +54,27 @@
     </div>
 </section>
 
-<!-- Departments Carousel -->
+<!-- Programs Carousel -->
 <section class="schools-section">
     <div class="container">
-        <h2>{% trans "Departments" %}</h2>
+        <h2>{% trans "Programs at this faculty" %}</h2>
     </div>
     <div class="schools-carousel-wrap">
         <div class="schools-carousel" id="schoolsCarousel">
-            {% for dept in departments %}
-            <a href="{% url 'programs:department_detail' dept.slug %}" class="school-card">
-                {% if dept.image %}
-                <img src="{{ dept.image.url }}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
+            {% for prog in programs %}
+            <a href="{{ prog.get_absolute_url }}" class="school-card">
+                {% if prog.image %}
+                <img src="{{ prog.image.url }}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
                 {% else %}
-                <img src="{% static 'img/campus/computer-lab-red.jpg' %}" alt="{{ dept|trans_field:"name" }}" loading="lazy">
+                <img src="{% static 'img/campus/a-bino-computer-lab-wide.jpg' %}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
                 {% endif %}
                 <div class="school-card-overlay">
-                    <p><strong>{{ dept|trans_field:"name" }}</strong>{% if dept.excerpt %} — {{ dept|trans_field:"excerpt" }}{% endif %}</p>
+                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {{ prog.get_level_display }}</p>
                     <span class="school-card-btn"><i class="fas fa-plus"></i></span>
                 </div>
             </a>
             {% empty %}
-            <div style="padding: 2rem; color: #aaa; text-align: center;">{% trans "No departments available yet." %}</div>
+            <div style="padding: 2rem; color: #aaa; text-align: center;">{% trans "No programmes available at the moment." %}</div>
             {% endfor %}
         </div>
         <div class="schools-nav">
@@ -128,40 +128,30 @@
 {% block extra_js %}
 <script>
 (function() {
-    const carousel = document.getElementById('schoolsCarousel');
-    const dotsWrap = document.getElementById('schoolsDots');
+    var carousel = document.getElementById('schoolsCarousel');
+    var dotsWrap = document.getElementById('schoolsDots');
     if (!carousel || !dotsWrap) return;
-
-    const cards = carousel.querySelectorAll('.school-card');
-    const total = cards.length;
-    let current = 0;
-
+    var cards = carousel.querySelectorAll('.school-card');
+    var total = cards.length;
+    var current = 0;
     function getCardWidth() {
         if (!cards[0]) return 0;
-        const style = getComputedStyle(carousel);
-        const gap = parseFloat(style.gap) || 24;
-        return cards[0].offsetWidth + gap;
+        return cards[0].offsetWidth + (parseFloat(getComputedStyle(carousel).gap) || 24);
     }
-
     function getMaxIndex() { return Math.max(0, total - 1); }
-
     function buildDots() {
         dotsWrap.innerHTML = '';
-        for (let i = 0; i <= getMaxIndex(); i++) {
-            const dot = document.createElement('span');
+        for (var i = 0; i <= getMaxIndex(); i++) {
+            var dot = document.createElement('span');
             dot.className = 'dot' + (i === current ? ' active' : '');
-            dot.addEventListener('click', function() { goTo(i); });
+            dot.addEventListener('click', (function(idx) { return function() { goTo(idx); }; })(i));
             dotsWrap.appendChild(dot);
         }
     }
-
     function update() {
         carousel.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
-        dotsWrap.querySelectorAll('.dot').forEach(function(d, i) {
-            d.className = 'dot' + (i === current ? ' active' : '');
-        });
+        dotsWrap.querySelectorAll('.dot').forEach(function(d, i) { d.className = 'dot' + (i === current ? ' active' : ''); });
     }
-
     function goTo(idx) { current = Math.max(0, Math.min(idx, getMaxIndex())); update(); }
     window.slideSchools = function(dir) { goTo(current + dir); };
     buildDots(); update();

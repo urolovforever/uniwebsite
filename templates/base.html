@@ -4,26 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta_description %}Tashkent International University - Premier institution of higher education in Uzbekistan offering world-class programs{% endblock %}">
+    <meta name="description" content="{% block meta_description %}Tashkent International University (TIU) — modern private university in Tashkent, Uzbekistan. English-taught Bachelor's, Master's & PhD programs. 2+2 dual degree. Apply now.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}Tashkent International University, TIU, university in Tashkent, study in Uzbekistan, English university Uzbekistan, bachelor Tashkent, master Tashkent, 2+2 dual degree, Toshkent xalqaro universiteti, университет в Ташкенте{% endblock %}">
+    <meta name="robots" content="{% block meta_robots %}index, follow{% endblock %}">
+    <meta name="author" content="Tashkent International University">
     <title>{% block title %}Tashkent International University{% endblock %}</title>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    {% block hreflang %}
+    <link rel="alternate" hreflang="en" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <link rel="alternate" hreflang="uz" href="{{ request.scheme }}://{{ request.get_host }}/uz{{ request.path }}">
+    <link rel="alternate" hreflang="ru" href="{{ request.scheme }}://{{ request.get_host }}/ru{{ request.path }}">
+    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    {% endblock %}
 
     <!-- Open Graph -->
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
     <meta property="og:site_name" content="Tashkent International University">
-    <meta property="og:title" content="{% block og_title %}{{ block.super|default:'Tashkent International University' }}{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}Tashkent International University - Premier institution of higher education in Uzbekistan offering world-class programs{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Tashkent International University — Study in Uzbekistan{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Modern English-taught university in Tashkent. Bachelor's, Master's & PhD programs across Business, IT, Education, Languages & Law. 2+2 dual degree with international partners.{% endblock %}">
     <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
-    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/favicon-192.png' %}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/logo.png' %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="{{ LANGUAGE_CODE|default:'en' }}">
+    <meta property="og:locale:alternate" content="uz">
+    <meta property="og:locale:alternate" content="ru">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tiuofficial_">
     <meta name="twitter:title" content="{% block twitter_title %}Tashkent International University{% endblock %}">
-    <meta name="twitter:description" content="{% block twitter_description %}Premier institution of higher education in Uzbekistan offering world-class programs{% endblock %}">
-    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/favicon-192.png' %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Modern English-taught university in Tashkent, Uzbekistan. Apply for Bachelor's, Master's & PhD programs.{% endblock %}">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/logo.png' %}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{% static 'img/branding/favicon.ico' %}">
@@ -45,24 +59,50 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
+        "@type": "CollegeOrUniversity",
         "name": "Tashkent International University",
-        "alternateName": "TIU",
-        "url": "{{ request.scheme }}://{{ request.get_host }}",
+        "alternateName": ["TIU", "Toshkent xalqaro universiteti", "Ташкентский международный университет"],
+        "url": "https://tiu.uz",
         "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/branding/logo.png' %}",
+        "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/campus/a-bino-lobby.jpg' %}",
+        "description": "Modern English-taught private university in Tashkent, Uzbekistan. Offers Bachelor's, Master's and PhD programs with 2+2 dual degree options.",
+        "foundingDate": "2023-10",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Little Ring Road 7",
             "addressLocality": "Tashkent",
-            "addressCountry": "UZ"
+            "addressCountry": "UZ",
+            "postalCode": "100000"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.3111",
+            "longitude": "69.2797"
+        },
+        "telephone": "+998-71-200-0374",
+        "email": "info@tiu.uz",
+        "numberOfStudents": "10000",
+        "areaServed": "International",
+        "availableLanguage": ["English", "Uzbek", "Russian"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Academic Programs",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "EducationalOccupationalProgram", "name": "Bachelor's Programs", "timeToComplete": "P4Y"}},
+                {"@type": "Offer", "itemOffered": {"@type": "EducationalOccupationalProgram", "name": "Master's Programs", "timeToComplete": "P2Y"}},
+                {"@type": "Offer", "itemOffered": {"@type": "EducationalOccupationalProgram", "name": "PhD Programs", "timeToComplete": "P3Y"}}
+            ]
         },
         "sameAs": [
             "https://www.facebook.com/tiuofficial/",
             "https://www.instagram.com/tiuofficial/",
             "https://t.me/tiu_edu",
-            "https://www.youtube.com/@tiu_uz"
+            "https://www.youtube.com/@tiu_uz",
+            "https://x.com/tiuofficial_"
         ]
     }
     </script>
+    {% block extra_structured_data %}{% endblock %}
 
     <!-- Analytics — add Google Analytics ID here when ready -->
 

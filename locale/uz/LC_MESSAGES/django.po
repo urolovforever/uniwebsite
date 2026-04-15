@@ -13405,3 +13405,9 @@ msgstr "Talabalar ittifoqiga murojaat"
 
 msgid "Explore campus"
 msgstr "Kampusni ko'rish"
+
+msgid "Our Programs"
+msgstr "Bizning dasturlar"
+
+msgid "Programs at this faculty"
+msgstr "Ushbu fakultetdagi dasturlar"
