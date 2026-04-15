@@ -13393,3 +13393,15 @@ msgstr "Kampus binolari va inshootlari"
 
 msgid "How to get here"
 msgstr "Qanday yetib kelish"
+
+msgid "Start 3D tour"
+msgstr "3D turni boshlang"
+
+msgid "3D Campus Tour"
+msgstr "3D kampus turi"
+
+msgid "Contact Student Union"
+msgstr "Talabalar ittifoqiga murojaat"
+
+msgid "Explore campus"
+msgstr "Kampusni ko'rish"

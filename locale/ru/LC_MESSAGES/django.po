@@ -11636,3 +11636,15 @@ msgstr "Здания и объекты кампуса"
 
 msgid "How to get here"
 msgstr "Как добраться"
+
+msgid "Start 3D tour"
+msgstr "Начать 3D-тур"
+
+msgid "3D Campus Tour"
+msgstr "3D-тур по кампусу"
+
+msgid "Contact Student Union"
+msgstr "Связаться со Студенческим союзом"
+
+msgid "Explore campus"
+msgstr "Осмотреть кампус"
