@@ -138,3 +138,5 @@ CKEDITOR_5_CONFIGS = {
     },
 }
 CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+CKEDITOR_5_UPLOAD_PATH = 'django-ckeditor-5/'
+CKEDITOR_5_FILE_UPLOAD_PERMISSION = 0o644
