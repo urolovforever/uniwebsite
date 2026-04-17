@@ -18,7 +18,6 @@
     "name": "{{ event.title|escapejs }}",
     "startDate": "{{ event.event_date|date:'Y-m-d' }}{% if event.event_time %}T{{ event.event_time|time:'H:i' }}{% endif %}",
     {% if event.location %}"location": {"@type": "Place", "name": "{{ event.location|escapejs }}"},{% endif %}
-    {% if event.image %}"image": "{{ request.scheme }}://{{ request.get_host }}{{ event.image.url }}",{% endif %}
     "organizer": {
         "@type": "EducationalOrganization",
         "name": "Tashkent International University",
@@ -111,11 +110,6 @@
 
             <!-- Right side — event content -->
             <article class="newsdetail-content">
-                {% if event.image %}
-                <div class="newsdetail-hero-img">
-                    <img src="{{ event.image.url }}" alt="{{ event|trans_field:"title" }}" loading="lazy">
-                </div>
-                {% endif %}
 
                 <div class="newsdetail-body">
                     {{ event|trans_field:"description"|safe }}

@@ -94,11 +94,6 @@
             </aside>
 
             <article class="newsdetail-content">
-                {% if publication.featured_image %}
-                <div class="newsdetail-hero-img">
-                    <img src="{{ publication.featured_image.url }}" alt="{{ publication|trans_field:"title" }}" loading="lazy">
-                </div>
-                {% endif %}
 
                 <div class="newsdetail-body">
                     {{ publication|trans_field:"body"|safe }}

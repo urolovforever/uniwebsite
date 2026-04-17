@@ -69,11 +69,6 @@
 
             <!-- Right side — release content -->
             <article class="newsdetail-content">
-                {% if release.featured_image %}
-                <div class="newsdetail-hero-img">
-                    <img src="{{ release.featured_image.url }}" alt="{{ release|trans_field:"title" }}" loading="lazy">
-                </div>
-                {% endif %}
 
                 <div class="newsdetail-body">
                     {{ release|trans_field:"body"|safe }}
