@@ -37,6 +37,19 @@
                     </div>
 
                     <div class="evlist-filter-group">
+                        <label class="evlist-filter-label">{% trans "Study Type" %}</label>
+                        <div class="evlist-select-wrapper">
+                            <select id="prog-study-type" class="evlist-select" onchange="applyProgFilters()">
+                                <option value="" {% if not current_study_type %}selected{% endif %}>{% trans "All Types" %}</option>
+                                {% for st in study_types %}
+                                <option value="{{ st.slug }}" {% if current_study_type == st.slug %}selected{% endif %}>{{ st|trans_field:"name" }}</option>
+                                {% endfor %}
+                            </select>
+                            <i class="fas fa-chevron-down evlist-select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="evlist-filter-group">
                         <button class="evlist-clear-btn" onclick="window.location.href='{% url 'programs:program_list' %}'">
                             <i class="fas fa-times"></i> {% trans "Clear filters" %}
                         </button>
@@ -72,11 +85,10 @@
 <script>
 function applyProgFilters() {
     var level = document.getElementById('prog-level').value;
-    if (level) {
-        window.location.href = '/programs/' + level + '/';
-    } else {
-        window.location.href = '/programs/';
-    }
+    var studyType = document.getElementById('prog-study-type').value;
+    var url = '/programs/' + (level ? level + '/' : '');
+    if (studyType) url += '?study_type=' + encodeURIComponent(studyType);
+    window.location.href = url;
 }
 </script>
 {% endblock %}

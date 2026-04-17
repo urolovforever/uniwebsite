@@ -2,11 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from django.urls import reverse
 from django.utils.translation import gettext as _
-from .models import Department, Program
+from .models import Department, Program, StudyType
 
 
 def program_list(request, level=None):
-    programs = Program.objects.filter(is_published=True).select_related('department')
+    programs = Program.objects.filter(is_published=True).select_related('department', 'study_type')
     title = _('All Programs')
     if level:
         programs = programs.filter(level=level)
@@ -17,12 +17,19 @@ def program_list(request, level=None):
         else:
             title = _("Bachelor's Programs")
 
+    current_study_type = request.GET.get('study_type', '')
+    if current_study_type:
+        programs = programs.filter(study_type__slug=current_study_type)
+
     departments = Department.objects.all()
+    study_types = StudyType.objects.all()
 
     return render(request, 'programs/program_list.html', {
         'programs': programs,
         'departments': departments,
+        'study_types': study_types,
         'current_level': level,
+        'current_study_type': current_study_type,
         'hero_title': title,
         'hero_category': _('Academic Programs'),
         'breadcrumbs': [
