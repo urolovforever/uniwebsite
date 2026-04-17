@@ -52,7 +52,7 @@
                 {% for event in results.events %}
                 <a href="{{ event.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
                     <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ event|trans_field:"title" }}</h3>
-                    <span style="font-size:0.85rem;color:#888;"><i class="fas fa-calendar"></i> {{ event.event_date|date:"M d, Y" }}{% if event.location %} &middot; <i class="fas fa-map-marker-alt"></i> {{ event.location }}{% endif %}</span>
+                    <span style="font-size:0.85rem;color:#888;"><i class="fas fa-calendar"></i> {{ event.event_date|date:"M d, Y" }}{% if event.location %} &middot; <i class="fas fa-map-marker-alt"></i> {{ event|trans_field:"location" }}{% endif %}</span>
                 </a>
                 {% endfor %}
             </div>

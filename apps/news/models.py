@@ -76,6 +76,8 @@ class Event(TranslatedMixin, models.Model):
     event_date = models.DateField()
     event_time = models.TimeField(blank=True, null=True)
     location = models.CharField(max_length=300, blank=True)
+    location_uz = models.CharField(max_length=300, blank=True)
+    location_ru = models.CharField(max_length=300, blank=True)
     is_featured = models.BooleanField(default=False)
     is_top = models.BooleanField(default=False)
     is_published = models.BooleanField(default=True)

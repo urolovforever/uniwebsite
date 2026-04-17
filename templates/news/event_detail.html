@@ -17,7 +17,7 @@
     "@type": "Event",
     "name": "{{ event.title|escapejs }}",
     "startDate": "{{ event.event_date|date:'Y-m-d' }}{% if event.event_time %}T{{ event.event_time|time:'H:i' }}{% endif %}",
-    {% if event.location %}"location": {"@type": "Place", "name": "{{ event.location|escapejs }}"},{% endif %}
+    {% if event.location %}"location": {"@type": "Place", "name": "{{ event|trans_field:"location"|escapejs }}"},{% endif %}
     "organizer": {
         "@type": "EducationalOrganization",
         "name": "Tashkent International University",
@@ -59,7 +59,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <span class="evdetail-info-label">{% trans "Location" %}</span>
-                                    <span class="evdetail-info-value">{{ event.location }}</span>
+                                    <span class="evdetail-info-value">{{ event|trans_field:"location" }}</span>
                                 </div>
                             </div>
                             {% endif %}
