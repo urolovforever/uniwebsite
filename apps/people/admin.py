@@ -4,11 +4,12 @@ from .models import Leader, Person
 
 @admin.register(Leader)
 class LeaderAdmin(admin.ModelAdmin):
-    list_display = ['full_name', 'job_title', 'order']
+    list_display = ['full_name', 'job_title', 'category', 'order']
+    list_filter = ['category']
     list_editable = ['order']
     search_fields = ['first_name', 'last_name', 'job_title']
     fieldsets = (
-        (None, {'fields': ('first_name', 'last_name', 'photo')}),
+        (None, {'fields': ('first_name', 'last_name', 'photo', 'category')}),
         ('Title', {'fields': ('job_title', 'job_title_uz', 'job_title_ru')}),
         ('Excerpt', {'fields': ('excerpt', 'excerpt_uz', 'excerpt_ru')}),
         ('Full Bio (English)', {'fields': ('bio',)}),

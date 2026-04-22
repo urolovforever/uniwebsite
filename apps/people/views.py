@@ -11,9 +11,11 @@ def person_list(request):
 
 
 def leadership(request):
-    leaders = Leader.objects.all()
+    rektorat = Leader.objects.filter(category='rektorat')
+    departament = Leader.objects.filter(category='departament')
     return render(request, 'pages/about/leadership.html', {
-        'leaders': leaders,
+        'rektorat': rektorat,
+        'departament': departament,
     })
 
 

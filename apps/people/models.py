@@ -6,11 +6,16 @@ from apps.core.translation import TranslatedMixin
 
 
 class Leader(TranslatedMixin, models.Model):
+    CATEGORY_CHOICES = [
+        ('rektorat', 'Rektorat'),
+        ('departament', 'Departament'),
+    ]
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     job_title = models.CharField(max_length=200)
     job_title_uz = models.CharField(max_length=200, blank=True)
     job_title_ru = models.CharField(max_length=200, blank=True)
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='rektorat')
     photo = models.ImageField(upload_to='leadership/', blank=True)
     excerpt = models.TextField(blank=True, help_text='Short intro shown by default')
     excerpt_uz = models.TextField(blank=True)
