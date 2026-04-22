@@ -11,11 +11,13 @@ def person_list(request):
 
 
 def leadership(request):
-    rektorat = Leader.objects.filter(category='rektorat')
-    departament = Leader.objects.filter(category='departament')
+    category = request.GET.get('category', 'rektorat')
+    if category not in ('rektorat', 'departament'):
+        category = 'rektorat'
+    leaders = Leader.objects.filter(category=category)
     return render(request, 'pages/about/leadership.html', {
-        'rektorat': rektorat,
-        'departament': departament,
+        'leaders': leaders,
+        'current_category': category,
     })
 
 

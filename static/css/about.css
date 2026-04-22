@@ -1857,21 +1857,44 @@
    LEADERSHIP PROFILES (Hull University Style)
    Text left, portrait image right with name overlay
    ================================================ */
-.leadership-category-title {
+.leadership-tabs-section {
+    padding: 2.5rem 0 0;
+    background: #fff;
+}
+.leadership-tabs-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.leadership-tabs {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.leadership-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 0.95rem;
+    font-weight: 600;
     color: #003366;
-    margin: 0 0 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #003366;
+    background: #fff;
+    border: 2px solid #003366;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.leadership-tab:hover {
+    background: #e6ecf2;
+}
+.leadership-tab.active {
+    background: #003366;
+    color: #fff;
 }
 .leadership-section {
     padding: 4rem 0;
     background: #fff;
-}
-.leadership-section--alt {
-    background: #f8fafc;
 }
 
 .leadership-section .container {
