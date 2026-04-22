@@ -50,24 +50,24 @@ def news_detail(request, slug):
 
 
 def event_list(request):
-    events = Event.objects.filter(is_published=True)
+    today = timezone.now().date()
+    base = Event.objects.filter(is_published=True)
     categories = Category.objects.all()
     selected_category = request.GET.get('category', '')
-    show_past = request.GET.get('past', '')
     search_query = request.GET.get('q', '').strip()
     if search_query:
-        events = events.filter(title__icontains=search_query)
+        base = base.filter(title__icontains=search_query)
     if selected_category:
-        events = events.filter(categories__slug=selected_category)
-    if not show_past:
-        events = events.filter(event_date__gte=timezone.now().date())
-    paginator = Paginator(events, 12)
+        base = base.filter(categories__slug=selected_category)
+    upcoming = list(base.filter(event_date__gte=today).order_by('event_date'))
+    past = list(base.filter(event_date__lt=today).order_by('-event_date'))
+    combined = upcoming + past
+    paginator = Paginator(combined, 12)
     page = paginator.get_page(request.GET.get('page'))
     return render(request, 'news/event_list.html', {
         'events': page,
         'categories': categories,
         'selected_category': selected_category,
-        'show_past': show_past,
         'search_query': search_query,
         'hero_title': _('Events'),
         'hero_category': _('News & Media'),
@@ -81,9 +81,11 @@ def event_list(request):
 
 def event_detail(request, slug):
     event = get_object_or_404(Event, slug=slug, is_published=True)
-    upcoming_events = Event.objects.filter(
-        is_published=True, event_date__gte=timezone.now().date()
-    ).exclude(pk=event.pk)[:5]
+    today = timezone.now().date()
+    base = Event.objects.filter(is_published=True).exclude(pk=event.pk)
+    upcoming_qs = list(base.filter(event_date__gte=today).order_by('event_date'))
+    past_qs = list(base.filter(event_date__lt=today).order_by('-event_date'))
+    upcoming_events = (upcoming_qs + past_qs)[:5]
     return render(request, 'news/event_detail.html', {
         'event': event,
         'upcoming_events': upcoming_events,

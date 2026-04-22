@@ -50,7 +50,10 @@ def dept_jurisprudence(request):
     departments = Department.objects.filter(faculty='jurisprudence')
     programs = Program.objects.filter(is_published=True, faculty='jurisprudence').select_related('department')
     news = NewsArticle.objects.filter(is_published=True, faculty='jurisprudence')[:3]
-    events = Event.objects.filter(is_published=True, faculty='jurisprudence')[:3]
+    from django.utils import timezone
+    _today = timezone.now().date()
+    _ev = Event.objects.filter(is_published=True, faculty='jurisprudence')
+    events = (list(_ev.filter(event_date__gte=_today).order_by('event_date')) + list(_ev.filter(event_date__lt=_today).order_by('-event_date')))[:3]
     return render(request, 'pages/faculty/jurisprudence.html', {
         'departments': departments,
         'programs': programs,
@@ -63,7 +66,10 @@ def dept_business_innovative(request):
     departments = Department.objects.filter(faculty='business')
     programs = Program.objects.filter(is_published=True, faculty='business').select_related('department')
     news = NewsArticle.objects.filter(is_published=True, faculty='business')[:3]
-    events = Event.objects.filter(is_published=True, faculty='business')[:3]
+    from django.utils import timezone
+    _today = timezone.now().date()
+    _ev = Event.objects.filter(is_published=True, faculty='business')
+    events = (list(_ev.filter(event_date__gte=_today).order_by('event_date')) + list(_ev.filter(event_date__lt=_today).order_by('-event_date')))[:3]
     return render(request, 'pages/faculty/business-innovative-education.html', {
         'departments': departments,
         'programs': programs,

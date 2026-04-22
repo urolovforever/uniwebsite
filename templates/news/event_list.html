@@ -43,14 +43,6 @@
                     </div>
 
                     <div class="evlist-filter-group">
-                        <label class="evlist-toggle-row">
-                            <span class="evlist-toggle-label">{% trans "Show past events" %}</span>
-                            <input type="checkbox" id="evlist-past-toggle" {% if show_past %}checked{% endif %} onchange="applyFilters()">
-                            <span class="evlist-toggle-switch"></span>
-                        </label>
-                    </div>
-
-                    <div class="evlist-filter-group">
                         <button class="evlist-clear-btn" onclick="clearFilters()">
                             <i class="fas fa-times"></i> {% trans "Clear filters" %}
                         </button>
@@ -71,10 +63,10 @@
                             {% endif %}
                         </div>
                         <div class="evlist-item-info">
-                            <h3 class="evlist-item-title">{{ event|trans_field:"title" }}</h3>
+                            <h3 class="evlist-item-title">{{ event|trans_field:"title" }}{% if event.is_past %} <span class="evlist-past-badge">{% trans "Past" %}</span>{% endif %}</h3>
                             <span class="evlist-item-date">{{ event.event_date|date:"d M Y"|upper }}</span>
                             {% if event.excerpt %}
-                            <p class="evlist-item-desc">{{ event|trans_field:"excerpt"|truncatewords:25 }}</p>
+                            <p class="evlist-item-desc">{{ event|trans_field:"excerpt"|striptags|truncatewords:25 }}</p>
                             {% elif event.description %}
                             <p class="evlist-item-desc">{{ event|trans_field:"description"|striptags|truncatewords:25 }}</p>
                             {% endif %}
@@ -90,21 +82,21 @@
                 {% empty %}
                 <div class="evlist-empty">
                     <i class="far fa-calendar-alt"></i>
-                    <h3>{% trans "No upcoming events" %}</h3>
-                    <p>{% trans "Check back soon for new events, or toggle \"Show past events\" to browse previous ones." %}</p>
+                    <h3>{% trans "No events found" %}</h3>
+                    <p>{% trans "Try adjusting your filters or check back soon." %}</p>
                 </div>
                 {% endfor %}
 
                 {% if events.has_other_pages %}
                 <div class="pagination">
                     {% if events.has_previous %}
-                    <a href="?page={{ events.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
+                    <a href="?page={{ events.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn">&laquo; {% trans "Previous" %}</a>
                     {% endif %}
                     {% for num in events.paginator.page_range %}
-                    <a href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn{% if events.number == num %} active{% endif %}">{{ num }}</a>
+                    <a href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn{% if events.number == num %} active{% endif %}">{{ num }}</a>
                     {% endfor %}
                     {% if events.has_next %}
-                    <a href="?page={{ events.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_past %}&past=1{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
+                    <a href="?page={{ events.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination-btn">{% trans "Next" %} &raquo;</a>
                     {% endif %}
                 </div>
                 {% endif %}
@@ -131,11 +123,9 @@
 function applyFilters() {
     var q = document.getElementById('evlist-search').value.trim();
     var cat = document.getElementById('evlist-category-select').value;
-    var past = document.getElementById('evlist-past-toggle').checked;
     var params = new URLSearchParams();
     if (q) params.set('q', q);
     if (cat) params.set('category', cat);
-    if (past) params.set('past', '1');
     window.location.href = window.location.pathname + '?' + params.toString();
 }
 function clearFilters() {

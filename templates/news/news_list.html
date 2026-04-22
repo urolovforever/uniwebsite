@@ -66,7 +66,7 @@
                             <h3 class="evlist-item-title">{{ article|trans_field:"title" }}</h3>
                             <span class="evlist-item-date">{{ article.published_date|date:"d M Y"|upper }}</span>
                             {% if article.excerpt %}
-                            <p class="evlist-item-desc">{{ article|trans_field:"excerpt"|truncatewords:25 }}</p>
+                            <p class="evlist-item-desc">{{ article|trans_field:"excerpt"|striptags|truncatewords:25 }}</p>
                             {% endif %}
                         </div>
                     </a>

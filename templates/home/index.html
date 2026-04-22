@@ -132,7 +132,7 @@
                                     <span class="news-list-date">{{ article.published_date|date:"d M Y"|upper }}</span>
                                     <h4>{{ article|trans_field:"title" }}</h4>
                                     {% if article.excerpt %}
-                                    <p>{{ article|trans_field:"excerpt"|truncatewords:20 }}</p>
+                                    <p>{{ article|trans_field:"excerpt"|striptags|truncatewords:20 }}</p>
                                     {% endif %}
                                 </div>
                             </a>
@@ -333,9 +333,9 @@
                                     {% if event.event_time %}<span class="event-featured-time"><i class="far fa-clock"></i> {{ event.event_time|time:"H:i" }}</span>{% endif %}
                                 </div>
                             </div>
-                            <h3><a href="{% url 'news:event_detail' event.slug %}">{{ event|trans_field:"title" }}</a></h3>
+                            <h3><a href="{% url 'news:event_detail' event.slug %}">{{ event|trans_field:"title" }}</a>{% if event.is_past %} <span class="evlist-past-badge">{% trans "Past" %}</span>{% endif %}</h3>
                             {% if event.description %}
-                            <p>{{ event|trans_field:"description"|truncatewords:30 }}</p>
+                            <p>{{ event|trans_field:"description"|striptags|truncatewords:30 }}</p>
                             {% endif %}
                             <a href="{% url 'news:event_detail' event.slug %}" class="event-featured-link">{% trans "Find out more" %} <i class="fas fa-arrow-right"></i></a>
                         </div>
@@ -368,8 +368,8 @@
                                 </div>
                                 <div class="events-list-info">
                                     {% if event.category %}<span class="events-list-category">{{ event.category|upper }}</span>{% endif %}
-                                    <h4>{{ event|trans_field:"title" }}</h4>
-                                    {% if event.description %}<p class="events-list-excerpt">{{ event|trans_field:"description"|truncatewords:15 }}</p>{% endif %}
+                                    <h4>{{ event|trans_field:"title" }}{% if event.is_past %} <span class="evlist-past-badge">{% trans "Past" %}</span>{% endif %}</h4>
+                                    {% if event.description %}<p class="events-list-excerpt">{{ event|trans_field:"description"|striptags|truncatewords:15 }}</p>{% endif %}
                                     {% if event.event_time %}<span class="events-list-time"><i class="far fa-clock"></i> {{ event.event_time|time:"H:i" }}</span>{% endif %}
                                 </div>
                             </a>

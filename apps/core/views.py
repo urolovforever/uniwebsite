@@ -20,8 +20,11 @@ def homepage(request):
     news_articles = list(NewsArticle.objects.filter(is_published=True).order_by('-published_date')[:7])
 
     today = timezone.now().date()
-    # Latest 7 events: first one is featured, rest are side list
-    upcoming_events = list(Event.objects.filter(is_published=True, event_date__gte=today).order_by('event_date')[:7])
+    # Latest 7 events: upcoming first (closest first), then past (most recent first)
+    _ev_base = Event.objects.filter(is_published=True)
+    _upcoming = list(_ev_base.filter(event_date__gte=today).order_by('event_date'))
+    _past = list(_ev_base.filter(event_date__lt=today).order_by('-event_date'))
+    upcoming_events = (_upcoming + _past)[:7]
 
     context = {
         'news_articles': news_articles,

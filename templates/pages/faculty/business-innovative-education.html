@@ -66,10 +66,12 @@
                 {% if prog.image %}
                 <img src="{{ prog.image.url }}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
                 {% else %}
-                <img src="{% static 'img/campus/a-bino-computer-lab-wide.jpg' %}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
+                <div class="school-card-placeholder">
+                    <span class="school-card-placeholder-logo">TIU</span>
+                </div>
                 {% endif %}
                 <div class="school-card-overlay">
-                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {{ prog.get_level_display }}</p>
+                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {% if prog.level == 'bachelor' %}{% trans "Bachelor" %}{% elif prog.level == 'master' %}{% trans "Master" %}{% elif prog.level == 'phd' %}{% trans "PhD" %}{% else %}{{ prog.get_level_display }}{% endif %}{% if prog.study_type %} · {{ prog.study_type|trans_field:"name" }}{% endif %}</p>
                     <span class="school-card-btn"><i class="fas fa-plus"></i></span>
                 </div>
             </a>

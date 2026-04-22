@@ -505,15 +505,16 @@
 
 .evlist-item-thumb {
     flex-shrink: 0;
-    width: 130px;
-    height: 105px;
+    width: 180px;
+    height: 135px;
     overflow: hidden;
+    background: #f3f4f6;
 }
 
 .evlist-item-thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.4s ease;
 }
 

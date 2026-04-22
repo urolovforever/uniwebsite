@@ -36,7 +36,7 @@
                 {% for article in results.news %}
                 <a href="{{ article.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
                     <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ article|trans_field:"title" }}</h3>
-                    {% if article.excerpt %}<p style="margin:0;color:#666;font-size:0.9rem;">{{ article|trans_field:"excerpt"|truncatewords:25 }}</p>{% endif %}
+                    {% if article.excerpt %}<p style="margin:0;color:#666;font-size:0.9rem;">{{ article|trans_field:"excerpt"|striptags|truncatewords:25 }}</p>{% endif %}
                     <span style="font-size:0.8rem;color:#999;">{{ article.published_date|date:"M d, Y" }}</span>
                 </a>
                 {% endfor %}
@@ -68,7 +68,7 @@
                 <a href="{{ pub.get_absolute_url }}" style="display:block;padding:1rem;margin-bottom:0.5rem;border-radius:8px;background:#f8fafc;text-decoration:none;color:inherit;transition:background 0.2s;" onmouseover="this.style.background='#eef2f7'" onmouseout="this.style.background='#f8fafc'">
                     <h3 style="margin:0 0 4px;color:#003366;font-size:1.05rem;">{{ pub|trans_field:"title" }}</h3>
                     <span style="font-size:0.85rem;color:#555;"><i class="fas fa-user"></i> {{ pub.author }}</span>
-                    {% if pub.excerpt %}<p style="margin:4px 0 0;color:#666;font-size:0.9rem;">{{ pub|trans_field:"excerpt"|truncatewords:25 }}</p>{% endif %}
+                    {% if pub.excerpt %}<p style="margin:4px 0 0;color:#666;font-size:0.9rem;">{{ pub|trans_field:"excerpt"|striptags|truncatewords:25 }}</p>{% endif %}
                 </a>
                 {% endfor %}
             </div>

@@ -96,7 +96,7 @@
                         <div class="newsdetail-related-list">
                             {% for ev in upcoming_events %}
                             <a href="{% url 'news:event_detail' ev.slug %}" class="newsdetail-related-item">
-                                <span class="newsdetail-related-date">{{ ev.event_date|date:"d M Y"|upper }}</span>
+                                <span class="newsdetail-related-date">{{ ev.event_date|date:"d M Y"|upper }}{% if ev.is_past %} <span class="evlist-past-badge">{% trans "Past" %}</span>{% endif %}</span>
                                 <span class="newsdetail-related-title">{{ ev|trans_field:"title" }}</span>
                             </a>
                             {% endfor %}

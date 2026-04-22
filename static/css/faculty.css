@@ -837,6 +837,7 @@
     position: relative;
     min-width: 580px;
     max-width: 580px;
+    height: 420px;
     flex-shrink: 0;
     overflow: hidden;
     text-decoration: none;
@@ -853,6 +854,34 @@
 
 .school-card:hover img {
     transform: scale(1.05);
+}
+
+.school-card-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e6ecf2 0%, #cfd9e3 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.school-card-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 30% 30%, rgba(0, 51, 102, 0.08), transparent 50%),
+                      radial-gradient(circle at 70% 70%, rgba(0, 207, 255, 0.06), transparent 50%);
+}
+.school-card-placeholder-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    color: #003366;
+    position: relative;
+    z-index: 1;
 }
 
 .school-card-overlay {
@@ -964,6 +993,7 @@
     .school-card {
         min-width: 400px;
         max-width: 400px;
+        height: 360px;
     }
 
     .school-card img {
@@ -975,6 +1005,7 @@
     .school-card {
         min-width: 320px;
         max-width: 320px;
+        height: 340px;
     }
 
     .school-card img {
@@ -1144,9 +1175,10 @@
 }
 
 .faculty-news-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 140px;
+    height: 110px;
+    object-fit: contain;
+    background: #f3f4f6;
     flex-shrink: 0;
 }
 
@@ -1207,9 +1239,10 @@
 }
 
 .faculty-event-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 140px;
+    height: 110px;
+    object-fit: contain;
+    background: #f3f4f6;
     flex-shrink: 0;
 }
 
@@ -1273,8 +1306,8 @@
 @media (max-width: 640px) {
     .faculty-news-item img,
     .faculty-event-item img {
-        width: 80px;
-        height: 80px;
+        width: 110px;
+        height: 85px;
     }
 
     .faculty-col-header h2 {

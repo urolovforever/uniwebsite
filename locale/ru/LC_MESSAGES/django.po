@@ -859,6 +859,16 @@ msgstr "Магистратура"
 msgid "PhD"
 msgstr "PhD"
 
+#: templates/pages/faculty/jurisprudence.html
+#: templates/pages/faculty/business-innovative-education.html
+msgid "Bachelor"
+msgstr "Бакалавр"
+
+#: templates/pages/faculty/jurisprudence.html
+#: templates/pages/faculty/business-innovative-education.html
+msgid "Master"
+msgstr "Магистр"
+
 #: templates/includes/mega_menu.html:99
 #: templates/pages/programs/by-level.html:145
 msgid "By Faculty"

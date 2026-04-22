@@ -5,7 +5,7 @@
     <img src="{{ event.image.url }}" alt="{{ event|trans_field:"title" }}" loading="lazy">
     {% endif %}
     <div class="faculty-event-item-text">
-        <h3>{{ event|trans_field:"title" }}</h3>
+        <h3>{{ event|trans_field:"title" }}{% if event.is_past %} <span class="evlist-past-badge">{% trans "Past" %}</span>{% endif %}</h3>
         <span class="faculty-event-date">{{ event.event_date|date:"d M Y"|upper }}</span>
         <p>{{ event|trans_field:"description"|striptags|truncatewords:25 }}</p>
     </div>

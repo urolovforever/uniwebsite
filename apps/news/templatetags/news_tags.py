@@ -15,5 +15,8 @@ def latest_news(count=3):
 @register.inclusion_tag('news/includes/upcoming_events_list.html')
 def upcoming_events(count=2):
     today = timezone.now().date()
-    events = Event.objects.filter(is_published=True, event_date__gte=today)[:count]
+    base = Event.objects.filter(is_published=True)
+    upcoming = list(base.filter(event_date__gte=today).order_by('event_date'))
+    past = list(base.filter(event_date__lt=today).order_by('-event_date'))
+    events = (upcoming + past)[:count]
     return {'events': events}

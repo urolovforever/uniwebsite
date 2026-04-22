@@ -7,7 +7,7 @@
     <div class="faculty-news-item-text">
         <span class="faculty-news-date">{{ article.published_date|date:"d M Y"|upper }}</span>
         <h3>{{ article|trans_field:"title" }}</h3>
-        <p>{{ article|trans_field:"excerpt"|truncatewords:25 }}</p>
+        <p>{{ article|trans_field:"excerpt"|striptags|truncatewords:25 }}</p>
     </div>
 </a>
 {% empty %}

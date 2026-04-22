@@ -30,29 +30,195 @@
 </section>
 
 <!-- Welcome from the Dean -->
+{% get_current_language as LANG %}
 <section class="dean-welcome-section">
     <div class="container">
         <div class="dean-welcome-grid">
             <div class="dean-welcome-text">
-                <h2>{% trans "Welcome from the Dean" %}</h2>
-                <p>{% trans "At the Faculty of Jurisprudence, we believe that understanding people, societies, and systems of justice is the foundation for meaningful change." %}</p>
-                <p>{% trans "Our scholars bring together expertise in international law, public law, human rights, and constitutional studies — creating an environment where students learn to think critically, argue persuasively, and act with purpose." %}</p>
-                <p>{% trans "I'm proud of the community we've built — one that values diverse perspectives, rigorous inquiry, and a genuine commitment to making Central Asia and the wider world a more just place." %}</p>
+                <h2>
+                    {% if LANG == 'uz' %}Dekanning kirish so‘zi
+                    {% elif LANG == 'ru' %}Приветственное слово декана
+                    {% else %}Welcome from the Dean{% endif %}
+                </h2>
+                {% if LANG == 'uz' %}
+                <p>Yurisprudensiya fakultetida biz insonlar, jamiyatlar va adolat tizimlarini tushunishni har qanday mazmunli o‘zgarishning asosi deb bilamiz.</p>
+                <p>Bizning olim va o‘qituvchilarimiz xalqaro huquq, davlat huquqi, inson huquqlari hamda konstitutsiyaviy tadqiqotlar sohasidagi tajribani birlashtirib, talabalarga tanqidiy fikrlash, asosli dalillash va maqsadli harakat qilishni o‘rgatadi.</p>
+                <p>Biz yaratgan jamoamiz — turli qarashlarni qadrlaydigan, teran tadqiqotga intiladigan va Markaziy Osiyoni hamda butun dunyoni adolatliroq qilishga chin dildan bag‘ishlangan insonlar jamoasidir.</p>
+                {% elif LANG == 'ru' %}
+                <p>На факультете юриспруденции мы убеждены: понимание людей, обществ и систем правосудия — основа значимых перемен.</p>
+                <p>Наши учёные объединяют опыт в международном праве, публичном праве, правах человека и конституционных исследованиях, создавая среду, в которой студенты учатся критически мыслить, убедительно аргументировать и действовать с ясной целью.</p>
+                <p>Я горжусь сообществом, которое мы создали — сообществом, ценящим различные точки зрения, строгие исследования и искреннюю приверженность делу построения более справедливой Центральной Азии и мира в целом.</p>
+                {% else %}
+                <p>At the Faculty of Jurisprudence, we believe that understanding people, societies, and systems of justice is the foundation for meaningful change.</p>
+                <p>Our scholars bring together expertise in international law, public law, human rights, and constitutional studies — creating an environment where students learn to think critically, argue persuasively, and act with purpose.</p>
+                <p>I'm proud of the community we've built — one that values diverse perspectives, rigorous inquiry, and a genuine commitment to making Central Asia and the wider world a more just place.</p>
+                {% endif %}
             </div>
             <div class="dean-welcome-quote">
                 <div class="dean-quote-marks">&ldquo;</div>
-                <blockquote>{% trans "Understanding people, societies, and systems of justice is the foundation for meaningful change." %}</blockquote>
+                <blockquote>
+                    {% if LANG == 'uz' %}Insonlar, jamiyatlar va adolat tizimlarini tushunish — mazmunli o‘zgarishning asosidir.
+                    {% elif LANG == 'ru' %}Понимание людей, обществ и систем правосудия — основа значимых перемен.
+                    {% else %}Understanding people, societies, and systems of justice is the foundation for meaningful change.{% endif %}
+                </blockquote>
                 <div class="dean-quote-author">
-                    <img src="{% static 'img/campus/kutubxona-library-shelves.jpg' %}" alt="{% trans "Dean of Faculty" %}" loading="lazy">
+                    <img src="{% static 'img/campus/kutubxona-library-shelves.jpg' %}" alt="Rixsiboyev Nozimbek" loading="lazy">
                     <div class="dean-quote-info">
-                        <strong>{% trans "Dean of Faculty" %}</strong>
-                        <span>{% trans "Faculty of Jurisprudence" %}</span>
+                        <strong>Rixsiboyev Nozimbek</strong>
+                        <span>
+                            {% if LANG == 'uz' %}Yurisprudensiya fakulteti dekani
+                            {% elif LANG == 'ru' %}Декан факультета юриспруденции
+                            {% else %}Dean of the Faculty of Jurisprudence{% endif %}
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Dean and Vice-Deans (Grid) -->
+<section class="faculty-leaders-section" style="padding: 4rem 0; background: #f8fafc;">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 2rem; color: #003366; font-weight: 800; margin-bottom: 2.5rem;">
+            {% if LANG == 'uz' %}Fakultet rahbariyati{% elif LANG == 'ru' %}Руководство факультета{% else %}Faculty Leadership{% endif %}
+        </h2>
+
+        <div class="faculty-leaders-grid">
+            <!-- Dean -->
+            <div class="faculty-leader-card">
+                <div class="leader-photo">
+                    <img src="{% static 'img/leaders/rixsiboyev-nozimbek.png' %}" alt="Rixsiboyev Nozimbek" loading="lazy">
+                    <div class="leader-photo-overlay">
+                        <div class="leader-photo-name">Rixsiboyev Nozimbek Abdurasul o‘g‘li</div>
+                        <div class="leader-photo-title">
+                            {% if LANG == 'uz' %}Yurisprudensiya fakulteti dekani{% elif LANG == 'ru' %}Декан факультета юриспруденции{% else %}Dean of the Faculty of Jurisprudence{% endif %}
+                        </div>
+                        <div class="faculty-leader-contacts">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:nozimbekrikhsiboyev@gmail.com">nozimbekrikhsiboyev@gmail.com</a></p>
+                            <p><i class="fas fa-phone"></i> +998 95 131-55-55 (1007)</p>
+                            <p><i class="fas fa-door-open"></i>
+                                {% if LANG == 'uz' %}B-117 · Dushanba–Juma, 14:00–17:00
+                                {% elif LANG == 'ru' %}B-117 · Пн–Пт, 14:00–17:00
+                                {% else %}B-117 · Mon–Fri, 14:00–17:00{% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vice-Dean 1 -->
+            <div class="faculty-leader-card">
+                <div class="leader-photo">
+                    <div class="leader-photo-placeholder"><i class="fas fa-user"></i></div>
+                    <div class="leader-photo-overlay">
+                        <div class="leader-photo-name">Otaxonov Komilxon Saydolim o‘g‘li</div>
+                        <div class="leader-photo-title">
+                            {% if LANG == 'uz' %}O‘quv va ilmiy ishlar bo‘yicha dekan muovini
+                            {% elif LANG == 'ru' %}Заместитель декана по учебной и научной работе
+                            {% else %}Vice-Dean for Academic and Scientific Affairs{% endif %}
+                        </div>
+                        <div class="faculty-leader-contacts">
+                            <p><i class="fas fa-phone"></i> +998 55 517-53-53 (1205)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vice-Dean 2 -->
+            <div class="faculty-leader-card">
+                <div class="leader-photo">
+                    <div class="leader-photo-placeholder"><i class="fas fa-user"></i></div>
+                    <div class="leader-photo-overlay">
+                        <div class="leader-photo-name">Mamadaliyev Doniyor Shuhratbek o‘g‘li</div>
+                        <div class="leader-photo-title">
+                            {% if LANG == 'uz' %}Yoshlar bilan ishlash va ma’naviy-ma’rifiy ishlar bo‘yicha dekan muovini
+                            {% elif LANG == 'ru' %}Заместитель декана по работе с молодёжью и духовно-просветительской работе
+                            {% else %}Vice-Dean for Youth Affairs and Spiritual-Educational Work{% endif %}
+                        </div>
+                        <div class="faculty-leader-contacts">
+                            <p><i class="fas fa-phone"></i> +998 55 517-53-53 (1205)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.faculty-leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+.faculty-leaders-grid .faculty-leader-card {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 100px;
+}
+.faculty-leaders-grid .leader-photo {
+    display: flex;
+    flex-direction: column;
+}
+.faculty-leaders-grid .leader-photo > img,
+.faculty-leaders-grid .leader-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 3.5;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+.faculty-leaders-grid .leader-photo-placeholder {
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 5rem;
+}
+.faculty-leaders-grid .leader-photo-overlay {
+    position: static;
+    display: flex;
+    flex-direction: column;
+}
+.faculty-leaders-grid .leader-photo-title {
+    margin-bottom: 1rem;
+}
+.faculty-leader-contacts {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.faculty-leader-contacts p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.4rem;
+    line-height: 1.5;
+}
+.faculty-leader-contacts p:last-child { margin-bottom: 0; }
+.faculty-leader-contacts i {
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 0.5rem;
+    width: 14px;
+    text-align: center;
+}
+.faculty-leader-contacts a {
+    color: inherit;
+    text-decoration: none;
+    word-break: break-all;
+}
+.faculty-leader-contacts a:hover { color: #00bcd4; }
+@media (max-width: 960px) {
+    .faculty-leaders-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .faculty-leaders-grid { grid-template-columns: 1fr; }
+}
+</style>
+
 
 <!-- Programs Carousel -->
 <section class="schools-section">
@@ -66,10 +232,12 @@
                 {% if prog.image %}
                 <img src="{{ prog.image.url }}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
                 {% else %}
-                <img src="{% static 'img/campus/a-bino-lecture-hall.jpg' %}" alt="{{ prog|trans_field:"title" }}" loading="lazy">
+                <div class="school-card-placeholder">
+                    <span class="school-card-placeholder-logo">TIU</span>
+                </div>
                 {% endif %}
                 <div class="school-card-overlay">
-                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {{ prog.get_level_display }}</p>
+                    <p><strong>{{ prog|trans_field:"title" }}</strong> — {% if prog.level == 'bachelor' %}{% trans "Bachelor" %}{% elif prog.level == 'master' %}{% trans "Master" %}{% elif prog.level == 'phd' %}{% trans "PhD" %}{% else %}{{ prog.get_level_display }}{% endif %}{% if prog.study_type %} · {{ prog.study_type|trans_field:"name" }}{% endif %}</p>
                     <span class="school-card-btn"><i class="fas fa-plus"></i></span>
                 </div>
             </a>
@@ -127,6 +295,23 @@
 
 {% block extra_js %}
 <script>
+function toggleLeaderBio(btn) {
+    var accordion = btn.parentElement;
+    var content = accordion.querySelector('.leader-accordion-content');
+    var icon = btn.querySelector('i');
+    var excerpt = accordion.parentElement.querySelector('.bio-excerpt-auto');
+    btn.classList.toggle('active');
+    content.classList.toggle('show');
+    if (content.classList.contains('show')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+        if (excerpt) excerpt.style.display = 'none';
+    } else {
+        content.style.maxHeight = '0';
+        if (icon) icon.style.transform = 'rotate(0)';
+        if (excerpt) excerpt.style.display = '';
+    }
+}
 (function() {
     var carousel = document.getElementById('schoolsCarousel');
     var dotsWrap = document.getElementById('schoolsDots');

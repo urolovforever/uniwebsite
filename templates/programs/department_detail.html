@@ -62,6 +62,7 @@
                 <p><i class="fas fa-envelope" style="color: #004080; margin-right: 0.5rem;"></i> {{ person.email }}</p>
                 {% endif %}
                 {% if person.bio %}
+                <div class="leader-excerpt bio-excerpt-auto">{{ person|trans_field:"bio"|striptags|truncatewords:30 }}</div>
                 <div class="leader-accordion">
                     <button class="leader-accordion-toggle" onclick="toggleLeaderBio(this)">
                         {% trans "Find out more" %} <i class="fas fa-chevron-down"></i>
@@ -107,16 +108,20 @@
 {% block extra_js %}
 <script>
 function toggleLeaderBio(btn) {
-    var content = btn.parentElement.querySelector('.leader-accordion-content');
+    var accordion = btn.parentElement;
+    var content = accordion.querySelector('.leader-accordion-content');
     var icon = btn.querySelector('i');
+    var excerpt = accordion.parentElement.querySelector('.bio-excerpt-auto');
     btn.classList.toggle('active');
     content.classList.toggle('show');
     if (content.classList.contains('show')) {
         content.style.maxHeight = content.scrollHeight + 'px';
         icon.style.transform = 'rotate(180deg)';
+        if (excerpt) excerpt.style.display = 'none';
     } else {
         content.style.maxHeight = '0';
         icon.style.transform = 'rotate(0)';
+        if (excerpt) excerpt.style.display = '';
     }
 }
 </script>

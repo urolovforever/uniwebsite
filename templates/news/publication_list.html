@@ -77,7 +77,7 @@
                             <h3 class="evlist-item-title">{{ pub|trans_field:"title" }}</h3>
                             <span class="evlist-item-date"><i class="fas fa-user"></i> {{ pub.author }} · {{ pub.published_date|date:"d M Y"|upper }}</span>
                             {% if pub.excerpt %}
-                            <p class="evlist-item-desc">{{ pub|trans_field:"excerpt"|truncatewords:25 }}</p>
+                            <p class="evlist-item-desc">{{ pub|trans_field:"excerpt"|striptags|truncatewords:25 }}</p>
                             {% endif %}
                         </div>
                     </a>

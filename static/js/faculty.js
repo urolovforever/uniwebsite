@@ -45,16 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Accordion toggle for leader-style profiles
 function toggleLeaderBio(btn) {
-    var content = btn.parentElement.querySelector('.leader-accordion-content');
+    var accordion = btn.parentElement;
+    var content = accordion.querySelector('.leader-accordion-content');
     var icon = btn.querySelector('i');
+    var excerpt = accordion.parentElement.querySelector('.bio-excerpt-auto');
     btn.classList.toggle('active');
     content.classList.toggle('show');
     if (content.classList.contains('show')) {
         content.style.maxHeight = content.scrollHeight + 'px';
         if (icon) icon.style.transform = 'rotate(180deg)';
+        if (excerpt) excerpt.style.display = 'none';
     } else {
         content.style.maxHeight = '0';
         if (icon) icon.style.transform = 'rotate(0)';
+        if (excerpt) excerpt.style.display = '';
     }
 }
 

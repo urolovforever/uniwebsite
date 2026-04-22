@@ -92,6 +92,11 @@ class Event(TranslatedMixin, models.Model):
     def get_absolute_url(self):
         return reverse('news:event_detail', kwargs={'slug': self.slug})
 
+    @property
+    def is_past(self):
+        from django.utils import timezone
+        return bool(self.event_date and self.event_date < timezone.now().date())
+
 
 class PublicationCategory(TranslatedMixin, models.Model):
     name = models.CharField(max_length=100)
